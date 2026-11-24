@@ -26,10 +26,10 @@ Gebruiker vult postcode + aandoening in en ziet per polis welke goede/snelle zie
    | Bron | Wat | Ritme | Hoe |
    |---|---|---|---|
    | Zorginzicht openbare data (Zorginstituut) | uitkomst- en volume-indicatoren per zorgaanbieder | ~jaarlijks | download open data (geen scraping nodig) |
-   | Wachttijden (NZa → ZorgkaartNederland) | wachttijd polikliniek/diagnostiek/behandeling per locatie | elke 2 weken | NZa-publicatie of ZorgkaartNederland wachttijdenpagina's; let op: niet gecontroleerd op juistheid |
-   | Contracten | status per ziekenhuis × verzekeraar/label (gecontracteerd, met/zonder omzetplafond, in onderhandeling, geen contract) | 4× per overstapseizoen (nov–jan) | (a) contract-PDF's van ziekenhuizen zelf (bv. AVL, Jeroen Bosch publiceren tabellen per concern/label met peildatum); (b) zorgzoekers van verzekeraars (JS-sites, headless browser nodig) |
-   | Polissen & premies | polissen per label, premie, beperkende voorwaarden, vergoeding niet-gecontracteerd | jaarlijks (premies uiterlijk 12 nov) | zorgverzekeringskaart.nl (ZN) + NZa-overzichten |
-   | Reviews | gemiddeld cijfer + aantal waarderingen per ziekenhuis en per verzekeraar | maandelijks | ZorgkaartNederland e.d. — ALLEEN aggregaten, zie principes |
+   | Wachttijden (NZa) | wachttijd polikliniek/diagnostiek/behandeling per locatie | elke 2 weken | NZa open data (CSV op puc.overheid.nl); let op: niet gecontroleerd op juistheid |
+   | Contracten | status per ziekenhuis × verzekeraar/label (gecontracteerd, met/zonder omzetplafond, in onderhandeling, geen contract) | 4× per overstapseizoen (nov–jan) | (a) contract-PDF's van ziekenhuizen zelf (bv. AVL, Jeroen Bosch publiceren tabellen per concern/label met peildatum); (b) eigen zorgzoekers van verzekeraars (JS-sites, headless browser nodig) |
+   | Polissen & premies | polissen per label, premie, beperkende voorwaarden, vergoeding niet-gecontracteerd | jaarlijks (premies uiterlijk 12 nov) | polisvoorwaarden/premieoverzichten van de verzekeraars zelf + NZa-overzichten; zorgverzekeringskaart.nl (ZN) als controlelijst |
+   | Patiëntervaring | gemiddeld cijfer + aantal waarderingen per ziekenhuis | — | GEPARKEERD: ZorgkaartNederland is een platform. Alleen via directe bron (PREMs in Zorginzicht, of datalevering Patiëntenfederatie); ALLEEN aggregaten |
 2. **Ophalen**: per bron een los script in `scrapers/`. Eén kapotte bron mag de rest niet blokkeren. Ruwe output → `data/raw/<bron>/<peildatum>/`.
 3. **Koppelen & opschonen** (`pipeline/`): sleutels zijn de AGB-code van het ziekenhuis (+ locatie) en een vaste mapping label → concern → polis. Ziekenhuisnamen verschillen per bron: bouw een `hospitals` referentietabel met aliassen.
 4. **Database**: SQLite of DuckDB in het begin. Elk datapunt heeft `bron`, `peildatum`, `opgehaald_op`. Historie bewaren (contracten verschuiven door het seizoen).
@@ -41,6 +41,7 @@ De cloud-sandbox van Claude heeft beperkte internettoegang (allowlist), dus scra
 - Of lokaal op Nicks Windows-laptop (projecten staan in `OneDrive\Documenten pers\Projects`).
 
 ## Principes
+- **Directe bronnen, geen platforms.** Data komt van de partij die haar maakt of beheert: Zorginstituut (Zorginzicht), NZa, Vektis (AGB), PDOK, de ziekenhuizen zelf en de verzekeraars zelf. Niet bouwen op vergelijkers of doorgeefluiken (Zorgkiezer, Zorgwijzer, Independer, Consumentenbond, ZorgkaartNederland, Apify-actors e.d.); die mogen hooguit als handmatige controle.
 - Reviews: sla alleen gemiddeld cijfer + aantal op, geen reviewteksten of namen van individuele zorgverleners (AVG; databankenrecht van ZorgkaartNederland/Patiëntenfederatie). Overweeg de Patiëntenfederatie om data-toegang te vragen.
 - Scrapen netjes: robots.txt respecteren, rate limiting, duidelijke User-Agent, cachen. Liefst open data en feitelijke contractstatus.
 - Altijd bron + peildatum tonen; contractstatus is geen garantie op toegang (omzetplafonds, vergoeding tijdens onderhandeling).

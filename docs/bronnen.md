@@ -3,6 +3,11 @@
 Status per databron voor de MVP (heupprothese, knieprothese, staaroperatie).
 Laatste deskcheck: 2026-11-24.
 
+**Uitgangspunt: directe bronnen, geen platforms.** We halen data bij de partij die haar maakt of beheert
+(Zorginstituut, NZa, Vektis, PDOK, ziekenhuizen, verzekeraars). Vergelijkers en doorgeefluiken
+(Zorgkiezer, Zorgwijzer, Independer, Consumentenbond, ZorgkaartNederland, Apify e.d.) gebruiken we niet als bron;
+hooguit om onze eigen uitkomst met de hand te controleren.
+
 **Hoe is dit gecontroleerd?** De cloud-sandbox van Claude kan niet bij Nederlandse zorgsites (netwerk-allowlist).
 Deze ronde is daarom alleen op basis van zoekresultaten gedaan. Elke URL heeft een markering:
 
@@ -45,7 +50,7 @@ De GitHub Action `check-sources` (zie `scrapers/check_sources.py`) haalt elke UR
 | Wettelijke basis | ✅ Regeling Aanleveren wachttijden msz (NR/REG-2421); ziekenhuizen leveren maandelijks aan via het Zorgbeeldportaal. |
 | Kanttekening | Niet door de NZa gecontroleerd op juistheid. Tonen als "opgegeven door het ziekenhuis". |
 
-**Conclusie:** de NZa-CSV rechtstreeks gebruiken in plaats van ZorgkaartNederland te scrapen. Dat is open data en geeft alle locaties in één keer.
+**Conclusie:** de NZa-CSV rechtstreeks gebruiken. ZorgkaartNederland toont dezelfde NZa-data door en valt dus af. De CSV is open data en geeft alle locaties in één keer.
 
 ## 3. Contractstatus: ziekenhuizen × verzekeraars
 
@@ -56,7 +61,9 @@ De GitHub Action `check-sources` (zie `scrapers/check_sources.py`) haalt elke UR
 | Antoni van Leeuwenhoek | https://www.avl.nl/media/tpudg0no/avl_contracten-zorgverzekeraars-2026.pdf | 🟡 Versie 2026, PDF-tabel per concern/label. Versie 2027 nog zoeken. |
 | UMC Utrecht, St. Antonius, Diakonessenhuis, Meander MC, Rivierenland, Gelderse Vallei, Tergooi MC, Jeroen Bosch, Bergman Clinics | — | ❓ niet gevonden via zoeken; handmatig of met het checkscript opzoeken |
 
-### 3b. Zorgzoekers van verzekeraars (vaak makkelijker dan de PDF's)
+### 3b. Eigen publicaties van verzekeraars (directe bron: de verzekeraar sluit het contract)
+
+🟡 Verzekeraars moeten volgens NZa-regels zelf publiceren welke zorgaanbieders gecontracteerd zijn (nog bevestigen welke regeling dit precies voorschrijft). Hun zorgzoekers zijn daarom een directe bron, net als de overzichten van de ziekenhuizen. Waar beide bestaan, leggen we ze naast elkaar.
 
 | Concern | URL | Status |
 |---|---|---|
@@ -64,9 +71,8 @@ De GitHub Action `check-sources` (zie `scrapers/check_sources.py`) haalt elke UR
 | VGZ | 🟡 https://www.vgz.nl/zorg-regelen/zorgzoeker | Toont omzetplafonds. JS-app, waarschijnlijk headless browser nodig. |
 | Zilveren Kruis, Menzis, DSW, a.s.r., Zorg en Zekerheid | ❓ | nog opzoeken |
 
-### 3c. Controlebronnen (niet als hoofdbron gebruiken)
-- Overzicht Zorgkiezer 2027: https://www.zorgkiezer.nl/zorgverzekering/ziekenhuis-contracten (contract / in onderhandeling / geen contract)
-- Contracteringsonderzoek Consumentenbond: alleen als afbeelding, 4 meetmomenten per seizoen
+### 3c. Niet gebruiken als bron (platforms)
+Zorgkiezer, Consumentenbond-contracteringsonderzoek e.d.: alleen om onze eigen uitkomst met de hand te controleren.
 
 Achtergrond omzetplafonds: NZa-FAQ (mei 2026) https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_752361_22&versienummer=1&type=pdf&ValChk=wJGvp-IbIvXxY5bO9KawN_0ahok21uc1kmeb1fKvw5g1
 
@@ -74,28 +80,29 @@ Achtergrond omzetplafonds: NZa-FAQ (mei 2026) https://puc.overheid.nl/PUC/Handle
 
 | Bron | URL | Status |
 |---|---|---|
-| Zorgverzekeringskaart (ZN) | 🟡 https://www.zorgverzekeringskaart.nl | Eén kaart per polis, geen export bekend. robots.txt nog checken. |
+| Websites en polisvoorwaarden van de verzekeraars zelf | per label | **Hoofdbron.** Premie, polistype en vergoeding bij niet-gecontracteerde zorg staan in de polisvoorwaarden/het premieoverzicht van elk label. |
+| Zorgverzekeringskaart (ZN) | 🟡 https://www.zorgverzekeringskaart.nl | Gevuld door de verzekeraars zelf via hun brancheorganisatie: semi-direct, goed als controlelijst van alle polissen. Geen export bekend. robots.txt nog checken. |
 | NZa "polissen en premies" | ❓ | De NZa publiceert twee keer per jaar (informatiekaart, bv. over 2026 van 15 dec 2025: https://zoek.officielebekendmakingen.nl/dossier/blg-1228551.pdf). De editie over 2027 is waarschijnlijk nog niet uit (verwacht rond december). Checken of er een Excel-bijlage is. |
 | Oude open data (2011–2016) | ✅ https://data.overheid.nl/dataset/5244-zorgverzekeringsmarkt--kenmerken-zorgverzekeringen-2011-2016 | Verouderd; alleen nuttig als model voor de kolommen. |
 
 Feiten over 2027 uit nieuwsberichten (nog bevestigen bij de primaire bron): ONVZ valt per 1 jan 2027 onder VGZ; er zijn ongeveer 28 labels verdeeld over 9 concerns.
 
-**Conclusie:** voor de MVP een handgemaakte `data/manual/polissen_2027.csv` bijhouden (ongeveer 60–70 polissen; premie + polistype + vergoeding niet-gecontracteerde zorg overnemen van zorgverzekeringskaart.nl). Pas automatiseren als de NZa een bestand publiceert.
+**Conclusie:** voor de MVP een handgemaakte `data/manual/polissen_2027.csv` bijhouden (ongeveer 60–70 polissen; premie + polistype + vergoeding niet-gecontracteerde zorg overnemen uit de polisvoorwaarden van de verzekeraar, met zorgverzekeringskaart.nl als controlelijst). Pas automatiseren als de NZa een bestand publiceert.
 
 ## 5. Referentietabel ziekenhuizen (AGB-codes)
 
 | Bron | URL | Status |
 |---|---|---|
 | Vektis AGB-register | ✅ https://www.vektis.nl/agb-register | Dagelijks een volledige XML-dataset (betaald/onder voorwaarden), REST-"Raadpleegdienst" om op te zoeken. Bronvermelding "bron: Vektis" verplicht. |
-| AGB opzoeken (gratis) | 🟡 https://www.agbcode.nl | Eén voor één opzoeken; prima voor ~71 ziekenhuizen + ~20 klinieken met de hand. |
+| AGB opzoeken | 🟡 via de zoekfunctie van Vektis zelf (www.vektis.nl/agb-register) | Eén voor één opzoeken; prima voor ~71 ziekenhuizen + ~20 klinieken met de hand. Daarnaast staan AGB-codes vaak al in de Zorginzicht- en NZa-bestanden. |
 
 **Conclusie:** `data/manual/hospitals.csv` met de hand opbouwen (AGB, naam, locaties, postcodes, aliassen), met de Zorginzicht- en NZa-bestanden als bron voor de namen en aliassen.
 
-## 6. Reviews
+## 6. Patiëntervaring (voorheen: reviews)
 
-| Bron | Status |
-|---|---|
-| ZorgkaartNederland | 🟡 Gemiddeld cijfer + aantal waarderingen per ziekenhuis. Alleen aggregaten opslaan (AVG, databankenrecht). robots.txt checken; liefst de Patiëntenfederatie om toegang vragen. |
+ZorgkaartNederland is een platform en valt daarmee af als bron. **Geparkeerd** tot er een directe bron is:
+- 🟡 Patiëntervaringsindicatoren (PREMs) die ziekenhuizen zelf aanleveren aan Zorginzicht, als die in het MSZ-bestand voor onze ingrepen zitten; de pipeline-inventaris (`docs/data_inventory/zorginzicht.md`) laat dit zien.
+- De Patiëntenfederatie (eigenaar van de ZorgkaartNederland-data) om een officiële datalevering vragen. Dan is het een directe bron met afspraken.
 
 ## Andere bronnen voor later
 - **LROI** (Landelijke Registratie Orthopedische Interventies): heup/knie-data per ziekenhuis; de basis van de Zorginzicht-indicatoren.

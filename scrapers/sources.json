@@ -7,9 +7,6 @@
   {"id": "avl_contracten_2026", "layer": "contracts", "url": "https://www.avl.nl/media/tpudg0no/avl_contracten-zorgverzekeraars-2026.pdf"},
   {"id": "cz_zorgvinder_utrecht_2027", "layer": "contracts", "url": "https://zorgvinder.cz.nl/resultaten/ziekenhuis/utrecht?afstand=10&jaar=2027"},
   {"id": "vgz_zorgzoeker", "layer": "contracts", "url": "https://www.vgz.nl/zorg-regelen/zorgzoeker"},
-  {"id": "zorgkiezer_contracten", "layer": "contracts", "url": "https://www.zorgkiezer.nl/zorgverzekering/ziekenhuis-contracten"},
   {"id": "zorgverzekeringskaart", "layer": "policies", "url": "https://www.zorgverzekeringskaart.nl/"},
-  {"id": "vektis_agb", "layer": "reference", "url": "https://www.vektis.nl/agb-register"},
-  {"id": "agbcode", "layer": "reference", "url": "https://www.agbcode.nl/"},
-  {"id": "zorgkaart_wachttijden", "layer": "reviews", "url": "https://www.zorgkaartnederland.nl/wachttijden"}
+  {"id": "vektis_agb", "layer": "reference", "url": "https://www.vektis.nl/agb-register"}
 ]

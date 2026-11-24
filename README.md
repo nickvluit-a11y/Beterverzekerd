@@ -2,9 +2,9 @@
 
 Compare Dutch health insurance policies on the quality of the care they contract — not just on price.
 
-Beterverzekerd links four layers that are public today but never combined:
+Beterverzekerd links three layers that are public today but never combined:
 contract status per hospital × insurer/policy, hospital quality and volume indicators (Zorginzicht),
-waiting times (NZa), and aggregate review scores — plus premiums.
+waiting times (NZa) — plus premiums. Data comes directly from the organisations that produce it, not from comparison platforms.
 
 Status: working prototype on a small hospital list (around Utrecht). See `CLAUDE.md` for full context
 and `docs/bronnen.md` for the data sources.
