@@ -53,6 +53,11 @@ jobs:
         continue-on-error: true
         run: python -m pipeline.contracts_parse
 
+      - name: Linkage report
+        if: always()
+        continue-on-error: true
+        run: python -m pipeline.linkage_report
+
       - name: Keep raw downloads
         if: always()
         uses: actions/upload-artifact@v4
