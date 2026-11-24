@@ -12,6 +12,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from pipeline.quality import compare, hospital_verdict
 from pipeline.reference import MANUAL, PROCESSED, hospitals, labels
 
 # vrije_keuze: restitutie policy, reimbursed up to market rate everywhere, but not a contract
@@ -140,19 +141,10 @@ def latest_waits(procedure_id: str, waits: pd.DataFrame | None = None) -> pd.Dat
     return sub.groupby("location_id").tail(1)[columns].reset_index(drop=True)
 
 
-def quality_counts(procedure_id: str, quality: pd.DataFrame | None = None) -> pd.DataFrame:
-    """Number of published indicators per location for the procedure (latest verslagjaar)."""
-    columns = ["location_id", "indicators", "verslagjaar"]
+def quality_by_location(procedure_id: str, quality: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Quality verdict per location for the procedure (see pipeline/quality.py for the method)."""
     quality = _read(PROCESSED / "quality.csv") if quality is None else quality
-    if quality.empty:
-        return pd.DataFrame(columns=columns)
-    sub = quality[(quality["procedure_id"] == procedure_id) & quality["location_id"].notna()].copy()
-    sub["verslagjaar"] = pd.to_numeric(sub["verslagjaar"], errors="coerce").round().astype("Int64")
-    sub = sub.dropna(subset=["verslagjaar"])
-    if sub.empty:
-        return pd.DataFrame(columns=columns)
-    sub = sub[sub["verslagjaar"] == sub.groupby("location_id")["verslagjaar"].transform("max")]
-    return sub.groupby("location_id").agg(indicators=("indicator", "nunique"), verslagjaar=("verslagjaar", "first")).reset_index()
+    return hospital_verdict(compare(quality), procedure_id)
 
 
 def policy_name(policy: dict) -> str:
@@ -169,7 +161,8 @@ def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, y
     policies = load_policies(year) if policies is None else policies
     contracts = load_contracts(year) if contracts is None else contracts
     near = near.merge(latest_waits(procedure_id, waits), on="location_id", how="left")
-    near = near.merge(quality_counts(procedure_id, quality), on="location_id", how="left")
+    near = near.merge(quality_by_location(procedure_id, quality), on="location_id", how="left")
+    near["quality_verdict"] = near["quality_verdict"].fillna("geen_data")
 
     detail_rows = []
     for policy in policies.to_dict("records"):
@@ -182,7 +175,9 @@ def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, y
                 "contract_peildatum": contract.get("peildatum"),
                 "contract_source": contract.get("source_url") or contract.get("source"),
                 "wait_weeks": hosp.get("weeks"), "wait_peildatum": hosp.get("peildatum"),
-                "quality_indicators": hosp.get("indicators"), "quality_year": hosp.get("verslagjaar"),
+                "quality": hosp["quality_verdict"], "quality_better": hosp.get("n_beter"),
+                "quality_worse": hosp.get("n_slechter"), "quality_year": hosp.get("verslagjaar"),
+                "volume": hosp.get("volume"),
             })
     detail = pd.DataFrame(detail_rows)
     if detail.empty:
@@ -192,7 +187,13 @@ def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, y
         access = group["access"]
         reachable = access.isin(["gecontracteerd", "gecontracteerd_met_plafond", "vrije_keuze"])
         waits_ok = group.loc[reachable, "wait_weeks"].dropna()
+        quality = group.loc[reachable, "quality"]
         return pd.Series({
+            # quality first: this is what the comparison is about
+            "kwaliteit_boven_gemiddeld": int(quality.eq("boven_gemiddeld").sum()),
+            "kwaliteit_gemengd": int(quality.eq("gemengd").sum()),
+            "kwaliteit_onder_gemiddeld": int(quality.eq("onder_gemiddeld").sum()),
+            "kwaliteit_geen_data": int(quality.eq("geen_data").sum()),
             "ziekenhuizen_in_bereik": len(group),
             "gecontracteerd": int((access == "gecontracteerd").sum()),
             "met_omzetplafond": int((access == "gecontracteerd_met_plafond").sum()),

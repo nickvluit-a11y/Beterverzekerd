@@ -51,8 +51,8 @@ def html_to_text(page: str) -> str:
 def extract_html(page: str) -> tuple[str, list[Table]]:
     tables: list[Table] = []
     try:
-        frames = pd.read_html(io.StringIO(page))
-    except ValueError:  # no <table> on the page
+        frames = pd.read_html(io.StringIO(page), flavor="lxml")
+    except Exception:  # no <table>, or a table lxml cannot read: the text fallback still works
         frames = []
     for df in frames:
         body = df.astype(object).where(df.notna(), None).values.tolist()
@@ -86,6 +86,10 @@ def main() -> int:
                 (out / f"{key}.html").write_text(resp.text, encoding="utf-8")
                 text, tables = extract_html(resp.text)
             (out / f"{key}.txt").write_text(text, encoding="utf-8")
+            # keep the extracted text in the repo: public, small, and needed to improve the parser
+            inventory = ROOT / "docs" / "data_inventory" / "contracts"
+            inventory.mkdir(parents=True, exist_ok=True)
+            (inventory / f"{key}.txt").write_text(f"source: {url}\n\n{text}", encoding="utf-8")
             (out / f"{key}.tables.json").write_text(json.dumps(tables, ensure_ascii=False, indent=1), encoding="utf-8")
             results[key] = {"url": url, "final_url": resp.url, "location_ids": location_ids,
                             "format": "pdf" if is_pdf else "html", "tables": len(tables), "ok": True}
