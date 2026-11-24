@@ -35,10 +35,10 @@ jobs:
         id: nza
         continue-on-error: true
         run: python -m scrapers.nza_wachttijden
-      - name: Fetch hospital contract PDFs
+      - name: Fetch hospital contract pages
         id: contracts
         continue-on-error: true
-        run: python -m scrapers.contract_pdfs
+        run: python -m scrapers.contracts
 
       - name: Ingest Zorginzicht
         if: steps.zorginzicht.outcome == 'success'
@@ -48,7 +48,7 @@ jobs:
         if: steps.nza.outcome == 'success'
         continue-on-error: true
         run: python -m pipeline.nza_ingest
-      - name: Parse contract PDFs
+      - name: Parse contract pages
         if: steps.contracts.outcome == 'success'
         continue-on-error: true
         run: python -m pipeline.contracts_parse
@@ -67,7 +67,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/processed docs/data_inventory 2>/dev/null || true
+          mkdir -p data/processed docs/data_inventory
+          git add data/processed docs/data_inventory
           git diff --cached --quiet || git commit -m "Update processed data ($(date -u +%F))"
           git pull --rebase && git push
 

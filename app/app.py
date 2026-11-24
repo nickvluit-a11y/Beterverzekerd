@@ -20,6 +20,7 @@ from pipeline.score import overview  # noqa: E402
 ACCESS_LABELS = {
     "gecontracteerd": "✅ Gecontracteerd",
     "gecontracteerd_met_plafond": "⚠️ Gecontracteerd, met omzetplafond",
+    "vrije_keuze": "🔓 Vrije keuze (restitutie, tot marktconform tarief)",
     "in_onderhandeling": "⏳ In onderhandeling",
     "geen_contract": "❌ Geen contract",
     "onbekend": "❔ Onbekend",
@@ -50,43 +51,53 @@ with st.form("zoek"):
 
 if submitted:
     code = clean_postcode(postcode)
+    coords = None
+    if code:
+        try:
+            coords = cached_geocode(code)
+        except Exception:
+            coords = None
     if not code:
+        st.session_state.pop("result", None)
         st.error("Vul een geldige postcode in, bijvoorbeeld 3584 CX.")
-        st.stop()
-    try:
-        coords = cached_geocode(code)
-    except Exception:
-        coords = None
-    if not coords:
+    elif not coords:
+        st.session_state.pop("result", None)
         st.error("Kon deze postcode niet vinden (PDOK Locatieserver).")
-        st.stop()
-    procedure_id = procs.loc[procs["name_nl"] == proc_name, "procedure_id"].iloc[0]
-    summary, detail = overview(coords[0], coords[1], procedure_id, radius_km=radius)
+    else:
+        procedure_id = procs.loc[procs["name_nl"] == proc_name, "procedure_id"].iloc[0]
+        summary, detail = overview(coords[0], coords[1], procedure_id, radius_km=radius)
+        # keep results across reruns (the polis selectbox below triggers one)
+        st.session_state["result"] = {"summary": summary, "detail": detail, "radius": radius}
 
+result = st.session_state.get("result")
+if result:
+    summary, detail = result["summary"], result["detail"]
     if detail.empty:
-        st.info(f"Geen ziekenhuizen uit onze lijst binnen {radius} km. De lijst bevat nu {len(hospitals())} locaties.")
-        st.stop()
+        st.info(f"Geen ziekenhuizen uit onze lijst binnen {result['radius']} km. "
+                f"De lijst bevat nu {len(hospitals())} locaties.")
+    else:
+        st.subheader("Per polis")
+        shown = summary.drop(columns=["naam"]).rename(columns={
+            "concern": "Concern", "label": "Label", "polis": "Polis", "polis_type": "Type",
+            "premie_per_maand": "Premie p/m (€)", "ziekenhuizen_in_bereik": "Ziekenhuizen in bereik",
+            "gecontracteerd": "Gecontracteerd", "met_omzetplafond": "Met plafond",
+            "vrije_keuze": "Vrije keuze (restitutie)", "in_onderhandeling": "In onderhandeling",
+            "geen_contract": "Geen contract", "onbekend": "Onbekend",
+            "kortste_wachttijd_weken": "Kortste wachttijd (wk)",
+        })
+        st.dataframe(shown, hide_index=True, use_container_width=True)
+        st.caption("Kortste wachttijd: alleen ziekenhuizen die gecontracteerd zijn of via restitutie vergoed worden.")
 
-    st.subheader("Per polis")
-    shown = summary.rename(columns={
-        "concern": "Concern", "label": "Label", "polis": "Polis", "polis_type": "Type",
-        "premie_per_maand": "Premie p/m (€)", "ziekenhuizen_in_bereik": "Ziekenhuizen in bereik",
-        "gecontracteerd": "Gecontracteerd", "met_omzetplafond": "Met plafond",
-        "in_onderhandeling": "In onderhandeling", "geen_contract": "Geen contract", "onbekend": "Onbekend",
-        "kortste_wachttijd_gecontracteerd_weken": "Kortste wachttijd gecontracteerd (wk)",
-    })
-    st.dataframe(shown, hide_index=True, use_container_width=True)
-
-    st.subheader("Details per ziekenhuis")
-    chosen = st.selectbox("Polis", summary["polis"].tolist())
-    rows = detail[detail["polis"] == chosen].copy()
-    rows["access"] = rows["access"].map(ACCESS_LABELS)
-    st.dataframe(rows.drop(columns=["concern", "label", "polis"]).rename(columns={
-        "location": "Ziekenhuis", "distance_km": "Afstand (km)", "access": "Contract",
-        "contract_peildatum": "Peildatum contract", "contract_source": "Bron contract",
-        "wait_weeks": "Wachttijd (wk)", "wait_peildatum": "Peildatum wachttijd",
-        "quality_indicators": "Openbare kwaliteitsindicatoren", "quality_year": "Verslagjaar",
-    }), hide_index=True, use_container_width=True)
+        st.subheader("Details per ziekenhuis")
+        chosen = st.selectbox("Polis", summary["naam"].tolist())
+        rows = detail[detail["naam"] == chosen].copy()
+        rows["access"] = rows["access"].map(ACCESS_LABELS)
+        st.dataframe(rows.drop(columns=["naam", "concern", "label", "polis"]).rename(columns={
+            "location": "Ziekenhuis", "distance_km": "Afstand (km)", "access": "Contract",
+            "contract_peildatum": "Peildatum contract", "contract_source": "Bron contract",
+            "wait_weeks": "Wachttijd (wk)", "wait_peildatum": "Peildatum wachttijd",
+            "quality_indicators": "Openbare kwaliteitsindicatoren", "quality_year": "Verslagjaar",
+        }), hide_index=True, use_container_width=True)
 
 with st.expander("Over de data"):
     def status(path: Path, label: str) -> str:

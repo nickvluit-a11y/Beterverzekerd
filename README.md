@@ -13,7 +13,7 @@ and `docs/bronnen.md` for the data sources.
 - `scrapers/` — one fetcher per source, writes to `data/raw/<source>/<date>/` (not committed; kept as workflow artifact)
   - `zorginzicht.py` — Zorginzicht MSZ open data (Excel)
   - `nza_wachttijden.py` — NZa waiting-times CSV
-  - `contract_pdfs.py` — contract overviews published by hospitals (`contracts_url` in `hospitals.csv`)
+  - `contracts.py` — contract overviews hospitals publish, PDF or web page (`contracts_url` in `hospitals.csv`)
   - `check_sources.py` — reachability + robots.txt report for every source
 - `pipeline/` — normalise and link everything
   - `reference.py` — hospital and label matching (aliases, fuzzy)

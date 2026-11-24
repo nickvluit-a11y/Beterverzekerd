@@ -23,3 +23,14 @@ def test_app_rejects_bad_postcode(monkeypatch):
     at.text_input[0].set_value("hallo")
     at.button[0].click().run()
     assert at.error and "geldige postcode" in at.error[0].value
+
+
+def test_details_survive_policy_switch(monkeypatch):
+    monkeypatch.setattr(pipeline.geo, "geocode_postcode", lambda code: (52.0870, 5.1790))
+    at = AppTest.from_file("../app/app.py", default_timeout=30)
+    at.run()
+    at.button[0].click().run()
+    options = at.selectbox[1].options
+    at.selectbox[1].set_value(options[1]).run()
+    assert not at.exception
+    assert len(at.dataframe) == 2

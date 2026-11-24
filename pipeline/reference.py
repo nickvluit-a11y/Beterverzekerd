@@ -18,11 +18,17 @@ PROCESSED = ROOT / "data" / "processed"
 _STOPWORDS = {"ziekenhuis", "ziekenhuizen", "medisch", "centrum", "mc", "stichting", "locatie", "de", "het", "st", "sint"}
 
 
-def normalise(text: str) -> str:
-    """Lowercase, strip accents and punctuation, drop stopwords."""
-    text = unicodedata.normalize("NFKD", str(text)).encode("ascii", "ignore").decode()
+def normalise(text: object) -> str:
+    """Lowercase, strip accents and punctuation, drop stopwords. Non-strings give ''."""
+    if not isinstance(text, str):
+        return ""
+    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
     words = re.sub(r"[^a-z0-9 ]+", " ", text.lower()).split()
     return " ".join(w for w in words if w not in _STOPWORDS)
+
+
+def _split_aliases(value: object) -> list[str]:
+    return [a for a in value.split("|") if a.strip()] if isinstance(value, str) else []
 
 
 @lru_cache
@@ -40,27 +46,31 @@ def procedures() -> pd.DataFrame:
     return pd.read_csv(MANUAL / "procedures.csv")
 
 
-def _alias_index() -> list[tuple[str, str]]:
+@lru_cache
+def _alias_index() -> tuple[tuple[str, str], ...]:
     """(normalised alias, location_id) pairs for every name a location is known by."""
     pairs = []
     for row in hospitals().itertuples():
-        names = [row.organisation, row.location_name] + str(row.aliases or "").split("|")
-        pairs += [(normalise(n), row.location_id) for n in names if isinstance(n, str) and n.strip()]
-    return pairs
+        names = [row.organisation, row.location_name] + _split_aliases(row.aliases)
+        pairs += [(normalise(n), row.location_id) for n in names if normalise(n)]
+    return tuple(pairs)
 
 
-def match_location(name: str, city: str | None = None, agb_code: str | None = None, cutoff: float = 0.85) -> str | None:
+def match_location(name: object, city: str | None = None, agb_code: str | None = None, cutoff: float = 0.85) -> str | None:
     """Return the location_id for a hospital name as written in some source, or None.
 
-    Order: exact AGB code, exact alias, fuzzy alias. When a name matches several
-    locations of the same organisation, `city` decides; without a city, an
-    organisation-level name maps to its first listed location only if it has one location.
+    Order: AGB code (only if it identifies one location), exact alias, fuzzy alias.
+    When a name fits several locations of one organisation, `city` decides.
     """
     table = hospitals()
-    if agb_code:
-        hit = table[table["agb_code"].fillna("") == str(agb_code).strip()]
+    if isinstance(agb_code, str) and agb_code.strip():
+        hit = table[table["agb_code"].fillna("") == agb_code.strip()]
         if len(hit) == 1:
             return hit.iloc[0]["location_id"]
+        if len(hit) > 1 and isinstance(city, str):
+            hit = hit[hit["city"].str.lower() == city.strip().lower()]
+            if len(hit) == 1:
+                return hit.iloc[0]["location_id"]
     target = normalise(name)
     if not target:
         return None
@@ -69,22 +79,34 @@ def match_location(name: str, city: str | None = None, agb_code: str | None = No
     if not candidates:
         best = difflib.get_close_matches(target, [a for a, _ in index], n=3, cutoff=cutoff)
         candidates = {loc for alias, loc in index if alias in best}
-    if len(candidates) > 1 and city:
+    if len(candidates) > 1 and isinstance(city, str):
         in_city = set(table[table["city"].str.lower() == city.strip().lower()]["location_id"])
         candidates &= in_city
     return candidates.pop() if len(candidates) == 1 else None
 
 
-def match_label(text: str) -> tuple[str, str | None] | None:
+def match_label(text: object) -> tuple[str, str | None] | None:
     """Map free text to (concern, label). A bare concern name gives (concern, None)."""
     target = normalise(text)
     if not target:
         return None
     table = labels()
     for row in table.itertuples():
-        if normalise(row.label) == target:
+        names = [row.label] + _split_aliases(getattr(row, "aliases", None))
+        if any(normalise(n) == target for n in names):
             return row.concern, row.label
     for concern in table["concern"].unique():
         if normalise(concern) == target:
             return concern, None
     return None
+
+
+def save_with_history(df: pd.DataFrame, name: str, peildatum: str) -> Path:
+    """Write data/processed/<name>.csv (latest) and data/processed/history/<name>/<peildatum>.csv."""
+    PROCESSED.mkdir(parents=True, exist_ok=True)
+    latest = PROCESSED / f"{name}.csv"
+    df.to_csv(latest, index=False)
+    history = PROCESSED / "history" / name
+    history.mkdir(parents=True, exist_ok=True)
+    df.to_csv(history / f"{peildatum}.csv", index=False)
+    return latest

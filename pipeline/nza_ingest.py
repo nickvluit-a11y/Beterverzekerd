@@ -2,7 +2,8 @@
 
 1. Describe the CSV -> docs/data_inventory/nza_wachttijden.md (committed).
 2. Keep rows whose specialism matches a procedure's nza_pattern.
-3. Write data/processed/waiting_times.csv (one row per location × specialism × type × peildatum).
+3. Write data/processed/waiting_times.csv (one row per location × specialism × type × peildatum)
+   plus a dated copy under data/processed/history/.
 
 Usage: python -m pipeline.nza_ingest [raw_dir]
 """
@@ -16,12 +17,13 @@ from pathlib import Path
 
 import pandas as pd
 
-from pipeline.reference import PROCESSED, ROOT, match_location, procedures
+from pipeline.reference import ROOT, match_location, procedures, save_with_history
 from pipeline.tabular import describe, find_column, read_any
 
 INVENTORY = ROOT / "docs" / "data_inventory" / "nza_wachttijden.md"
+_CODE = r"agb|code|nummer|kvk|(?:^|[_\s])(?:nr|id)(?:$|[_\s])"
 COLUMN_PATTERNS = {
-    "provider": (r"naam.*(locatie|vestiging)", r"locatie.*naam", r"naam.*instelling", r"instelling.*naam", r"naam"),
+    "provider": (r"naam.*(locatie|vestiging)", r"(locatie|vestiging).*naam", r"naam.*instelling", r"instelling.*naam"),
     "agb": (r"agb.*(locatie|vestiging)", r"agb",),
     "kvk": (r"kvk",),
     "city": (r"plaats",),
@@ -40,7 +42,9 @@ def latest_raw_dir() -> Path | None:
 
 
 def extract(df: pd.DataFrame, fetched_on: str, source_url: str | None) -> pd.DataFrame:
-    cols = {k: find_column(df, *p, required=k in {"provider", "specialism", "weeks"}) for k, p in COLUMN_PATTERNS.items()}
+    excludes = {"provider": _CODE, "specialism": _CODE, "wait_type": _CODE, "weeks": _CODE + r"|type|soort"}
+    cols = {k: find_column(df, *p, exclude=excludes.get(k), required=k in {"provider", "specialism", "weeks"})
+            for k, p in COLUMN_PATTERNS.items()}
     if cols["weeks"] == cols["wait_type"]:
         cols["wait_type"] = None
     parts = []
@@ -65,7 +69,7 @@ def extract(df: pd.DataFrame, fetched_on: str, source_url: str | None) -> pd.Dat
         return pd.DataFrame()
     result = pd.concat(parts, ignore_index=True)
     result["location_id"] = [
-        match_location(n, city=c if isinstance(c, str) else None, agb_code=a if isinstance(a, str) else None)
+        match_location(n, city=c, agb_code=a)
         for n, c, a in zip(result["provider_raw"], result["city_raw"], result["agb_code"])
     ]
     result["source"] = "nza_wachttijden"
@@ -86,13 +90,15 @@ def main(argv: list[str]) -> int:
     INVENTORY.parent.mkdir(parents=True, exist_ok=True)
     INVENTORY.write_text(describe(tables, f"NZa wachttijden msz ({source_dir.name})", pattern), encoding="utf-8")
     print(f"inventory: {INVENTORY}")
+    if not tables:
+        print("Could not read wachttijden.csv", file=sys.stderr)
+        return 1
     df = next(iter(tables.values()))
     waits = extract(df, source_dir.name, meta.get("url"))
     if waits.empty:
         print("No rows for our specialisms; see the inventory and adjust COLUMN_PATTERNS.", file=sys.stderr)
         return 1
-    PROCESSED.mkdir(parents=True, exist_ok=True)
-    waits.to_csv(PROCESSED / "waiting_times.csv", index=False)
+    save_with_history(waits, "waiting_times", source_dir.name)
     print(f"waiting_times.csv: {len(waits)} rows, {waits['location_id'].notna().mean():.0%} matched to hospitals.csv")
     return 0
 

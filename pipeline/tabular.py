@@ -4,48 +4,74 @@ from __future__ import annotations
 
 import io
 import re
+import sys
 import zipfile
 from pathlib import Path
 
 import pandas as pd
 
+DATA_SUFFIXES = {".csv", ".xlsx", ".xls"}
+
 
 def read_any(path: Path) -> dict[str, pd.DataFrame]:
-    """All tables in a csv/xlsx/zip file as {name: DataFrame}. Everything is read as text."""
+    """All tables in a csv/xlsx/xls/zip file as {name: DataFrame}, everything as text.
+
+    Unreadable files or zip members are reported on stderr and skipped.
+    """
     suffix = path.suffix.lower()
     if suffix == ".zip":
         tables: dict[str, pd.DataFrame] = {}
-        with zipfile.ZipFile(path) as archive:
+        try:
+            archive = zipfile.ZipFile(path)
+        except zipfile.BadZipFile as exc:
+            print(f"skip {path.name}: {exc}", file=sys.stderr)
+            return {}
+        with archive:
             for member in archive.namelist():
-                if Path(member).suffix.lower() in {".csv", ".xlsx", ".xls"}:
-                    inner = Path(member)
-                    data = archive.read(member)
-                    for name, df in _read_bytes(data, inner.suffix.lower()).items():
+                inner = Path(member)
+                if member.startswith("__MACOSX/") or inner.name.startswith("._"):
+                    continue
+                if inner.suffix.lower() in DATA_SUFFIXES:
+                    for name, df in _read_bytes(archive.read(member), inner.suffix.lower(), member).items():
                         tables[f"{inner.name}:{name}"] = df
         return tables
-    return _read_bytes(path.read_bytes(), suffix)
+    return _read_bytes(path.read_bytes(), suffix, path.name)
 
 
-def _read_bytes(data: bytes, suffix: str) -> dict[str, pd.DataFrame]:
-    if suffix in {".xlsx", ".xls"}:
-        return pd.read_excel(io.BytesIO(data), sheet_name=None, dtype=str)
-    if suffix == ".csv":
-        for encoding in ("utf-8-sig", "cp1252"):
-            try:
-                text = data.decode(encoding)
-                break
-            except UnicodeDecodeError:
-                continue
-        sep = ";" if text.splitlines()[0].count(";") > text.splitlines()[0].count(",") else ","
-        return {"csv": pd.read_csv(io.StringIO(text), sep=sep, dtype=str)}
+def decode(data: bytes) -> str:
+    for encoding in ("utf-8-sig", "cp1252"):
+        try:
+            return data.decode(encoding)
+        except UnicodeDecodeError:
+            continue
+    return data.decode("latin-1")  # never fails
+
+
+def _read_bytes(data: bytes, suffix: str, label: str) -> dict[str, pd.DataFrame]:
+    try:
+        if suffix in {".xlsx", ".xls"}:
+            return pd.read_excel(io.BytesIO(data), sheet_name=None, dtype=str)
+        if suffix == ".csv":
+            text = decode(data)
+            first = text.splitlines()[0] if text.strip() else ""
+            if not first:
+                return {}
+            sep = ";" if first.count(";") > first.count(",") else ","
+            return {"csv": pd.read_csv(io.StringIO(text), sep=sep, dtype=str)}
+    except Exception as exc:  # one bad file must not stop the run
+        print(f"skip {label}: {type(exc).__name__}: {exc}", file=sys.stderr)
     return {}
 
 
-def find_column(df: pd.DataFrame, *patterns: str, required: bool = True) -> str | None:
-    """First column whose (lowercased) name matches any regex in `patterns`, tried in order."""
+def find_column(df: pd.DataFrame, *patterns: str, exclude: str | None = None, required: bool = True) -> str | None:
+    """First column whose lowercased name matches a regex in `patterns` (tried in order of patterns),
+    skipping names that match `exclude`."""
     for pattern in patterns:
         for column in df.columns:
-            if re.search(pattern, str(column).lower()):
+            name = str(column).lower()
+            if exclude and re.search(exclude, name):
+                continue
+            if re.search(pattern, name):
                 return column
     if required:
         raise KeyError(f"No column matching {patterns}; columns are: {list(df.columns)}")

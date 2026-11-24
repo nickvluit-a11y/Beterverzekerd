@@ -7,11 +7,12 @@ import json
 import pandas as pd
 import pytest
 
+import pipeline.reference
 from pipeline import contracts_parse, nza_ingest, zorginzicht_ingest
-from pipeline.contract_status import normalise_status
+from pipeline.contract_status import combine, normalise_status, plafond_from_text, status_from_text
 from pipeline.geo import clean_postcode, parse_point
 from pipeline.reference import match_label, match_location, normalise
-from pipeline.score import access_status, contract_for, haversine_km, hospitals_within, overview
+from pipeline.score import access_status, contract_for, haversine_km, hospitals_within, latest_waits, overview, to_date, truthy
 from scrapers.common import find_links, safe_filename
 from scrapers.nza_wachttijden import pick_latest
 
@@ -58,6 +59,14 @@ def test_match_label():
     ("Ja", ("gecontracteerd", None)),
     ("Nee", ("geen_contract", None)),
     ("✓", ("gecontracteerd", None)),
+    ("Niet-gecontracteerd", ("geen_contract", None)),
+    ("niet\u00a0gecontracteerd", ("geen_contract", None)),
+    ("Gecontracteerd. Omzetplafond: nee", ("gecontracteerd", False)),
+    ("Gecontracteerd, geen contract voor budgetpolis", ("onbekend", None)),
+    ("Contract opgezegd", ("geen_contract", None)),
+    ("Contract volgt", ("in_onderhandeling", None)),
+    ("x", ("onbekend", None)),
+    ("plafond n.v.t.", ("onbekend", False)),
     ("", ("onbekend", None)),
     (None, ("onbekend", None)),
     ("Omzetplafond", ("gecontracteerd", True)),
@@ -91,10 +100,10 @@ def test_peildatum_and_year():
 def test_contracts_parse_main(tmp_path, monkeypatch):
     raw = tmp_path / "2026-11-24"
     raw.mkdir()
-    (raw / "meta.json").write_text(json.dumps({"results": {"avl": {"url": "https://example.org/x.pdf"}}}))
+    (raw / "meta.json").write_text(json.dumps({"results": {"avl": {"url": "https://example.org/x.pdf", "location_ids": ["avl"]}}}))
     (raw / "avl.txt").write_text("Contracten 2027. Peildatum 01-11-2026")
     (raw / "avl.tables.json").write_text(json.dumps([[["CZ", "Gecontracteerd"]]]))
-    monkeypatch.setattr(contracts_parse, "PROCESSED", tmp_path / "out")
+    monkeypatch.setattr(pipeline.reference, "PROCESSED", tmp_path / "out")
     assert contracts_parse.main([str(raw)]) == 0
     out = pd.read_csv(tmp_path / "out" / "contracts_candidates.csv")
     assert out.loc[0, "concern"] == "CZ" and out.loc[0, "year"] == 2027 and out.loc[0, "peildatum"] == "01-11-2026"
@@ -131,7 +140,7 @@ def test_zorginzicht_ingest(tmp_path, monkeypatch):
         "Noemer": ["400", "900", "50", "300"],
     })
     df.to_excel(raw / "msz_2025.xlsx", index=False)
-    monkeypatch.setattr(zorginzicht_ingest, "PROCESSED", tmp_path / "out")
+    monkeypatch.setattr(pipeline.reference, "PROCESSED", tmp_path / "out")
     monkeypatch.setattr(zorginzicht_ingest, "INVENTORY", tmp_path / "inventory.md")
     assert zorginzicht_ingest.main([str(raw)]) == 0
     out = pd.read_csv(tmp_path / "out" / "quality.csv")
@@ -150,7 +159,7 @@ def test_nza_ingest(tmp_path, monkeypatch):
         "2026-09-15;UMC Utrecht;Utrecht;;456;Oogheelkunde;Polikliniek;4,5\n"
         "2026-09-15;UMC Utrecht;Utrecht;;456;Cardiologie;Polikliniek;3\n",
         encoding="utf-8")
-    monkeypatch.setattr(nza_ingest, "PROCESSED", tmp_path / "out")
+    monkeypatch.setattr(pipeline.reference, "PROCESSED", tmp_path / "out")
     monkeypatch.setattr(nza_ingest, "INVENTORY", tmp_path / "inventory.md")
     assert nza_ingest.main([str(raw)]) == 0
     out = pd.read_csv(tmp_path / "out" / "waiting_times.csv")
@@ -181,7 +190,9 @@ def test_contract_for_prefers_label_then_concern_and_latest():
 
 
 def test_access_status():
-    assert access_status({"polis_type": "Restitutie"}, None) == "gecontracteerd"
+    assert access_status({"polis_type": "Restitutie"}, None) == "vrije_keuze"
+    assert access_status({"polis_type": "Restitutiepolis "}, None) == "vrije_keuze"
+    assert access_status({}, {"status": "gecontracteerd", "omzetplafond": 1.0}) == "gecontracteerd_met_plafond"
     assert access_status({"polis_type": "natura"}, None) == "onbekend"
     assert access_status({}, {"status": "gecontracteerd", "omzetplafond": True}) == "gecontracteerd_met_plafond"
     assert access_status({}, {"status": "geen_contract"}) == "geen_contract"
@@ -209,9 +220,10 @@ def test_overview_end_to_end():
                                contracts=contracts, waits=waits, quality=quality)
     cz = summary.set_index("polis").loc["CZ Zorgbewust"]
     assert cz["gecontracteerd"] == 1 and cz["met_omzetplafond"] == 1
-    assert cz["kortste_wachttijd_gecontracteerd_weken"] == 5  # treatment wait, not outpatient
+    assert cz["kortste_wachttijd_weken"] == 5  # treatment wait, not outpatient
     vgz = summary.set_index("polis").loc["VGZ Ruime Keuze"]
-    assert vgz["onbekend"] == 0  # restitutie covers all
+    assert vgz["onbekend"] == 0 and vgz["vrije_keuze"] == vgz["ziekenhuizen_in_bereik"]
+    assert vgz["gecontracteerd"] == 0  # restitutie is not a contract
     umcu = detail[(detail["polis"] == "CZ Zorgbewust") & (detail["location"] == "UMC Utrecht Heidelberglaan")].iloc[0]
     assert umcu["quality_indicators"] == 2
 
@@ -229,3 +241,138 @@ def test_postcode_helpers():
     assert clean_postcode("3584") == "3584"
     assert clean_postcode("ABCD") is None
     assert parse_point("POINT(5.179 52.087)") == (52.087, 5.179)
+
+
+# --- regressions from code review ----------------------------------------------------------
+
+def test_row_layout_with_plafond_column():
+    table = [["Verzekeraar", "Gecontracteerd", "Omzetplafond"],
+             ["Zilveren Kruis", "Ja", "Nee"],
+             ["CZ", "Ja", "Ja"],
+             ["VGZ", "Nee", ""]]
+    got = {r["label"] or r["concern"]: (r["status"], r["omzetplafond"]) for r in contracts_parse.parse_tables([table])}
+    assert got["Zilveren Kruis"] == ("gecontracteerd", False)
+    assert got["CZ"] == ("gecontracteerd", True)
+    assert got["VGZ"][0] == "geen_contract"
+
+
+def test_conflicting_cells_are_flagged_unknown():
+    assert combine(["gecontracteerd", "geen_contract"]) == "onbekend"
+    rows = contracts_parse.parse_tables([[["CZ", "Gecontracteerd", "Geen contract"]]])
+    assert rows and rows[0]["status"] == "onbekend"
+
+
+def test_label_aliases():
+    assert match_label("Ditzo") == ("a.s.r.", "Ik kies zelf")
+    assert match_label("Anderzorg") == ("Menzis", "Menzis")
+    assert match_label("Pro Life") == ("Achmea", "De christelijke zorgverzekeraar")
+
+
+def test_line_fallback_for_html_pages():
+    text = "Stand van zaken 13 november 2026\nZilveren Kruis: gecontracteerd\nCZ - in onderhandeling\nWelkom bij ons ziekenhuis"
+    rows = contracts_parse.parse_tables(contracts_parse.line_tables(text))
+    got = {r["label"]: r["status"] for r in rows}
+    assert got == {"Zilveren Kruis": "gecontracteerd", "CZ": "in_onderhandeling"}
+
+
+def test_year_most_frequent_not_highest():
+    assert contracts_parse.find_year("Contracten 2027 ... 2027 ... meerjarenafspraak 2026-2029") == 2027
+
+
+def test_missing_name_does_not_match_any_hospital():
+    assert match_location(float("nan")) is None
+    assert match_location("nan") is None
+
+
+def test_one_pdf_rows_for_every_location(tmp_path, monkeypatch):
+    raw = tmp_path / "2026-11-24"
+    raw.mkdir()
+    (raw / "meta.json").write_text(json.dumps({"results": {"antonius_nwg": {
+        "url": "https://example.org/a.pdf", "format": "pdf", "location_ids": ["antonius_nwg", "antonius_utr"]}}}))
+    (raw / "antonius_nwg.txt").write_text("2027")
+    (raw / "antonius_nwg.tables.json").write_text(json.dumps([[["CZ", "Gecontracteerd"]]]))
+    monkeypatch.setattr(pipeline.reference, "PROCESSED", tmp_path / "out")
+    assert contracts_parse.main([str(raw)]) == 0
+    out = pd.read_csv(tmp_path / "out" / "contracts_candidates.csv")
+    assert set(out["location_id"]) == {"antonius_nwg", "antonius_utr"}
+    assert (tmp_path / "out" / "history" / "contracts_candidates" / "2026-11-24.csv").exists()
+
+
+def test_dates_and_truthy():
+    assert to_date("15 oktober 2026") < to_date("1 december 2026")
+    assert to_date("01-11-2026") == pd.Timestamp(2026, 11, 1)
+    assert to_date("2026-11-01") == pd.Timestamp(2026, 11, 1)
+    assert pd.isna(to_date(None))
+    assert truthy(1.0) and truthy("ja") and not truthy(float("nan")) and not truthy("")
+
+
+def test_contract_latest_by_real_date():
+    contracts = pd.DataFrame([
+        {"location_id": "umcu", "concern": "CZ", "label": None, "status": "in_onderhandeling", "peildatum": "15 oktober 2026"},
+        {"location_id": "umcu", "concern": "CZ", "label": None, "status": "gecontracteerd", "peildatum": "1 december 2026"},
+    ])
+    assert contract_for(contracts, "umcu", "CZ", "CZ")["status"] == "gecontracteerd"
+
+
+def test_treatment_wait_preference_is_per_location():
+    waits = pd.DataFrame([
+        {"procedure_id": "heup", "location_id": "umcu", "weeks": 9, "wait_type": "Behandeling", "peildatum": "2026-09-15"},
+        {"procedure_id": "heup", "location_id": "umcu", "weeks": 3, "wait_type": "Polikliniek", "peildatum": "2026-09-15"},
+        {"procedure_id": "heup", "location_id": "meander", "weeks": 4, "wait_type": "Polikliniek", "peildatum": "2026-09-15"},
+    ])
+    got = latest_waits("heup", waits).set_index("location_id")["weeks"].to_dict()
+    assert got == {"umcu": 9, "meander": 4}
+
+
+def test_duplicate_polis_names_across_labels_stay_separate():
+    policies = pd.DataFrame([
+        {"concern": "VGZ", "label": "VGZ", "polis": "Basis", "polis_type": "natura", "premie_per_maand": 150},
+        {"concern": "CZ", "label": "CZ", "polis": "Basis", "polis_type": "natura", "premie_per_maand": 160},
+    ])
+    summary, detail = overview(52.0870, 5.1790, "heup", radius_km=6, policies=policies,
+                               contracts=pd.DataFrame(), waits=pd.DataFrame(), quality=pd.DataFrame())
+    assert len(summary) == 2
+    assert summary.set_index("naam")["premie_per_maand"].to_dict() == {"VGZ – Basis": 150, "CZ – Basis": 160}
+
+
+def test_indicator_text_beats_set_name():
+    indicator = pd.Series(["Revisie na totale knieprothese", "Revisie na totale heupprothese", "Revisie heup- en knieprothese", "Aantal operaties"])
+    sets = pd.Series(["Heup- en knieprothesen (LROI)"] * 3 + ["Cataract"])
+    got = zorginzicht_ingest.assign_procedures(indicator, sets).tolist()
+    assert got[:2] == ["knie", "heup"] and pd.isna(got[2]) and got[3] == "staar"
+
+
+def test_definitions_sheet_is_skipped():
+    df = pd.DataFrame(columns=["Indicatorset", "Indicatornaam", "Omschrijving", "Teller", "Noemer"])
+    with pytest.raises(KeyError):
+        zorginzicht_ingest.detect_columns(df)
+
+
+def test_column_heuristics():
+    df = pd.DataFrame(columns=["Locatie AGB", "Locatienaam", "Aanleverjaar", "Verslagjaar", "Indicator set", "Indicatorcode", "Indicator naam"])
+    cols = zorginzicht_ingest.detect_columns(df)
+    assert cols["provider"] == "Locatienaam" and cols["year"] == "Verslagjaar"
+    assert cols["indicator_set"] == "Indicator set" and cols["indicator"] == "Indicator naam"
+
+
+def test_read_any_robustness(tmp_path):
+    from pipeline.tabular import read_any
+    (tmp_path / "empty.csv").write_bytes(b"")
+    (tmp_path / "odd.csv").write_bytes(b"a;b\n\x81x;\x8dy\n")
+    assert read_any(tmp_path / "empty.csv") == {}
+    assert list(read_any(tmp_path / "odd.csv")["csv"].columns) == ["a", "b"]
+    (tmp_path / "bad.zip").write_bytes(b"not a zip")
+    assert read_any(tmp_path / "bad.zip") == {}
+
+
+def test_extract_html_tables_and_text():
+    from scrapers.contracts import extract_html
+    page = ("<html><head><script>var x=1;</script></head><body><h1>Contracten 2027</h1>"
+            "<p>Peildatum: 13 november 2026</p><ul><li>Zilveren Kruis: gecontracteerd</li></ul>"
+            "<table><tr><th>Verzekeraar</th><th>Status</th></tr><tr><td>CZ</td><td>In onderhandeling</td></tr></table>"
+            "</body></html>")
+    text, tables = extract_html(page)
+    assert "var x" not in text and "Zilveren Kruis: gecontracteerd" in text
+    assert contracts_parse.find_peildatum(text) == "13 november 2026"
+    rows = contracts_parse.parse_tables(tables)
+    assert [(r["concern"], r["status"]) for r in rows] == [("CZ", "in_onderhandeling")]

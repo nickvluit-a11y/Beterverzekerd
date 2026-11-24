@@ -61,13 +61,19 @@ class PoliteSession:
             time.sleep(self.delay - elapsed)
         self._last_request[host] = time.monotonic()
 
-    def get(self, url: str, **kwargs) -> requests.Response:
-        if not self._allowed(url):
-            raise RobotsDisallowed(f"robots.txt disallows (or could not be read for) {url}")
-        self._wait(url)
-        resp = self.session.get(url, timeout=TIMEOUT, **kwargs)
-        resp.raise_for_status()
-        return resp
+    def get(self, url: str, max_redirects: int = 5, **kwargs) -> requests.Response:
+        """GET with robots.txt checked for every hop of a redirect chain."""
+        for _ in range(max_redirects + 1):
+            if not self._allowed(url):
+                raise RobotsDisallowed(f"robots.txt disallows (or could not be read for) {url}")
+            self._wait(url)
+            resp = self.session.get(url, timeout=TIMEOUT, allow_redirects=False, **kwargs)
+            if resp.is_redirect and "Location" in resp.headers:
+                url = urljoin(url, resp.headers["Location"])
+                continue
+            resp.raise_for_status()
+            return resp
+        raise requests.TooManyRedirects(f"more than {max_redirects} redirects for {url}")
 
 
 def today() -> str:
