@@ -106,7 +106,36 @@ def compare(quality: pd.DataFrame) -> pd.DataFrame:
         else:
             verdicts.append("gemiddeld")
     df["rate"], df["ci_low"], df["ci_high"], df["verdict"] = rates, lows, highs, verdicts
+    df["method"] = ["ratio" if not pd.isna(r) else None for r in rates]
+    df = _mean_scores(df, keys)
     return df.drop(columns=["num", "den"])
+
+
+def _mean_scores(df: pd.DataFrame, keys: list[str]) -> pd.DataFrame:
+    """Scores without numerator/denominator (e.g. PROM 'verschilscore', a mean change per patient).
+
+    Without a spread per hospital no confidence interval is possible, so these are NOT judged.
+    They are shown next to the national mean (weighted by the number of patients) with a neutral
+    'position': gunstiger / ongunstiger than the national mean, given the indicator's direction."""
+    value = pd.to_numeric(df.get("value").astype(str).str.replace(",", ".", regex=False), errors="coerce") \
+        if "value" in df else pd.Series(math.nan, index=df.index)
+    is_mean = df["method"].isna() & value.notna() & df["direction"].isin(["lower_better", "higher_better"])
+    df["position"] = None
+    if not is_mean.any():
+        return df
+    weight = pd.to_numeric(df.get("n_waarnemingen"), errors="coerce").fillna(1.0) if "n_waarnemingen" in df \
+        else pd.Series(1.0, index=df.index)
+    sub = df[is_mean].assign(_v=value[is_mean], _w=weight[is_mean])
+    national = (sub.assign(_vw=sub["_v"] * sub["_w"]).groupby(keys, dropna=False)[["_vw", "_w"]].sum())
+    national = (national["_vw"] / national["_w"]).rename("_national_mean")
+    sub = sub.join(national, on=keys)
+    better_if_higher = sub["direction"] == "higher_better"
+    favourable = (sub["_v"] > sub["_national_mean"]) == better_if_higher
+    df.loc[is_mean, "rate"] = sub["_v"]
+    df.loc[is_mean, "national_rate"] = sub["_national_mean"]
+    df.loc[is_mean, "method"] = "mean"
+    df.loc[is_mean, "position"] = favourable.map({True: "gunstiger", False: "ongunstiger"}).where(sub["_v"] != sub["_national_mean"], "gelijk")
+    return df
 
 
 def hospital_verdict(compared: pd.DataFrame, procedure_id: str) -> pd.DataFrame:

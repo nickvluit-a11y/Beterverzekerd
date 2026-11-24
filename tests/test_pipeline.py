@@ -603,3 +603,16 @@ def test_build_db_quality_over_years(tmp_path, monkeypatch):
     problems = dict(con.execute("SELECT problem, n FROM v_integrity").fetchall())
     assert problems["measurement without location"] == 2  # unknown location is reported, not silently dropped
     assert problems["duplicate location_key"] == 0
+
+
+def test_prom_means_are_shown_not_judged():
+    df = compare(pd.DataFrame([
+        {"procedure_id": "heup", "indicator": "Verschilscore PROMs heup, 12 maanden", "location_key": "a",
+         "numerator": None, "denominator": None, "value": "30", "n_waarnemingen": 100, "verslagjaar": "2025"},
+        {"procedure_id": "heup", "indicator": "Verschilscore PROMs heup, 12 maanden", "location_key": "b",
+         "numerator": None, "denominator": None, "value": "20", "n_waarnemingen": 300, "verslagjaar": "2025"},
+    ]))
+    a = df.set_index("location_key").loc["a"]
+    assert a["method"] == "mean" and pd.isna(a["verdict"])
+    assert a["national_rate"] == pytest.approx(22.5)  # weighted by patients
+    assert a["position"] == "gunstiger"  # PROM 'verbetering' rule: higher_better

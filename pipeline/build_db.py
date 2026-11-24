@@ -85,7 +85,8 @@ def quality_tables(measurements: pd.DataFrame, indicators: pd.DataFrame) -> tupl
         verdicts["verslagjaar"] = year
         per_year.append(verdicts)
     keep = ["location_key", "procedure_id", "indicator_code", "verslagjaar", "direction", "indicator_nl",
-            "value", "numerator", "denominator", "rate", "ci_low", "ci_high", "national_rate", "verdict", "source"]
+            "value", "numerator", "denominator", "n_waarnemingen", "rate", "ci_low", "ci_high", "national_rate",
+            "method", "verdict", "position", "source"]
     quality_indicator = compared[[c for c in keep if c in compared]]
     return quality_indicator, (pd.concat(per_year, ignore_index=True) if per_year else pd.DataFrame())
 
