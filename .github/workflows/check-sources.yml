@@ -1,0 +1,27 @@
+name: check-sources
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "17 6 * * 1"  # every Monday 06:17 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check sources
+        run: python scrapers/check_sources.py
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/source_check
+          git diff --cached --quiet || git commit -m "Update source check report"
+          git push

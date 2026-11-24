@@ -1,0 +1,34 @@
+concern,label,aliases,verified,note,source_url
+Achmea,Zilveren Kruis,,true,,https://www.achmea.nl/organisatie/onze-merken
+Achmea,FBTO,,true,,https://www.achmea.nl/organisatie/onze-merken
+Achmea,Interpolis,,true,,https://www.achmea.nl/organisatie/onze-merken
+Achmea,De Friesland,,true,,https://www.achmea.nl/organisatie/onze-merken
+Achmea,De christelijke zorgverzekeraar,Pro Life|Prolife|De Christelijke Zorgverzekeraar,true,formerly Pro Life; label of Zilveren Kruis,https://www.achmea.nl/organisatie/onze-merken
+Achmea,ZieZo,,true,Zilveren Kruis label (UZOVI 3311),https://www.zilverenkruis.nl/zorgaanbieders/declareren/uzovi
+VGZ,VGZ,Coöperatie VGZ|VGZ Zorgverzekeraar,true,,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
+VGZ,IZA,,true,,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
+VGZ,IZZ,IZZ door VGZ,true,,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
+VGZ,Univé,Unive,true,ZEKUR moves to Univé on 2027-01-01,https://www.unive.nl/zorgverzekering/zekur
+VGZ,UMC Zorgverzekering,UMC,true,,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
+VGZ,Bewuzt,,false,variant name in VGZ polis overview,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
+VGZ,UnitedConsumers,UC|UnitedConsumers Zorg,true,UC Bewuste Keuze run by VGZ,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
+VGZ,Zorgzaam,,false,on VGZ brand page; confirm it sells a 2027 basic policy,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
+VGZ,ONVZ,,true,own brand; from 2027-01-01 VGZ carries the risk and buys ONVZ's care (ACM approved 2025-12-18). VvAA policies move to ONVZ in 2027,https://www.onvz.nl/veranderingen-in-2027
+VGZ,PNOzorg,,false,ONVZ label; 2027 status not confirmed,
+VGZ,jaaah,,false,ONVZ label; 2027 status not confirmed,
+CZ,CZ,,true,,https://www.cz.nl/-/media/files/algemeen/actueel/overzicht-basisverzekeringen-cz-groep.pdf
+CZ,OHRA,,true,,https://www.cz.nl/-/media/files/algemeen/actueel/overzicht-basisverzekeringen-cz-groep.pdf
+CZ,Nationale-Nederlanden,NN|Nationale Nederlanden,true,NN Group brand; owner works at NN Group - see conflict-of-interest note in CLAUDE.md,https://www.cz.nl/-/media/files/algemeen/actueel/overzicht-basisverzekeringen-cz-groep.pdf
+CZ,CZdirect,CZ direct,true,,https://www.cz.nl/-/media/files/algemeen/actueel/overzicht-basisverzekeringen-cz-groep.pdf
+CZ,Just,Just Basic,true,,https://www.cz.nl/-/media/files/algemeen/actueel/overzicht-basisverzekeringen-cz-groep.pdf
+Menzis,Menzis,Anderzorg,true,Anderzorg merges into Menzis on 2027-01-01 (alias kept: hospital PDFs still list it),https://www.anderzorg.nl/menzis
+DSW,DSW,inTwente,true,inTwente became DSW on 2025-01-01 (alias kept),https://www.intwente.nl/consumenten/klantenservice/intwente-wordt-dsw
+DSW,Stad Holland,Stad Holland Zorgverzekeraar,true,,https://www.stadholland.nl/consumenten
+a.s.r.,a.s.r.,ASR|a.s.r. Zorgverzekering|De Amersfoortse,true,De Amersfoortse merged into the a.s.r. brand (aggregator source only),https://www.asr.nl/zorgverzekering/wijzigingen
+a.s.r.,Ik kies zelf,Ditzo|Ik kies zelf van a.s.r.|Ik Kies Zelf ASR,true,formerly Ditzo,https://downloads.asr.nl/pdf/57613IKZ_2027.pdf
+Zorg en Zekerheid,Zorg en Zekerheid,Z&Z,true,,
+Zorg en Zekerheid,AZVZ,,true,maritime-sector label,https://azvz.nl/?GID=1&menu=24&pagina=283
+Salland,Salland,Salland Zorgverzekeringen|ZorgDirect,true,DSW plans to take over Salland on 2028-01-01; no change for 2027,https://www.salland.nl/corporate/nieuws/zorgverzekeraars-dsw-en-salland
+Salland,HollandZorg,Hollandzorg,true,,https://www.salland.nl/corporate/nieuws/zorgverzekeraars-dsw-en-salland
+Eucare,Aevitae,,true,Aevitae is volmacht of risk carrier Eucare,https://www.aevitae.com/zorgverzekeringen/basisverzekering/2027
+Eucare,Care4Life,,true,run by Aevitae,https://www.care4life.nl/zorgverzekering-2027/
