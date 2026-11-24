@@ -17,6 +17,7 @@ RAW = ROOT / "data" / "raw"
 USER_AGENT = "BeterverzekerdBot/0.1 (+https://github.com/nickvluit-a11y/beterverzekerd)"
 DELAY_SECONDS = 2.0
 TIMEOUT = 60
+ROBOTS_TIMEOUT = 20
 
 
 class RobotsDisallowed(RuntimeError):
@@ -32,27 +33,43 @@ class PoliteSession:
         self.delay = delay
         self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
         self._last_request: dict[str, float] = {}
+        self.robots_reason: dict[str, str] = {}
 
     def _allowed(self, url: str) -> bool:
         parts = urlparse(url)
         base = f"{parts.scheme}://{parts.netloc}"
         if base not in self._robots:
-            parser = urllib.robotparser.RobotFileParser()
-            try:
-                resp = self.session.get(base + "/robots.txt", timeout=TIMEOUT)
-                if resp.status_code >= 500:
-                    parser = None  # unknown: be conservative
-                elif resp.status_code >= 400:
-                    parser.parse([])  # no robots.txt: everything allowed
-                else:
-                    parser.parse(resp.text.splitlines())
-            except requests.RequestException:
-                parser = None
-            self._robots[base] = parser
+            self._robots[base], self.robots_reason[base] = self._load_robots(base)
         parser = self._robots[base]
         if parser is None:
             return False
-        return parser.can_fetch(USER_AGENT, url)
+        if not parser.can_fetch(USER_AGENT, url):
+            self.robots_reason[base] = "robots.txt disallows this path for our user agent"
+            return False
+        return True
+
+    def _load_robots(self, base: str) -> tuple[urllib.robotparser.RobotFileParser | None, str]:
+        """Parse robots.txt. Per RFC 9309: 4xx = no rules (allowed); 5xx or unreachable = disallow.
+        Unreachable gets one retry, because a single timeout is common."""
+        reason = ""
+        for attempt in range(2):
+            try:
+                resp = self.session.get(base + "/robots.txt", timeout=ROBOTS_TIMEOUT)
+            except requests.RequestException as exc:
+                reason = f"robots.txt unreachable: {type(exc).__name__}"
+                time.sleep(3 * (attempt + 1))
+                continue
+            parser = urllib.robotparser.RobotFileParser()
+            if resp.status_code >= 500:
+                reason = f"robots.txt returned HTTP {resp.status_code}"
+                time.sleep(3 * (attempt + 1))
+                continue
+            if resp.status_code >= 400:
+                parser.parse([])
+                return parser, f"no robots.txt (HTTP {resp.status_code})"
+            parser.parse(resp.text.splitlines())
+            return parser, "robots.txt read"
+        return None, reason
 
     def _wait(self, url: str) -> None:
         host = urlparse(url).netloc
@@ -65,7 +82,9 @@ class PoliteSession:
         """GET with robots.txt checked for every hop of a redirect chain."""
         for _ in range(max_redirects + 1):
             if not self._allowed(url):
-                raise RobotsDisallowed(f"robots.txt disallows (or could not be read for) {url}")
+                parts = urlparse(url)
+                reason = self.robots_reason.get(f"{parts.scheme}://{parts.netloc}", "")
+                raise RobotsDisallowed(f"not fetching {url}: {reason}")
             self._wait(url)
             resp = self.session.get(url, timeout=TIMEOUT, allow_redirects=False, **kwargs)
             if resp.is_redirect and "Location" in resp.headers:
@@ -105,6 +124,41 @@ def find_links(html: str, base_url: str, pattern: str) -> list[str]:
         if regex.search(href):
             seen.setdefault(urljoin(base_url, href), None)
     return list(seen)
+
+
+_ANCHOR = re.compile(r"""<a\b[^>]*href\s*=\s*["']([^"']+)["'][^>]*>(.*?)</a>""", re.IGNORECASE | re.DOTALL)
+
+
+def all_links(html: str, base_url: str) -> list[tuple[str, str]]:
+    """(absolute url, link text) for every <a href> on the page, in page order."""
+    out = []
+    for href, inner in _ANCHOR.findall(html):
+        text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", inner)).strip()
+        out.append((urljoin(base_url, href.replace("&amp;", "&")), text))
+    return out
+
+
+def write_link_inventory(name: str, page_url: str, links: list[tuple[str, str]]) -> Path:
+    """docs/data_inventory/<name>_links.md: every link on a source page, so a changed page
+    layout can be diagnosed from the repository without fetching the page again."""
+    path = ROOT / "docs" / "data_inventory" / f"{name}_links.md"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    lines = [f"# Links on {page_url}", "", f"Fetched {today()}.", "", "| text | url |", "|---|---|"]
+    lines += [f"| {text[:80].replace('|', '/')} | {url} |" for url, text in links]
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return path
+
+
+DATA_TYPES = ("spreadsheetml", "ms-excel", "zip", "csv", "octet-stream")
+
+
+def looks_like_data(resp: requests.Response) -> bool:
+    """True when a response is a data file (Excel/zip/CSV) rather than an HTML page."""
+    ctype = resp.headers.get("Content-Type", "").lower()
+    if "html" in ctype:
+        return False
+    head = resp.content[:4]
+    return any(t in ctype for t in DATA_TYPES) or head[:2] == b"PK" or head == b"\xd0\xcf\x11\xe0"
 
 
 def safe_filename(url: str, content_disposition: str | None = None) -> str:

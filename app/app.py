@@ -26,9 +26,17 @@ ACCESS_LABELS = {
     "onbekend": "❔ Onbekend",
 }
 
+QUALITY_LABELS = {
+    "boven_gemiddeld": "🟢 Boven landelijk gemiddelde",
+    "gemiddeld": "⚪ Rond landelijk gemiddelde",
+    "gemengd": "🟡 Gemengd (deels beter, deels slechter)",
+    "onder_gemiddeld": "🔴 Onder landelijk gemiddelde",
+    "geen_data": "❔ Geen openbare uitkomstdata",
+}
+
 st.set_page_config(page_title="Beterverzekerd", page_icon="🏥", layout="wide")
 st.title("Beterverzekerd")
-st.caption("Vergelijk zorgpolissen op de ziekenhuizen die ze voor jou inkopen, niet alleen op prijs.")
+st.caption("Vergelijk zorgpolissen op de kwaliteit van de ziekenhuizen die ze voor jou inkopen, niet alleen op prijs.")
 
 st.warning(
     "**Prototype.** Geen medisch of financieel advies. Contractstatus is geen garantie op toegang "
@@ -80,8 +88,15 @@ if result:
         if not contracts_file.exists() or pd.read_csv(contracts_file).empty:
             st.info("Er is nog geen gecontroleerde contractdata ingevoerd, daarom staat alles op 'Onbekend'. "
                     "Contractoverzichten van de ziekenhuizen worden opgehaald en eerst met de hand gecontroleerd.")
-        st.subheader("Per polis")
-        shown = summary.drop(columns=["naam"]).dropna(axis=1, how="all").rename(columns={
+        st.subheader("Per polis: kwaliteit binnen bereik")
+        order = ["label", "polis", "kwaliteit_boven_gemiddeld", "kwaliteit_gemengd", "kwaliteit_onder_gemiddeld",
+                 "kwaliteit_geen_data", "premie_per_maand", "polis_type", "kortste_wachttijd_weken",
+                 "ziekenhuizen_in_bereik", "gecontracteerd", "met_omzetplafond", "vrije_keuze",
+                 "in_onderhandeling", "geen_contract", "onbekend", "concern"]
+        ranked = summary.sort_values(["kwaliteit_boven_gemiddeld", "kwaliteit_onder_gemiddeld"], ascending=[False, True])
+        shown = ranked[[c for c in order if c in ranked]].dropna(axis=1, how="all").rename(columns={
+            "kwaliteit_boven_gemiddeld": "🟢 Boven gemiddeld", "kwaliteit_gemengd": "🟡 Gemengd",
+            "kwaliteit_onder_gemiddeld": "🔴 Onder gemiddeld", "kwaliteit_geen_data": "❔ Geen kwaliteitsdata",
             "concern": "Concern", "label": "Label", "polis": "Polis", "polis_type": "Type",
             "premie_per_maand": "Premie p/m (€)", "ziekenhuizen_in_bereik": "Ziekenhuizen in bereik",
             "gecontracteerd": "Gecontracteerd", "met_omzetplafond": "Met plafond",
@@ -90,17 +105,27 @@ if result:
             "kortste_wachttijd_weken": "Kortste wachttijd (wk)",
         })
         st.dataframe(shown, hide_index=True, use_container_width=True)
-        st.caption("Kortste wachttijd: alleen ziekenhuizen die gecontracteerd zijn of via restitutie vergoed worden.")
+        st.caption(
+            "Kwaliteitskolommen tellen alleen ziekenhuizen binnen bereik die je met deze polis volledig vergoed krijgt "
+            "(gecontracteerd of restitutie). 'Boven gemiddeld' betekent: op minstens één openbare uitkomstindicator "
+            "aantoonbaar beter dan het landelijk gemiddelde en op geen enkele slechter. Bij kleine aantallen is een "
+            "verschil vaak niet aan te tonen; dan staat het ziekenhuis op 'rond gemiddeld'. "
+            "Kortste wachttijd: idem, alleen volledig vergoede ziekenhuizen.")
 
         st.subheader("Details per ziekenhuis")
         chosen = st.selectbox("Polis", summary["naam"].tolist())
         rows = detail[detail["naam"] == chosen].copy()
         rows["access"] = rows["access"].map(ACCESS_LABELS)
-        st.dataframe(rows.drop(columns=["naam", "concern", "label", "polis"]).dropna(axis=1, how="all").rename(columns={
+        rows["quality"] = rows["quality"].map(QUALITY_LABELS)
+        rows = rows[["location", "quality", "quality_better", "quality_worse", "quality_year", "volume",
+                     "access", "wait_weeks", "distance_km", "contract_peildatum", "contract_source", "wait_peildatum"]]
+        st.dataframe(rows.dropna(axis=1, how="all").rename(columns={
+            "quality": "Kwaliteit", "quality_better": "Indicatoren beter", "quality_worse": "Indicatoren slechter",
+            "volume": "Aantal ingrepen",
             "location": "Ziekenhuis", "distance_km": "Afstand (km)", "access": "Contract",
             "contract_peildatum": "Peildatum contract", "contract_source": "Bron contract",
             "wait_weeks": "Wachttijd (wk)", "wait_peildatum": "Peildatum wachttijd",
-            "quality_indicators": "Openbare kwaliteitsindicatoren", "quality_year": "Verslagjaar",
+            "quality_year": "Verslagjaar kwaliteit",
         }), hide_index=True, use_container_width=True)
 
 with st.expander("Over de data"):

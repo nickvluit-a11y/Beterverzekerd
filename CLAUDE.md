@@ -12,6 +12,9 @@ Nederlandse zorgverzekeraars concurreren vooral op prijs, omdat consumenten de k
 
 Context: volgens de nulmeting van Zorginstituut + Patiëntenfederatie (april 2026) is voor slechts ~11,5% van de ziektelast in de medisch-specialistische zorg ten minste één uitkomstindicator openbaar (doel: 50%).
 
+## USP (toets elke keuze hieraan)
+**Kwaliteit zichtbaar maken.** Consumenten moeten polissen kunnen vergelijken op de kwaliteit van de zorg die de verzekeraar voor hen inkoopt, niet alleen op premie. Pas dan gaan verzekeraars concurreren op prijs én kwaliteit. Kwaliteit staat daarom vooraan in de app (vóór premie en contractaantallen), en elke bron, berekening of schermwijziging moet dat doel dienen.
+
 ## Idee
 Per polis × gecontracteerde ziekenhuizen × kwaliteit van die ziekenhuizen → "kwaliteitsscore per polis voor jouw zorgprofiel".
 Gebruiker vult postcode + aandoening in en ziet per polis welke goede/snelle ziekenhuizen binnen bereik gecontracteerd zijn, met wachttijd, reviewcijfer en premie.

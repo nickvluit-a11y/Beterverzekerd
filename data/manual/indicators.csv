@@ -1,0 +1,17 @@
+procedure_id,indicator_pattern,direction,label_nl,verified,note
+heup,revisie,lower_better,Revisie (heroperatie),false,direction from clinical meaning; confirm against indicatorengids THP
+heup,complicat,lower_better,Complicaties,false,
+heup,heropname,lower_better,Heropname,false,
+heup,infect,lower_better,Infectie,false,
+heup,prom|verbeter|tevreden|patientervaring|patiëntervaring,higher_better,Patiënt meldt verbetering,false,
+heup,aantal|volume,volume,Aantal ingrepen,false,
+knie,revisie,lower_better,Revisie (heroperatie),false,direction from clinical meaning; confirm against indicatorengids TKP
+knie,complicat,lower_better,Complicaties,false,
+knie,heropname,lower_better,Heropname,false,
+knie,infect,lower_better,Infectie,false,
+knie,prom|verbeter|tevreden|patientervaring|patiëntervaring,higher_better,Patiënt meldt verbetering,false,
+knie,aantal|volume,volume,Aantal ingrepen,false,
+staar,complicat|achterste kapsel|kapselruptuur,lower_better,Complicaties,false,confirm against indicatorengids cataract
+staar,refractie|visus|gezichtsscherpte,higher_better,Goed zichtresultaat,false,check whether the indicator measures 'within target' (higher better) or 'deviation' (lower better)
+staar,prom|verbeter|tevreden|patientervaring|patiëntervaring,higher_better,Patiënt meldt verbetering,false,
+staar,aantal|volume,volume,Aantal ingrepen,false,

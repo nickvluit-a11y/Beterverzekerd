@@ -14,7 +14,7 @@ from pipeline.geo import clean_postcode, parse_point
 from pipeline.reference import match_label, match_location, normalise
 from pipeline.score import access_status, contract_for, haversine_km, hospitals_within, latest_waits, overview, to_date, truthy
 from scrapers.common import find_links, safe_filename
-from scrapers.nza_wachttijden import pick_latest
+from scrapers.nza_wachttijden import candidate_order, is_waiting_time_csv
 
 
 # --- reference matching -------------------------------------------------------------------
@@ -111,13 +111,21 @@ def test_contracts_parse_main(tmp_path, monkeypatch):
 
 # --- scraper helpers -----------------------------------------------------------------------
 
-def test_find_links_and_latest_version():
-    html = ('<a href="/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_651798_22&amp;versienummer=3&amp;type=csv">csv</a>'
-            '<a href="/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_651798_22&amp;versienummer=12&amp;type=csv">csv</a>'
-            '<a href="/other.pdf">pdf</a>')
-    links = find_links(html, "https://puc.overheid.nl/nza/doc/PUC_651798_22/", r"DownloadDocument\.ashx.*type=csv")
-    assert len(links) == 2 and all(link.startswith("https://puc.overheid.nl/PUC/") for link in links)
-    assert "versienummer=12" in pick_latest(links)
+def test_find_links():
+    html = '<a href="/a.xlsx">x</a><a href="/other.pdf">pdf</a>'
+    assert find_links(html, "https://x.nl/p/", r"\.xlsx") == ["https://x.nl/a.xlsx"]
+
+
+def test_nza_candidate_order_and_csv_check():
+    from scrapers.common import all_links
+    html = ('<a href="/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_659356_22&amp;versienummer=1">Toelichting (pdf)</a>'
+            '<a href="/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_809508_22&amp;versienummer=1">Bijlage</a>'
+            '<a href="/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_700000_22&amp;versienummer=1">Dataset wachttijden (csv)</a>'
+            '<a href="/over">Over</a>')
+    order = candidate_order(all_links(html, "https://puc.overheid.nl/nza/doc/PUC_651798_22/"))
+    assert len(order) == 3 and "PUC_700000" in order[0] and "PUC_809508" in order[1]
+    assert is_waiting_time_csv(b"PEILDATUM;AGB;NAAM;SPECIALISME;WACHTTIJD\n2026-09-15;1;x;y;3\n")
+    assert not is_waiting_time_csv(b"%PDF-1.7 ...")
 
 
 def test_safe_filename():
@@ -213,8 +221,9 @@ def test_overview_end_to_end():
         {"procedure_id": "heup", "location_id": "diak_utr", "weeks": 2, "wait_type": "Polikliniek", "peildatum": "2026-09-15"},
     ])
     quality = pd.DataFrame([
-        {"procedure_id": "heup", "location_id": "umcu", "indicator": "a", "verslagjaar": "2025"},
-        {"procedure_id": "heup", "location_id": "umcu", "indicator": "b", "verslagjaar": "2025"},
+        # umcu: 1/1000 revisions vs national ~5% -> clearly better
+        {"procedure_id": "heup", "location_id": "umcu", "indicator": "Revisie binnen 1 jaar", "numerator": 1, "denominator": 1000, "verslagjaar": "2025"},
+        {"procedure_id": "heup", "location_id": None, "indicator": "Revisie binnen 1 jaar", "numerator": 500, "denominator": 9000, "verslagjaar": "2025"},
     ])
     summary, detail = overview(52.0870, 5.1790, "heup", radius_km=6, policies=policies,
                                contracts=contracts, waits=waits, quality=quality)
@@ -225,7 +234,8 @@ def test_overview_end_to_end():
     assert vgz["onbekend"] == 0 and vgz["vrije_keuze"] == vgz["ziekenhuizen_in_bereik"]
     assert vgz["gecontracteerd"] == 0  # restitutie is not a contract
     umcu = detail[(detail["polis"] == "CZ Zorgbewust") & (detail["location"] == "UMC Utrecht Heidelberglaan")].iloc[0]
-    assert umcu["quality_indicators"] == 2
+    assert umcu["quality"] == "boven_gemiddeld" and umcu["quality_better"] == 1
+    assert cz["kwaliteit_boven_gemiddeld"] == 1
 
 
 def test_overview_without_policy_file_falls_back_to_labels():
@@ -481,3 +491,54 @@ def test_parse_main_survives_bad_file(tmp_path, monkeypatch):
     monkeypatch.setattr(pipeline.reference, "PROCESSED", tmp_path / "out")
     assert contracts_parse.main([str(raw)]) == 0
     assert len(pd.read_csv(tmp_path / "out" / "contracts_candidates.csv")) == 1
+
+
+
+# --- quality comparison (the USP) ----------------------------------------------------------
+
+from pipeline.quality import compare, direction_for, hospital_verdict, wilson  # noqa: E402
+
+
+def test_wilson_interval():
+    low, high = wilson(0, 20)
+    assert low == 0 and 0.15 < high < 0.17
+    low, high = wilson(50, 1000)
+    assert 0.037 < low < 0.05 < high < 0.066
+
+
+def test_direction_lookup():
+    assert direction_for("heup", "Revisie binnen 1 jaar na primaire THP")[0] == "lower_better"
+    assert direction_for("knie", "Aantal primaire TKP")[0] == "volume"
+    assert direction_for("heup", "Onbekende indicator") == (None, None)
+
+
+def _quality_rows(rows):
+    return pd.DataFrame([{"procedure_id": "heup", "indicator": ind, "location_id": loc, "numerator": n,
+                          "denominator": d, "verslagjaar": "2025", "value": None} for loc, ind, n, d in rows])
+
+
+def test_small_hospital_is_not_called_worse():
+    # national ~5%; small hospital 2/20 = 10% but interval includes 5% -> 'gemiddeld'
+    df = compare(_quality_rows([("small", "Revisie", 2, 20), (None, "Revisie", 500, 10000)]))
+    assert df.set_index("location_id").loc["small", "verdict"] == "gemiddeld"
+
+
+def test_large_hospital_difference_is_shown():
+    df = compare(_quality_rows([("bad", "Revisie", 150, 1000), ("good", "Revisie", 10, 1000), (None, "Revisie", 500, 10000)]))
+    verdicts = df.dropna(subset=["location_id"]).set_index("location_id")["verdict"].to_dict()
+    assert verdicts == {"bad": "slechter", "good": "beter"}
+
+
+def test_higher_better_and_unknown_direction():
+    df = compare(_quality_rows([("a", "PROM verbetering", 950, 1000), (None, "PROM verbetering", 7000, 10000),
+                                ("a", "Iets onbekends", 5, 10)]))
+    by = df[df["location_id"] == "a"].set_index("indicator")["verdict"]
+    assert by["PROM verbetering"] == "beter" and pd.isna(by["Iets onbekends"])
+
+
+def test_hospital_verdict_summary():
+    df = compare(_quality_rows([("x", "Revisie", 10, 1000), ("x", "Complicaties", 200, 1000),
+                                (None, "Revisie", 500, 10000), (None, "Complicaties", 500, 10000),
+                                ("y", "Revisie", 1, 10)]))
+    v = hospital_verdict(df, "heup").set_index("location_id")["quality_verdict"].to_dict()
+    assert v == {"x": "gemengd", "y": "gemiddeld"}
