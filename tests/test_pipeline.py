@@ -17,6 +17,30 @@ from scrapers.common import find_links, safe_filename
 from scrapers.nza_wachttijden import candidate_order, is_waiting_time_csv
 
 
+TEST_RULES = pd.DataFrame([
+    {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "revisie", "direction": "lower_better", "label_nl": "Revisie"},
+    {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "complicat", "direction": "lower_better", "label_nl": "Complicaties"},
+    {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "prom|verbeter", "direction": "higher_better", "label_nl": "PROM"},
+    {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "aantal", "direction": "volume", "label_nl": "Aantal"},
+    {"procedure_id": "knie", "indicator_code": None, "indicator_pattern": "aantal", "direction": "volume", "label_nl": "Aantal"},
+])
+
+
+@pytest.fixture(autouse=True)
+def pattern_rules(monkeypatch):
+    """The product judges only indicators listed by code; tests use simple name patterns instead."""
+    import pipeline.quality
+    real = pd.read_csv(pipeline.quality.MANUAL / "indicators.csv")
+    monkeypatch.setattr(pipeline.quality, "indicator_meta", lambda: pd.concat([real, TEST_RULES], ignore_index=True))
+
+
+def test_real_rules_are_by_code_only():
+    import pipeline.quality
+    rules = pd.read_csv(pipeline.quality.MANUAL / "indicators.csv")
+    assert rules["indicator_code"].notna().all() and rules["indicator_pattern"].isna().all()
+    assert set(rules["direction"]) <= {"lower_better", "higher_better", "volume", "none"}
+
+
 # --- reference matching -------------------------------------------------------------------
 
 def test_normalise_strips_accents_and_stopwords():
@@ -242,8 +266,9 @@ def test_overview_end_to_end():
         {"procedure_id": "heup", "location_key": "06020602-3584CX", "indicator": "Revisie binnen 1 jaar", "numerator": 1, "denominator": 1000, "verslagjaar": "2025"},
         {"procedure_id": "heup", "location_key": None, "indicator": "Revisie binnen 1 jaar", "numerator": 500, "denominator": 9000, "verslagjaar": "2025"},
     ])
+    from pipeline.score import manual_locations
     summary, detail = overview(52.0870, 5.1790, "heup", radius_km=6, policies=policies,
-                               contracts=contracts, waits=waits, quality=quality)
+                               contracts=contracts, waits=waits, quality=quality, hospital_table=manual_locations())
     cz = summary.set_index("polis").loc["CZ Zorgbewust"]
     # the Diakonessenhuis contract is per organisation, so it covers Utrecht and Zeist
     assert cz["gecontracteerd"] == 2 and cz["met_omzetplafond"] == 1
@@ -257,8 +282,9 @@ def test_overview_end_to_end():
 
 
 def test_overview_without_policy_file_falls_back_to_labels():
+    from pipeline.score import manual_locations
     summary, _ = overview(52.0870, 5.1790, "heup", radius_km=6, contracts=pd.DataFrame(),
-                          waits=pd.DataFrame(), quality=pd.DataFrame())
+                          waits=pd.DataFrame(), quality=pd.DataFrame(), hospital_table=manual_locations())
     assert len(summary) > 20 and summary["onbekend"].gt(0).all()
 
 
@@ -358,8 +384,10 @@ def test_duplicate_polis_names_across_labels_stay_separate():
         {"concern": "VGZ", "label": "VGZ", "polis": "Basis", "polis_type": "natura", "premie_per_maand": 150},
         {"concern": "CZ", "label": "CZ", "polis": "Basis", "polis_type": "natura", "premie_per_maand": 160},
     ])
+    from pipeline.score import manual_locations
     summary, detail = overview(52.0870, 5.1790, "heup", radius_km=6, policies=policies,
-                               contracts=pd.DataFrame(), waits=pd.DataFrame(), quality=pd.DataFrame())
+                               contracts=pd.DataFrame(), waits=pd.DataFrame(), quality=pd.DataFrame(),
+                               hospital_table=manual_locations())
     assert len(summary) == 2
     assert summary.set_index("naam")["premie_per_maand"].to_dict() == {"VGZ – Basis": 150, "CZ – Basis": 160}
 
@@ -616,3 +644,53 @@ def test_prom_means_are_shown_not_judged():
     assert a["method"] == "mean" and pd.isna(a["verdict"])
     assert a["national_rate"] == pytest.approx(22.5)  # weighted by patients
     assert a["position"] == "gunstiger"  # PROM 'verbetering' rule: higher_better
+
+
+
+def test_published_intervals_are_judged_with_official_ci():
+    base = "Verschilscore tussen heup PROM preoperatief en 12 maanden na ingreep. EQ-5D index score. "
+    rev = "Gecorrigeerd percentage revisie binnen 1 jaar na primaire THP. "
+    rows = []
+    for loc, (pt, lo, hi), (r, rlo, rhi), resp in [("a", (0.45, 0.42, 0.48), (0.2, 0.0, 0.5), 90),
+                                                     ("b", (0.33, 0.30, 0.36), (1.0, 0.5, 1.5), 90),
+                                                     ("c", (0.20, 0.15, 0.25), (3.0, 2.2, 3.9), 30),
+                                                     ("d", (0.34, 0.20, 0.50), (9.0, 1.0, 2.0), 90)]:
+        for suffix, v in [("Gemiddelde", pt), ("95% Betrouwbaarheidsinterval Lower bound", lo),
+                          ("95% Betrouwbaarheidsinterval Upper bound", hi), ("Aantal (N)", 100)]:
+            rows.append({"indicator": base + suffix, "value": str(v)})
+        for suffix, v in [("Gecorrigeerd percentage", r), ("95% Betrouwbaarheidsinterval Lower bound", rlo),
+                          ("95% Betrouwbaarheidsinterval Upper bound", rhi)]:
+            rows.append({"indicator": rev + suffix, "value": str(v)})
+        rows.append({"indicator": "Responspercentage pre-operatief heup PROMs", "value": str(resp)})
+        for r_ in rows[-8:]:
+            r_.update(procedure_id="heup", location_key=loc, verslagjaar="2025", numerator=None, denominator=None)
+    out = compare(pd.DataFrame(rows))
+    judged = out[out["method"] == "interval"]
+    prom = judged[judged["indicator_nl"].str.startswith("Verbetering")].set_index("location_key")
+    revision = judged[judged["indicator_nl"].str.startswith("Revisie")].set_index("location_key")
+    assert prom.loc["a", "verdict"] == "beter"            # whole interval above the national median
+    assert pd.isna(prom.loc["c", "verdict"]) and "respons" in prom.loc["c", "position"]  # low PROM response
+    assert revision.loc["a", "verdict"] == "beter"        # lower revision is better
+    assert revision.loc["c", "verdict"] == "slechter"
+    assert pd.isna(revision.loc["d", "verdict"]) and revision.loc["d", "position"] == "inconsistent in bron"
+    assert revision.loc["a", "indicator_nl"] == "Revisie binnen 1 jaar (gecorrigeerd)"
+    # interval rows are not also treated as plain means
+    assert not ((out["method"] == "mean") & out["indicator"].str.contains("Gemiddelde", na=False)).any()
+
+
+def test_overdispersion_makes_verdicts_conservative():
+    import numpy as np
+    from pipeline.quality import funnel_verdicts
+    rng = np.random.default_rng(1)
+    n = 60
+    # true rates vary between hospitals (overdispersion) around 5%, big samples
+    true = np.clip(rng.normal(0.05, 0.015, n), 0.001, 0.2)
+    den = pd.Series(np.full(n, 2000.0))
+    y = pd.Series(rng.binomial(2000, true) / 2000)
+    se = (0.05 * 0.95 / den) ** 0.5
+    naive = ((y - 0.05).abs() > 1.96 * se).sum()
+    flagged = funnel_verdicts(y, se, 0.05, "lower_better").isin(["beter", "slechter"]).sum()
+    assert flagged < naive / 3   # most 'significant' differences are ordinary spread
+    extreme = funnel_verdicts(pd.concat([y, pd.Series([0.30])], ignore_index=True),
+                              pd.concat([se, pd.Series([se.iloc[0]])], ignore_index=True), 0.05, "lower_better")
+    assert extreme.iloc[-1] == "slechter"  # a real outlier is still flagged
