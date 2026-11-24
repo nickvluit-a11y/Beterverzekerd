@@ -1,0 +1,15 @@
+[
+  {"id": "zorginzicht_msz_landing", "layer": "quality", "url": "https://www.zorginzicht.nl/algemeen/open-data-medisch-specialistische-zorg-msz-ziekenhuizen-en-zelfstandige-behandelcentra", "list_links": true},
+  {"id": "zorginzicht_openbare_data", "layer": "quality", "url": "https://www.zorginzicht.nl/openbare-data"},
+  {"id": "zorginzicht_transparantiekalender_msz", "layer": "quality", "url": "https://www.zorginzicht.nl/transparantiekalender/medisch-specialistische-zorg"},
+  {"id": "nza_wachttijden_dataset", "layer": "waiting_times", "url": "https://puc.overheid.nl/nza/doc/PUC_651798_22/", "list_links": true},
+  {"id": "nza_zorgbeeld_openapi", "layer": "waiting_times", "url": "https://zorgbeeld.nza.nl/rest-doc/openapi"},
+  {"id": "avl_contracten_2026", "layer": "contracts", "url": "https://www.avl.nl/media/tpudg0no/avl_contracten-zorgverzekeraars-2026.pdf"},
+  {"id": "cz_zorgvinder_utrecht_2027", "layer": "contracts", "url": "https://zorgvinder.cz.nl/resultaten/ziekenhuis/utrecht?afstand=10&jaar=2027"},
+  {"id": "vgz_zorgzoeker", "layer": "contracts", "url": "https://www.vgz.nl/zorg-regelen/zorgzoeker"},
+  {"id": "zorgkiezer_contracten", "layer": "contracts", "url": "https://www.zorgkiezer.nl/zorgverzekering/ziekenhuis-contracten"},
+  {"id": "zorgverzekeringskaart", "layer": "policies", "url": "https://www.zorgverzekeringskaart.nl/"},
+  {"id": "vektis_agb", "layer": "reference", "url": "https://www.vektis.nl/agb-register"},
+  {"id": "agbcode", "layer": "reference", "url": "https://www.agbcode.nl/"},
+  {"id": "zorgkaart_wachttijden", "layer": "reviews", "url": "https://www.zorgkaartnederland.nl/wachttijden"}
+]
