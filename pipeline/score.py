@@ -12,8 +12,8 @@ from pathlib import Path
 
 import pandas as pd
 
-from pipeline.quality import compare, hospital_verdict
-from pipeline.reference import MANUAL, PROCESSED, hospitals, labels
+from pipeline.quality import compare, hospital_verdict, with_catalogue
+from pipeline.reference import MANUAL, PROCESSED, hospitals, indicator_catalogue, labels, locations
 
 # vrije_keuze: restitutie policy, reimbursed up to market rate everywhere, but not a contract
 ACCESS_ORDER = ["gecontracteerd", "gecontracteerd_met_plafond", "vrije_keuze", "in_onderhandeling", "geen_contract", "onbekend"]
@@ -70,6 +70,45 @@ def hospitals_within(lat: float, lon: float, radius_km: float, table: pd.DataFra
     return table[table["distance_km"] <= radius_km].sort_values("distance_km").reset_index(drop=True)
 
 
+def location_key(agb_code: object, postcode: object) -> str | None:
+    """Same key as the Zorginzicht ingest: organisation AGB + postcode without space."""
+    if not isinstance(agb_code, str) or not agb_code.strip():
+        return None
+    pc = postcode.replace(" ", "").upper() if isinstance(postcode, str) else ""
+    return f"{agb_code.strip().zfill(8)}-{pc}"
+
+
+def manual_locations() -> pd.DataFrame:
+    """hospitals.csv in the shape of the national locations table (fallback before data exists)."""
+    table = hospitals().copy()
+    table["location_key"] = [location_key(a, p) or f"manual-{i}" for a, p, i in
+                             zip(table["agb_code"], table["postcode"], table["location_id"])]
+    table["organisatie_agb"] = table["agb_code"]
+    return table
+
+
+def candidate_locations(procedure_id: str, measurements: pd.DataFrame) -> pd.DataFrame:
+    """Locations that perform the procedure (they report indicators for it) and have coordinates.
+
+    Uses the national Zorginzicht locations when available, else the hand-made hospitals.csv."""
+    national = locations()
+    if not national.empty and not measurements.empty:
+        performing = set(measurements.loc[measurements["procedure_id"] == procedure_id, "location_key"])
+        table = national[national["location_key"].isin(performing)].copy()
+        table["location_name"] = table["locatie_naam"].fillna(table["organisatie_naam"])
+        table["location_name"] = table["location_name"] + " (" + table["plaats"].fillna("") + ")"
+        return table
+    return manual_locations()
+
+
+def attach_organisation(contracts: pd.DataFrame) -> pd.DataFrame:
+    """Contracts are agreed per organisation: add its AGB code via hospitals.csv."""
+    if contracts.empty or "organisatie_agb" in contracts:
+        return contracts
+    agb_by_location = dict(zip(hospitals()["location_id"], hospitals()["agb_code"]))
+    return contracts.assign(organisatie_agb=contracts["location_id"].map(agb_by_location))
+
+
 def _read(path: Path) -> pd.DataFrame:
     return pd.read_csv(path) if path.exists() else pd.DataFrame()
 
@@ -91,7 +130,7 @@ def load_contracts(year: int = 2027) -> pd.DataFrame:
     return contracts if contracts.empty else contracts[contracts["year"] == year]
 
 
-def contract_for(contracts: pd.DataFrame, location_id: str, concern: str, label: str) -> dict | None:
+def contract_for(contracts: pd.DataFrame, organisatie_agb: str, concern: str, label: str) -> dict | None:
     """Most specific contract row: the label's own rows first, else concern-wide rows (label empty).
 
     A label-specific row always wins over a concern-wide one, because labels can have their own
@@ -99,7 +138,7 @@ def contract_for(contracts: pd.DataFrame, location_id: str, concern: str, label:
     """
     if contracts.empty:
         return None
-    rows = contracts[(contracts["location_id"] == location_id) & (contracts["concern"] == concern)]
+    rows = contracts[(contracts["organisatie_agb"] == organisatie_agb) & (contracts["concern"] == concern)]
     own = rows[rows["label"] == label]
     concern_wide = rows[rows["label"].isna() | (rows["label"] == "")]
     for candidate in (own, concern_wide):
@@ -123,11 +162,11 @@ def access_status(policy: dict, contract: dict | None) -> str:
 def latest_waits(procedure_id: str, waits: pd.DataFrame | None = None) -> pd.DataFrame:
     """Waiting time in weeks per location: latest peildatum; per location the treatment wait
     ('behandeling') is preferred when that location reports one."""
-    columns = ["location_id", "weeks", "wait_type", "peildatum"]
+    columns = ["location_key", "weeks", "wait_type", "peildatum"]
     waits = _read(PROCESSED / "waiting_times.csv") if waits is None else waits
-    if waits.empty:
+    if waits.empty or "location_key" not in waits:
         return pd.DataFrame(columns=columns)
-    sub = waits[(waits["procedure_id"] == procedure_id) & waits["location_id"].notna()].copy()
+    sub = waits[(waits["procedure_id"] == procedure_id) & waits["location_key"].notna()].copy()
     if sub.empty:
         return pd.DataFrame(columns=columns)
     sub = sub[pd.to_numeric(sub["weeks"], errors="coerce").notna()]
@@ -135,15 +174,17 @@ def latest_waits(procedure_id: str, waits: pd.DataFrame | None = None) -> pd.Dat
     sub["is_treatment"] = wait_type.fillna("").astype(str).str.contains("behandel", case=False)
     sub["date"] = sub["peildatum"].map(to_date) if "peildatum" in sub else pd.NaT
     # latest peildatum per location first, then prefer the treatment wait within it
-    latest = sub.groupby("location_id")["date"].transform("max")
+    latest = sub.groupby("location_key")["date"].transform("max")
     sub = sub[(sub["date"] == latest) | latest.isna()]
-    sub = sub.sort_values(["location_id", "is_treatment"])
-    return sub.groupby("location_id").tail(1)[columns].reset_index(drop=True)
+    sub = sub.sort_values(["location_key", "is_treatment"])
+    return sub.groupby("location_key").tail(1)[columns].reset_index(drop=True)
 
 
 def quality_by_location(procedure_id: str, quality: pd.DataFrame | None = None) -> pd.DataFrame:
     """Quality verdict per location for the procedure (see pipeline/quality.py for the method)."""
-    quality = _read(PROCESSED / "quality.csv") if quality is None else quality
+    if quality is None:
+        measurements = _read(PROCESSED / "measurements.csv")
+        quality = with_catalogue(measurements, indicator_catalogue()) if not measurements.empty else measurements
     return hospital_verdict(compare(quality), procedure_id)
 
 
@@ -156,18 +197,24 @@ def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, y
              policies: pd.DataFrame | None = None, contracts: pd.DataFrame | None = None,
              waits: pd.DataFrame | None = None, quality: pd.DataFrame | None = None,
              hospital_table: pd.DataFrame | None = None) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Return (per-policy summary, per-policy × hospital detail). Both carry a unique `naam` column."""
+    """Return (per-policy summary, per-policy × hospital detail). Both carry a unique `naam` column.
+
+    Linkage: locations by location_key (organisation AGB + postcode); quality and waiting times
+    per location; contracts per organisation (AGB), because hospitals contract as one organisation."""
+    if hospital_table is None:
+        measurements = _read(PROCESSED / "measurements.csv") if quality is None else quality
+        hospital_table = candidate_locations(procedure_id, measurements)
     near = hospitals_within(lat, lon, radius_km, hospital_table)
     policies = load_policies(year) if policies is None else policies
-    contracts = load_contracts(year) if contracts is None else contracts
-    near = near.merge(latest_waits(procedure_id, waits), on="location_id", how="left")
-    near = near.merge(quality_by_location(procedure_id, quality), on="location_id", how="left")
+    contracts = attach_organisation(load_contracts(year) if contracts is None else contracts)
+    near = near.merge(latest_waits(procedure_id, waits), on="location_key", how="left")
+    near = near.merge(quality_by_location(procedure_id, quality), on="location_key", how="left")
     near["quality_verdict"] = near["quality_verdict"].fillna("geen_data")
 
     detail_rows = []
     for policy in policies.to_dict("records"):
         for hosp in near.to_dict("records"):
-            contract = contract_for(contracts, hosp["location_id"], policy["concern"], policy["label"]) or {}
+            contract = contract_for(contracts, hosp.get("organisatie_agb"), policy["concern"], policy["label"]) or {}
             detail_rows.append({
                 "naam": policy_name(policy), "concern": policy["concern"], "label": policy["label"], "polis": policy["polis"],
                 "location": hosp["location_name"], "distance_km": round(hosp["distance_km"], 1),

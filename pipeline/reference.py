@@ -13,6 +13,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 MANUAL = ROOT / "data" / "manual"
 PROCESSED = ROOT / "data" / "processed"
+REFERENCE = ROOT / "data" / "reference"
 
 # Words that carry no meaning for matching hospital names
 _STOPWORDS = {"ziekenhuis", "ziekenhuizen", "medisch", "centrum", "mc", "stichting", "locatie", "de", "het", "st", "sint"}
@@ -34,6 +35,23 @@ def _split_aliases(value: object) -> list[str]:
 @lru_cache
 def hospitals() -> pd.DataFrame:
     return pd.read_csv(MANUAL / "hospitals.csv", dtype={"agb_code": str, "postcode": str})
+
+
+@lru_cache
+def locations() -> pd.DataFrame:
+    """All MSZ locations from Zorginzicht with coordinates (empty until the pipeline has run)."""
+    path = REFERENCE / "locations.csv"
+    if not path.exists():
+        return pd.DataFrame(columns=["location_key", "organisatie_agb", "organisatie_naam", "locatie_naam",
+                                     "postcode", "plaats", "lat", "lon"])
+    return pd.read_csv(path, dtype={"organisatie_agb": str, "locatie_agb": str, "kvk": str, "postcode": str})
+
+
+@lru_cache
+def indicator_catalogue() -> pd.DataFrame:
+    path = REFERENCE / "indicators.csv"
+    return pd.read_csv(path, dtype=str) if path.exists() else pd.DataFrame(
+        columns=["indicator_code", "indicator_naam", "thema", "eenheid", "indicator_type", "procedure_id"])
 
 
 @lru_cache
@@ -108,5 +126,8 @@ def save_with_history(df: pd.DataFrame, name: str, peildatum: str) -> Path:
     df.to_csv(latest, index=False)
     history = PROCESSED / "history" / name
     history.mkdir(parents=True, exist_ok=True)
-    df.to_csv(history / f"{peildatum}.csv", index=False)
+    previous = sorted(history.glob("*.csv"))
+    content = latest.read_bytes()
+    if not previous or previous[-1].read_bytes() != content:  # keep a snapshot only when the data changed
+        (history / f"{peildatum}.csv").write_bytes(content)
     return latest

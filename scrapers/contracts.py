@@ -19,6 +19,7 @@ import io
 import json
 import re
 import sys
+from urllib.parse import urlparse
 
 import pandas as pd
 import pdfplumber
@@ -64,6 +65,28 @@ def extract_html(page: str) -> tuple[str, list[Table]]:
     return html_to_text(page), tables
 
 
+# links from a contract page to the actual overview ('Bekijk de status afspraken 2027', a PDF, ...)
+_DOC_LINK = re.compile(r"status|overzicht|afspraken|contract|zorgverzekeraar|onderhandel", re.IGNORECASE)
+_DOC_TARGET = re.compile(r"\.pdf(\?|$)|/media/|/documents?/|download", re.IGNORECASE)
+MAX_FOLLOW = 3
+
+
+def decode_html(resp) -> str:
+    """Pages often omit the charset header; requests then assumes latin-1 ('PatiÃ«nt')."""
+    try:
+        return resp.content.decode("utf-8")
+    except UnicodeDecodeError:
+        return resp.content.decode(resp.apparent_encoding or "cp1252", errors="replace")
+
+
+def linked_documents(page: str, base_url: str) -> list[str]:
+    from scrapers.common import all_links
+    host = urlparse(base_url).netloc.split(".", 1)[-1]
+    hits = [url for url, text in all_links(page, base_url)
+            if _DOC_TARGET.search(url) and _DOC_LINK.search(f"{text} {url}") and host in urlparse(url).netloc]
+    return list(dict.fromkeys(hits))[:MAX_FOLLOW]
+
+
 def main() -> int:
     table = pd.read_csv(ROOT / "data" / "manual" / "hospitals.csv")
     table = table[table["contracts_url"].fillna("").str.startswith("http")]
@@ -83,8 +106,22 @@ def main() -> int:
                 (out / f"{key}.pdf").write_bytes(resp.content)
                 text, tables = extract_pdf(resp.content)
             else:
-                (out / f"{key}.html").write_text(resp.text, encoding="utf-8")
-                text, tables = extract_html(resp.text)
+                page = decode_html(resp)
+                (out / f"{key}.html").write_text(page, encoding="utf-8")
+                text, tables = extract_html(page)
+                for doc_url in linked_documents(page, resp.url):  # follow to the actual overview
+                    try:
+                        doc = http.get(doc_url)
+                    except Exception as exc:
+                        print(f"     {key}: could not follow {doc_url}: {exc}", file=sys.stderr)
+                        continue
+                    if doc.content[:4] == b"%PDF":
+                        doc_text, doc_tables = extract_pdf(doc.content)
+                    else:
+                        doc_text, doc_tables = extract_html(decode_html(doc))
+                    text += f"\n\n[linked document: {doc_url}]\n{doc_text}"
+                    tables += doc_tables
+                    print(f"     {key}: followed {doc_url} ({len(doc_tables)} tables)")
             (out / f"{key}.txt").write_text(text, encoding="utf-8")
             # keep the extracted text in the repo: public, small, and needed to improve the parser
             inventory = ROOT / "docs" / "data_inventory" / "contracts"

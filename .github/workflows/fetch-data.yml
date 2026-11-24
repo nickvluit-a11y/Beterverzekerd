@@ -44,6 +44,10 @@ jobs:
         if: steps.zorginzicht.outcome == 'success'
         continue-on-error: true
         run: python -m pipeline.zorginzicht_ingest
+      - name: Geocode locations
+        if: steps.zorginzicht.outcome == 'success'
+        continue-on-error: true
+        run: python -m pipeline.geocode
       - name: Ingest NZa
         if: steps.nza.outcome == 'success'
         continue-on-error: true
@@ -52,6 +56,11 @@ jobs:
         if: steps.contracts.outcome == 'success'
         continue-on-error: true
         run: python -m pipeline.contracts_parse
+
+      - name: Linkage report
+        if: always()
+        continue-on-error: true
+        run: python -m pipeline.linkage_report
 
       - name: Keep raw downloads
         if: always()
@@ -67,8 +76,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          mkdir -p data/processed docs/data_inventory
-          git add data/processed docs/data_inventory
+          mkdir -p data/processed data/reference docs/data_inventory
+          git add data/processed data/reference docs/data_inventory
           git diff --cached --quiet || git commit -m "Update processed data ($(date -u +%F))"
           git pull --rebase && git push
 
