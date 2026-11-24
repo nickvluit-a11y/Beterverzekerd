@@ -18,21 +18,32 @@ from pipeline.reference import MANUAL, PROCESSED, hospitals, labels
 ACCESS_ORDER = ["gecontracteerd", "gecontracteerd_met_plafond", "vrije_keuze", "in_onderhandeling", "geen_contract", "onbekend"]
 POLICY_KEY = ["concern", "label", "polis"]
 
-_MONTHS = {m: i for i, m in enumerate(
-    ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus",
-     "september", "oktober", "november", "december"], start=1)}
+_MONTH_NAMES = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus",
+                "september", "oktober", "november", "december"]
+_MONTHS = {m: i for i, m in enumerate(_MONTH_NAMES, start=1)}
+_MONTHS.update({m[:3]: i for m, i in _MONTHS.copy().items()})
+_MONTHS.update({"mrt": 3, "sept": 9})
 
 
 def to_date(value: object) -> pd.Timestamp:
-    """Parse ISO dates, dd-mm-yyyy and '15 november 2026'. Unparseable -> NaT."""
+    """Parse ISO dates (also with '/'), dd-mm-yyyy and '15 november 2026' / '1 okt. 2026'. Unparseable -> NaT."""
+    if isinstance(value, pd.Timestamp):
+        return value
     if not isinstance(value, str) or not value.strip():
         return pd.NaT
     text = value.strip().lower()
-    match = re.fullmatch(r"(\d{1,2})[ \-/]([a-z]+)[ \-/](\d{4})", text)
-    if match and match.group(2) in _MONTHS:
-        return pd.Timestamp(int(match.group(3)), _MONTHS[match.group(2)], int(match.group(1)))
-    iso = re.fullmatch(r"\d{4}-\d{2}-\d{2}.*", text)
-    return pd.to_datetime(text, dayfirst=not iso, errors="coerce")
+    match = re.fullmatch(r"(\d{1,2})[ \-/]([a-z]+)\.?[ \-/](\d{4})", text)
+    if match:
+        month = _MONTHS.get(match.group(2))
+        return pd.Timestamp(int(match.group(3)), month, int(match.group(1))) if month else pd.NaT
+    year_first = re.fullmatch(r"(\d{4})[-/](\d{1,2})[-/](\d{1,2})(?:[ t].*)?", text)
+    if year_first:
+        y, m, d = map(int, year_first.groups())
+        try:
+            return pd.Timestamp(y, m, d)
+        except ValueError:
+            return pd.NaT
+    return pd.to_datetime(text, dayfirst=True, errors="coerce")
 
 
 def truthy(value: object) -> bool:
@@ -118,10 +129,14 @@ def latest_waits(procedure_id: str, waits: pd.DataFrame | None = None) -> pd.Dat
     sub = waits[(waits["procedure_id"] == procedure_id) & waits["location_id"].notna()].copy()
     if sub.empty:
         return pd.DataFrame(columns=columns)
+    sub = sub[pd.to_numeric(sub["weeks"], errors="coerce").notna()]
     wait_type = sub["wait_type"] if "wait_type" in sub else pd.Series("", index=sub.index)
     sub["is_treatment"] = wait_type.fillna("").astype(str).str.contains("behandel", case=False)
     sub["date"] = sub["peildatum"].map(to_date) if "peildatum" in sub else pd.NaT
-    sub = sub.sort_values(["location_id", "is_treatment", "date"], na_position="first")
+    # latest peildatum per location first, then prefer the treatment wait within it
+    latest = sub.groupby("location_id")["date"].transform("max")
+    sub = sub[(sub["date"] == latest) | latest.isna()]
+    sub = sub.sort_values(["location_id", "is_treatment"])
     return sub.groupby("location_id").tail(1)[columns].reset_index(drop=True)
 
 
@@ -132,7 +147,7 @@ def quality_counts(procedure_id: str, quality: pd.DataFrame | None = None) -> pd
     if quality.empty:
         return pd.DataFrame(columns=columns)
     sub = quality[(quality["procedure_id"] == procedure_id) & quality["location_id"].notna()].copy()
-    sub["verslagjaar"] = pd.to_numeric(sub["verslagjaar"], errors="coerce").astype("Int64")
+    sub["verslagjaar"] = pd.to_numeric(sub["verslagjaar"], errors="coerce").round().astype("Int64")
     sub = sub.dropna(subset=["verslagjaar"])
     if sub.empty:
         return pd.DataFrame(columns=columns)

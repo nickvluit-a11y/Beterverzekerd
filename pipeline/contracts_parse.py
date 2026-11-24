@@ -1,12 +1,15 @@
 """Turn extracted contract tables (from hospital PDFs and web pages) into normalised contract rows.
 
-Hospitals publish their tables in different layouts. This parser handles the two common ones:
+Hospitals publish their overviews in different layouts. This parser handles:
   * row-oriented:    | Zilveren Kruis | Gecontracteerd | Omzetplafond: ja |
-    (a header row is used to tell 'contract' columns from 'omzetplafond' columns)
-  * column-oriented: header row of labels, status cells below it
-  * no table at all:  text lines like 'Zilveren Kruis: gecontracteerd' (fallback)
-Everything it finds is written with needs_review=True: a human (or a hospital-specific
-parser) confirms it before it goes into data/manual/contracts.csv.
+    (a header row tells 'contract' columns from 'omzetplafond' columns; with a concern column
+    and a label column, the more specific label wins)
+  * column-oriented: header row of labels; status rows below, plus an optional 'Omzetplafond' row
+  * no table at all:  text lines like 'Zilveren Kruis: gecontracteerd' (each line on its own)
+A table that names only 'VGZ' (and no other VGZ labels) is read as speaking for the whole concern.
+
+Everything is written with needs_review=True: a human confirms it against the source before it
+goes into data/manual/contracts.csv.
 
 Usage: python -m pipeline.contracts_parse [raw_dir]
 Output: data/processed/contracts_candidates.csv (+ dated copy under data/processed/history/)
@@ -22,16 +25,20 @@ from pathlib import Path
 
 import pandas as pd
 
-from pipeline.contract_status import clean, combine, plafond_from_text, status_from_text
-from pipeline.reference import PROCESSED, ROOT, match_label, save_with_history
+from pipeline.contract_status import clean, combine, combine_plafond, plafond_from_text, status_from_text
+from pipeline.reference import ROOT, match_label, normalise, save_with_history
 
-MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december"
+MONTHS = ("januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december"
+          "|jan|feb|mrt|apr|jun|jul|aug|sept|sep|okt|nov|dec")
 _DATE = re.compile(
-    r"(?:peildatum|stand van zaken|bijgewerkt|versie|datum|status)[^0-9]{0,30}"
-    rf"(\d{{1,2}}[-/ ](?:\d{{1,2}}|{MONTHS})[-/ ]\d{{4}})",
+    r"(?:peildatum|stand van zaken|bijgewerkt|versie|datum|status)[^\n]{0,40}?"
+    rf"\b(\d{{1,2}}[-/ ](?:\d{{1,2}}|(?:{MONTHS})\.?)[-/ ]\d{{4}})",
     re.IGNORECASE,
 )
 _YEAR = re.compile(r"\b(20[2-3]\d)\b")
+_YEAR_CONTEXT = re.compile(r"contract|overzicht|zorgverzekeraar|onderhandel|polis", re.IGNORECASE)
+_HEADER_WORDS = re.compile(r"verzekeraar|concern|label|contract|status|plafond|polis|\b20\d\d\b")
+MAX_WORDS = 8  # longer cells are prose, not table values
 
 
 def find_peildatum(text: str) -> str | None:
@@ -40,70 +47,130 @@ def find_peildatum(text: str) -> str | None:
 
 
 def find_year(text: str) -> int | None:
-    """Contract year: the most frequently mentioned year; ties go to the later year
-    (overviews are about the coming year, the peildatum lies in the year before)."""
-    counts = Counter(int(y) for y in _YEAR.findall(text))
-    if not counts:
+    """Contract year. Years on lines about contracts/insurers count first (most frequent,
+    ties to the later year); without such lines, all years count."""
+    context = [int(y) for line in text.splitlines() if _YEAR_CONTEXT.search(line) for y in _YEAR.findall(line)]
+    years = context or [int(y) for y in _YEAR.findall(text)]
+    if not years:
         return None
+    counts = Counter(years)
     return max(counts, key=lambda y: (counts[y], y))
 
 
-def _is_plafond_header(cell: str) -> bool:
-    return "plafond" in clean(cell)
+def _cell(value: object) -> str:
+    return value.strip() if isinstance(value, str) else ""
 
 
-def parse_tables(tables: list[list[list[str | None]]]) -> list[dict]:
-    rows: list[dict] = []
-    for table in tables:
-        clean_rows = [[(c or "").strip() for c in row] for row in table if row]
-        if not clean_rows:
-            continue
-        header = clean_rows[0]
-        header_labels = [match_label(c) for c in header]
+def _is_prose(cell: str) -> bool:
+    return len(cell.split()) > MAX_WORDS
 
-        # Column-oriented: header with >= 2 labels, statuses in the rows below
-        if sum(h is not None for h in header_labels) >= 2:
-            for row in clean_rows[1:]:
-                for hit, cell in zip(header_labels, row):
-                    if hit:
-                        status = status_from_text(cell)
-                        plafond = plafond_from_text(cell)
-                        if status == "onbekend" and plafond:
-                            status = "gecontracteerd"
-                        if status != "onbekend":
-                            rows.append(_row(hit, status, plafond, cell))
-            continue
 
-        # Row-oriented: a label in one cell; other cells are contract or plafond columns
-        plafond_cols = {i for i, c in enumerate(header) if _is_plafond_header(c)}
-        for row in clean_rows:
-            for i, cell in enumerate(row):
-                hit = match_label(cell)
-                if not hit:
-                    continue
-                others = [(j, c) for j, c in enumerate(row) if j != i and c]
-                statuses = [status_from_text(c) for j, c in others if j not in plafond_cols]
-                plafonds = [plafond_from_text(c, plafond_column=j in plafond_cols) for j, c in others]
-                status = combine(statuses)
-                known = {p for p in plafonds if p is not None}
-                plafond = known.pop() if len(known) == 1 else None
-                if status == "onbekend" and plafond:
-                    status = "gecontracteerd"
-                if status != "onbekend" or any(s != "onbekend" for s in statuses):
-                    # conflicting cells are kept as 'onbekend' so they show up for review
-                    rows.append(_row(hit, status, plafond, " | ".join(row)))
-                break
+def _pick_label(hits: list[tuple[int, tuple[str, str | None]]]) -> tuple[int, tuple[str, str | None]]:
+    """Of several label cells in one row (e.g. 'VGZ | IZA'), the most specific one:
+    a label whose name differs from its concern; otherwise the rightmost hit."""
+    specific = [(i, h) for i, h in hits if h[1] and h[1] != h[0]]
+    return (specific or hits)[-1]
+
+
+def _concern_level(rows: list[dict]) -> list[dict]:
+    """In a table that names only 'VGZ' (no other VGZ labels), 'VGZ' means the whole concern."""
+    for row in rows:
+        labels_of_concern = {r["label"] for r in rows if r["concern"] == row["concern"]}
+        if row["label"] == row["concern"] and labels_of_concern <= {row["concern"], None}:
+            row["label"] = None
     return rows
 
 
-def _row(hit: tuple[str, str | None], status: str, plafond: bool | None, raw: str) -> dict:
-    return {"concern": hit[0], "label": hit[1], "status": status, "omzetplafond": plafond, "raw": raw}
+def _row(hit: tuple[str, str | None], status: str, plafond: bool | None, raw: str, polis: str | None = None) -> dict:
+    return {"concern": hit[0], "label": hit[1], "polis": polis, "status": status, "omzetplafond": plafond, "raw": raw}
+
+
+def _column_oriented(rows: list[list[str]]) -> list[dict]:
+    header = [match_label(c) for c in rows[0]]
+    out = []
+    for col, hit in enumerate(header):
+        if not hit:
+            continue
+        statuses, plafonds, raw = [], [], []
+        for row in rows[1:]:
+            if col >= len(row) or _is_prose(row[col]):
+                continue
+            is_plafond_row = "plafond" in clean(row[0])
+            plafonds.append(plafond_from_text(row[col], plafond_column=is_plafond_row))
+            if not is_plafond_row:
+                statuses.append(status_from_text(row[col]))
+            raw.append(row[col])
+        status, plafond = combine(statuses), combine_plafond(plafonds)
+        if status == "onbekend" and plafond:
+            status = "gecontracteerd"
+        if any(s != "onbekend" for s in statuses) or plafond is not None:
+            out.append(_row(hit, status, plafond, " | ".join(raw)))
+    return out
+
+
+def _row_oriented(rows: list[list[str]]) -> list[dict]:
+    first = rows[0]
+    is_header = not any(match_label(c) for c in first) and any(_HEADER_WORDS.search(clean(c)) for c in first)
+    plafond_cols = {i for i, c in enumerate(first) if "plafond" in clean(c)} if is_header else set()
+    out = []
+    for row in rows[1:] if is_header else rows:
+        hits = [(i, h) for i, c in enumerate(row) if not _is_prose(c) and (h := match_label(c))]
+        if not hits:
+            continue
+        label_cols = {i for i, _ in hits}
+        _, hit = _pick_label(hits)
+        statuses, plafonds, polis = [], [], None
+        for j, cell in enumerate(row):
+            if j in label_cols or not cell or _is_prose(cell):
+                continue
+            plafond = plafond_from_text(cell, plafond_column=j in plafond_cols)
+            plafonds.append(plafond)
+            if j in plafond_cols:
+                continue
+            status = status_from_text(cell)
+            statuses.append(status)
+            if status == "onbekend" and plafond is None and hit[1] and normalise(hit[1]) in normalise(cell):
+                polis = cell  # e.g. 'VGZ Bewuzt': the row is about one policy, not the whole label
+        status, plafond = combine(statuses), combine_plafond(plafonds)
+        if status == "onbekend" and plafond:
+            status = "gecontracteerd"
+        if any(s != "onbekend" for s in statuses) or plafond is not None:
+            # several concerns sharing one status cell ('Menzis | DSW: gecontracteerd') -> a row each
+            targets = [h for _, h in hits] if len({h[0] for _, h in hits}) > 1 else [hit]
+            out += [_row(t, status, plafond, " | ".join(row), polis) for t in targets]
+    return out
+
+
+def parse_tables(tables: list[list[list[object]]]) -> list[dict]:
+    rows: list[dict] = []
+    for table in tables:
+        clean_rows = [[_cell(c) for c in row] for row in table if row]
+        clean_rows = [r for r in clean_rows if any(r)]
+        if not clean_rows:
+            continue
+        if len(clean_rows) > 1 and sum(match_label(c) is not None for c in clean_rows[0]) >= 2:
+            rows += _concern_level(_column_oriented(clean_rows))
+        else:
+            rows += _concern_level(_row_oriented(clean_rows))
+    return rows
 
 
 def line_tables(text: str) -> list[list[list[str]]]:
-    """Fallback for pages without tables: each text line split on ':', '|', dashes, tabs or wide gaps."""
-    rows = [re.split(r"\s*[:|\t–—]\s*|\s+-\s+|\s{2,}", line.strip()) for line in text.splitlines() if line.strip()]
-    return [[row for row in rows if len(row) >= 2]]
+    """Fallback for text without tables: every line becomes its own one-row table, split on
+    ':', '|', dashes, tabs or wide gaps. No header semantics carry over between lines."""
+    tables = []
+    for line in text.splitlines():
+        cells = [c for c in re.split(r"\s*[:|\t–—]\s*|\s+-\s+|\s{2,}", line.strip()) if c]
+        if len(cells) >= 2:
+            tables.append([cells])
+    return tables
+
+
+def parse_source(tables: list, text: str) -> list[dict]:
+    """Rows from tables, plus rows from text lines for labels the tables missed."""
+    parsed = parse_tables(tables)
+    seen = {(r["concern"], r["label"]) for r in parsed}
+    return parsed + [r for r in parse_tables(line_tables(text)) if (r["concern"], r["label"]) not in seen]
 
 
 def latest_raw_dir() -> Path | None:
@@ -112,7 +179,7 @@ def latest_raw_dir() -> Path | None:
     return dirs[-1] if dirs else None
 
 
-COLUMNS = ["year", "location_id", "concern", "label", "status", "omzetplafond", "peildatum",
+COLUMNS = ["year", "location_id", "concern", "label", "polis", "status", "omzetplafond", "peildatum",
            "source", "source_url", "fetched_on", "needs_review", "raw"]
 
 
@@ -127,17 +194,18 @@ def main(argv: list[str]) -> int:
         key = tables_file.name.removesuffix(".tables.json")
         info = meta["results"].get(key, {})
         location_ids = info.get("location_ids") or [key]
-        text = (source_dir / f"{key}.txt").read_text(encoding="utf-8")
-        parsed = parse_tables(json.loads(tables_file.read_text(encoding="utf-8")))
-        seen = {(r["concern"], r["label"]) for r in parsed}
-        # text lines add labels the tables missed (pages often mix a table with bullet lists)
-        parsed += [r for r in parse_tables(line_tables(text)) if (r["concern"], r["label"]) not in seen]
-        for location_id in location_ids:  # one PDF can cover several locations
+        try:
+            text = (source_dir / f"{key}.txt").read_text(encoding="utf-8")
+            parsed = parse_source(json.loads(tables_file.read_text(encoding="utf-8")), text)
+        except Exception as exc:  # one odd page must not lose the other hospitals
+            print(f"FAIL {key}: {type(exc).__name__}: {exc}", file=sys.stderr)
+            continue
+        year, peildatum = find_year(text), find_peildatum(text)
+        for location_id in location_ids:  # one source can cover several locations
             for row in parsed:
-                out_rows.append({**row, "location_id": location_id, "year": find_year(text),
-                                 "peildatum": find_peildatum(text), "source": f"contracts_{info.get('format', 'pdf')}",
-                                 "source_url": info.get("url"), "fetched_on": source_dir.name,
-                                 "needs_review": True})
+                out_rows.append({**row, "location_id": location_id, "year": year, "peildatum": peildatum,
+                                 "source": f"contracts_{info.get('format', 'pdf')}", "source_url": info.get("url"),
+                                 "fetched_on": source_dir.name, "needs_review": True})
         print(f"{key}: {len(parsed)} contract rows × {len(location_ids)} location(s)")
     save_with_history(pd.DataFrame(out_rows, columns=COLUMNS), "contracts_candidates", source_dir.name)
     return 0

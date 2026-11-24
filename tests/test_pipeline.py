@@ -65,7 +65,7 @@ def test_match_label():
     ("Gecontracteerd, geen contract voor budgetpolis", ("onbekend", None)),
     ("Contract opgezegd", ("geen_contract", None)),
     ("Contract volgt", ("in_onderhandeling", None)),
-    ("x", ("onbekend", None)),
+    ("x", ("gecontracteerd", None)),
     ("plafond n.v.t.", ("onbekend", False)),
     ("", ("onbekend", None)),
     (None, ("onbekend", None)),
@@ -271,8 +271,9 @@ def test_label_aliases():
 def test_line_fallback_for_html_pages():
     text = "Stand van zaken 13 november 2026\nZilveren Kruis: gecontracteerd\nCZ - in onderhandeling\nWelkom bij ons ziekenhuis"
     rows = contracts_parse.parse_tables(contracts_parse.line_tables(text))
-    got = {r["label"]: r["status"] for r in rows}
-    assert got == {"Zilveren Kruis": "gecontracteerd", "CZ": "in_onderhandeling"}
+    got = {r["label"] or r["concern"]: (r["label"], r["status"]) for r in rows}
+    # 'CZ' alone (no other CZ labels named) speaks for the whole concern: label None
+    assert got == {"Zilveren Kruis": ("Zilveren Kruis", "gecontracteerd"), "CZ": (None, "in_onderhandeling")}
 
 
 def test_year_most_frequent_not_highest():
@@ -376,3 +377,107 @@ def test_extract_html_tables_and_text():
     assert contracts_parse.find_peildatum(text) == "13 november 2026"
     rows = contracts_parse.parse_tables(tables)
     assert [(r["concern"], r["status"]) for r in rows] == [("CZ", "in_onderhandeling")]
+
+
+
+# --- regressions from second review --------------------------------------------------------
+
+@pytest.mark.parametrize("text,expected", [
+    ("Geen contract afgesloten", "geen_contract"),
+    ("Ja*", "gecontracteerd"), ("Nee*", "geen_contract"), ("Ja¹", "gecontracteerd"), ("Ja (1)", "gecontracteerd"),
+    ("Ja, zonder omzetplafond", "gecontracteerd"),
+    ("Wel contract", "gecontracteerd"), ("Contract getekend", "gecontracteerd"), ("Akkoord", "gecontracteerd"),
+    ("Nog in gesprek", "in_onderhandeling"), ("nog niet gecontracteerd", "in_onderhandeling"),
+    ("gecontracteerd (m.u.v. budgetpolis)", "onbekend"), ("Gecontracteerd, behalve budgetpolis", "onbekend"),
+    ("Wij zijn niet gecontracteerd voor de Bewuzt polis, wel voor de overige polissen", "onbekend"),
+])
+def test_status_phrases(text, expected):
+    assert status_from_text(text) == expected
+
+
+def test_html_table_with_empty_cell_and_no_th():
+    from scrapers.contracts import extract_html
+    page = ("<table><tr><td>Zorgverzekeraar</td><td>Contract 2027</td><td>Omzetplafond</td></tr>"
+            "<tr><td>Zilveren Kruis</td><td>Ja</td><td>Nee</td></tr>"
+            "<tr><td>VGZ</td><td>Ja</td><td>Ja</td></tr>"
+            "<tr><td>CZ</td><td></td><td></td></tr></table>")
+    _, tables = extract_html(page)
+    json.dumps(tables, allow_nan=False)  # valid JSON: no NaN
+    got = {r["label"] or r["concern"]: (r["status"], r["omzetplafond"]) for r in contracts_parse.parse_tables(tables)}
+    assert got["Zilveren Kruis"] == ("gecontracteerd", False)
+    assert got["VGZ"] == ("gecontracteerd", True)
+    assert "CZ" not in got
+
+
+def test_column_layout_with_plafond_row():
+    table = [["", "Zilveren Kruis", "VGZ"], ["Contract 2027", "Ja", "Ja"], ["Omzetplafond", "Nee", "Ja"]]
+    rows = contracts_parse.parse_tables([table])
+    got = {r["label"] or r["concern"]: (r["status"], r["omzetplafond"]) for r in rows}
+    assert len(rows) == 2
+    assert got == {"Zilveren Kruis": ("gecontracteerd", False), "VGZ": ("gecontracteerd", True)}
+
+
+def test_concern_and_label_columns():
+    table = [["Concern", "Label", "Status"],
+             ["VGZ", "IZA", "Gecontracteerd"],
+             ["CZ", "OHRA", "Nee"],
+             ["Achmea", "Zilveren Kruis", "Ja"]]
+    got = {(r["concern"], r["label"]): r["status"] for r in contracts_parse.parse_tables([table])}
+    assert got == {("VGZ", "IZA"): "gecontracteerd", ("CZ", "OHRA"): "geen_contract",
+                   ("Achmea", "Zilveren Kruis"): "gecontracteerd"}
+
+
+def test_concern_name_is_label_when_table_lists_other_labels():
+    table = [["Verzekeraar", "Status"], ["VGZ", "Ja"], ["IZA", "Nee"], ["CZ", "Ja"]]
+    got = {(r["concern"], r["label"]): r["status"] for r in contracts_parse.parse_tables([table])}
+    assert got == {("VGZ", "VGZ"): "gecontracteerd", ("VGZ", "IZA"): "geen_contract", ("CZ", None): "gecontracteerd"}
+
+
+def test_lines_are_independent_tables():
+    text = "Zilveren Kruis | VGZ\nWij hebben een contract: ja\nCZ: geen contract"
+    got = {r["label"] or r["concern"]: r["status"] for r in contracts_parse.parse_tables(contracts_parse.line_tables(text))}
+    assert got == {"CZ": "geen_contract"}
+
+
+def test_shared_status_for_several_concerns_and_policy_rows():
+    rows = contracts_parse.parse_tables([[["Menzis", "DSW", "gecontracteerd"]]])
+    assert {r["concern"] for r in rows} == {"Menzis", "DSW"}
+    rows = contracts_parse.parse_tables([[["Verzekeraar", "Polis", "Status"], ["VGZ", "VGZ Bewuzt", "Geen contract"], ["IZA", "", "Ja"]]])
+    bewuzt = next(r for r in rows if r["label"] == "VGZ")
+    assert bewuzt["polis"] == "VGZ Bewuzt" and bewuzt["status"] == "geen_contract"
+
+
+def test_year_and_peildatum_edge_cases():
+    text = "Overzicht contracten zorgverzekeraars 2027\nPeildatum 1-11-2026\nVorig jaar 2026 en 2026"
+    assert contracts_parse.find_year(text) == 2027
+    assert contracts_parse.find_peildatum("Versie 2.1, 1 november 2026") == "1 november 2026"
+    assert contracts_parse.find_peildatum("Bijgewerkt op 1 okt. 2026") == "1 okt. 2026"
+
+
+def test_to_date_variants():
+    assert to_date("2026/11/01") == pd.Timestamp(2026, 11, 1)
+    assert to_date("1 okt. 2026") == pd.Timestamp(2026, 10, 1)
+    assert to_date("15-okt-2026") == pd.Timestamp(2026, 10, 15)
+    assert to_date(pd.Timestamp(2026, 1, 2)) == pd.Timestamp(2026, 1, 2)
+
+
+def test_latest_waits_newer_outpatient_beats_old_treatment():
+    waits = pd.DataFrame([
+        {"procedure_id": "heup", "location_id": "umcu", "weeks": 9, "wait_type": "Behandeling", "peildatum": "2026-01-15"},
+        {"procedure_id": "heup", "location_id": "umcu", "weeks": 3, "wait_type": "Polikliniek", "peildatum": "2026-09-15"},
+        {"procedure_id": "heup", "location_id": "umcu", "weeks": None, "wait_type": "Behandeling", "peildatum": "2026-09-15"},
+    ])
+    assert latest_waits("heup", waits).set_index("location_id")["weeks"].to_dict() == {"umcu": 3}
+
+
+def test_parse_main_survives_bad_file(tmp_path, monkeypatch):
+    raw = tmp_path / "2026-11-24"
+    raw.mkdir()
+    (raw / "meta.json").write_text(json.dumps({"results": {}}))
+    (raw / "bad.tables.json").write_text("{not json")
+    (raw / "bad.txt").write_text("")
+    (raw / "good.tables.json").write_text(json.dumps([[["CZ", "Ja"]]]))
+    (raw / "good.txt").write_text("contracten 2027")
+    monkeypatch.setattr(pipeline.reference, "PROCESSED", tmp_path / "out")
+    assert contracts_parse.main([str(raw)]) == 0
+    assert len(pd.read_csv(tmp_path / "out" / "contracts_candidates.csv")) == 1

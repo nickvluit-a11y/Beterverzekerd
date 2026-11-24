@@ -51,11 +51,16 @@ def html_to_text(page: str) -> str:
 def extract_html(page: str) -> tuple[str, list[Table]]:
     tables: list[Table] = []
     try:
-        for df in pd.read_html(io.StringIO(page)):
-            header = [str(c) for c in df.columns]
-            tables.append([header] + df.astype(str).where(df.notna(), None).values.tolist())
+        frames = pd.read_html(io.StringIO(page))
     except ValueError:  # no <table> on the page
-        pass
+        frames = []
+    for df in frames:
+        body = df.astype(object).where(df.notna(), None).values.tolist()
+        body = [[c if c is None else str(c) for c in row] for row in body]
+        # without <th>, pandas numbers the columns 0, 1, ... and the real header stays in the body
+        synthetic = all(isinstance(c, int) or str(c).startswith("Unnamed") for c in df.columns)
+        header = [] if synthetic else [[" ".join(map(str, c)) if isinstance(c, tuple) else str(c) for c in df.columns]]
+        tables.append(header + body)
     return html_to_text(page), tables
 
 
