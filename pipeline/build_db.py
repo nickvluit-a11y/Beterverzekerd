@@ -138,10 +138,20 @@ def build(path: Path = DB_PATH) -> Path:
                      "postcode VARCHAR, plaats VARCHAR, lat DOUBLE, lon DOUBLE",
         "measurements": "procedure_id VARCHAR, verslagjaar INTEGER, location_key VARCHAR, indicator_code VARCHAR, "
                         "value VARCHAR, numerator DOUBLE, denominator DOUBLE",
-        "indicators": "indicator_code VARCHAR, procedure_id VARCHAR, direction VARCHAR",
+        "indicators": "indicator_code VARCHAR, procedure_id VARCHAR, thema VARCHAR, indicator_naam VARCHAR, "
+                      "eenheid VARCHAR, indicator_type VARCHAR, direction VARCHAR, label_nl VARCHAR",
         "quality_location": "location_key VARCHAR, procedure_id VARCHAR, quality_verdict VARCHAR, n_beter INTEGER, "
                             "n_slechter INTEGER, n_gemiddeld INTEGER, verslagjaar INTEGER, volume DOUBLE",
         "hospitals_manual": "location_id VARCHAR, agb_code VARCHAR",
+        "quality_indicator": "location_key VARCHAR, procedure_id VARCHAR, indicator_code VARCHAR, verslagjaar INTEGER, "
+                             "direction VARCHAR, indicator_nl VARCHAR, value VARCHAR, numerator DOUBLE, denominator DOUBLE, "
+                             "n_waarnemingen DOUBLE, rate DOUBLE, ci_low DOUBLE, ci_high DOUBLE, national_rate DOUBLE, "
+                             "method VARCHAR, verdict VARCHAR, position VARCHAR, source VARCHAR",
+        "contracts": "year VARCHAR, location_id VARCHAR, concern VARCHAR, label VARCHAR, status VARCHAR, "
+                     "omzetplafond VARCHAR, peildatum VARCHAR, source VARCHAR, source_url VARCHAR",
+        "contract_candidates": "year VARCHAR, location_id VARCHAR, concern VARCHAR, label VARCHAR, status VARCHAR",
+        "waiting_times": "procedure_id VARCHAR, location_key VARCHAR, weeks DOUBLE, wait_type VARCHAR, peildatum VARCHAR",
+        "labels": "concern VARCHAR, label VARCHAR",
     }
     for name, df in frames.items():
         if df.empty and name in empty_schemas:
@@ -151,7 +161,7 @@ def build(path: Path = DB_PATH) -> Path:
             con.execute(f"CREATE TABLE {name} AS SELECT * FROM df")
             con.unregister("df")
         else:
-            con.execute(f"CREATE TABLE {name} (dummy VARCHAR)")
+            raise ValueError(f"no schema for empty table {name}")
     con.execute(VIEWS)
     con.close()
     tmp.replace(path)  # atomic: the app never sees a half-built database

@@ -196,11 +196,17 @@ def policy_name(policy: dict) -> str:
 def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, year: int = 2027,
              policies: pd.DataFrame | None = None, contracts: pd.DataFrame | None = None,
              waits: pd.DataFrame | None = None, quality: pd.DataFrame | None = None,
-             hospital_table: pd.DataFrame | None = None) -> tuple[pd.DataFrame, pd.DataFrame]:
+             hospital_table: pd.DataFrame | None = None, con=None) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Return (per-policy summary, per-policy × hospital detail). Both carry a unique `naam` column.
 
     Linkage: locations by location_key (organisation AGB + postcode); quality and waiting times
     per location; contracts per organisation (AGB), because hospitals contract as one organisation."""
+    precomputed = None
+    if con is not None and hospital_table is None and quality is None:
+        from pipeline.db_queries import has_quality_data, locations_for_procedure, quality_latest
+        if has_quality_data(con):  # the database already holds every comparison
+            hospital_table = locations_for_procedure(con, procedure_id)
+            precomputed = quality_latest(con, procedure_id).drop(columns=["procedure_id"])
     if hospital_table is None:
         measurements = _read(PROCESSED / "measurements.csv") if quality is None else quality
         hospital_table = candidate_locations(procedure_id, measurements)
@@ -208,7 +214,8 @@ def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, y
     policies = load_policies(year) if policies is None else policies
     contracts = attach_organisation(load_contracts(year) if contracts is None else contracts)
     near = near.merge(latest_waits(procedure_id, waits), on="location_key", how="left")
-    near = near.merge(quality_by_location(procedure_id, quality), on="location_key", how="left")
+    verdicts = precomputed if precomputed is not None else quality_by_location(procedure_id, quality)
+    near = near.merge(verdicts, on="location_key", how="left")
     near["quality_verdict"] = near["quality_verdict"].fillna("geen_data")
 
     detail_rows = []
@@ -217,6 +224,7 @@ def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, y
             contract = contract_for(contracts, hosp.get("organisatie_agb"), policy["concern"], policy["label"]) or {}
             detail_rows.append({
                 "naam": policy_name(policy), "concern": policy["concern"], "label": policy["label"], "polis": policy["polis"],
+                "location_key": hosp["location_key"],
                 "location": hosp["location_name"], "distance_km": round(hosp["distance_km"], 1),
                 "access": access_status(policy, contract or None),
                 "contract_peildatum": contract.get("peildatum"),
