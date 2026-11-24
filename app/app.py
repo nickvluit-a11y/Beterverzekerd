@@ -76,8 +76,12 @@ if result:
         st.info(f"Geen ziekenhuizen uit onze lijst binnen {result['radius']} km. "
                 f"De lijst bevat nu {len(hospitals())} locaties.")
     else:
+        contracts_file = MANUAL / "contracts.csv"
+        if not contracts_file.exists() or pd.read_csv(contracts_file).empty:
+            st.info("Er is nog geen gecontroleerde contractdata ingevoerd, daarom staat alles op 'Onbekend'. "
+                    "Contractoverzichten van de ziekenhuizen worden opgehaald en eerst met de hand gecontroleerd.")
         st.subheader("Per polis")
-        shown = summary.drop(columns=["naam"]).rename(columns={
+        shown = summary.drop(columns=["naam"]).dropna(axis=1, how="all").rename(columns={
             "concern": "Concern", "label": "Label", "polis": "Polis", "polis_type": "Type",
             "premie_per_maand": "Premie p/m (€)", "ziekenhuizen_in_bereik": "Ziekenhuizen in bereik",
             "gecontracteerd": "Gecontracteerd", "met_omzetplafond": "Met plafond",
@@ -92,7 +96,7 @@ if result:
         chosen = st.selectbox("Polis", summary["naam"].tolist())
         rows = detail[detail["naam"] == chosen].copy()
         rows["access"] = rows["access"].map(ACCESS_LABELS)
-        st.dataframe(rows.drop(columns=["naam", "concern", "label", "polis"]).rename(columns={
+        st.dataframe(rows.drop(columns=["naam", "concern", "label", "polis"]).dropna(axis=1, how="all").rename(columns={
             "location": "Ziekenhuis", "distance_km": "Afstand (km)", "access": "Contract",
             "contract_peildatum": "Peildatum contract", "contract_source": "Bron contract",
             "wait_weeks": "Wachttijd (wk)", "wait_peildatum": "Peildatum wachttijd",

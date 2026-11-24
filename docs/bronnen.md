@@ -56,10 +56,23 @@ De GitHub Action `check-sources` (zie `scrapers/check_sources.py`) haalt elke UR
 
 ### 3a. Contractpagina's van de ziekenhuizen zelf
 
-| Ziekenhuis | URL | Status |
-|---|---|---|
-| Antoni van Leeuwenhoek | https://www.avl.nl/media/tpudg0no/avl_contracten-zorgverzekeraars-2026.pdf | 🟡 Versie 2026, PDF-tabel per concern/label. Versie 2027 nog zoeken. |
-| UMC Utrecht, St. Antonius, Diakonessenhuis, Meander MC, Rivierenland, Gelderse Vallei, Tergooi MC, Jeroen Bosch, Bergman Clinics | — | ❓ niet gevonden via zoeken; handmatig of met het checkscript opzoeken |
+Gevonden via zoekresultaten (allemaal op de eigen site van het ziekenhuis). Ze staan als `contracts_url` in
+`data/manual/hospitals.csv`; `scrapers/contracts.py` haalt ze op (PDF én webpagina).
+
+| Ziekenhuis | URL | Vorm | Status |
+|---|---|---|---|
+| Antoni van Leeuwenhoek | https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf | PDF-tabel per label | ✅ versie 3, nov 2026 |
+| St. Antonius (Nieuwegein, Utrecht, Woerden) | https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars | webpagina | ✅ |
+| Diakonessenhuis | https://www.diakonessenhuis.nl/nieuws/stand-zaken-contracten-zorgverzekeraars-2027 | nieuwsbericht | ✅ stand 13-11-2026 |
+| Meander MC | https://www.meandermc.nl/praktische-informatie/kosten-en-vergoedingen/zorgverzekeraars-en-meander | webpagina | ✅ |
+| Tergooi MC | https://www.tergooi.nl/afspraken-en-voorwaarden/ | webpagina | 🟡 geen datum zichtbaar |
+| Gelderse Vallei | https://www.geldersevallei.nl/over-zgv/onderhandelingen-zorgverzekeraars | webpagina | ✅ |
+| Rivierenland | https://www.ziekenhuisrivierenland.nl/naar-het-ziekenhuis/kosten-en-verzekering | webpagina | ✅ |
+| Jeroen Bosch | https://www.jeroenboschziekenhuis.nl/naar-het-ziekenhuis/kosten-en-zorgverzekering/vergoeding-door-de-zorgverzekering | webpagina | 🟡 laatst gevonden bericht gaat over 2026 |
+| UMC Utrecht | https://www.umcutrecht.nl/nl/budgetpolissen | webpagina | 🟡 geen 2027-overzicht; wel: geen contract voor budget-/selectieve polissen |
+| Bergman Clinics (ZBC) | — | — | ❓ nog zoeken |
+
+Let op: nieuwsberichten zoals dat van het Diakonessenhuis krijgen elk jaar een nieuwe URL. Elk najaar controleren.
 
 ### 3b. Eigen publicaties van verzekeraars (directe bron: de verzekeraar sluit het contract)
 
