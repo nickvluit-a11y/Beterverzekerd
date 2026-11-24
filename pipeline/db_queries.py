@@ -49,3 +49,13 @@ def indicator_trend(con: duckdb.DuckDBPyConnection, location_key: str, procedure
         WHERE q.location_key = ? AND q.procedure_id = ? AND q.method IS NOT NULL
         ORDER BY indicator, q.verslagjaar
     """, [location_key, procedure_id]).df()
+
+
+def latest_judged(con: duckdb.DuckDBPyConnection, procedure_id: str) -> pd.DataFrame:
+    """Judged indicators of each location's latest verslagjaar (for plain-language highlights)."""
+    return con.execute("""
+        SELECT q.location_key, q.verslagjaar, q.indicator_nl, q.verdict
+        FROM quality_indicator q
+        WHERE q.procedure_id = ? AND q.verdict IN ('beter', 'slechter', 'gemiddeld')
+        QUALIFY q.verslagjaar = max(q.verslagjaar) OVER (PARTITION BY q.location_key)
+    """, [procedure_id]).df()

@@ -342,3 +342,32 @@ def hospital_verdict(compared: pd.DataFrame, procedure_id: str) -> pd.DataFrame:
                      "verslagjaar": int(group["year"].max()) if group["year"].notna().any() else None,
                      "volume": volume})
     return pd.DataFrame(rows, columns=columns)
+
+
+# Plain-language domains for the app. Correlated indicators (five PROM scales from the same
+# patients) collapse into one domain, so one strong area does not count five times.
+DOMAINS = [
+    ("heroperatie", r"revisie", "Minder heroperaties", "Meer heroperaties"),
+    ("infectie", r"wondinfectie", "Minder infecties", "Meer infecties"),
+    ("herstel", r"verbetering volgens patiënt", "Patiënten melden meer herstel", "Patiënten melden minder herstel"),
+    ("zien", r"beter zien", "Vaker beter zicht na de operatie", "Minder vaak beter zicht"),
+    ("sterkte", r"refractie", "Vaker de beoogde sterkte", "Minder vaak de beoogde sterkte"),
+]
+
+
+def domain_of(indicator_nl: object) -> str | None:
+    text = str(indicator_nl).lower()
+    return next((d for d, pattern, _, _ in DOMAINS if re.search(pattern, text)), None)
+
+
+def domain_highlights(rows: pd.DataFrame) -> list[tuple[str, str]]:
+    """[(verdict, sentence)] per domain for one location: a domain is 'beter' when at least one of its
+    indicators is better and none worse, 'slechter' in the reverse case; mixed domains are left out."""
+    out = []
+    for domain, _, better_text, worse_text in DOMAINS:
+        verdicts = set(rows.loc[rows["indicator_nl"].map(domain_of) == domain, "verdict"].dropna())
+        if "beter" in verdicts and "slechter" not in verdicts:
+            out.append(("beter", better_text))
+        elif "slechter" in verdicts and "beter" not in verdicts:
+            out.append(("slechter", worse_text))
+    return out
