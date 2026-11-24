@@ -40,6 +40,10 @@ jobs:
         continue-on-error: true
         run: python -m scrapers.contracts
 
+      - name: Fetch indicator guides
+        continue-on-error: true
+        run: python -m scrapers.indicator_guides
+
       - name: Ingest Zorginzicht
         if: steps.zorginzicht.outcome == 'success'
         continue-on-error: true
