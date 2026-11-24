@@ -36,20 +36,9 @@
     "id": "nza_wachttijden_dataset",
     "layer": "waiting_times",
     "url": "https://puc.overheid.nl/nza/doc/PUC_651798_22/",
-    "links": [
-      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_659356_22&versienummer=1",
-      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_730444_22&versienummer=1",
-      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_730445_22&versienummer=1",
-      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_757085_22&versienummer=1",
-      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_772052_22&versienummer=1",
-      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_784122_22&versienummer=1",
-      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_809508_22&versienummer=1"
-    ],
-    "robots": "unknown",
-    "status": 200,
-    "final_url": "https://puc.overheid.nl/nza/doc/PUC_651798_22/",
-    "content_type": "text/html; charset=utf-8",
-    "bytes_read": 33689
+    "links": [],
+    "robots": "yes",
+    "status": 403
   },
   {
     "id": "nza_zorgbeeld_openapi",
@@ -90,7 +79,7 @@
     "status": 200,
     "final_url": "https://www.vgz.nl/zorg-regelen/zorgzoeker",
     "content_type": "text/html; charset=utf-8",
-    "bytes_read": 194838
+    "bytes_read": 194856
   },
   {
     "id": "zorgverzekeringskaart",
@@ -113,5 +102,51 @@
     "final_url": "https://www.vektis.nl/agb-register",
     "content_type": "text/html; charset=utf-8",
     "bytes_read": 243100
+  },
+  {
+    "id": "nza_zorgbeeld_root",
+    "layer": "waiting_times",
+    "url": "https://zorgbeeld.nza.nl/",
+    "links": [],
+    "robots": "yes",
+    "status": 200,
+    "final_url": "https://zorgbeeld.nza.nl/",
+    "content_type": "text/html;charset=utf-8",
+    "bytes_read": 8606
+  },
+  {
+    "id": "nza_zorgbeeld_restdoc",
+    "layer": "waiting_times",
+    "url": "https://zorgbeeld.nza.nl/rest-doc/",
+    "links": [],
+    "robots": "yes",
+    "status": 403
+  },
+  {
+    "id": "nza_zorgbeeld_openapi_json",
+    "layer": "waiting_times",
+    "url": "https://zorgbeeld.nza.nl/rest-doc/openapi.json",
+    "links": [],
+    "robots": "yes",
+    "status": 403
+  },
+  {
+    "id": "nza_puc_robots",
+    "layer": "waiting_times",
+    "url": "https://puc.overheid.nl/robots.txt",
+    "links": [],
+    "robots": "yes",
+    "status": 403
+  },
+  {
+    "id": "pdok_locatieserver",
+    "layer": "reference",
+    "url": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=postcode:3584CX&fq=type:postcode&rows=1",
+    "links": [],
+    "robots": "yes",
+    "status": 200,
+    "final_url": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=postcode:3584CX&fq=type:postcode&rows=1",
+    "content_type": "application/json;charset=utf-8",
+    "bytes_read": 873
   }
 ]
