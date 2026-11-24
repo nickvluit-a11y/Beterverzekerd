@@ -631,6 +631,10 @@ def test_build_db_quality_over_years(tmp_path, monkeypatch):
     problems = dict(con.execute("SELECT problem, n FROM v_integrity").fetchall())
     assert problems["measurement without location"] == 2  # unknown location is reported, not silently dropped
     assert problems["duplicate location_key"] == 0
+    from pipeline.quality_monitor import build_report
+    report = build_report(con)
+    assert "## Heupprothese" in report and "Verbeterd van 2024 naar 2025" in report
+    assert "UMC Utrecht (Utrecht)" in report.split("Verbeterd van 2024 naar 2025")[1]
 
 
 def test_prom_means_are_shown_not_judged():
