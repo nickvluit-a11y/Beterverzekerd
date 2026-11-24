@@ -565,3 +565,41 @@ def test_contract_page_follows_overview_links_and_decodes_utf8():
 def test_geocode_house_number():
     from pipeline.geocode import house_number
     assert house_number("114") == "114" and house_number("1 a") == "1" and house_number(None) == "" and house_number(float("nan")) == ""
+
+
+# --- DuckDB ---------------------------------------------------------------------------------
+
+def test_build_db_quality_over_years(tmp_path, monkeypatch):
+    import duckdb
+    from pipeline import build_db
+    ref, proc = tmp_path / "ref", tmp_path / "proc"
+    ref.mkdir(), proc.mkdir()
+    pd.DataFrame([
+        {"location_key": "06020602-3584CX", "organisatie_agb": "06020602", "organisatie_naam": "UMC Utrecht",
+         "locatie_naam": "UMC Utrecht", "postcode": "3584CX", "plaats": "Utrecht", "lat": 52.087, "lon": 5.179},
+        {"location_key": "11111111-1000AA", "organisatie_agb": "11111111", "organisatie_naam": "Ander",
+         "locatie_naam": "Ander", "postcode": "1000AA", "plaats": "Amsterdam", "lat": 52.37, "lon": 4.9},
+    ]).to_csv(ref / "locations.csv", index=False)
+    pd.DataFrame([{"indicator_code": "IN1", "procedure_id": "heup", "thema": "Revisie", "indicator_naam": "Revisie binnen 1 jaar",
+                   "eenheid": "Percentage", "indicator_type": "Uitkomst"}]).to_csv(ref / "indicators.csv", index=False)
+    rows = []
+    for year, (umc, other) in {2024: ((40, 1000), (40, 1000)), 2025: ((5, 1000), (60, 1000))}.items():
+        rows += [{"procedure_id": "heup", "verslagjaar": year, "location_key": "06020602-3584CX", "indicator_code": "IN1",
+                  "value": None, "numerator": umc[0], "denominator": umc[1], "source": "t"},
+                 {"procedure_id": "heup", "verslagjaar": year, "location_key": "11111111-1000AA", "indicator_code": "IN1",
+                  "value": None, "numerator": other[0], "denominator": other[1], "source": "t"},
+                 {"procedure_id": "heup", "verslagjaar": year, "location_key": "99999999-9999ZZ", "indicator_code": "IN1",
+                  "value": None, "numerator": 1, "denominator": 10, "source": "t"}]
+    pd.DataFrame(rows).to_csv(proc / "measurements.csv", index=False)
+    monkeypatch.setattr(build_db, "REFERENCE", ref)
+    monkeypatch.setattr(build_db, "PROCESSED", proc)
+    path = build_db.build(tmp_path / "t.duckdb")
+    con = duckdb.connect(str(path), read_only=True)
+    trend = con.execute("SELECT verslagjaar, quality_verdict FROM v_quality_trend "
+                        "WHERE location_key = '06020602-3584CX' ORDER BY verslagjaar").fetchall()
+    assert trend == [(2024, "gemiddeld"), (2025, "boven_gemiddeld")]  # improvement becomes visible
+    latest = dict(con.execute("SELECT location_key, quality_verdict FROM v_quality_latest").fetchall())
+    assert latest["11111111-1000AA"] == "onder_gemiddeld"
+    problems = dict(con.execute("SELECT problem, n FROM v_integrity").fetchall())
+    assert problems["measurement without location"] == 2  # unknown location is reported, not silently dropped
+    assert problems["duplicate location_key"] == 0

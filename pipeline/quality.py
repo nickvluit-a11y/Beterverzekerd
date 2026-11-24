@@ -31,12 +31,20 @@ def indicator_meta() -> pd.DataFrame:
     return pd.read_csv(MANUAL / "indicators.csv")
 
 
-def direction_for(procedure_id: str, indicator: object) -> tuple[str | None, str | None]:
-    """(direction, Dutch label) for an indicator name, or (None, None) when unknown or ambiguous."""
+def direction_for(procedure_id: str, indicator: object, code: object = None) -> tuple[str | None, str | None]:
+    """(direction, Dutch label) for an indicator, or (None, None) when unknown or ambiguous.
+
+    A rule for the exact indicator code wins (direction 'none' = deliberately not judged);
+    otherwise name patterns are tried."""
+    rules = indicator_meta()
+    if isinstance(code, str) and "indicator_code" in rules:
+        exact = rules[rules["indicator_code"] == code]
+        if not exact.empty:
+            direction = exact.iloc[0]["direction"]
+            return (None if direction == "none" else direction), exact.iloc[0]["label_nl"]
     if not isinstance(indicator, str):
         return None, None
-    rules = indicator_meta()
-    rules = rules[rules["procedure_id"] == procedure_id]
+    rules = rules[(rules["procedure_id"] == procedure_id) & rules["indicator_pattern"].notna()]
     hits = [(r.direction, r.label_nl) for r in rules.itertuples()
             if re.search(r.indicator_pattern, indicator, flags=re.IGNORECASE)]
     directions = {d for d, _ in hits}
@@ -70,7 +78,8 @@ def compare(quality: pd.DataFrame) -> pd.DataFrame:
     df = quality.copy()
     df["num"] = pd.to_numeric(df.get("numerator"), errors="coerce")
     df["den"] = pd.to_numeric(df.get("denominator"), errors="coerce")
-    meta = [direction_for(p, i) for p, i in zip(df["procedure_id"], df["indicator"])]
+    codes = df["indicator_code"] if "indicator_code" in df else [None] * len(df)
+    meta = [direction_for(p, i, c) for p, i, c in zip(df["procedure_id"], df["indicator"], codes)]
     df["direction"] = [m[0] for m in meta]
     df["indicator_nl"] = [m[1] for m in meta]
 
