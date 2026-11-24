@@ -249,6 +249,8 @@ def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, y
             "kwaliteit_gemengd": int(quality.eq("gemengd").sum()),
             "kwaliteit_onder_gemiddeld": int(quality.eq("onder_gemiddeld").sum()),
             "kwaliteit_geen_data": int(quality.eq("geen_data").sum()),
+            # what is at stake while contract status is still unknown
+            "boven_gemiddeld_contract_onbekend": int((group["quality"].eq("boven_gemiddeld") & access.eq("onbekend")).sum()),
             "ziekenhuizen_in_bereik": len(group),
             "gecontracteerd": int((access == "gecontracteerd").sum()),
             "met_omzetplafond": int((access == "gecontracteerd_met_plafond").sum()),

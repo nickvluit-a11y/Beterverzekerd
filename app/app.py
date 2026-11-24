@@ -100,14 +100,21 @@ if result:
         tab_policies, tab_hospitals = st.tabs(["Polissen vergelijken op kwaliteit", "Kwaliteit per ziekenhuis"])
 
         with tab_policies:
+            per_hospital = detail.drop_duplicates("location_key")["quality"].value_counts()
+            st.markdown(
+                f"**{detail['location_key'].nunique()} ziekenhuislocaties binnen {result['radius']} km** voeren deze ingreep uit: "
+                f"🟢 {per_hospital.get('boven_gemiddeld', 0)} boven gemiddeld · ⚪ {per_hospital.get('gemiddeld', 0)} rond gemiddeld · "
+                f"🟡 {per_hospital.get('gemengd', 0)} gemengd · 🔴 {per_hospital.get('onder_gemiddeld', 0)} onder gemiddeld. "
+                "De vraag per polis: welke daarvan krijg je volledig vergoed?")
             order = ["label", "polis", "kwaliteit_boven_gemiddeld", "kwaliteit_gemengd", "kwaliteit_onder_gemiddeld",
-                     "kwaliteit_geen_data", "premie_per_maand", "polis_type", "kortste_wachttijd_weken",
+                     "kwaliteit_geen_data", "boven_gemiddeld_contract_onbekend", "premie_per_maand", "polis_type", "kortste_wachttijd_weken",
                      "ziekenhuizen_in_bereik", "gecontracteerd", "met_omzetplafond", "vrije_keuze",
                      "in_onderhandeling", "geen_contract", "onbekend", "concern"]
             ranked = summary.sort_values(["kwaliteit_boven_gemiddeld", "kwaliteit_onder_gemiddeld"], ascending=[False, True])
             st.dataframe(ranked[[c for c in order if c in ranked]].dropna(axis=1, how="all").rename(columns={
                 "kwaliteit_boven_gemiddeld": "🟢 Boven gemiddeld", "kwaliteit_gemengd": "🟡 Gemengd",
                 "kwaliteit_onder_gemiddeld": "🔴 Onder gemiddeld", "kwaliteit_geen_data": "❔ Geen kwaliteitsdata",
+                "boven_gemiddeld_contract_onbekend": "🟢 Boven gemiddeld, contract onbekend",
                 "concern": "Concern", "label": "Label", "polis": "Polis", "polis_type": "Type",
                 "premie_per_maand": "Premie p/m (€)", "ziekenhuizen_in_bereik": "Ziekenhuizen in bereik",
                 "gecontracteerd": "Gecontracteerd", "met_omzetplafond": "Met plafond",
@@ -157,7 +164,7 @@ if result:
                     st.dataframe(judged[["indicator", "rate", "ci_low", "ci_high", "national_rate", "Oordeel", "denominator"]]
                                  .rename(columns={"indicator": "Indicator", "rate": "Ziekenhuis", "ci_low": "95% laag",
                                                   "ci_high": "95% hoog", "national_rate": "Landelijk",
-                                                  "denominator": "Aantal patiënten"}).round(1),
+                                                  "denominator": "Aantal patiënten"}).round(2),
                                  hide_index=True, use_container_width=True)
                 other = profile[profile["method"].isna()]
                 if not other.empty:

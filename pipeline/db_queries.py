@@ -31,7 +31,8 @@ def indicator_profile(con: duckdb.DuckDBPyConnection, location_key: str, procedu
             SELECT max(verslagjaar) AS y FROM quality_indicator WHERE location_key = ? AND procedure_id = ?)
         SELECT q.indicator_code, coalesce(q.indicator_nl, i.thema) AS indicator, i.indicator_naam, i.eenheid,
                i.indicator_type, q.verslagjaar, q.method, q.direction, q.rate, q.ci_low, q.ci_high,
-               q.national_rate, q.verdict, q.position, q.numerator, q.denominator, q.value
+               q.national_rate, q.verdict, q.position, q.numerator,
+               coalesce(q.denominator, q.n_waarnemingen) AS denominator, q.value
         FROM quality_indicator q JOIN latest ON q.verslagjaar = latest.y
         LEFT JOIN indicators i USING (indicator_code)
         WHERE q.location_key = ? AND q.procedure_id = ?
