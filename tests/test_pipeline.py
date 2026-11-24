@@ -138,24 +138,41 @@ def test_safe_filename():
 def test_zorginzicht_ingest(tmp_path, monkeypatch):
     raw = tmp_path / "2026-11-24"
     raw.mkdir()
-    df = pd.DataFrame({
-        "Verslagjaar": ["2025"] * 4,
-        "AGB-code": ["", "", "", ""],
-        "Naam instelling": ["Meander Medisch Centrum", "UMC Utrecht", "Meander Medisch Centrum", "Onbekend Ziekenhuis"],
-        "Indicatorset": ["Heupprothese (THP)", "Cataract", "Borstkanker", "Knieprothese (TKP)"],
-        "Indicator": ["Revisie binnen 1 jaar", "Complicaties", "Irrelevant", "Revisie binnen 1 jaar"],
-        "Teller": ["3", "1", "5", "2"],
-        "Noemer": ["400", "900", "50", "300"],
-    })
-    df.to_excel(raw / "msz_2025.xlsx", index=False)
+    base = {"Sector": "Medisch-specialistische zorg", "KvkNummer": "41179410", "LocatieAGBCode": None,
+            "Vestigingsnummer": "1", "LocatieHuisnummer": "100", "Type Zorgaanbieder": "Ziekenhuis",
+            "IndicatorEenheid": "Percentage", "IndicatorType": "Uitkomst", "Thema": "t", "IndicatorNummer": "1",
+            "Indicator_nvt": "0", "Aantal waarnemingen (N)": None}
+    def row(**kw):
+        return {**base, **kw}
+    odb = pd.DataFrame([
+        row(Verslagjaar="2025", OrganisatieNaam="UMC Utrecht", OrganisatieAGBCode="6020602", LocatieNaam="UMC Utrecht",
+            LocatiePostcode="3584 CX", LocatiePlaats="Utrecht", IndicatorsetCode="ISID1", IndicatorsetNaam="Heupprothese",
+            IndicatorCode="IN1", IndicatorNaam="Revisie", IndicatorWaarde="1.0", Teller="2", Noemer="200"),
+        row(Verslagjaar="2025", OrganisatieNaam="UMC Utrecht", OrganisatieAGBCode="6020602", LocatieNaam="UMC Utrecht",
+            LocatiePostcode="3584CX", LocatiePlaats="Utrecht", IndicatorsetCode="ISID2", IndicatorsetNaam="Heupfractuur",
+            IndicatorCode="IN9", IndicatorNaam="Iets anders", IndicatorWaarde="5", Teller=None, Noemer=None),
+        row(Verslagjaar="2025", OrganisatieNaam="Oogkliniek", OrganisatieAGBCode="22220000", LocatieNaam="Oogkliniek",
+            LocatiePostcode="1000AA", LocatiePlaats="Amsterdam", IndicatorsetCode="ISID3", IndicatorsetNaam="Cataract",
+            IndicatorCode="IN5", IndicatorNaam="Visuswinst", IndicatorWaarde="95", Teller="95", Noemer="100"),
+    ])
+    with pd.ExcelWriter(raw / "openbaar-databestand-msz-verslagjaar-2025.xlsx") as writer:
+        pd.DataFrame({"Datum wijzging": ["x"], "wijziging": ["y"]}).to_excel(writer, sheet_name="Versiebeheer", index=False)
+        odb.to_excel(writer, sheet_name="ODB MSZ vj2025", index=False)
+    late = odb.iloc[[0]].assign(Teller="1", Noemer="200")
+    late.to_excel(raw / "naleveringen-msz-verslagjaar-2025.xlsx", index=False)
+    monkeypatch.setattr(zorginzicht_ingest, "REFERENCE", tmp_path / "ref")
+    monkeypatch.setattr(zorginzicht_ingest, "CATALOGUE_DOC", tmp_path / "ind.md")
     monkeypatch.setattr(pipeline.reference, "PROCESSED", tmp_path / "out")
-    monkeypatch.setattr(zorginzicht_ingest, "INVENTORY", tmp_path / "inventory.md")
     assert zorginzicht_ingest.main([str(raw)]) == 0
-    out = pd.read_csv(tmp_path / "out" / "quality.csv")
-    assert sorted(out["procedure_id"]) == ["heup", "knie", "staar"]
-    assert out.set_index("procedure_id").loc["heup", "location_id"] == "meander"
-    assert pd.isna(out.set_index("procedure_id").loc["knie", "location_id"])
-    assert "Naam instelling" in (tmp_path / "inventory.md").read_text()
+
+    locations = pd.read_csv(tmp_path / "ref" / "locations_zorginzicht.csv", dtype=str)
+    assert set(locations["location_key"]) == {"06020602-3584CX", "22220000-1000AA"}  # all sets, AGB zero-padded
+    catalogue = pd.read_csv(tmp_path / "ref" / "indicators.csv", dtype=str)
+    assert set(catalogue["indicator_code"]) == {"IN1", "IN5"}  # Heupfractuur excluded
+    m = pd.read_csv(tmp_path / "out" / "measurements.csv", dtype=str)
+    assert sorted(m["procedure_id"]) == ["heup", "staar"]
+    assert m.set_index("indicator_code").loc["IN1", "numerator"] == "1"  # nalevering wins
+    assert "Revisie" in (tmp_path / "ind.md").read_text()
 
 
 def test_nza_ingest(tmp_path, monkeypatch):
@@ -188,13 +205,13 @@ def test_haversine_and_radius():
 
 def test_contract_for_prefers_label_then_concern_and_latest():
     contracts = pd.DataFrame([
-        {"location_id": "umcu", "concern": "CZ", "label": None, "status": "geen_contract", "peildatum": "2026-11-01"},
-        {"location_id": "umcu", "concern": "CZ", "label": None, "status": "gecontracteerd", "peildatum": "2026-12-01"},
-        {"location_id": "umcu", "concern": "CZ", "label": "OHRA", "status": "in_onderhandeling", "peildatum": "2026-11-15"},
+        {"organisatie_agb": "06020602", "concern": "CZ", "label": None, "status": "geen_contract", "peildatum": "2026-11-01"},
+        {"organisatie_agb": "06020602", "concern": "CZ", "label": None, "status": "gecontracteerd", "peildatum": "2026-12-01"},
+        {"organisatie_agb": "06020602", "concern": "CZ", "label": "OHRA", "status": "in_onderhandeling", "peildatum": "2026-11-15"},
     ])
-    assert contract_for(contracts, "umcu", "CZ", "CZ")["status"] == "gecontracteerd"
-    assert contract_for(contracts, "umcu", "CZ", "OHRA")["status"] == "in_onderhandeling"
-    assert contract_for(contracts, "umcu", "VGZ", "VGZ") is None
+    assert contract_for(contracts, "06020602", "CZ", "CZ")["status"] == "gecontracteerd"
+    assert contract_for(contracts, "06020602", "CZ", "OHRA")["status"] == "in_onderhandeling"
+    assert contract_for(contracts, "06020602", "VGZ", "VGZ") is None
 
 
 def test_access_status():
@@ -216,19 +233,20 @@ def test_overview_end_to_end():
         {"location_id": "diak_utr", "concern": "CZ", "label": None, "status": "gecontracteerd", "omzetplafond": False, "peildatum": "2026-11-15"},
     ])
     waits = pd.DataFrame([
-        {"procedure_id": "heup", "location_id": "umcu", "weeks": 9, "wait_type": "Behandeling", "peildatum": "2026-09-15"},
-        {"procedure_id": "heup", "location_id": "diak_utr", "weeks": 5, "wait_type": "Behandeling", "peildatum": "2026-09-15"},
-        {"procedure_id": "heup", "location_id": "diak_utr", "weeks": 2, "wait_type": "Polikliniek", "peildatum": "2026-09-15"},
+        {"procedure_id": "heup", "location_key": "06020602-3584CX", "weeks": 9, "wait_type": "Behandeling", "peildatum": "2026-09-15"},
+        {"procedure_id": "heup", "location_key": "06010618-3582KE", "weeks": 5, "wait_type": "Behandeling", "peildatum": "2026-09-15"},
+        {"procedure_id": "heup", "location_key": "06010618-3582KE", "weeks": 2, "wait_type": "Polikliniek", "peildatum": "2026-09-15"},
     ])
     quality = pd.DataFrame([
         # umcu: 1/1000 revisions vs national ~5% -> clearly better
-        {"procedure_id": "heup", "location_id": "umcu", "indicator": "Revisie binnen 1 jaar", "numerator": 1, "denominator": 1000, "verslagjaar": "2025"},
-        {"procedure_id": "heup", "location_id": None, "indicator": "Revisie binnen 1 jaar", "numerator": 500, "denominator": 9000, "verslagjaar": "2025"},
+        {"procedure_id": "heup", "location_key": "06020602-3584CX", "indicator": "Revisie binnen 1 jaar", "numerator": 1, "denominator": 1000, "verslagjaar": "2025"},
+        {"procedure_id": "heup", "location_key": None, "indicator": "Revisie binnen 1 jaar", "numerator": 500, "denominator": 9000, "verslagjaar": "2025"},
     ])
     summary, detail = overview(52.0870, 5.1790, "heup", radius_km=6, policies=policies,
                                contracts=contracts, waits=waits, quality=quality)
     cz = summary.set_index("polis").loc["CZ Zorgbewust"]
-    assert cz["gecontracteerd"] == 1 and cz["met_omzetplafond"] == 1
+    # the Diakonessenhuis contract is per organisation, so it covers Utrecht and Zeist
+    assert cz["gecontracteerd"] == 2 and cz["met_omzetplafond"] == 1
     assert cz["kortste_wachttijd_weken"] == 5  # treatment wait, not outpatient
     vgz = summary.set_index("polis").loc["VGZ Ruime Keuze"]
     assert vgz["onbekend"] == 0 and vgz["vrije_keuze"] == vgz["ziekenhuizen_in_bereik"]
@@ -319,19 +337,19 @@ def test_dates_and_truthy():
 
 def test_contract_latest_by_real_date():
     contracts = pd.DataFrame([
-        {"location_id": "umcu", "concern": "CZ", "label": None, "status": "in_onderhandeling", "peildatum": "15 oktober 2026"},
-        {"location_id": "umcu", "concern": "CZ", "label": None, "status": "gecontracteerd", "peildatum": "1 december 2026"},
+        {"organisatie_agb": "06020602", "concern": "CZ", "label": None, "status": "in_onderhandeling", "peildatum": "15 oktober 2026"},
+        {"organisatie_agb": "06020602", "concern": "CZ", "label": None, "status": "gecontracteerd", "peildatum": "1 december 2026"},
     ])
-    assert contract_for(contracts, "umcu", "CZ", "CZ")["status"] == "gecontracteerd"
+    assert contract_for(contracts, "06020602", "CZ", "CZ")["status"] == "gecontracteerd"
 
 
 def test_treatment_wait_preference_is_per_location():
     waits = pd.DataFrame([
-        {"procedure_id": "heup", "location_id": "umcu", "weeks": 9, "wait_type": "Behandeling", "peildatum": "2026-09-15"},
-        {"procedure_id": "heup", "location_id": "umcu", "weeks": 3, "wait_type": "Polikliniek", "peildatum": "2026-09-15"},
-        {"procedure_id": "heup", "location_id": "meander", "weeks": 4, "wait_type": "Polikliniek", "peildatum": "2026-09-15"},
+        {"procedure_id": "heup", "location_key": "umcu", "weeks": 9, "wait_type": "Behandeling", "peildatum": "2026-09-15"},
+        {"procedure_id": "heup", "location_key": "umcu", "weeks": 3, "wait_type": "Polikliniek", "peildatum": "2026-09-15"},
+        {"procedure_id": "heup", "location_key": "meander", "weeks": 4, "wait_type": "Polikliniek", "peildatum": "2026-09-15"},
     ])
-    got = latest_waits("heup", waits).set_index("location_id")["weeks"].to_dict()
+    got = latest_waits("heup", waits).set_index("location_key")["weeks"].to_dict()
     assert got == {"umcu": 9, "meander": 4}
 
 
@@ -346,24 +364,12 @@ def test_duplicate_polis_names_across_labels_stay_separate():
     assert summary.set_index("naam")["premie_per_maand"].to_dict() == {"VGZ – Basis": 150, "CZ – Basis": 160}
 
 
-def test_indicator_text_beats_set_name():
-    indicator = pd.Series(["Revisie na totale knieprothese", "Revisie na totale heupprothese", "Revisie heup- en knieprothese", "Aantal operaties"])
-    sets = pd.Series(["Heup- en knieprothesen (LROI)"] * 3 + ["Cataract"])
-    got = zorginzicht_ingest.assign_procedures(indicator, sets).tolist()
-    assert got[:2] == ["knie", "heup"] and pd.isna(got[2]) and got[3] == "staar"
 
+def test_non_data_sheets_are_ignored():
+    assert zorginzicht_ingest.canonical(pd.DataFrame(columns=["Datum wijzging", "IndicatorsetCode", "IndicatorsetNaam"])) is None
+    assert zorginzicht_ingest.agb("6010901") == "06010901" and zorginzicht_ingest.agb(6010901.0) == "06010901"
+    assert zorginzicht_ingest.postcode("3584 cx") == "3584CX" and zorginzicht_ingest.postcode("x") is None
 
-def test_definitions_sheet_is_skipped():
-    df = pd.DataFrame(columns=["Indicatorset", "Indicatornaam", "Omschrijving", "Teller", "Noemer"])
-    with pytest.raises(KeyError):
-        zorginzicht_ingest.detect_columns(df)
-
-
-def test_column_heuristics():
-    df = pd.DataFrame(columns=["Locatie AGB", "Locatienaam", "Aanleverjaar", "Verslagjaar", "Indicator set", "Indicatorcode", "Indicator naam"])
-    cols = zorginzicht_ingest.detect_columns(df)
-    assert cols["provider"] == "Locatienaam" and cols["year"] == "Verslagjaar"
-    assert cols["indicator_set"] == "Indicator set" and cols["indicator"] == "Indicator naam"
 
 
 def test_read_any_robustness(tmp_path):
@@ -473,11 +479,11 @@ def test_to_date_variants():
 
 def test_latest_waits_newer_outpatient_beats_old_treatment():
     waits = pd.DataFrame([
-        {"procedure_id": "heup", "location_id": "umcu", "weeks": 9, "wait_type": "Behandeling", "peildatum": "2026-01-15"},
-        {"procedure_id": "heup", "location_id": "umcu", "weeks": 3, "wait_type": "Polikliniek", "peildatum": "2026-09-15"},
-        {"procedure_id": "heup", "location_id": "umcu", "weeks": None, "wait_type": "Behandeling", "peildatum": "2026-09-15"},
+        {"procedure_id": "heup", "location_key": "umcu", "weeks": 9, "wait_type": "Behandeling", "peildatum": "2026-01-15"},
+        {"procedure_id": "heup", "location_key": "umcu", "weeks": 3, "wait_type": "Polikliniek", "peildatum": "2026-09-15"},
+        {"procedure_id": "heup", "location_key": "umcu", "weeks": None, "wait_type": "Behandeling", "peildatum": "2026-09-15"},
     ])
-    assert latest_waits("heup", waits).set_index("location_id")["weeks"].to_dict() == {"umcu": 3}
+    assert latest_waits("heup", waits).set_index("location_key")["weeks"].to_dict() == {"umcu": 3}
 
 
 def test_parse_main_survives_bad_file(tmp_path, monkeypatch):
@@ -513,26 +519,26 @@ def test_direction_lookup():
 
 
 def _quality_rows(rows):
-    return pd.DataFrame([{"procedure_id": "heup", "indicator": ind, "location_id": loc, "numerator": n,
+    return pd.DataFrame([{"procedure_id": "heup", "indicator": ind, "location_key": loc, "numerator": n,
                           "denominator": d, "verslagjaar": "2025", "value": None} for loc, ind, n, d in rows])
 
 
 def test_small_hospital_is_not_called_worse():
     # national ~5%; small hospital 2/20 = 10% but interval includes 5% -> 'gemiddeld'
     df = compare(_quality_rows([("small", "Revisie", 2, 20), (None, "Revisie", 500, 10000)]))
-    assert df.set_index("location_id").loc["small", "verdict"] == "gemiddeld"
+    assert df.set_index("location_key").loc["small", "verdict"] == "gemiddeld"
 
 
 def test_large_hospital_difference_is_shown():
     df = compare(_quality_rows([("bad", "Revisie", 150, 1000), ("good", "Revisie", 10, 1000), (None, "Revisie", 500, 10000)]))
-    verdicts = df.dropna(subset=["location_id"]).set_index("location_id")["verdict"].to_dict()
+    verdicts = df.dropna(subset=["location_key"]).set_index("location_key")["verdict"].to_dict()
     assert verdicts == {"bad": "slechter", "good": "beter"}
 
 
 def test_higher_better_and_unknown_direction():
     df = compare(_quality_rows([("a", "PROM verbetering", 950, 1000), (None, "PROM verbetering", 7000, 10000),
                                 ("a", "Iets onbekends", 5, 10)]))
-    by = df[df["location_id"] == "a"].set_index("indicator")["verdict"]
+    by = df[df["location_key"] == "a"].set_index("indicator")["verdict"]
     assert by["PROM verbetering"] == "beter" and pd.isna(by["Iets onbekends"])
 
 
@@ -540,5 +546,22 @@ def test_hospital_verdict_summary():
     df = compare(_quality_rows([("x", "Revisie", 10, 1000), ("x", "Complicaties", 200, 1000),
                                 (None, "Revisie", 500, 10000), (None, "Complicaties", 500, 10000),
                                 ("y", "Revisie", 1, 10)]))
-    v = hospital_verdict(df, "heup").set_index("location_id")["quality_verdict"].to_dict()
+    v = hospital_verdict(df, "heup").set_index("location_key")["quality_verdict"].to_dict()
     assert v == {"x": "gemengd", "y": "gemiddeld"}
+
+
+def test_contract_page_follows_overview_links_and_decodes_utf8():
+    from types import SimpleNamespace
+    from scrapers.contracts import decode_html, linked_documents
+    page = ('<a href="/media/abc/status-afspraken-2027.pdf">Bekijk de status afspraken zorgverzekeraars 2027</a>'
+            '<a href="/media/logo.png">logo</a><a href="https://elders.nl/x.pdf">overzicht</a>'
+            '<a href="/contact">Contact</a>')
+    docs = linked_documents(page, "https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten")
+    assert docs == ["https://www.antoniusziekenhuis.nl/media/abc/status-afspraken-2027.pdf"]
+    resp = SimpleNamespace(content="Patiënt".encode("utf-8"), apparent_encoding="utf-8")
+    assert decode_html(resp) == "Patiënt"
+
+
+def test_geocode_house_number():
+    from pipeline.geocode import house_number
+    assert house_number("114") == "114" and house_number("1 a") == "1" and house_number(None) == "" and house_number(float("nan")) == ""

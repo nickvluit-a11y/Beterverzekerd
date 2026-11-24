@@ -1,4 +1,4 @@
 procedure_id,name_nl,zorginzicht_pattern,nza_pattern
-heup,Heupprothese,heup|\bthp\b,orthop
-knie,Knieprothese,knie|\btkp\b,orthop
-staar,Staaroperatie (cataract),cataract|staar,oogheelk|oogarts
+heup,Heupprothese,^heupprothese$,orthop
+knie,Knieprothese,^knieprothese$,orthop
+staar,Staaroperatie (cataract),^cataract$,oogheelk|oogarts

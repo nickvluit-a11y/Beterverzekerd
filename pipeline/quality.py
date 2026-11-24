@@ -52,8 +52,19 @@ def wilson(numerator: float, denominator: float, z: float = Z) -> tuple[float, f
     return max(0.0, centre - half), min(1.0, centre + half)
 
 
+def with_catalogue(measurements: pd.DataFrame, catalogue: pd.DataFrame) -> pd.DataFrame:
+    """Measurements plus indicator name/theme/unit/type, and an `indicator` text used for direction rules."""
+    cols = [c for c in ["indicator_code", "indicator_naam", "thema", "eenheid", "indicator_type"] if c in catalogue]
+    df = measurements.merge(catalogue[cols].drop_duplicates("indicator_code"), on="indicator_code", how="left")
+    df["indicator"] = (df.get("thema", "").fillna("").astype(str) + " | " + df.get("indicator_naam", "").fillna("").astype(str))
+    return df
+
+
 def compare(quality: pd.DataFrame) -> pd.DataFrame:
-    """One row per provider × indicator with rate, interval, national rate and verdict."""
+    """One row per location × indicator with rate, interval, national rate and verdict.
+
+    Expects columns procedure_id, location_key, indicator (text), verslagjaar, numerator,
+    denominator, value. The national rate uses every provider in the file, linked or not."""
     if quality.empty:
         return pd.DataFrame()
     df = quality.copy()
@@ -64,7 +75,7 @@ def compare(quality: pd.DataFrame) -> pd.DataFrame:
     df["indicator_nl"] = [m[1] for m in meta]
 
     ratio = df["den"].gt(0) & df["num"].ge(0) & (df["num"] <= df["den"])
-    keys = ["procedure_id", "indicator", "verslagjaar"]
+    keys = ["procedure_id", "indicator_code" if "indicator_code" in df else "indicator", "verslagjaar"]
     totals = df[ratio].groupby(keys, dropna=False)[["num", "den"]].sum()
     national = (totals["num"] / totals["den"]).rename("national_rate")
     df = df.join(national, on=keys)
@@ -99,16 +110,16 @@ def hospital_verdict(compared: pd.DataFrame, procedure_id: str) -> pd.DataFrame:
     gemiddeld:       only 'gemiddeld'
     geen_data:       no judged indicators
     """
-    columns = ["location_id", "quality_verdict", "n_beter", "n_slechter", "n_gemiddeld", "verslagjaar", "volume"]
+    columns = ["location_key", "quality_verdict", "n_beter", "n_slechter", "n_gemiddeld", "verslagjaar", "volume"]
     if compared.empty:
         return pd.DataFrame(columns=columns)
-    sub = compared[(compared["procedure_id"] == procedure_id) & compared["location_id"].notna()].copy()
+    sub = compared[(compared["procedure_id"] == procedure_id) & compared["location_key"].notna()].copy()
     if sub.empty:
         return pd.DataFrame(columns=columns)
     sub["year"] = pd.to_numeric(sub["verslagjaar"], errors="coerce")
-    sub = sub[sub["year"] == sub.groupby("location_id")["year"].transform("max")]
+    sub = sub[sub["year"] == sub.groupby("location_key")["year"].transform("max")]
     rows = []
-    for location_id, group in sub.groupby("location_id"):
+    for location_key, group in sub.groupby("location_key"):
         counts = group["verdict"].value_counts()
         beter, slechter, gemiddeld = (int(counts.get(k, 0)) for k in ("beter", "slechter", "gemiddeld"))
         if beter and slechter:
@@ -123,7 +134,7 @@ def hospital_verdict(compared: pd.DataFrame, procedure_id: str) -> pd.DataFrame:
             verdict = "geen_data"
         volume_rows = group[group["direction"] == "volume"]
         volume = pd.to_numeric(volume_rows["value"], errors="coerce").max() if not volume_rows.empty else math.nan
-        rows.append({"location_id": location_id, "quality_verdict": verdict, "n_beter": beter,
+        rows.append({"location_key": location_key, "quality_verdict": verdict, "n_beter": beter,
                      "n_slechter": slechter, "n_gemiddeld": gemiddeld,
                      "verslagjaar": int(group["year"].max()) if group["year"].notna().any() else None,
                      "volume": volume})

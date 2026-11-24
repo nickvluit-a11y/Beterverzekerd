@@ -24,6 +24,7 @@ USER_AGENT = "BeterverzekerdBot/0.1 (+https://github.com/nickvluit-a11y/beterver
 DELAY_SECONDS = 2  # politeness delay between requests
 TIMEOUT = 30
 MAX_BYTES = 2_000_000  # only read the start of large files
+ROBOTS_DETAIL: dict[str, str] = {}
 LINK_PATTERN = re.compile(r'href="([^"]+\.(?:xlsx?|csv|zip|pdf)[^"]*)"', re.IGNORECASE)
 DOWNLOAD_HANDLER = re.compile(r'href="([^"]*DownloadDocument\.ashx[^"]*)"', re.IGNORECASE)
 
@@ -41,12 +42,14 @@ def robots_allowed(url: str, cache: dict) -> str:
         except urllib.error.HTTPError as exc:
             # 4xx on robots.txt means no restrictions; 5xx means unknown
             parser = "allow_all" if 400 <= exc.code < 500 else None
-        except Exception:
+            ROBOTS_DETAIL[base] = f"HTTP {exc.code}"
+        except Exception as exc:
             parser = None
+            ROBOTS_DETAIL[base] = type(exc).__name__
         cache[base] = parser
     parser = cache[base]
     if parser is None:
-        return "unknown"
+        return f"unknown ({ROBOTS_DETAIL.get(base, '?')})"
     if parser == "allow_all":
         return "yes"
     return "yes" if parser.can_fetch(USER_AGENT, url) else "no"

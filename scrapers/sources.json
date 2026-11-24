@@ -8,5 +8,10 @@
   {"id": "cz_zorgvinder_utrecht_2027", "layer": "contracts", "url": "https://zorgvinder.cz.nl/resultaten/ziekenhuis/utrecht?afstand=10&jaar=2027"},
   {"id": "vgz_zorgzoeker", "layer": "contracts", "url": "https://www.vgz.nl/zorg-regelen/zorgzoeker"},
   {"id": "zorgverzekeringskaart", "layer": "policies", "url": "https://www.zorgverzekeringskaart.nl/"},
-  {"id": "vektis_agb", "layer": "reference", "url": "https://www.vektis.nl/agb-register"}
+  {"id": "vektis_agb", "layer": "reference", "url": "https://www.vektis.nl/agb-register"},
+  {"id": "nza_zorgbeeld_root", "layer": "waiting_times", "url": "https://zorgbeeld.nza.nl/", "list_links": true},
+  {"id": "nza_zorgbeeld_restdoc", "layer": "waiting_times", "url": "https://zorgbeeld.nza.nl/rest-doc/"},
+  {"id": "nza_zorgbeeld_openapi_json", "layer": "waiting_times", "url": "https://zorgbeeld.nza.nl/rest-doc/openapi.json"},
+  {"id": "nza_puc_robots", "layer": "waiting_times", "url": "https://puc.overheid.nl/robots.txt"},
+  {"id": "pdok_locatieserver", "layer": "reference", "url": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=postcode:3584CX&fq=type:postcode&rows=1"}
 ]

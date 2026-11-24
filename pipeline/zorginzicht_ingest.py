@@ -1,14 +1,16 @@
-"""Extract hip/knee/cataract indicators from the Zorginzicht MSZ open-data files.
+"""Ingest the Zorginzicht MSZ open data (openbaar databestand, one Excel per verslagjaar).
 
-Steps:
-1. Describe every table in the latest raw download -> docs/data_inventory/zorginzicht.md
-   (committed, so column names can be checked without downloading the files).
-2. Find rows whose indicator text matches a procedure pattern from data/manual/procedures.csv
-   (indicator name first; the indicator-set name only for rows the indicator name leaves unmatched).
-3. Write data/processed/quality.csv in long format (+ dated copy under history/).
+The files share one schema (checked for verslagjaar 2022-2025; column names vary slightly in
+spelling, which `canonical()` absorbs). Output is split into linked tables:
 
-Column detection is by name pattern. When the real files use other names, the table is
-skipped with the list of actual columns: adjust COLUMN_PATTERNS below.
+  data/reference/locations_zorginzicht.csv  every MSZ location in the files (all indicator sets),
+                                            key = location_key (organisation AGB + postcode)
+  data/reference/indicators.csv             catalogue: indicator code -> set, theme, name, unit, type
+  data/processed/measurements.csv           our procedures only: location × indicator × verslagjaar
+  docs/data_inventory/indicatoren.md        human-readable catalogue for our procedures
+
+'Naleveringen' (late or corrected submissions) override the main file for the same
+location × indicator × verslagjaar.
 
 Usage: python -m pipeline.zorginzicht_ingest [raw_dir]
 """
@@ -21,26 +23,105 @@ from pathlib import Path
 
 import pandas as pd
 
-from pipeline.reference import ROOT, match_location, procedures, save_with_history
-from pipeline.tabular import describe, find_column, read_any
+from pipeline.reference import ROOT, procedures, save_with_history
+from pipeline.tabular import read_any
 
-INVENTORY = ROOT / "docs" / "data_inventory" / "zorginzicht.md"
-_CODE = r"agb|code|nummer|(?:^|[_\s])(?:nr|id)(?:$|[_\s])"
-# key: (patterns tried in order, exclude-regex)
-COLUMN_PATTERNS: dict[str, tuple[tuple[str, ...], str | None]] = {
-    "provider": ((r"(locatie|instelling|organisatie|zorgaanbieder|aanbieder)\s*naam",
-                  r"naam.*(locatie|instelling|organisatie|zorgaanbieder|aanbieder)",
-                  r"^(locatie|instelling|organisatie|zorgaanbieder)$"), _CODE),
-    "agb": ((r"agb",), None),
-    "city": ((r"plaats",), None),
-    "indicator_set": ((r"indicator\s*set", r"meetinstrument|kwaliteitsinstrument"), None),
-    "indicator": ((r"indicator\s*(naam|omschrijving|titel)", r"^indicator$", r"vraag"), r"set|code|nummer|(?:^|[_\s])id(?:$|[_\s])"),
-    "value": ((r"^waarde", r"score", r"uitkomst", r"antwoord", r"percentage", r"resultaat"), None),
-    "numerator": ((r"teller",), None),
-    "denominator": ((r"noemer",), None),
-    "year": ((r"verslagjaar", r"^jaar$", r"jaar"), r"aanlever"),
+REFERENCE = ROOT / "data" / "reference"
+CATALOGUE_DOC = ROOT / "docs" / "data_inventory" / "indicatoren.md"
+
+# canonical name -> normalised source spellings (lowercase, letters/digits only)
+COLUMNS = {
+    "verslagjaar": ["verslagjaar"],
+    "organisatie_naam": ["organisatienaam"],
+    "kvk": ["kvknummer"],
+    "organisatie_agb": ["organisatieagbcode"],
+    "locatie_naam": ["locatienaam"],
+    "vestigingsnummer": ["vestigingsnummer"],
+    "postcode": ["locatiepostcode"],
+    "plaats": ["locatieplaats"],
+    "huisnummer": ["locatiehuisnummer"],
+    "locatie_agb": ["locatieagbcode"],
+    "type_zorgaanbieder": ["typezorgaanbieder"],
+    "indicatorset_code": ["indicatorsetcode"],
+    "indicatorset_naam": ["indicatorsetnaam"],
+    "thema": ["thema"],
+    "indicator_code": ["indicatorcode"],
+    "indicator_nummer": ["indicatornummer"],
+    "indicator_naam": ["indicatornaam"],
+    "eenheid": ["indicatoreenheid"],
+    "indicator_type": ["indicatortype"],
+    "value": ["indicatorwaarde"],
+    "numerator": ["teller"],
+    "denominator": ["noemer"],
+    "n_waarnemingen": ["aantalwaarnemingen", "aantalwaarnemingenn"],
+    "nvt": ["indicatornvt"],
+    "meetperiode_eind": ["meetperiodeeinddatum"],
 }
-REQUIRED = {"provider", "indicator"}
+REQUIRED = {"organisatie_agb", "indicatorset_naam", "indicator_code", "value", "verslagjaar"}
+LOCATION_FIELDS = ["location_key", "organisatie_agb", "organisatie_naam", "kvk", "locatie_agb", "locatie_naam",
+                   "vestigingsnummer", "postcode", "huisnummer", "plaats", "type_zorgaanbieder"]
+INDICATOR_FIELDS = ["indicator_code", "indicatorset_code", "indicatorset_naam", "indicator_nummer", "thema",
+                    "indicator_naam", "eenheid", "indicator_type"]
+MEASUREMENT_FIELDS = ["procedure_id", "verslagjaar", "location_key", "indicator_code", "value", "numerator",
+                      "denominator", "n_waarnemingen", "nvt", "source"]
+
+
+def _norm(name: object) -> str:
+    return re.sub(r"[^a-z0-9]", "", str(name).lower())
+
+
+def canonical(df: pd.DataFrame) -> pd.DataFrame | None:
+    """Rename source columns to canonical names; None if this is not a data sheet."""
+    lookup = {_norm(c): c for c in df.columns}
+    rename = {}
+    for canon, spellings in COLUMNS.items():
+        for spelling in spellings:
+            if spelling in lookup:
+                rename[lookup[spelling]] = canon
+                break
+    if not REQUIRED <= set(rename.values()):
+        return None
+    out = df.rename(columns=rename)[list(rename.values())].copy()
+    for col in COLUMNS:
+        if col not in out:
+            out[col] = None
+    return out
+
+
+def agb(value: object) -> str | None:
+    """AGB codes lose their leading zero in Excel: '6010901' -> '06010901'."""
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return None
+    digits = re.sub(r"\D", "", str(value).split(".")[0])
+    return digits.zfill(8) if digits else None
+
+
+def postcode(value: object) -> str | None:
+    if not isinstance(value, str):
+        return None
+    pc = re.sub(r"\s", "", value).upper()
+    return pc if re.fullmatch(r"\d{4}[A-Z]{2}", pc) else None
+
+
+def prepare(df: pd.DataFrame, source: str) -> pd.DataFrame:
+    df = df.copy()
+    for col in ("organisatie_agb", "locatie_agb"):
+        df[col] = df[col].map(agb)
+    df["postcode"] = df["postcode"].map(postcode)
+    df["kvk"] = df["kvk"].map(agb)  # KvK numbers are 8 digits too
+    df["verslagjaar"] = pd.to_numeric(df["verslagjaar"], errors="coerce").astype("Int64")
+    df["location_key"] = df["organisatie_agb"].fillna("?") + "-" + df["postcode"].fillna("")
+    df["source"] = source
+    return df
+
+
+def assign_procedure(set_names: pd.Series) -> pd.Series:
+    """procedure_id from the exact indicator-set name (patterns in procedures.csv are anchored)."""
+    result = pd.Series(pd.NA, index=set_names.index, dtype="object")
+    text = set_names.fillna("").astype(str).str.strip()
+    for proc in procedures().itertuples():
+        result[text.str.contains(proc.zorginzicht_pattern, case=False, regex=True)] = proc.procedure_id
+    return result
 
 
 def latest_raw_dir() -> Path | None:
@@ -49,63 +130,61 @@ def latest_raw_dir() -> Path | None:
     return dirs[-1] if dirs else None
 
 
-def detect_columns(df: pd.DataFrame) -> dict[str, str | None]:
-    cols = {key: find_column(df, *pats, exclude=excl, required=key in REQUIRED)
-            for key, (pats, excl) in COLUMN_PATTERNS.items()}
-    if cols["provider"] == cols["indicator"]:
-        raise KeyError(f"provider and indicator resolve to the same column {cols['provider']!r} "
-                       "(probably a definitions sheet)")
-    return cols
-
-
-def assign_procedures(indicator: pd.Series, indicator_set: pd.Series | None) -> pd.Series:
-    """procedure_id per row, or NA.
-
-    A row gets a procedure only when exactly one pattern matches. The indicator text decides;
-    the set name is used only for rows whose indicator text matches no pattern at all.
-    Rows matching several procedures (e.g. 'heup- en knieprothese') stay NA for manual review.
-    """
-    def single_hit(text: pd.Series) -> tuple[pd.Series, pd.Series]:
-        hits = pd.DataFrame({p.procedure_id: text.fillna("").str.contains(p.zorginzicht_pattern, flags=re.IGNORECASE, regex=True)
-                             for p in procedures().itertuples()})
-        count = hits.sum(axis=1)
-        chosen = hits.idxmax(axis=1).where(count == 1)
-        return chosen, count
-
-    result, count = single_hit(indicator)
-    if indicator_set is not None:
-        from_set, _ = single_hit(indicator_set)
-        result = result.where(count > 0, from_set)
-    return result
-
-
-def extract(df: pd.DataFrame, table_name: str, fetched_on: str) -> pd.DataFrame:
-    cols = detect_columns(df)
-    proc = assign_procedures(df[cols["indicator"]], df[cols["indicator_set"]] if cols["indicator_set"] else None)
-    sub = df[proc.notna()]
-    if sub.empty:
+def load(source_dir: Path) -> pd.DataFrame:
+    frames = []
+    for path in sorted(source_dir.iterdir()):
+        if path.suffix.lower() not in {".xlsx", ".xls", ".csv", ".zip"}:
+            continue
+        kind = "nalevering" if "nalever" in path.name.lower() else "odb"
+        for sheet, df in read_any(path).items():
+            data = canonical(df)
+            if data is not None and not data.empty:
+                frames.append(prepare(data, f"zorginzicht_{kind}:{path.name}:{sheet}"))
+                print(f"read {path.name}:{sheet}: {len(data):,} rows")
+    if not frames:
         return pd.DataFrame()
-
-    def col(key: str):
-        return sub[cols[key]] if cols[key] else None
-
-    out = pd.DataFrame({
-        "procedure_id": proc[proc.notna()],
-        "provider_raw": col("provider"), "agb_code": col("agb"), "city_raw": col("city"),
-        "indicator_set": col("indicator_set"), "indicator": col("indicator"),
-        "value": col("value"), "numerator": col("numerator"), "denominator": col("denominator"),
-        "verslagjaar": col("year") if cols["year"] else _year_from(table_name),
-    }).reset_index(drop=True)
-    out["location_id"] = [match_location(n, city=c, agb_code=a)
-                          for n, c, a in zip(out["provider_raw"], out["city_raw"], out["agb_code"])]
-    out["source"] = f"zorginzicht:{table_name}"
-    out["fetched_on"] = fetched_on
-    return out
+    return pd.concat(frames, ignore_index=True)
 
 
-def _year_from(name: str) -> str | None:
-    match = re.search(r"20\d\d", name)
-    return match.group(0) if match else None
+def build(all_rows: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """(locations, indicator catalogue, measurements for our procedures)."""
+    locations = (all_rows.sort_values("verslagjaar")
+                 .groupby("location_key", dropna=False).agg(
+                     {**{f: "last" for f in LOCATION_FIELDS if f != "location_key"},
+                      "verslagjaar": ["min", "max"]}))
+    locations.columns = [c if isinstance(c, str) else (c[0] if c[1] == "last" else f"{c[0]}_{c[1]}")
+                         for c in locations.columns]
+    locations = locations.rename(columns={"verslagjaar_min": "first_year", "verslagjaar_max": "last_year"}).reset_index()
+
+    ours = all_rows.assign(procedure_id=assign_procedure(all_rows["indicatorset_naam"]))
+    ours = ours[ours["procedure_id"].notna()]
+    catalogue = (ours.sort_values("verslagjaar").groupby("indicator_code")
+                 .agg({**{f: "last" for f in INDICATOR_FIELDS if f != "indicator_code"},
+                       "procedure_id": "last", "verslagjaar": lambda s: ",".join(str(y) for y in sorted(s.dropna().unique())),
+                       "denominator": lambda s: int(pd.to_numeric(s, errors="coerce").gt(0).sum())})
+                 .rename(columns={"verslagjaar": "years", "denominator": "rows_with_denominator"})
+                 .reset_index())
+
+    # a 'nalevering' replaces the main-file value for the same location × indicator × year
+    ours = ours.assign(_prio=ours["source"].str.startswith("zorginzicht_nalevering").astype(int))
+    ours = (ours.sort_values("_prio")
+            .drop_duplicates(["verslagjaar", "location_key", "indicator_code"], keep="last"))
+    measurements = ours[MEASUREMENT_FIELDS].sort_values(["procedure_id", "verslagjaar", "location_key", "indicator_code"])
+    return locations, catalogue, measurements.reset_index(drop=True)
+
+
+def catalogue_markdown(catalogue: pd.DataFrame) -> str:
+    lines = ["# Indicatoren voor onze ingrepen (Zorginzicht)", "",
+             "Automatisch gemaakt door `pipeline/zorginzicht_ingest.py`. `ratio` = aantal rijen met een noemer "
+             "(alleen die indicatoren kunnen we statistisch vergelijken).", ""]
+    for proc, group in catalogue.groupby("procedure_id"):
+        lines += [f"## {proc}", "", "| code | nr | type | eenheid | thema | indicator | jaren | ratio |", "|---|---|---|---|---|---|---|---|"]
+        for r in group.sort_values(["indicator_type", "indicator_nummer"]).itertuples():
+            name = re.sub(r"\s+", " ", str(r.indicator_naam).replace("_x000D_", " "))[:160]
+            lines.append(f"| {r.indicator_code} | {r.indicator_nummer} | {r.indicator_type} | {r.eenheid} | {r.thema} | "
+                         f"{name.replace('|', '/')} | {r.years} | {r.rows_with_denominator} |")
+        lines.append("")
+    return "\n".join(lines)
 
 
 def main(argv: list[str]) -> int:
@@ -113,32 +192,19 @@ def main(argv: list[str]) -> int:
     if not source_dir:
         print("No raw Zorginzicht data; run scrapers.zorginzicht first.", file=sys.stderr)
         return 1
-    tables: dict[str, pd.DataFrame] = {}
-    for path in sorted(source_dir.iterdir()):
-        if path.suffix.lower() in {".xlsx", ".xls", ".csv", ".zip"}:
-            for name, df in read_any(path).items():
-                tables[f"{path.name}:{name}"] = df
-    pattern = "|".join(procedures()["zorginzicht_pattern"])
-    INVENTORY.parent.mkdir(parents=True, exist_ok=True)
-    INVENTORY.write_text(describe(tables, f"Zorginzicht MSZ open data ({source_dir.name})", pattern), encoding="utf-8")
-    print(f"inventory: {INVENTORY}")
-
-    results = []
-    for name, df in tables.items():
-        try:
-            part = extract(df, name, source_dir.name)
-        except KeyError as exc:
-            print(f"skipped {name}: {exc}", file=sys.stderr)
-            continue
-        if not part.empty:
-            results.append(part)
-            print(f"{name}: {len(part)} rows for our procedures")
-    if not results:
-        print("No matching indicator rows; see the inventory and adjust COLUMN_PATTERNS.", file=sys.stderr)
+    rows = load(source_dir)
+    if rows.empty:
+        print("No sheets with the open-data schema found.", file=sys.stderr)
         return 1
-    quality = pd.concat(results, ignore_index=True)
-    save_with_history(quality, "quality", source_dir.name)
-    print(f"quality.csv: {len(quality)} rows, {quality['location_id'].notna().mean():.0%} matched to hospitals.csv")
+    locations, catalogue, measurements = build(rows)
+    REFERENCE.mkdir(parents=True, exist_ok=True)
+    locations.to_csv(REFERENCE / "locations_zorginzicht.csv", index=False)
+    catalogue.to_csv(REFERENCE / "indicators.csv", index=False)
+    CATALOGUE_DOC.parent.mkdir(parents=True, exist_ok=True)
+    CATALOGUE_DOC.write_text(catalogue_markdown(catalogue), encoding="utf-8")
+    save_with_history(measurements, "measurements", source_dir.name)
+    print(f"locations: {len(locations):,}; indicators for our procedures: {len(catalogue)}; "
+          f"measurements: {len(measurements):,} ({measurements['verslagjaar'].min()}-{measurements['verslagjaar'].max()})")
     return 0
 
 
