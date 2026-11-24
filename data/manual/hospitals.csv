@@ -1,0 +1,13 @@
+location_id,organisation,location_name,agb_code,street,postcode,city,lat,lon,type,aliases,contracts_url,verified
+umcu,UMC Utrecht,UMC Utrecht Heidelberglaan,,Heidelberglaan 100,3584 CX,Utrecht,52.0870,5.1790,umc,UMCU|Universitair Medisch Centrum Utrecht|UMC Utrecht locatie AZU,,false
+antonius_nwg,St. Antonius Ziekenhuis,St. Antonius Nieuwegein,,Koekoekslaan 1,3435 CM,Nieuwegein,52.0300,5.0960,stz,Sint Antonius|St Antonius Ziekenhuis|Antonius Nieuwegein,,false
+antonius_utr,St. Antonius Ziekenhuis,St. Antonius Utrecht,,Soestwetering 1,3543 AZ,Utrecht,52.0990,5.0560,stz,Sint Antonius Leidsche Rijn|St Antonius Utrecht|Antonius Utrecht,,false
+diak_utr,Diakonessenhuis,Diakonessenhuis Utrecht,,Bosboomstraat 1,3582 KE,Utrecht,52.0880,5.1370,algemeen,Diakonessenhuis|Diak|Stichting Diakonessenhuis,,false
+diak_zst,Diakonessenhuis,Diakonessenhuis Zeist,,,,Zeist,52.0880,5.2300,algemeen,Diakonessenhuis Zeist,,false
+meander,Meander Medisch Centrum,Meander MC Amersfoort,,Maatweg 3,3813 TZ,Amersfoort,52.1700,5.3550,stz,Meander|Meander MC|Meander Medisch Centrum Amersfoort,,false
+tergooi,Tergooi MC,Tergooi MC Hilversum,,Laan van Tergooi 2,1212 VG,Hilversum,52.2080,5.1950,algemeen,Tergooi|Tergooi Ziekenhuizen|Tergooi Medisch Centrum,,false
+zgv,Ziekenhuis Gelderse Vallei,Ziekenhuis Gelderse Vallei Ede,,Willy Brandtlaan 10,6716 RP,Ede,52.0310,5.6460,algemeen,Gelderse Vallei|ZGV,,false
+zrt,Ziekenhuis Rivierenland,Ziekenhuis Rivierenland Tiel,,President Kennedylaan 100,4002 WP,Tiel,51.8770,5.4030,algemeen,Rivierenland|Ziekenhuis Rivierenland Tiel,,false
+zuwe,Zuwe Hofpoort Ziekenhuis,Zuwe Hofpoort Woerden,,Polanerbaan 2,3447 GN,Woerden,52.0790,4.8700,algemeen,Zuwe Hofpoort|Hofpoort Ziekenhuis,,false
+jbz,Jeroen Bosch Ziekenhuis,Jeroen Bosch Ziekenhuis,,Henri Dunantstraat 1,5223 GZ,'s-Hertogenbosch,51.7020,5.2800,stz,JBZ|Jeroen Bosch|Jeroen Bosch Ziekenhuis 's-Hertogenbosch,,false
+avl,Antoni van Leeuwenhoek,Antoni van Leeuwenhoek Amsterdam,,Plesmanlaan 121,1066 CX,Amsterdam,52.3530,4.8370,categoraal,AVL|NKI-AVL|Antoni van Leeuwenhoek Ziekenhuis,https://www.avl.nl/media/tpudg0no/avl_contracten-zorgverzekeraars-2026.pdf,false

@@ -1,0 +1,30 @@
+concern,label,verified,note
+Achmea,Zilveren Kruis,false,
+Achmea,FBTO,false,
+Achmea,Interpolis,false,
+Achmea,De Friesland,false,
+Achmea,Prolife,false,
+VGZ,VGZ,false,
+VGZ,IZA,false,
+VGZ,IZZ,false,
+VGZ,Univé,false,
+VGZ,Zekur,false,
+VGZ,Bewuzt,false,
+VGZ,UMC Zorgverzekering,false,
+VGZ,ONVZ,false,ONVZ part of VGZ from 2027-01-01 (news report; confirm whether contracts follow VGZ)
+VGZ,VvAA,false,formerly ONVZ group label
+VGZ,PNOzorg,false,formerly ONVZ group label
+CZ,CZ,false,
+CZ,OHRA,false,
+CZ,Nationale-Nederlanden,false,NN Group brand; owner works at NN Group - see conflict-of-interest note in CLAUDE.md
+CZ,CZdirect,false,
+Menzis,Menzis,false,
+Menzis,Anderzorg,false,
+DSW,DSW,false,
+DSW,Stad Holland,false,
+DSW,inTwente,false,
+a.s.r.,a.s.r.,false,
+a.s.r.,Ditzo,false,
+a.s.r.,De Amersfoortse,false,
+Zorg en Zekerheid,Zorg en Zekerheid,false,
+Zorg en Zekerheid,AZVZ,false,

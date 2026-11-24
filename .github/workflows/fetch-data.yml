@@ -1,0 +1,83 @@
+name: fetch-data
+
+# Downloads all sources, runs the pipeline and commits processed data + inventories.
+# Each source runs in its own step with continue-on-error, so one broken source
+# does not block the others. Raw downloads are kept as a workflow artifact (90 days).
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "41 5 * * 1,4"  # Monday and Thursday 05:41 UTC (NZa updates every 2 weeks)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-data
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Fetch Zorginzicht
+        id: zorginzicht
+        continue-on-error: true
+        run: python -m scrapers.zorginzicht
+      - name: Fetch NZa waiting times
+        id: nza
+        continue-on-error: true
+        run: python -m scrapers.nza_wachttijden
+      - name: Fetch hospital contract PDFs
+        id: contracts
+        continue-on-error: true
+        run: python -m scrapers.contract_pdfs
+
+      - name: Ingest Zorginzicht
+        if: steps.zorginzicht.outcome == 'success'
+        continue-on-error: true
+        run: python -m pipeline.zorginzicht_ingest
+      - name: Ingest NZa
+        if: steps.nza.outcome == 'success'
+        continue-on-error: true
+        run: python -m pipeline.nza_ingest
+      - name: Parse contract PDFs
+        if: steps.contracts.outcome == 'success'
+        continue-on-error: true
+        run: python -m pipeline.contracts_parse
+
+      - name: Keep raw downloads
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: raw-${{ github.run_id }}
+          path: data/raw
+          retention-days: 90
+          if-no-files-found: ignore
+
+      - name: Commit processed data
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/processed docs/data_inventory 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "Update processed data ($(date -u +%F))"
+          git pull --rebase && git push
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "| source | fetch |"
+            echo "|---|---|"
+            echo "| zorginzicht | ${{ steps.zorginzicht.outcome }} |"
+            echo "| nza | ${{ steps.nza.outcome }} |"
+            echo "| contracts | ${{ steps.contracts.outcome }} |"
+          } >> "$GITHUB_STEP_SUMMARY"
