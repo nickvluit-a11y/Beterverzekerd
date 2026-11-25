@@ -117,17 +117,17 @@ Verzonden:
 
 Verzonden:
 ```
-[{"time":"2026-11-25T14:53:54.078Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"2wArRADqI0vx1A/lGSdTxj","ai.session.id":"hqvyd/lqbD1msHM3DVIaDp","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"bfa23fc49a6f41a49df734deed0e654a","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.role":"zorgzoeker"},"data":{"baseType":"RemoteDependencyData","baseData":{"id":"|bfa23fc49a6f41a49df734deed0e654a.24153b1334b74fff.","ver":2,"name":"GET https://cdn.vgz.nl/ui-assets/ds/assets/v/latest/build/assets/iconen/vgz/arrow-right.svg","resultCode":"200","duration":"00:00:00.042","success":true,"data":"GET https://cdn.vgz.nl/ui-assets/ds/assets/v/latest/build/assets/iconen/vgz/arrow-right.svg","target":"cdn.vgz.nl","type":"Fetch","properties":{"HttpMethod":"GET","ApplicationId":"zorgzoeker","ProgramId":"OO","MerkCode":"VGZ","Environment":"P","BuildNumber":"20261104-2"},"measurements":{}}}},{"time":"2026-11-25T14:53:54.079Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"2wArRADqI0vx1A/lGSdTxj","ai.session.id":"hqvyd/lqbD1msHM3DVIaDp","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"bfa23fc49a6f41a49df734deed0e654a","ai.internal.sdkVersion
+[{"time":"2026-11-25T15:13:55.107Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"FgLLOotFcDjG8OY/6pZ7SX","ai.session.id":"t29E9v3l7AKf1DElJ9XN8x","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"77a4ea3f431c4ba9b9c1e4e967fcd959","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.role":"zorgzoeker"},"data":{"baseType":"RemoteDependencyData","baseData":{"id":"|77a4ea3f431c4ba9b9c1e4e967fcd959.db20658a591c49f7.","ver":2,"name":"GET https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true","resultCode":"200","duration":"00:00:00.030","success":true,"data":"GET https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true","target":"maps.googleapis.com","type":"Ajax","properties":{"HttpMethod":"GET","ApplicationId":"zorgzoeker","ProgramId":"OO","MerkCode":"VGZ","Environment":"P","BuildNumber":"20261104-2"},"measurements":{}}}},{"time":"2026-11-25T15:13:55.034Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"FgLLOotFcDjG8OY/6pZ7SX","ai.session.id":"t29E9v3l7AKf1DElJ9XN8x","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"77a4ea3f431c4ba9b9c1e4e967fcd959","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.role
 ```
 ```
-{"itemsReceived":33,"itemsAccepted":33,"appId":"4c09065e-fbc0-411d-942e-798bce811f99","errors":[]}
+{"itemsReceived":35,"itemsAccepted":35,"appId":"4c09065e-fbc0-411d-942e-798bce811f99","errors":[]}
 ```
 
 ### POST 200 https://dc.services.visualstudio.com/v2/track (98 tekens)
 
 Verzonden:
 ```
-[{"time":"2026-11-25T14:54:14.586Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"2wArRADqI0vx1A/lGSdTxj","ai.session.id":"hqvyd/lqbD1msHM3DVIaDp","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker/zoekresultaten","ai.operation.id":"96009b055f924029b4daae305369352a","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.role":"zorgzoeker"},"data":{"baseType":"RemoteDependencyData","baseData":{"id":"|96009b055f924029b4daae305369352a.425c3f7b03a64378.","ver":2,"name":"GET https://api.vgz.nl/zorgzoeker/api/v2/polistype/vgz/2027","resultCode":"200","duration":"00:00:00.499","success":true,"data":"GET https://api.vgz.nl/zorgzoeker/api/v2/polistype/vgz/2027","target":"api.vgz.nl","type":"Ajax","properties":{"HttpMethod":"GET","ApplicationId":"zorgzoeker","ProgramId":"OO","MerkCode":"VGZ","Environment":"P","BuildNumber":"20261104-2"},"measurements":{}}}},{"time":"2026-11-25T14:54:14.588Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"2wArRADqI0vx1A/lGSdTxj","ai.session.id":"hqvyd/lqbD1msHM3DVIaDp","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker/zoekresultaten","ai.operation.id":"96009b055f924029b4daae305369352a","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.rol
+[{"time":"2026-11-25T15:14:17.021Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"FgLLOotFcDjG8OY/6pZ7SX","ai.session.id":"t29E9v3l7AKf1DElJ9XN8x","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker/zoekresultaten","ai.operation.id":"39a9f66e319b40ceb06bf2168460231d","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.role":"zorgzoeker"},"data":{"baseType":"RemoteDependencyData","baseData":{"id":"|39a9f66e319b40ceb06bf2168460231d.04491d44bc454ef0.","ver":2,"name":"GET https://api.vgz.nl/zorgzoeker/api/v2/resource/vgz","resultCode":"200","duration":"00:00:00.386","success":true,"data":"GET https://api.vgz.nl/zorgzoeker/api/v2/resource/vgz","target":"api.vgz.nl","type":"Ajax","properties":{"HttpMethod":"GET","ApplicationId":"zorgzoeker","ProgramId":"OO","MerkCode":"VGZ","Environment":"P","BuildNumber":"20261104-2"},"measurements":{}}}},{"time":"2026-11-25T15:14:17.429Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.Event","tags":{"ai.user.id":"FgLLOotFcDjG8OY/6pZ7SX","ai.session.id":"t29E9v3l7AKf1DElJ9XN8x","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker/zoekresultaten","ai.operation.id":"39a9f66e319b40ceb06bf2168460231d","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.role":"zorgzoeker"},"data"
 ```
 ```
 {"itemsReceived":95,"itemsAccepted":95,"appId":"4c09065e-fbc0-411d-942e-798bce811f99","errors":[]}
@@ -137,7 +137,7 @@ Verzonden:
 
 Verzonden:
 ```
-[{"time":"2026-11-25T14:53:53.505Z","iKey":"1a60808c-e79e-4613-8e2d-a1dc5da2812e","name":"Microsoft.ApplicationInsights.1a60808ce79e46138e2da1dc5da2812e.Message","tags":{"ai.user.id":"2wArRADqI0vx1A/lGSdTxj","ai.session.id":"hqvyd/lqbD1msHM3DVIaDp","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"98152405c7b24a659182ee6b26fd67fe","ai.internal.sdkVersion":"javascript:3.4.1","ai.internal.snippet":"-"},"data":{"baseType":"MessageData","baseData":{"ver":2,"message":"Utils.Log - undefined *** ChatbotComponent: init","severityLevel":1,"properties":{"params":"[{\"appInsights\":{\"enabled\":true,\"instrumentationKey\":\"1a60808c-e79e-4613-8e2d-a1dc5da2812e\"},\"autoStart\":false,\"brandLabel\":\"VGZ\",\"chatApiStatusUrl\":\"https://vb-pr-am.vgz.nl/chat-api/status\",\"chatApiUrl\":\"https://vb-pr-am.vgz.nl/chat-api/\",\"chatButtonHidden\":false,\"embedded\":false,\"environmentString\":\"OO\",\"showOffline\":false,\"signalRApiPostfix\":\"signalr\"}]","MerkCode":"VGZ"}}}}]
+[{"time":"2026-11-25T15:13:54.284Z","iKey":"1a60808c-e79e-4613-8e2d-a1dc5da2812e","name":"Microsoft.ApplicationInsights.1a60808ce79e46138e2da1dc5da2812e.Message","tags":{"ai.user.id":"FgLLOotFcDjG8OY/6pZ7SX","ai.session.id":"t29E9v3l7AKf1DElJ9XN8x","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"509e8b2492b947adbf9e626971c9641d","ai.internal.sdkVersion":"javascript:3.4.1","ai.internal.snippet":"-"},"data":{"baseType":"MessageData","baseData":{"ver":2,"message":"Utils.Log - undefined *** ChatbotComponent: init","severityLevel":1,"properties":{"params":"[{\"appInsights\":{\"enabled\":true,\"instrumentationKey\":\"1a60808c-e79e-4613-8e2d-a1dc5da2812e\"},\"autoStart\":false,\"brandLabel\":\"VGZ\",\"chatApiStatusUrl\":\"https://vb-pr-am.vgz.nl/chat-api/status\",\"chatApiUrl\":\"https://vb-pr-am.vgz.nl/chat-api/\",\"chatButtonHidden\":false,\"embedded\":false,\"environmentString\":\"OO\",\"showOffline\":false,\"signalRApiPostfix\":\"signalr\"}]","MerkCode":"VGZ"}}}}]
 ```
 ```
 {"itemsReceived":1,"itemsAccepted":1,"appId":"4f0376cb-a1ad-461a-a675-ff518fd67457","errors":[]}
@@ -147,16 +147,16 @@ Verzonden:
 
 Verzonden:
 ```
-[{"time":"2026-11-25T14:53:53.505Z","iKey":"1a60808c-e79e-4613-8e2d-a1dc5da2812e","name":"Microsoft.ApplicationInsights.1a60808ce79e46138e2da1dc5da2812e.Message","tags":{"ai.user.id":"2wArRADqI0vx1A/lGSdTxj","ai.session.id":"hqvyd/lqbD1msHM3DVIaDp","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"98152405c7b24a659182ee6b26fd67fe","ai.internal.sdkVersion":"javascript:3.4.1","ai.internal.snippet":"-"},"data":{"baseType":"MessageData","baseData":{"ver":2,"message":"Utils.Log - undefined *** ChatbotComponent: init","severityLevel":1,"properties":{"params":"[{\"appInsights\":{\"enabled\":true,\"instrumentationKey\":\"1a60808c-e79e-4613-8e2d-a1dc5da2812e\"},\"autoStart\":false,\"brandLabel\":\"VGZ\",\"chatApiStatusUrl\":\"https://vb-pr-am.vgz.nl/chat-api/status\",\"chatApiUrl\":\"https://vb-pr-am.vgz.nl/chat-api/\",\"chatButtonHidden\":false,\"embedded\":false,\"environmentString\":\"OO\",\"showOffline\":false,\"signalRApiPostfix\":\"signalr\"}]","MerkCode":"VGZ"}}}},{"time":"2026-11-25T14:53:54.039Z","iKey":"1a60808c-e79e-4613-8e2d-a1dc5da2812e","name":"Microsoft.ApplicationInsights.1a60808ce79e46138e2da1dc5da2812e.Message","tags":{"ai.user.id":"2wArRADqI0vx1A/lGSdTxj","ai.session.id":"hqvyd/lqbD1msHM3DVIaDp","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"84b521c555c64692b631826ec082f94c","ai.internal.sdkVersion":"javascript:3.4.1","ai.interna
+[{"time":"2026-11-25T15:13:54.284Z","iKey":"1a60808c-e79e-4613-8e2d-a1dc5da2812e","name":"Microsoft.ApplicationInsights.1a60808ce79e46138e2da1dc5da2812e.Message","tags":{"ai.user.id":"FgLLOotFcDjG8OY/6pZ7SX","ai.session.id":"t29E9v3l7AKf1DElJ9XN8x","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"509e8b2492b947adbf9e626971c9641d","ai.internal.sdkVersion":"javascript:3.4.1","ai.internal.snippet":"-"},"data":{"baseType":"MessageData","baseData":{"ver":2,"message":"Utils.Log - undefined *** ChatbotComponent: init","severityLevel":1,"properties":{"params":"[{\"appInsights\":{\"enabled\":true,\"instrumentationKey\":\"1a60808c-e79e-4613-8e2d-a1dc5da2812e\"},\"autoStart\":false,\"brandLabel\":\"VGZ\",\"chatApiStatusUrl\":\"https://vb-pr-am.vgz.nl/chat-api/status\",\"chatApiUrl\":\"https://vb-pr-am.vgz.nl/chat-api/\",\"chatButtonHidden\":false,\"embedded\":false,\"environmentString\":\"OO\",\"showOffline\":false,\"signalRApiPostfix\":\"signalr\"}]","MerkCode":"VGZ"}}}},{"time":"2026-11-25T15:13:55.143Z","iKey":"1a60808c-e79e-4613-8e2d-a1dc5da2812e","name":"Microsoft.ApplicationInsights.1a60808ce79e46138e2da1dc5da2812e.Message","tags":{"ai.user.id":"FgLLOotFcDjG8OY/6pZ7SX","ai.session.id":"t29E9v3l7AKf1DElJ9XN8x","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"2b0d965f67034a46bdf5456ed22c1911","ai.internal.sdkVersion":"javascript:3.4.1","ai.interna
 ```
 ```
 {"itemsReceived":3,"itemsAccepted":3,"appId":"4f0376cb-a1ad-461a-a675-ff518fd67457","errors":[]}
 ```
 
-### GET 200 https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location (69 tekens)
+### GET 200 https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location (67 tekens)
 
 ```
-{"country":"US","state":"IL","stateName":"Illinois","continent":"NA"}
+{"country":"US","state":"OR","stateName":"Oregon","continent":"NA"}
 ```
 
 ### GET 200 https://api.vgz.nl/zorgzoeker/api/v2/verwerkingsdatum/vgz (51 tekens)
@@ -177,16 +177,16 @@ Verzonden:
 ["NL"]
 ```
 
-### GET 200 https://api.vgz.nl/sgw/auth/user?slide=false&x_client=vgz-iml (4 tekens)
-
-```
-null
-```
-
 ### GET 200 https://vb-pr-am.vgz.nl/chat-api/status/chat-enabled?brandCode=VGZ&environment=OO (4 tekens)
 
 ```
 true
+```
+
+### GET 200 https://api.vgz.nl/sgw/auth/user?slide=false&x_client=vgz-iml (4 tekens)
+
+```
+null
 ```
 
 ### GET 200 https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true (3 tekens)

@@ -13,6 +13,7 @@ Usage: python -m scrapers.cz_zorgvinder [max_towns]
 from __future__ import annotations
 
 import re
+from urllib.parse import quote
 import sys
 
 import pandas as pd
@@ -146,29 +147,54 @@ def fetch_all(http: PoliteSession, category: str, suffix: str, param: str) -> tu
     return rows, total, page
 
 
+def town_slug(place: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", str(place).lower().replace("'s-", "s-")).strip("-")
+
+
+def targeted(http: PoliteSession, rows: list[dict], report: list[str]) -> list[dict]:
+    """The finder pages with JavaScript (30 results per list), so after the sweep we look up, by
+    name in their own town, each of our quality locations that the sweep did not find."""
+    from pipeline.insurer_contracts import _tokens, match_entries
+    from pipeline.reference import REFERENCE
+    locations = pd.read_csv(REFERENCE / "locations.csv", dtype=str)
+    recent = pd.to_numeric(locations.get("last_year"), errors="coerce") >= YEAR - 3
+    locations = locations[recent.fillna(True) & locations["plaats"].notna()]
+    found = match_entries(pd.DataFrame(rows), locations) if rows else pd.DataFrame(columns=["location_key"])
+    todo = locations[~locations["location_key"].isin(set(found["location_key"].dropna()))]
+    extra, hits = [], 0
+    for loc in todo.itertuples():
+        name = loc.locatie_naam if isinstance(loc.locatie_naam, str) else loc.organisatie_naam
+        words = sorted(_tokens(name, str(loc.plaats).lower()), key=len, reverse=True)[:2]
+        if not words:
+            continue
+        hospital = re.search(r"ziekenhuis|umc|medisch centrum|\bmc\b|gasthuis", str(name), re.I)
+        for category in (["ziekenhuis", "zelfstandig-behandelcentrum"] if hospital else
+                         ["zelfstandig-behandelcentrum", "ziekenhuis"]):
+            url = (BASE.format(category=category, town=town_slug(loc.plaats), year=YEAR)
+                   + "&afstand=10&naam=" + quote(" ".join(words)))
+            entries, _, _ = fetch(http, url)
+            if entries:
+                extra += [dict(e, town=loc.plaats, category=category) for e in entries]
+                hits += 1
+                break
+    report.append(f"- gericht op naam gezocht: {len(todo)} locaties, {hits} met resultaat")
+    return extra
+
+
 def main(argv: list[str]) -> int:
     towns = TOWNS[: int(argv[0])] if argv else TOWNS
     http = PoliteSession(delay=3)
-    report = ["# Zorgvinder CZ (contracten 2027)", "", f"Run: {today()}.", "", "## Zoekinstellingen", ""]
+    report = ["# Zorgvinder CZ (contracten 2027)", "", f"Run: {today()}.", "",
+              "Per plaats (25 km) de ziekenhuizen; de zoeker toont er 30 per lijst. Daarna elke kwaliteitslocatie "
+              "die nog ontbreekt gericht op naam in haar eigen plaats.", "",
+              "| categorie | plaats | genoemd | gelezen | pagina's |", "|---|---|---|---|---|"]
     rows = []
-    found_way = discover(http, report)
-    if found_way:
-        suffix, param = found_way
-        report += ["", f"Heel Nederland met `{suffix or '(geen afstand)'}`, bladeren met `{param}`.", "",
-                    "| categorie | genoemd | gelezen | pagina's |", "|---|---|---|---|"]
-        for category in CATEGORIES:
-            found, total, pages = fetch_all(http, category, suffix, param)
-            rows += found
-            report.append(f"| {category} | {total} | {len(found)} | {pages} |")
-            print(f"{category}: {len(found)} of {total}")
-    else:  # fallback: 25 km around many towns, first page only (30 results each)
-        report += ["", "Geen manier gevonden om te bladeren: per plaats de eerste 30.", "",
-                   "| categorie | plaats | genoemd | gelezen | pagina's |", "|---|---|---|---|---|"]
-        for category in CATEGORIES:
-            for town in towns:
-                found, total, pages, error = fetch_town(http, category, town)
-                rows += found
-                report.append(f"| {category} | {town} | {total if total is not None else '?'} | {len(found)} | {pages} {error} |")
+    for town in towns:
+        found, total, pages, error = fetch_town(http, "ziekenhuis", town)
+        rows += found
+        report.append(f"| ziekenhuis | {town} | {total if total is not None else '?'} | {len(found)} | {pages} {error} |")
+    report.append("")
+    rows += targeted(http, rows, report)
     if not rows:
         print("No entries read from the CZ care finder", file=sys.stderr)
         return 1

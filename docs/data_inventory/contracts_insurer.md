@@ -98,3 +98,52 @@ Niet gekoppeld (eerste 40):
 - Tergooi, loc. buitenpolikliniek Blaricum, Rijksstraatweg 3, Blaricum (in_onderhandeling)
 - TopzorgGroep Amersfoort, Disselplein 4, Amersfoort (in_onderhandeling)
 
+## menzis_zorgvinder
+
+1025 locaties in de zorgzoeker, 335 gekoppeld aan onze locaties, 168 organisaties met een status.
+
+Status per organisatie: in_onderhandeling 110, vergoed_als_contract 34, gecontracteerd 24
+
+Niet gekoppeld (eerste 40):
+
+- UMC Utrecht, loc. Wilhelmina Kinderziekenhuis (WKZ), Lundlaan 6, Utrecht (vergoed_als_contract)
+- Prinses Maxima Centrum voor Kinderoncologie, Heidelberglaan 25, Utrecht (gecontracteerd)
+- Medinello (TopzorgGroep), loc. Utrecht, Weg naar Rhijnauwen 3, Utrecht (in_onderhandeling)
+- De Hoogstraat Revalidatie, Rembrandtkade 10, Utrecht (in_onderhandeling)
+- Cardiologie Centrum, loc. Utrecht, Herculesplein 379, Utrecht (in_onderhandeling)
+- EERSTELIJNS BEHANDELCENTRA B.V., Herculesplein 28, Utrecht (vergoed_als_contract)
+- DIANET LOCATIE GEZONDHEIDSHUIS, Bosboomstraat 1, Utrecht (in_onderhandeling)
+- BARTIMEUS, Van Renesselaan 30, Zeist (vergoed_als_contract)
+- Medinello (TopzorgGroep), loc. Zeist, Badmeester Schenkpad 14, Zeist (in_onderhandeling)
+- St. Antonius Ziekenhuis, loc. polikliniek Utrecht Overvecht, Neckardreef 6, Utrecht (in_onderhandeling)
+- Diakonessenhuis, loc. Zeist, Jagersingel 1, Zeist (vergoed_als_contract)
+- CIR, loc. Zeist, Arnhemse Bovenweg 140, Zeist (vergoed_als_contract)
+- STICHTING BESTE ZORG, Amersfoortseweg 43, Huis ter Heide (in_onderhandeling)
+- AC UTRECHT, Van Vollenhovenlaan 659, Utrecht (gecontracteerd)
+- MRI Centrum, loc. mobiele standplaats Utrecht, Amazonedreef 41, Utrecht (vergoed_als_contract)
+- GGMD voor Doven en Slechthorenden, Kanaalweg 93, Utrecht (gecontracteerd)
+- St. Antonius Ziekenhuis, loc. polikliniek Houten, Hofspoor 2, Houten (in_onderhandeling)
+- STICHTING PENTO, Burgemeester Verderlaan 15, Utrecht (vergoed_als_contract)
+- Bergman Clinics, loc. Bilthoven, Professor Bronkhorstlaan 10, Bilthoven (in_onderhandeling)
+- Nederlands Astmacentrum Davos, Transferteam, Professor Bronkhorstlaan 10, Bilthoven (in_onderhandeling)
+- Proctos Kliniek, loc. Bilthoven, Professor Bronkhorstlaan 10, Bilthoven (in_onderhandeling)
+- Ceulen Klinieken, loc. Utrecht, Grauwaartsingel 476, Utrecht (gecontracteerd)
+- Het Expertisecentrum - Chirurgisch Expertisecentrum, loc. Nieuwegein, Edisonbaan 22, Nieuwegein (in_onderhandeling)
+- Het Expertisecentrum - Dr. Brinkmann Kliniek, loc. Nieuwegein, Edisonbaan 22, Nieuwegein (in_onderhandeling)
+- Nederlandse Obesitas Kliniek, loc. Nieuwegein, Zoomstede 17, Nieuwegein (in_onderhandeling)
+- PoliDirect, loc. Nieuwegein, Weverstedehof 6, Nieuwegein (in_onderhandeling)
+- OCA Zorg (TopzorgGroep), loc. Nieuwegein, Nevelgaarde 58, Nieuwegein (in_onderhandeling)
+- Militair revalidatiecentrum Aardenburg, Korte Molenweg 3, Doorn (gecontracteerd)
+- MKA Kliniek, loc. Utrecht, Nieuwe Vaart 1, Vleuten (gecontracteerd)
+- Stichting Telezorg/ Hartis, Herenweg 43, Breukeleveen (vergoed_als_contract)
+- Diakonessenhuis, loc. Doorn, Zonnehuis 2, Doorn (vergoed_als_contract)
+- Xpert Clinics | Oogzorg, loc. Hilversum, Marathon 2, Hilversum (in_onderhandeling)
+- Merem behandelcentra, Soestdijkerstraatweg 129, Hilversum (in_onderhandeling)
+- Merem, loc. Hilversum, Soestdijkerstraatweg 129, Hilversum (in_onderhandeling)
+- Ziekenhuis Rivierenland, loc. Barbara polikliniek, Elisabethdreef 4, Culemborg (vergoed_als_contract)
+- Specialistisch Behandelcentrum Zandheuvelweg (SBZ), Nieuwenoordlaan 12, Baarn (in_onderhandeling)
+- Eurocept Clinics, loc. Amersfoort, Maatweg 3, Amersfoort (in_onderhandeling)
+- Andros Blaascentrum (onderdeel van Xpert Clinics), loc. Baarn, Hermesweg 15, Baarn (in_onderhandeling)
+- Andros Clinics (onderdeel van Xpert Clinics), loc. Baarn, Hermesweg 15, Baarn (in_onderhandeling)
+- Meander Medisch Centrum, loc. Baarn, Baarnsche dijk 8, Baarn (vergoed_als_contract)
+

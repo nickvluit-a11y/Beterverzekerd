@@ -92,8 +92,8 @@ def next_page(page) -> list[str]:
         target = page.get_by_role("link", name=re.compile(pattern, re.I)).or_(
             page.get_by_role("button", name=re.compile(pattern, re.I))).locator("visible=true")
         if target.count():
-            try:
-                target.first.click(timeout=5000)
+            try:  # the list's own button is the last one ('Meer resultaten' also appears among the filters)
+                target.last.click(timeout=5000, force=True)
                 page.wait_for_load_state("networkidle", timeout=20000)
                 out.append(f"- geklikt op '{pattern}': URL {before} -> {page.url}")
                 break
@@ -105,14 +105,15 @@ def next_page(page) -> list[str]:
 def choose_policy(page, policy: str) -> list[str]:
     """Answer 'Kies je basisverzekering': list the choices, pick `policy`, confirm with 'Klaar'."""
     out = []
-    script = ("() => { const el = [...document.querySelectorAll('*')].find(e => "
-              "/basisverzekering/i.test(e.innerText || '') && e.children.length < 40 "
-              "&& (e.innerText || '').length < 1500); return el ? el.outerHTML : ''; }")
-    try:  # keep the markup of the policy question, so the right choice can be made without guessing
-        html = page.evaluate(script) or "(niet gevonden)"
-        out += ["", "Markup rond 'basisverzekering':", "~~~", html[:4000], "~~~", ""]
+    script = ("() => [...document.querySelectorAll('button, select, input, [role=combobox], [role=listbox], "
+              "[role=option], [role=radio], label')].filter(e => e.offsetParent !== null).map(e => "
+              "[e.tagName, e.getAttribute('role') || '', e.id || '', e.getAttribute('name') || '', "
+              "(e.innerText || e.value || '').trim().slice(0, 60), e.getAttribute('aria-label') || ''].join(' | '))")
+    try:  # list the visible controls, so the policy choice can be made without guessing
+        controls = page.evaluate(script)
+        out += ["", "Zichtbare knoppen en keuzevelden:", ""] + [f"- {c}" for c in controls[:80]] + [""]
     except Exception as exc:
-        out.append(f"- markup: {type(exc).__name__}")
+        out.append(f"- knoppen: {type(exc).__name__}")
     selects = page.locator("select")
     for i in range(selects.count()):
         options = selects.nth(i).locator("option")
