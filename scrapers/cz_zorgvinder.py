@@ -13,6 +13,7 @@ Usage: python -m scrapers.cz_zorgvinder [max_towns]
 from __future__ import annotations
 
 import re
+import time
 from urllib.parse import quote
 import sys
 
@@ -28,6 +29,7 @@ URL = BASE + "&afstand=25"
 # the finder shows 30 results per page and pages with JavaScript; which parameters give 'heel
 # Nederland' and the next page is found at run time (first candidate that works)
 DISTANCE_CANDIDATES = ["", "&afstand=0", "&afstand=heel-nederland", "&afstand=999", "&afstand=100"]
+TARGETED_BUDGET_S = 15 * 60  # the name lookups must not hold up the other sources
 PAGE_CANDIDATES = ["pagina", "page", "p", "paginanummer"]
 # 'ziekenhuis' is known to work; the others are tried once (first town) and kept only if they list results
 CATEGORIES = ["ziekenhuis", "zelfstandig-behandelcentrum"]  # both checked to exist (run 2026-11-25)
@@ -161,8 +163,11 @@ def targeted(http: PoliteSession, rows: list[dict], report: list[str]) -> list[d
     locations = locations[recent.fillna(True) & locations["plaats"].notna()]
     found = match_entries(pd.DataFrame(rows), locations) if rows else pd.DataFrame(columns=["location_key"])
     todo = locations[~locations["location_key"].isin(set(found["location_key"].dropna()))]
-    extra, hits = [], 0
+    extra, hits, started = [], 0, time.monotonic()
     for loc in todo.itertuples():
+        if time.monotonic() - started > TARGETED_BUDGET_S:
+            report.append(f"- tijdslimiet bereikt na {hits} gevonden locaties; de rest volgt bij de volgende run")
+            break
         name = loc.locatie_naam if isinstance(loc.locatie_naam, str) else loc.organisatie_naam
         words = sorted(_tokens(name, str(loc.plaats).lower()), key=len, reverse=True)[:2]
         if not words:
