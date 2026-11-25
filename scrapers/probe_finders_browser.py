@@ -92,8 +92,8 @@ def next_page(page) -> list[str]:
         target = page.get_by_role("link", name=re.compile(pattern, re.I)).or_(
             page.get_by_role("button", name=re.compile(pattern, re.I))).locator("visible=true")
         if target.count():
-            try:
-                target.first.click(timeout=5000)
+            try:  # the list's own button is the last one ('Meer resultaten' also appears among the filters)
+                target.last.click(timeout=5000, force=True)
                 page.wait_for_load_state("networkidle", timeout=20000)
                 out.append(f"- geklikt op '{pattern}': URL {before} -> {page.url}")
                 break
