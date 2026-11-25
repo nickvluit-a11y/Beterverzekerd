@@ -209,9 +209,9 @@ Automatisch gemaakt door `pipeline/quality_monitor.py` uit de openbare kwaliteit
 
 | indicator | 2022 | 2023 | 2024 | 2025 |
 |---|---|---|---|---|
-| Minstens 1 regel beter zien | 95.79 | 95.22 | 94.47 | 94.49 |
+| Minstens 1 regel beter zien | 95.81 | 95.22 | 94.47 | 94.49 |
 | Refractie binnen 0.5 dioptrie van doel |  |  |  | 77.88 |
-| Refractie binnen 1 dioptrie van doel | 94.94 | 94.66 | 94.75 |  |
+| Refractie binnen 1 dioptrie van doel | 94.95 | 94.66 | 94.75 |  |
 
 ### Aantal ziekenhuislocaties per oordeel
 

@@ -2,9 +2,9 @@
 
 ## cz_zorgvinder
 
-496 locaties in de zorgzoeker, 201 gekoppeld aan onze locaties, 147 organisaties met een status.
+405 locaties in de zorgzoeker, 135 gekoppeld aan onze locaties, 102 organisaties met een status.
 
-Status per organisatie: gecontracteerd 61, vergoed_als_contract 47, in_onderhandeling 39
+Status per organisatie: gecontracteerd 48, vergoed_als_contract 47, in_onderhandeling 7
 
 Niet gekoppeld (eerste 40):
 
@@ -147,3 +147,4 @@ Niet gekoppeld (eerste 40):
 - Andros Clinics (onderdeel van Xpert Clinics), loc. Baarn, Hermesweg 15, Baarn (in_onderhandeling)
 - Meander Medisch Centrum, loc. Baarn, Baarnsche dijk 8, Baarn (vergoed_als_contract)
 
+- zk_zorgzoeker: nog geen data

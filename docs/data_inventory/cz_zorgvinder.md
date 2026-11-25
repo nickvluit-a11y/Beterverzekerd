@@ -67,6 +67,7 @@ Per plaats (25 km) de ziekenhuizen; de zoeker toont er 30 per lijst. Daarna elke
 | ziekenhuis | dokkum | 2 | 2 | 1  |
 | ziekenhuis | emmeloord | 4 | 4 | 1  |
 
-- gericht op naam gezocht: 233 locaties, 145 met resultaat
+- tijdslimiet bereikt na 70 gevonden locaties; de rest volgt bij de volgende run
+- gericht op naam gezocht: 233 locaties, 70 met resultaat
 
-Totaal: 496 unieke locaties; status: vergoed_als_contract 202, gecontracteerd 164, in_onderhandeling 130.
+Totaal: 405 unieke locaties; status: vergoed_als_contract 202, gecontracteerd 136, in_onderhandeling 67.

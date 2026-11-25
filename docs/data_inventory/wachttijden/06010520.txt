@@ -1,7 +1,7 @@
 source: https://www.ziekenhuisrivierenland.nl/uw-afspraak/wachttijden
 fetched: 2026-11-25
 
-Pagina printen / opslaan Pagina printen / opslaan Laat de tekst voorlezen met ReadSpeaker webReader Lees voor
+Wachttijden Pagina printen / opslaan Pagina printen / opslaan Laat de tekst voorlezen met ReadSpeaker webReader Lees voor
 Op deze pagina leest u meer informatie over de wacht- en toegangstijden in Ziekenhuis Rivierenland.
 Informatie wachttijden en toegangstijden
 U leest de wacht- en toegangstijden van Ziekenhuis Rivierenland in dit bestand (https://www.ziekenhuisrivierenland.nl/media/evrkfqda/zrt-wachttijden-20261124.pdf) . Dit overzicht wordt regelmatig bijgewerkt en bestaat uit 3 delen.
@@ -17,7 +17,6 @@ Bekijk hier (https://www.ziekenhuisrivierenland.nl/media/xoufg2ky/zrt-wachttijde
 Maximale wachttijd
 Wanneer u de wachttijd te lang vindt, kunt u altijd contact met ons opnemen. Ook kunt u uw zorgverzekeraar vragen om 'wachtlijstbemiddeling'. Dit houdt in dat uw zorgverzekeraar probeert om u sneller te laten helpen. Zorgaanbieders en zorgverzekeraars hebben samen afspraken gemaakt over de maximale wachttijden. We noemen dit de Treeknorm.
 25-11-2026 © Ziekenhuis Rivierenland 2026
-Wachttijden
 
 [linked document: https://www.ziekenhuisrivierenland.nl/media/evrkfqda/zrt-wachttijden-20261124.pdf]
 TOEGANGSTIJDEN POLIKLINIEK
