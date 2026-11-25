@@ -29,42 +29,52 @@ jobs:
 
       - name: Fetch Zorginzicht
         id: zorginzicht
+        timeout-minutes: 30
         continue-on-error: true
         run: python -m scrapers.zorginzicht
       - name: Fetch NZa waiting times
         id: nza
+        timeout-minutes: 30
         continue-on-error: true
         run: python -m scrapers.nza_wachttijden
       - name: Fetch hospital contract pages
         id: contracts
+        timeout-minutes: 30
         continue-on-error: true
         run: python -m scrapers.contracts
 
       - name: Fetch hospital waiting-time pages
+        timeout-minutes: 30
         continue-on-error: true
         run: python -m scrapers.waits
 
       - name: Fetch CZ care finder (contract status per location)
+        timeout-minutes: 30
         continue-on-error: true
         run: python -m scrapers.cz_zorgvinder
 
       - name: Fetch VGZ care finder (contract status per location)
+        timeout-minutes: 30
         continue-on-error: true
         run: python -m scrapers.vgz_zorgzoeker
 
       - name: Fetch Menzis care finder (contract status per location)
+        timeout-minutes: 30
         continue-on-error: true
         run: python -m scrapers.menzis_zorgvinder
 
       - name: Fetch Zilveren Kruis care finder (contract status per location)
+        timeout-minutes: 30
         continue-on-error: true
         run: python -m scrapers.zk_zorgzoeker
 
       - name: Check premiums on the insurers' own sites
+        timeout-minutes: 30
         continue-on-error: true
         run: python -m scrapers.verify_premiums
 
       - name: Fetch indicator guides
+        timeout-minutes: 30
         continue-on-error: true
         run: python -m scrapers.indicator_guides
 
