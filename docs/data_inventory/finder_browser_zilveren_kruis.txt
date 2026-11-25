@@ -1,4 +1,4 @@
-source: https://www.zilverenkruis.nl/consumenten/zorgzoeker
+source: https://www.zilverenkruis.nl/consumenten/zorgzoeker/zoekresultaten
 
 Navigatie overslaan
 Zorgaanbieders
@@ -16,42 +16,45 @@ Over ons
 Contact
 Consumenten
 Zorgzoeker
+Zoekresultaten
 Vind een zorgverlener
+Filter resultaten
 
-Bekijk met welke zorgverleners we afspraken hebben. Kies de zorg die je nodig hebt en vul je postcode in. Of zoek op naam van de organisatie of zorgverlener.
+3584CX UTRECHT, Ziekenhuis
 
-Welke zorg *
-Invoerveld leegmaken
-Plaats of postcode 
+Wijzig zoekopdracht
+Basisverzekering 
 Informatie weergeven
-Plaats of postcode
 
-Vul een postcode in voor een nauwkeuriger resultaat
+Kies je basisverzekering om te zien of we afspraken hebben met deze zorgverlener.
 
-Invoerveld leegmaken
-Naam van organisatie of zorgverlener
-Zoeken
-Het kan zijn dat we nog in gesprek zijn met de zorgverlener van jouw keuze
+Kies uw basisverzekering
+Jaar
+Jaar
 
-We werken de Zorgzoeker dagelijks bij. Ga je naar een zorgverlener waar we geen afspraken mee maken voor 2027? Dan krijg je meestal minder vergoed.
+2025
 
+2026
 
+2027
 
-Goed om te weten
-Elk jaar maken we afspraken over de zorg
-Dit doen we samen met zorgverleners. Bijvoorbeeld over het aantal behandelingen. En voor welk bedrag. Zo zorgen we ervoor dat iedereen, ook in de toekomst, kan rekenen op goede zorg. 
-Lees wat dit voor jou betekent
-Ga je naar een zorgverlener zonder contract?
-Dan kan het zijn dat je een lagere vergoeding krijgt. Of soms zelfs geen vergoeding.
-Meer over niet-gecontracteerde zorg
-Bekijk wat je vergoed krijgt
-Je hebt een zorgverlener gevonden. Maar wat krijg je nu eigenlijk vergoed? Dit lees je op onze vergoedingenpagina's.
-Zoek jouw vergoeding
-Veelgestelde vragen
-Mijn zorgverlener heeft een wachtlijst. Kan ik hulp krijgen bij het regelen van zorg?
-Kan ik voor niet-spoedeisende zorg naar het buitenland?
-Ik ga naar het ziekenhuis voor een behandeling. Welke hulp of zorg kan ik na mijn behandeling krijgen?
-Ik zoek een nieuwe huisarts. Kunnen jullie mij helpen?
+Contract
+Contract: vergoed
+Nog geen contract: wel vergoed
+Nog geen contract: een deel niet vergoed
+Geen contract: een deel niet vergoed
+0 resultaten
+
+Er zijn geen zoekresultaten gevonden. Pas je filters aan.
+
+De informatie in de Zorgzoeker is op 25 november 2026 bijgewerkt.
+Kies je basisverzekering
+
+Dan zie je of we afspraken hebben met de zorgverlener.
+
+Je basisverzekering
+Selecteer
+Klaar
 Was dit nuttig?
 Ja Nee
 Onze verzekeringen
