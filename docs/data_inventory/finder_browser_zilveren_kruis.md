@@ -19,8 +19,8 @@ Vul een postcode in voor een nauwkeuriger resultaat (INPUT/text)
 - zoekknoppen gevonden: 2
 
 - na zoeken: https://www.zilverenkruis.nl/consumenten/zorgzoeker/zoekresultaten
-- zichtbare tekst: 1,261 tekens
-- JSON-antwoorden voor/na zoeken: 0/4
+- zichtbare tekst: 1,523 tekens
+- JSON-antwoorden voor/na zoeken: 0/5
 
 ## JSON-antwoorden na het zoeken (grootste eerst)
 
@@ -36,6 +36,16 @@ Volledige data van de grootste aanroep: finder_browser_zilveren_kruis.json
 
 ```
 [{"Code":"CODE1","Title":"Zorgverlener is tijdelijk gesloten (CODE1)","Description":"I.v.m personeelskrapte is deze zorgverlener in maanden Juli en Augustus gesloten."},{"Code":"CODE2","Title":"Zorgverlener is permanent gesloten (CODE2)","Description":"Deze zorgverlener is wegens betalingsproblemen gesloten vanaf Maart 2025"},{"Code":"CodeRood","Title":"Deze zorgverlener is tijdelijk gesloten","Description":"Vanwege code rood neemt deze zorgverlener tijdelijk geen nieuwe patiënten aan. Zie https://www.zilverenkruis.nl/consumenten/zorg-regelen/omzetplafonds"}]
+```
+
+### POST 200 https://www.zilverenkruis.nl/clientcontroller/zorgzoekerclient/getzorgaanbieders (423 tekens)
+
+Verzonden:
+```
+{"Zorgtype":"1861","LocatieId":"194117","Peildatum":"2027-01-01T00:00:00.000Z"}
+```
+```
+{"AantalResultaten":0,"Tussenvragen":["vraag polistype"],"Zoektermen":{"Locatie":null,"LocatieId":194117,"Instelling":"","Zorgtype":"1861","Peildatum":"2027-01-01T00:00:00Z","Basisverzekering":null},"VertrekLocatieLatitude":0.0,"VertrekLocatieLongitude":0.0,"Resultaten":null,"Meldingen":null,"GebruiktZorgtype":"Ziekenhuis","GebruiktZorgtypeId":"1861","IsSucces":true,"ErrorCode":null,"LoginAlsKlantSessieNotActive":false}
 ```
 
 ### POST 200 https://www.zilverenkruis.nl/clientcontroller/zorgzoekerclient/getautofillzorgtype (401 tekens)
