@@ -22,11 +22,14 @@ from scrapers.common import PoliteSession, find_links, today
 from scrapers.contracts import html_to_text
 
 YEAR = 2027
-URL = ("https://zorgvinder.cz.nl/resultaten/{category}/{town}?afstand=25&jaar={year}"
-       "&vergoedbv=ja%2Cinclafsp%2Cnogniet%2Cnee")
+BASE = "https://zorgvinder.cz.nl/resultaten/{category}/{town}?jaar={year}&vergoedbv=ja%2Cinclafsp%2Cnogniet%2Cnee"
+URL = BASE + "&afstand=25"
+# the finder shows 30 results per page and pages with JavaScript; which parameters give 'heel
+# Nederland' and the next page is found at run time (first candidate that works)
+DISTANCE_CANDIDATES = ["", "&afstand=0", "&afstand=heel-nederland", "&afstand=999", "&afstand=100"]
+PAGE_CANDIDATES = ["pagina", "page", "p", "paginanummer"]
 # 'ziekenhuis' is known to work; the others are tried once (first town) and kept only if they list results
-CATEGORIES = ["ziekenhuis", "zelfstandig-behandelcentrum", "zelfstandige-behandelcentra", "kliniek",
-              "particuliere-kliniek"]
+CATEGORIES = ["ziekenhuis", "zelfstandig-behandelcentrum"]  # both checked to exist (run 2026-11-25)
 # towns spread over the country; with a 25 km radius together they cover every hospital
 TOWNS = ["utrecht", "amsterdam", "rotterdam", "den-haag", "leiden", "haarlem", "alkmaar", "hoorn", "den-helder",
          "almere", "lelystad", "amersfoort", "hilversum", "gouda", "dordrecht", "gorinchem", "breda", "tilburg",
@@ -92,24 +95,80 @@ def fetch_town(http: PoliteSession, category: str, town: str) -> tuple[list[dict
     return found, total, pages, error
 
 
+def fetch(http: PoliteSession, url: str) -> tuple[list[dict], int | None, str]:
+    try:
+        resp = http.get(url)
+    except Exception as exc:
+        return [], None, type(exc).__name__
+    entries, total = parse_results(html_to_text(resp.text))
+    return [dict(e, source_url=resp.url) for e in entries], total, ""
+
+
+def _key(e: dict) -> tuple:
+    return e["name"], e["address"], e["city"]
+
+
+def discover(http: PoliteSession, report: list[str]) -> tuple[str, str] | None:
+    """(distance suffix covering the most results, page parameter that gives new results)."""
+    best = None
+    for suffix in DISTANCE_CANDIDATES:
+        found, total, error = fetch(http, BASE.format(category="ziekenhuis", town="utrecht", year=YEAR) + suffix)
+        report.append(f"- afstand `{suffix or '(geen)'}`: {total} genoemd, {len(found)} gelezen {error}".rstrip())
+        if found and (best is None or (total or 0) > best[1]):
+            best = (suffix, total or 0, {_key(e) for e in found})
+    if not best:
+        return None
+    suffix, _, first = best
+    for param in PAGE_CANDIDATES:
+        found, _, error = fetch(http, BASE.format(category="ziekenhuis", town="utrecht", year=YEAR) + suffix + f"&{param}=2")
+        new = {_key(e) for e in found} - first
+        report.append(f"- pagina-parameter `{param}`: {len(new)} nieuwe {error}".rstrip())
+        if new:
+            return suffix, param
+    return None
+
+
+def fetch_all(http: PoliteSession, category: str, suffix: str, param: str) -> tuple[list[dict], int | None, int]:
+    """Every page of one category for the whole country."""
+    rows, seen, total, page = [], set(), None, 1
+    while page <= 150:
+        url = BASE.format(category=category, town="utrecht", year=YEAR) + suffix + (f"&{param}={page}" if page > 1 else "")
+        found, count, _ = fetch(http, url)
+        total = total or count
+        new = [e for e in found if _key(e) not in seen]
+        if not new:
+            break
+        seen |= {_key(e) for e in new}
+        rows += [dict(e, town="heel-nl", category=category) for e in new]
+        if total and len(rows) >= total:
+            break
+        page += 1
+    return rows, total, page
+
+
 def main(argv: list[str]) -> int:
     towns = TOWNS[: int(argv[0])] if argv else TOWNS
     http = PoliteSession(delay=3)
-    report = ["# Zorgvinder CZ (contracten 2027)", "", f"Run: {today()}.", ""]
-    categories = []
-    for category in CATEGORIES:
-        found, total, _, error = fetch_town(http, category, towns[0])
-        report.append(f"- categorie `{category}`: {len(found)} gelezen, {total} genoemd {error}".rstrip())
-        if found:
-            categories.append(category)
-    report += ["", "| categorie | plaats | genoemd | gelezen | pagina's |", "|---|---|---|---|---|"]
+    report = ["# Zorgvinder CZ (contracten 2027)", "", f"Run: {today()}.", "", "## Zoekinstellingen", ""]
     rows = []
-    for category in categories:
-        for town in towns:
-            found, total, pages, error = fetch_town(http, category, town)
+    found_way = discover(http, report)
+    if found_way:
+        suffix, param = found_way
+        report += ["", f"Heel Nederland met `{suffix or '(geen afstand)'}`, bladeren met `{param}`.", "",
+                    "| categorie | genoemd | gelezen | pagina's |", "|---|---|---|---|"]
+        for category in CATEGORIES:
+            found, total, pages = fetch_all(http, category, suffix, param)
             rows += found
-            report.append(f"| {category} | {town} | {total if total is not None else '?'} | {len(found)} | {pages} {error} |")
-            print(f"{category} {town}: {len(found)} of {total}")
+            report.append(f"| {category} | {total} | {len(found)} | {pages} |")
+            print(f"{category}: {len(found)} of {total}")
+    else:  # fallback: 25 km around many towns, first page only (30 results each)
+        report += ["", "Geen manier gevonden om te bladeren: per plaats de eerste 30.", "",
+                   "| categorie | plaats | genoemd | gelezen | pagina's |", "|---|---|---|---|---|"]
+        for category in CATEGORIES:
+            for town in towns:
+                found, total, pages, error = fetch_town(http, category, town)
+                rows += found
+                report.append(f"| {category} | {town} | {total if total is not None else '?'} | {len(found)} | {pages} {error} |")
     if not rows:
         print("No entries read from the CZ care finder", file=sys.stderr)
         return 1

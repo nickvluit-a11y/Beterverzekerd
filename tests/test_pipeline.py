@@ -956,9 +956,11 @@ def test_policies_in_scope_come_from_the_insurer_itself():
     policies = load_policies(2027)
     assert set(scope()["label"]) <= set(policies["label"])
     assert set(policies["concern"]) <= set(scope()["concern"])
+    main_brand = dict(zip(scope()["concern"], scope()["label"]))
     for p in policies.itertuples():
-        own = site_of(SITES[p.label]).split(".")[-2]  # e.g. 'vgz' also allows cooperatievgz.nl
-        assert own in site_of(p.source_url), (p.label, p.polis, p.source_url)
+        # the brand's own site, or its group's main brand (ZieZo on zilverenkruis.nl); 'vgz' also allows cooperatievgz.nl
+        owners = {site_of(SITES[p.label]).split(".")[-2], site_of(SITES[main_brand[p.concern]]).split(".")[-2]}
+        assert any(o in site_of(p.source_url) for o in owners), (p.label, p.polis, p.source_url)
 
 
 def test_premium_from_elsewhere_counts_once_confirmed_on_own_site(tmp_path, monkeypatch):
