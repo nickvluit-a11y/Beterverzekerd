@@ -109,6 +109,47 @@ def check_label(http: PoliteSession, label: str, rows: pd.DataFrame) -> list[dic
     return out
 
 
+_REIMBURSE_FOLLOW = re.compile(r"niet-gecontracteerd|zonder-contract|vergoeding|basisverzekering|polis", re.IGNORECASE)
+_NON_CONTRACTED = re.compile(r"niet[- ]gecontracteerd|zonder contract|geen contract", re.IGNORECASE)
+
+
+def find_percentages(text: str, policies: list[str]) -> list[tuple[str, int, str]]:
+    """(policy, percentage, snippet) for sentences that name a policy, non-contracted care and a %."""
+    out = []
+    for sentence in re.split(r"(?<=[.!?])\s+|\n+", text):
+        if not _NON_CONTRACTED.search(sentence):
+            continue
+        for polis in policies:
+            if polis.lower() in sentence.lower():
+                for pct in re.findall(r"(\d{2,3})\s?(?:%|procent)", sentence):
+                    if 50 <= int(pct) <= 100:
+                        out.append((polis, int(pct), sentence.strip()[:200]))
+    return out
+
+
+def check_reimbursement(http: PoliteSession, label: str, polissen: list[str]) -> list[dict]:
+    """Candidates only: a human checks them before they go into polissen_2027.csv."""
+    home = SITES.get(label)
+    if not home:
+        return []
+    queue, seen, found = [home + "/vergoedingen/niet-gecontracteerde-zorg", home], set(), []
+    while queue and len(seen) < MAX_PAGES:
+        url = queue.pop(0).split("#")[0]
+        if url in seen:
+            continue
+        seen.add(url)
+        try:
+            resp = http.get(url)
+        except Exception:
+            continue
+        found += [{"label": label, "polis": p, "pct": pct, "url": resp.url, "snippet": snip}
+                  for p, pct, snip in find_percentages(page_text(resp), polissen)]
+        if "html" in resp.headers.get("content-type", "html"):
+            queue += [l.split("#")[0] for l, t in all_links(resp.text, resp.url)
+                      if site_of(l) == site_of(home) and (_REIMBURSE_FOLLOW.search(l) or _REIMBURSE_FOLLOW.search(t or ""))]
+    return found
+
+
 def main(argv: list[str]) -> int:
     from pipeline.reference import scope
     policies = pd.read_csv(MANUAL / "polissen_2027.csv")
@@ -126,6 +167,15 @@ def main(argv: list[str]) -> int:
              "| label | polis | premie | bevestigd op |", "|---|---|---|---|"]
     lines += [f"| {r.label} | {r.polis} | {r.premie} | {r.confirmed_url or 'niet gevonden ' + (r.errors or '')} |"
               for r in df.itertuples()]
+    missing = in_scope[pd.to_numeric(in_scope["vergoeding_niet_gecontracteerd_pct"], errors="coerce").isna()]
+    candidates = []
+    for label, group in missing.groupby("label"):
+        candidates += check_reimbursement(http, label, list(group["polis"]))
+    vlines = ["# Vergoeding niet-gecontracteerde zorg: kandidaten van de eigen site", "",
+              f"Run: {today()}. Alleen kandidaten; een mens controleert ze voordat ze in polissen_2027.csv komen.", "",
+              "| label | polis | % | pagina | zin |", "|---|---|---|---|---|"]
+    vlines += [f"| {c['label']} | {c['polis']} | {c['pct']} | {c['url']} | {c['snippet'].replace('|', '/')} |" for c in candidates]
+    (ROOT / "docs" / "data_inventory" / "vergoeding_controle.md").write_text("\n".join(vlines) + "\n", encoding="utf-8")
     path = ROOT / "docs" / "data_inventory" / "premie_controle.md"
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return 0

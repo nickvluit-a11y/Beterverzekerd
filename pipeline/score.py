@@ -365,8 +365,9 @@ def policy_overview(near: pd.DataFrame, contracts: pd.DataFrame, policies: pd.Da
                 full += 1
             elif pd.notna(pct) and pct >= 100:
                 free += 1
-            elif status in ("geen_contract", "in_onderhandeling") and pd.notna(pct):
-                part += 1
+            elif status in ("geen_contract", "in_onderhandeling") and (
+                    pd.notna(pct) or (row.get("origin") == "verzekeraar" and str(pol.get("polis_type")) == "natura")):
+                part += 1  # the insurer itself says 'een deel niet vergoed'; on a natura policy that holds without the %
             else:
                 unknown += 1
         rows.append({**pol, "betere_ziekenhuizen": len(better), "volledig": full, "vrij": free, "deels": part,
