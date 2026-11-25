@@ -1,0 +1,1339 @@
+source: https://www.zorginzicht.nl/static/prozin_bijlage/62faf592-3c73-44e9-b660-888ec04dca43-indicatorengids-knieprothese---tkp-verslagjaar-2024.pdf
+
+Indicatorenset
+Knieprothese
+Uitvraag ziekenhuizen/ZBC’s over verslagjaar 2024
+Versie, april 2023
+Meer informatie op:
+- OmniQ (portaal van DHD) voor aanlevering kwaliteitsgegevens verslagjaar 2024
+(beschikbaar vanaf 1 januari voor leden van de NVZ en NFU):
+https://extranet.dhd.nl/producten/OmniQ. Leden van ZKN leveren aan via
+DESAN.
+- Nederlandse Vereniging van Ziekenhuizen: www.nvz-
+ziekenhuizen.nl/onderwerpen/ transparantiekalender-kwaliteitsinstituut
+- Nederlandse Federatie van Universitair Medische Centra: www.nfu.nl.
+- Zelfstandige Klinieken Nederland: www.zkn.nl.
+- Zorginstituut Nederland: http://www.zorginzicht.nl.
+Samengesteld door:
+- Nederlandse Orthopaedische Vereniging
+- Nederlandse Vereniging van Ziekenhuizen
+- Zorgverzekeraars Nederland
+- Patiëntenfederatie Nederland
+Contactinformatie:
+- Zorginstituut Nederland
+- https://www.zorginzicht.nl/Paginas/Contact.aspx
+Deze indicatorset is opgenomen in het register van Zorginstituut Nederland.
+Vrijwillige en verplichte indicatoren worden aangeleverd via het door de
+koepelorganisaties gekozen aanleverportaal (gegevensmakelaar). Die faciliteert de
+route (aanlevering en publicatie) voor verplichte transparantie. De verplicht
+aangeleverde gegevens worden door Zorginstituut Nederland gepubliceerd.
+Indicatorgids knieprothese verslagjaar 2024 Pagina 1 van 30
+
+Inhoud
+1 Overzicht indicatoren 3
+2Algemene informatie 4
+2.1 Uitgangspunten 4
+2.2 Populatiebepaling 4
+2.3 Aanlevering van de gegevens 4
+2.4 Indicatorenwerkgroep 4
+3 Vast te leggen gegevens 4
+4 Indicatoren 9
+5 Wijzigingstabel 28
+Bijlage: toelichting op informatie per indicator 29
+Indicatorgids knieprothese verslagjaar 2024 Pagina 2 van 30
+
+1 Overzicht indicatoren
+Indicator- Indicatornaam Bron1 Transparantie?2
+nummer
+1a Volume TKP LROI verplicht
+1b Volume UKP LROI verplicht
+2a Volume knierevisies als gevolg van infectie LROI verplicht
+of verdenking op infectie
+2b Volume knierevisies zonder (verdenking LROI verplicht
+op) infectie
+3a Percentage diepe postoperatieve ZIS verplicht
+wondinfecties binnen 90 dagen (invul)
+3b Percentage diepe postoperatieve ZIS vrijwillig
+wondinfecties binnen 365 dagen (invul)
+4a Responspercentage preoperatieve PROM LROI verplicht
+4b Pre-score PROMs knie LROI verplicht
+4c Verschilscore PROMs knie, 6 maanden LROI verplicht
+4d Verschilscore PROMs knie, 12 maanden LROI verplicht
+5a Revisie (vaste componenten) binnen 1 LROI verplicht
+jaar
+5b Volledigheid registratie LROI LROI verplicht
+6 Verdeling geplaatste knieprotheses per LROI verplicht
+ODEP-categorie
+7a Aantal orthopedisch chirurgen dat ZIS verplicht
+knierevisiechirurgie uitvoert (invul)
+7b Aantal orthopedisch chirurgen dat ZIS verplicht
+primaire knieprothesen plaatst (invul)
+1
+Vul hier de bron van de indicator in (bijvoorbeeld kwaliteitsregistratie X, EPD, ZIS, etc)
+2
+Vrijwillige indicatoren worden niet opgenomen op de Transparantiekalender en dus niet aangeleverd aan en gepubliceerd door
+Zorginstituut Nederland. Vrijwillige indicatoren worden gedeeld met de Zorgverzekeraars, Patiëntenorganisaties en
+Zorgaanbieders
+Indicatorgids knieprothese verslagjaar 2024 Pagina 3 van 30
+
+2 Algemene informatie
+2.1 Uitgangspunten
+- Doel van deze indicatorset is (meerkeuze):
+• interne sturing (waaronder leren & verbeteren)
+• verkrijgen van transparantie over verleende zorg (waaronder samen
+beslissen)
+- Gepubliceerde transparante gegevens uit de openbare database zijn bedoeld
+voor (meerkeuze):
+• Cliënten
+• Zorgaanbieders en zorgverleners
+• Zorgverzekeraars
+• Wlz-uitvoerders en andere financiers
+• Toezichthouders, waaronder de IGJ en NZa
+• Onderzoekers
+De indicatoren zijn gebaseerd op:
+• Professionele standaard, namelijk: Richtlijn Knieprothese
+• Kwaliteitsstandaard, namelijk: NOV PROMs advies
+2.2 Populatiebepaling
+Voor alle indicatoren in deze indicatorenset bestaat de populatie uit:
+- Alle cliënten met DBC / zorgproductcode [code] waarbij de operatie plaatsvond tussen 01-
+10-20xx en 30-09-20xx, zodat de meting 3 maanden post-operatief van alle cliënten
+uitgevoerd is binnen het verslagjaar.
+- Patiënten die een kniegewrichtsvervangende operatie hebben ondergaan binnen
+het volledige verslagjaar.
+• Alle geplaatste totale knieprothesen en unicondylaire knieprothesen
+die binnen het volledige verslagjaar zijn geregistreerd in de LROI.
+- patiënten waarbij een operatie voor knierevisie van een bestaande knieprothese
+is uitgevoerd.
+• Alle ingrepen met een revisie van de knieprothese (toevoeging,
+vervanging of verwijdering van één of meerdere componenten van de
+prothese) die binnen het volledige verslagjaar zijn geregistreerd in de
+LROI.
+- Patiënten met een diepe postoperatieve wondinfectie (volgens definitie PREZIES)
+die optreedt in het verslagjaar, na een primaire TKP ingreep die heeft
+plaatsgevonden op respectievelijk
+• 1 oktober van het jaar, voorafgaand aan het verslagjaar tot en met 30
+september van het verslagjaar (indicator 3a)
+• 1 januari tot en met 31 december in het jaar voorafgaand aan het
+verslagjaar (indicator 3b).
+2.3 Aanlevering van de gegevens
+Via https://www.zorginzicht.nl/kwaliteitsinstrumenten/knieprothese-indicatoren is
+het processchema te raadplegen voor de aanlevering van de gegevens behorende bij
+de indicatoren.
+2.4 Indicatorenwerkgroep
+De werkgroep voor het onderhoud van de indicatorset Knieprothese bestond in 2022
+uit de volgende personen:
+- Karin Vermeulen (CZ, namens ZN)
+- Richard Jacobs (CZ, namens ZN)
+- Barbara van Leiden (ZN)
+- Lydia Vunderink (ZN)
+- Patricia Pennings (Reumazorg Nederland)
+- Dominique Sprengers (Patiëntenfederatie Nederland, meelees lid)
+Indicatorgids knieprothese verslagjaar 2024 Pagina 4 van 30
+
+- Jacob Caron (NOV)
+- Geke Denissen (LROI)
+- Gerben Aarnoudse (NOV)
+- Sjors van Aalst (NVZ)
+Indicatorgids knieprothese verslagjaar 2024 Pagina 5 van 30
+
+-
+3 Vast te leggen gegevens
+Om als zorgaanbieder deze indicatorset te kunnen aanleveren, moeten per cliënt de volgende
+gegevens (variabelen) worden vastgelegd:1
+T.b.v. verplichte indicatoren
+Variabele2 Naam Waardebereik Bron Extra?3 Afspraken
+/ format gegevens-
+uitwisseling4
+V01 Geslacht Man ZIS In concept, nog niet
+Vrouw geimplementeerd:
+Ongedifferentie GeslachtCodelijst,
+erd Valueset OID
+Onbekend 2.16.840.1.113883.
+2.4.3.11.60.40.2.0.1
+.1
+V02 geëncrypteerd ZIS
+BSN
+V03 Geboortedatum ZIS
+V04 Diagnose Artrose ZIS In concept, nog niet
+Laat post- geimplementeerd:
+traumatisch DHD
+Reumatoïde Diagnosethesaurus
+artritis
+Osteonecrose
+Tumor
+(primair)
+Tumor
+(metastase)
+Inflammatoire
+artritis
+Fractuur
+(acuut)
+Andere
+diagnose,
+specificeer
+V05 ASA ASA I ZIS Was geen Codelijst
+ASA II voor tijdens
+ASA III verduurzaming
+ASA IV LROI.
+V06 BMI 1 decimaal ZIS
+V07 Charnley score A ZIS Was geen Codelijst
+B1 voor tijdens
+B2 verduurzaming
+C LROI.
+V08 Roken Nee ZIS In concept, nog niet
+Ja geimplementeerd:
+TabakGebruikStatus
+Codelijst, Valueset
+OID:
+2.16.840.1.113883.
+2.4.3.11.60.40.2.7.2
+.2
+1
+Als álle zorgaanbieders dezelfde (kwaliteits)registratie gebruiken kun je dit hoofdstuk leeg laten. Als er echter verschillen zijn in
+registratie of verwerker van gegevens is dit overzicht noodzakelijk om kwaliteit van de gegevens te borgen.
+2
+Geef de variabele een code zodat je ernaar kunt verwijzen bij de indicatoren. Bijvoorbeeld V01, V02.
+3
+Geef hier ‘ja’ aan als de variabele alléén voor deze indicatorset moet worden vastgelegd, en dus verder niet in het primaire
+proces wordt gebruikt.
+4
+Als er afspraken zijn gemaakt over gegevensvastlegging en/of –uitwisseling, vermeld deze dan hier, zodat iedereen dezelfde
+codering hanteert.
+Indicatorgids knieprothese verslagjaar 2024 Pagina 6 van 30
+
+V09 Datum van ZIS
+operatie
+V10 Kant van Rechts ZIS In concept, nog niet
+operatie Links geimplementeerd:
+VerrichtingLateralitei
+tCodelijst, Valueset
+OID:
+2.16.840.1.113883.
+2.4.3.11.60.40.2.14.
+1.3
+V11 Type prothese Unicondylaire ZIS SNOMED CT
+knieprothese
+Totale
+knieprothese
+Patellofemorale
+knieprothese
+Ander type
+prothese,
+specificeer
+V12 Benadering Mediaal ZIS SNOMED CT
+parapatellair
+Lateraal
+parapatellair
+Vastus
+(mid/sub)
+Andere
+benadering,
+specificeer
+V13 Fixatie Ongecementee ZIS SNOMED CT
+rd
+Hybride
+Gecementeerd
+V14 Prothese Allerlei codes ZIS
+(bijvoorbeeld
+productnumme
+r, UDI (Unique
+Device
+Identifier),
+artikelnummer,
+gtin etc.),
+inclusief
+volledige en
+valide barcodes
+V15 preoperatieve ?
+PROM-score
+… …
+T.b.v. dynamische aggregatie extra vast te leggen
+Met dynamisch aggregeren van gegevens bedoelen we de mogelijkheid om vastgelegde
+gegevens over de zorgverlening aan, of de gezondheid van, een cliënt samen te voegen om zo
+informatie te geven over alle cliënten binnen één groep. Om die groepen (aggregaties) te
+maken, is het essentieel overal dezelfde cliëntkenmerken vast te leggen, zodat gegevens voor
+verschillende aggregaties te gebruiken zijn. Bij het gebruik van bijvoorbeeld een keuzehulp
+kunnen cliënten en zorgverleners verschillende selecties maken. Daarmee kunnen zij de zorg
+kiezen die het beste bij de cliënt past.
+Variabele Naam Waardebereik Bron Extra? Afspraken
+/ format gegevensuitwissel
+ing
+Indicatorgids knieprothese verslagjaar 2024 Pagina 7 van 30
+
+V16 Hoofdoperateur ZIS ja In concept, nog niet
+(BIG) geimplementeerd:BI
+G register
+inschrijvingsnummer
+, ID system OID:
+2.16.528.1.1007.5.1
+V17 Leeftijdscategor <50 ZIS Nee Vanuit
+ie 50-59 proceduredatum en
+60-69 geboortedatum
+70-79
+>80
+V18 Type Ingreep Primaire ZIS ja In concept, nog niet
+ingreep geimplementeerd:
+Revisie-ingreep DHD
+Verrichtingenthesaur
+us
+V19 Type Revisie Partiële revisie ZIS ja In concept, nog niet
+Totale revisie geimplementeerd:
+Verwijdering DHD
+van prothese Verrichtingenthesaur
+(met evt. us
+plaatsing
+spacer)
+Ander type
+revisie
+Indicatorgids knieprothese verslagjaar 2024 Pagina 8 van 30
+
+4 Indicatoren
+In hoofdstuk 5 staan alle velden in onderstaande indicatortabel toegelicht. Laat bij
+voorkeur iedere nieuwe indicator op een nieuwe pagina beginnen.
+Indicatornaam Volume TKP
+Indicatornummer 1a
+Operationalisatie Aantal totale knieprothesen (TKP) per ziekenhuis(locatie)
+Informatie voor Dit getal geeft aan hoeveel totale knieprothesen er per
+cliënten ziekenhuis(locatie) zijn geplaatst in het verslagjaar.
+Uit de gegevens van de LROI blijkt dat de meest voorkomende
+reden voor het plaatsen van een totale knieprothese artrose is.
+Andere diagnoses kunnen zijn: posttraumatische afwijkingen,
+osteonecrose en maligniteit. De genoemde diagnoses leiden tot
+(invaliderende) pijn en beperkingen in ADL en sport. Alle
+diagnoses moeten met aanvullend onderzoek worden
+vastgesteld.
+Het kniegewricht kan zo ernstig beschadigd zijn dat een
+knieprothese noodzakelijk is. Er zijn twee typen: de totale en de
+halve knieprothese. De totale knieprothese wordt het meest
+toegepast. Deze vervangt het gehele kniegewricht. De halve
+knieprothese vervangt alleen de binnen- of buitenzijde van het
+kniegewricht.
+Relevantie en Deze indicator maakt het volume TKP van de zorgaanbieder
+toepasbaarheid inzichtelijk en plaatst de overige TKP indicatoren in een context.
+Type indicator structuur
+Achtergrond van de Richtlijn Totale knieprothese (2021)
+indicator Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Deze indicator maakt het volume TKP van de zorgaanbieder
+en publiceren inzichtelijk en plaatst de overige TKP indicatoren in een context.
+Transparantie verplicht
+Rekenregels en definities
+Datatype aantal
+Definitie Aantal totale knieprothesen
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Alle geplaatste totale knieprothesen
+Rekenregels en Op deze indicator wordt geen casemix correctie toegepast
+casemixcorrecties
+Databron LROI
+(registratie)
+Norm N.v.t.
+Meetperiode Volledige verslagjaar (1 januari tot en met 31 december)
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatorgids knieprothese verslagjaar 2024 Pagina 9 van 30
+
+Indicatornaam Volume UKP
+Indicatornummer 1b
+Operationalisatie Aantal unicondylaire knieprothesen (UKP) per ziekenhuis(locatie)
+Informatie voor Dit getal geeft aan hoeveel unicondylaire knieprothesen er per
+cliënten ziekenhuis(locatie) zijn geplaatst in het verslagjaar.
+Uit de gegevens van de LROI blijkt dat de meest voorkomende
+reden voor het plaatsen van een unicondylaire knieprothese
+artrose is. Andere diagnoses kunnen zijn: posttraumatische
+afwijkingen, osteonecrose en maligniteit. De genoemde
+diagnoses leiden tot (invaliderende) pijn en beperkingen in ADL
+en sport. Alle diagnoses moeten met aanvullend onderzoek
+worden vastgesteld.
+Het kniegewricht kan zo ernstig beschadigd zijn dat een
+knieprothese noodzakelijk is. Er zijn twee typen: de totale en de
+halve knieprothese. De totale knieprothese wordt het meest
+toegepast. Deze vervangt het gehele kniegewricht. De halve
+knieprothese vervangt alleen de binnen- of buitenzijde van het
+kniegewricht.
+Relevantie en Deze indicator is vooral geschikt om de overige indicatoren in
+toepasbaarheid een context te plaatsen.
+Type indicator structuur
+Achtergrond van de LROI
+indicator Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Deze indicator is vooral geschikt om de overige indicatoren in
+en publiceren een context te plaatsen.
+Transparantie verplicht
+Rekenregels en definities
+Datatype aantal
+Definitie Aantal unicondylaire knieprothesen geplaatst na primaire
+diagnose gonarthrose
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Patiënten met de diagnose gonartrose die een
+gewrichtsvervangende operatie hebben ondergaan.
+Alle geplaatste unicondylaire knieprothesen na diagnose
+gonartrose in de LROI
+Rekenregels en Op deze indicator wordt geen casemix correctie toegepast
+casemixcorrecties
+Databron LROI
+(registratie)
+Norm N.v.t.
+Meetperiode Volledige verslagjaar (1 januari tot en met 31 december)
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatorgids knieprothese verslagjaar 2024 Pagina 10 van 30
+
+Indicatornaam Volume knierevisies als gevolg van infectie of verdenking op
+infectie
+Indicatornummer 2a
+Operationalisatie Aantal knierevisies als gevolg van een infectie of verdenking op
+infectie
+Informatie voor Wanneer er sprake is van een infectie in de knie, na plaatsing
+cliënten van een knieprothese, kan het nodig zijn om (een deel van) de
+prothese te vervangen.
+Voor het reviseren van een knieprothese als gevolg van infectie
+is een aanzienlijke infrastructuur benodigd en is
+multidisciplinaire samenwerking met infectiearts en microbioloog
+gewenst. Indien er sprake is van een infectie in de knie wordt
+het aangeraden (richtlijn TKP) om naast het spoelen van de knie
+ook de losse componenten (insert en/of patella) te vervangen.
+In eerdere jaren werd de knie in dit geval alleen gespoeld
+zonder de componenten te vervangen. Omdat het spoelen met
+vervangen van componenten onder de definitie van deze
+indicator valt (en spoelen zonder componentwissel niet), is het
+aantal onder 2a.a en 2a.b in de afgelopen jaren gestegen.
+De plaatsing van de prothese kan in een ander ziekenhuis
+hebben plaatsgevonden. Het aantal knierevisies als gevolg van
+een infectie dat wordt uitgevoerd op een bepaalde locatie kan
+dus niet worden gekoppeld aan het aantal protheses dat op deze
+locatie wordt geplaatst.
+Relevantie en Deze indicator is vooral geschikt om te laten zien hoeveel
+toepasbaarheid ervaring een zorgaanbieder heeft met het uitvoeren van een
+revisieoperatie na infectie.
+Type indicator structuur
+Achtergrond van de Richtlijn Totale knieprothese (2021)
+indicator LROI
+Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Deze indicator is vooral geschikt om te laten zien hoeveel
+en publiceren ervaring een zorgaanbieder heeft met het uitvoeren van een
+revisieoperatie na infectie.
+Transparantie verplicht
+Rekenregels en definities
+Datatype aantal
+Teller(s)1 a) Aantal knierevisie ingrepen verricht als gevolg van een
+infectie of verdenking op infectie in het ziekenhuis
+waarbij alleen de insert is gereviseerd.
+b) Aantal knierevisie ingrepen verricht als gevolg van een
+infectie of verdenking op infectie in het ziekenhuis
+waarbij alleen de patella is gereviseerd of bijgeplaatst
+(met/zonder insertwissel).
+c) Aantal knierevisie ingrepen verricht als gevolg van een
+infectie of verdenking op infectie in het ziekenhuis
+waarbij tenminste de tibia- en/of de femurcomponent is
+gereviseerd of verwijderd.
+Definitie • Infectie: Gewrichtsinfectie door plaatsing prothese (zowel
+vroege infectie veroorzaakt op moment van opereren als ook
+late infectie)
+• Knierevisie ingrepen: Elke verandering aan de prothese
+(verwijdering, vervanging of toevoeging van een of meer
+componenten). Het aantal ingrepen wordt geteld, niet het aantal
+patiënten. Een two-stage revisie (verwijdering en later opnieuw
+plaatsen van prothese) telt als twee ingrepen).
+• Revisie-ingrepen tellen mee voor het centrum waar de revisie
+wordt uitgevoerd, ook als de primaire prothese elders werd
+1
+Wanneer er meerdere tellers zijn, dan is dit duidelijk in de nummering aangegeven. Bijvoorbeeld 1a, 1b enz.
+Indicatorgids knieprothese verslagjaar 2024 Pagina 11 van 30
+
+geplaatst
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Exclusie: revisie van een knieprothese zonder (verdenking op)
+infectie
+Rekenregels en Op deze indicator wordt geen casemix correctie toegepast
+casemixcorrecties
+Databron LROI
+(registratie)
+Norm N.v.t.
+Meetperiode Volledige verslagjaar (1 januari tot en met 31 december)
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatornaam Volume knierevisie zonder (verdenking op) infectie
+Indicatornummer 2b
+Operationalisatie Aantal knierevisies waarbij geen sprake is van infectie of
+verdenking op infectie
+Informatie voor Door verschillende oorzaken, zoals slijtage of beschadiging van
+cliënten de knieprothese, kan een totale of gedeeltelijke vervanging van
+de knieprothese nodig zijn.
+Ingrepen waarbij de insert is verwisseld (indicator 2b.a)_of de
+patella (knieschijf) wordt gereviseerd of bijgeplaatst zijn relatief
+kleine ingrepen die bijvoorbeeld veroorzaakt worden doordat er
+pijn blijft bestaan rondom de knieschijf. Ingrepen waarbij ten
+minste 1 van de vaste componenten wordt gewisseld (indicator
+2b.c) is een grotere ingreep met meer impact voor de patiënt.
+De plaatsing van de prothese kan in een ander ziekenhuis
+hebben plaatsgevonden. Het aantal knierevisies dat wordt
+uitgevoerd op een bepaalde locatie kan dus niet worden
+gekoppeld aan het aantal protheses dat op deze locatie wordt
+geplaatst.
+Relevantie en Knierevisiechirurgie is een complexe operatie. Deze indicator
+toepasbaarheid geeft weer hoe vaak deze operatie uitgevoerd wordt.
+Type indicator structuur
+Achtergrond van de Richtlijn Totale knieprothese (2021)
+indicator LROI
+Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Knierevisiechirurgie is een complexe operatie. Deze indicator
+en publiceren geeft weer hoe vaak deze operatie uitgevoerd wordt.
+Transparantie verplicht
+Rekenregels en definities
+Datatype aantal / getal
+Teller(s)1 a) Aantal knierevisie ingrepen verricht in het ziekenhuis
+waarbij alleen de insert is gereviseerd en waarbij geen
+sprake was van infectie of verdenking op infectie.
+b) Aantal knierevisie ingrepen verricht in het ziekenhuis
+waarbij alleen de patella is gereviseerd of bijgeplaatst
+(met/zonder insertwissel) en waarbij geen sprake was
+van infectie of verdenking op infectie.
+c) Aantal knierevisie ingrepen verricht in het ziekenhuis
+waarbij tenminste de tibia- en/of de femurcomponent is
+gereviseerd of verwijderd en waarbij geen sprake was
+van infectie of verdenking op infectie.
+Definitie • Knierevisie ingrepen: Elke verandering aan de prothese
+1
+Wanneer er meerdere tellers zijn, dan is dit duidelijk in de nummering aangegeven. Bijvoorbeeld 1a, 1b enz.
+Indicatorgids knieprothese verslagjaar 2024 Pagina 12 van 30
+
+(verwijdering, vervanging of toevoeging van een of meer
+componenten). Het aantal ingrepen wordt geteld, niet het aantal
+patiënten. Een two-stage revisie (verwijdering en later opnieuw
+plaatsen van prothese) telt als twee ingrepen.
+• Revisie-ingrepen tellen mee voor het centrum waar de revisie
+wordt uitgevoerd, ook als de primaire prothese elders werd
+geplaatst
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Exclusie: knierevisie bij (verdenking op) infectie
+Rekenregels en Op deze indicator wordt geen casemix correctie toegepast
+casemixcorrecties
+Databron LROI
+(registratie)
+Norm N.v.t.
+Meetperiode Volledige verslagjaar (1 januari tot en met 31 december)
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatorgids knieprothese verslagjaar 2024 Pagina 13 van 30
+
+Indicatornaam Percentage diepe postoperatieve wondinfecties binnen 90 dagen
+Indicatornummer 3a
+Operationalisatie Percentage diepe postoperatieve wondinfecties binnen 90 dagen
+na primaire TKP ingreep (volgens definitie PREZIES)
+Informatie voor Er wordt binnen de orthopedie gestreefd naar een zo laag
+cliënten mogelijk percentage diepe wondinfecties. De samenstelling van
+de patiëntpopulatie kan variatie in dit percentage veroorzaken.
+Relevantie en Er wordt binnen de orthopedie gestreefd naar een zo laag
+toepasbaarheid mogelijk percentage diepe wondinfecties. De samenstelling van
+de patiëntpopulatie kan variatie in dit percentage veroorzaken.
+Type indicator uitkomst
+Achtergrond van de Richtlijn Totale knieprothese (2021)
+indicator Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Er wordt binnen de orthopedie gestreefd naar een zo laag
+en publiceren mogelijk percentage diepe wondinfecties. De samenstelling van
+de patiëntpopulatie kan variatie in dit percentage veroorzaken.
+Transparantie verplicht
+Rekenregels en definities
+Datatype percentage
+Teller(s)1 Aantal patiënten met diepe postoperatieve wondinfecties binnen
+90 dagen na primaire TKP ingreep bij patiënten met ASA I of
+ASA II.
+Noemer Totaal aantal patiënten (ASA I en ASA II) dat een primaire TKP
+krijgen op uw ziekenhuislocatie.
+Definitie ASA-categorie: fysieke toestand van de patiënt op de dag van
+operatie. ASA I is geclassificeerd als fit en gezond; ASA II:
+matige ziekte
+Diepe postoperatieve wondinfectie (POWI) (RiVM/PREZIES): De
+infectie betreft het diepliggende weefsel van de incisie (fascie of
+spier) en ontstaat binnen 90 dagen na de operatie met
+implantaten van niet-humane oorsprong en er is sprake van één
+van de volgende bevindingen:
+- Pus uit de diepe incisie
+- Abces of ander teken van infectie bij observatie, heroperatie,
+histopathologisch of radiologisch onderzoek
+- Ten minste één van de volgende klinische verschijnselen:
+o Pijn of gevoeligheid
+o Lokale zwelling
+o Roodheid
+o Warmte
+o Koorts > 38 graden
+Én
+spontane wonddehiscentie of wond geopend door de chirurg en
+de wondkweek is positief of niet gekweekt
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Inclusie: patiënten met diepe postoperatieve wondinfecties
+binnen 90 dagen na primaire TKP ingreep bij patiënten met ASA
+I of ASA II.
+Rekenregels en Op deze indicator wordt geen casemix correctie toegepast
+casemixcorrecties
+Databron ZIS (invul)
+(registratie)
+Norm N.v.t.
+Meetperiode Patiënten geopereerd van 1 oktober van het jaar voorafgaande
+aan het verslagjaar tot en met 30 september van het
+verslagjaar.
+Aanleverfrequentie één keer per jaar
+1
+Wanneer er meerdere tellers zijn, dan is dit duidelijk in de nummering aangegeven. Bijvoorbeeld 1a, 1b enz.
+Indicatorgids knieprothese verslagjaar 2024 Pagina 14 van 30
+
+Eerste
+aanleverdatum
+Indicatornaam Percentage diepe postoperatieve wondinfecties binnen 365
+dagen
+Indicatornummer 3b
+Operationalisatie Percentage diepe postoperatieve wondinfecties binnen 365
+dagen na primaire TKP-ingreep
+Informatie voor Er wordt binnen de orthopedie gestreefd naar een zo laag
+cliënten mogelijk percentage diepe wondinfecties.
+Relevantie en Er wordt binnen de orthopedie gestreefd naar een zo laag
+toepasbaarheid mogelijk percentage diepe wondinfecties. De samenstelling van
+de patiëntpopulatie kan variatie in dit percentage veroorzaken.
+Type indicator uitkomst
+Achtergrond van de Richtlijn Totale knieprothese (2021)
+indicator Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Er wordt binnen de orthopedie gestreefd naar een zo laag
+en publiceren mogelijk percentage diepe wondinfecties. De samenstelling van
+de patiëntpopulatie kan variatie in dit percentage veroorzaken.
+Transparantie vrijwillig
+Rekenregels en definities
+Datatype percentage
+Teller(s)1 Aantal patiënten met diepe postoperatieve wondinfecties binnen
+365 dagen na primaire TKP ingreep bij patiënten met ASA I of
+ASA II.
+Noemer Totaal aantal patiënten (ASA I en ASA II) dat een primaire TKP
+krijgen op uw ziekenhuislocatie.
+Definitie ASA-categorie: fysieke toestand van de patiënt op de dag van
+operatie. ASA I is geclassificeerd als fit en gezond; ASA II:
+matige ziekte
+Diepe postoperatieve wondinfectie (POWI) (RiVM/PREZIES): De
+infectie betreft het diepliggende weefsel van de incisie (fascie of
+spier) en ontstaat binnen 365 dagen na de operatie met
+implantaten van niet-humane oorsprong en er is sprake van één
+van de volgende bevindingen:
+- Pus uit de diepe incisie
+- Abces of ander teken van infectie bij observatie, heroperatie,
+histopathologisch of radiologisch onderzoek
+- Ten minste één van de volgende klinische verschijnselen:
+o Pijn of gevoeligheid
+o Lokale zwelling
+o Roodheid
+o Warmte
+o Koorts > 38 graden
+Én
+spontane wonddehiscentie of wond geopend door de chirurg en
+de wondkweek is positief of niet gekweekt
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Inclusie: patiënten met diepe postoperatieve wondinfecties
+binnen 365 dagen na primaire TKP ingreep bij patiënten met
+ASA I of ASA II.
+Rekenregels en Op deze indicator wordt geen casemix correctie toegepast
+casemixcorrecties
+Databron ZIS (invul)
+(registratie)
+Norm N.v.t.
+Meetperiode Patiënten primair geopereerd in de periode van 1 januari tot en
+1
+Wanneer er meerdere tellers zijn, dan is dit duidelijk in de nummering aangegeven. Bijvoorbeeld 1a, 1b enz.
+Indicatorgids knieprothese verslagjaar 2024 Pagina 15 van 30
+
+met 31 december voorafgaande aan het verslagjaar. Infecties
+tot en met 365 dagen na de ingreep
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatorgids knieprothese verslagjaar 2024 Pagina 16 van 30
+
+Indicatornaam Responspercentage preoperatieve PROM
+Indicatornummer 4a
+Operationalisatie Responspercentage pre-operatief knie PROMs van patiënten met
+artrose bij wie een totale knieprothese wordt geplaatst.
+Informatie voor Orthopedisch chirurgen willen weten of zij kwalitatief goede zorg
+cliënten leveren. Het perspectief van de patiënt is daarbij van belang
+(heeft de patiënt minder klachten dan voorheen). Een PROM
+vragenlijst geeft de mening en waardering weer van de patiënt
+over zijn of haar eigen gezondheid.
+Voor patiënten die operatief worden behandeld wordt een PROM-
+score gemeten die betrekking heeft op het gewricht dat klachten
+veroorzaakt. Door de patiënt te vragen om voor én na de
+operatie dezelfde vragenlijst in te vullen kan gekeken worden
+hoe bepaalde ervaringen en klachten door de operatie
+veranderen. De behandeling wordt zo behalve met klinische
+parameters geëvalueerd op basis van PROMs. Ook voor de
+patiënt kan het inzichtelijk maken van zijn of haar
+voortgang/revalidatie motiverend werken.
+Er wordt vanuit de NOV gestreefd naar landelijk gebruik van
+PROMs.
+Hoe hoger het respons percentage van de PROMs, hoe
+betrouwbaarder de uitkomst is. Patiënten kunnen ervoor kiezen
+de PROMs vragenlijst niet in te vullen, vergeten deze in te vullen
+of zijn niet in staat deze in te vullen. Een 100 procent score is
+daarom vaak niet haalbaar.
+Relevantie en Deze indicator is vooral geschikt om de overige PROMs
+toepasbaarheid indicatoren in een context te plaatsten. Weergave van het
+landelijk gebruik van PROMs bij het plaatsen van een
+knieprothese.
+Type indicator proces
+Achtergrond van de NOV PROMs-advies:
+indicator https://www.orthopeden.org/downloads/775/nov-proms-
+advies.pdf
+Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Deze indicator is vooral geschikt om de overige PROMs
+en publiceren indicatoren in een context te plaatsten. Weergave van het
+landelijk gebruik van PROMs bij het plaatsen van een
+knieprothese.
+Transparantie verplicht
+Rekenregels en definities
+Datatype percentage
+Teller(s)1 Aantal patiënten met ingevulde preoperatieve knie-PROMs
+vragenlijsten waarbij een TKP voor indicatie artrose werd
+geplaatst.
+Noemer Totaal aantal patiënten met een TKP en indicatie artrose.
+Definitie Zorginzicht; wat zijn PROMs?
+https://www.zorginzicht.nl/kennisbank/Paginas/PROM-wijzer-1-
+Wat-zijn-PROMs.aspx
+Met een ingevulde vragenlijst wordt elke PROM vragenlijst
+bedoeld die de patiënt terugstuurt (zowel digitaal of op papier).
+De vragenlijst wordt meegeteld, ook al zijn niet alle vragen
+beantwoord.
+De knie PROM bestaat uit:
+EQ-5D index score
+EQ-5D thermometer
+OKS som score
+Indicatorgids knieprothese verslagjaar 2024 Pagina 17 van 30
+
+NRS-pijn rust
+NRS-pijn activiteit
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Patiënten primair geopereerd in de periode van 1 januari tot en
+met 31 december van het verslagjaar.
+Rekenregels en Op deze indicator wordt geen casemix correctie toegepast
+casemixcorrecties
+Databron LROI
+(registratie)
+Norm N.v.t.
+Meetperiode Patiënten primair geopereerd in de periode van 1 januari tot en
+met 31 december van het verslagjaar.
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatornaam Pre-score PROMs knie
+Indicatornummer 4b
+Operationalisatie Preoperatieve score knie PROMs o.b.v. prospectieve meting van
+patiënten met artrose bij wie een totale knieprothese wordt
+geplaatst.
+Informatie voor Orthopedisch chirurgen willen weten of zij kwalitatief goede zorg
+cliënten leveren. Het perspectief van de patiënt is daarbij van belang
+(heeft de patiënt minder klachten dan voorheen). Een PROM
+vragenlijst geeft de mening en waardering weer van de patiënt
+over zijn of haar eigen gezondheid.
+Voor patiënten die operatief worden behandeld wordt een PROM-
+score gemeten die betrekking heeft op het gewricht dat klachten
+veroorzaakt. Door de patiënt te vragen om voor én na de
+operatie dezelfde vragenlijst in te vullen kan gekeken worden
+hoe bepaalde ervaringen en klachten door de operatie
+veranderen. De behandeling wordt zo behalve met klinische
+parameters ook geëvalueerd op basis van PROMs. Ook voor de
+patiënt kan het inzichtelijk maken van zijn of haar
+voortgang/revalidatie motiverend werken.
+Er wordt vanuit de NOV gestreefd naar landelijk gebruik van
+PROMs.
+Relevantie en Weergave van de PROMs scores voorafgaand aan het plaatsen
+toepasbaarheid van een knieprothese.
+Type indicator uitkomst
+Achtergrond van de NOV PROMs-advies:
+indicator https://www.orthopeden.org/downloads/775/nov-proms-advies.pdf
+en
+https://richtlijnendatabase.nl/richtlijn/totale_knieprothese/startpagina_
+-_totale_knieprothese_tkp.html
+Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Weergave van de PROMs scores voorafgaand aan het plaatsen
+en publiceren van een knieprothese.
+Transparantie verplicht
+Rekenregels en definities
+Datatype per PROM:
+Aantal (N)
+Gemiddelde
+95% Betrouwbaarheidsinterval Lower bound
+95% Betrouwbaarheidsinterval Upper bound
+Vraag De knie PROM bestaat uit:
+EQ-5D index score
+EQ-5D thermometer
+Indicatorgids knieprothese verslagjaar 2024 Pagina 18 van 30
+
+OKS som score
+NRS-pijn rust
+NRS-pijn activiteit
+Definitie Zorginzicht; wat zijn PROMs?
+https://www.zorginzicht.nl/kennisbank/Paginas/PROM-wijzer-1-
+Wat-zijn-PROMs.aspx
+EQ5D: EQ-5D index score meet de kwaliteit van leven, een
+hogere score staat voor een betere kwaliteit van leven (score
+varieert tussen -0.329 (slechtst denkbare kwaliteit van leven) en
+1 (best denkbare kwaliteit van leven). EQ-5D thermometer meet
+de situatie van de gezondheid, een hogere score staat voor een
+betere situatie van de gezondheid (score varieert tussen 0
+(slechtst denkbare gezondheid) en 100 (best denkbare
+gezondheid)).
+OKS: meet het fysiek functioneren van de patiënt. Een lagere
+waarde staat voor beter functioneren. De waarde varieert van 0
+(geen moeite) tot 48 (heel veel moeite).
+NRS-pijn: meet de ervaren pijn tijdens rust en activiteit. Een
+lagere score staat voor minder pijn. De waarde varieert van 0
+(geen pijn) tot 10 (zeer hevige pijn).
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Inclusie: PROMs, benoemd in het NOV PROMs-advies
+Rekenregels en Op deze indicator wordt geen casemix correctie toegepast
+casemixcorrecties
+Databron LROI
+(registratie)
+Norm N.v.t.
+Meetperiode Patiënten primair geopereerd in de periode van 1 januari tot en
+met 31 december van het verslagjaar.
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatornaam Verschilscore PROMs knie, 6 maanden
+Indicatornummer 4c
+Operationalisatie Verschilscore tussen knie PROM preoperatief en 6 maanden na
+ingreep o.b.v. prospectieve meting van patiënten met artrose bij
+wie een totale knieprothese wordt geplaatst.
+Informatie voor Orthopedisch chirurgen willen weten of zij kwalitatief goede zorg
+cliënten leveren. Het perspectief van de patiënt is daarbij van belang
+(heeft de patiënt minder klachten dan voorheen). Een PROM
+vragenlijst geeft de mening en waardering weer van de patiënt
+over zijn of haar eigen gezondheid.
+Voor patiënten die operatief worden behandeld wordt een PROM-
+score gemeten die betrekking heeft op het gewricht dat klachten
+veroorzaakt. Door de patiënt te vragen om voor én na de
+operatie dezelfde vragenlijst in te vullen kan gekeken worden
+hoe bepaalde ervaringen en klachten door de operatie
+veranderen. De behandeling wordt zo behalve met klinische
+parameters ook geëvalueerd op basis van PROMs. Ook voor de
+patiënt kan het inzichtelijk maken van zijn of haar
+voortgang/revalidatie motiverend werken.
+Er wordt vanuit de NOV gestreefd naar landelijk gebruik van
+PROMs.
+Relevantie en Inzichtelijk maken van de verandering op de PROM scores, zes
+toepasbaarheid maanden na het plaatsen van een knieprothese. Voor zowel
+orthopeed als patiënt relevant.
+Type indicator uitkomst
+Indicatorgids knieprothese verslagjaar 2024 Pagina 19 van 30
+
+Achtergrond van de NOV PROMs-advies:
+indicator https://www.orthopeden.org/downloads/775/nov-proms-advies.pdf
+Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Inzichtelijk maken van de verandering op de PROM scores, zes
+en publiceren maanden na het plaatsen van een knieprothese.
+Transparantie verplicht
+Rekenregels en definities
+Datatype per PROM:
+Aantal (N)
+Gemiddelde
+95% Betrouwbaarheidsinterval Lower bound
+95% Betrouwbaarheidsinterval Upper bound
+Vraag De knie PROM bestaat uit:
+EQ-5D index score
+EQ-5D thermometer
+OKS som score
+NRS-pijn rust
+NRS-pijn activiteit
+Definitie Zorginzicht; wat zijn PROMs?
+https://www.zorginzicht.nl/kennisbank/Paginas/PROM-wijzer-1-
+Wat-zijn-PROMs.aspx
+EQ5D: EQ-5D index score meet de kwaliteit van leven, Een
+groter verschil staat voor een grotere verandering in kwaliteit
+van leven. EQ-5D thermometer meet de situatie van de
+gezondheid. Een groter verschil staat voor een grotere
+verandering in situatie van de gezondheid.
+OKS: meet het fysiek functioneren van de patiënt. Een groter
+verschil staat voor een grotere verandering in fysiek
+functioneren.
+NRS-pijn: meet de pijn tijdens rust en activiteit. Een groter
+verschil staat voor een grotere verandering in ervaren pijn.
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Inclusie: PROMs, benoemd in het NOV PROMs-advies
+Rekenregels en Uitkomst gecorrigeerd voor case mix (Geslacht, Leeftijd,
+casemixcorrecties Charnley score, roken, ASA, preoperatieve PROM-score en BMI)
+Databron LROI
+(registratie)
+Norm N.v.t.
+Meetperiode Patiënten primair geopereerd in de periode 1 juli van het jaar
+voorafgaande aan het verslagjaar tot en met 30 juni van het
+verslagjaar.
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatornaam Verschilscore PROMs knie, 12 maanden
+Indicatornummer 4d
+Operationalisatie Verschilscore tussen knie PROM preoperatief en 12 maanden na
+ingreep o.b.v. prospectieve meting van patiënten met artrose bij
+wie een totale knieprothese wordt geplaatst.
+Informatie voor Orthopedisch chirurgen willen weten of zij kwalitatief goede zorg
+cliënten leveren. Het perspectief van de patiënt is daarbij van belang
+(heeft de patiënt minder klachten dan voorheen). Een PROM
+vragenlijst geeft de mening en waardering weer van de patiënt
+over zijn of haar eigen gezondheid.
+Voor patiënten die operatief worden behandeld wordt een PROM-
+score gemeten die betrekking heeft op het gewricht dat klachten
+veroorzaakt. Door de patiënt te vragen om voor én na de
+Indicatorgids knieprothese verslagjaar 2024 Pagina 20 van 30
+
+operatie dezelfde vragenlijst in te vullen kan gekeken worden
+hoe bepaalde ervaringen en klachten door de operatie
+veranderen. De behandeling wordt zo behalve met klinische
+parameters ook geëvalueerd op basis van PROMs. Ook voor de
+patiënt kan het inzichtelijk maken van zijn of haar
+voortgang/revalidatie motiverend werken.
+Er wordt vanuit de NOV gestreefd naar landelijk gebruik van
+PROMs.
+Relevantie en Inzichtelijk maken van de verandering op de PROM scores, 12
+toepasbaarheid maanden na het plaatsen van een knieprothese. Voor zowel
+orthopeed als patiënt relevant.
+Type indicator uitkomst
+Achtergrond van de NOV PROMs-advies:
+indicator https://www.orthopeden.org/downloads/775/nov-proms-
+advies.pdf
+Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Inzichtelijk maken van de verandering op de PROM scores, 12
+en publiceren maanden na het plaatsen van een knieprothese.
+Transparantie verplicht
+Rekenregels en definities
+Datatype per PROM:
+Aantal (N)
+Gemiddelde
+95% Betrouwbaarheidsinterval Lower bound
+95% Betrouwbaarheidsinterval Upper bound
+Vraag De knie PROM bestaat uit:
+EQ-5D index score
+EQ-5D thermometer
+OKS som score
+NRS-pijn rust
+NRS-pijn activiteit
+Definitie Zorginzicht; wat zijn PROMs?
+https://www.zorginzicht.nl/kennisbank/Paginas/PROM-wijzer-1-
+Wat-zijn-PROMs.aspx
+EQ5D: EQ-5D index score meet de kwaliteit van leven, Een
+groter verschil staat voor een grotere verandering in kwaliteit
+van leven. EQ-5D thermometer meet de situatie van de
+gezondheid. Een groter verschil staat voor een grotere
+verandering in situatie van de gezondheid.
+OKS: meet het fysiek functioneren van de patiënt. Een groter
+verschil staat voor een grotere verandering in fysiek
+functioneren.
+NRS-pijn: meet de pijn tijdens rust en activiteit. Een groter
+verschil staat voor een grotere verandering in ervaren pijn.
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Inclusie: PROMs, benoemd in het NOV PROMs-advies
+Rekenregels en Uitkomst gecorrigeerd voor case mix (Geslacht, Leeftijd,
+casemixcorrecties Charnley score, roken, ASA, preoperatieve PROM-score en BMI)
+Databron LROI
+(registratie)
+Norm N.v.t.
+Meetperiode Patiënten primair geopereerd in de periode van 1 januari tot en
+met 31 december voorafgaande aan het verslagjaar.
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatorgids knieprothese verslagjaar 2024 Pagina 21 van 30
+
+Indicatornaam Percentage revisie (vaste componenten) binnen drie jaar
+Indicatornummer 5a
+Operationalisatie Het vervangen of verwijderen van één of meerdere van de vaste
+componenten, binnen drie jaar na plaatsing.
+Informatie voor Van alle primaire totale knieprothesen geplaatst bij de
+cliënten zorgaanbieder wordt gekeken of één of meerdere van de vaste
+componenten zijn vervangen of verwijderd binnen drie jaar na
+plaatsing. Deze vervanging of verwijdering kan in het
+betreffende ziekenhuis hebben plaatsgevonden of in een ander
+ziekenhuis in Nederland.
+Een hogere uitkomst betekent dat er procentueel meer patiënten
+binnen drie jaar na plaatsing van de knieprothese een revisie
+hebben gehad.
+Deze uitkomst wordt geleverd zonder teller en noemer omdat dit
+niet te berekenen is aangezien het percentage casemix
+gecorrigeerd wordt aangeleverd.
+Het betrouwbaarheidsinterval geeft een waarde aan het
+berekende percentage. Een smaller betrouwbaarheidsinterval
+geeft een nauwkeurigere schatting van het percentage revisie
+binnen drie jaar.
+Relevantie en Inzichtelijk maken van het percentage revisie van de betreffende
+toepasbaarheid zorgaanbieder, dit is een uitkomst van de kwaliteit van de zorg
+die geleverd is.
+Type indicator uitkomst
+Achtergrond van de LROI
+indicator Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Inzichtelijk maken van het percentage revisie van de betreffende
+en publiceren zorgaanbieder, dit is een uitkomst van de kwaliteit van de zorg
+die geleverd is.
+Transparantie verplicht
+Rekenregels en definities
+Datatype Percentage
+Meetwaarde Gecorrigeerd percentage van het aantal patiënten die binnen
+drie jaar na een primaire TKP geplaatst in uw ziekenhuis
+knierevisiechirurgie ondergaat waarbij tenminste de tibia- en/of
+de femurcomponent is gereviseerd (al dan niet in uw
+ziekenhuis).
+95% Betrouwbaarheidsinterval Lower bound
+95% Betrouwbaarheidsinterval Upper bound
+Noemer Het totale aantal patiënten dat een primaire TKP krijgt in uw
+ziekenhuis (in de periode 1 januari t/m 31 december drie jaar
+voorafgaand aan het verslagjaar).
+Definitie Knierevisiechirurgie:
+Bij deze indicator spreken we van revisie indien één of meerdere
+van de vaste componenten wordt vervangen of verwijderd,
+binnen drie jaar na plaatsing in een ziekenhuis in Nederland.
+Vaste componenten: Femur en/of tibiacomponent.
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Inclusie: revisie (vaste componenten) binnen drie jaar na
+primaire TKP-ingreep
+Rekenregels en Uitkomst gecorrigeerd voor case mix (Geslacht, Leeftijd,
+casemixcorrecties Charnley score, roken, ASA en BMI)
+NB. Teller en noemer kunnen niet verstrekt worden aangezien
+het een gecorrigeerd percentage betreft.
+Databron LROI
+(registratie)
+Norm N.v.t.
+Meetperiode Patiënten primair geopereerd in de periode van 1 januari tot en
+met 31 december drie jaar voorafgaande aan het verslagjaar.
+Indicatorgids knieprothese verslagjaar 2024 Pagina 22 van 30
+
+Revisies tot en met drie jaren na de ingreep.
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatornaam Volledigheid registratie LROI
+Indicatornummer 5b
+Operationalisatie Percentage primaire TKP ingrepen waarbij de informatie in de
+LROI volledig is
+Informatie voor Er wordt gestreefd naar een zo compleet mogelijke, landelijke
+cliënten registratie van gegevens over de plaatsing en/of vervanging van
+knieprotheses in de LROI.
+Een volledige registratie geeft aan dat alle relevante
+casemixfactoren volledig geregistreerd zijn en dus goed
+gecorrigeerd kunnen worden. In sommige gevallen is het niet
+mogelijk om een volledig record te vullen, bijvoorbeeld bij
+buitenlandse patiënten zonder BSN. In niet alle gevallen is dus
+een 100 procent score mogelijk.
+Relevantie en Deze indicator is vooral geschikt om de overige TKP indicatoren
+toepasbaarheid in een context te plaatsen. Bij een volledige registratie kan op
+alle relevante variabelen gecorrigeerd worden.
+Type indicator proces
+Achtergrond van de LROI
+indicator Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Deze indicator is vooral geschikt om de overige TKP indicatoren
+en publiceren in een context te plaatsen. Bij een volledige registratie kan op
+alle relevante variabelen gecorrigeerd worden.
+Transparantie verplicht
+Rekenregels en definities
+Datatype percentage
+Teller(s)1 Aantal primaire TKP’s waarvan LROI operatie-record volledig is
+Noemer Totaal aantal primaire TKP’s in de LROI
+Definitie  Record: Ingevoerde gegevens van de primaire TKP
+(patiëntkenmerken, operatiekenmerken en
+prothesekenmerken)
+ Volledig operatie-record: Ingrepen waarbij alle items die
+nodig zijn voor het berekenen van de externe indicatoren
+ingevuld zijn. Hieronder vallen: geslacht, geëncrypteerd
+BSN, geboortedatum, diagnose, ASA score, BMI,
+Charnley score, roken, datum van operatie, kant van
+operatie, type prothese, benadering, fixatie en prothese
+is ingevuld.
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Inclusie: volledige LROI registraties bij primaire TKP afgezet
+tegenover het totale aantal LROI registraties bij primaire TKP.
+Rekenregels en Op deze indicator wordt geen casemix correctie toegepast
+casemixcorrecties
+Databron LROI
+(registratie)
+Norm N.v.t.
+Meetperiode Volledige verslagjaar (1 januari tot en met 31 december).
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+1
+Wanneer er meerdere tellers zijn, dan is dit duidelijk in de nummering aangegeven. Bijvoorbeeld 1a, 1b enz.
+Indicatorgids knieprothese verslagjaar 2024 Pagina 23 van 30
+
+Indicatornaam Verdeling geplaatste knieprotheses per ODEP-categorie
+Indicatornummer 6
+Operationalisatie Percentage gebruikte totale knieprothesen met ODEP-categorie
+5A of hoger geplaatst bij patiënten met de indicatie artrose
+Informatie voor In het kader van het vergroten van de transparantie wil de NOV
+cliënten alle beschikbare orthopedische implantaten in Nederland volgens
+een vast stramien beoordelen en categoriseren.
+Dit gebeurde eerder met de NOV classificatie (1A en 1B) en is in
+2018 volledig overgegaan naar ODEP (waarin de NOV meerdere
+zetels heeft.
+Een ODEP-categorie toont aan hoe lang een prothese een in
+wetenschappelijk onderzoek bewezen resultaat behaald. Bijv.
+een ODEP categorie 5A toont aan dat na 5 jaar minder dan 5%
+van de prothesen is gereviseerd. Uit de literatuur blijkt dat een
+slecht functionerend implantaat al binnen 5 jaar hogere
+revisiepercentages laat zien. Na 5 jaar zijn er vrijwel geen
+uitschieters meer. Daarom adviseert de NOV om een implantaat
+te gebruiken dat ten minste voldoet aan een ODEP-categorie van
+5A of hoger. Om innovatie niet in de weg te staan stimuleert de
+NOV het plaatsen van implantaten met een andere ODEP
+categorie, echter wel uitsluitend in een door de METC
+goedgekeurd onderzoek.
+Uiteraard is het in sommige individuele gevallen noodzakelijk om
+een prothese te gebruiken die geen ODEP >5A heeft. Bijv. indien
+bij complexe casuïstiek een revisieprothese geplaatst wordt (die
+over het algemeen geen ODEP rating hebben). De orthopedisch
+chirurg kan in dit geval van het advies van de NOV afwijken.
+Relevantie en Inzicht in verdeling geplaatste knieprotheses met een bewezen
+toepasbaarheid overleving na minstens 5 jaar.
+Type indicator proces
+Achtergrond van de Werkwijze classificatie orthopedische implantaten:
+indicator https://www.orthopeden.org/downloads/418/werkwijze-
+classificatie-orthopedische-implantaten.pdf en
+http://www.odep.org.uk/products.aspx
+Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Inzicht in verdeling geplaatste knieprotheses met een bewezen
+en publiceren overleving van minstens 5 jaar.
+Transparantie verplicht
+Rekenregels en definities
+Datatype Percentage
+Teller(s)1 Aantal knieprothesen in ODEP-categorie 5A of hoger (5A, 5A*,
+7A, 7A*, 10A, 10A*, 13A of 13A*)
+Noemer Totaal aantal geplaatste primaire TKP’s bij patiënten met de
+indicatie artrose
+Vraag Werden in het verslagjaar knieprothesen geplaatst uit een
+ODEP-categorie lager dan 5A zonder dat hierbij werd
+deelgenomen aan wetenschappelijk onderzoek?
+Antwoordopties [Ja/Nee]
+Definitie Vanaf 2018 maakt de NOV voor de classificatie van
+orthopedische implantaten volledig gebruik van de ODEP-
+benchmark (Orthopaedic Data Evaluation Panel).
+Het NOV advies Classificatie orthopedische implantaten (2018)
+adviseert bij het plaatsen van een gewrichtsprothese, waarvoor
+een ODEP benchmark bestaat, gebruik te maken van een
+implantaat dat ten minste voldoet aan de volgende ODEP
+classificatie: 5A, 5A*, 7A, 7A*, 10A, 10A*, 13A en 13A*.
+1
+Wanneer er meerdere tellers zijn, dan is dit duidelijk in de nummering aangegeven. Bijvoorbeeld 1a, 1b enz.
+Indicatorgids knieprothese verslagjaar 2024 Pagina 24 van 30
+
+Vanaf 2018 stelt de NOV geen aparte vertaling van de ODEP
+benchmark naar de NOV categorieën 1A en 1B meer op, maar
+maakt volledig gebruik van de ODEP benchmark.
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Volgens de ODEP classificatie ingedeelde protheses
+Rekenregels en Op deze indicator wordt geen casemix correctie toegepast
+casemixcorrecties
+Databron LROI
+(registratie)
+Norm N.v.t.
+Meetperiode Volledige verslagjaar (1 januari tot en met 31 december)
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatorgids knieprothese verslagjaar 2024 Pagina 25 van 30
+
+Indicatornaam Aantal orthopedisch chirurgen dat knierevisiechirurgie uitvoert
+Indicatornummer 7a
+Operationalisatie Aantal orthopedisch chirurgen dat knierevisiechirurgie uitvoert
+per ziekenhuislocatie
+Informatie voor Weergave van het aantal orthopedisch chirurgen dat
+cliënten knierevisiechirurgie uitvoert per ziekenhuislocatie
+Relevantie en Deze indicator geeft aan hoeveel orthopedisch chirurgen gespecialiseerd
+toepasbaarheid zijn in het uitvoeren van een revisie-ingreep.
+Type indicator proces
+Achtergrond van de
+indicator Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Weergave van het aantal orthopedisch chirurgen dat
+en publiceren knierevisiechirurgie uitvoert per ziekenhuislocatie.
+Transparantie verplicht
+Rekenregels en definities
+Datatype aantal
+Vraag a: Aantal Hoeveel orthopedisch chirurgen voeren, op uw ziekenhuislocatie,
+chirurgen knierevisiechirurgie uit?
+Antwoordopties één antwoord mogelijk
+Vraag b: Aantal Wat is het aantal knierevisie ingrepen per orthopedisch chirurg?
+knierevisies (in te vullen voor maximaal 8 orthopeden)
+Antwoordopties Voor maximaal 8 orthopeden het aantal knierevisie ingrepen in
+het verslagjaar.
+Definitie • Knierevisiechirurgie: Elke verandering aan de prothese
+(verwijdering, vervanging of toevoeging van een of meer
+componenten)
+• Orthopedisch chirurgen: Orthopedisch chirurgen die de
+operatie zelf uitvoeren of supervisie geven aan AIOS/ANIOS
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Het gaat hier alleen om de specialisten die in het hele
+verslagjaar werkzaam zijn geweest op de betreffende
+ziekenhuislocatie.
+Rekenregels en Op deze indicator wordt geen casemix correctie toegepast
+casemixcorrecties
+Databron ZIS (invul)
+(registratie)
+Norm N.v.t.
+Meetperiode Volledige verslagjaar (1 januari tot en met 31 december)
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatornaam Aantal orthopedisch chirurgen dat primaire knieprothesen plaatst
+Indicatornummer 7b
+Operationalisatie Aantal orthopedisch chirurgen dat primaire knieprothesen plaatst
+per ziekenhuislocatie
+Informatie voor Weergave van het aantal orthopedisch chirurgen dat primaire
+cliënten knieprothesen plaatst, per ziekenhuis(locatie). Totale
+knieprothesechirurgie is een basisvaardigheid voor orthopedisch
+chirurgen.
+Relevantie en Deze indicator is vooral geschikt om de overige TKP indicatoren
+toepasbaarheid in een context te plaatsen.
+Type indicator proces
+Achtergrond van de
+indicator Initiator: werkgroep indicatorgids knieprothese
+Doel van het meten Deze indicator is vooral geschikt om de overige TKP indicatoren
+Indicatorgids knieprothese verslagjaar 2024 Pagina 26 van 30
+
+en publiceren in een context te plaatsen.
+Transparantie verplicht
+Rekenregels en definities
+Datatype aantal
+Vraag Hoeveel orthopedisch chirurgen op uw ziekenhuislocatie plaatsen
+primaire knieprothesen?
+Antwoordopties één antwoord mogelijk
+Definitie  Primaire knieprothesen: Totale knieprothesen en
+unicondylaire knieprothesen
+ Orthopedisch chirurgen: Orthopedisch chirurgen die de
+operatie zelf uitvoeren of supervisie geven aan AIOS/ANIOS
+Aggregatieniveau locatieniveau
+In-/exclusiecriteria Het gaat hier alleen om de specialisten die in het hele
+verslagjaar werkzaam zijn geweest op de betreffende
+ziekenhuislocatie.
+Rekenregels en Op deze indicator wordt geen casemix correctie toegepast
+casemixcorrecties
+Databron ZIS (invul)
+(registratie)
+Norm N.v.t.
+Meetperiode Volledige verslagjaar (1 januari tot en met 31 december)
+Aanleverfrequentie één keer per jaar
+Eerste
+aanleverdatum
+Indicatorgids knieprothese verslagjaar 2024 Pagina 27 van 30
+
+5 Wijzigingstabel
+Indicator Wijziging
+werkgroep samenstelling Namen aangepast
+Gehele document Richtlijnversie 2014 aangepast naar 2021.
+Idem voor link naar richtlijn
+4 Versie en link naar NOV PROMs advies aangepast
+(2020)
+https://www.orthopeden.org/downloads/775/nov-
+proms-advies.pdf
+Kleine tekstuele wijzigingen (heup->knie,
+typo’s)
+Indicatorgids knieprothese verslagjaar 2024 Pagina 28 van 30
+
+Bijlage: toelichting op informatie per indicator
+Operationalisatie De indicator in één korte zin omschreven. Let op: vermeld
+duidelijk de eenheid van de indicator in deze zin.
+Bijvoorbeeld: ‘wachttijd in dagen’.
+Informatie voor Het belang van en de betekenis van de indicator wordt hier
+cliënten kort zonder vaktermen verwoord. Een indicator is een
+meetbaar onderdeel van de zorg wat iets kan zeggen over
+de kwaliteit van zorg. In de informatie van cliënten wordt
+beknopt omschreven wat de indicator betekent en hoe
+deze geïnterpreteerd moet worden (‘lager is beter’, ‘een
+instelling moet onder de norm van X scoren’).
+Relevantie en Geef aan waarom de indicator relevant is en voor wie.
+toepasbaarheid
+Type indicator - Uitkomst
+- Proces
+- Structuur
+Achtergrond van Op basis waarvan is de indicator opgesteld? Verwijs naar
+de indicator een richtlijn/standaard, of een internationale indicatorset
+waarin de indicator ook is opgenomen. Dit vergroot de
+validiteit van de indicator: zegt deze indicator echt iets
+over kwaliteit van zorg?
+Doel van het meten Beschrijf wat beoogd wordt met het meten en publiceren.
+en publiceren Geef aan voor welke fase in het zorgproces de indicator
+relevant is; eventueel voor welke type zorginstelling. Geef
+ook aan – waar van toepassing - in welke situatie de
+indicator niet langer relevant is.
+Transparantie - verplicht (publicatie in Openbare Database van
+Zorginstituut Nederland)
+- vrijwillig (geen openbare publicatie. Doorlevering alleen
+naar patiëntenorganisaties, zorgverzekeraars en
+zorgaanbieders)
+Rekenregels en definities
+Datatype Het datatype dat moet worden aangeleverd:
+- tekst (vrije tekst of een keuze uit een lijst in de
+indicatorgids)
+- ja/nee
+- aantal (een geheel getal)
+- getal
+- percentage (een getal tussen 0 en 100. Teller/noemer
+*100)
+Teller(s) Het getal boven de streep van een breuk. De teller is altijd
+een deelverzameling van de noemer. Om lange
+formuleringen te vermijden, is de volledige omschrijving
+van de deelverzameling niet altijd herhaald in de teller.
+Noemer Het getal onder de streep van een breuk. Nauwkeurige
+beschrijving van de cliëntenpopulatie. Indien er sprake van
+een structuurindicator is, dan is noemer niet van
+toepassing.
+Vraag Wanneer er een vraag wordt gesteld over de organisatie
+van de zorg (vaak een klantpreferentievraag), dan kan de
+vraag aan de instelling hier geplaatst worden. De
+operationalisatie is dan hoe de indicator wordt
+gepubliceerd. Bijvoorbeeld:
+Vraag: “Op welke manier kunnen patiënten na de operatie
+contact opnemen bij vragen?”
+Operationalisatie: “Aangeboden manieren post-operatief
+Indicatorgids knieprothese verslagjaar 2024 Pagina 29 van 30
+
+contact”
+Antwoordopties Bij vragen is het belangrijk aan te geven of er slechts
+één antwoord mogelijk is of meerdere antwoorden
+mogelijk zijn.
+Daarnaast moeten de antwoordopties vermeld worden.
+Definitie Indien in de indicator termen worden gebruikt die enige
+toelichting nodig hebben, zodat betrouwbaar kan worden
+geregistreerd, dan wordt een definitie gegeven.
+Aggregatieniveau Het niveau waarop de indicatoren worden aangeleverd; in
+beginsel worden alle indicatoren op locatieniveau
+aangeleverd. In de uitgangspunten in de indicatorgids
+wordt voor de hele set aangegeven hoe hier mee om wordt
+gegaan. Per indicator kunnen specifieke aanwijzingen
+worden gegeven, bijvoorbeeld voor proces- en
+uitkomstindicatoren afkomstig uit kwaliteitsregistraties op
+concernniveau.
+In- Een duidelijke definiëring van de cliëntenpopulatie vertaalt
+/exclusiecriteria zich uiteindelijk in duidelijke in- en exclusiecriteria.
+populatie Daarnaast kunnen exclusiecriteria gebruikt worden om
+vergelijkbaarheid te vergroten. Bijvoorbeeld als bepaalde
+cliëntengroepen niet gelijk over instellingen zijn verdeeld.
+Rekenregels en Rekenregels voor het berekenen van de indicatorwaarde.
+casemixcorrecties Wanneer het relevant is voor een indicator kunnen
+cliëntkenmerken gebruikt worden voor het corrigeren van
+de indicatorwaarde. Hier moet worden aangegeven of er
+een casemixcorrectie plaatsvindt en op welke variabelen.
+Databron De te gebruiken bron voor het berekenen van de
+(registratie) indicatorwaarde. Bijvoorbeeld: LROI, NKR, DLCA-R, EPD,
+Zorgkaart Nederland
+Norm Als de indicator een norm kent, wordt deze hier in de
+indicatorgids vermeld. Ook de bron van de norm wordt
+vermeld.
+Meetperiode De meetperiode is de periode waarin de metingen worden
+gedaan. Dit is standaard het hele kalenderjaar (01-01 t/m
+31-12), maar hier kan van worden afgeweken.
+Bij follow-upmetingen moet een expliciete keuze worden
+gemaakt: een meting drie maanden post-operatief binnen
+het verslagjaar betekent dat de operatie ook in de laatste
+drie maanden van het voorgaande jaar kan zijn
+uitgevoerd.
+Soms wordt er een peildatum gebruikt in plaats van een
+meetperiode (vaak bij structuurindicatoren). De peildatum
+ligt dan vaak op 01-03 van het jaar ná het verslagjaar.
+Aanleverfrequentie De frequentie waarmee de indicatoren aangeleverd
+worden. Afspraken over de frequentie worden landelijk
+gemaakt. Dit is momenteel één keer per jaar.
+Eerste Geef aan op welke datum deze versie van de indicator bij
+aanleverdatum het Zorginstituut moet worden aangeleverd. Deze datum
+wordt opgenomen op de Transparantiekalender.
+Indicatorgids knieprothese verslagjaar 2024 Pagina 30 van 30

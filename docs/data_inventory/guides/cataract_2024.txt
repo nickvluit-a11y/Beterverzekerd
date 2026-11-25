@@ -1,0 +1,763 @@
+source: https://www.zorginzicht.nl/static/prozin_bijlage/40b393ea-9dcb-44ca-8983-6870267a56e3-indicatorengids-cataract---verslagjaar-2024.pdf
+
+Indicatorenset
+[Cataract]
+Uitvraag ziekenhuizen/ZBC’s over verslagjaar [2024]
+Versie, [26 juni 2023]
+Meer informatie op:
+- OmniQ (portaal van DHD) voor aanlevering kwaliteitsgegevens verslagjaar 2024
+https://extranet.dhd.nl/producten/OmniQ
+- Nederlandse Vereniging van Ziekenhuizen: www.nvz-ziekenhuizen.nl
+- Nederlandse Federatie van Universitair Medische Centra: www.nfu.nl.
+- Zelfstandige Klinieken Nederland: www.zkn.nl.
+- Zorginstituut Nederland: http://www.zorginzicht.nl.
+Samengesteld door:
+- Nederlands Oogheelkundig Gezelschap
+- Federatie Medisch Specialisten
+- Patiëntenfederatie Nederland
+- Oogvereniging
+- Nederlandse Federatie van Universitair Medische Centra
+- Nederlandse Vereniging van Ziekenhuizen
+- Zorgverzekeraars Nederland
+Contactinformatie:
+- Het Nederlands Oogheelkundig Gezelschap (NOG) nog@oogheelkunde.org
+Deze indicatorset is opgenomen in het register van Zorginstituut Nederland.
+Vrijwillige en verplichte indicatoren worden aangeleverd via het door de
+koepelorganisaties gekozen aanleverportaal (gegevensmakelaar). Die faciliteert de
+route (aanlevering en publicatie) voor verplichte transparantie. De verplicht
+aangeleverde gegevens worden door Zorginstituut Nederland gepubliceerd.
+Indicatorgids Cataract verslagjaar 2024 Pagina 1 van 19
+
+Inhoud
+1 Overzicht indicatoren 3
+2 Algemene informatie 4
+2.1 Uitgangspunten 4
+2.2 Populatiebepaling 4
+2.3 Aanlevering van de gegevens 4
+2.4 Indicatorenwerkgroep 5
+3 Indicatoren 6
+4 Wijzigingstabel 12
+5 Bijlage: Overzicht oogheelkundige operatieve verrichtingen 18
+Indicatorgids Cataract verslagjaar 2024 Pagina 2 van 19
+
+1 Overzicht indicatoren
+Indicator- Indicatornaam Transparantie?1
+nummer
+1 Het percentage van de verrichte ingrepen dat Verplicht
+volledig is ingevoerd in de kwaliteitsregistratie
+Cataract
+2 Het percentage patiënten dat aan beide ogen aan Verplicht
+cataract geopereerd is binnen een periode van 12
+maanden
+3a Voert de instelling PROM CatQuest metingen uit? Vrijwillig
+3b Het percentage patiënten dat de PROMs Catquest Vrijwillig
+preoperatief heeft ingevuld
+3c Het percentage patiënten dat de PROMs Catquest Vrijwillig
+postoperatief heeft ingevuld
+3d De gemiddelde uitkomsten gedurende de Vrijwilig
+meetmaand van de PROM CatQuest op
+instellingsniveau.
+4a Het percentage operaties waarbij de patiënt na de Verplicht
+cataractoperatie minstens 1 regel visuswinst behaald
+heeft
+4b Het percentage operaties waarbij de patiënt na 4-6 Verplicht
+weken binnen 1 dioptrie op hun beoogde refractie is
+uitgekomen
+1
+Vrijwillige indicatoren worden niet opgenomen op de Transparantiekalender en dus niet aangeleverd en gepubliceerd door
+Zorginstituut Nederland. Vrijwillige indicatoren worden gedeeld met de Zorgverzekeraars.
+Indicatorgids Cataract verslagjaar 2024 Pagina 3 van 19
+
+2 Algemene informatie
+2.1 Uitgangspunten
+ Uitvraag naar de ziekenhuizen door 1 set van indicatoren. Gebruikt door alle
+zorgverzekeraars – enige set indicatoren. Aangegeven wordt dat de
+zorgverzekeraars uitgaan van een gezamenlijke set. Eventueel kunnen zij de keuze
+maken om zich te richten op bepaalde indicatoren vanuit voorliggende
+gezamenlijke set.
+ Controleerbaarheid van de indicatoren is een issue. De registratie betreft een
+persoonlijke waarneming en verslaglegging. Grootste bezwaar is betrouwbaar
+registeren en daarnaast het grote aantal cataractoperaties; ongeveer 160.000 per
+jaar. Mogelijke oplossingen zijn bijv. registratie beperken tot 1 maand per jaar;
+zoals men in Zweden ook doet. Vervolgens kan men steekproefsgewijs dossiers
+lichten. De praktische uitwerking van een systeem van ‘high trust, high penalty’
+moet opgepakt worden.
+ Door de tripartite partijen is overeengekomen dat de volgende complicaties niet
+worden uitgevraagd: glasvochtverlies – achterkapselruptuur (motivatie:
+betrouwbaarheid registratie ter discussie), nastaar (motivatie: patiëntafhankelijke
+factor), endoftalmitis (motivatie: door lage aantallen weinig onderscheidend).
+ Het NOG zal glasvochtverlies - achterkapselruptuur volgen als interne indicator in
+de kwaliteitsregistratie en tijdens de kwaliteitsvisitatie bespreekbaar maken. Het
+is belangrijk dat de resultaten naar waarheid worden ingevuld in een veilige
+omgeving.
+ Een nieuw opgerichte kliniek valt nog buiten de reguliere kwaliteitsvisitatie
+systematiek van het NOG. Deze klinieken dienen zich binnen drie maanden na
+starten aan te melden voor een kwaliteitsvisitatie en het NOG verplicht zich om
+uiterlijk binnen 6 maanden na aanmelding te visiteren, zodat een oordeel kan
+worden gegeven uiterlijk één jaar na begin van deze nieuw opgerichte kliniek.
+Voorwaarden en aanbevelingen dienen na visitatie eenzelfde reikwijdte te hebben
+als bij een reguliere visitatie, d.w.z. dat voorwaarden nopen tot snelle actie; niet
+opvolgen van voorwaarden impliceert dat van de betreffende kliniek door het
+bestuur van het NOG een melding zal worden gemaakt naar IGJ.
+ Waar in deze gids wordt verwezen naar ‘verslagjaar’, wordt verslagjaar 2024
+bedoeld: 1 januari 2024 t/m 31 december 2024, tenzij anders wordt aangegeven.
+2.2 Populatiebepaling
+Populatiebepaling cataract
+De populatie voor de indicatorenset Cataract bestaat uit het aantal patiënten bij wie
+binnen het verslagjaar één of meerdere van de onderstaande zorgactiviteiten (ZA’s)
+zijn uitgevoerd:
+ 31241 Cataractoperatie extracapsulair, met inbrengen van kunststoflens (zie
+031242 voor m.b.v. niet standaard materialen, of uitgevoerd in amblyogene
+leeftijd).
+ 31242 Cataractoperatie extracapsulair, met inbrengen van kunststoflens,
+m.b.v. niet standaard materialen of technieken, of uitgevoerd in de amblyogene
+leeftijd.
+ 31250 Cataractoperatie intracapsulair.
+ 31251 Cataractoperatie intracapsulair, met inbrengen van kunststoflens.
+ 31268 Cataractoperatie extracapsulair.
+2.3 Aanlevering van de gegevens
+Via www.zorginzicht.nl is het processchema te raadplegen voor de aanlevering van
+de gegevens behorende bij de indicatoren.
+Indicatorgids Cataract verslagjaar 2024 Pagina 4 van 19
+
+2.4 Indicatorenwerkgroep
+De werkgroep voor het onderhoud van de indicatorset Cataract bestond uit de
+volgende personen:
+- Mw. Dr. A.C.J. Balemans (NOG)
+- Mw. Ir. D. Albers (NOG)
+- Drs. A.J.W Raijmakers (NOG)
+- Dr. N.J. Reus (NOG)
+- Dr. M. M. Dickman (NOG)
+- Prof. Dr. J de Boer (NOG)
+- Mw. P. Kortenhoeven (Oogvereniging)
+- Mw. C. Osterholt-Bel (Oogvereniging)
+- Mw. D. Sprengers (Patientenfederatie Nederland)Mw. Drs. R. Zondervan
+(NFU)
+- Mw. M. van der Linde (NVZ)
+- Dhr. dr. J. Hughes (ZKN)
+- Mw. Drs. L. Vunderink (ZN)
+- Mw. Drs. B van Leiden (ZN)
+- Mw. Dr. A. Witteman (VGZ)
+Indicatorgids Cataract verslagjaar 2024 Pagina 5 van 19
+
+3 Indicatoren
+1 – Cataract kwaliteitsregistratie
+Indicatornaam Indicator 1 – Cataract kwaliteitsregistratie
+Indicatornummer 1
+Operationalisatie Het percentage van de verrichte ingrepen dat volledig is
+ingevoerd in de Kwaliteitsregistratie Cataract.
+Informatie voor Om de beste zorg aan patiënten te kunnen leveren, is het goed
+patiënten voor artsen te weten hoe zij presteren ten opzichte van anderen.
+Een landelijke kwaliteitsregistratie helpt hierbij. Oogartsen
+voeren verschillende gegevens in de kwaliteitsregistratie in,
+zoals gegevens over de patiënt, het type behandeling en de
+uitkomst van de zorg. Dit doen alle oogartsen in Nederland op
+eenzelfde manier. Hierdoor kunnen instellingen zich vergelijken.
+Transparantie Verplicht.
+Type indicator Proces.
+Datatype Percentage.
+Bron (achtergrond) Richtlijn Cataract (2013).
+van de indicator
+Rekenregels en definities
+Teller(s) Aantal volledig ingevoerde ingrepen per instelling (= vakgroep
+oogartsen) in de kwaliteitsregistratie Cataract.
+Noemer De som van het totaal aantal uitgevoerde ZA’s (zie pagina 6 van
+deze indicatorengids) per instelling.
+Vraag Het percentage van de verrichte ingrepen dat volledig is
+ingevoerd in de Kwaliteitsregistratie Cataract.
+Definitie Leeftijd = Operatiedatum - geboortedatum. Alleen patiënten die
+ten tijde van de eerste operatie 18 jaar of ouder waren tellen mee
+in de registratie.
+In-/exclusiecriteria Exclusiecriteria:
+ patiënten jonger dan 18 jaar
+ combinatie operatie (Als bij een patiënt een tweede operatie
+naast de staaroperatie op dezelfde dag is uitgevoerd aan
+hetzelfde oog, ongeacht de code van de 2e operatieve
+verrichting, is dit een combi operatie en is het een exclusie,
+UITZONDERING: de combinatie met 31293
+Voorsegmentvitrectomie is GEEN exclusiecriterium.) De lijst
+met operatieve oogheelkundige verrichtingen is opgenomen in
+de bijlage 2.
+Casemix n.v.t.
+Databron Kwaliteitsregistratie NOG Cataract.
+(registratie)
+Norm n.v.t.
+Meetperiode 01-01-2024 t/m 31-12-2024
+Aanleverfrequentie Eén keer per jaar
+Aanleverniveau Instelling niveau (d.w.z. vakgroep oogartsen)
+Indicatorgids Cataract verslagjaar 2024 Pagina 6 van 19
+
+2 – Operatie aan beide ogen
+Indicatornaam Indicator 2 – Operatie aan beide ogen
+Indicatornummer 2
+Operationalisatie 2 Het percentage patiënten dat aan beide ogen aan cataract
+geopereerd is binnen een periode van 12 maanden
+Informatie voor Sommige patiënten worden aan twee ogen aan staar
+patiënten geopereerd. Indicator 2 laat zien hoeveel patiënten, van alle aan
+staar geopereerde patiënten, aan beide ogen geopereerd is
+binnen een periode van 12 maanden. Het is belangrijk dat het
+opereren van het tweede oog niet automatisch gebeurt, maar
+dat het een bewust besluit is.
+Transparantie Verplicht.
+Type indicator Proces.
+Datatype Percentage.
+Bron (achtergrond) Richtlijn Cataract (2021).
+van de indicator
+Rekenregels en definities
+Teller 2 Aantal patiënten dat <12 maanden voorafgaand aan de laatste
+cataract operatie een eerdere cataractoperatie heeft gehad
+Noemer 2 Totaal aantal patiënten dat in het verslagjaar een
+cataractoperatie heeft ondergaan.
+Vraag 2 Het percentage patiënten dat aan beide ogen aan cataract
+geopereerd is binnen een periode van 12 maanden
+Definitie De cataract operaties worden niet als links of rechts geregistreerd
+in de LBZ. De ZA (zorgactiviteit) gegevens in de LBZ/DIS zijn wél
+op operatiedatum geregistreerd. Daarmee is er informatie uit de
+LBZ database te halen die de antwoorden kan benaderen.
+Leeftijd = Operatiedatum - geboortedatum. Alleen patiënten die
+ten tijde van de eerste operatie 18 jaar of ouder waren tellen mee
+in de registratie.
+In-/exclusiecriteria Exclusiecriteria:
+ Patiënten jonger dan 18 jaar.
+ Combinatie operatie (Als er bij een patiënt een tweede
+operatie naast de staaroperatie op dezelfde dag is
+uitgevoerd aan hetzelfde oog, ongeacht de code van de 2e
+operatieve verrichting, is dit een combi operatie en is het
+een exclusie, UITZONDERING: de combinatie met 31293
+Voorsegmentvitrectomie is GEEN exclusiecriterium.)
+Casemix N.v.t.
+Databron EPD/ZIS.
+(registratie)
+Norm N.v.t.
+Meetperiode 01-01-2024 t/m 31-12-2024
+Aanleverfrequentie Eén keer per jaar
+Aanleverniveau Concernniveau
+Indicatorgids Cataract verslagjaar 2024 Pagina 7 van 19
+
+3 – PROM CatQuest
+Indicatornaam Indicator 3 – PROM CatQuest
+Indicatornummer 3
+Operationalisatie 3a Voert de instelling PROM CatQuest metingen uit?
+Operationalisatie 3b Het percentage patiënten dat gedurende de meetmaand de
+PROM CatQuest preoperatief heeft ingevuld.
+Operationalisatie 3c Het percentage patiënten dat gedurende de meetmaand de
+PROM CatQuest postoperatief heeft ingevuld.
+Operationalisatie 3d De gemiddelde uitkomsten gedurende de meetmaand van de
+PROM CatQuest op instellingsniveau.
+Informatie voor Cataractpatiënten hebben veel baat bij een cataractoperatie in
+patiënten termen van gezichtsvermogen (visus). Naast deze (objectieve)
+medische uitkomst is het bij deze patiënten ook van belang om
+het subjectief visueel functioneren, oftewel de visusspecifieke
+kwaliteit van leven vast te kunnen leggen. Immers, de reden dat
+patiënten om behandeling vragen is doorgaans dat zij als gevolg
+van hun verminderd visueel functioneren problemen
+ondervinden in dagelijkse activiteiten. De PROM CatQuest-9SF is
+een gevoelige en veel gebruikte vragenlijst voor het meten van
+dit visueel functioneren bij cataract. De vragenlijst werd
+ontwikkeld in Zweden. Het NOG heeft de afgelopen jaren de
+vragenlijst vertaald en gevalideerd waardoor het instrument
+bruikbaar is in Nederland. De afkorting PROM staat voor Patient
+Reported Outcome Measures. PROMs laten zien of de
+behandeling effect heeft gehad volgens een patiënt. Dit werkt
+als volgt. Voor en na de behandeling vult een patiënt een korte
+vragenlijst met dezelfde vragen in die hij/zij krijgt van het
+ziekenhuis. De vragen gaan over de moeilijkheden die de patiënt
+in het dagelijks leven heeft door staar. Bijvoorbeeld: Heeft u
+moeite met het lezen van ondertitels op tv? Zo ja, in welke
+mate? Door de antwoorden die vóór de operatie gegeven zijn te
+vergelijken met de antwoorden ná de operatie, wordt duidelijk of
+de patiënt geholpen is met de behandeling. Alle patiënten met
+een staaroperatie in Nederland vullen dezelfde vragenlijst in.
+Hierdoor kan ook op landelijk niveau worden gekeken of de zorg
+voor staar goed is.
+Transparantie vrijwillig.
+Type indicator Proces.
+Kwaliteitsdomein Effectiviteit behandeling.
+Datatype Ja/nee en percentage.
+Bron (achtergrond) Richtlijn Cataract (2013).
+van de indicator
+Rekenregels en definities
+Vraag 3a Voert de instelling PROM CatQuest metingen uit?
+Antwoordopties Ja gedurende de meetmaand / Ja continu / Nee
+Vraag 3b Het percentage patiënten dat gedurende de meetmaand de
+PROM CatQuest preoperatief heeft ingevuld.
+Teller 3b Aantal patiënten dat gedurende de meetmaand de PROM
+CatQuest preoperatief heeft ingevuld.
+Noemer 3b Totaal aantal patiënten die gedurende de meetmaand een
+cataractoperatie hebben ondergaan.
+Vraag 3c Het percentage patiënten dat gedurende de meetmaand de
+PROM CatQuest postoperatief heeft ingevuld.
+Indicatorgids Cataract verslagjaar 2024 Pagina 8 van 19
+
+Teller 3c Aantal patiënten dat gedurende de meetmaand de PROM
+CatQuest postoperatief heeft ingevuld.
+Noemer 3c Totaal aantal patiënten die gedurende de meetmaand een
+cataractoperatie hebben ondergaan.
+Vraag 3d De gemiddelde uitkomsten gedurende de meetmaand van de
+PROM CatQuest op instellingsniveau van zowel de pre- als de
+postoperatieve antwoorden, inclusief
+betrouwbaarheidsintervallen per vraag, als de uitkomstmaat
+inclusief betrouwbaarheidsintervallen (gecorrigeerde
+verschilscore van de PROM CatQuest).
+Antwoordopties Het gaat bij indicator 3d om negen sub-indicatoren met een
+betrouwbaarheidsinterval van 95% waarbij berekend moet
+worden:
+ 3d1a preoperatief gemiddeld
+ 3d1b preoperatief lowerbound
+ 3d1c preoperatief upperbound
+ 3d2a postoperatief gemiddeld
+ 3d2b postoperatief lowerbound
+ 3d2c postoperatief upperbound
+ 3d3a verschilscore gemiddeld
+ 3d3b verschilscore lowerbound
+ 3d3c verschilscore upperbound
+Definitie Leeftijd = Operatiedatum - geboortedatum. Alleen patiënten die
+ten tijde van de eerste operatie 18 jaar of ouder waren tellen mee
+in de registratie.
+De meetmaand is voor de preoperatieve meting van de CatQuest
+vastgesteld op 1 tot en met 31 maart in het verslagjaar en voor
+de postoperatieve meting op 1 tot en met 30 juni in het
+verslagjaar.
+In-/exclusiecriteria Exclusiecriteria:
+ Patiënten jonger dan 18 jaar.
+Casemix N.v.t.
+Databron Meetbureau PROM CatQuest.
+(registratie)
+Norm N.v.t.
+Meetperiode Preoperatieve meting:01-03-2024 t/m 31-03-2024.
+Postoperatieve meting: 01-06-2024 t/m 30-06-2024.
+Aanleverfrequentie Eén keer per jaar.
+Aanleverniveau Concernniveau.
+Indicatorgids Cataract verslagjaar 2024 Pagina 9 van 19
+
+4 – Zien
+Indicatornaam Indicator 4 - Zien
+Indicatornummer 4
+Operationalisatie 4a Het percentage operaties waarbij de patiënt na de
+cataractoperatie minstens 1 regel visuswinst behaald heeft
+Operationalisatie 4b Het percentage operaties waarbij de patiënt na 4-6 weken
+binnen 1 dioptrie op hun beoogde refractie is uitgekomen
+Informatie voor Staar is een vertroebeling van de ooglens. Door staar ziet de
+patiënten patiënt wazig. Een staaroperatie helpt om het gezichtsvermogen
+(in medische termen heet dit visus) te verbeteren. Indicator 4a
+laat zien bij welk deel van de patiënten met een staaroperatie het
+zien met tenminste 1 regel op de letterkaart verbeterd is.
+Indicator 4b gaat hier dieper op in en laat zien bij welk deel van
+de patiënten de brilsterkte die de patiënt na de staaroperatie
+nodig heeft, overeenkomt met de van te voren gemaakte
+inschatting.
+Transparantie Verplicht.
+Type indicator Uitkomst.
+Kwaliteitsdomein Effectiviteit behandeling.
+Datatype Percentage
+Bron (achtergrond) Richtlijn cataract (2013).
+van de indicator
+Rekenregels en definities
+Vraag 4a Het percentage operaties waarbij de patiënt na de
+cataractoperatie minstens 1 regel visuswinst behaald heeft.
+Teller 4a Aantal operaties waarbij de patiënt na de cataractoperatie
+minstens 1 regel visuswinst behaald heeft.
+Noemer 4a Aantal volledig ingevoerde ingrepen per instelling (= vakgroep
+oogartsen) in de kwaliteitsregistratie Cataract.
+Vraag 4b Het percentage operaties waarbij de patiënt na 4-6 weken
+binnen 1 dioptrie op hun beoogde refractie is uitgekomen.
+Teller 4b Aantal operaties waarbij de patiënt na 4-6 weken binnen 1
+dioptrie op de beoogde refractie is uitgekomen.
+Noemer 4b Aantal volledig ingevoerde ingrepen per instelling (= vakgroep
+oogartsen) in de kwaliteitsregistratie Cataract.
+Definitie -
+In-/exclusiecriteria Exclusiecriteria:
+ Patiënten jonger dan 18 jaar
+ Patiënten die geen visus kunnen aangeven, bijv. verstandelijk
+gehandicapten.
+ Combinatie operatie (Als bij een patiënt een tweede operatie
+naast de staaroperatie op dezelfde dag is uitgevoerd ongeacht
+aan welk oog (R/L codering ontbreekt in de registratie) ,
+ongeacht de code van de 2e operatieve verrichting, is dit een
+combi operatie en is het een exclusie, UITZONDERING: de
+combinatie met 31293 Voorsegmentvitrectomie is GEEN
+exclusiecriterium.) De lijst met operatieve oogheelkundige
+verrichtingen is opgenomen in de bijlage 2.
+ Complicerende comorbiditeit zoals matuur cataract,
+pseudoexfoliatie, corneatroebeling, kleine pupil, eerdere
+corneale refractiechirurgie, eerdere vitrectomie.
+4a: Visusbeperkende comorbiditeit: diabetische retinopathie
+(754, 755, 757 en 759), glaucoom (904, 907, 909),
+Indicatorgids Cataract verslagjaar 2024 Pagina 10 van 19
+
+leeftijdgebonden maculadegeneratie (707), uveitis (502 en
+503), cornea troebelingen en amblyopie.
+4b: Patiënten met eerdere corneale refractiechirurgie en
+patiënten bij wie optische biometrie niet uitvoerbaar is, maar
+een A-scan meting moet worden gebruikt.
+Casemix N.v.t.
+Databron Kwaliteitsregistratie NOG Cataract.
+(registratie)
+Norm N.v.t.
+Meetperiode 01-01-2024 t/m 31-12-2024
+Aanleverfrequentie Eén keer per jaar
+Aanleverniveau Concernniveau
+Indicatorgids Cataract verslagjaar 2024 Pagina 11 van 19
+
+4 Wijzigingstabel
+Wijzigingstabel ten opzichte van de gids van verslagjaar 2022
+Datum Indicator Wijziging
+Verslagjaar 1 Aanleverniveau gewijzigd van ‘niveau waarop wordt
+2021 geregistreerd in de kwaliteitsregistratie’ naar
+‘instelling niveau (d.w.z. vakgroep oogartsen)’
+Verslagjaar Er zijn geen wijzigingen aangebracht ten opzichte van
+2022 de gids van verslagjaar 2021, behalve een aanpassing
+van de jaartallen.
+Verslagjaar 2 In de gids van 2021 bestond indicator 2 uit 2a en 2b.
+2022 (dmv Naar aanleiding van de herziene richtlijn cataract
+issueformulier) (2021) is besloten om indicator 2a ‘Het percentage
+patiënten dat aan beide ogen aan cataract is
+geopereerd en bij wie er tenminste 13 dagen tussen
+de 2 opeenvolgende operaties zat’ te schrappen. In
+de herziene richtlijn is namelijk een aanbeveling
+opgenomen waarin ruimte is om 2 ogen op 1 dag te
+kunnen opereren.
+Verslagjaar 2 De tekst ‘Er zijn operatieve uitzonderingen waarin
+2023 operatie <14 dagen aan het tweede oog gewenst is.
+Dit zijn gedocumenteerd bijzondere patiënten zoals bij
+mentale retardatie, drugsverslaving en ernstige
+anisometropie verwachting van meer dan 3 punten.’ Is
+verwijderd. Dit sloeg nog op de vervallen indicator 2a.
+2 De volgende tekst bij de definitie van de indicator is
+verwijderd: ‘Ten aanzien van noemer 2 (totaal aantal
+patiënten dat in het verslagjaar een cataractoperatie
+heeft ondergaan: Het betreft het totaal aantal
+patiënten die aan 1 of aan beide ogen geopereerd zijn
+in het kalenderjaar. Omdat het kalenderjaar wordt
+aangehouden worden een aantal operaties aan twee
+ogen binnen 12 maanden – die in een voorgaand of
+een volgend kalenderjaar wordt uitgevoerd - niet
+meegenomen.’ De teller in de indicator suggereert
+namelijk dat operaties in een voorgaand kalenderjaar
+wel worden meegenomen en dat is ook een logischere
+berekening van de indicator.
+2 Het volgende exclusiecriterium is verwijderd:
+‘Complicerende comorbiditeit zoals matuur cataract,
+pseudoexfoliatie, corneatroebeling, kleine pupil,
+eerdere corneale refractiechirurgie, eerdere
+vitrectomie.’Het maakt niet uit voor deze indicator of
+er een complicerende comorbiditeit is.
+Verslagjaar 4 Achter ‘complicerende comorbiditeit is toegevoegd:
+2023 ‘zoals matuur cataract, pseudoexfoliatie,
+corneatroebeling, kleine pupil, eerdere corneale
+refractiechirurgie, eerdere vitrectomie.’
+Indicatorgids Cataract verslagjaar 2024 Pagina 12 van 19
+
+Verslagjaar Hele gids, aanpassing jaartallen naar vj 2024
+2024
+Verslagjaar Naar aanleiding van het rapport Uitkomstgerichte Zorg
+2024 en bespreking in de werkgroep zijn de indicatoren 3a
+t/m 3d vrijwillig gemaakt.
+Indicatorgids Cataract verslagjaar 2024 Pagina 13 van 19
+
+5 Bijlage: Overzicht oogheelkundige operatieve verrichtingen
+oogheelkundige operatieve verrichtingen DBC/DOT 2017
+versie 20-10-2016
+Za-code omschrijving 2017
+30803 Operatieve decompressie van de orbita zonder orbitotomie (laterale
+orbitotomie zie 030804, anterieure orbitotomie zie 030805).
+30804 Laterale orbitotomie.
+30805 Anterieure orbitotomie.
+30821 Exenteratio orbitae.
+30823 Orbitectomie (operatief verwijderen afwijking(en) uit de orbita
+inclusief verwijderen (delen van) de benige oogkas), excl.
+transcraniÙle benadering (zie 030189).
+30826 Verwijderen plombe/explant na ablatiochirurgie.
+30832 Reconstructie orbita m.b.v. vrij bot transplantaat.
+30851 Operatieve behandeling orbita bodemfractuur.
+30895 Coagulatie van intra-oculaire aandoeningen, mits niet vallend onder
+030896 of 030897. (toevoeging NOG = Cryo)
+30896 Coagulatie van intra-oculaire aandoeningen d.m.v. focale
+laserbehandeling. (toevoeging NOG = o.a. LTP, ALT en SLT)
+30897 Coagulatie van intra-oculaire aandoeningen d.m.v. panretinale
+laserbehandeling.
+30898 Behandeling van intra-oculaire aandoeningen d.m.v. YAG-laser (zie
+031230 voor operatief verwijderen nastaar). (toevoeging NOG = o.a.
+PI)
+30901 Foto-dynamische therapie, subretinaal.
+30909 Enucleatio bulbi.
+30914 Evisceratio bulbi.
+30915 Plaatsen van een secundair oogbol implantaat.
+30920 Primaire behandeling van ernstige perforerende verwondingen van de
+oogbol met herstel van irisprolaps.
+30931 Verwijdering van een of meerdere intra-oculaire corpora aliena.
+30944 Scheelzienoperatie regulier (voor operatie van schuine of verticale
+rechte oogspieren zie 030945, operaties van verlittekende of
+paralytische vormen zie 030946, vier spieren operatie zie 030989).
+30945 Scheelzienoperatie schuine of verticale rechte oogspieren (voor
+operaties verlittekende of paralytische vormen zie 030946, vier
+spieren operatie zie 030989, reguliere operatie zie 030944).
+30946 Scheelzienoperatie bij verlittekende oogspieren of paralytisch (voor
+operatie schuine of verticale rechte oogspieren zie 030945, vier
+spieren operatie zie 030989, reguliere operatie zie 030944).
+30989 Vier spieren operatie (voor operatie van schuine of verticale rechte
+oogspieren zie 030945, voor operaties van verlittekende of
+paralytische vormen zie 030946, voor reguliere operatie zie 030944).
+31013 Verwijderen van een of meerdere tumoren van de cornea met
+plastiek.
+31014 Verwijdering van een of meerdere tumoren van de cornea zonder
+plastiek.
+Indicatorgids Cataract verslagjaar 2024 Pagina 14 van 19
+
+31019 Overhechting ulcus cornea.
+31020 Hoornvlieshechting.
+31032 Perforerende hoornvliestransplantatie (full thickness graft,
+penetrerende keratoplastiek (PKP)).
+31033 Voorste lamellaire hoornvliestransplantatie (diepe anterieure
+lamellaire keratoplastiek (DALK)).
+31034 Achterste lamellaire hoornvliestransplantatie (posterieure lamellaire
+keratoplastiek (PLK), o.a. DLEK, DSEK).
+31041 Verwijdering van een of meerdere corpora aliena, behandeling van
+een combustio, erosie of etsing van hoornvlies of bindvlies.
+31043 Tatouage van het hoornvlies.
+31044 Natrium-EDTA spoeling van het hoornvlies.
+31045 Herstel operatie corneaflap.
+31046 Corneale collageen cross-linking (CXL).
+31048 Phototherapeutische keratectomie (PTK).
+31049 Photorefractieve keratectomie (PRK).
+31050 Laser assisted in situ keratomileusis (LASIK).
+31051 Plaatsen intrastromale corneale ringsegmenten (ICR).
+31052 Laser assisted epithelial keratomileusis (LASEK).
+31053 Epitheliaal laser assisted in situ keratomileusis (epi-LASIK).
+31071 Behandeling met radioactieve plaque op de sclera.
+31072 Sclerahechting.
+31122 Verwijdering van iriscyste of iristumor.
+31128 Chirurgische iridotomie of iridectomie (voor laser variant zie 030896
+of 030898).
+31130 Herstel iridodialysis.
+31131 Herstel prolapsus iridis.
+31133 Maken van nieuwe pupil-opening, diaphragmectomie.
+31137 Needling filterblaas (bleb).
+31138 Glaucoom operatie (voor goniotomie zie 031140, voor filtrerende
+operatie met plaatsen van filterimplant zie 031139).
+31139 Filtrerende operatie voorste oogkamer met plaatsen filterimplant
+(voor goniotomie zie 031140, voor overige glaucoomoperaties zie
+031138).
+31140 Goniotomie (voor filtrerende operatie voorste oogkamer met plaatsen
+filterimplant zie 031139, voor overige glaucoomoperaties zie
+031138).
+31144 Verwijderen corpus alienum uit voorste oogkamer.
+31145 Spoelen voorste oogkamer.
+31151 Losmaken iris van cornea, inclusief een eventuele iridectomie.
+31230 Nastaardiscisie, operatief verwijderen nastaar (zie 030898 voor
+behandeling van intra-oculaire aandoeningen d.m.v. YAG-laser).
+31241 Cataractoperatie extracapsulair, met inbrengen van kunststoflens (zie
+031242 voor m.b.v. niet standaard materialen, of uitgevoerd in
+amblyogene leeftijd).
+31242 Cataractoperatie extracapsulair, met inbrengen van kunststoflens,
+m.b.v. niet standaard materialen of technieken, of uitgevoerd in de
+amblyogene leeftijd.
+31243 Verwijdering van geluxeerde lens.
+Indicatorgids Cataract verslagjaar 2024 Pagina 15 van 19
+
+31250 Cataractoperatie intracapsulair.
+31251 Cataractoperatie intracapsulair, met inbrengen van kunststoflens.
+31268 Cataractoperatie extracapsulair.
+31276 Implanteren van extra kunststoflens bij faak oog.
+31277 Implanteren van extra kunststoflens bij pseudofaak oog.
+31278 Implanteren van kunststoflens bij afaak oog.
+31279 Refractieve lensverwisseling.
+31281 Het verwijderen van een kunststoflens.
+31282 Operatieve repositie van een geluxeerde kunststoflens.
+31293 Voorsegmentsvitrectomie.
+31295 Pars plana vitrectomie (zie de codes 031296 en 031297 voor pars
+plana vitrectomie bij behandeling van ablatio retinae).
+31296 Pars plana vitrectomie bij behandeling van ablatio retinae (zie code
+031297 voor pars plana vitrectomie bij behandeling ablatio retinae
+inclusief verwijderen tractiemembranen).
+31297 Pars plana vitrectomie bij behandeling van ablatio retinae incl.
+verwijderen tractiemembranen (zie code 031296 voor pars plana
+vitrectomie bij ablatio retinae excl. verwijderen tractiemembr.).
+31298 Verwijderen siliconenolie.
+31347 Behandeling ablatio retinae middels uitwendige techniek.
+31400 Verwijdering van een of meerdere corpora aliena subconjunctivaal,
+extra-orbitaal (excl. verwijderen plombe/explant na ablatiochirurgie
+zie 030826).
+31423 Verwijdering van een of meerdere tumoren van de conjunctiva, met
+plastiek.
+31424 Verwijdering van een of meerdere tumoren van de conjunctiva zonder
+plastiek.
+31450 Opheffen symblepharon met transplantatie.
+31451 Vrije plastiek van de conjunctiva met lip of ander slijmvlies.
+31492 Opheffen symblepharon zonder transplantatie.
+31511 Verwijdering van een of meer chalazia per zitting.
+31515 Verwijderen aandoening ooglid zonder reconstructie (zie code 031516
+voor verwijderen of correctie aandoening ooglid inclusief
+reconstructie).
+31516 Verwijderen of correctie aandoening ooglid inclusief reconstructie met
+zwaailap of trans- of implantaat (zie code 031515 voor verwijderen
+aandoening ooglid zonder reconstructie).
+31517 Implantatie goudgewichtje in bovenooglid.
+31518 Fornix verdiepende hechtingen.
+31519 Desinsertie oogspieren bovenooglid.
+31521 Correctie floppy eyelid.
+31522 Operatieve behandeling blepharospasme.
+31523 Herstel laceratie ooglid.
+31530 Ectropion operatie.
+31531 Entropion operatie.
+31538 Verkleining lidspeet, eventueel totale sluiting.
+31543 Transnasale mediale canthopexie.
+31545 Blepharoplastiek.
+31547 Correctie ptosis wenkbrauw - extern (zie 031548 voor endoscopisch).
+Indicatorgids Cataract verslagjaar 2024 Pagina 16 van 19
+
+31548 Correctie ptosis wenkbrauw - endoscopisch (zie 031547 voor extern).
+31550 Canthusreconstructie.
+31561 Frontalis suspensie.
+31562 Levator plastiek.
+31563 Fasanella-servat procedure.
+31564 Verwijderen van oogharen d.m.v. elektrische epilatie of bevriezing,
+per zitting.
+31591 Opheffen van de verkleining van de ooglidspleet respectievelijk van
+een gesloten lidspleet.
+31620 Sondage van een of meerdere traanwegstenosen.
+31621 Herstel traanpunt.
+31625 Inbrengen plug punctum lacrimale.
+31638 Verwijderen van een traanzak.
+31640 Maken van een verbinding tussen neus en conjunctivaalzak, overige
+(o.a. buisjes van Jones, voor Ex-DCR zie 031656, voor En-DCR zie
+031657).
+31656 Dacryo-cysto-rhinostomie - uitwendig (Ex-DCR, zie code 031657 voor
+endonasaal, zie 031640 voor maken van een verbinding tussen neus
+en conjunctivaalzak, overige).
+31657 Dacryo-cysto-rhinostomie - endonasaal (En-DCR, zie code 031656
+voor extern, zie 031640 voor maken van een verbinding tussen neus
+en conjunctivaalzak, overige).
+31663 Reconstructie canaliculus.
+38912 Operatieve verwijdering van gezwellen, corpora aliena en dergelijke,
+uitgaande van of zich bevindende in dieper liggende structuren dan
+in code 038911 is omschreven.Toevoeging NOG: let op! 038911
+valideert niet in de oogheelkunde. Gebruik 31515)
+39001 Matig grote en/of gecompliceerde transplantatie: kleiner dan 1% van
+het lichaamsoppervlak in een functioneel gebied.
+39014 Zeer grote en/of gecompliceerde transpositie door direct of indirect
+gesteelde transpositie van huid.
+39020 Uitgebreide blepharo-orbitaplastiek, inhoudende: huid- en
+spierreductie, openen septum orbitale, repositie en/of reductie van
+vet en recreatie van de supratarsale plooi.
+39430 Biopsie met incisie intra-oculaire structuur.
+39431 Biopsie met incisie extra-oculaire structuur.
+39446 Injectie botulinetoxine (excl. endoscopisch inspuiten botulinetoxine in
+blaas zie 036264).
+39805 Subconjunctivale injectie van medicatie.
+39810 Intravitreale injectie van medicatie.
+82235 Retrograde dacryocystoplastiek (DCP, ballonkatheterdilatatie) zonder
+plaatsen tijdelijke stent, inclusief opspuiten.
+82236 Retrograde dacryocystoplastiek (DCP, ballonkatheterdilatatie) met
+plaatsen tijdelijke stent, inclusief opspuiten.
+Indicatorgids Cataract verslagjaar 2024 Pagina 17 van 19
+
+6 Bijlage: toelichting op informatie per indicator
+Operationalisatie De indicator in één korte zin omschreven. Let op: vermeld
+duidelijk de eenheid van de indicator in deze zin.
+Bijvoorbeeld: ‘wachttijd in dagen’.
+Informatie voor Het belang van en de betekenis van de indicator wordt hier
+cliënten kort zonder vaktermen verwoord. Een indicator is een
+meetbaar onderdeel van de zorg wat iets kan zeggen over
+de kwaliteit van zorg. In de informatie van cliënten wordt
+beknopt omschreven wat de indicator betekent en hoe
+deze geïnterpreteerd moet worden (‘lager is beter’, ‘een
+instelling moet onder de norm van X scoren’).
+Transparantie - verplicht (publicatie in Openbare Database van
+Zorginstituut Nederland)
+- vrijwillig (doorlevering alleen naar patiëntenorganisaties
+en zorgverzekeraars )
+Type indicator - Uitkomst
+- Proces
+- Structuur
+Kwaliteitsdomein Geef aan over welk kwaliteitsdomein deze indicator gaat.
+Enkele voorbeelden van primaire kwaliteitsdomeinen waar
+de indicatoren zich op richten zijn:
+- Gelijkheid: het aan alle cliënten leveren van de juiste
+zorg.
+- Effectiviteit: het nauwkeurig leveren van de juiste
+zorg.
+- Tijdigheid: het tijdig leveren van de juiste zorg.
+- Cliëntgerichtheid: het respecteren van de unieke
+noden, wensen en waarden van de cliënt.
+- Veiligheid: het vermijden van veiligheidsrisico’s en
+fouten die schade kunnen toebrengen aan patiënten
+en medewerkers.
+Datatype Het datatype dat moet worden aangeleverd:
+- tekst (vrije tekst of een keuze uit een lijst in de
+indicatorgids)
+- ja/nee
+- aantal (een geheel getal)
+- getal
+- percentage (een getal tussen 0 en 100. Teller/noemer
+*100)
+Bron (achtergrond) Op basis waarvan is de indicator opgesteld? Verwijs naar
+van de indicator een richtlijn/standaard, of een internationale indicatorset
+waarin de indicator ook is opgenomen. Dit vergroot de
+validiteit van de indicator: zegt deze indicator echt iets
+over kwaliteit van zorg?
+Rekenregels en definities
+Teller(s) Het getal boven de streep van een breuk. De teller is altijd
+een deelverzameling van de noemer. Om lange
+formuleringen te vermijden, is de volledige omschrijving
+van de deelverzameling niet altijd herhaald in de teller.
+Noemer Het getal onder de streep van een breuk. Nauwkeurige
+beschrijving van de cliëntenpopulatie. Indien er sprake van
+een structuurindicator is, dan is noemer niet van
+toepassing.
+Indicatorgids Cataract verslagjaar 2024 Pagina 18 van 19
+
+Vraag Wanneer er een vraag wordt gesteld over de organisatie
+van de zorg (vaak een klantpreferentievraag), dan kan de
+vraag aan de instelling hier geplaatst worden. De
+operationalisatie is dan hoe de indicator wordt
+gepubliceerd. Bijvoorbeeld:
+Vraag: “Op welke manier kunnen patiënten na de operatie
+contact opnemen bij vragen?”
+Operationalisatie: “Aangeboden manieren post-operatief
+contact”
+Antwoordopties Bij vragen is het belangrijk aan te geven of er slechts
+één antwoord mogelijk is of meerdere antwoorden
+mogelijk zijn.
+Daarnaast moeten de antwoordopties vermeld worden.
+Definitie Indien in de indicator termen worden gebruikt die enige
+toelichting nodig hebben, zodat betrouwbaar kan worden
+geregistreerd, dan wordt een definitie gegeven.
+In- Een duidelijke definiëring van de cliëntenpopulatie vertaalt
+/exclusiecriteria zich uiteindelijk in duidelijke in- en exclusiecriteria.
+Daarnaast kunnen exclusiecriteria gebruikt worden om
+vergelijkbaarheid te vergroten. Bijvoorbeeld als bepaalde
+cliëntengroepen niet gelijk over instellingen zijn verdeeld.
+Casemix Wanneer het relevant is voor een indicator kunnen
+cliëntkenmerken gebruikt voor het corrigeren van de
+indicatorwaarde. Hier moet worden aangegeven of er een
+casemixcorrectie plaatsvindt en op welke variabelen.
+Databron De te gebruiken bron voor het berekenen van de
+(registratie) indicatorwaarde. Bijvoorbeeld: LROI, NKR, DLCA-R, EPD,
+Zorgkaart Nederland
+Norm Als de indicator een norm kent, wordt deze hier in de
+indicatorgids vermeld. Ook de bron van de norm wordt
+vermeld.
+Meetperiode De meetperiode is de periode waarin de metingen worden
+gedaan. Dit is standaard het hele kalenderjaar (01-01 t/m
+31-12), maar hier kan van worden afgeweken.
+Bij follow-upmetingen moet een expliciete keuze worden
+gemaakt: een meting drie maanden post-operatief binnen
+het verslagjaar betekent dat de operatie ook in de laatste
+drie maanden van het voorgaande jaar kan zijn
+uitgevoerd.
+Soms wordt er een peildatum gebruikt in plaats van een
+meetperiode (vaak bij structuurindicatoren). De peildatum
+ligt dan vaak op 01-03 van het jaar ná het verslagjaar.
+Aanleverfrequentie De frequentie waarmee de indicatoren aangeleverd
+worden. Afspraken over de frequentie worden landelijk
+gemaakt. Dit is momenteel één keer per jaar.
+Aanleverniveau Het niveau waarop de indicatoren worden aangeleverd; in
+beginsel worden alle indicatoren op locatieniveau
+aangeleverd. In de uitgangspunten in de indicatorgids
+wordt voor de hele set aangegeven hoe hier mee om wordt
+gegaan. Per indicator kunnen specifieke aanwijzingen
+worden gegeven, bijvoorbeeld voor proces- en
+uitkomstindicatoren afkomstig uit kwaliteitsregistraties op
+concernniveau.
+Indicatorgids Cataract verslagjaar 2024 Pagina 19 van 19

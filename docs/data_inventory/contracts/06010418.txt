@@ -1,0 +1,104 @@
+source: https://www.saxenburgh.nl/praktische-informatie/kosten-en-vergoedingen
+
+Kosten en vergoedingen - Saxenburgh
+chapters#connect scroll@window->chapters#spy:passive" data-chapters-active-class="bg-white text-secondary-500">
+Wij, en derde partijen, maken op onze website gebruik van cookies.
+Wij gebruiken cookies voor het bijhouden van statistieken, om jouw voorkeuren op te slaan, maar ook voor marketingdoeleinden.
+Door op "Accepteren" te klikken, ga je akkoord met het gebruik van alle cookies zoals omschreven in onze
+cookieverklaring .
+Kies je "Weigeren", dan gebruiken we alleen functionele cookies.
+cookies#accept"
+>
+Accepteren
+cookies#deny"
+>
+Weigeren
+scroll#toggleArrow" class="fixed bottom-0 right-0 z-40 pointer-events-none bg-primary-500 text-white rounded-tl-lg p-15 transition print:hidden">
+Praktische informatie
+Kosten en vergoedingen
+Kosten en vergoedingen
+Printen
+Lees voor
+chapters#visit" class="appearance-none w-full bg-white shadow border border-brown-300 rounded p-10 text-xs font-bold text-brown-500 focus:outline-none hover:text-black focus:text-black cursor-pointer transition">
+Kosten en vergoedingen
+Contracten Saxenburgh
+Vergoeding telefonische en online afspraken
+Passantentarieven
+Passantenprijslijst
+Wordt de zorg vergoed?
+chapters#toggleChapter"
+data-chapters-target="chapter"
+id="kosten-en-vergoedingen"
+class="flex leading-tight text-left font-heading text-xl text-brown-600 hover:text-secondary-500 transition"
+aria-expanded="true"
+aria-controls="6efce239-4ea9-47f2-a0ea-0e0faf16c88a"
+>
+Kosten en vergoedingen
+Kosten en vergoedingen
+Contracten Saxenburgh
+Vergoeding telefonische en online afspraken
+DBC Tarieven
+Kosten en vergoedingen
+Heeft u binnenkort een afspraak in het ziekenhuis? Of wilt u meer weten over de zorg of behandeling vanuit onze woonzorglocaties of thuiszorg?
+Op deze pagina leest u meer over de kosten en vergoedingen.
+Ziekenhuiszorg
+Het is belangrijk om te weten welke kosten en vergoedingen er zijn wanneer u het ziekenhuis bezoekt.
+Lees meer over de kosten en vergoedingen
+Revalidatiezorg
+Het is belangrijk om te weten welke kosten en vergoedingen er zijn wanneer u gebruikt maakt van revalidatiezorg.
+Lees meer over de kosten en vergoedingen
+Ouderenzorg en thuiszorg
+Het is belangrijk om te weten welke kosten en vergoedingen er zijn voor onze woonzorglocaties en thuiszorg.
+Lees meer over de kosten en vergoedingen
+Contracten met zorgverzekeraars voor ziekenhuiszorg
+Heeft uw zorgverzekeraar een contract afgesloten met Saxenburgh Medisch Centrum, dan krijgt u uw zorgkosten in ons ziekenhuis door uw zorgverzekeraar vergoed.
+Heeft uw zorgverzekeraar geen contract met ons ziekenhuis, dan bestaat er een kans dat u een deel van de zorg zelf moet betalen. In dat geval krijgt u de rekening zelf thuis. Deze rekening kunt u indienen bij uw zorgverzekeraar, zij bepalen wat er aan u wordt vergoed.
+Contracten van Saxenburgh met zorgverzekeraars
+Laatste update: 19-11-2026
+Zorgverzekeraar
+Status 2027
+Status 2026
+Achmea / Zilveren Kruis
+In onderhandeling
+Gecontracteerd voor 2026
+VGZ / IZZ / Univé
+Gecontracteerd voor 2027
+Gecontracteerd voor 2026
+Menzis
+Gecontracteerd voor 2027
+Gecontracteerd voor 2026
+CZ
+In onderhandeling
+Gecontracteerd voor 2026
+ASR
+In onderhandeling
+Gecontracteerd voor 2026
+ONVZ (label van VGZ)
+Gecontracteerd voor 2027
+Gecontracteerd voor 2026
+Salland Zorgverzekeringen
+Gecontracteerd voor 2027
+Gecontracteerd voor 2026
+Zorg en Zekerheid
+In onderhandeling
+Gecontracteerd voor 2026
+Caresq (EUCARE)
+Gecontracteerd voor 2027
+Gecontracteerd voor 2026
+DSW
+Gecontracteerd voor 2027
+Gecontracteerd voor 2026
+Staat uw verzekeraar niet in de tabel?
+Er zijn in Nederland verschillende zorgverzekeraars met één of meerdere labels, verzekeraars en volmachten. Bekende labels zijn bijvoorbeeld Interpolis van Achmea en IZZ van VGZ. Staat de naam van uw verzekering niet in de bovenstaande lijst? Bekijk dan hier alle zorgverzekeraars en labels die onder deze verzekering vallen.
+Vragen over vergoedingen
+In de polisvoorwaarden van uw zorgverzekering staat welke behandelingen worden vergoed en hoe hoog deze vergoeding is. Heeft u vragen over de vergoeding van uw behandeling, neem dan vóór uw afspraak in het ziekenhuis contact op met uw zorgverzekeraar. Algemene informatie over zorgverzekeringen vindt u op de website van de Rijksoverheid .
+Opzeggen en een nieuwe zorgverzekering afsluiten
+Overweegt u om uw zorgverzekering te veranderen? Dan kunt u uw huidige zorgverzekering tot en met 31 december 2026 opzeggen. Daarna heeft u tot en met 31 januari 2027 om een nieuwe zorgverzekering af te sluiten. Uw nieuwe zorgverzekering gaat dan met terugwerkende kracht in per 1 januari 2027. Dit kan alleen als u uw huidige zorgverzekering op tijd opzegt.
+Eigen risico verhogen of een aanvullende verzekering afsluiten voor 2027
+Bent u patiënt in Saxenburgh Medisch Centrum en wilt u uw eigen risico voor 2027 verhogen of een aanvullende verzekering afsluiten? Dan zijn er een aantal zaken waarmee u rekening moet houden. Zo komt u niet voor onverwachte kosten te staan.
+Een behandeling wordt alleen uit de aanvullende verzekering vergoed als het zorgtraject is geopend op het moment dat u verzekerd was. U moet dus aanvullend verzekerd zijn voor een bepaalde behandeling op het moment dat het traject start.
+Als u in 2026 een afspraak heeft in ons ziekenhuis, wordt dit in sommige situaties betaald uit uw eigen risico van 2025. Bekijk hier een voorbeeld .
+Vergoeding telefonische en online afspraken
+Tegenwoordig vindt steeds meer zorg op afstand plaats. Hiervoor kunt u soms zelfs gewoon thuisblijven. U heeft dan bijvoorbeeld een telefonische afspraak, beeldbel-afspraak of contact met ons via de BeterDichtbij-app.
+De kosten voor deze telefonische en online afspraken worden vergoed door uw zorgverzekeraar. Let op: de kosten tellen wel mee voor uw eigen risico. Het kan dus zijn dat u een rekening ontvangt voor deze afspraken als u nog een bedrag voor eigen risico heeft openstaan.
+Lees meer: DBC Tarieven
