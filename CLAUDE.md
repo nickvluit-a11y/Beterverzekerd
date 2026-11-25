@@ -19,6 +19,9 @@ Context: volgens de nulmeting van Zorginstituut + Patiëntenfederatie (april 202
 **Klein en heel goed.** Liever één ding uitstekend dan veel dingen net niet. De kernvraag van de app: *"Welke ziekenhuizen bij mij in de buurt zijn aantoonbaar beter voor mijn ingreep, en kan ik daar terecht met mijn verzekering?"* Alles wat daar niet direct aan bijdraagt, wacht.
 **Overzichtelijk en mooi.** Volg het format van de zorgzoekers van grote verzekeraars en vergelijkers: één zoekbalk, kaart + lijst met kaartjes (naam, plaats, afstand, één duidelijk label, 2–3 kernpunten in gewone taal), details pas na een klik. Geen brede tabellen op het eerste scherm.
 
+## Scope-besluit (eigenaar, 25-11-2026)
+**Directe bronnen gaan vóór volledigheid.** Liever een selectie die we rechtstreeks bij de bron kunnen ophalen dan alles via platforms of diep weggestopte pagina's. Daarom dekt de app voorlopig alleen de **vier grootste verzekeraars, elk met hun hoofdmerk**: Zilveren Kruis (Achmea), VGZ, CZ en Menzis (samen ±90% van de verzekerden). Vastgelegd in `data/manual/scope.csv`. Premies, polissen en contractstatus komen van hun eigen sites en zorgzoekers; een test bewaakt dat elke getoonde polis een bron op het eigen domein heeft. Andere labels en concerns komen pas terug als dit deel goed werkt en ook direct te halen is. Uitzondering die de eigenaar zelf koos: ZorgkaartNederland voor patiëntcijfers (alleen aggregaten).
+
 ## Idee
 Per polis × gecontracteerde ziekenhuizen × kwaliteit van die ziekenhuizen → "kwaliteitsscore per polis voor jouw zorgprofiel".
 Gebruiker vult postcode + aandoening in en ziet per polis welke goede/snelle ziekenhuizen binnen bereik gecontracteerd zijn, met wachttijd, reviewcijfer en premie.
@@ -26,7 +29,7 @@ Gebruiker vult postcode + aandoening in en ziet per polis welke goede/snelle zie
 ## MVP-scope
 - Alleen ziekenhuizen en zelfstandige klinieken (medisch-specialistische zorg), ~71 ziekenhuisorganisaties.
 - Een paar veelvoorkomende aandoeningen/ingrepen waar openbare data voor is. Startvoorstel: heupprothese, knieprothese, staaroperatie. Uitbreiden zodra de pijplijn werkt.
-- De grote concerns met hun labels en polissen: Achmea (Zilveren Kruis e.a.), VGZ, CZ, Menzis, DSW, a.s.r., Zorg en Zekerheid (later: ONVZ — valt vanaf 2027 onder VGZ — Salland, Eucare).
+- Verzekeraars: zie Scope-besluit (de vier grootste, hoofdmerk). Later eventueel DSW, a.s.r., Zorg en Zekerheid e.a., alleen met directe bronnen.
 
 ## Architectuur (5 lagen)
 1. **Bronnen** (elk eigen ververs-ritme)

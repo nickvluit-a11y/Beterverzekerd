@@ -25,7 +25,7 @@ from pipeline.db_queries import indicator_profile, indicator_trend, latest_judge
 from pipeline.geo import clean_postcode, locate  # noqa: E402
 from pipeline.explain import explain, trend_sentences  # noqa: E402
 from pipeline.quality import domain_highlights  # noqa: E402
-from pipeline.reference import labels, procedures  # noqa: E402
+from pipeline.reference import procedures, scope  # noqa: E402
 from pipeline.score import attach_organisation, contract_for, hospitals_within, latest_waits, load_contracts, load_policies, policy_overview  # noqa: E402
 
 MONTHS_NL = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
@@ -152,7 +152,8 @@ st.markdown('<div class="hero"><h1>Beterverzekerd</h1>'
             'en kun je daar terecht met je zorgverzekering?</p></div>', unsafe_allow_html=True)
 
 ALL_INSURERS = "Alle verzekeraars vergelijken"
-BRAND = {"Achmea": "Zilveren Kruis", "Eucare": "Aevitae"}  # the name consumers know
+BRAND = dict(zip(scope()["concern"], scope()["brand"]))  # the name consumers know
+LABEL = dict(zip(scope()["concern"], scope()["label"]))  # the policy label whose contracts we show
 
 
 def contract_source(row: dict | None) -> str:
@@ -168,14 +169,13 @@ def contract_source(row: dict | None) -> str:
 
 
 def insurer_name(concern: str) -> str:
-    brand = BRAND.get(concern)
-    return f"{brand} ({concern})" if brand else concern
+    return BRAND.get(concern, concern)
 with st.form("zoek", border=False):
     c1, c2, c3 = st.columns([1.2, 1.6, 1])
     postcode = c1.text_input("Postcode", value="3584 CX")
     proc_name = c2.selectbox("Ingreep", procs["name_nl"].tolist())
     radius = c3.selectbox("Afstand", [10, 25, 50, 100], index=1, format_func=lambda km: f"{km} km")
-    insurer = st.selectbox("Jouw zorgverzekeraar", [ALL_INSURERS] + list(dict.fromkeys(labels()["concern"])),
+    insurer = st.selectbox("Jouw zorgverzekeraar", [ALL_INSURERS] + list(scope()["concern"]),
                            format_func=lambda c: c if c == ALL_INSURERS else insurer_name(c))
     submitted = st.form_submit_button("Zoek ziekenhuizen", type="primary", width="stretch")
 
@@ -207,7 +207,7 @@ if search:
     near = near.sort_values(["_order", "distance_km"]).reset_index(drop=True)
     judged = latest_judged(con, proc)
     contracts = attach_organisation(load_contracts())
-    concerns = list(dict.fromkeys(labels()["concern"]))
+    concerns = list(scope()["concern"])
 
     if near.empty:
         st.info(f"Geen ziekenhuizen binnen {search['radius']} km die deze ingreep uitvoeren. Kies een grotere afstand.")
@@ -294,7 +294,7 @@ if search:
                 count = f"{int(row.count):,}".replace(",", ".")
                 wait_html += (f'<div class="wait">★ {stars} van patiënten ({count} waarderingen)'
                               '<span class="note"> · ZorgkaartNederland</span></div>')
-            found = {c: contract_for(contracts, row.organisatie_agb, c, c) for c in concerns} if has_contracts else {}
+            found = {c: contract_for(contracts, row.organisatie_agb, c, LABEL.get(c, c)) for c in concerns} if has_contracts else {}
             found = {c: r for c, r in found.items() if r}
             if chosen != ALL_INSURERS:
                 status = (found.get(chosen) or {}).get("status")

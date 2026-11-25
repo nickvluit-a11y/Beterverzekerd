@@ -286,7 +286,7 @@ def test_overview_without_policy_file_falls_back_to_labels():
     from pipeline.score import manual_locations
     summary, _ = overview(52.0870, 5.1790, "heup", radius_km=6, contracts=pd.DataFrame(),
                           waits=pd.DataFrame(), quality=pd.DataFrame(), hospital_table=manual_locations())
-    assert len(summary) > 20 and summary["onbekend"].gt(0).all()
+    assert len(summary) >= 4 and summary["onbekend"].gt(0).all()  # the four insurers in scope
 
 
 # --- geo -----------------------------------------------------------------------------------
@@ -962,3 +962,15 @@ def test_premium_amounts_found_in_insurer_text():
     amounts = {"Basis Start": amount_text(159.45), "Basis Zeker": amount_text(164.95), "Exclusief": amount_text(186.9)}
     text = "Premies 2027\nBasis Start € 159,45 per maand\nBasis Zeker €\n164,95\nExclusief 1186,90"
     assert find_amounts(text, amounts) == {"Basis Start", "Basis Zeker"}  # 1186,90 is not 186,90
+
+
+def test_policies_in_scope_come_from_the_insurer_itself():
+    """Direct sources only: every policy the app shows is sourced on the insurer's own domain."""
+    from pipeline.reference import scope
+    from pipeline.score import load_policies
+    from scrapers.verify_premiums import SITES, site_of
+    policies = load_policies(2027)
+    assert set(policies["label"]) == set(scope()["label"])
+    for p in policies.itertuples():
+        own = site_of(SITES[p.label]).split(".")[-2]  # e.g. 'vgz' also allows cooperatievgz.nl
+        assert own in site_of(p.source_url), (p.label, p.polis, p.source_url)

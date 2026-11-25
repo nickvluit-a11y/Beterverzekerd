@@ -59,6 +59,12 @@ def labels() -> pd.DataFrame:
     return pd.read_csv(MANUAL / "concerns_labels.csv")
 
 
+def scope() -> pd.DataFrame:
+    """The insurers the app covers (owner's decision 25-11-2026): the four largest, each with its
+    main brand, so every premium, policy and contract comes from the insurer itself."""
+    return pd.read_csv(MANUAL / "scope.csv")
+
+
 @lru_cache
 def procedures() -> pd.DataFrame:
     return pd.read_csv(MANUAL / "procedures.csv")

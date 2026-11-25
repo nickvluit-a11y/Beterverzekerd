@@ -113,9 +113,13 @@ def _read(path: Path) -> pd.DataFrame:
     return pd.read_csv(path) if path.exists() else pd.DataFrame()
 
 
-def load_policies(year: int = 2027) -> pd.DataFrame:
-    """Policies for `year`. Without a filled policy file, fall back to one row per label."""
+def load_policies(year: int = 2027, in_scope: bool = True) -> pd.DataFrame:
+    """Policies for `year` (by default only the labels in data/manual/scope.csv). Without a filled
+    policy file, fall back to one row per label."""
     policies = _read(MANUAL / f"polissen_{year}.csv")
+    if in_scope and not policies.empty:
+        from pipeline.reference import scope
+        policies = policies[policies["label"].isin(scope()["label"])].reset_index(drop=True)
     if policies.empty:
         policies = labels()[["concern", "label"]].copy()
         policies["polis"] = "(polissen nog niet ingevoerd)"
