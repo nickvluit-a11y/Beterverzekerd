@@ -306,3 +306,30 @@ def insurer_overview(near: pd.DataFrame, contracts: pd.DataFrame, concerns: list
     out = pd.DataFrame(rows)
     return out.sort_values(["gecontracteerd", "in_onderhandeling", "onbekend"], ascending=[False, False, True]) \
         .reset_index(drop=True)
+
+
+def policy_overview(near: pd.DataFrame, contracts: pd.DataFrame, policies: pd.DataFrame,
+                    verdict_col: str = "quality_verdict") -> pd.DataFrame:
+    """Per policy: of the better-than-average hospitals in reach, how many are fully reimbursed
+    (contracted, or the policy pays non-contracted care in full), partly (non-contracted with a
+    known lower percentage) or unknown. Sorted on fully reimbursed, then premium."""
+    better = near[near[verdict_col] == "boven_gemiddeld"]
+    rows = []
+    for pol in policies.to_dict("records"):
+        pct = pd.to_numeric(pol.get("vergoeding_niet_gecontracteerd_pct"), errors="coerce")
+        full = part = unknown = 0
+        for agb in better["organisatie_agb"]:
+            status = (contract_for(contracts, agb, pol["concern"], pol["label"]) or {}).get("status") \
+                if not contracts.empty else None
+            if status in ("gecontracteerd", "gecontracteerd_met_plafond") or (pd.notna(pct) and pct >= 100):
+                full += 1
+            elif status == "geen_contract" and pd.notna(pct):
+                part += 1
+            else:
+                unknown += 1
+        rows.append({**pol, "betere_ziekenhuizen": len(better), "volledig": full, "deels": part, "onbekend": unknown,
+                     "premie": pd.to_numeric(pol.get("premie_per_maand"), errors="coerce")})
+    out = pd.DataFrame(rows)
+    if out.empty:
+        return out
+    return out.sort_values(["volledig", "premie"], ascending=[False, True], na_position="last").reset_index(drop=True)

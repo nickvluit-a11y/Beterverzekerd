@@ -49,7 +49,7 @@ PLAUSIBLE_CHANGE = {        # largest possible change per PROM scale
     "eq-5d index": 1.6, "eq-5d thermometer": 100, "nrs-pijn": 10, "ohs": 48, "oks": 48,
 }
 _SCALES = ["EQ-5D index", "EQ-5D thermometer", "OHS", "OKS", "NRS-pijn rust", "NRS-pijn activiteit", "CatQuest"]
-_DISEASE_SPECIFIC = ("OHS", "OKS")
+_DISEASE_SPECIFIC = ("functie van de heup", "functie van de knie")
 
 
 # --- rules ------------------------------------------------------------------------------------
@@ -191,15 +191,24 @@ def scale_of(name: str) -> str | None:
     return next((s for s in _SCALES if s.lower() in name.lower()), None)
 
 
+_PLAIN_SCALE = {  # what each patient questionnaire measures, in plain words
+    "EQ-5D index": "algemene gezondheid", "EQ-5D thermometer": "eigen gezondheidscijfer",
+    "OHS": "functie van de heup", "OKS": "functie van de knie",
+    "NRS-pijn rust": "pijn in rust", "NRS-pijn activiteit": "pijn bij bewegen", "CatQuest": "zien in het dagelijks leven",
+}
+
+
 def interval_label(name: str) -> str:
+    """Plain-language label. Domain matching (DOMAINS) relies on 'revisie' / 'verbetering volgens patiënt'."""
     low, scale = name.lower(), scale_of(name)
+    plain = _PLAIN_SCALE.get(scale, "door patiënt gemeld")
     if "revisie" in low:
         horizon = re.search(r"binnen (\w+) jaar", name, re.IGNORECASE)
-        return f"Revisie binnen {horizon.group(1) if horizon else '?'} jaar (gecorrigeerd)"
+        return f"Heroperatie (revisie) binnen {horizon.group(1) if horizon else '?'} jaar"
     if "preoperatieve" in low or "preoperatievescore" in low:
-        return f"Score vóór de operatie: {scale or 'PROM'}"
+        return f"Vóór de operatie: {plain}"
     months = re.search(r"(\d+) maanden", name)
-    return f"Verbetering volgens patiënt na {months.group(1) if months else '?'} mnd: {scale or 'PROM'}"
+    return f"Verbetering volgens patiënt na {months.group(1) if months else '?'} maanden: {plain}"
 
 
 def interval_kind(name: str) -> str | None:

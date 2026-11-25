@@ -24,7 +24,7 @@ from pipeline.db_queries import indicator_profile, indicator_trend, latest_judge
 from pipeline.geo import clean_postcode, geocode_postcode  # noqa: E402
 from pipeline.quality import domain_highlights  # noqa: E402
 from pipeline.reference import labels, procedures  # noqa: E402
-from pipeline.score import attach_organisation, contract_for, hospitals_within, insurer_overview, load_contracts  # noqa: E402
+from pipeline.score import attach_organisation, contract_for, hospitals_within, load_contracts, load_policies, policy_overview  # noqa: E402
 
 def display_name(row) -> str:
     """'annatommie mc - voor orthopedie - Utrecht' + 'UTRECHT' -> 'Annatommie mc - voor orthopedie - Utrecht'."""
@@ -88,7 +88,8 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .insurer { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; padding: 8px 12px; border: 1px solid #e2e8f0;
            border-radius: 10px; margin: 6px 0; background: #fff; }
 .insurer.mine { border-color: #0f766e; box-shadow: 0 0 0 2px #ccfbf1; }
-.insurer .iname { font-weight: 600; min-width: 190px; color: #0f172a; }
+.insurer .iname { font-weight: 600; min-width: 260px; color: #0f172a; }
+.insurer .meta { font-weight: 400; font-size: .82rem; color: #64748b; }
 .chip.big { font-size: .9rem; padding: 3px 10px; font-weight: 600; }
 </style>
 """, unsafe_allow_html=True)
@@ -183,27 +184,39 @@ if search:
                               get_radius=400, radius_min_pixels=5)],
             tooltip={"text": "{label}"}), height=320)
 
-        # --- compare insurers: where can you go for the better hospitals? -----------------------
+        # --- compare policies: premium and access to the better hospitals nearby ---------------
         chosen = search.get("insurer", ALL_INSURERS)
-        overview_df = insurer_overview(near, contracts, concerns)
         n_better = int(counts.get("boven_gemiddeld", 0))
         if n_better:
+            policies = load_policies(2027)
+            if chosen != ALL_INSURERS:
+                policies = policies[policies["concern"] == chosen]
+            table = policy_overview(near, contracts, policies)
             what = "het betere ziekenhuis" if n_better == 1 else f"de {n_better} betere ziekenhuizen"
-            st.markdown(f"#### Bij welke verzekeraar kun je naar {what}?")
-            rows_html = []
-            for r in overview_df.itertuples():
-                mine = " mine" if r.concern == chosen else ""
-                parts = [f'<span class="chip ok">✓ {r.gecontracteerd} gecontracteerd</span>' if r.gecontracteerd else "",
-                         f'<span class="chip wait">… {r.in_onderhandeling} in onderhandeling</span>' if r.in_onderhandeling else "",
-                         f'<span class="chip no">✗ {r.geen_contract} geen contract</span>' if r.geen_contract else "",
+            st.markdown(f"#### Welke polis vergoedt {what} bij jou in de buurt?")
+
+            def policy_row(r) -> str:
+                premie = f"€ {r.premie:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".") + " p/m" \
+                    if pd.notna(r.premie) else "premie onbekend"
+                kind = {"budget": "budgetpolis", "natura": "naturapolis", "combinatie": "combinatiepolis",
+                        "restitutie": "restitutiepolis"}.get(str(r.polis_type), "")
+                parts = [f'<span class="chip ok">✓ {r.volledig} van {r.betere_ziekenhuizen} volledig vergoed</span>' if r.volledig else "",
+                         f'<span class="chip no">€ {r.deels} deels zelf betalen</span>' if r.deels else "",
                          f'<span class="chip">? {r.onbekend} nog onbekend</span>' if r.onbekend else ""]
-                rows_html.append(f'<div class="insurer{mine}"><span class="iname">{insurer_name(r.concern)}</span>{"".join(parts)}</div>')
-            st.markdown('<div class="insurers">' + "".join(rows_html) + "</div>", unsafe_allow_html=True)
-            unknown_share = overview_df["onbekend"].sum() / max(1, overview_df["betere_ziekenhuizen"].sum())
+                return (f'<div class="insurer"><span class="iname">{r.label} – {r.polis}'
+                        f'<br><span class="meta">{premie} · {kind}</span></span>{"".join(parts)}</div>')
+
+            st.markdown('<div class="insurers">' + "".join(policy_row(r) for r in table.head(8).itertuples()) + "</div>",
+                        unsafe_allow_html=True)
+            if len(table) > 8:
+                with st.expander(f"Toon alle {len(table)} polissen"):
+                    st.markdown('<div class="insurers">' + "".join(policy_row(r) for r in table.iloc[8:].itertuples())
+                                + "</div>", unsafe_allow_html=True)
+            unknown_share = table["onbekend"].sum() / max(1, table["betere_ziekenhuizen"].sum())
             if unknown_share > 0.3:
-                st.caption(f"Let op: van {unknown_share:.0%} van deze combinaties weten we de contractstatus voor 2027 nog niet. "
-                           "Ziekenhuizen en verzekeraars sluiten hun contracten tussen november en januari; we werken dit "
-                           "dagelijks bij vanuit hun eigen publicaties.")
+                st.caption(f"Let op: bij {unknown_share:.0%} weten we nog niet of je volledig vergoed wordt. Ziekenhuizen en "
+                           "verzekeraars sluiten hun contracten tussen november en januari; we werken dit bij vanuit hun "
+                           "eigen publicaties. Premies 2027 deels nog niet gecontroleerd.")
         st.markdown("#### Ziekenhuizen")
 
         has_contracts = not contracts.empty
@@ -267,10 +280,11 @@ if search:
 
 st.divider()
 st.markdown(
-    '<p class="note"><b>Hoe we kwaliteit beoordelen.</b> We gebruiken de openbare kwaliteitscijfers van Zorginstituut '
-    'Nederland (Zorginzicht) en vergelijken elk ziekenhuis met het landelijk niveau, rekening houdend met de gebruikelijke '
-    'spreiding tussen ziekenhuizen. "Beter" betekent: met minstens 80% zekerheid beter. "Slechter" zeggen we pas bij '
-    '95% zekerheid, omdat een onterecht negatief oordeel meer schade doet. Alleen heroperaties '
-    'zijn gecorrigeerd voor patiëntkenmerken; academische centra behandelen vaker complexe patiënten. '
-    'Geen ranglijst, geen medisch of financieel advies. Contractstatus is geen garantie op toegang.</p>',
+    '<p class="note"><b>Hoe komen we hiertoe?</b> We gebruiken de officiële kwaliteitscijfers die ziekenhuizen '
+    'elk jaar aan de overheid geven: bijvoorbeeld hoe vaak een nieuwe heup opnieuw geopereerd moet worden, hoe vaak '
+    'er een infectie optreedt en hoe patiënten zelf hun herstel beoordelen.<br>'
+    '<b>Beter dan gemiddeld</b>: op minstens één belangrijk punt duidelijk beter dan de meeste ziekenhuizen, en nergens '
+    'duidelijk slechter. <b>Slechter dan gemiddeld</b> zeggen we alleen als het verschil heel duidelijk is. '
+    'Universitaire ziekenhuizen behandelen vaker moeilijke gevallen; houd daar rekening mee.<br>'
+    'Geen medisch of financieel advies. Een contract is geen garantie dat je terecht kunt: vraag het je verzekeraar.</p>',
     unsafe_allow_html=True)

@@ -671,13 +671,13 @@ def test_published_intervals_are_judged_with_official_ci():
     out = compare(pd.DataFrame(rows))
     judged = out[out["method"] == "interval"]
     prom = judged[judged["indicator_nl"].str.startswith("Verbetering")].set_index("location_key")
-    revision = judged[judged["indicator_nl"].str.startswith("Revisie")].set_index("location_key")
+    revision = judged[judged["indicator_nl"].str.contains("revisie")].set_index("location_key")
     assert prom.loc["a", "verdict"] == "beter"            # whole interval above the national median
     assert pd.isna(prom.loc["c", "verdict"]) and "respons" in prom.loc["c", "position"]  # low PROM response
     assert revision.loc["a", "verdict"] == "beter"        # lower revision is better
     assert revision.loc["c", "verdict"] == "slechter"
     assert pd.isna(revision.loc["d", "verdict"]) and revision.loc["d", "position"] == "inconsistent in bron"
-    assert revision.loc["a", "indicator_nl"] == "Revisie binnen 1 jaar (gecorrigeerd)"
+    assert revision.loc["a", "indicator_nl"] == "Heroperatie (revisie) binnen 1 jaar"
     # interval rows are not also treated as plain means
     assert not ((out["method"] == "mean") & out["indicator"].str.contains("Gemiddelde", na=False)).any()
 
@@ -756,8 +756,8 @@ def test_rare_events_are_not_flagged_on_tiny_numbers():
 
 def test_single_prom_scale_does_not_make_a_hospital_better():
     from pipeline.quality import domain_verdicts
-    one = pd.DataFrame({"indicator_nl": ["Verbetering volgens patiënt na 12 mnd: EQ-5D index",
-                                         "Verbetering volgens patiënt na 12 mnd: OHS"],
+    one = pd.DataFrame({"indicator_nl": ["Verbetering volgens patiënt na 12 maanden: algemene gezondheid",
+                                         "Verbetering volgens patiënt na 12 maanden: functie van de heup"],
                         "verdict": ["beter", "gemiddeld"]})
     assert domain_verdicts(one)["herstel"] == "gemiddeld"
     specific = one.assign(verdict=["gemiddeld", "beter"])
@@ -813,3 +813,22 @@ def test_care_type_matrix_uses_hospital_column_and_ambiguous_marks():
 def test_mark_matrix_without_known_columns_makes_no_claim():
     rows = contracts_parse.parse_tables([[["CZ", "CZ", "✓", "✓", "✗", "✗"]]])
     assert rows == []
+
+
+def test_policy_overview_counts_reimbursed_better_hospitals():
+    from pipeline.score import policy_overview
+    near = pd.DataFrame({"organisatie_agb": ["A", "B", "C"], "quality_verdict": ["boven_gemiddeld", "boven_gemiddeld", "gemiddeld"]})
+    contracts = pd.DataFrame([
+        {"organisatie_agb": "A", "concern": "VGZ", "label": None, "status": "gecontracteerd", "peildatum": "2026-11-15"},
+        {"organisatie_agb": "B", "concern": "VGZ", "label": None, "status": "geen_contract", "peildatum": "2026-11-15"},
+    ])
+    policies = pd.DataFrame([
+        {"concern": "VGZ", "label": "VGZ", "polis": "Basis Keuze", "polis_type": "budget", "premie_per_maand": "167.40", "vergoeding_niet_gecontracteerd_pct": "70"},
+        {"concern": "VGZ", "label": "VGZ", "polis": "Eigen Keuze", "polis_type": "combinatie", "premie_per_maand": "188.15", "vergoeding_niet_gecontracteerd_pct": "100"},
+        {"concern": "CZ", "label": "CZ", "polis": "Zorgbewust", "polis_type": "budget", "premie_per_maand": "176.25", "vergoeding_niet_gecontracteerd_pct": None},
+    ])
+    out = policy_overview(near, contracts, policies).set_index("polis")
+    assert (out.loc["Eigen Keuze", ["volledig", "deels", "onbekend"]] == [2, 0, 0]).all()
+    assert (out.loc["Basis Keuze", ["volledig", "deels", "onbekend"]] == [1, 1, 0]).all()
+    assert (out.loc["Zorgbewust", ["volledig", "deels", "onbekend"]] == [0, 0, 2]).all()
+    assert out.index[0] == "Eigen Keuze"
