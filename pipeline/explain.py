@@ -24,8 +24,14 @@ def nl(value: float, decimals: int = 1) -> str:
 
 
 def _short_name(indicator: str) -> str:
-    return (indicator.replace("Verbetering volgens patiënt na 12 maanden: ", "")
+    """Plain wording: 'Refractie binnen 0.5 dioptrie van doel' -> 'Brilsterkte na de operatie binnen
+    0,5 dioptrie van wat de bedoeling was'."""
+    import re
+    text = (indicator.replace("Verbetering volgens patiënt na 12 maanden: ", "")
             .replace("Heroperatie (revisie)", "Heroperatie"))
+    return re.sub(r"Refractie binnen ([\d.,]+) dioptrie van doel",
+                  lambda m: f"Brilsterkte na de operatie binnen {m.group(1).replace('.', ',')} dioptrie van wat de bedoeling was",
+                  text)
 
 
 def verdict_text(verdict: str | None, rate: float, national: float) -> tuple[str, str]:

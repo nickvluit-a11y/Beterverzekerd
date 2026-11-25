@@ -836,7 +836,7 @@ def test_policy_overview_counts_reimbursed_better_hospitals():
         {"concern": "CZ", "label": "CZ", "polis": "Zorgbewust", "polis_type": "budget", "premie_per_maand": "176.25", "vergoeding_niet_gecontracteerd_pct": None},
     ])
     out = policy_overview(near, contracts, policies).set_index("polis")
-    assert (out.loc["Eigen Keuze", ["volledig", "deels", "onbekend"]] == [2, 0, 0]).all()
+    assert (out.loc["Eigen Keuze", ["volledig", "vrij", "deels", "onbekend"]] == [1, 1, 0, 0]).all()
     assert (out.loc["Basis Keuze", ["volledig", "deels", "onbekend"]] == [1, 1, 0]).all()
     assert (out.loc["Zorgbewust", ["volledig", "deels", "onbekend"]] == [0, 0, 2]).all()
     assert out.index[0] == "Eigen Keuze"

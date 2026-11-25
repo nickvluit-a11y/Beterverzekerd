@@ -328,29 +328,32 @@ def insurer_overview(near: pd.DataFrame, contracts: pd.DataFrame, concerns: list
 
 def policy_overview(near: pd.DataFrame, contracts: pd.DataFrame, policies: pd.DataFrame,
                     verdict_col: str = "quality_verdict") -> pd.DataFrame:
-    """Per policy: of the better-than-average hospitals in reach, how many are fully reimbursed
-    (contracted, or the policy pays non-contracted care in full), partly (non-contracted with a
-    known lower percentage) or unknown. Sorted on fully reimbursed, then premium."""
+    """Per policy: of the better-than-average hospitals in reach, how many are reimbursed in full
+    because of a contract (or 'reimbursed as contracted' while talks go on), how many only because
+    the policy pays non-contracted care in full ('vrij', up to the usual market rate), how many
+    partly (known lower percentage) and how many are unknown. Sorted on reimbursed, then premium."""
     better = near[near[verdict_col] == "boven_gemiddeld"]
     rows = []
     for pol in policies.to_dict("records"):
         pct = pd.to_numeric(pol.get("vergoeding_niet_gecontracteerd_pct"), errors="coerce")
-        full = part = unknown = 0
+        full = free = part = unknown = 0
         for agb in better["organisatie_agb"]:
             row = (contract_for(contracts, agb, pol["concern"], pol["label"]) or {}) if not contracts.empty else {}
             status = row.get("status")
             if status == "in_onderhandeling" and row.get("origin") != "verzekeraar":
                 status = None  # a hospital's 'in talks' does not say what the insurer pays meanwhile
-            if status in ("gecontracteerd", "gecontracteerd_met_plafond", "vergoed_als_contract") \
-                    or (pd.notna(pct) and pct >= 100):
+            if status in ("gecontracteerd", "gecontracteerd_met_plafond", "vergoed_als_contract"):
                 full += 1
+            elif pd.notna(pct) and pct >= 100:
+                free += 1
             elif status in ("geen_contract", "in_onderhandeling") and pd.notna(pct):
                 part += 1
             else:
                 unknown += 1
-        rows.append({**pol, "betere_ziekenhuizen": len(better), "volledig": full, "deels": part, "onbekend": unknown,
-                     "premie": pd.to_numeric(pol.get("premie_per_maand"), errors="coerce")})
+        rows.append({**pol, "betere_ziekenhuizen": len(better), "volledig": full, "vrij": free, "deels": part,
+                     "onbekend": unknown, "premie": pd.to_numeric(pol.get("premie_per_maand"), errors="coerce")})
     out = pd.DataFrame(rows)
     if out.empty:
         return out
-    return out.sort_values(["volledig", "premie"], ascending=[False, True], na_position="last").reset_index(drop=True)
+    out["vergoed"] = out["volledig"] + out["vrij"]
+    return out.sort_values(["vergoed", "premie"], ascending=[False, True], na_position="last").reset_index(drop=True)

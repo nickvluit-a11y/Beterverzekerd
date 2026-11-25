@@ -24,7 +24,7 @@ from pipeline.build_db import connect  # noqa: E402
 from pipeline.db_queries import indicator_profile, indicator_trend, latest_judged, locations_for_procedure, quality_latest  # noqa: E402
 from pipeline.geo import clean_postcode, locate  # noqa: E402
 from pipeline.explain import explain, trend_sentences  # noqa: E402
-from pipeline.quality import domain_highlights  # noqa: E402
+from pipeline.quality import domain_highlights, domain_of, domain_verdicts  # noqa: E402
 from pipeline.reference import procedures, scope  # noqa: E402
 from pipeline.score import attach_organisation, contract_for, hospitals_within, latest_waits, load_contracts, load_policies, policy_overview  # noqa: E402
 
@@ -44,6 +44,10 @@ def display_name(row) -> str:
     """'annatommie mc - voor orthopedie - Utrecht' + 'UTRECHT' -> 'Annatommie mc - voor orthopedie - Utrecht'."""
     name = str(row.locatie_naam if isinstance(row.locatie_naam, str) else row.organisatie_naam).strip()
     name = re.sub(r"\s*[-,]?\s*\bconcern\b\s*", " ", name, flags=re.IGNORECASE).strip(" ,-")
+    # legal-form and group words mean nothing to a patient
+    name = re.sub(r"^stichting\s+", "", name, flags=re.IGNORECASE)
+    name = re.sub(r"\s*\b(b\.?v\.?|n\.?v\.?|groep)(?=\s|$)", "", name, flags=re.IGNORECASE)
+    name = re.sub(r"\s*\|\s*", " · ", name).strip(" ,-·")
     if name[:1].islower():
         name = name[0].upper() + name[1:]
     place = str(row.plaats).strip().title() if isinstance(row.plaats, str) else ""
@@ -52,7 +56,7 @@ def display_name(row) -> str:
 
 BADGES = {  # verdict -> (text, css class, map colour)
     "boven_gemiddeld": ("Beter dan gemiddeld", "good", [21, 128, 61]),
-    "gemiddeld": ("Rond het gemiddelde", "avg", [100, 116, 139]),
+    "gemiddeld": ("Geen duidelijk verschil", "avg", [100, 116, 139]),
     "gemengd": ("Deels beter, deels slechter", "mixed", [202, 138, 4]),
     "onder_gemiddeld": ("Slechter dan gemiddeld", "bad", [185, 28, 28]),
     "geen_data": ("Geen vergelijkbare cijfers", "none", [203, 213, 225]),
@@ -112,6 +116,7 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .insurer .meta { font-weight: 400; font-size: .82rem; color: #64748b; }
 .chip.big { font-size: .9rem; padding: 3px 10px; font-weight: 600; }
 .legend { font-size: .8rem; color: #475569; margin: -6px 0 14px 0; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.legend .item { white-space: nowrap; }
 .legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
 </style>
 """, unsafe_allow_html=True)
@@ -152,6 +157,7 @@ st.markdown('<div class="hero"><h1>Beterverzekerd</h1>'
             'en kun je daar terecht met je zorgverzekering?</p></div>', unsafe_allow_html=True)
 
 ALL_INSURERS = "Alle verzekeraars vergelijken"
+NEAR_KM = 30
 BRAND = dict(zip(scope()["concern"], scope()["brand"]))  # the name consumers know
 LABEL = dict(zip(scope()["concern"], scope()["label"]))  # the policy label whose contracts we show
 
@@ -204,7 +210,10 @@ if search:
     near["quality_verdict"] = near["quality_verdict"].fillna("geen_data").map(shown_verdict)
     near["_order"] = near["quality_verdict"].map(ORDER.index)
     near["display_name"] = [display_name(r) for r in near.itertuples()]
-    near = near.sort_values(["_order", "distance_km"]).reset_index(drop=True)
+    # within 30 km the better hospitals first; further away only after those (a far 'better' one
+    # should not push the hospital next door out of sight)
+    near["_far"] = near["distance_km"] > NEAR_KM
+    near = near.sort_values(["_far", "_order", "distance_km"]).reset_index(drop=True)
     judged = latest_judged(con, proc)
     contracts = attach_organisation(load_contracts())
     concerns = list(scope()["concern"])
@@ -232,28 +241,37 @@ if search:
                               get_radius=400, radius_min_pixels=5)],
             tooltip={"text": "{label}"}), height=320)
         shown_kinds = [v for v in ORDER if v in set(near["quality_verdict"])]
-        legend = "".join(f'<span class="dot" style="background:rgb({",".join(map(str, BADGES[v][2]))})"></span>{BADGES[v][0]}'
-                         for v in shown_kinds)
-        st.markdown(f'<div class="legend">{legend}<span class="dot" style="background:#0f3d3e"></span>Jouw postcode</div>',
+        legend = "".join(f'<span class="item"><span class="dot" style="background:rgb({",".join(map(str, BADGES[v][2]))})">'
+                         f'</span>{BADGES[v][0]}</span>' for v in shown_kinds)
+        st.markdown(f'<div class="legend">{legend}<span class="item"><span class="dot" style="background:#0f3d3e"></span>'
+                    'Jouw postcode</span></div>',
                     unsafe_allow_html=True)
 
-        # --- compare policies: premium and access to the better hospitals nearby ---------------
         chosen = search.get("insurer", ALL_INSURERS)
-        n_better = int(counts.get("boven_gemiddeld", 0))
-        if n_better:
+        has_contracts = not contracts.empty
+
+        def render_policies() -> None:
+            """Compare policies on access to the better hospitals in reach (quality first, then price)."""
+            n_better = int(counts.get("boven_gemiddeld", 0))
+            if not n_better:
+                return
             policies = load_policies(2027)
             if chosen != ALL_INSURERS:
                 policies = policies[policies["concern"] == chosen]
             table = policy_overview(near, contracts, policies)
             what = "het betere ziekenhuis" if n_better == 1 else f"de {n_better} betere ziekenhuizen"
-            st.markdown(f"#### Welke polis vergoedt {what} bij jou in de buurt?")
+            st.markdown(f"#### Welke polis vergoedt {what} binnen {search['radius']} km?")
 
             def policy_row(r) -> str:
                 premie = f"€ {r.premie:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".") + " p/m" \
                     if pd.notna(r.premie) else "premie onbekend"
-                kind = {"budget": "budgetpolis", "natura": "naturapolis", "combinatie": "combinatiepolis",
-                        "restitutie": "restitutiepolis"}.get(str(r.polis_type), "")
-                parts = [f'<span class="chip ok">✓ {r.volledig} van {r.betere_ziekenhuizen} volledig vergoed</span>' if r.volledig else "",
+                pct = pd.to_numeric(r.vergoeding_niet_gecontracteerd_pct, errors="coerce")
+                kind = "vrije-keuzepolis" if pd.notna(pct) and pct >= 100 else {
+                    "budget": "budgetpolis", "natura": "naturapolis", "combinatie": "combinatiepolis",
+                    "restitutie": "restitutiepolis"}.get(str(r.polis_type), "")
+                n = r.betere_ziekenhuizen
+                parts = [f'<span class="chip ok">✓ {r.volledig} van {n} met contract vergoed</span>' if r.volledig else "",
+                         f'<span class="chip ok">✓ {r.vrij} van {n} vergoed via vrije keuze*</span>' if r.vrij else "",
                          f'<span class="chip no">€ {r.deels} deels zelf betalen</span>' if r.deels else "",
                          f'<span class="chip">? {r.onbekend} nog onbekend</span>' if r.onbekend else ""]
                 conf = getattr(r, "confirmed", None)
@@ -268,15 +286,19 @@ if search:
                 with st.expander(f"Toon alle {len(table)} polissen"):
                     st.markdown('<div class="insurers">' + "".join(policy_row(r) for r in table.iloc[8:].itertuples())
                                 + "</div>", unsafe_allow_html=True)
+            notes = []
+            if table["vrij"].sum():
+                notes.append("* Vrije keuze: deze polis vergoedt ook ziekenhuizen zonder contract, tot het gangbare "
+                             "(marktconforme) tarief. Een ziekenhuis kan meer rekenen; check dat vooraf.")
             unknown_share = table["onbekend"].sum() / max(1, table["betere_ziekenhuizen"].sum())
             if unknown_share > 0.3:
-                st.caption(f"Let op: bij {unknown_share:.0%} weten we nog niet of je volledig vergoed wordt. Ziekenhuizen en "
-                           "verzekeraars sluiten hun contracten tussen november en januari; we werken dit bij vanuit hun "
-                           "eigen publicaties.")
-        st.markdown("#### Ziekenhuizen")
+                notes.append(f"Bij {unknown_share:.0%} weten we nog niet of je volledig vergoed wordt. Ziekenhuizen en "
+                             "verzekeraars sluiten hun contracten tussen november en januari; we werken dit bij vanuit "
+                             "hun eigen publicaties.")
+            for note in notes:
+                st.caption(note)
 
-        has_contracts = not contracts.empty
-        for row in near.itertuples():
+        def render_card(row) -> None:
             text, css, _ = BADGES[row.quality_verdict]
             points_html = "".join(f'<li class="{v}">{s}</li>' for v, s in
                                   domain_highlights(judged[judged["location_key"] == row.location_key])
@@ -285,8 +307,10 @@ if search:
             if pd.notna(row.wait_weeks):
                 what = "operatie" if row.wait_type == "behandeling" else "eerste afspraak"
                 weeks = max(1, round(float(row.wait_weeks)))
+                old = (pd.Timestamp.now() - pd.Timestamp(row.wait_date)).days > 120 if pd.notna(row.wait_date) else False
                 wait_html = (f'<div class="wait">⏱ Wachttijd {what}: ± {weeks} {"week" if weeks == 1 else "weken"}'
-                             f'<span class="note"> · NZa, {nice_date(row.wait_date)}</span></div>')
+                             f'<span class="note"> · NZa, {nice_date(row.wait_date)}{" (oude meting)" if old else ""}'
+                             '</span></div>')
             else:
                 wait_html = ""
             if pd.notna(getattr(row, "rating", None)):
@@ -322,37 +346,64 @@ if search:
                 f'<span class="badge {css}">{text}</span>'
                 f'<ul class="points">{points_html}</ul>{wait_html}{chips_html}</div>', unsafe_allow_html=True)
             with st.expander("Bekijk de cijfers"):
-                profile = indicator_profile(con, row.location_key, proc)
-                shown = profile[profile["verdict"].isin(["beter", "slechter", "gemiddeld"])]
-                if shown.empty:
-                    st.caption("Voor dit ziekenhuis zijn geen cijfers waar we een betrouwbare uitspraak over kunnen doen.")
-                else:
-                    groups: dict[str, list[str]] = {}
-                    for r in shown.to_dict("records"):
-                        title, measured, (css, verdict) = explain(r)
-                        if not SHOW_WORSE and css == "slechter":
-                            css, verdict = "avg", "niet duidelijk beter"
-                        groups.setdefault(title, []).append(f'{measured} · <span class="v {css}">{verdict}</span>')
-                    lines = [f'<div class="fact"><b>{title}</b><br>' + "<br>".join(items) + "</div>"
-                             for title, items in groups.items()]
-                    unjudged = profile[profile["indicator"].astype(str).str.startswith("Verbetering volgens patiënt na 12")
-                                       & profile["verdict"].isna() & profile["position"].notna()]
-                    if not unjudged.empty and "Herstel volgens patiënten" not in groups:
-                        reason = str(unjudged["position"].iloc[0])
-                        why = ("te weinig patiënten vulden de vragenlijst in" if "respons" in reason or "patiënten" in reason
-                               else "de cijfers in de bron kloppen niet")
-                        lines.append(f'<div class="fact"><b>Herstel volgens patiënten</b><br>'
-                                     f'<span class="v avg">geen oordeel: {why}</span></div>')
-                    year = int(shown["verslagjaar"].max())
-                    st.markdown("".join(lines) + f'<p class="note">Cijfers over {year}, bron: Zorginstituut Nederland.</p>',
-                                unsafe_allow_html=True)
-                sentences = trend_sentences(indicator_trend(con, row.location_key, proc))
+                render_details(row)
+
+        def render_details(row) -> None:
+            profile = indicator_profile(con, row.location_key, proc)
+            shown = profile[profile["verdict"].isin(["beter", "slechter", "gemiddeld"])]
+            if shown.empty:
+                st.caption("Voor dit ziekenhuis zijn geen cijfers waar we een betrouwbare uitspraak over kunnen doen.")
+            else:
+                # the card's verdict per domain decides; a single patient question cannot overrule it
+                domains = domain_verdicts(shown.assign(indicator_nl=shown["indicator"]))
+                groups: dict[str, list[str]] = {}
+                for r in shown.to_dict("records"):
+                    title, measured, (css, verdict) = explain(r)
+                    domain = domain_of(r["indicator"])
+                    if css in ("beter", "slechter") and domain and domains.get(domain) not in (css,):
+                        css, verdict = "avg", ("op deze vraag " + ("hoger" if css == "beter" else "lager")
+                                               + ", maar de andere vragen bevestigen dat niet")
+                    if not SHOW_WORSE and css == "slechter":
+                        css, verdict = "avg", "niet duidelijk beter"
+                    n = pd.to_numeric(r.get("denominator"), errors="coerce")
+                    size = f" · {int(n):,} patiënten".replace(",", ".") if pd.notna(n) and n > 0 else ""
+                    groups.setdefault(title, []).append(f'{measured}{size} · <span class="v {css}">{verdict}</span>')
+                lines = [f'<div class="fact"><b>{title}</b><br>' + "<br>".join(items) + "</div>"
+                         for title, items in groups.items()]
+                unjudged = profile[profile["indicator"].astype(str).str.startswith("Verbetering volgens patiënt na 12")
+                                   & profile["verdict"].isna() & profile["position"].notna()]
+                if not unjudged.empty and "Herstel volgens patiënten" not in groups:
+                    reason = str(unjudged["position"].iloc[0])
+                    why = ("te weinig patiënten vulden de vragenlijst in" if "respons" in reason or "patiënten" in reason
+                           else "de cijfers in de bron kloppen niet")
+                    lines.append(f'<div class="fact"><b>Herstel volgens patiënten</b><br>'
+                                 f'<span class="v avg">geen oordeel: {why}</span></div>')
+                year = int(shown["verslagjaar"].max())
+                st.markdown("".join(lines) + f'<p class="note">Cijfers over {year}, bron: Zorginstituut Nederland. '
+                            'Bij kleine aantallen patiënten kan een verschil toeval zijn; dan zeggen we '
+                            '"niet duidelijk anders".</p>', unsafe_allow_html=True)
+                # a trend only for indicators that are also in this year's figures
+                trend = indicator_trend(con, row.location_key, proc)
+                if not trend.empty:
+                    last = trend.groupby("indicator")["verslagjaar"].transform("max")
+                    trend = trend[(last == year) & trend["indicator"].isin(shown["indicator"])]
+                sentences = trend_sentences(trend)
                 if not SHOW_WORSE:
                     sentences = [s for s in sentences if "slechter" not in s]
                 for sentence in sentences:
                     st.markdown(f"📈 {sentence}")
-                if pd.notna(row.volume):
-                    st.caption(f"{int(row.volume)} van deze operaties per jaar op deze locatie.")
+            if pd.notna(row.volume):
+                st.caption(f"{int(row.volume)} van deze operaties per jaar op deze locatie.")
+
+        # quality first: the best nearby hospitals, then which policy covers them, then the rest
+        st.markdown("#### Ziekenhuizen")
+        for row in near.head(3).itertuples():
+            render_card(row)
+        render_policies()
+        if len(near) > 3:
+            st.markdown(f"#### Meer ziekenhuizen binnen {search['radius']} km")
+            for row in near.iloc[3:].itertuples():
+                render_card(row)
 
 st.divider()
 st.markdown(
@@ -361,6 +412,7 @@ st.markdown(
     'er een infectie optreedt en hoe patiënten zelf hun herstel beoordelen.<br>'
     '<b>Beter dan gemiddeld</b>: op minstens één belangrijk punt duidelijk beter dan de meeste ziekenhuizen, en nergens '
     'duidelijk slechter. <b>Slechter dan gemiddeld</b> zeggen we alleen als het verschil heel duidelijk is. '
+    '<b>Geen duidelijk verschil</b>: de cijfers wijken niet duidelijk af, of er zijn te weinig patiënten om het zeker te weten. '
     'Universitaire ziekenhuizen behandelen vaker moeilijke gevallen; houd daar rekening mee.<br>'
     'Geen medisch of financieel advies. Een contract is geen garantie dat je terecht kunt: vraag het je verzekeraar.</p>',
     unsafe_allow_html=True)
