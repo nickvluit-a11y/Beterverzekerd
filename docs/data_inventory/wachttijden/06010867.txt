@@ -1,0 +1,602 @@
+source: https://www.franciscus.nl/wachttijden
+fetched: 2026-11-25
+
+Wachttijden | Franciscus
+Overslaan en naar de inhoud gaan
+Wachttijden
+U heeft van uw huisarts of behandelend specialist een verwijzing gekregen voor een afspraak op een polikliniek of onderzoek in ons ziekenhuis. Het duurt vaak even voordat u terecht kunt. Hieronder vindt u een actueel overzicht van de wachttijden (toegangstijd) in ons ziekenhuis. Dit is de periode tussen uw verwijzing door de huisarts en de eerstvolgende mogelijkheid om bij de specialist op het spreekuur te komen of een onderzoek te ondergaan. De wachttijden zijn altijd een indicatie. Soms moet u langer wachten, bijvoorbeeld als u voorkeur heeft voor een bepaalde arts. Voor spoedgevallen zijn er geen wachttijden.
+Wanneer u de wachttijd te lang vindt, kunt u altijd contact met ons opnemen, of uw zorgverzekeraar vragen om wachtlijstbemiddeling. Uw zorgverzekeraar kan u hierin ondersteunen, zodat u mogelijk sneller geholpen kunt worden. Zorgaanbieders en zorgverzekeraars zijn maximaal aanvaardbare wachttijden (Treeknormen) overeengekomen. Voor een intakegesprek is dit 4 weken vanaf uw eerste contact met de zorgaanbieder en voor de start van een behandeling 7 weken vanaf het intakegesprek.
+Spoed
+Wachttijden gelden niet voor spoedpatiënten. Uw huisarts kan bij medische noodzaak contact opnemen met het ziekenhuis voor een kortere wachttijd.
+Laatste wijziging: 23-11-2026
+Poliklinieken
+Borstkliniek
+Eerste afspraak
+Locatie
+Wachttijd
+Vlietland
+2 dagen
+Cardiologie
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+59 dagen
+Vlietland
+66 dagen
+Berkel
+65 dagen
+Maassluis
+63 dagen
+Willemsplein
+59 dagen
+Chirurgie
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+10 dagen
+Vlietland
+Langer dan 90 dagen
+Dermatologie
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+3 dagen
+Berkel
+18 dagen
+Eerste afspraak verdachte plekjes
+Locatie
+Wachttijd
+Gasthuis
+15 dagen
+Berkel
+25 dagen
+Geriatrie
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+13 dagen
+Vlietland
+10 dagen
+Berkel
+30 dagen
+Maassluis
+49 dagen
+Gynaecologie
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+65 dagen
+Vlietland
+67 dagen
+Berkel
+49 dagen
+Maassluis
+56 dagen
+Eerste afspraak Bekkenbodemcentrum
+Locatie
+Wachttijd
+Gasthuis
+20 dagen
+Vlietland
+15 dagen
+Interne Geneeskunde
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+Langer dan 90 dagen
+Vlietland
+87 dagen
+Berkel
+59 dagen
+Maassluis
+98 dagen
+Eerste afspraak Nefrologie
+Locatie
+Wachttijd
+Gasthuis
+77 dagen
+Vlietland
+70 dagen
+Berkel
+59 dagen
+Kaakchirurgie
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+5 dagen
+Vlietland
+5 dagen
+Keel, Neus en Oorheelkunde (KNO)
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+7 dagen
+Vlietland
+8 dagen
+Berkel
+7 dagen
+Maassluis
+7 dagen
+Willemsplein
+7 dagen
+Kindergeneeskunde
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+43 dagen
+Vlietland
+25 dagen
+Berkel
+49 dagen
+Maassluis
+Langer dan 90 dagen
+Longgeneeskunde
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+16 dagen
+Vlietland
+4 dagen
+Berkel
+Langer dan 90 dagen
+Maassluis
+15 dagen
+Willemsplein
+14 dagen
+Maag-, Darm- & Leverziekten
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+Langer dan 90 dagen
+Vlietland
+Langer dan 90 dagen
+Berkel
+Langer dan 90 dagen
+Neurochirurgie
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+9 dagen
+Vlietland
+65 dagen
+Neurologie
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+60 dagen
+Vlietland
+60 dagen
+Berkel
+60 dagen
+Maassluis
+60 dagen
+Eerste afspraak Hoofdpijnpolikliniek
+Locatie
+Wachttijd
+Gasthuis
+Langer dan 90 dagen
+Vlietland
+Langer dan 90 dagen
+Eerste afspraak Slaapcentrum
+Locatie
+Wachttijd
+Willemsplein
+78 dagen
+Obesitas Centrum
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+21 dagen
+Oogheelkunde
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+24 dagen
+Vlietland
+25 dagen
+Eerste afspraak Kinderen tot 10 jaar
+Locatie
+Wachttijd
+Gasthuis
+Langer dan 90 dagen
+Vlietland
+Langer dan 90 dagen
+Maassluis
+Langer dan 90 dagen
+Orthopedie
+Eerste afspraak Elleboog
+Locatie
+Wachttijd
+Gasthuis
+15 dagen
+Vlietland
+29 dagen
+Maassluis
+17 dagen
+Eerste afspraak Enkel-/voetgewricht
+Locatie
+Wachttijd
+Gasthuis
+51 dagen
+Vlietland
+22 dagen
+Berkel
+25 dagen
+Eerste afspraak Heup-/bekkengewricht
+Locatie
+Wachttijd
+Gasthuis
+25 dagen
+Vlietland
+17 dagen
+Berkel
+44 dagen
+Maassluis
+15 dagen
+Eerste afspraak Knie < 50 jaar
+Locatie
+Wachttijd
+Gasthuis
+25 dagen
+Vlietland
+23 dagen
+Berkel
+25 dagen
+Maassluis
+Langer dan 90 dagen
+Eerste afspraak Knie > 50 jaar
+Locatie
+Wachttijd
+Gasthuis
+25 dagen
+Vlietland
+23 dagen
+Berkel
+25 dagen
+Maassluis
+15 dagen
+Eerste afspraak Pols-/handgewricht
+Locatie
+Wachttijd
+Gasthuis
+9 dagen
+Vlietland
+7 dagen
+Eerste afspraak Schouder
+Locatie
+Wachttijd
+Gasthuis
+42 dagen
+Vlietland
+81 dagen
+Maassluis
+51 dagen
+Eerste afspraak Voorvoet
+Locatie
+Wachttijd
+Gasthuis
+14 dagen
+Vlietland
+15 dagen
+Berkel
+25 dagen
+Pijnbestrijding
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+Langer dan 90 dagen
+Vlietland
+Langer dan 90 dagen
+Plastische Chirurgie
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+4 dagen
+Vlietland
+24 dagen
+Reumatologie
+Eerste afspraak
+Locatie
+Wachttijd
+Gasthuis
+14 dagen
+Vlietland
+11 dagen
+Berkel
+18 dagen
+Maassluis
+45 dagen
+Rotterdams Duizeligheidscentrum
+Eerste afspraak
+Locatie
+Wachttijd
+Willemsplein
+Langer dan 90 dagen
+Slaapcentrum
+Eerste afspraak
+Locatie
+Wachttijd
+Willemsplein
+17 dagen
+Urologie
+Eerste afspraak Bekkenbodemcentrum
+Locatie
+Wachttijd
+Gasthuis
+45 dagen
+Vlietland
+Langer dan 90 dagen
+Eerste afspraak polikliniek urologie
+Locatie
+Wachttijd
+Gasthuis
+1 dagen
+Vlietland
+49 dagen
+Berkel
+Langer dan 90 dagen
+Willemsplein
+Langer dan 90 dagen
+Eerste afspraak Prostaatcentrum
+Locatie
+Wachttijd
+Gasthuis
+14 dagen
+Behandelingen
+Cardiologie
+Hartkatheterisatie (cardiologie)
+Locatie
+Wachttijd
+Gasthuis
+18 dagen
+Chirurgie
+Behandeling spataderen
+Locatie
+Wachttijd
+Gasthuis
+35 dagen
+Vlietland
+25 dagen
+Maagverkleining bij overgewicht
+Locatie
+Wachttijd
+Gasthuis
+Langer dan 90 dagen
+Operatie liesbreuk
+Locatie
+Wachttijd
+Gasthuis
+47 dagen
+Vlietland
+72 dagen
+Operatie navelbreuk
+Locatie
+Wachttijd
+Vlietland
+60 dagen
+Operatieve behandeling goedaardige aandoeningen van/rondom de anus (heelkunde)
+Locatie
+Wachttijd
+Gasthuis
+Langer dan 90 dagen
+Verwijderen galblaas
+Locatie
+Wachttijd
+Vlietland
+52 dagen
+Dermatologie
+Bypass-operatie als zelfstandige verrichting (cardiopulmonale chirurgie)
+Locatie
+Wachttijd
+Gasthuis
+27 dagen
+Gynaecologie
+Geïsoleerde/ op zichzelf staande baarmoederverwijdering (gynaecologie)
+Locatie
+Wachttijd
+Gasthuis
+Langer dan 90 dagen
+IUI-behandeling
+Locatie
+Wachttijd
+Gasthuis
+38 dagen
+IVF/ICSI-behandeling
+Locatie
+Wachttijd
+Gasthuis
+45 dagen
+Operatie bij urineverlies en/of verzakking
+Locatie
+Wachttijd
+Vlietland
+Langer dan 90 dagen
+Keel, Neus en Oorheelkunde (KNO)
+Operatie aan neustussenschot
+Locatie
+Wachttijd
+Vlietland
+81 dagen
+Plaatsen buisjes in oren
+Locatie
+Wachttijd
+Vlietland
+36 dagen
+Verwijderen amandelen en/of neuspoliepen
+Locatie
+Wachttijd
+Vlietland
+67 dagen
+Neurochirurgie
+Operatieve behandeling hernia nuclei pulposi/kanaalstenose (orthopedie, neurochirurgie)
+Locatie
+Wachttijd
+Gasthuis
+61 dagen
+Oogheelkunde
+Initiële staaroperatie (oogheelkunde)
+Locatie
+Wachttijd
+Gasthuis
+49 dagen
+Orthopedie
+Heupprothese
+Locatie
+Wachttijd
+Vlietland
+Langer dan 90 dagen
+Kijkoperatie knie
+Locatie
+Wachttijd
+Vlietland
+46 dagen
+Operatie carpaal tunnel syndroom
+Locatie
+Wachttijd
+Vlietland
+Langer dan 90 dagen
+Operatie meniscus en/of kniebanden
+Locatie
+Wachttijd
+Vlietland
+88 dagen
+Plastische Chirurgie
+Operatie bij triggerfinger
+Locatie
+Wachttijd
+Gasthuis
+44 dagen
+Vlietland
+56 dagen
+Operatie carpaal tunnel syndroom
+Locatie
+Wachttijd
+Vlietland
+56 dagen
+Urologie
+Besnijdenis
+Locatie
+Wachttijd
+Gasthuis
+48 dagen
+Operatie bij vergrote prostaat
+Locatie
+Wachttijd
+Gasthuis
+Langer dan 90 dagen
+Sterilisatie man
+Locatie
+Wachttijd
+Gasthuis
+14 dagen
+Vlietland
+14 dagen
+Verwijderen niersteen
+Locatie
+Wachttijd
+Gasthuis
+69 dagen
+Onderzoeken
+Botdichtheidsmeting (DEXA)
+Locatie
+Wachttijd
+Vlietland
+16 dagen
+Colonoscopie
+Locatie
+Wachttijd
+Gasthuis
+26 dagen
+Vlietland
+40 dagen
+CT-scan
+Locatie
+Wachttijd
+Gasthuis
+Langer dan 90 dagen
+Vlietland
+8 dagen
+Doppler
+Locatie
+Wachttijd
+Gasthuis
+11 dagen
+Vlietland
+2 dagen
+Echografie
+Locatie
+Wachttijd
+Gasthuis
+16 dagen
+Berkel
+14 dagen
+Fundusfoto
+Locatie
+Wachttijd
+Vlietland
+14 dagen
+Gastroscopie
+Locatie
+Wachttijd
+Gasthuis
+16 dagen
+Vlietland
+3 dagen
+Gynaecologische echo
+Locatie
+Wachttijd
+Gasthuis
+50 dagen
+Vlietland
+50 dagen
+Berkel
+Langer dan 90 dagen
+Longfunctie onderzoek
+Locatie
+Wachttijd
+Gasthuis
+14 dagen
+Vlietland
+21 dagen
+Mammografie
+Locatie
+Wachttijd
+Gasthuis
+Langer dan 90 dagen
+Vlietland
+28 dagen
+MRI-scan
+Locatie
+Wachttijd
+Gasthuis
+24 dagen
+Vlietland
+25 dagen
+Röntgenfoto
+Locatie
+Wachttijd
+Gasthuis
+3 dagen
+Vlietland
+3 dagen
+Berkel
+1 dagen
+Maassluis
+1 dagen

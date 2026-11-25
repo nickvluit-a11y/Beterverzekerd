@@ -1,0 +1,237 @@
+source: https://flevoziekenhuis.nl/opname-bezoek/wachttijden
+fetched: 2026-11-25
+
+Wachttijden - Flevoziekenhuis Almere
+Wachttijden
+Laat de tekst voorlezen met ReadSpeaker webReader
+Lees voor
+Het Flevoziekenhuis streeft ernaar u zo snel mogelijk van dienst te zijn. Bij de meeste specialisten kunt u al op korte termijn terecht. Wanneer dat niet mogelijk is, is er sprake van een wachttijd. In de tabel hieronder vindt u een inschatting van de wachttijd per specialisme. Als u een specifieke specialist wilt spreken kan de wachttijd anders zijn dan in de tabel vermeld staat. Wilt u zo snel mogelijk geholpen worden? Vraag dan naar de specialist met de kortste wachttijd. Als de huisarts aangeeft dat er sprake is van spoed kunt u meestal direct terecht.
+Peildatum 12 november 2026
+Specialisme
+Anesthesie
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- poli Pijnbestrijding*
+64
+Cardiologie
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- poli Cardiologie*
+31
+Chirurgie
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- poli Chirurgie
+- liesbreuk
+- mammapoli/borstonderzoek
+- proctologie
+- vaatchirurgie
+2
+22
+13
+24
+11
+Behandeling:
+- galblaasverwijdering bij galstenen
+​- goedaardige aandoeningen van/rondom de anus
+- liesbreuk
+- navelbreuk
+22
+24
+22
+22
+Dermatologie
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- oncologie (verdachte plek)
+- poli Dermatologie
+13
+29
+Gynaecologie
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+-infertiliteit
+- Poli Gynaecologie
+-Incontinentie voor de vrouw
+Diagnostiek:
+- baarmoederhalsafwijkingen uitstrijkje
+Behandeling:
+- baarmoederverwijdering
+- incontinentie en/of verzakking bij de vrouw
+84
+64
+92
+14
+35
+30
+Interne geneeskunde
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- endocrinologie*
+- oncologie*
+- poli Interne geneeskunde*
+35
+8
+25
+Kaakchirurgie
+Polikliniek:
+- poli Kaakchirurgie*
+42
+Keel-, Neus- en Oorheelkunde
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- doofheid en gehoorverlies*
+- poli KNO*
+Diagnostiek:
+- slaapapneu
+- slaaponderzoek/polysomnografie
+Behandeling:
+-tonsillectomie en/of adenotomie
+-Plaatsen middenoorbeluchtingsbuisjes
+- neustussenschot-correctie
+9
+9
+60
+20
+40
+30
+75
+Longziekten
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- poli Longziekten*
+Diagnostiek:
+- slaapapneu
+- slaaponderzoek/polysomnografie
+29
+60
+20
+Maag-, Darm- en Leverziekten
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- poli MDL* **
+Diagnostiek:
+- colonscopie
+- gastroscopie
+75
+75
+75
+Nefrologie
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- locatie Almere
+- locatie Lelystad
+3
+3
+Neurochirurgie
+Polikliniek:
+- hernia rug
+- Poli Neurochirurgie
+65
+65
+Neurologie
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- hernia rug*
+- poli Neurologie*
+45
+45
+Oogheelkunde
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- poli Oogheelkunde*
+- staar*
+Behandeling:
+- staaroperatie
+500
+500
+28
+Orthopedie
+Verwachte wachttijd
+(dagen)
+Polikliniek:
+- schouderklachten*
+- poli Orthopedie
+Behandeling:
+- kijkoperatie knie
+- nieuwe heup
+- nieuwe knie
+22
+28
+29
+26
+29
+Plastische Chirurgie
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- oncologie
+- poli Plastische chirurgie
+Behandeling:
+- borstreconstructie
+5
+14
+40
+Radiologie
+Verwachte wachttijd
+(kalenderdagen)
+Diagnostiek:
+- CT
+- MRI hersenen
+- MRI heup/onderste extremiteiten
+- MRI nek
+- MRI rug
+- MRI schouder/bovenste extremiteiten
+- botdichtheidsmeting DEXA meting
+- echografie
+- mammografie
+- röntgen
+13
+27
+34
+27
+34
+34
+20
+28
+11
+0
+Reumatologie
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- poli Reumatologie*
+29
+Urologie
+Verwachte wachttijd
+(kalenderdagen)
+Polikliniek:
+- poli Urologie*
+Behandeling:
+- prostaatcarcinoom
+- vergrote prostaat
+20
+28
+28
+Metingen gebaseerd op de 3de mogelijkheid in het afsprakenregister. Aan de hier genoemde wachttijden voor de polikliniek kunnen geen rechten worden ontleend.
+*De wachttijd van deze poliklinieken is afhankelijk van de urgentieclassificatie. Deze classificatie wordt door een arts toegekend en is afhankelijk van uw aandoening of klachten. Dit kan betekenen dat patiënten langer dan gebruikelijk moeten wachten op een afspraak voor minder urgente diagnostiek of behandeling. In sommige gevallen betekent dit ook dat patiënten eerder geholpen kunnen worden dan de hierboven genoemde wachttijden.
+** Voor de polikliniek MDL geldt een tijdelijke stop op nieuwe patiënten die van buiten de regio Almere komen. Dit vanwege de toegenomen wachttijden.
+Wachttijden ziekenhuizen en klinieken in Nederland
+Hoe snel kunt u bij een ziekenhuis of kliniek terecht? Dit kan per zorgaanbieder verschillen. Klik hier voor informatie over wachttijden bij ziekenhuizen en klinieken in Nederland.
+Wanneer u de wachttijd te lang vindt, kunt u altijd contact met ons opnemen, of uw zorgverzekeraar vragen om wachtlijstbemiddeling. Uw zorgverzekeraar kan u hierin ondersteunen, zodat u mogelijk sneller geholpen kunt worden. De maximaal aanvaardbare wachttijd die door zorgaanbieders en zorgverzekeraars gezamenlijk is overeengekomen (de Treeknorm) bedraagt voor de toegang tot de polikliniek en diagnostiek 4 weken (28 kalenderdagen). Voor behandeling is de maximaal aanvaardbare wachttijd 7 weken (49 kalenderdagen).
+Bij de berekening van wachttijden worden alle kalenderdagen meegeteld, inclusief weekenddagen en feestdagen.
+Deze website maakt gebruik van cookies
+Deze website maakt gebruik van geanonimiseerde cookies om jouw gebruikservaring te optimaliseren en voor de analyse van onze website. Deze cookies kun je niet uitzetten. Bij het tonen en afspelen van YouTube video's worden cookies van derden geplaatst. Deze cookies van derden kun je wel uitzetten. Klik op "Akkoord" als je akkoord gaat met dit gebruik van cookies, klik op "Aanpassen" voor meer informatie en om zelf te bepalen welke cookies deze website plaatst.
+Deze website maakt gebruik van geanonimiseerde cookies om jouw gebruikservaring te optimaliseren en voor de analyse van onze website. Deze cookies kun je niet uitzetten. Bij het tonen en afspelen van YouTube video's worden cookies van derden geplaatst. Deze cookies van derden kun je wel uitzetten. Klik op "Akkoord" als je akkoord gaat met dit gebruik van cookies, klik op "Aanpassen" voor meer informatie en om zelf te bepalen welke cookies deze website plaatst.

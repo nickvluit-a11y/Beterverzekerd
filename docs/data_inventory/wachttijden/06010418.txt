@@ -1,0 +1,745 @@
+source: https://www.saxenburgh.nl/onze-zorg/wachttijden
+fetched: 2026-11-25
+
+Wachttijden - Saxenburgh
+Wij, en derde partijen, maken op onze website gebruik van cookies.
+Wij gebruiken cookies voor het bijhouden van statistieken, om jouw voorkeuren op te slaan, maar ook voor marketingdoeleinden.
+Door op "Accepteren" te klikken, ga je akkoord met het gebruik van alle cookies zoals omschreven in onze
+cookieverklaring .
+Kies je "Weigeren", dan gebruiken we alleen functionele cookies.
+cookies#accept"
+>
+Accepteren
+cookies#deny"
+>
+Weigeren
+scroll#toggleArrow" class="fixed bottom-0 right-0 z-40 pointer-events-none bg-primary-500 text-white rounded-tl-lg p-15 transition print:hidden">
+Naar Homepage
+Onze zorg
+Wachttijden
+Wachttijden
+Wachttijden
+Printen
+Laat de tekst voorlezen met ReadSpeaker webReader
+Lees voor
+Over onze wachttijden
+Voor behandeling en onderzoek in het ziekenhuis of polikliniek geldt vaak een wachttijd. Saxenburgh doet er alles aan om de wachttijd zo kort mogelijk te houden. We publiceren maandelijks de te verwachten wachttijden. Deze worden vermeld in kalenderdagen.
+Wachttijdnormen
+Dit overzicht is opgesteld naar de landelijke richtlijn: iedere derde beschikbare plaats wordt vermeld. Dit is zo afgesproken om te voorkomen dat er kort na elkaar een paar afspraken worden gemaakt en daardoor een langere wachttijd ontstaat. In de praktijk kunt u dus meestal eerder terecht. De medische urgentie van een onderzoek of een behandeling is altijd bepalend.
+Let op: bij spoedgevallen kunt u na verwijzing van de huisarts terecht op de Spoed Eisende Hulp.
+Wanneer u de wachttijd te lang vindt, kunt u altijd contact met ons opnemen, of uw zorgverzekeraar vragen om wachtlijstbemiddeling. Uw zorgverzekeraar kan u hierin ondersteunen, zodat u mogelijk sneller geholpen kunt worden. De maximaal aanvaardbare wachttijd die door zorgaanbieders en zorgverzekeraars gezamenlijk is overeengekomen (de Treeknorm) bedraagt voor de toegang tot de polikliniek en diagnostiek 4 weken. Voor behandeling is de maximaal aanvaardbare wachttijd 7 weken. Bekijk voor meer informatie over wachtlijstbemiddeling op: Vraag je zorgverzekeraar om wachtlijstbemiddeling.
+Zoeken
+Binnen alle locaties
+Binnen alle ziekenhuiszorg locaties
+Saxenburgh Medisch Centrum
+Spoed | Huisartsenpost
+Kinderpoli Saxenburgh
+Saxenburgh Polikliniek Ommen
+Gezondheidscentrum De Veltstroom Coevorden
+Saxenburgh Polikliniek Westerhaar
+Dialysecentrum Hardenberg
+Open MRI Nederland
+Saxenburgh Revalidatiecentrum
+Binnen alle ouderenzorg locaties
+Aleida Kramer
+Marsch Kruserbrink
+Nijenhaghen
+Oldenhaghen
+Oostloorn
+Schoutenhof
+'t Vlierhuis
+'t Welgelegen
+Clara Feyoena Heem
+Binnen alle dagbesteding locaties
+De Posthoorn
+De Stekkenkamp
+De Vechtoever
+Meander
+Het Haghenhuis
+Binnen alle wijksteunpunt locaties
+Nijenhaghen, Ommen
+Oldenhaghen, Ommen
+Oostloorn, Hardenberg
+’t Welgelegen, Gramsbergen
+De Schout, Hardenberg
+Aleida Kramer, Coevorden
+overview#scroll">A
+B
+overview#scroll">C
+overview#scroll">D
+E
+F
+overview#scroll">G
+H
+overview#scroll">I
+J
+overview#scroll">K
+overview#scroll">L
+overview#scroll">M
+overview#scroll">N
+overview#scroll">O
+overview#scroll">P
+Q
+overview#scroll">R
+overview#scroll">S
+T
+overview#scroll">U
+overview#scroll">V
+W
+X
+Y
+Z
+Wachttijden in dagen. Actuele wachttijden per 23 november 2026 .
+Anesthesiologie-pijngeneeskunde
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Polikliniek
+Anesthesie pijnpoli
+143
+Cardiologie
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Behandeling
+Hartkatheterisatie
+11
+Pacemaker implantatie
+22
+Diagnostiek
+Hartecho
+3
+10
+Hartfilm bij inspanning
+2
+10
+Hartfilm in rust
+0
+2
+1
+Polikliniek
+Cardiologie
+7
+18
+8
+66
+Pijn op de borst
+7
+Ritme- en geleidingsstoornissen (hartkloppingen)
+7
+Chirurgie
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Behandeling
+(vaat)chirurgische behandeling spataderen (heelkunde)
+9
+Galblaasverwijdering
+14
+Operatieve behandeling goedaardige aandoeningen van/rondom de anus (heelkunde)
+14
+Operatieve behandeling liesbreuk (hernia inguinalis/ hernia femoralis) (heelkunde)
+42
+Operatieve behandeling navelbreuk (hernia umbilicalis) bij volwassenen (heelkunde)
+14
+Operatieve verwijdering borstkanker
+14
+Spataderbehandeling m.b.v. vnus
+9
+Diagnostiek
+Doppler
+16
+Polikliniek
+Bariatrie
+21
+Chirurgie
+9
+Gespecialiseerde wondzorg
+7
+Kleine verrichting pok (poliklinische operatiekamer)
+10
+Liesbreuk
+9
+Mammapolikliniek
+4
+Proctologie
+42
+Prolaps/fecale incontinentie
+21
+Schildklierproblemen
+70
+Symptomatisch galsteenlijden
+9
+Vaatchirurgie
+9
+Varices/veneuze insufficiëntie
+44
+Vasectomie
+49
+Dermatologie
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Polikliniek
+Dermatologie
+87
+87
+87
+Dermatologie - oncologie (verdachte plek)
+7
+Diagnostiek
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Diagnostiek
+Ct-scan (radiologie)
+7
+Dexa scan
+10
+Duplex onderzoeken, dubbelzijdig
+16
+Duplex onderzoeken, enkelzijdig
+16
+Echografie
+28
+Mammografie (radiologie)
+2
+Mammografie normale groep
+4
+Mri bekken
+22
+Mri hersenen
+22
+Mri heup(en)/ onderste extremiteit(en)
+22
+Mri rug
+22
+Mri schouder(s)/bovenste extremiteit(en)
+22
+Mri-scan (radiologie)
+22
+Röntgen (radiologie)
+0
+0
+0
+Röntgen oesophagus
+21
+Thorax/skelet onderzoeken
+0
+0
+0
+Verslaglegging
+1
+1
+1
+Geriatrie
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Polikliniek
+Geheugenpoli
+28
+30
+23
+Geriatrie
+16
+38
+23
+Osteoporose
+29
+Polifarmacie
+16
+Valpoli
+38
+Gynaecologie
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Behandeling
+Baarmoederverwijdering
+88
+Baarmoederverwijdering met andere ingre(e)p(en)
+108
+Intra uterine inseminatie
+90
+Operatieve behandeling urine-incontinentie en/of verzakking bij vrouw (gynaecologie)
+88
+Sterilisatie vrouw
+72
+Diagnostiek
+Baarmoederhalsafwijkingen uitstrijkje (gynaecologie)
+14
+Polikliniek
+Buikpijn
+90
+90
+90
+Endometriose
+88
+88
+88
+Gynaecologie
+90
+90
+90
+Gynaecologische echo
+90
+90
+90
+Gynaecologische oncologie
+7
+7
+7
+Infertiliteit
+90
+90
+90
+Menopauzale klachten
+126
+126
+126
+Menstruatiestoornis
+90
+90
+90
+Postmenopauzaal bloedverlies
+90
+90
+90
+Prolaps en incontinentie voor de vrouw
+90
+90
+90
+Spiraal plaatsen
+90
+90
+90
+Verzakking bij de vrouw
+90
+90
+90
+Interne geneeskunde
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Polikliniek
+Endocrinologie
+69
+Immunologie
+69
+Interne geneeskunde
+69
+69
+69
+69
+Nefrologie
+69
+Oncologie
+8
+Kindergeneeskunde
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Diagnostiek
+Ecg bj kinderen <18 jaar
+22
+44
+Polikliniek
+Ha ecg < 18 jaar
+22
+44
+Kindergeneeskunde
+22
+44
+45
+Kindergeneeskunde - algemeen
+21
+Kindergeneeskunde - cardiologie
+22
+Kindergeneeskunde - interne geneeskunde
+22
+Kindergeneeskunde - neurologie
+22
+Kindergeneeskunde - orthopedie
+22
+KNO-heelkunde
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Behandeling
+Anti-snurkbehandeling (operatieve behandeling) (kno)
+77
+Flapoorcorrecties
+77
+Neustussenschotcorrectie
+77
+Ooroperaties (overig)
+77
+Operatie aan bijholten
+77
+Stembandoperaties
+77
+Tonsillectomie en/of adenotomie (kno)
+77
+Trommelvliesbuisjes plaatsen
+45
+Trommelvliessluiting
+91
+Verwijdering van neus- en/of keelamandelen(kind)
+45
+Polikliniek
+Aangezichtsverlamming
+1
+1
+Acuut ontstane enkelzijdige slechthorendheid
+4
+1
+Bloedneus
+18
+22
+Duizeligheid
+18
+22
+Keelklachten
+18
+22
+Kno
+18
+22
+Kno
+58
+Kno - doofheid en gehoorverlies
+57
+Kno aandoeningen kind
+18
+22
+Neuspassageklachten
+18
+22
+Snurken
+18
+22
+Toonspraakaudiometrie consult kno
+58
+57
+Longziekten
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Behandeling
+Anti-snurkbehandeling (cpap)
+24
+Diagnostiek
+22
+Polygrafie
+56
+Slaapapnoe diagnostisch onderzoek / screening
+24
+Slaaponderzoek / polysomnografie (longgeneeskunde)
+24
+Spirometrie
+1
+1
+7
+Spirometrie met medicatie
+37
+3
+28
+Vo2-max
+22
+Polikliniek
+Astma
+4
+4
+4
+4
+Bloed ophoesten,verdenking kanker
+1
+Kortademigheid/copd
+4
+4
+4
+4
+Longgeneeskunde
+4
+4
+4
+Longgeneeskunde - algemeen
+4
+Slaapapneu
+24
+24
+24
+Verdenking maligniteit (afwijkende longfoto)
+1
+1
+1
+1
+Maag-darm-leverziekten
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Diagnostiek
+Dikkedarmonderzoek met slaapmedicijnen
+12
+Maagonderzoek met slaapmedicijnen
+12
+Maagonderzoek op de polikliniek
+10
+Polikliniek
+Maag-darm-leverziekten
+365
+Neurologie
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Diagnostiek
+Eeg
+10
+Emg
+17
+Polikliniek
+Geheugen poli
+237
+Nazorgpoli cva patiënten
+9
+Neurologie
+237
+237
+237
+Tia analyse
+3
+Oogheelkunde
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Behandeling
+Staaroperatie
+35
+Polikliniek
+Oogheelkunde
+273
+273
+Verwijzing staar
+23
+Orthopedie
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Behandeling
+Kijkoperatie knie
+17
+Operatie van de meniscus en/of kniebanden
+37
+Totale heup operatie
+29
+Totale knie operatie
+29
+Polikliniek
+Acute letsels sportspreekuur
+0
+Chronisch letsel sportspreekuur
+14
+Heupdysplasie bij pasgeborene
+18
+Knie- of heupprothese
+14
+14
+14
+Meniscusletsel
+14
+14
+14
+Orthopedie
+14
+14
+14
+14
+Schouderpoli
+74
+Sportspreekuur
+14
+Plastische chirurgie
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Behandeling
+Behandeling cts
+49
+Dupuytren
+46
+Operatieve borstreconstructie (plastische chirurgie)
+46
+Triggerfingerrelease (plastische chirurgie)
+49
+Polikliniek
+Kleine verrichting pok (poliklinische operatiekamer)
+49
+Kleine verrichting pok (poliklinische operatiekamer) huid
+49
+Plastische chirurgie algemeen
+21
+Plastische chirurgie oncologie
+14
+Reumatologie
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Polikliniek
+Artrose
+130
+Fibromyalgie
+130
+Inflammatoire rugpijn-verdenking m. bechterew
+14
+Jicht/monoartritis
+14
+Pmr(polymyalgia reumatica)/artritis temporalis (rca)
+14
+Polyartritis (ra/systeemziekten/artritis psoriatica)
+130
+Reumatologie
+130
+Schouderproblematiek
+130
+Verdenking septische artritis
+1
+Revalidatiegeneeskunde
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Behandeling
+Hartrevalidatie (revalidatiegeneeskunde)
+7
+Longrevalidatie (revalidatiegeneeskunde)
+11
+Revalidatie na beroerte (revalidatiegeneeskunde)
+11
+Polikliniek
+Kinderrevalidatie
+70
+Revalidatie
+37
+59
+Schoenenspreekuur
+52
+73
+Technisch spreekuur
+45
+Sportgeneeskunde
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Polikliniek
+Groot sportmedisch onderzoek sportgeneeskunde
+60
+Sportgeneeskunde
+28
+Sportrevalidatie na covid-19
+28
+Urologie
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Behandeling
+Besnijdenis als zelfstandige verrichting (urologie, heelkunde)
+24
+Operatieve behandeling bij vergrote prostaat (urologie)
+24
+Operatieve behandeling blaaskanker
+17
+Operatieve behandeling urine-incontinentie en/of blaasverzakking bij man (urologie)
+56
+Sterilisatie man als zelfstandige verrichting (urologie, heelkunde)
+361
+Polikliniek
+Analyse afwijking balzak
+87
+Hematurie macroscopisch
+10
+Hematurie microscopisch
+108
+Incontinentie
+112
+Mictieklachten bij mannen/luts (lower urinary tract syptoms)
+113
+Niet ingedaalde testis
+106
+Recidiverende of chronische urineweginfecties
+108
+Urologie
+120
+Verdachte prostaat
+9
+Verloskunde
+Omschrijving
+Hardenberg
+Coevorden
+Ommen
+Westerhaar
+Dedemsvaart
+Polikliniek
+Verloskunde
+7
+7
+7

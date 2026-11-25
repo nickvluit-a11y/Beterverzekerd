@@ -1,0 +1,385 @@
+source: https://www.dz.nl/patient/wachttijden
+fetched: 2026-11-25
+
+Wachttijden | Deventer Ziekenhuis
+Translate text
+Please follow this instruction:
+Select the text you want to translate.
+Choose 'Vertalen'.
+Select the language you prefer.
+You can read and/or listen to the translated text (by Google).
+Sluiten
+Wij maken gebruik van cookies
+We bieden u via onze website graag relevante en actuele informatie. Om uw bezoek aan onze website te verbeteren, gebruiken we cookies. Om het gebruik van onze site te meten bijvoorbeeld, maar ook om Youtube video's af te spelen. Verder zijn cookies nodig om informatie van onze website te kunnen delen via social media. Deze cookies zijn nooit herleidbaar tot uw persoonlijke gegevens en we gebruiken ze nooit voor commerciële doeleinden. Lees hier meer over in ons Privacy- en Cookiebeleid. Door op Akkoord te klikken, accepteert u alle cookies.
+cookies#accept">
+Cookies accepteren
+cookies#deny">
+Cookies weigeren
+scroll#toggleArrow" class="fixed bottom-0 inset-x-0 z-40 h-12 pointer-events-none">
+Patiënt
+Wachttijden
+Als u (of uw huisarts) voor het eerst een afspraak maakt, duurt het soms even voordat u terechtkunt. Wij doen altijd ons best de wachttijd zo kort mogelijk te houden, zodat u zo spoedig mogelijk in ons ziekenhuis gezien kunt worden.
+Wat zijn eigenlijk onze toegangs- en wachttijden? En, wat kunt u doen als u eerder geholpen moet of wilt worden? Een korte uitleg.
+Wat is de toegangstijd?
+De tijd tussen uw verwijzing naar het ziekenhuis voor een eerste afspraak, tot het daadwerkelijke moment van uw eerste consult, dat noemen we de toegangstijd (ook wel wachttijd tot eerste consult).
+Wat is de wachttijd tot behandeling?
+Dit is de wachttijd tussen het moment dat bepaald is dat u behandeld of verder onderzocht moet worden, tot het moment van een poliklinische of klinische behandeling of onderzoek. Als hiervoor een afspraak gemaakt moet worden, kunnen de wachttijden per afdeling verschillen. We proberen u altijd zo spoedig mogelijk te helpen met uw behandeling.
+accordion#toggle" class="accordion__toggle flex w-full text-left items-center justify-between py-4 font-medium hover:text-blue">
+Moet u altijd wachten?
+De medische urgentie van een onderzoek of een behandeling is altijd bepalend. Sommige onderzoeken en/of behandelingen kunnen niet uitgesteld worden of moeten op kortere termijn plaatsvinden. Uw huisarts en uw medisch specialist bepalen deze urgentie. Voor urgente gevallen is op kortere termijn plek beschikbaar.
+accordion#toggle" class="accordion__toggle flex w-full text-left items-center justify-between py-4 font-medium hover:text-blue">
+Wat zijn wachttijdnormen?
+Overheid, zorgverzekeraars en ziekenhuizen hebben afspraken gemaakt over acceptabele wachttijden. Voor toegang tot polikliniek en diagnostiek is dat vier weken. Voor behandeling is dat maximaal zeven weken. Het kan voorkomen dat een ziekenhuis langere wachttijden heeft, bijvoorbeeld omdat er veel vraag naar zorg is. Het Deventer Ziekenhuis doet er alles aan om wachttijden te bieden die onder de norm liggen. Als dat onverhoopt niet lukt, doen we er alles aan om de wachttijden te verkorten.
+accordion#toggle" class="accordion__toggle flex w-full text-left items-center justify-between py-4 font-medium hover:text-blue">
+U vindt de wachttijd te lang, wat kunt u doen?
+Wanneer u de wachttijd te lang vindt, kunt u uw zorgverzekeraar vragen om wachtlijstbemiddeling. Uw zorgverzekeraar kan u hierin ondersteunen, zodat u mogelijk sneller geholpen kunt worden. De maximaal aanvaardbare wachttijd die door zorgaanbieders en zorgverzekeraars gezamenlijk is overeengekomen (de Treeknorm) bedraagt voor de toegang tot de polikliniek en diagnostiek 4 weken. Voor behandeling is de maximaal aanvaardbare wachttijd 7 weken.
+Ziekenhuischeck
+Om een beter beeld te kunnen vormen over de wachttijden in de zorg, hebben ziekenhuizen de website Ziekenhuischeck gemaakt. U kunt informatie over wachttijden, kwaliteit en de behandelresultaten van ieder ziekenhuis bekijken via Ziekenhuischeck.nl .
+Ons wachttijdenoverzicht wordt elke 2 weken aangepast. Deze pagina is op 25 november 2026 voor het laatst geactualiseerd.
+Cardiologie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Cardiologie
+polikliniek
+eerste afspraak
+11 dagen
+Dermatologie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Dermatologie
+polikliniek
+eerste afspraak
+85 dagen
+Spataderen
+behandeling
+eerste behandeling
+62 dagen
+Geriatrie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Geriatrie
+polikliniek
+eerste afspraak
+44 dagen
+Gynaecologie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Baarmoederverwijdering
+behandeling
+61 dagen
+Gynaecologie
+polikliniek
+eerste afspraak
+210 dagen
+Incontinentie vrouw
+behandeling
+65 dagen
+Incontinentie vrouw
+polikliniek
+210 dagen
+Oncologie
+polikliniek
+eerste afspraak
+1 dag
+Sterilisatie vrouw
+behandeling
+eerste behandeling
+Variabel
+Voortplantingsgeneeskunde
+polikliniek
+eerste afspraak
+120 dagen
+Heelkunde
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Borstcentrum
+polikliniek
+eerste afspraak
+2 dagen
+Carpaal tunnel syndroom
+behandeling
+eerste behandeling
+50 dagen
+Galblaas
+behandeling
+52 dagen
+Heelkunde
+polikliniek
+eerste afspraak
+5 dagen
+Heelkunde - vaatpoli
+polikliniek
+eerste afspraak
+38 dagen
+Liesbreuk
+behandeling
+60 dagen
+Spataderen
+behandeling
+eerste behandeling
+62 dagen
+Interne geneeskunde
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Interne Geneeskunde
+polikliniek
+eerste afspraak
+5 dagen
+Interne Geneeskunde (oncologie)
+polikliniek
+eerste afspraak
+10 dagen
+Keel-, neus- en oorheelkunde
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+KNO - Heelkunde
+polikliniek
+eerste afspraak
+10 dagen
+Neus- en/of keelamandelen
+behandeling
+22 dagen
+Neustussenschotcorrectie
+behandeling
+eerste behandeling
+71 dagen
+Oorbuisjes
+behandeling
+16 dagen
+Kindergeneeskunde
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Kinderallergologie
+polikliniek
+eerste afspraak
+Variabel
+Kindergeneeskunde
+polikliniek
+eerste afspraak
+43 dagen
+Longziekten
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Longgeneeskunde
+polikliniek
+eerste afspraak
+37 dagen
+Oncologie
+polikliniek
+eerste afspraak
+1 dag
+Maag-, darm en leverziekten
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Coloscopie
+onderzoek
+eerste onderzoek
+26 dagen
+Gastroscopie
+onderzoek
+eerste onderzoek
+30 dagen
+Maag-, Darm- en Leverziekten
+polikliniek
+eerste afspraak
+45 dagen
+Mondziekten, Kaak- en Aangezichtschirurgie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Mondziekten, Kaak- en Aangezichtschirurgie (kaakchirurgie)
+polikliniek
+eerste afspraak
+30 dagen
+Mondziekten, Kaak- en Aangezichtschirurgie (kaakchirurgie)
+behandeling
+eerste behandeling
+Variabel
+Mondziekten, Kaak- en Aangezichtschirurgie (kaakchirurgie)
+onderzoek
+eerste onderzoek
+Variabel
+Neurologie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Neurologie
+polikliniek
+eerste afspraak
+81 dagen
+Oogheelkunde
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Oogheelkunde
+polikliniek
+eerste afspraak
+140 dagen
+Staaroperatie
+behandeling
+eerste behandeling
+78 dagen
+Orthopedie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Een nieuwe knie
+behandeling
+de eerste behandeling
+104 dagen
+Kijkoperatie van de knie
+behandeling
+eerste behandeling
+85 dagen
+Orthopedie
+polikliniek
+eerste afspraak
+15 dagen
+Salland Kliniek
+polikliniek
+eerste afspraak
+10 dagen
+Totale heupoperatie
+behandeling
+eerste behandeling
+69 dagen
+Pijnbestrijding / anesthesiologie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Pijncentrum Oost-Nederland
+polikliniek
+eerste afspraak
+22 dagen
+Plastische chirurgie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Borstcorrectie
+behandeling
+eerste behandeling
+Variabel
+Plastische chirurgie
+polikliniek
+eerste afspraak
+25 dagen
+Ziekte van Dupuytren
+behandeling
+63 dagen
+Radiologie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+CT-onderzoek
+onderzoek
+eerste onderzoek
+44 dagen
+Echografie
+onderzoek
+43 dagen
+MRI hersenen
+onderzoek
+60 dagen
+MRI heup(en)/onderste extremiteit(en)
+onderzoek
+eerste onderzoek
+52 dagen
+MRI nek
+onderzoek
+57 dagen
+MRI rug
+onderzoek
+eerste onderzoek
+52 dagen
+MRI schouder(s)/armen/handen
+onderzoek
+43 dagen
+Röntgen
+onderzoek
+eerste onderzoek
+11 dagen
+Reumatologie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Reumatologie
+polikliniek
+eerste afspraak
+275 dagen
+Revalidatie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Revalidatiecentrum
+polikliniek
+eerste afspraak
+44 dagen
+Urologie
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Oncologie prostaat
+polikliniek
+Variabel
+Prostaatoperatie
+behandeling
+60 dagen
+Sterilisatie man
+behandeling
+eerste behandeling
+Variabel
+Urologie
+polikliniek
+eerste afspraak
+72 dagen
+Sportgeneeskunde
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Sportgeneeskunde
+polikliniek
+eerste afspraak
+73 dagen
+Sportgeneeskunde
+onderzoek
+eerste onderzoek
+60 dagen
+Salland Kliniek
+Omschrijving
+Type
+Wachttijd tot
+Wachttijd
+Salland Kliniek
+polikliniek
+10 dagen

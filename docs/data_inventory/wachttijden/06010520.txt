@@ -1,0 +1,124 @@
+source: https://www.ziekenhuisrivierenland.nl/uw-afspraak/wachttijden
+fetched: 2026-11-25
+
+Wachttijden
+Pagina printen / opslaan Pagina printen / opslaan Laat de tekst voorlezen met ReadSpeaker webReader Lees voor
+Op deze pagina leest u meer informatie over de wacht- en toegangstijden in Ziekenhuis Rivierenland.
+Informatie wachttijden en toegangstijden
+U leest de wacht- en toegangstijden van Ziekenhuis Rivierenland in dit bestand (https://www.ziekenhuisrivierenland.nl/media/evrkfqda/zrt-wachttijden-20261109.pdf) . Dit overzicht wordt regelmatig bijgewerkt en bestaat uit 3 delen.
+Toegangstijd polikliniek
+Er is voor u een afspraak gemaakt op de polikliniek. Soms duurt het enkele weken voordat u terecht kunt op de polikliniek. Dit noemen we de ‘toegangstijd polikliniek’.
+Wachttijd diagnostiek
+Om een diagnose te stellen is meestal onderzoek nodig. Heeft u een doorverwijzing naar ons ziekenhuis gekregen van uw huisarts of een andere instelling? Hier vindt u de wachttijd voor de ‘diagnostische bepalingen’.
+Wachttijd behandeling
+U moet een operatie ondergaan. De wachttijd tot de dag van de operatie noemen we de 'wachttijd behandeling'. Het kan zijn dat een veelgevraagde arts een langere wachttijd heeft dan een andere arts binnen hetzelfde specialisme. U ziet hier de kortste wachttijd.
+De wacht- en toegangstijden gelden niet voor spoedgevallen. Als u spoedeisende hulp nodig heeft, dan kunt u direct in ons ziekenhuis terecht.
+Wachttijden GGZ
+Bekijk hier (https://www.ziekenhuisrivierenland.nl/media/xoufg2ky/zrt-wachttijden-20261109-ggz.pdf) de wachttijden van de ADHD-jeugdzorg.
+Maximale wachttijd
+Wanneer u de wachttijd te lang vindt, kunt u altijd contact met ons opnemen. Ook kunt u uw zorgverzekeraar vragen om 'wachtlijstbemiddeling'. Dit houdt in dat uw zorgverzekeraar probeert om u sneller te laten helpen. Zorgaanbieders en zorgverzekeraars hebben samen afspraken gemaakt over de maximale wachttijden. We noemen dit de Treeknorm.
+25-11-2026 © Ziekenhuis Rivierenland 2026
+
+[linked document: https://www.ziekenhuisrivierenland.nl/media/evrkfqda/zrt-wachttijden-20261109.pdf]
+TOEGANGSTIJDEN POLIKLINIEK
+Peildatum 10-11-2026 Wachtijd in weken
+SPECIALISME Tiel Culemborg SPECIALISME Tiel Culemborg
+Anesthesiologie/Pijnbestrijding 9 - Oogheelkunde - Staar 2 2
+Cardiologie - Algemeen 2 3 Orthopedie - Algemeen 3 4
+Chirurgie- Algemeen 2 3 Orthopedie - Heupklachten 3 4
+Chirurgie- Liesbreuk 2 3 Orthopedie - Knieklachten 3 4
+Chirurgie- Mammapoli / Borstonderzoek 0 - Orthopedie - Rugklachten 3 4
+Chirurgie- Proctologie 9 - Orthopedie - Schouderklachten 3 4
+Chirurgie- Vaatchirurgie 4 - Orthopedie - Voet en/of enkelklachten 3 4
+Dermatologie - Algemeen 3 3 Plastische Chirurgie - Algemeen 3 2
+Dermatologie - Oncologie (verdachte plek) 0 0 Plastische Chirurgie - Oncologie 3 5
+Gynaecologie - Algemeen 9 5 Reumatologie - Algemeen 6 5
+Gynaecologie - Incontinentie voor de vrouw 9 10 Revalidatie 7 11
+Gynaecologie - Infertiliteit 13 - Slaapcentra 11 10
+Interne geneeskunde - Algemeen 10 10 Urologie - algemeen 8 8
+Kaakchirurgie 2 -
+Kindergeneeskunde - Algemeen 8 8
+Klinische geriatrie 5 -
+KNO - Algemeen 3 2
+KNO - Doofheid en gehoorverlies 3 2
+Longgeneeskunde - Algemeen 0 -
+Neurologie - Algemeen 11 10
+Oogheelkunde - Algemeen 7 9
+
+TOEGANGSTIJDEN DIAGNOSTIEK
+Wachtijd in weken
+Onderzoek Tiel Culemborg
+Baarmoederhalsafwijkingen uitstrijkje (gynaecologie) 0 0
+Botdichtheidsmeting DEXA meting (radiologie) 5 -
+Colonscopie 10 -
+CT 2 -
+Echografie (radiologie) 2 2
+Gastroscopie 10 -
+Mammografie (radiologie) 0 -
+MRI hersenen 3 -
+MRI heup(en)/ onderste extremiteit(en) 3 -
+MRI nek 3 -
+MRI rug 3 -
+MRI schouder(s)/ bovenste extremiteit(en) 3 -
+Röntgen (radiologie) 0 0
+Slaapapnoe diagnostisch onderzoek / screening (kno, 11 10
+longgeneeskunde, neurologie)
+Slaaponderzoek / Polysomnografie (kno, longgeneeskunde, 11 10
+neurologie)
+
+WACHTTIJD BEHANDELING
+specialisme Behandeling WACHTTIJD IN
+WEKEN
+Cardiologie Hartkatheterisatie 1
+Cardiologie Ablatie -- Wachttijd niet berekend.
+Chirurgie heelkunde (Vaat)chirurgische behandeling spataderen 12
+Chirurgie heelkunde Operatieve behandeling navelbreuk (hernia umbilicalis) bij 4
+volwassenen
+Chirurgie heelkunde Operatieve behandeling goedaardige aandoeningen 9
+van/rondom de anus
+Chirurgie heelkunde Operatieve behandeling liesbreuk (hernia inguinalis/ hernia 13
+femoralis)
+Chirurgie heelkunde Galblaasverwijdering 10
+Chirurgie heelkunde Volumereductieoperatie maag bij overgewicht 5
+Chirurgie heelkunde / Initiële operatieve behandeling carpaal tunnel syndroom 1
+Plastische Chirurgie /
+Orthopedie
+Dermatologie Mohs chirurgie -- Wachttijd niet berekend.
+Dermatologie / Chirurgie Behandeling spataderen (endovasculaire procedure) 9
+heelkunde
+Gynaecologie Geïsoleerde/ op zichzelf staande baarmoederverwijdering 10
+Gynaecologie Operatieve behandeling urine-incontinentie en/of 10
+verzakking bij vrouw
+Gynaecologie Sterilisatie vrouw 11
+KNO Tonsillectomie en/of adenotomie 4
+KNO Primaire operatieve behandeling van afwijkingen van 7
+neustussenschot
+KNO Plaatsen middenoorbeluchtingsbuisjes 4
+KNO Behandeling vanwege apneu (CPAP, operatieve -- Wachttijd niet berekend.
+behandeling)
+Oogheelkunde Ooglidcorrectie 7
+Oogheelkunde Initiële staaroperatie 6
+
+Orthopedie Initiële totale heupvervanging 5
+Orthopedie Diagnostische en/of therapeutische kijkoperatie knie 5
+Orthopedie Initiële totale knie vervanging 5
+Orthopedie / Chirurgie Operatieve behandeling meniscus en/of kniebanden (geen 6
+heelkunde vers letsel, exclusief artroscopische behandeling)
+Orthopedie / Operatieve behandeling hernia nuclei -- Wachttijd niet berekend.
+Neurochirurgie pulposi/kanaalstenose
+Plastische Chirurgie Triggerfingerrelease 7
+Plastische Chirurgie Operatieve behandeling contractuur van Dupuytren 10
+Plastische Chirurgie Operatieve borstreconstructie 10
+Revalidatiegeneeskunde Hartrevalidatie -- Wachttijd niet berekend.
+Revalidatiegeneeskunde Revalidatie na beroerte -- Wachttijd niet berekend.
+Revalidatiegeneeskunde Longrevalidatie -- Wachttijd niet berekend.
+Urologie Vergruizing niersteen -- Wachttijd niet berekend.
+Urologie Percutane niersteenverwijdering -- Wachttijd niet berekend.
+Urologie Operatieve behandeling bij vergrote prostaat 17
+Urologie Operatieve behandeling urine-incontinentie en/of 17
+blaasverzakking bij man
+Urologie Operatieve behandeling prostaatcarcinoom -- Wachttijd niet berekend.
+Urologie / Chirurgie Sterilisatie man 3 One-stop shop, zie 'Toegangstijd Polikliniek', Urologie.
+heelkunde
+Urologie / Chirurgie Besnijdenis -- Wachttijd niet berekend.
+heelkunde

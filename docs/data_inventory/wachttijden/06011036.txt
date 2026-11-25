@@ -1,0 +1,851 @@
+source: https://www.bravis.nl/wachttijden
+fetched: 2026-11-25
+
+Wachttijden | Bravis
+Ga naar hoofdinhoud
+Zoeken
+U bevindt zich hier:
+Home
+Wachttijden
+Wachttijden
+Wanneer u voor een onderzoek of behandeling naar het ziekenhuis moet, wilt u natuurlijk weten wanneer dat kan. Op deze pagina treft u informatie aan over de wachttijden van de poliklinieken, behandelingen en diagnostiek in het Bravis ziekenhuis.
+Wachttijden
+Patiënten met dringende medische redenen kunnen na overleg tussen een verwijzer (bijvoorbeeld de huisarts) en specialist nog dezelfde dag in ons ziekenhuis terecht. In andere gevallen is er soms een wachttijd. De wachttijden geven we weer in kalenderdagen (alle dagen van een week). De berekening van de wachttijden doen wij volgens de landelijke afspraak en richtlijnen NR/REG-2421
+Iedere maandag controleren en wijzigen we deze pagina. Aan deze pagina kunnen geen rechten worden ontleend.
+Wachttijden
+Anesthesiologie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+60
+-
+Bariatrische chirurgie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+10
+-
+Cardiologie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+18
+-
+Chirurgie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+29
+17
+Operatie aorta
+Behandeling
+-
+15
+Operatie borstkanker
+Behandeling
+-
+14
+Operatie darmkanker
+Behandeling
+-
+7
+Operatie dikke darm
+Behandeling
+-
+7
+Galblaas verwijderen
+Behandeling
+63
+56
+Operatie halsslagader
+Behandeling
+-
+7
+Behandeling liesbreuk open
+Behandeling
+54
+28
+Behandeling navelbreuk
+Behandeling
+41
+28
+Behandeling aandoening anus
+Behandeling
+60
+28
+Spatader - EVLT
+Behandeling
+-
+30
+Kijkoperatie liesbreuk
+Behandeling
+-
+70
+Dermatologie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+16
+-
+Spataderen
+Behandeling
+11
+-
+Mohs chirurgie
+Behandeling
+65
+-
+Geriatrie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+45
+-
+Gynaecologie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+120
+-
+Baarmoederverwijdering
+Behandeling
+34
+-
+Eierstokkanker
+-
+-
+Sterilisatie bij de vrouw
+-
+-
+Stressincontinentie
+Behandeling
+39
+-
+Hand- en polszorg
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+7
+-
+Interne Geneeskunde
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+42
+-
+Keel-, Neus en Oorheelkunde (KNO)
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+20
+-
+Neus- en/of keelamandelen
+Behandeling
+50
+-
+Neustussenschot
+Behandeling
+50
+-
+Oorbuisjes
+Behandeling
+33
+-
+Kindergeneeskunde
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+10
+-
+Longgeneeskunde
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+9
+-
+Maag-, darm-, leverziekten
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+140
+-
+Gastroduodenoscopie
+Diagnostiek
+49
+-
+Coloscopie
+Diagnostiek
+53
+-
+Rectosigmoïdoscopie
+Diagnostiek
+63
+-
+Neurologie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+72
+-
+Neurochirurgie: herniaoperatie
+Behandeling
+19
+-
+Neurochirurgie: Neurolyse
+-
+-
+Neurochirurgie: Ruggemergstimulator
+-
+-
+Oogheelkunde
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+70
+-
+Staaroperatie
+Behandeling
+61
+180
+Visusproblemen/scheelzien <12 jaar
+Polikliniek
+60
+-
+Orthopedie Kliniek
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+18
+-
+Totale heupoperatie
+Behandeling
+26
+47
+Totale knieoperatie
+Behandeling
+28
+53
+Kijkoperatie knie
+Behandeling
+-
+30
+Meniscus operatie
+Behandeling
+21
+30
+Carpaal tunnel syndroom
+Behandeling
+-
+20
+Schouderoperatie
+Behandeling
+-
+50
+Hand-Pols operatie
+Behandeling
+-
+37
+Voorste kruisband operatie
+Behandeling
+-
+40
+Spondylodese
+Behandeling
+34
+57
+Pijncentrum Bravis
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+60
+-
+Ruggenmerg- / neurostimulator
+-
+-
+Reguliere pijnbehandeling
+Behandeling
+-
+30
+Plastische chirurgie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+21
+-
+Borstreconstructie
+Behandeling
+50
+-
+Carpaal tunnel syndroom
+-
+-
+Dupuytren
+Behandeling
+39
+-
+Triggerfinger klieven
+-
+-
+Psychiatrie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek190
+Polikliniek
+57
+-
+ADHD
+Polikliniek
+190
+-
+Radiologie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+CT-scan
+Diagnostiek
+23
+-
+DEXA-scan
+Diagnostiek
+45
+-
+Mammografie
+Diagnostiek
+9
+-
+Echografie
+Diagnostiek
+11
+-
+Röntgenfoto
+-
+-
+MRI knie
+Diagnostiek
+37
+-
+MRI rug
+Diagnostiek
+43
+-
+Injectie onder echogeleide
+Diagnostiek
+4
+-
+Reumatologie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+32
+-
+Revalidatie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+42
+-
+Slaapcentrum Bravis
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Slaapcentrum
+Polikliniek
+7
+-
+Urologie
+Omschrijving
+Type
+Polikliniek: eerste afspraak op de polikliniek bij een medisch specialist na verwijzing door uw huisarts. Diagnostiek: afspraak voor onderzoek om de aard en ernst van een aandoening vast te stellen. Behandeling: (kijk) operatie of ingreep door medisch specialist.
+Wachttijd NZa
+De wachttijd in kalenderdagen (alle dagen van de week) die is berekend volgens een landelijk geldende methode. Hierdoor is vergelijking met andere ziekenhuizen mogelijk.
+Wachttijd actueel
+Wachttijd voor behandeling waarbij rekening gehouden wordt met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers.
+Polikliniekbezoek
+Polikliniek
+150
+-
+Vergrote prostaat
+Behandeling
+43
+-
+Operatie prostaatkanker
+Behandeling
+26
+-
+Sterilisatie bij de man
+-
+-
+Besnijdenis
+Behandeling
+27
+-
+Niersteen vergruizing
+-
+-
+Percutane niersteenverwijdering
+Behandeling
+25
+-
+Urine-incontinentie (man)
+Behandeling
+97
+-
+Uitleg wachttijden
+Wachttijden polikliniek/diagnostiek
+Met ‘wachttijden polikliniek’ bedoelen we het aantal kalenderdagen tussen de verwijzing door de huisarts en uw eerste afspraak op de polikliniek in het Bravis ziekenhuis. De wachttijd die we hier weergeven, is de kortste wachttijd van het specialisme. Daarbij kijken we niet naar de locatie (Bergen op Zoom of Roosendaal). Wilt u door een specifieke arts behandeld worden of heeft u voorkeur voor een locatie? Dan kan de wachttijd langer zijn dan hierboven aangegeven.
+Wachttijden behandeling
+Soms is er na een bezoek aan de specialist op de polikliniek een verdere behandeling of onderzoek nodig. Ook dan is het voor u prettig te weten wanneer dit kan.
+De 'Wachttijd NZa' is berekend volgens de landelijke afspraken van de Nederlandse Zorgautoriteit (NZa), weergegeven in NR/REG 2315.
+Onder 'Wachttijd actueel' wordt een meer realistische wachttijd voor behandeling getoond, waarbij rekening wordt gehouden met diverse (interne) factoren, zoals bijvoorbeeld vakanties van medisch specialisten of extra inzet medewerkers. Wordt hier geen wachttijd getoond, dan geldt de wachttijd NZa.
+Wachtlijstbemiddeling
+Wanneer u de wachttijd te lang vindt, kunt u altijd contact met ons opnemen, of uw zorgverzekeraar vragen om wachtlijstbemiddeling.
+Uw zorgverzekeraar kan u hierin ondersteunen, zodat u mogelijk sneller geholpen kunt worden. De maximaal geaccepteerde wachttijd die zorgaanbieders en zorgverzekeraars samen hebben afgestemd, is voor de polikliniek en diagnostiek vier weken. Voor een behandeling is de maximaal geaccepteerde wachttijd zeven weken.
+Zorgverzekeraar
+De wachttijden zijn niet afhankelijk van uw zorgverzekeraar. De meeste ziekenhuiszorg wordt volledig of gedeeltelijk vergoed uit uw basisverzekering. Sommige behandelingen vallen onder een aanvullende verzekering of worden helemaal niet vergoed. Kijk hiervoor op de website van uw zorgverzekeraar of neem contact op met uw zorgverzekeraar.
+Wachttijden psychiatrie/GGZ
+De berekening van de wachttijden psychiatrie/GGZ is volgens de landelijke afspraak: Transparantieregeling zorgaanbieders ggz - NR/REG-2219a
+Wilt u snel geholpen worden? Uw zorgverzekeraar kan ervoor zorgen dat u binnen vier weken vanaf uw eerste contact met een zorgaanbieder een intakegesprek krijgt. Ook kunnen zij ervoor zorgen dat de behandeling maximaal tien weken na de intake start. Het maakt daarbij niet uit welke diagnose u heeft. De wachttijden verschillen daarin niet.
+Wachttijdberekening in dagen volgens NZa beleidsregels
+De berekening van de wachttijden zoals weergegeven is conform de landelijke afspraak: Regeling aanleveren wachttijden medisch specialistische zorg - NR/REG-2315
+
+[linked document: https://www.bravis.nl/media/uploads/pdf/1/3/137_regeling-aanleveren-wachttijden-medisch-specialistische-zorg-nrreg-2421.pdf]
+Regeling Aanleveren wachttijden medisch-
+specialistische zorg - NR/REG-2421
+Versie 1
+Dit document is gepubliceerd door NZa op het publicatie platform voor uitvoering (PUC). Dit
+document is een afdruk van de originele versie die is te vinden op: http://puc.overheid.nl/doc/
+PUC_754550_22. Controleer altijd of u de actuele versie in handen hebt.
+Geldend vanaf: 01-01-2024 tot en met [nog niet bekend].
+
+Documentgegevens
+Dit document is een afdruk van een originele publicatie op PUC Open Data.
+Originele versie:
+Citeertitel: Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421
+Permalink: http://puc.overheid.nl/doc/PUC_754550_22
+Soort document:
+Type: Beleid en regels - Nadere regel
+Bron: Nederlandse Zorgautoriteit
+Versie en datums:
+Versie: 1
+Geldend vanaf: 01-01-2024 tot en met [nog niet bekend]
+Laatste wijziging: 15-12-2023
+Overige referentiedatums in het document: 28-11-2023
+Publicatiegegevens:
+Uitgever: Nederlandse Zorgautoriteit
+Kanaal: NZa
+Vorm: origineel PUC document
+Referentienummer: PUC_754550_22
+Toegankelijkheid: Extern
+Publicatiedatum: 15-12-2023
+Taal: nl
+Verrijking gepubliceerd bij document:
+Thema: Medisch-specialistische zorg
+Pagina 2 van 16 Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421
+
+Inhoudsopgave
+Artikel 1. Begripsbepalingen................................................................... 5
+Artikel 2. Doel van de regeling................................................................. 7
+Artikel 3. Reikwijdte........................................................................... 8
+Artikel 4. Aanleveren wachttijden: verplichtingen............................................... 9
+Artikel 5. Aanleveren wachttijden: methodiek................................................. 10
+Artikel 6. Informatieplicht wachtlijstbemiddeling.............................................. 11
+Artikel 7. Intrekking oude regeling............................................................ 12
+Artikel 8. Overgangsbepaling................................................................. 13
+Artikel 9. Inwerkingtreding, publicatie en citeerregel........................................... 14
+Toelichting...................................................................................15
+Algemeen.................................................................................15
+Artikelsgewijs............................................................................. 15
+..........................................................................................
+..........................................................................................
+..........................................................................................
+..........................................................................................
+Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421 Pagina 3 van 16
+
+Regeling Aanleveren wachttijden medisch-specialistische zorg
+- NR/REG-2421
+Gelet op artikel 38, leden 4 en 7 en artikel 62 en 68 van de Wet marktordening gezondheidszorg (Wmg), is
+de Nederlandse Zorgautoriteit (NZa) bevoegd tot het stellen van regels op het gebied van wachttijden en
+wachttijdbemiddeling voor electieve medisch-specialistische zorg.
+Pagina 4 van 16 Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421
+
+Artikel 1. Begripsbepalingen
+In deze regeling wordt verstaan onder:
+a. Orderdatum behandeling: datum waarop de instelling, op verzoek van een patiënt of arts, een afspraak
+maakt voor een behandeling. Wanneer reeds op een eerdere datum is vastgesteld dat een behandeling
+noodzakelijk is, dan geldt die eerdere datum als orderdatum.
+b. afspraakdatum: datum, vastgelegd in het digitale agendasysteem van de instelling, waarop een
+behandeling plaatsvindt.
+c. rekenkundige wachttijd: het aantal kalenderdagen tussen de orderdatum en de afspraakdatum.
+d. waarnemingen: het aantal waargenomen rekenkundige wachttijden voor een behandeling op de
+peildatum.
+e. peildatum: datum waarop een instelling per specialisme of subspecialisme de wachttijden voor
+behandeling, polikliniekbezoek of diagnostiek op de in deze regeling voorgeschreven wijze bepaalt en
+aanlevert.
+f. wachttijd behandeling: mediaan, uitgedrukt in kalenderdagen, van het totaal aantal rekenkundige
+wachttijden per behandeling op de peildatum.
+g. wachttijd polikliniek, respectievelijk diagnostiek: het aantal kalenderdagen tussen de peildatum en de datum
+die de derde mogelijkheid in het digitale agendasysteem van de instelling weergeeft waarop een patiënt
+voor polikliniekbezoek of diagnostiek terecht kan.
+h. polikliniekbezoek: contactmoment, fysiek ('face to face'), digitaal ('screen to screen'), telefonisch
+of schriftelijk, tussen patiënt en poortspecialist, SEH-arts KNMG, anesthesist als pijnbestrijder,
+interventieradioloog, klinisch geneticus, arts-assistent, verpleegkundig specialist, physician assistant
+of klinisch technoloog waarbij sprake is van 'hulp door of vanwege het ziekenhuis' en waarbij de locatie
+(polikliniekbezoek, SEH, buitenpolikliniek, verpleeghuis, thuissituatie) tussen zorgverzekeraar en
+zorgaanbieder overeengekomen wordt.
+i. diagnostiek: toepassing van een diagnostische methode of techniek ter vaststelling van (de aard en ernst
+van) een ziekte of aandoening.
+j. behandeling: medisch-specialistische behandeling van een patiënt.
+k. medisch-specialistische zorg: bij ministeriële regeling aangewezen zorg die door een arts wordt verleend en
+valt binnen de bijzondere deskundigheid van artsen aan wie de bevoegdheid toekomt tot het voeren van
+een wettelijk erkende specialistentitel als bedoeld in artikel 14 van de Wet op de beroepen in de individuele
+gezondheidszorg, met inbegrip van gespecialiseerde mondzorg zoals kaakchirurgen die plegen te bieden.
+l. instelling: een rechtspersoon die bedrijfsmatig zorg verleent of doet verlenen, organisatorisch verband
+van natuurlijke personen die bedrijfsmatig zorg verlenen of doen verlenen of natuurlijk persoon die
+bedrijfsmatig zorg doet verlenen, met uitzondering van een instelling die binnen het kader van de binnen
+een andere instelling verleende zorg een deel van die zorg verleent.
+m. locatie: afzonderlijk gebouw of gebouwenbestand, dat tezamen met één of meer andere locaties in
+juridische zin de instelling vormt. Op een locatie kan polikliniekbezoek, diagnostiek of behandeling in het
+kader van medisch-specialistische zorg plaatsvinden.
+n. kenmerkende zorgactiviteiten: zorgactiviteiten die kunnen worden gebruikt bij de bepaling van de wachttijd
+voor een behandeling.
+o. treeknorm: de maximaal aanvaardbare termijn waarbinnen een patiënt zorg moet kunnen krijgen, een
+en ander zoals afgesproken door veldpartijen in het Treekoverleg en door de NZa overgenomen in de
+beleidsregel 'Toezichtkader zorgplicht zorgverzekeraars Zvw' (TH/BR-025). Het is de verantwoordelijkheid
+van de zorgverzekeraar deze tijdigheidsnorm te borgen voor haar verzekerden1.
+1 Meer informatie hierover is te vinden in de beleidsregel 'Toezichtkader zorgplicht zorgverzekeraars ZVW' (TH/BR-025).
+Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421 Pagina 5 van 16
+
+p. wachtlijst: een door iedere instelling, die onder de reikwijdte van deze regeling valt, bij te houden lijst
+met patiënten die bij die instelling wachten op het plannen van een afspraak voor polikliniekbezoek of
+diagnostiek.
+Pagina 6 van 16 Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421
+
+Artikel 2. Doel van de regeling
+Deze regeling beoogt wachttijden voor electieve medisch-specialistische zorg, onderverdeeld in
+wachttijden voor behandeling, polikliniekbezoek en diagnostiek, per (sub)specialisme op een eenduidige
+en toegankelijke manier inzichtelijk te maken voor zowel patiënten als zorgverzekeraars. Het periodiek
+aanleveren van wachttijden door instellingen die onder de reikwijdte van deze regeling vallen is
+niet vrijblijvend, maar heeft een verplicht karakter. In de regeling wordt nader uitgewerkt aan welke
+verplichtingen instellingen moeten voldoen en welke methodiek zij moeten hanteren om de wachttijden te
+berekenen.
+Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421 Pagina 7 van 16
+
+Artikel 3. Reikwijdte
+1. Deze regeling is van toepassing op instellingen die:
+a. geneeskundige zorg als bedoeld in artikel 2.4, eerste lid, van het Besluit zorgverzekering (Bzv)
+leveren, voor zover deze omvat zorg zoals medisch-specialisten die plegen te bieden;
+b. mondzorg als bedoeld in artikel 2.7 van het Bzv leveren, voor zo ver deze omvat gespecialiseerde
+mondzorg zoals kaakchirurgen die plegen te bieden.
+2. Deze regeling is niet van toepassing op abortusklinieken als bedoeld in artikel 1 van de Wet afbreking
+zwangerschap.
+Pagina 8 van 16 Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421
+
+Artikel 4. Aanleveren wachttijden: verplichtingen
+1. Een instelling levert eens in de twee weken op de peildatum, uiterlijk om 23.59 uur, voor elke locatie
+een overzicht met de wachttijden voor behandeling, polikliniekbezoek en diagnostiek aan via het
+Zorgbeeldportaal2.
+2. De aanleververplichting genoemd in het vorige lid geldt niet voor:
+a. spoedafspraken voor behandeling, polikliniekbezoek of diagnostiek;
+b. herhaalconsulten voor polikliniekbezoeken.
+3. Aanlevering van wachttijden voor behandeling blijft achterwege, indien er op de peildatum voor
+een behandeling op basis van de weergaven in bijlage 1, behorend bij deze regeling, minder dan 5
+waarnemingen (van de rekenkundige wachttijd) zijn.
+4. De instelling verstrekt op eerste verzoek de wachttijden bedoeld in het eerste lid mondeling of
+schriftelijk aan eenieder die daarom verzoekt.
+Behandeling
+5. Het aanleveren van de wachttijd voor behandeling geschiedt voor de behandelingen, weergegeven
+in bijlage 1, behorend bij deze regeling. In deze bijlage 2 is per behandeling aangegeven welke
+(kenmerkende) zorgactiviteiten gebruikt kunnen worden bij de vaststelling van de wachttijd voor een
+behandeling.
+Polikliniekbezoek
+6. Het aanleveren van de wachttijd voor polikliniekbezoek geschiedt op het niveau van de specialismen,
+weergegeven met een cijfer in bijlage 1 bij deze regeling, voor zo ver deze specialismen binnen de
+polikliniek operationeel zijn. Instellingen die poliklinieken hebben georganiseerd op basis van sub-
+specialismen of specifieke zorgvragen, weergegeven met een letter in bijlage 1 bij deze regeling,
+leveren daarnaast de wachttijden op het niveau van deze onderdelen aan.
+Diagnostiek
+7. Het aanleveren van de wachttijd voor diagnostiek geschiedt voor de diagnostische methoden of
+technieken, weergegeven in bijlage 1 behorend bij deze regeling.
+2 https://zorgbeeld.nza.nl
+Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421 Pagina 9 van 16
+
+Artikel 5. Aanleveren wachttijden: methodiek
+1. De wachttijden die op grond van deze regeling worden aangeleverd, worden uitgedrukt in
+kalenderdagen.
+2. De peildatum voor de aanlevering is iedere dinsdag van de even weeknummers. Aanlevering
+geschiedt dus één keer per twee weken.
+Methodiek behandeling
+3. De methodiek om de wachttijden voor behandeling vast te stellen, luidt als volgt:
+a. in het digitale agendasysteem van de instelling wordt op de peildatum uiterlijk om 23:59 uur,
+op basis van de weergaven in bijlage 1 van iedere geplande afspraak voor een behandeling de
+rekenkundige wachttijd vastgesteld.
+b. bij het vaststellen van de rekenkundige wachttijd van iedere uitstaande afspraak bedoeld onder a
+gaat het om afspraken in de toekomst tot een maximum van twee maanden, gerekend vanaf de
+peildatum.
+c. vervolgens wordt, op basis van de weergaven in bijlage 1, de mediaan van het totaal aantal
+waarnemingen voor een behandeling bepaald.
+d. de uitkomst bij c is de wachttijd voor een behandeling, uitgedrukt in kalenderdagen, die op grond
+van artikel 4 moet worden aangeleverd.
+Methodiek polikliniekbezoek, respectievelijk diagnostiek
+4. De methodiek om de wachttijden voor polikliniekbezoek of diagnostiek vast te stellen, luidt als volgt:
+a. op de peildatum, uiterlijk om 23.59 uur, stelt de instelling ten behoeve van een denkbeeldige
+patiënt het aantal kalenderdagen vast tussen de peildatum en de datum die de derde
+mogelijkheid in haar digitale agendasysteem weergeeft waarop die patiënt voor
+polikliniekbezoek of diagnostiek terecht zou kunnen. Het bepalen van de derde mogelijkheid in
+de agenda gebeurt, voor zo ver sprake is van een wachtlijst, met inachtneming van (de patiënten
+op) die wachtlijst.
+b. de vaststelling onder a geschiedt op basis van de weergaven in bijlage 1 bij deze regeling.
+c. de uitkomst van de vaststelling bij a is de wachttijd voor polikliniekbezoek, respectievelijk
+diagnostiek, uitgedrukt in kalenderdagen, die op grond van artikel 4 moet worden aangeleverd.
+Pagina 10 van 16 Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421
+
+Artikel 6. Informatieplicht wachtlijstbemiddeling
+1. Een instelling publiceert voor elke locatie de volgende tekst op haar website:
+'Wanneer u de wachttijd te lang vindt, kunt u altijd contact met ons opnemen, of uw zorgverzekeraar vragen om
+wachtlijstbemiddeling. Uw zorgverzekeraar kan u hierin ondersteunen, zodat u mogelijk sneller geholpen kunt worden.
+De maximaal aanvaardbare wachttijd die door zorgaanbieders en zorgverzekeraars gezamenlijk is overeengekomen
+(de Treeknorm) bedraagt voor de toegang tot de polikliniek en diagnostiek 4 weken. Voor behandeling is de maximaal
+aanvaardbare wachttijd 7 weken.' 3
+2. In aanvulling op het eerste lid geldt, dat een instelling de patiënt mondeling of schriftelijk informeert
+over de mogelijkheid van wachtlijstbemiddeling door diens zorgverzekeraar, indien haar wachttijden
+voor behandeling, polikliniekbezoek of diagnostiek de Treeknorm overschrijden.
+3 Zie ook de NZa-beleidsregel 'Toezichtkader zorgplicht zorgverzekeraars Zvw' (TH/BR-025).
+Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421 Pagina 11 van 16
+
+Artikel 7. Intrekking oude regeling
+De regeling 'Aanleveren wachttijden medisch-specialistische zorg', met kenmerk NR/REG-2315, wordt
+ingetrokken.
+Pagina 12 van 16 Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421
+
+Artikel 8. Overgangsbepaling
+Tenzij in de voorliggende regeling (NR/REG-2421) anders is bepaald, blijft de regeling 'Aanleveren
+wachttijden medisch-specialistische zorg', met kenmerk NR/REG-2127 en NR/REG-2315, van toepassing op
+gedragingen (handelen en nalaten) van zorgaanbieders die onder de werkingssfeer van die regeling vielen
+en die zijn aangevangen - en al dan niet beëindigd - in de periode dat die regeling gold.
+Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421 Pagina 13 van 16
+
+Artikel 9. Inwerkingtreding, publicatie en citeerregel
+Deze regeling treedt in werking met ingang van 1 januari 2024.
+Ingevolge artikel 5, aanhef en onder d, van de Bekendmakingswet, zal deze regeling met toelichting in de
+Staatscourant worden geplaatst.
+De regeling, inclusief toelichting en bijlage, ligt ter inzage bij de NZa en is te raadplegen op www.nza.nl.
+Deze regeling wordt aangehaald als: 'Regeling aanleveren wachttijden medisch-specialistische zorg'.
+Hoogachtend,
+Nederlandse Zorgautoriteit
+mw. mr. drs. K. Raaijmakers
+wnd. voorzitter Raad van Bestuur
+Pagina 14 van 16 Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421
+
+Toelichting
+Algemeen
+Wachttijdinformatie is van belang voor de keuze tussen zorgaanbieders, die patiënten kunnen maken.
+Wachttijdinformatie is relevant voor electieve zorg en niet voor acute zorg. Wachttijdinformatie biedt de
+patiënt o.a. inzicht in de aanvang van een behandeling, een polikliniekbezoek of diagnostiek en biedt hem/
+haar de mogelijkheid om zorgaanbieders op dit aspect onderling te vergelijken. Voor een betrouwbare
+onderlinge vergelijkbaarheid is essentieel dat alle zorgaanbieders dezelfde definitie van het begrip
+wachttijd en dezelfde methodiek om de wachttijd te berekenen, hanteren.
+De daadwerkelijke gerealiseerde wachttijd kan op individueel niveau anders uitpakken dan aangeleverd.
+Er kunnen zich gebeurtenissen of omstandigheden voordoen die de wachttijd doen oplopen of juist
+verminderen. De aangeleverde wachttijd moet dan ook worden gezien als een zo realistisch mogelijke
+indicatie voor de patiënt hoe lang hij of zij moet wachten op een behandeling, een polikliniekbezoek of
+diagnostiek na het maken van een afspraak.
+Ten opzichte van de vorige versie (NR/REG-2315) van de Regeling aanleveren wachttijden medisch-
+specialistische zorg is de nieuwe versie (NR/REG- NR/REG-2421) op één onderdeel gewijzigd. De definitie
+van een polikliniekbezoek is gelijkgetrokken met de definitie zoals die staat in de Regeling medisch
+specialistische zorg.
+Artikelsgewijs
+Artikel 1
+Onderdeel a: In de meeste gevallen zal de orderdatum de datum zijn waarop de instelling de afspraak voor
+de behandeling maakt. Maar het kan in de praktijk voorkomen dat op een eerdere datum de noodzaak
+van de behandeling is vastgesteld dan de datum waarop de afspraak wordt gemaakt. Als de noodzaak dus
+eerder is vastgesteld dan wordt die datum als orderdatum gehanteerd.
+Onderdeel h: In de Regeling medisch specialistische zorg wordt uitgebreider ingegaan op de specifieke
+omschrijvingen en/of aanvullende registratievoorwaarden van een polikliniekbezoek.
+Onderdeel m: de locatie wordt kenbaar gemaakt middels het KvK-vestigingsnummer.
+Artikel 4
+Lid 1: Als bij een instelling sprake is van een afwijkende wachttijd voor een specifieke zorgverzekeraar
+in verband met het bereikt hebben van het met die zorgverzekeraar overeengekomen omzetplafond,
+mag die afwijkende wachttijd ter vrije keuze van de instelling aanvullend worden aangeleverd. Deze
+keuzevrijheid staat los van de (op grond van deze regeling) op de instelling rustende verplichtingen omtrent
+het aanleveren van de wachttijden voor polikliniekbezoek, diagnostiek en behandeling. Die verplichtingen
+blijven dus onverkort van toepassing.
+Lid 5: De kenmerkende zorgactiviteiten, zoals weergegeven in bijlage 2, kunnen, ter vrije keus van de
+instelling, gebruikt worden bij het bepalen van de wachttijd voor behandeling. Het is dus niet verplicht
+om hiervoor de kenmerkende zorgactiviteiten te gebruiken. Wanneer instellingen de wachttijden voor
+behandelingen, zoals weergegeven in bijlage 1, met behulp van andere gegevens kunnen berekenen, is
+dat ook toegestaan. Uit die berekening moet dan wel blijken welke andere gegevens door de instelling zijn
+gebruikt.
+Artikel 5
+Lid 3: Ter illustratie is hieronder een voorbeeldberekening van de wachttijd voor de behandeling 'initiële
+staaroperatie' uitgewerkt.
+Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421 Pagina 15 van 16
+
+Om op de peildatum de wachttijd te bepalen voor de behandeling 'Initiële staaroperatie' wordt iedere
+geplande behandelafspraak in de toekomst tot een maximum van twee maanden bekeken. Voor elke
+van deze geplande afspraken wordt de rekenkundige wachttijd bepaald (verschil in orderdatum en
+afspraakdatum, in kalenderdagen).
+Stel, er zijn 11 waarnemingen: 7, 11, 13, 28, 35, 45, 46, 49, 51, 53 en 57 dagen. De mediaan van deze
+waarnemingen (en dus de wachttijd zoals deze aangeleverd moet worden) is dan 45 dagen.
+Lid 3, onderdeel a: Bij revalidatie (0327) gaat het niet om een eenmalige ingreep. Daarom wordt bij het
+bepalen van de geplande afspraak voor een behandeling uitgegaan van het eerste patiëntgebonden
+behandelcontact, na de orderdatum van de behandeling.
+Lid 4, onderdeel a: De instelling kiest bij de berekening van de wachttijd niet de eerste, maar de derde
+mogelijkheid in haar digitale agenda. Op die manier worden eventuele toevalstreffers, die een realistische
+wachttijd nadelig kunnen beïnvloeden (zoals onverwachte afzegging van een afspraak), voorkomen.
+De instelling gaat bij de berekening van de wachttijd uit van een denkbeeldige patiënt, die zich op het
+moment van die berekening voor een polikliniekbezoek of diagnostiek heeft gemeld.
+De instelling is verplicht om, voor zo ver sprake is van een wachtlijst, de patiënten die op die wachtlijst
+staan te betrekken bij het berekenen van de wachttijd, resp. het bepalen van de derde agendamogelijkheid.
+De denkbeeldige patiënt komt immers achteraan op de wachtlijst te staan. Dat betekent, dat de derde
+agenda mogelijkheid voor deze denkbeeldige patiënt pas kan worden vastgesteld, nadat de overige
+patiënten op de wachtlijst een agendaplek hebben gevuld.
+Artikel 6
+Lid 1: De zorgaanbieder is verplicht om op de website te vermelden dat de patiënt eventueel contact
+op kan nemen met de zorgaanbieder, of de zorgverzekeraar kan vragen om wachtlijstbemiddeling.
+Wachtlijstbemiddeling is een taak van de zorgverzekeraar waar patiënten niet altijd van op de hoogte
+zijn. De tekst die de zorgaanbieder moet plaatsen op de website is opgenomen in artikel 6.1 van deze
+regeling. Hierin wordt ook verwezen naar de Treeknormen in de medisch specialistische zorg. Om als
+patiënt te kunnen afwegen of een wachttijd kort of lang is, moet er een ijkpunt zijn wat aanvaardbaar is.
+Hiervoor zijn in de medisch specialistische zorg de Treeknormen vastgesteld. Dit is een tijdigheidsnorm
+voor zorgverzekeraars waarbinnen de patiënten hun zorg moeten krijgen. Patiënten kunnen zelf kiezen
+om langer te wachten wanneer zij naar een specifieke zorgaanbieder willen, maar de zorgverzekeraars zijn
+verplicht de patiënten de mogelijkheid te bieden binnen de Treeknorm zorg te krijgen. Het publiceren van
+de informatie over de Treeknormen en wachtlijstbemiddeling draagt bij aan de keuze-informatie van de
+patiënt. Hiermee kan de patiënt de wachttijden beter op waarde schatten.
+Lid 2: De verplichting om de patiënt mondeling of schriftelijk (bijvoorbeeld middels een informatiefolder) te
+informeren over de mogelijkheid tot wachtlijstbemiddeling geldt naast de verplichting om te vermelden dat
+patiënten bij een te lange wachttijd bij de zorgverzekeraar terecht kunnen voor wachtlijstbemiddeling.
+Pagina 16 van 16 Regeling Aanleveren wachttijden medisch-specialistische zorg - NR/REG-2421

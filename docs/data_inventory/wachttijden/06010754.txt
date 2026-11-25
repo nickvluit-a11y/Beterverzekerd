@@ -1,0 +1,4 @@
+source: https://www.spaarnegasthuis.nl/wachttijden
+fetched: 2026-11-25
+
+Wachttijden | Spaarne Gasthuis

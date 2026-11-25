@@ -1,0 +1,84 @@
+location_key,rating,count,zkn_name,zkn_url,fetched_on
+06010304-7909AA,8.8,10099,Treant,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-treant-hoogeveen-3055825,2026-11-25
+06010758-1212VG,8.8,8825,Tergooi MC,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-tergooi-mc-hilversum-3023397,2026-11-25
+22220126-7824AA,8.7,4709,"Treant, Ziekenhuislocatie Scheper",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-treant-ziekenhuislocatie-scheper-emmen-113266,2026-11-25
+06010418-7772SE,8.9,3855,Saxenburgh Medisch Centrum,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-saxenburgh-medisch-centrum-hardenberg-3063646,2026-11-25
+06080701-1066CX,9.1,3412,Antoni van Leeuwenhoek,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-antoni-van-leeuwenhoek-amsterdam-10001701,2026-11-25
+06011011-5664EH,8.9,3124,Anna Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-anna-ziekenhuis-geldrop-3036371,2026-11-25
+06010301-9401RK,9.0,2242,Wilhelmina Ziekenhuis Assen (WZA),https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-wilhelmina-ziekenhuis-assen-wza-assen-113596,2026-11-25
+06011002-5835DV,9.1,1105,Maasziekenhuis Pantein,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-maasziekenhuis-pantein-beugen-110880,2026-11-25
+06011113-6001BE,9.0,1079,SJG Weert,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-sjg-weert-weert-10017959,2026-11-25
+06010530-7101BN,9.3,707,Streekziekenhuis Koningin Beatrix,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-streekziekenhuis-koningin-beatrix-winterswijk-10001951,2026-11-25
+06010702-1815JD,8.9,556,Noordwest Ziekenhuisgroep,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-noordwest-ziekenhuisgroep-alkmaar-3059343,2026-11-25
+06010533-3844DG,8.7,540,Ziekenhuis St Jansdal,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-ziekenhuis-st-jansdal-harderwijk-10001509,2026-11-25
+06011032-5406PT,9.1,482,Bernhoven,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-bernhoven-uden-10001729,2026-11-25
+06011108-6043CV,9.4,456,Laurentius Ziekenhuis Roermond,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-laurentius-ziekenhuis-roermond-roermond-10001906,2026-11-25
+06010518-6532SZ,8.6,444,CWZ,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-cwz-nijmegen-10001494,2026-11-25
+06010419-7512KZ,8.9,432,Medisch Spectrum Twente (MST),https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-medisch-spectrum-twente-mst-enschede-109454,2026-11-25
+06010855-2803HH,8.6,314,Groene Hart Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-groene-hart-ziekenhuis-gouda-10001366,2026-11-25
+06011026-5707HA,8.5,283,Elkerliek ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-elkerliek-ziekenhuis-helmond-251773,2026-11-25
+06010535-6815AD,8.5,281,Rijnstate,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-rijnstate-arnhem-3059258,2026-11-25
+06280501-6574NA,8.9,275,Sint Maartenskliniek Nijmegen,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-sint-maartenskliniek-nijmegen-ubbergen-9836,2026-11-25
+06010861-3079DZ,8.5,267,Maasstad Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-maasstad-ziekenhuis-rotterdam-10002024,2026-11-25
+06010865-2353GA,7.9,262,Alrijne Zorggroep,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-alrijne-zorggroep-leiderdorp-251761,2026-11-25
+06010863-3201GZ,9.3,255,Spijkenisse Medisch Centrum,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-spijkenisse-medisch-centrum-spijkenisse-10001372,2026-11-25
+06010619-3813TZ,8.4,211,Meander Medisch Centrum,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-meander-medisch-centrum-amersfoort-9747,2026-11-25
+06011033-4818CK,8.2,191,Amphia Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-amphia-ziekenhuis-breda-251800,2026-11-25
+06010916-4535PA,8.9,168,ZorgSaam Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-zorgsaam-ziekenhuis-terneuzen-251735,2026-11-25
+06010852-2906ZC,8.5,152,IJsselland Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-ijsselland-ziekenhuis-capelle-aan-den-ijssel-10001575,2026-11-25
+06010862-2545AA,8.6,148,HagaZiekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-hagaziekenhuis-den-haag-251812,2026-11-25
+06010420-8025AB,8.2,139,Stichting Isala Klinieken,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-stichting-isala-klinieken-zwolle-10001384,2026-11-25
+06010755-1942LE,8.9,137,Rode Kruis Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-rode-kruis-ziekenhuis-beverwijk-10001857,2026-11-25
+06010805-3247BW,8.8,134,Het Van Weel-Bethesda Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-het-van-weel-bethesda-ziekenhuis-dirksland-10001640,2026-11-25
+06010866-2512VA,7.6,131,HMC - Haaglanden Medisch Centrum,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-hmc-haaglanden-medisch-centrum-den-haag-251741,2026-11-25
+06010859-3318AT,8.0,129,Albert Schweitzer ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-albert-schweitzer-ziekenhuis-dordrecht-3019018,2026-11-25
+06011202-1315RA,7.8,110,Flevoziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-flevoziekenhuis-almere-10001893,2026-11-25
+06011034-5223GZ,7.6,109,Stichting Jeroen Bosch Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-stichting-jeroen-bosch-ziekenhuis-s-hertogenbosch-10001850,2026-11-25
+06010752-1624NP,8.5,102,Dijklander Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-dijklander-ziekenhuis-hoorn-10005568,2026-11-25
+06010620-3435CM,7.6,101,St Antonius,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-st-antonius-nieuwegein-3030060,2026-11-25
+06020602-3584CX,7.8,99,UMC Utrecht,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-umc-utrecht-utrecht-10001540,2026-11-25
+06010742-1502DV,9.1,98,Stichting Zaans Medisch Centrum,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-stichting-zaans-medisch-centrum-zaandam-10001592,2026-11-25
+06010867-3045PM,7.0,97,Franciscus Gasthuis & Vlietland,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-franciscus-gasthuis-vlietland-rotterdam-3058560,2026-11-25
+06011036-4708AE,7.8,94,Bravis ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-bravis-ziekenhuis-roosendaal-3055799,2026-11-25
+06010618-3582KE,7.7,92,Diakonessenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-diakonessenhuis-utrecht-251763,2026-11-25
+06011009-5623EJ,8.3,92,Catharina Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-catharina-ziekenhuis-eindhoven-10001392,2026-11-25
+06010509-7009BL,8.5,92,Slingeland Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-slingeland-ziekenhuis-doetinchem-10001482,2026-11-25
+06130802-3011BH,8.2,91,Het Oogziekenhuis Rotterdam,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-het-oogziekenhuis-rotterdam-rotterdam-10019120,2026-11-25
+99999999-1081HV,7.0,91,Amsterdam UMC,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-amsterdam-umc-amsterdam-10001967,2026-11-25
+06010753-1034CS,8.5,90,BovenIJ ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-bovenij-ziekenhuis-amsterdam-109365,2026-11-25
+06020806-3015GD,7.3,88,Erasmus MC,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-erasmus-mc-rotterdam-110571,2026-11-25
+06010421-7609PP,8.4,87,ZGT,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-zgt-almelo-251754,2026-11-25
+06010857-2625AD,8.0,86,Reinier de Graaf Groep,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-reinier-de-graaf-groep-delft-10001757,2026-11-25
+06010831-3083AN,8.3,80,Ikazia ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-ikazia-ziekenhuis-rotterdam-10001989,2026-11-25
+06010536-7334DZ,8.1,76,Gelre ziekenhuizen,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-gelre-ziekenhuizen-apeldoorn-3062368,2026-11-25
+06010534-6716RP,7.0,75,Stichting Ziekenhuis Gelderse Vallei,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-stichting-ziekenhuis-gelderse-vallei-ede-10001462,2026-11-25
+06010520-4002WP,8.2,74,Ziekenhuis Rivierenland,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-ziekenhuis-rivierenland-tiel-10001974,2026-11-25
+06010850-2725NA,8.7,74,"HagaZiekenhuis, Zoetermeer",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-hagaziekenhuis-zoetermeer-zoetermeer-110503,2026-11-25
+06020502-6525GA,8.3,70,Radboudumc,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-radboudumc-nijmegen-10001836,2026-11-25
+06010205-8441PW,8.9,68,Frisius MC Heerenveen,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-frisius-mc-heerenveen-heerenveen-113391,2026-11-25
+06011115-5912BL,7.3,65,"VieCuri, Medisch Centrum voor Noord-Limburg",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-viecuri-medisch-centrum-voor-noord-limburg-venlo-251753,2026-11-25
+06010417-7416SE,8.5,65,Deventer Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-deventer-ziekenhuis-deventer-10000535,2026-11-25
+06010704-1186AM,7.5,64,Ziekenhuis Amstelland,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-ziekenhuis-amstelland-amstelveen-109614,2026-11-25
+06020101-9713GZ,8.1,61,UMC Groningen (UMCG),https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-umc-groningen-umcg-groningen-3063527,2026-11-25
+06010901-4462RA,7.3,60,"ADRZ, locatie Goes",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-adrz-locatie-goes-goes-111748,2026-11-25
+06011035-5504DB,7.9,60,"Máxima MC, locatie Veldhoven",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-maxima-mc-locatie-veldhoven-veldhoven-112257,2026-11-25
+06010713-1091AC,7.5,59,"OLVG, locatie Oost",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-olvg-locatie-oost-amsterdam-109515,2026-11-25
+06010110-9679BJ,8.5,59,Ommelander Ziekenhuis Groningen,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-ommelander-ziekenhuis-groningen-scheemda-3029485,2026-11-25
+06011037-5022GC,7.8,52,ETZ Elisabeth,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-etz-elisabeth-tilburg-205037,2026-11-25
+06011118-6419PC,6.8,52,Zuyderland Medisch Centrum Heerlen,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-zuyderland-medisch-centrum-heerlen-heerlen-112593,2026-11-25
+06021101-6229HX,6.8,52,Maastricht UMC+,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-maastricht-umc-maastricht-10001985,2026-11-25
+06010107-9728NT,7.7,52,Martini Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-martini-ziekenhuis-groningen-10001650,2026-11-25
+99999999-1105AZ,6.7,50,"Amsterdam UMC, locatie AMC | Meibergdreef",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-amsterdam-umc-locatie-amc-meibergdreef-amsterdam-109031,2026-11-25
+22220164-2035RC,7.5,48,"Spaarne Gasthuis, locatie Haarlem-Zuid",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-spaarne-gasthuis-locatie-haarlem-zuid-haarlem-251699,2026-11-25
+06010202-9202NN,7.7,46,Ziekenhuis Nij Smellinghe,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-ziekenhuis-nij-smellinghe-drachten-113478,2026-11-25
+06010210-8934AD,8.1,44,Frisius MC Leeuwarden,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-frisius-mc-leeuwarden-leeuwarden-113425,2026-11-25
+06020801-2333ZA,7.4,41,Leids Universitair Medisch Centrum (LUMC),https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-leids-universitair-medisch-centrum-lumc-leiden-10001586,2026-11-25
+22220339-4624VT,7.9,32,Bravis ziekenhuis Bergen op Zoom,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-bravis-ziekenhuis-bergen-op-zoom-bergen-op-zoom-111790,2026-11-25
+06010848-4204AA,9.0,30,Beatrixziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-beatrixziekenhuis-gorinchem-3064149,2026-11-25
+22220012-8233AA,8.6,30,"Ziekenhuis St Jansdal, locatie Lelystad",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-ziekenhuis-st-jansdal-locatie-lelystad-lelystad-10006733,2026-11-25
+06010209-8601ZK,8.5,25,Antonius Ziekenhuis,https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-antonius-ziekenhuis-sneek-10001416,2026-11-25
+06010754-2000AK,8.2,18,"Spaarne Gasthuis, locatie Haarlem-Noord",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-spaarne-gasthuis-locatie-haarlem-noord-haarlem-243789,2026-11-25
+22227357-4501AJ,9.7,7,"ZorgSaam Ziekenhuis, locatie Antonius",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-zorgsaam-ziekenhuis-locatie-antonius-oostburg-205006,2026-11-25
+22221003-3011TG,7.7,2,"Het Oogziekenhuis Rotterdam, locatie Haringvliet",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-het-oogziekenhuis-rotterdam-locatie-haringvliet-rotterdam-10019119,2026-11-25
+22220008-1703WD,9.4,1,"Noordwest Ziekenhuisgroep, locatie Heerhugowaard",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-noordwest-ziekenhuisgroep-locatie-heerhugowaard-heerhugowaard-10018357,2026-11-25
+22227357-8303BX,10.0,1,"Antonius Ziekenhuis, locatie Emmeloord",https://www.zorgkaartnederland.nl/zorginstelling/ziekenhuis-antonius-ziekenhuis-locatie-emmeloord-emmeloord-3045296,2026-11-25
