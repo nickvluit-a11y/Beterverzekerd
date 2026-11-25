@@ -17,10 +17,11 @@ from urllib.parse import urlparse
 
 from scrapers.common import ROOT, USER_AGENT, today
 
-FINDERS = {  # landing pages; the probe follows the link to the search form when needed
-    "zilveren_kruis": "https://www.zilverenkruis.nl/consumenten/zorgzoeker",
-    "vgz": "https://www.vgz.nl/zorg-regelen/zorgzoeker",
-    "menzis": "https://www.menzis.nl",
+FINDERS = {  # landing page, field for 'what', field for 'where', link text to click first (if any)
+    "zilveren_kruis": ("https://www.zilverenkruis.nl/consumenten/zorgzoeker",
+                       "#autofill-Zorgtype-input", "#autofill-Locatie-input", None),
+    "vgz": ("https://www.vgz.nl/zorg-regelen/zorgzoeker", "input[name=zoekterm]", "input[name=locatie]", None),
+    "menzis": ("https://www.menzis.nl/zorg-en-vergoedingen/de-zorgvinder", None, None, "Naar de Zorgvinder"),
 }
 WHAT, WHERE = "Ziekenhuis", "3584 CX"
 _FINDER_LINK = re.compile(r"zorgzoeker|zorgverlener (zoeken|vinden)|zoek een zorgverlener|vind een zorgverlener", re.I)
@@ -63,7 +64,22 @@ def describe(f: dict) -> str:
     return " ".join(str(f.get(k) or "") for k in ("name", "id", "placeholder", "aria", "label"))
 
 
-def probe(page, name: str, url: str) -> list[str]:
+def fill(page, selector: str, value: str) -> str:
+    """Type into the visible field and pick the first suggestion, as a visitor does."""
+    field = page.locator(selector).locator("visible=true").first
+    field.click(timeout=8000)
+    field.fill("")
+    field.type(value, delay=60)
+    page.wait_for_timeout(2000)
+    options = page.get_by_role("option").locator("visible=true")
+    if options.count():
+        options.first.click(timeout=3000)
+        return f"gekozen suggestie voor {value}"
+    return f"ingevuld {value}"
+
+
+def probe(page, name: str, url: str, what_sel: str | None = None, where_sel: str | None = None,
+          link_text: str | None = None) -> list[str]:
     lines = [f"# Zorgzoeker {name} (browser-verkenning {today()})", "", f"- start: {url}"]
     if not allowed(url):
         return lines + ["- robots.txt staat dit niet toe: niet geopend"]
@@ -81,7 +97,16 @@ def probe(page, name: str, url: str) -> list[str]:
     page.on("response", on_response)
     page.goto(url, wait_until="networkidle", timeout=60000)
     refuse_cookies(page)
-    if not any(_WHERE_FIELD.search(describe(f)) for f in fields(page)):
+    if link_text:
+        link = page.get_by_role("link", name=re.compile(link_text, re.I))
+        target = link.first.get_attribute("href") if link.count() else None
+        lines.append(f"- link '{link_text}': {target}")
+        if target:
+            target = page.evaluate("h => new URL(h, location.href).href", target)
+            if allowed(target):
+                page.goto(target, wait_until="networkidle", timeout=60000)
+                refuse_cookies(page)
+    if not what_sel and not any(_WHERE_FIELD.search(describe(f)) for f in fields(page)):
         links = page.eval_on_selector_all("a[href]", "els => els.map(e => [e.href, e.innerText])")
         host = urlparse(page.url).netloc
         target = next((h for h, t in links if urlparse(h).netloc == host and (_FINDER_LINK.search(t or "")
@@ -93,22 +118,19 @@ def probe(page, name: str, url: str) -> list[str]:
     form = fields(page)
     lines += [f"- zoekpagina: {page.url}", "", "## Invoervelden", ""] + [f"- {describe(f).strip()} ({f['tag']}/{f['type']})" for f in form]
     before = len(seen)
-    what = next((f for f in form if _WHAT_FIELD.search(describe(f)) and not _WHERE_FIELD.search(describe(f))), None)
-    where = next((f for f in form if _WHERE_FIELD.search(describe(f))), None)
-    for f, value in ((what, WHAT), (where, WHERE)):
-        if not f:
-            continue
-        selector = f"#{f['id']}" if f.get("id") else f"[name='{f['name']}']" if f.get("name") else None
+    form_fields = [f for f in form if not re.search(r"header|nav|cookie|vendor", describe(f), re.I)]
+    sel = lambda f: f"#{f['id']}" if f.get("id") else f"[name='{f['name']}']" if f.get("name") else None
+    what_sel = what_sel or next((sel(f) for f in form_fields if _WHAT_FIELD.search(describe(f))
+                                 and not _WHERE_FIELD.search(describe(f))), None)
+    where_sel = where_sel or next((sel(f) for f in form_fields if _WHERE_FIELD.search(describe(f))), None)
+    for selector, value in ((what_sel, WHAT), (where_sel, WHERE)):
         if not selector:
+            lines.append(f"- geen veld voor {value}")
             continue
         try:
-            page.fill(selector, value, timeout=5000)
-            page.wait_for_timeout(1500)
-            options = page.get_by_role("option")
-            if options.count():
-                options.first.click(timeout=3000)
+            lines.append(f"- {selector}: {fill(page, selector, value)}")
         except Exception as exc:
-            lines.append(f"- invullen {value}: {type(exc).__name__}")
+            lines.append(f"- {selector} ({value}): {type(exc).__name__}: {str(exc)[:150]}")
     try:
         button = page.get_by_role("button", name=re.compile(r"^\s*(zoek|zoeken|vind|toon)", re.I))
         if button.count():
@@ -140,10 +162,10 @@ def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     with sync_playwright() as p:
         browser = p.chromium.launch()
-        for name, url in FINDERS.items():
+        for name, (url, what_sel, where_sel, link_text) in FINDERS.items():
             page = browser.new_page(user_agent=USER_AGENT, locale="nl-NL")
             try:
-                lines = probe(page, name, url)
+                lines = probe(page, name, url, what_sel, where_sel, link_text)
             except Exception as exc:
                 lines = [f"# Zorgzoeker {name}", "", f"- fout: {type(exc).__name__}: {str(exc)[:300]}"]
             page.close()
