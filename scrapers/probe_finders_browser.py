@@ -22,6 +22,7 @@ FINDERS = {  # landing page, field 'what', field 'where', link to click first, h
                        "#autofill-Zorgtype-input", "#autofill-Locatie-input", None,
                        "last:button:has-text('Zoeken')"),
     "vgz": ("https://www.vgz.nl/zorg-regelen/zorgzoeker", "input[name=zoekterm]", "input[name=locatie]", None, "enter"),
+    "cz": ("https://zorgvinder.cz.nl/resultaten/ziekenhuis/utrecht?afstand=999&jaar=2027", "-", "-", None, "none"),
     "menzis": ("https://www.menzis.nl/zorg-en-vergoedingen/de-zorgvinder", None, None, "Naar de Zorgvinder",
                "button:has-text('Zoeken')"),
 }
@@ -83,6 +84,26 @@ def fill(page, selector: str, value: str) -> str:
         options.first.click(timeout=3000)
         return f"gekozen suggestie voor {value}"
     return f"ingevuld {value}"
+
+
+def next_page(page) -> list[str]:
+    """Click 'next page' / 'more results' and report the URL and requests that follow."""
+    out, before = [], page.url
+    links = page.eval_on_selector_all("a[href]", "els => els.map(e => [e.href, e.innerText.trim(), e.getAttribute('aria-label') || ''])")
+    out.append("- links met pagina/volgende: " + "; ".join(f"{t or a} -> {h}" for h, t, a in links
+                                                         if re.search(r"pagina|page|volgende|next|meer", f"{h} {t} {a}", re.I))[:800])
+    for pattern in (r"volgende|next", r"meer (resultaten|laden|tonen)|toon meer|laad meer", r"^\s*2\s*$"):
+        target = page.get_by_role("link", name=re.compile(pattern, re.I)).or_(
+            page.get_by_role("button", name=re.compile(pattern, re.I))).locator("visible=true")
+        if target.count():
+            try:
+                target.first.click(timeout=5000)
+                page.wait_for_load_state("networkidle", timeout=20000)
+                out.append(f"- geklikt op '{pattern}': URL {before} -> {page.url}")
+                break
+            except Exception as exc:
+                out.append(f"- klikken '{pattern}': {type(exc).__name__}")
+    return out
 
 
 def choose_policy(page, policy: str) -> list[str]:
@@ -164,6 +185,8 @@ def probe(page, name: str, url: str, what_sel: str | None = None, where_sel: str
                                  and not _WHERE_FIELD.search(describe(f))), None)
     where_sel = where_sel or next((sel(f) for f in form_fields if _WHERE_FIELD.search(describe(f))), None)
     for selector, value in ((what_sel, WHAT), (where_sel, WHERE)):
+        if selector == "-":
+            continue
         if not selector:
             lines.append(f"- geen veld voor {value}")
             continue
@@ -172,7 +195,9 @@ def probe(page, name: str, url: str, what_sel: str | None = None, where_sel: str
         except Exception as exc:
             lines.append(f"- {selector} ({value}): {type(exc).__name__}: {str(exc)[:150]}")
     try:  # submit inside the finder's own form (the site's header search also says 'Zoeken')
-        if submit == "enter":
+        if submit == "none":
+            pass
+        elif submit == "enter":
             page.locator(where_sel or what_sel).first.press("Enter", timeout=5000)
         else:
             last = submit.startswith("last:")
@@ -183,6 +208,9 @@ def probe(page, name: str, url: str, what_sel: str | None = None, where_sel: str
     except Exception as exc:
         lines.append(f"- zoeken: {type(exc).__name__}")
     page.wait_for_timeout(5000)
+    if name == "cz":  # results come 30 at a time: find how the next ones are asked for
+        lines += next_page(page)
+        page.wait_for_timeout(5000)
     if name == "zilveren_kruis":  # the finder asks which basic policy you have before it shows statuses
         lines += choose_policy(page, "Basis Zeker")
         page.wait_for_timeout(5000)
