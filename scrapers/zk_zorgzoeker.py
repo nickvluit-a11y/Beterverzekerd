@@ -55,7 +55,7 @@ def main(argv: list[str]) -> int:
     http = PoliteSession(delay=3)
     rows, report = [], ["# Zorgzoeker Zilveren Kruis (contracten 2027)", "", f"Run: {today()}. Polis: {POLICY[1]}.", "",
                         "| plaats | genoemd | gelezen |", "|---|---|---|"]
-    for town in TOWNS:
+    for town in (TOWNS[: int(argv[0])] if argv else TOWNS):
         try:
             place = http.post_json(BASE + "getautofilllocatie", {"ZoekstringLocatie": town.replace("-", " ")}).json()
             location_id = (place.get("options") or [{}])[0].get("id")
@@ -66,7 +66,7 @@ def main(argv: list[str]) -> int:
                 "Zorgtype": CARE_TYPE, "LocatieId": str(location_id), "Basisverzekering": POLICY[0],
                 "Peildatum": f"{YEAR}-01-01T00:00:00.000Z"}).json()
         except Exception as exc:
-            report.append(f"| {town} | fout: {type(exc).__name__} | |")
+            report.append(f"| {town} | fout: {str(exc)[:120]} | |")
             continue
         found = [r for r in map(parse, data.get("Resultaten") or []) if r]
         rows += found

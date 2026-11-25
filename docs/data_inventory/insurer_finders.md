@@ -39,7 +39,7 @@ Scripts:
 ## VGZ
 
 - URL: https://www.vgz.nl/zorg-regelen/zorgzoeker
-- status: 200, eind-URL: https://www.vgz.nl/zorg-regelen/zorgzoeker, 194,833 tekens HTML
+- status: 200, eind-URL: https://www.vgz.nl/zorg-regelen/zorgzoeker, 194,840 tekens HTML
 - zichtbare tekst (begin): Zorgzoeker VGZ | Vind een zorgverlener bij jou in de buurt - VGZ Werkgevers Zorgaanbieders Bewindvoerders English Zorgverzekering Verzekerd bij VGZ Zorgverzekeringen Zorgverzekeringen Informatie over Alle zorgverzekeringen Basisverzekeringen Aanvullende verzekeringen Tandartsverzekeringen Collectieve verzekeringen Direct regelen Mijn zorgverzekering Zorgverzekering aanvragen Verzekering aanpassen 
 
 Mogelijke data-endpoints:
@@ -131,7 +131,7 @@ Scripts:
 ## ONVZ
 
 - URL: https://www.onvz.nl/zorgzoeker
-- status: 200, eind-URL: https://www.onvz.nl/zorgverzekering/snel-regelen/vind-een-zorgverlener, 250,142 tekens HTML
+- status: 200, eind-URL: https://www.onvz.nl/zorgverzekering/snel-regelen/vind-een-zorgverlener, 250,122 tekens HTML
 - zichtbare tekst (begin): Zorgverlener of ziekenhuis vinden met de Zorgzoeker | ONVZ Overslaan en naar inhoud gaan Particulier Zakelijk kies een taal kies een taal: English Homepage ONVZ Zorgverzekering Klantenservice Voorwaarden en downloads Inloggen Mijn ONVZ (opent in nieuw venster) Zoekterm Mensen zoeken vaak op: Eigen risico Zorgzoeker Contact Werkfit Declareren Zorgverzekering Vergoedingen Zorgadvies Betalen Snel reg
 
 Mogelijke data-endpoints:

@@ -8,7 +8,7 @@
     "status": 200,
     "final_url": "https://www.zorginzicht.nl/algemeen/open-data-medisch-specialistische-zorg-msz-ziekenhuizen-en-zelfstandige-behandelcentra",
     "content_type": "text/html;charset=UTF-8",
-    "bytes_read": 19564
+    "bytes_read": 19565
   },
   {
     "id": "zorginzicht_openbare_data",
@@ -19,7 +19,7 @@
     "status": 200,
     "final_url": "https://www.zorginzicht.nl/algemeen/map/openbare-data",
     "content_type": "text/html;charset=UTF-8",
-    "bytes_read": 15814
+    "bytes_read": 15815
   },
   {
     "id": "zorginzicht_transparantiekalender_msz",
@@ -30,7 +30,7 @@
     "status": 200,
     "final_url": "https://www.zorginzicht.nl/transparantiekalender/medisch-specialistische-zorg",
     "content_type": "text/html;charset=UTF-8",
-    "bytes_read": 31966
+    "bytes_read": 31967
   },
   {
     "id": "nza_wachttijden_dataset",
@@ -90,7 +90,7 @@
     "status": 200,
     "final_url": "https://www.vgz.nl/zorg-regelen/zorgzoeker",
     "content_type": "text/html; charset=utf-8",
-    "bytes_read": 194851
+    "bytes_read": 194857
   },
   {
     "id": "zorgverzekeringskaart",

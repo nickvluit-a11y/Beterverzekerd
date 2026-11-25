@@ -1066,3 +1066,43 @@ def test_budget_policy_does_not_inherit_the_regular_policy_contract():
     out = policy_overview(near, contracts, policies).set_index("polis")
     assert out.loc["Basis Zeker", "volledig"] == 1
     assert out.loc["Basis Start", "onbekend"] == 1
+
+
+def test_manual_zk_list_is_read(tmp_path, monkeypatch):
+    from pipeline import insurer_contracts
+    folder = tmp_path / "zk"
+    folder.mkdir()
+    (folder / "zk_contracten_2026-11-26.csv").write_text(
+        "naam;adres;postcode;plaats;status;omzetplafond\n"
+        "UMC Utrecht, loc. AZU;Heidelberglaan 100;3584 CX;UTRECHT;Nog geen contract: een deel niet vergoed;ja\n"
+        "Diakonessenhuis, loc. Utrecht;Bosboomstraat 1;3582 KE;Utrecht;Contract: vergoed;\n"
+        "Iets;X 1;1000AA;Ergens;onbekende tekst;\n", encoding="utf-8")
+    monkeypatch.setattr(insurer_contracts, "MANUAL", tmp_path)
+    entries = insurer_contracts.manual_zk_entries()
+    assert entries["status"].tolist() == ["in_onderhandeling", "gecontracteerd"]
+    assert entries["omzetplafond"].tolist() == [True, False]
+    assert set(entries["fetched_on"]) == {"2026-11-26"} and set(entries["label"]) == {"Zilveren Kruis"}
+
+
+def test_insurer_saying_partly_reimbursed_counts_on_natura_without_percentage():
+    from pipeline.score import policy_overview
+    near = pd.DataFrame({"organisatie_agb": ["22220815"], "location_key": ["22220815-3528AH"], "quality_verdict": ["boven_gemiddeld"]})
+    contracts = pd.DataFrame([{"organisatie_agb": "22220815", "concern": "Menzis", "label": "Menzis",
+                               "status": "in_onderhandeling", "peildatum": "2026-11-25", "origin": "verzekeraar"}])
+    policies = pd.DataFrame([
+        {"concern": "Menzis", "label": "Menzis", "polis": "Menzis Basis", "polis_type": "natura", "premie_per_maand": "165.75", "vergoeding_niet_gecontracteerd_pct": None},
+        {"concern": "Menzis", "label": "Menzis", "polis": "Menzis Basis Vrij", "polis_type": "combinatie", "premie_per_maand": "188.25", "vergoeding_niet_gecontracteerd_pct": None},
+    ])
+    out = policy_overview(near, contracts, policies).set_index("polis")
+    assert out.loc["Menzis Basis", "deels"] == 1
+    assert out.loc["Menzis Basis Vrij", "onbekend"] == 1  # might pay everything: we do not know
+
+
+def test_reimbursement_percentages_found_next_to_policy_names():
+    from scrapers.verify_premiums import find_percentages
+    text = ("Met Menzis Basis Vrij krijg je 100% vergoed bij een niet-gecontracteerde zorgaanbieder. "
+            "Met Menzis Basis krijg je bij niet-gecontracteerde zorg 75% van het gemiddeld gecontracteerde tarief.\n"
+            "Menzis Basis kost 165,75 per maand.")
+    got = find_percentages(text, ["Menzis Basis Vrij", "Menzis Basis"])
+    assert ("Menzis Basis Vrij", 100) in [(p, v) for p, v, _ in got]
+    assert ("Menzis Basis", 75) in [(p, v) for p, v, _ in got]

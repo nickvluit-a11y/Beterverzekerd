@@ -276,7 +276,8 @@ if search:
                 n = r.betere_ziekenhuizen
                 of = (lambda k: "" if n == 1 else f"{k} van {n} ")
                 parts = [f'<span class="chip ok">✓ {of(r.volledig + r.vrij)}betaald</span>' if r.volledig + r.vrij else "",
-                         f'<span class="chip no">€ {of(r.deels)}deels zelf betalen</span>' if r.deels else "",
+                         f'<span class="chip no">€ {of(r.deels)}deels zelf betalen'
+                         f'{f" (± {int(pct)}% vergoed)" if pd.notna(pct) else ""}</span>' if r.deels else "",
                          f'<span class="chip">? {of(r.onbekend)}nog niet bekend</span>' if r.onbekend else ""]
                 conf = getattr(r, "confirmed", None)
                 checked = (" · premie nog niet bevestigd door de verzekeraar"

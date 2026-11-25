@@ -153,6 +153,17 @@ def town_slug(place: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", str(place).lower().replace("'s-", "s-")).strip("-")
 
 
+def recent_previous(days: int) -> pd.DataFrame:
+    """Entries of earlier runs fetched within `days` (the processed file of the last run)."""
+    from pipeline.reference import PROCESSED
+    path = PROCESSED / "cz_zorgvinder.csv"
+    if not path.exists():
+        return pd.DataFrame()
+    previous = pd.read_csv(path, dtype=str)
+    age = pd.Timestamp(today()) - pd.to_datetime(previous.get("fetched_on"), errors="coerce")
+    return previous[age.dt.days <= days].reset_index(drop=True)
+
+
 def targeted(http: PoliteSession, rows: list[dict], report: list[str]) -> list[dict]:
     """The finder pages with JavaScript (30 results per list), so after the sweep we look up, by
     name in their own town, each of our quality locations that the sweep did not find."""
@@ -162,6 +173,11 @@ def targeted(http: PoliteSession, rows: list[dict], report: list[str]) -> list[d
     recent = pd.to_numeric(locations.get("last_year"), errors="coerce") >= YEAR - 3
     locations = locations[recent.fillna(True) & locations["plaats"].notna()]
     found = match_entries(pd.DataFrame(rows), locations) if rows else pd.DataFrame(columns=["location_key"])
+    # locations already found in a recent run are looked up again only after a week (runs build on each other)
+    previous = recent_previous(days=7)
+    if not previous.empty:
+        known = match_entries(previous, locations)
+        found = pd.concat([found, known[["location_key"]]], ignore_index=True)
     todo = locations[~locations["location_key"].isin(set(found["location_key"].dropna()))]
     extra, hits, started = [], 0, time.monotonic()
     for loc in todo.itertuples():
@@ -205,6 +221,13 @@ def main(argv: list[str]) -> int:
         return 1
     df = (pd.DataFrame(rows).drop_duplicates(["name", "address", "city"])
           .assign(concern="CZ", label="CZ", year=YEAR, source="CZ zorgvinder", fetched_on=today()))
+    # keep what an earlier run (within two weeks) found and this run did not reach, with its own date
+    previous = recent_previous(days=14)
+    if not previous.empty:
+        seen = set(zip(df["name"], df["address"], df["city"]))
+        kept = previous[[k not in seen for k in zip(previous["name"], previous["address"], previous["city"])]]
+        report.append(f"- uit een eerdere run bewaard (met hun eigen datum): {len(kept)} locaties")
+        df = pd.concat([df, kept[[c for c in df.columns if c in kept.columns]]], ignore_index=True)
     report += ["", f"Totaal: {len(df)} unieke locaties; status: "
                + ", ".join(f"{k} {v}" for k, v in df["status"].value_counts().items()) + "."]
     path = ROOT / "docs" / "data_inventory" / "cz_zorgvinder.md"
