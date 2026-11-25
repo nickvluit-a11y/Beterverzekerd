@@ -282,3 +282,27 @@ def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, y
     extra = [c for c in ["polis_type", "premie_per_maand"] if c in policies]
     summary = summary.merge(policies[POLICY_KEY + extra].drop_duplicates(POLICY_KEY), on=POLICY_KEY, how="left")
     return summary, detail
+
+
+INSURER_STATUSES = ["gecontracteerd", "in_onderhandeling", "geen_contract", "onbekend"]
+
+
+def insurer_overview(near: pd.DataFrame, contracts: pd.DataFrame, concerns: list[str],
+                     verdict_col: str = "quality_verdict") -> pd.DataFrame:
+    """Per insurer (concern): how many of the better-than-average hospitals in reach it has contracted,
+    is negotiating with, has no contract with, or whose status we do not know (yet).
+
+    `near` has one row per hospital location with organisatie_agb and a verdict column. The status
+    used is the concern's own label (e.g. 'VGZ') or a concern-wide row; a ceiling counts as contracted."""
+    better = near[near[verdict_col] == "boven_gemiddeld"]
+    rows = []
+    for concern in concerns:
+        counts = dict.fromkeys(INSURER_STATUSES, 0)
+        for agb in better["organisatie_agb"]:
+            status = (contract_for(contracts, agb, concern, concern) or {}).get("status", "onbekend") \
+                if not contracts.empty else "onbekend"
+            counts[status if status in counts else "onbekend"] += 1
+        rows.append({"concern": concern, "betere_ziekenhuizen": len(better), **counts})
+    out = pd.DataFrame(rows)
+    return out.sort_values(["gecontracteerd", "in_onderhandeling", "onbekend"], ascending=[False, False, True]) \
+        .reset_index(drop=True)

@@ -24,7 +24,7 @@ from pipeline.db_queries import indicator_profile, indicator_trend, latest_judge
 from pipeline.geo import clean_postcode, geocode_postcode  # noqa: E402
 from pipeline.quality import domain_highlights  # noqa: E402
 from pipeline.reference import labels, procedures  # noqa: E402
-from pipeline.score import attach_organisation, contract_for, hospitals_within, load_contracts  # noqa: E402
+from pipeline.score import attach_organisation, contract_for, hospitals_within, insurer_overview, load_contracts  # noqa: E402
 
 def display_name(row) -> str:
     """'annatommie mc - voor orthopedie - Utrecht' + 'UTRECHT' -> 'Annatommie mc - voor orthopedie - Utrecht'."""
@@ -84,6 +84,12 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .chip.ok { background: #f0fdf4; color: #166534; } .chip.no { background: #fef2f2; color: #991b1b; }
 .chip.wait { background: #fffbeb; color: #92400e; }
 .note { color: #64748b; font-size: .85rem; }
+.insurers { margin: 4px 0 14px 0; }
+.insurer { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; padding: 8px 12px; border: 1px solid #e2e8f0;
+           border-radius: 10px; margin: 6px 0; background: #fff; }
+.insurer.mine { border-color: #0f766e; box-shadow: 0 0 0 2px #ccfbf1; }
+.insurer .iname { font-weight: 600; min-width: 190px; color: #0f172a; }
+.chip.big { font-size: .9rem; padding: 3px 10px; font-weight: 600; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -114,11 +120,20 @@ st.markdown('<div class="hero"><h1>Beterverzekerd</h1>'
             '<p>Welke ziekenhuizen bij jou in de buurt scoren beter voor jouw ingreep, '
             'en kun je daar terecht met je zorgverzekering?</p></div>', unsafe_allow_html=True)
 
+ALL_INSURERS = "Alle verzekeraars vergelijken"
+BRAND = {"Achmea": "Zilveren Kruis", "Eucare": "Aevitae"}  # the name consumers know
+
+
+def insurer_name(concern: str) -> str:
+    brand = BRAND.get(concern)
+    return f"{brand} ({concern})" if brand else concern
 with st.form("zoek", border=False):
     c1, c2, c3 = st.columns([1.2, 1.6, 1])
     postcode = c1.text_input("Postcode", value="3584 CX")
     proc_name = c2.selectbox("Ingreep", procs["name_nl"].tolist())
     radius = c3.selectbox("Afstand", [10, 25, 50, 100], index=1, format_func=lambda km: f"{km} km")
+    insurer = st.selectbox("Jouw zorgverzekeraar", [ALL_INSURERS] + list(dict.fromkeys(labels()["concern"])),
+                           format_func=lambda c: c if c == ALL_INSURERS else insurer_name(c))
     submitted = st.form_submit_button("Zoek ziekenhuizen", type="primary", width="stretch")
 
 if submitted:
@@ -131,7 +146,7 @@ if submitted:
         st.session_state.pop("search", None)
         st.error("Deze postcode konden we niet vinden. Probeer bijvoorbeeld 3584 CX.")
     else:
-        st.session_state["search"] = {"coords": coords, "radius": radius, "proc_name": proc_name,
+        st.session_state["search"] = {"coords": coords, "radius": radius, "proc_name": proc_name, "insurer": insurer,
                                       "procedure_id": procs.loc[procs["name_nl"] == proc_name, "procedure_id"].iloc[0]}
 
 search = st.session_state.get("search")
@@ -168,6 +183,29 @@ if search:
                               get_radius=400, radius_min_pixels=5)],
             tooltip={"text": "{label}"}), height=320)
 
+        # --- compare insurers: where can you go for the better hospitals? -----------------------
+        chosen = search.get("insurer", ALL_INSURERS)
+        overview_df = insurer_overview(near, contracts, concerns)
+        n_better = int(counts.get("boven_gemiddeld", 0))
+        if n_better:
+            what = "het betere ziekenhuis" if n_better == 1 else f"de {n_better} betere ziekenhuizen"
+            st.markdown(f"#### Bij welke verzekeraar kun je naar {what}?")
+            rows_html = []
+            for r in overview_df.itertuples():
+                mine = " mine" if r.concern == chosen else ""
+                parts = [f'<span class="chip ok">✓ {r.gecontracteerd} gecontracteerd</span>' if r.gecontracteerd else "",
+                         f'<span class="chip wait">… {r.in_onderhandeling} in onderhandeling</span>' if r.in_onderhandeling else "",
+                         f'<span class="chip no">✗ {r.geen_contract} geen contract</span>' if r.geen_contract else "",
+                         f'<span class="chip">? {r.onbekend} nog onbekend</span>' if r.onbekend else ""]
+                rows_html.append(f'<div class="insurer{mine}"><span class="iname">{insurer_name(r.concern)}</span>{"".join(parts)}</div>')
+            st.markdown('<div class="insurers">' + "".join(rows_html) + "</div>", unsafe_allow_html=True)
+            unknown_share = overview_df["onbekend"].sum() / max(1, overview_df["betere_ziekenhuizen"].sum())
+            if unknown_share > 0.3:
+                st.caption(f"Let op: van {unknown_share:.0%} van deze combinaties weten we de contractstatus voor 2027 nog niet. "
+                           "Ziekenhuizen en verzekeraars sluiten hun contracten tussen november en januari; we werken dit "
+                           "dagelijks bij vanuit hun eigen publicaties.")
+        st.markdown("#### Ziekenhuizen")
+
         has_contracts = not contracts.empty
         for row in near.itertuples():
             text, css, _ = BADGES[row.quality_verdict]
@@ -177,11 +215,17 @@ if search:
             year = f" · cijfers {int(row.verslagjaar)}" if pd.notna(row.verslagjaar) else ""
             found = {c: contract_for(contracts, row.organisatie_agb, c, c) for c in concerns} if has_contracts else {}
             found = {c: r for c, r in found.items() if r}
-            if found:
+            if chosen != ALL_INSURERS:
+                status = (found.get(chosen) or {}).get("status")
+                mark, chip_css = CONTRACT_CHIP.get(status, ("?", ""))
+                label = {"gecontracteerd": "gecontracteerd", "gecontracteerd_met_plafond": "gecontracteerd (met plafond)",
+                         "in_onderhandeling": "in onderhandeling", "geen_contract": "geen contract"}.get(status, "contract nog onbekend")
+                chips_html = f'<div class="chips"><span class="chip big {chip_css}">{insurer_name(chosen)}: {mark} {label}</span></div>'
+            elif found:
                 chips = []
                 for concern in concerns:
                     mark, chip_css = CONTRACT_CHIP.get((found.get(concern) or {}).get("status"), ("?", ""))
-                    chips.append(f'<span class="chip {chip_css}">{concern} {mark}</span>')
+                    chips.append(f'<span class="chip {chip_css}">{BRAND.get(concern, concern)} {mark}</span>')
                 first = next(iter(found.values()))
                 auto = any(not r.get("checked", True) for r in found.values())
                 peildatum = f" · peildatum {first.get('peildatum')}" if isinstance(first.get("peildatum"), str) else ""
