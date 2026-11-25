@@ -39,7 +39,7 @@ Scripts:
 ## VGZ
 
 - URL: https://www.vgz.nl/zorg-regelen/zorgzoeker
-- status: 200, eind-URL: https://www.vgz.nl/zorg-regelen/zorgzoeker, 194,845 tekens HTML
+- status: 200, eind-URL: https://www.vgz.nl/zorg-regelen/zorgzoeker, 194,846 tekens HTML
 - zichtbare tekst (begin): Zorgzoeker VGZ | Vind een zorgverlener bij jou in de buurt - VGZ Werkgevers Zorgaanbieders Bewindvoerders English Zorgverzekering Verzekerd bij VGZ Zorgverzekeringen Zorgverzekeringen Informatie over Alle zorgverzekeringen Basisverzekeringen Aanvullende verzekeringen Tandartsverzekeringen Collectieve verzekeringen Direct regelen Mijn zorgverzekering Zorgverzekering aanvragen Verzekering aanpassen 
 
 Mogelijke data-endpoints:
@@ -86,18 +86,7 @@ Scripts:
 ## Zilveren Kruis
 
 - URL: https://www.zilverenkruis.nl/consumenten/zorgzoeker
-- status: 200, eind-URL: https://www.zilverenkruis.nl/consumenten/zorgzoeker, 348,401 tekens HTML
-- zichtbare tekst (begin): Zorgzoeker - Zilveren Kruis Abroad accessibility Achmea additional-insurance Address home Aeroplane alert-questionmark Alternative Health app-store apple arrow-down arrow-left arrow-right arrow-up Avatar average Ballpoint icons/rich/96/basic-insurance bijeenkomst Binoculars blind bones brain Calculator calender care-use Chat chaticon-zoe Checklist cheering chevron-right circle-cross Icon clock Ico
-
-Mogelijke data-endpoints:
-
-- https://www.zilverenkruis.nl/consumenten/zorgzoeker
-
-Scripts:
-
-- /assets/common/js/jquery/dist/jquery-3.5.1.min.js?v=thqm4taNIbNUa1tBi_Dpww2
-- /assets/common/js/vue/main.js?v=BSkBhBSY8CAqb7QONTxkaw2
-- /assets/zilverenkruis/js/zilverenkruis.js?v=1189pbzF52tYicfwTSW8Og2
+- fout: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 
 ## Menzis
 

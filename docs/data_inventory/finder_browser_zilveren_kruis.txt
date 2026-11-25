@@ -23,12 +23,6 @@ Filter resultaten
 3584CX UTRECHT, Ziekenhuis
 
 Wijzig zoekopdracht
-Basisverzekering 
-Informatie weergeven
-
-Kies je basisverzekering om te zien of we afspraken hebben met deze zorgverlener.
-
-Kies uw basisverzekering
 Jaar
 Jaar
 
@@ -44,17 +38,9 @@ Nog geen contract: wel vergoed
 Nog geen contract: een deel niet vergoed
 Geen contract: een deel niet vergoed
 0 resultaten
-
-Er zijn geen zoekresultaten gevonden. Pas je filters aan.
-
+Sorry, we hebben een storing
+Daarom kunnen we geen zoekresultaten laten zien. Probeer het later nog eens.
 De informatie in de Zorgzoeker is op 25 november 2026 bijgewerkt.
-Kies je basisverzekering
-
-Dan zie je of we afspraken hebben met de zorgverlener.
-
-Je basisverzekering
-Selecteer
-Klaar
 Was dit nuttig?
 Ja Nee
 Onze verzekeringen
