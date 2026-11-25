@@ -125,9 +125,25 @@ def load_policies(year: int = 2027) -> pd.DataFrame:
     return policies
 
 
-def load_contracts(year: int = 2027) -> pd.DataFrame:
-    contracts = _read(MANUAL / "contracts.csv")
-    return contracts if contracts.empty else contracts[contracts["year"] == year]
+def load_contracts(year: int = 2027, include_candidates: bool = True) -> pd.DataFrame:
+    """Contracts for `year`: rows checked by hand (data/manual/contracts.csv) first; for other
+    organisation × concern × label combinations, rows read automatically from the hospital's own
+    publication (data/processed/contracts_candidates.csv). Column `checked` tells them apart."""
+    checked = attach_organisation(_read(MANUAL / "contracts.csv"))
+    if not checked.empty:
+        checked = checked[pd.to_numeric(checked["year"], errors="coerce") == year].assign(checked=True)
+    if not include_candidates:
+        return checked
+    auto = _read(PROCESSED / "contracts_candidates.csv")
+    if auto.empty or "organisatie_agb" not in auto:
+        return checked
+    auto = auto[(pd.to_numeric(auto["year"], errors="coerce") == year) & auto["organisatie_agb"].notna()
+                & (auto["status"] != "onbekend")].assign(checked=False)
+    auto["organisatie_agb"] = auto["organisatie_agb"].astype(str).str.zfill(8)
+    if not checked.empty:
+        done = set(zip(checked["organisatie_agb"], checked["concern"], checked["label"].fillna("")))
+        auto = auto[[k not in done for k in zip(auto["organisatie_agb"], auto["concern"], auto["label"].fillna(""))]]
+    return pd.concat([checked, auto], ignore_index=True) if not checked.empty else auto.reset_index(drop=True)
 
 
 def contract_for(contracts: pd.DataFrame, organisatie_agb: str, concern: str, label: str) -> dict | None:

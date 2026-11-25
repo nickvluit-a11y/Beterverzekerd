@@ -179,7 +179,7 @@ def latest_raw_dir() -> Path | None:
     return dirs[-1] if dirs else None
 
 
-COLUMNS = ["year", "location_id", "concern", "label", "polis", "status", "omzetplafond", "peildatum",
+COLUMNS = ["year", "organisatie_agb", "location_id", "concern", "label", "polis", "status", "omzetplafond", "peildatum",
            "source", "source_url", "fetched_on", "needs_review", "raw"]
 
 
@@ -193,7 +193,8 @@ def main(argv: list[str]) -> int:
     for tables_file in sorted(source_dir.glob("*.tables.json")):
         key = tables_file.name.removesuffix(".tables.json")
         info = meta["results"].get(key, {})
-        location_ids = info.get("location_ids") or [key]
+        organisation = info.get("organisatie_agb")
+        location_ids = info.get("location_ids") or ([None] if organisation else [key])
         try:
             text = (source_dir / f"{key}.txt").read_text(encoding="utf-8")
             parsed = parse_source(json.loads(tables_file.read_text(encoding="utf-8")), text)
@@ -203,10 +204,11 @@ def main(argv: list[str]) -> int:
         year, peildatum = find_year(text), find_peildatum(text)
         for location_id in location_ids:  # one source can cover several locations
             for row in parsed:
-                out_rows.append({**row, "location_id": location_id, "year": year, "peildatum": peildatum,
+                out_rows.append({**row, "location_id": location_id, "organisatie_agb": organisation,
+                                 "year": year, "peildatum": peildatum,
                                  "source": f"contracts_{info.get('format', 'pdf')}", "source_url": info.get("url"),
                                  "fetched_on": source_dir.name, "needs_review": True})
-        print(f"{key}: {len(parsed)} contract rows × {len(location_ids)} location(s)")
+        print(f"{key}: {len(parsed)} contract rows")
     save_with_history(pd.DataFrame(out_rows, columns=COLUMNS), "contracts_candidates", source_dir.name)
     return 0
 

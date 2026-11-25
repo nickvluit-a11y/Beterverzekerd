@@ -149,15 +149,21 @@ if search:
             points_html = "".join(f'<li class="{v}">{s}</li>' for v, s in
                                   domain_highlights(judged[judged["location_key"] == row.location_key]))
             year = f" · cijfers {int(row.verslagjaar)}" if pd.notna(row.verslagjaar) else ""
-            if has_contracts:
+            found = {c: contract_for(contracts, row.organisatie_agb, c, c) for c in concerns} if has_contracts else {}
+            found = {c: r for c, r in found.items() if r}
+            if found:
                 chips = []
                 for concern in concerns:
-                    status = (contract_for(contracts, row.organisatie_agb, concern, concern) or {}).get("status")
-                    mark, chip_css = CONTRACT_CHIP.get(status, ("?", ""))
+                    mark, chip_css = CONTRACT_CHIP.get((found.get(concern) or {}).get("status"), ("?", ""))
                     chips.append(f'<span class="chip {chip_css}">{concern} {mark}</span>')
-                chips_html = '<div class="chips">' + "".join(chips) + "</div>"
+                first = next(iter(found.values()))
+                auto = any(not r.get("checked", True) for r in found.values())
+                peildatum = f" · peildatum {first.get('peildatum')}" if isinstance(first.get("peildatum"), str) else ""
+                source = ("Contracten 2027 volgens de website van het ziekenhuis" + peildatum +
+                          (" · automatisch uitgelezen, controleer bij je verzekeraar" if auto else ""))
+                chips_html = ('<div class="chips">' + "".join(chips) + f'<div class="note">{source}</div></div>')
             else:
-                chips_html = '<div class="chips">Contracten met verzekeraars: volgt binnenkort</div>'
+                chips_html = '<div class="chips">Contracten 2027 voor dit ziekenhuis: nog niet bekend</div>'
             st.markdown(
                 f'<div class="card"><div class="top"><span class="name">{row.display_name}</span>'
                 f'<span class="meta">{row.distance_km:.0f} km{year}</span></div>'
