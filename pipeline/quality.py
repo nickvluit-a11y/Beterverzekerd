@@ -375,8 +375,8 @@ DOMAINS = [  # (domain, indicator pattern, sentence when better, sentence when w
     ("heroperatie", r"revisie", "Minder heroperaties", "Meer heroperaties"),
     ("infectie", r"wondinfectie", "Minder infecties", "Meer infecties"),
     ("herstel", r"verbetering volgens patiënt", "Patiënten melden meer herstel", "Patiënten melden minder herstel"),
-    ("zien", r"beter zien", "Vaker beter zicht na de operatie", "Minder vaak beter zicht"),
-    ("sterkte", r"refractie", "Vaker de beoogde sterkte", "Minder vaak de beoogde sterkte"),
+    ("zien", r"beter zien", "Vaker beter zicht na de operatie", "Minder vaak beter zicht na de operatie"),
+    ("sterkte", r"refractie", "Vaker precies de bedoelde brilsterkte", "Minder vaak precies de bedoelde brilsterkte"),
 ]
 
 

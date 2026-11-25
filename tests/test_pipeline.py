@@ -286,7 +286,7 @@ def test_overview_without_policy_file_falls_back_to_labels():
     from pipeline.score import manual_locations
     summary, _ = overview(52.0870, 5.1790, "heup", radius_km=6, contracts=pd.DataFrame(),
                           waits=pd.DataFrame(), quality=pd.DataFrame(), hospital_table=manual_locations())
-    assert len(summary) > 20 and summary["onbekend"].gt(0).all()
+    assert len(summary) >= 4 and summary["onbekend"].gt(0).all()  # the four insurers in scope
 
 
 # --- geo -----------------------------------------------------------------------------------
@@ -608,6 +608,8 @@ def test_build_db_quality_over_years(tmp_path, monkeypatch):
          "locatie_naam": "UMC Utrecht", "postcode": "3584CX", "plaats": "Utrecht", "lat": 52.087, "lon": 5.179},
         {"location_key": "11111111-1000AA", "organisatie_agb": "11111111", "organisatie_naam": "Ander",
          "locatie_naam": "Ander", "postcode": "1000AA", "plaats": "Amsterdam", "lat": 52.37, "lon": 4.9},
+        {"location_key": "22220841-3735ME", "organisatie_agb": "22220841", "organisatie_naam": "Gestopt",
+         "locatie_naam": "Gestopt", "postcode": "3735ME", "plaats": "Bosch en Duin", "lat": 52.12, "lon": 5.24},
     ]).to_csv(ref / "locations.csv", index=False)
     pd.DataFrame([{"indicator_code": "IN1", "procedure_id": "heup", "thema": "Revisie", "indicator_naam": "Revisie binnen 1 jaar",
                    "eenheid": "Percentage", "indicator_type": "Uitkomst"}]).to_csv(ref / "indicators.csv", index=False)
@@ -619,6 +621,8 @@ def test_build_db_quality_over_years(tmp_path, monkeypatch):
                   "value": None, "numerator": other[0], "denominator": other[1], "source": "t"},
                  {"procedure_id": "heup", "verslagjaar": year, "location_key": "99999999-9999ZZ", "indicator_code": "IN1",
                   "value": None, "numerator": 1, "denominator": 10, "source": "t"}]
+    rows.append({"procedure_id": "heup", "verslagjaar": 2023, "location_key": "22220841-3735ME", "indicator_code": "IN1",
+                 "value": None, "numerator": 1, "denominator": 1000, "source": "t"})  # stopped reporting after 2023
     pd.DataFrame(rows).to_csv(proc / "measurements.csv", index=False)
     monkeypatch.setattr(build_db, "REFERENCE", ref)
     monkeypatch.setattr(build_db, "PROCESSED", proc)
@@ -629,6 +633,9 @@ def test_build_db_quality_over_years(tmp_path, monkeypatch):
     assert trend == [(2024, "gemiddeld"), (2025, "boven_gemiddeld")]  # improvement becomes visible
     latest = dict(con.execute("SELECT location_key, quality_verdict FROM v_quality_latest").fetchall())
     assert latest["11111111-1000AA"] == "onder_gemiddeld"
+    assert "22220841-3735ME" not in latest  # an old verdict of a location that stopped is not current
+    from pipeline.db_queries import locations_for_procedure
+    assert "22220841-3735ME" not in set(locations_for_procedure(con, "heup")["location_key"])
     problems = dict(con.execute("SELECT problem, n FROM v_integrity").fetchall())
     assert problems["measurement without location"] == 2  # unknown location is reported, not silently dropped
     assert problems["duplicate location_key"] == 0
@@ -829,26 +836,10 @@ def test_policy_overview_counts_reimbursed_better_hospitals():
         {"concern": "CZ", "label": "CZ", "polis": "Zorgbewust", "polis_type": "budget", "premie_per_maand": "176.25", "vergoeding_niet_gecontracteerd_pct": None},
     ])
     out = policy_overview(near, contracts, policies).set_index("polis")
-    assert (out.loc["Eigen Keuze", ["volledig", "deels", "onbekend"]] == [2, 0, 0]).all()
+    assert (out.loc["Eigen Keuze", ["volledig", "vrij", "deels", "onbekend"]] == [1, 1, 0, 0]).all()
     assert (out.loc["Basis Keuze", ["volledig", "deels", "onbekend"]] == [1, 1, 0]).all()
     assert (out.loc["Zorgbewust", ["volledig", "deels", "onbekend"]] == [0, 0, 2]).all()
     assert out.index[0] == "Eigen Keuze"
-
-
-def test_zorgkaart_parse_and_link():
-    from pipeline.reviews_ingest import link
-    from scrapers.zorgkaart import parse_institution
-    html = ('<script type="application/ld+json">{"@type":"Hospital","name":"UMC Utrecht",'
-            '"address":{"postalCode":"3584 CX","addressLocality":"Utrecht"},'
-            '"aggregateRating":{"@type":"AggregateRating","ratingValue":8.4,"ratingCount":1234}}</script>')
-    row = parse_institution(html, "https://example/zorginstelling/ziekenhuis-umc-utrecht-utrecht-1")
-    assert row["rating"] == 8.4 and row["count"] == 1234 and row["postcode"] == "3584CX"
-    locations = pd.DataFrame([
-        {"location_key": "06020602-3584CX", "locatie_naam": "UMC Utrecht", "organisatie_naam": "UMC Utrecht", "postcode": "3584CX", "plaats": "Utrecht"},
-        {"location_key": "06010618-3582KE", "locatie_naam": "Diakonessenhuis", "organisatie_naam": "Diak", "postcode": "3582KE", "plaats": "Utrecht"},
-    ])
-    linked = link(pd.DataFrame([{**row, "fetched_on": "2026-11-25"}]), locations)
-    assert linked.iloc[0]["location_key"] == "06020602-3584CX"
 
 
 def test_explain_in_plain_words():
@@ -866,3 +857,125 @@ def test_explain_in_plain_words():
     trend = pd.DataFrame({"indicator": ["Diepe wondinfectie binnen 90 dagen"] * 3, "verslagjaar": [2023, 2024, 2025],
                           "verdict": ["beter"] * 3})
     assert trend_sentences(trend) == ["Al 3 jaar beter dan gemiddeld op: diepe wondinfectie binnen 90 dagen"]
+
+
+CZ_PAGE = """Resultaten van 2027 :
+3 zorgverleners
+Umc Utrecht Heidelberglaan 100
+4,0 km - 4,0 kilometer van je locatie Utrecht, Heidelberglaan 100
+(Nog) geen contract: wel vergoed
+Met omzetplafond
+Reviews: 8,0 op basis van 85 waarderingen voor Reviews 8 , 0 85 reviews
+St. Antonius Ziekenhuis Locatie Utrecht Soestwetering 1
+4,6 km - 4,6 kilometer van je locatie Utrecht, Soestwetering 1
+Nog geen contract: een deel niet vergoed
+Stichting Alexander Monro Ziekenhuis Professor Bronkhorstlaan 10g 94
+9,0 km - 9,0 kilometer van je locatie Bilthoven, Professor Bronkhorstlaan 10g 94
+Contract: vergoed
+UMC Utrecht, loc. Alexander Monro Ziekenhuis Professor Bronkhorstlaan 10
+9,0 km - 9,0 kilometer van je locatie Bilthoven, Professor Bronkhorstlaan 10
+(Nog) geen contract: wel vergoed
+"""
+
+
+def test_cz_finder_parse_and_link():
+    from pipeline.insurer_contracts import match_entries, per_organisation
+    from scrapers.cz_zorgvinder import parse_results
+    entries, total = parse_results(CZ_PAGE)
+    assert total == 3 and len(entries) == 4
+    assert entries[0] == {"name": "Umc Utrecht", "address": "Heidelberglaan 100", "city": "Utrecht",
+                          "status": "vergoed_als_contract", "omzetplafond": True}
+    assert entries[1]["status"] == "in_onderhandeling" and entries[1]["omzetplafond"] is False
+    assert entries[2]["status"] == "gecontracteerd"
+    locations = pd.DataFrame([
+        {"location_key": "06020602-3584CX", "organisatie_agb": "06020602", "organisatie_naam": "UMC Utrecht",
+         "locatie_naam": "UMC Utrecht", "huisnummer": "100", "plaats": "UTRECHT"},
+        {"location_key": "06010618-3582KE", "organisatie_agb": "06010618", "organisatie_naam": "Diakonessenhuis",
+         "locatie_naam": "Diakonessenhuis Utrecht", "huisnummer": "1", "plaats": "Utrecht"},
+        {"location_key": "22220330-3723MB", "organisatie_agb": "22220330", "organisatie_naam": "Alexander Monro Ziekenhuis",
+         "locatie_naam": "Alexander Monro Ziekenhuis", "huisnummer": "10", "plaats": "Bilthoven"},
+    ])
+    df = pd.DataFrame(entries).assign(concern="CZ", label="CZ", year=2027, source="CZ zorgvinder",
+                                      fetched_on="2026-11-25", source_url="u")
+    matched = match_entries(df, locations)
+    assert matched["location_key"].tolist()[0] == "06020602-3584CX"
+    assert pd.isna(matched["location_key"].iloc[1])  # same house number, other hospital: no match
+    assert matched["location_key"].iloc[2] == "22220330-3723MB"
+    assert pd.isna(matched["location_key"].iloc[3])  # UMC clinic in the same building keeps off
+    orgs = per_organisation(matched).set_index("organisatie_agb")
+    assert orgs.loc["22220330", "status"] == "gecontracteerd"
+    assert orgs.loc["06020602", "status"] == "vergoed_als_contract" and bool(orgs.loc["06020602", "omzetplafond"])
+
+
+def test_insurer_finder_wins_over_hospital_page_and_counts_as_reimbursed(tmp_path, monkeypatch):
+    from pipeline import score
+    pd.DataFrame([{"year": 2027, "organisatie_agb": "06020602", "concern": "CZ", "label": "CZ",
+                   "status": "vergoed_als_contract", "peildatum": "2026-11-25"}]).to_csv(tmp_path / "contracts_insurer.csv", index=False)
+    pd.DataFrame([{"year": 2027, "organisatie_agb": "06020602", "concern": "CZ", "label": "CZ",
+                   "status": "in_onderhandeling", "peildatum": "2026-11-01"},
+                  {"year": 2027, "organisatie_agb": "06020602", "concern": "VGZ", "label": "",
+                   "status": "in_onderhandeling", "peildatum": "2026-11-01"}]).to_csv(tmp_path / "contracts_candidates.csv", index=False)
+    monkeypatch.setattr(score, "PROCESSED", tmp_path)
+    monkeypatch.setattr(score, "MANUAL", tmp_path)
+    contracts = score.load_contracts(2027)
+    cz = score.contract_for(contracts, "06020602", "CZ", "CZ")
+    assert cz["status"] == "vergoed_als_contract" and cz["origin"] == "verzekeraar"
+    near = pd.DataFrame({"organisatie_agb": ["06020602"], "quality_verdict": ["boven_gemiddeld"]})
+    policies = pd.DataFrame([
+        {"concern": "CZ", "label": "CZ", "polis": "Zorgbewust", "polis_type": "budget", "premie_per_maand": "170", "vergoeding_niet_gecontracteerd_pct": "65"},
+        {"concern": "VGZ", "label": "VGZ", "polis": "Basis Keuze", "polis_type": "budget", "premie_per_maand": "167", "vergoeding_niet_gecontracteerd_pct": "70"},
+    ])
+    out = score.policy_overview(near, contracts, policies).set_index("polis")
+    assert out.loc["Zorgbewust", "volledig"] == 1
+    # a hospital saying 'in talks' does not tell what the insurer pays meanwhile: unknown, not 'partly'
+    assert out.loc["Basis Keuze", "onbekend"] == 1
+
+
+def test_postcode_fallback_without_pdok(tmp_path):
+    from pipeline.geo import approximate_from_cache
+    cache = tmp_path / "c.csv"
+    pd.DataFrame([{"postcode": "3584CX", "huisnummer": "100", "lat": 52.08, "lon": 5.18},
+                  {"postcode": "3582KE", "huisnummer": "1", "lat": 52.09, "lon": 5.13}]).to_csv(cache, index=False)
+    assert approximate_from_cache("3584 AB", cache) == (52.08, 5.18)
+    assert approximate_from_cache("3583", cache) is not None  # nearest PC4 number
+    assert approximate_from_cache("9999", cache) is None
+
+
+def test_premium_amounts_found_in_insurer_text():
+    from scrapers.verify_premiums import amount_text, find_amounts
+    amounts = {"Basis Start": amount_text(159.45), "Basis Zeker": amount_text(164.95), "Exclusief": amount_text(186.9)}
+    text = "Premies 2027\nBasis Start € 159,45 per maand\nBasis Zeker €\n164,95\nExclusief 1186,90"
+    assert find_amounts(text, amounts) == {"Basis Start", "Basis Zeker"}  # 1186,90 is not 186,90
+
+
+def test_policies_in_scope_come_from_the_insurer_itself():
+    """Direct sources only: every policy the app shows is sourced on the insurer's own domain."""
+    from pipeline.reference import scope
+    from pipeline.score import load_policies
+    from scrapers.verify_premiums import SITES, site_of
+    policies = load_policies(2027)
+    assert set(scope()["label"]) <= set(policies["label"])
+    assert set(policies["concern"]) <= set(scope()["concern"])
+    for p in policies.itertuples():
+        own = site_of(SITES[p.label]).split(".")[-2]  # e.g. 'vgz' also allows cooperatievgz.nl
+        assert own in site_of(p.source_url), (p.label, p.polis, p.source_url)
+
+
+def test_premium_from_elsewhere_counts_once_confirmed_on_own_site(tmp_path, monkeypatch):
+    from pipeline import score
+    pd.DataFrame([
+        {"concern": "CZ", "label": "OHRA", "polis": "Basis", "premie_per_maand": 177.35, "source_type": "aggregator",
+         "source_url": "https://www.keuze.nl/x"},
+        {"concern": "CZ", "label": "Just", "polis": "Just Basic", "premie_per_maand": 168.5, "source_type": "aggregator",
+         "source_url": "https://www.keuze.nl/y"},
+        {"concern": "DSW", "label": "DSW", "polis": "Basis", "premie_per_maand": 173.25, "source_type": "insurer",
+         "source_url": "https://www.dsw.nl/z"},
+    ]).to_csv(tmp_path / "polissen_2027.csv", index=False)
+    pd.DataFrame([{"label": "OHRA", "polis": "Basis", "confirmed": True, "confirmed_url": "https://www.ohra.nl/premie",
+                   "checked_on": "2026-11-26"},
+                  {"label": "Just", "polis": "Just Basic", "confirmed": False, "confirmed_url": None,
+                   "checked_on": "2026-11-26"}]).to_csv(tmp_path / "premium_check.csv", index=False)
+    monkeypatch.setattr(score, "MANUAL", tmp_path)
+    monkeypatch.setattr(score, "PROCESSED", tmp_path)
+    out = score.load_policies(2027)
+    assert out[["label", "source_url"]].values.tolist() == [["OHRA", "https://www.ohra.nl/premie"]]

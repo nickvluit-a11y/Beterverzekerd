@@ -11,12 +11,12 @@ def has_quality_data(con: duckdb.DuckDBPyConnection) -> bool:
 
 
 def locations_for_procedure(con: duckdb.DuckDBPyConnection, procedure_id: str) -> pd.DataFrame:
-    """Locations with coordinates that report indicators for the procedure (= they perform it)."""
+    """Locations with coordinates that still report the procedure (active in v_quality_latest)."""
     return con.execute("""
         SELECT l.*, coalesce(l.locatie_naam, l.organisatie_naam) || ' (' || coalesce(l.plaats, '') || ')' AS location_name
         FROM locations l
         WHERE l.lat IS NOT NULL
-          AND l.location_key IN (SELECT location_key FROM measurements WHERE procedure_id = ?)
+          AND l.location_key IN (SELECT location_key FROM v_quality_latest WHERE procedure_id = ?)
     """, [procedure_id]).df()
 
 
@@ -25,10 +25,10 @@ def quality_latest(con: duckdb.DuckDBPyConnection, procedure_id: str) -> pd.Data
 
 
 def indicator_profile(con: duckdb.DuckDBPyConnection, location_key: str, procedure_id: str) -> pd.DataFrame:
-    """Latest year: each indicator for this location next to the national rate, with the verdict."""
+    """The year of the current verdict: each indicator for this location next to the national rate."""
     return con.execute("""
         WITH latest AS (
-            SELECT max(verslagjaar) AS y FROM quality_indicator WHERE location_key = ? AND procedure_id = ?)
+            SELECT verslagjaar AS y FROM v_quality_latest WHERE location_key = ? AND procedure_id = ?)
         SELECT q.indicator_code, coalesce(q.indicator_nl, i.thema) AS indicator, i.indicator_naam, i.eenheid,
                i.indicator_type, q.verslagjaar, q.method, q.direction, q.rate, q.ci_low, q.ci_high,
                q.national_rate, q.verdict, q.position, q.numerator,
@@ -52,10 +52,9 @@ def indicator_trend(con: duckdb.DuckDBPyConnection, location_key: str, procedure
 
 
 def latest_judged(con: duckdb.DuckDBPyConnection, procedure_id: str) -> pd.DataFrame:
-    """Judged indicators of each location's latest verslagjaar (for plain-language highlights)."""
+    """Judged indicators in the year of each location's current verdict (for plain-language highlights)."""
     return con.execute("""
         SELECT q.location_key, q.verslagjaar, q.indicator_nl, q.verdict
-        FROM quality_indicator q
+        FROM quality_indicator q JOIN v_quality_latest v USING (location_key, procedure_id, verslagjaar)
         WHERE q.procedure_id = ? AND q.verdict IN ('beter', 'slechter', 'gemiddeld')
-        QUALIFY q.verslagjaar = max(q.verslagjaar) OVER (PARTITION BY q.location_key)
     """, [procedure_id]).df()

@@ -19,6 +19,9 @@ Context: volgens de nulmeting van Zorginstituut + Patiëntenfederatie (april 202
 **Klein en heel goed.** Liever één ding uitstekend dan veel dingen net niet. De kernvraag van de app: *"Welke ziekenhuizen bij mij in de buurt zijn aantoonbaar beter voor mijn ingreep, en kan ik daar terecht met mijn verzekering?"* Alles wat daar niet direct aan bijdraagt, wacht.
 **Overzichtelijk en mooi.** Volg het format van de zorgzoekers van grote verzekeraars en vergelijkers: één zoekbalk, kaart + lijst met kaartjes (naam, plaats, afstand, één duidelijk label, 2–3 kernpunten in gewone taal), details pas na een klik. Geen brede tabellen op het eerste scherm.
 
+## Scope-besluit (eigenaar, 25-11-2026)
+**Directe bronnen gaan vóór volledigheid.** Liever een selectie die we rechtstreeks bij de bron kunnen ophalen dan alles via platforms of diep weggestopte pagina's. Daarom dekt de app voorlopig alleen de **vier grootste verzekeraarsconcerns**: Zilveren Kruis (Achmea, 28,2%), VGZ (23,6%), CZ (22,2%) en Menzis (10,7%): samen ±85% van de verzekerden. Bevestigd door de eigenaar op 25-11-2026: met deze vier zijn we redelijk volledig; daar ligt de focus, niet meer. Vastgelegd in `data/manual/scope.csv`. Premies, polissen en contractstatus komen van hun eigen sites en zorgzoekers; een test bewaakt dat elke getoonde polis een bron op het eigen domein heeft. Andere concerns (DSW, a.s.r., Zorg en Zekerheid, ONVZ, Salland, Eucare) vallen buiten scope. Alle merken van de vier (bv. FBTO, Univé, OHRA, VinkVink) zijn kiesbaar; zonder eigen data volgen ze de contracten van het hoofdmerk van hun concern, met die vermelding. Premies tonen we alleen voor de hoofdmerken (eigen site). Geen ZorgkaartNederland (besluit eigenaar 25-11-2026: platform, geen kwaliteitsmaat). De drempels voor 'beter' (80%) en 'slechter' (95%) blijven asymmetrisch (besluit eigenaar).
+
 ## Idee
 Per polis × gecontracteerde ziekenhuizen × kwaliteit van die ziekenhuizen → "kwaliteitsscore per polis voor jouw zorgprofiel".
 Gebruiker vult postcode + aandoening in en ziet per polis welke goede/snelle ziekenhuizen binnen bereik gecontracteerd zijn, met wachttijd, reviewcijfer en premie.
@@ -26,7 +29,7 @@ Gebruiker vult postcode + aandoening in en ziet per polis welke goede/snelle zie
 ## MVP-scope
 - Alleen ziekenhuizen en zelfstandige klinieken (medisch-specialistische zorg), ~71 ziekenhuisorganisaties.
 - Een paar veelvoorkomende aandoeningen/ingrepen waar openbare data voor is. Startvoorstel: heupprothese, knieprothese, staaroperatie. Uitbreiden zodra de pijplijn werkt.
-- De grote concerns met hun labels en polissen: Achmea (Zilveren Kruis e.a.), VGZ, CZ, Menzis, DSW, a.s.r., Zorg en Zekerheid (later: ONVZ — valt vanaf 2027 onder VGZ — Salland, Eucare).
+- Verzekeraars: zie Scope-besluit (de vier grootste, hoofdmerk). Later eventueel DSW, a.s.r., Zorg en Zekerheid e.a., alleen met directe bronnen.
 
 ## Architectuur (5 lagen)
 1. **Bronnen** (elk eigen ververs-ritme)
@@ -36,7 +39,7 @@ Gebruiker vult postcode + aandoening in en ziet per polis welke goede/snelle zie
    | Wachttijden (NZa) | wachttijd polikliniek/diagnostiek/behandeling per locatie | elke 2 weken | NZa open data (CSV op puc.overheid.nl); let op: niet gecontroleerd op juistheid |
    | Contracten | status per ziekenhuis × verzekeraar/label (gecontracteerd, met/zonder omzetplafond, in onderhandeling, geen contract) | 4× per overstapseizoen (nov–jan) | (a) contract-PDF's van ziekenhuizen zelf (bv. AVL, Jeroen Bosch publiceren tabellen per concern/label met peildatum); (b) eigen zorgzoekers van verzekeraars (JS-sites, headless browser nodig) |
    | Polissen & premies | polissen per label, premie, beperkende voorwaarden, vergoeding niet-gecontracteerd | jaarlijks (premies uiterlijk 12 nov) | polisvoorwaarden/premieoverzichten van de verzekeraars zelf + NZa-overzichten; zorgverzekeringskaart.nl (ZN) als controlelijst |
-   | Patiëntervaring | gemiddeld cijfer + aantal waarderingen per ziekenhuis | maandelijks | ZorgkaartNederland (keuze eigenaar 25-11-2026: consumenten verwachten reacties te zien). ALLEEN aggregaten, robots.txt/voorwaarden respecteren; parallel officiële datalevering vragen bij de Patiëntenfederatie |
+   | Patiëntervaring | — | — | Niet in de app: ZorgkaartNederland is een platform (besluit eigenaar 25-11-2026). Patiënt-gerapporteerde uitkomsten (PROMs) komen wél mee via Zorginzicht. |
 2. **Ophalen**: per bron een los script in `scrapers/`. Eén kapotte bron mag de rest niet blokkeren. Ruwe output → `data/raw/<bron>/<peildatum>/`.
 3. **Koppelen & opschonen** (`pipeline/`): sleutels zijn de AGB-code van het ziekenhuis (+ locatie) en een vaste mapping label → concern → polis. Ziekenhuisnamen verschillen per bron: bouw een `hospitals` referentietabel met aliassen.
 4. **Database**: SQLite of DuckDB in het begin. Elk datapunt heeft `bron`, `peildatum`, `opgehaald_op`. Historie bewaren (contracten verschuiven door het seizoen).

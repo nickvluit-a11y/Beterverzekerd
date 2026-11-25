@@ -16,7 +16,7 @@ from pipeline.quality import compare, hospital_verdict, with_catalogue
 from pipeline.reference import MANUAL, PROCESSED, hospitals, indicator_catalogue, labels, locations
 
 # vrije_keuze: restitutie policy, reimbursed up to market rate everywhere, but not a contract
-ACCESS_ORDER = ["gecontracteerd", "gecontracteerd_met_plafond", "vrije_keuze", "in_onderhandeling", "geen_contract", "onbekend"]
+ACCESS_ORDER = ["gecontracteerd", "gecontracteerd_met_plafond", "vergoed_als_contract", "vrije_keuze", "in_onderhandeling", "geen_contract", "onbekend"]
 POLICY_KEY = ["concern", "label", "polis"]
 
 _MONTH_NAMES = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus",
@@ -113,15 +113,35 @@ def _read(path: Path) -> pd.DataFrame:
     return pd.read_csv(path) if path.exists() else pd.DataFrame()
 
 
-def load_policies(year: int = 2027) -> pd.DataFrame:
-    """Policies for `year`. Without a filled policy file, fall back to one row per label."""
+def load_policies(year: int = 2027, in_scope: bool = True) -> pd.DataFrame:
+    """Policies for `year` (by default only the labels in data/manual/scope.csv). Without a filled
+    policy file, fall back to one row per label."""
     policies = _read(MANUAL / f"polissen_{year}.csv")
+    if in_scope and not policies.empty:
+        # the four groups in scope; a policy only when its premium is sourced on the brand's own site
+        from pipeline.reference import scope
+        policies = policies[policies["concern"].isin(scope()["concern"]) & (policies["label"] != "ONVZ")].reset_index(drop=True)
     if policies.empty:
         policies = labels()[["concern", "label"]].copy()
         policies["polis"] = "(polissen nog niet ingevoerd)"
         policies["polis_type"] = None
         policies["premie_per_maand"] = None
         policies["year"] = year
+    check = _read(PROCESSED / "premium_check.csv")
+    if not check.empty and {"label", "polis", "confirmed"} <= set(check.columns):
+        check = check[["label", "polis", "confirmed", "confirmed_url", "checked_on"]].drop_duplicates(["label", "polis"])
+        check["confirmed"] = check["confirmed"].astype(str).str.lower() == "true"
+        policies = policies.merge(check, on=["label", "polis"], how="left")
+        policies["confirmed"] = policies["confirmed"].map(lambda v: bool(v) if pd.notna(v) else False).astype(object)
+    else:
+        policies["confirmed"] = None  # not checked yet: say nothing rather than 'unconfirmed'
+    if in_scope and not policies.empty:
+        # direct sources only: a premium from elsewhere counts once the check found it on the brand's own site
+        own = policies["source_type"] == "insurer"
+        confirmed = policies["confirmed"].map(lambda v: v is True)
+        if "confirmed_url" in policies:
+            policies.loc[~own & confirmed, "source_url"] = policies.loc[~own & confirmed, "confirmed_url"]
+        policies = policies[own | confirmed].reset_index(drop=True)
     return policies
 
 
@@ -134,16 +154,20 @@ def load_contracts(year: int = 2027, include_candidates: bool = True) -> pd.Data
         checked = checked[pd.to_numeric(checked["year"], errors="coerce") == year].assign(checked=True)
     if not include_candidates:
         return checked
-    auto = _read(PROCESSED / "contracts_candidates.csv")
-    if auto.empty or "organisatie_agb" not in auto:
-        return checked
-    auto = auto[(pd.to_numeric(auto["year"], errors="coerce") == year) & auto["organisatie_agb"].notna()
-                & (auto["status"] != "onbekend")].assign(checked=False)
-    auto["organisatie_agb"] = auto["organisatie_agb"].astype(str).str.zfill(8)
-    if not checked.empty:
-        done = set(zip(checked["organisatie_agb"], checked["concern"], checked["label"].fillna("")))
-        auto = auto[[k not in done for k in zip(auto["organisatie_agb"], auto["concern"], auto["label"].fillna(""))]]
-    return pd.concat([checked, auto], ignore_index=True) if not checked.empty else auto.reset_index(drop=True)
+    result = checked
+    # the insurer's own care finder first (it decides what it reimburses), then the hospital's publication
+    for name, origin in (("contracts_insurer.csv", "verzekeraar"), ("contracts_candidates.csv", "ziekenhuis")):
+        auto = _read(PROCESSED / name)
+        if auto.empty or "organisatie_agb" not in auto:
+            continue
+        auto = auto[(pd.to_numeric(auto["year"], errors="coerce") == year) & auto["organisatie_agb"].notna()
+                    & (auto["status"] != "onbekend")].assign(checked=False, origin=origin)
+        auto["organisatie_agb"] = auto["organisatie_agb"].astype(str).str.zfill(8)
+        if not result.empty:
+            done = set(zip(result["organisatie_agb"], result["concern"], result["label"].fillna("")))
+            auto = auto[[k not in done for k in zip(auto["organisatie_agb"], auto["concern"], auto["label"].fillna(""))]]
+        result = pd.concat([result, auto], ignore_index=True) if not result.empty else auto.reset_index(drop=True)
+    return result
 
 
 def contract_for(contracts: pd.DataFrame, organisatie_agb: str, concern: str, label: str) -> dict | None:
@@ -312,26 +336,32 @@ def insurer_overview(near: pd.DataFrame, contracts: pd.DataFrame, concerns: list
 
 def policy_overview(near: pd.DataFrame, contracts: pd.DataFrame, policies: pd.DataFrame,
                     verdict_col: str = "quality_verdict") -> pd.DataFrame:
-    """Per policy: of the better-than-average hospitals in reach, how many are fully reimbursed
-    (contracted, or the policy pays non-contracted care in full), partly (non-contracted with a
-    known lower percentage) or unknown. Sorted on fully reimbursed, then premium."""
+    """Per policy: of the better-than-average hospitals in reach, how many are reimbursed in full
+    because of a contract (or 'reimbursed as contracted' while talks go on), how many only because
+    the policy pays non-contracted care in full ('vrij', up to the usual market rate), how many
+    partly (known lower percentage) and how many are unknown. Sorted on reimbursed, then premium."""
     better = near[near[verdict_col] == "boven_gemiddeld"]
     rows = []
     for pol in policies.to_dict("records"):
         pct = pd.to_numeric(pol.get("vergoeding_niet_gecontracteerd_pct"), errors="coerce")
-        full = part = unknown = 0
+        full = free = part = unknown = 0
         for agb in better["organisatie_agb"]:
-            status = (contract_for(contracts, agb, pol["concern"], pol["label"]) or {}).get("status") \
-                if not contracts.empty else None
-            if status in ("gecontracteerd", "gecontracteerd_met_plafond") or (pd.notna(pct) and pct >= 100):
+            row = (contract_for(contracts, agb, pol["concern"], pol["label"]) or {}) if not contracts.empty else {}
+            status = row.get("status")
+            if status == "in_onderhandeling" and row.get("origin") != "verzekeraar":
+                status = None  # a hospital's 'in talks' does not say what the insurer pays meanwhile
+            if status in ("gecontracteerd", "gecontracteerd_met_plafond", "vergoed_als_contract"):
                 full += 1
-            elif status == "geen_contract" and pd.notna(pct):
+            elif pd.notna(pct) and pct >= 100:
+                free += 1
+            elif status in ("geen_contract", "in_onderhandeling") and pd.notna(pct):
                 part += 1
             else:
                 unknown += 1
-        rows.append({**pol, "betere_ziekenhuizen": len(better), "volledig": full, "deels": part, "onbekend": unknown,
-                     "premie": pd.to_numeric(pol.get("premie_per_maand"), errors="coerce")})
+        rows.append({**pol, "betere_ziekenhuizen": len(better), "volledig": full, "vrij": free, "deels": part,
+                     "onbekend": unknown, "premie": pd.to_numeric(pol.get("premie_per_maand"), errors="coerce")})
     out = pd.DataFrame(rows)
     if out.empty:
         return out
-    return out.sort_values(["volledig", "premie"], ascending=[False, True], na_position="last").reset_index(drop=True)
+    out["vergoed"] = out["volledig"] + out["vrij"]
+    return out.sort_values(["vergoed", "premie"], ascending=[False, True], na_position="last").reset_index(drop=True)

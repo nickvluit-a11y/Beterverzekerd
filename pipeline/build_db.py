@@ -15,7 +15,7 @@ Tables
   labels               label -> concern
 Views
   v_national           national rate per indicator × year
-  v_quality_latest     latest verdict per location × procedure
+  v_quality_latest     current verdict per active location × procedure (see the view)
   v_quality_trend      verdict per location × procedure over the years
   v_integrity          linkage problems (rows that do not join); must stay empty or explained
 """
@@ -100,9 +100,17 @@ FROM measurements
 WHERE denominator > 0 AND numerator BETWEEN 0 AND denominator
 GROUP BY ALL;
 
+-- The current verdict per location x procedure, one definition for the whole app:
+--   * active: the location reported the procedure in the newest or the year before (national), so
+--     locations that stopped (closed, merged, AGB reused) are not shown with an old verdict;
+--   * the verdict comes from the newest of those two years that has one; else 'geen_data'.
 CREATE OR REPLACE VIEW v_quality_latest AS
-SELECT * FROM quality_location
-QUALIFY verslagjaar = max(verslagjaar) OVER (PARTITION BY location_key, procedure_id);
+WITH newest AS (SELECT procedure_id, max(verslagjaar) AS y FROM quality_location GROUP BY procedure_id),
+recent AS (
+    SELECT q.* FROM quality_location q JOIN newest n USING (procedure_id) WHERE q.verslagjaar >= n.y - 1)
+SELECT * FROM recent
+QUALIFY row_number() OVER (PARTITION BY location_key, procedure_id
+                           ORDER BY (quality_verdict = 'geen_data'), verslagjaar DESC) = 1;
 
 CREATE OR REPLACE VIEW v_quality_trend AS
 SELECT q.location_key, l.organisatie_naam, l.locatie_naam, l.plaats, q.procedure_id, q.verslagjaar,
