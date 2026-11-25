@@ -44,10 +44,6 @@ jobs:
         continue-on-error: true
         run: python -m scrapers.waits
 
-      - name: Fetch ZorgkaartNederland ratings (aggregates only)
-        continue-on-error: true
-        run: python -m scrapers.zorgkaart
-
       - name: Fetch CZ care finder (contract status per location)
         continue-on-error: true
         run: python -m scrapers.cz_zorgvinder
@@ -81,11 +77,6 @@ jobs:
         if: always()
         continue-on-error: true
         run: python -m pipeline.insurer_contracts
-
-      - name: Link ratings to locations
-        if: always()
-        continue-on-error: true
-        run: python -m pipeline.reviews_ingest
 
       - name: Build database
         if: always()

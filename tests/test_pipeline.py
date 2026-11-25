@@ -842,22 +842,6 @@ def test_policy_overview_counts_reimbursed_better_hospitals():
     assert out.index[0] == "Eigen Keuze"
 
 
-def test_zorgkaart_parse_and_link():
-    from pipeline.reviews_ingest import link
-    from scrapers.zorgkaart import parse_institution
-    html = ('<script type="application/ld+json">{"@type":"Hospital","name":"UMC Utrecht",'
-            '"address":{"postalCode":"3584 CX","addressLocality":"Utrecht"},'
-            '"aggregateRating":{"@type":"AggregateRating","ratingValue":8.4,"ratingCount":1234}}</script>')
-    row = parse_institution(html, "https://example/zorginstelling/ziekenhuis-umc-utrecht-utrecht-1")
-    assert row["rating"] == 8.4 and row["count"] == 1234 and row["postcode"] == "3584CX"
-    locations = pd.DataFrame([
-        {"location_key": "06020602-3584CX", "locatie_naam": "UMC Utrecht", "organisatie_naam": "UMC Utrecht", "postcode": "3584CX", "plaats": "Utrecht"},
-        {"location_key": "06010618-3582KE", "locatie_naam": "Diakonessenhuis", "organisatie_naam": "Diak", "postcode": "3582KE", "plaats": "Utrecht"},
-    ])
-    linked = link(pd.DataFrame([{**row, "fetched_on": "2026-11-25"}]), locations)
-    assert linked.iloc[0]["location_key"] == "06020602-3584CX"
-
-
 def test_explain_in_plain_words():
     from pipeline.explain import explain, trend_sentences
     title, measured, (css, verdict) = explain({"indicator": "Heroperatie (revisie) binnen 1 jaar", "rate": 1.81,

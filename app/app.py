@@ -25,7 +25,7 @@ from pipeline.db_queries import indicator_profile, indicator_trend, latest_judge
 from pipeline.geo import clean_postcode, locate  # noqa: E402
 from pipeline.explain import explain, trend_sentences  # noqa: E402
 from pipeline.quality import domain_highlights, domain_of, domain_verdicts  # noqa: E402
-from pipeline.reference import procedures, scope  # noqa: E402
+from pipeline.reference import labels, procedures, scope  # noqa: E402
 from pipeline.score import attach_organisation, contract_for, hospitals_within, latest_waits, load_contracts, load_policies, policy_overview  # noqa: E402
 
 MONTHS_NL = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
@@ -122,14 +122,6 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 """, unsafe_allow_html=True)
 
 
-@st.cache_data(ttl=3600)
-def load_reviews() -> pd.DataFrame:
-    path = Path(__file__).resolve().parent.parent / "data" / "processed" / "reviews_linked.csv"
-    if not path.exists():
-        return pd.DataFrame(columns=["location_key", "rating", "count"])
-    return pd.read_csv(path, dtype={"location_key": str})[["location_key", "rating", "count"]]
-
-
 @st.cache_resource
 def database():
     return connect()
@@ -160,6 +152,11 @@ ALL_INSURERS = "Alle verzekeraars vergelijken"
 NEAR_KM = 30
 BRAND = dict(zip(scope()["concern"], scope()["brand"]))  # the name consumers know
 LABEL = dict(zip(scope()["concern"], scope()["label"]))  # the policy label whose contracts we show
+# every brand of the four groups can be chosen; a brand without own data follows its group's main brand
+_BRANDS = labels()[labels()["concern"].isin(scope()["concern"]) & ~labels()["label"].isin(["ONVZ"])]
+CONCERN_OF = dict(zip(_BRANDS["label"], _BRANDS["concern"]))
+MAIN_BRANDS = list(scope()["label"])
+BRAND_CHOICES = MAIN_BRANDS + sorted(set(CONCERN_OF) - set(MAIN_BRANDS), key=str.lower)
 
 
 def contract_source(row: dict | None) -> str:
@@ -174,15 +171,14 @@ def contract_source(row: dict | None) -> str:
     return f'<div class="note">Bron: {who}{date}{plafond}</div>'
 
 
-def insurer_name(concern: str) -> str:
-    return BRAND.get(concern, concern)
 with st.form("zoek", border=False):
     c1, c2, c3 = st.columns([1.2, 1.6, 1])
     postcode = c1.text_input("Postcode", value="3584 CX")
     proc_name = c2.selectbox("Ingreep", procs["name_nl"].tolist())
     radius = c3.selectbox("Afstand", [10, 25, 50, 100], index=1, format_func=lambda km: f"{km} km")
-    insurer = st.selectbox("Jouw zorgverzekeraar", [ALL_INSURERS] + list(scope()["concern"]),
-                           format_func=lambda c: c if c == ALL_INSURERS else insurer_name(c))
+    insurer = st.selectbox("Jouw zorgverzekeraar", [ALL_INSURERS] + BRAND_CHOICES,
+                           format_func=lambda b: b if b in (ALL_INSURERS, *MAIN_BRANDS)
+                           else f"{b} (onderdeel van {BRAND.get(CONCERN_OF[b], CONCERN_OF[b])})")
     submitted = st.form_submit_button("Zoek ziekenhuizen", type="primary", width="stretch")
 
 if submitted:
@@ -206,7 +202,6 @@ if search:
     near = near.merge(verdicts, on="location_key", how="left")
     waits = latest_waits(proc).rename(columns={"weeks": "wait_weeks", "peildatum": "wait_date"})
     near = near.merge(waits[["location_key", "wait_weeks", "wait_type", "wait_date"]], on="location_key", how="left")
-    near = near.merge(load_reviews(), on="location_key", how="left")
     near["quality_verdict"] = near["quality_verdict"].fillna("geen_data").map(shown_verdict)
     near["_order"] = near["quality_verdict"].map(ORDER.index)
     near["display_name"] = [display_name(r) for r in near.itertuples()]
@@ -248,6 +243,10 @@ if search:
                     unsafe_allow_html=True)
 
         chosen = search.get("insurer", ALL_INSURERS)
+        if chosen != ALL_INSURERS and chosen not in CONCERN_OF:  # a stale session value
+            chosen = ALL_INSURERS
+        chosen_concern = CONCERN_OF.get(chosen)
+        main_brand = LABEL.get(chosen_concern, chosen)
         has_contracts = not contracts.empty
 
         def render_policies() -> None:
@@ -257,7 +256,12 @@ if search:
                 return
             policies = load_policies(2027)
             if chosen != ALL_INSURERS:
-                policies = policies[policies["concern"] == chosen]
+                policies = policies[policies["label"] == chosen]
+                if policies.empty:
+                    st.markdown(f"#### Kun je met {chosen} naar de betere ziekenhuizen?")
+                    st.caption(f"Premies en polissen van {chosen} tonen we nog niet. Bij de ziekenhuizen hieronder zie je "
+                               f"de contracten van {main_brand}; die gelden meestal ook voor {chosen}, maar check je polis.")
+                    return
             table = policy_overview(near, contracts, policies)
             what = "het betere ziekenhuis" if n_better == 1 else f"de {n_better} betere ziekenhuizen"
             st.markdown(f"#### Welke polis vergoedt {what} binnen {search['radius']} km?")
@@ -313,21 +317,21 @@ if search:
                              '</span></div>')
             else:
                 wait_html = ""
-            if pd.notna(getattr(row, "rating", None)):
-                stars = f"{float(row.rating):.1f}".replace(".", ",")
-                count = f"{int(row.count):,}".replace(",", ".")
-                wait_html += (f'<div class="wait">★ {stars} van patiënten ({count} waarderingen)'
-                              '<span class="note"> · ZorgkaartNederland</span></div>')
             found = {c: contract_for(contracts, row.organisatie_agb, c, LABEL.get(c, c)) for c in concerns} if has_contracts else {}
             found = {c: r for c, r in found.items() if r}
             if chosen != ALL_INSURERS:
-                status = (found.get(chosen) or {}).get("status")
+                own = contract_for(contracts, row.organisatie_agb, chosen_concern, chosen) if has_contracts else None
+                own = own if own and own.get("label") == chosen else None  # the brand's own row, not concern-wide
+                mine = own or found.get(chosen_concern)
+                status = (mine or {}).get("status")
                 mark, chip_css = CONTRACT_CHIP.get(status, ("?", ""))
                 label = {"gecontracteerd": "gecontracteerd", "gecontracteerd_met_plafond": "gecontracteerd (met plafond)",
                          "vergoed_als_contract": "nog in gesprek, wel volledig vergoed",
                          "in_onderhandeling": "in onderhandeling", "geen_contract": "geen contract"}.get(status, "contract nog onbekend")
-                chips_html = (f'<div class="chips"><span class="chip big {chip_css}">{insurer_name(chosen)}: {mark} {label}</span>'
-                              f'{contract_source(found.get(chosen))}</div>')
+                via = ("" if own or chosen == main_brand or not mine
+                       else f'<div class="note">Contract van {main_brand}; geldt meestal ook voor {chosen}, check je polis.</div>')
+                chips_html = (f'<div class="chips"><span class="chip big {chip_css}">{chosen}: {mark} {label}</span>'
+                              f'{contract_source(mine)}{via}</div>')
             elif found:
                 chips = []
                 for concern in concerns:
