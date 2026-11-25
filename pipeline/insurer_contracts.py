@@ -21,7 +21,7 @@ import pandas as pd
 
 from pipeline.reference import PROCESSED, REFERENCE, ROOT, normalise
 
-FINDERS = ["cz_zorgvinder"]
+FINDERS = ["cz_zorgvinder", "vgz_zorgzoeker"]
 WORST_FIRST = ["geen_contract", "in_onderhandeling", "vergoed_als_contract", "gecontracteerd"]
 MIN_NAME_SIMILARITY = 0.75
 MIN_SIMILARITY_SAME_ADDRESS = 0.5
@@ -82,6 +82,36 @@ def match_entries(entries: pd.DataFrame, locations: pd.DataFrame) -> pd.DataFram
     return entries.assign(location_key=pd.Series(keys, dtype=object), organisatie_agb=pd.Series(agbs, dtype=object))
 
 
+def match_by_agb(entries: pd.DataFrame, locations: pd.DataFrame) -> pd.DataFrame:
+    """For finders that publish AGB code + postcode (VGZ): the exact location; else a location at the
+    same postcode with a similar name (AGB codes differ between registers, and 00000000 is a
+    placeholder); else the organisation (location unknown)."""
+    known = set(locations["location_key"])
+    by_postcode = locations.groupby("postcode")
+    orgs = {a for a in locations["organisatie_agb"].dropna() if valid_agb(a)}
+    keys, agbs, levels = [], [], []
+    for e in entries.itertuples():
+        agb, pc = str(e.agb).zfill(8), str(e.postcode).replace(" ", "").upper()
+        key, level = f"{agb}-{pc}", None
+        if key in known:
+            level = "locatie"
+        elif pc in by_postcode.groups:
+            here = by_postcode.get_group(pc)
+            here = here.assign(
+                locatie_naam=lambda d: d["locatie_naam"].fillna(d["organisatie_naam"]))
+            sims = here.apply(lambda l: _similarity(l["locatie_naam"] or l["organisatie_naam"], e.name, ""), axis=1) \
+                if not here.empty else pd.Series(dtype=float)
+            if not sims.empty and sims.max() >= MIN_SIMILARITY_SAME_ADDRESS:
+                best = here.loc[sims.idxmax()]
+                key, agb, level = best["location_key"], best["organisatie_agb"], "locatie"
+        if level is None and agb in orgs:
+            key, level = None, "organisatie"
+        keys.append(key if level == "locatie" else None)
+        agbs.append(agb if level else None)
+        levels.append(level)
+    return entries.assign(location_key=keys, organisatie_agb=agbs, match_level=levels)
+
+
 def valid_agb(agb: object) -> bool:
     """A real organisation AGB code: 8 digits, not a placeholder like 00000000 (which in the
     Zorginzicht data is shared by unrelated clinics)."""
@@ -95,6 +125,8 @@ def per_organisation(matched: pd.DataFrame) -> pd.DataFrame:
     matched = matched.dropna(subset=["organisatie_agb"]).copy()
     matched["organisatie_agb"] = [a if valid_agb(a) else k for a, k in zip(matched["organisatie_agb"], matched["location_key"])]
     for (agb, concern, label), g in matched.groupby(["organisatie_agb", "concern", "label"]):
+        if "match_level" in g and (g["match_level"] == "locatie").any():
+            g = g[g["match_level"] == "locatie"]  # our own locations decide, not a satellite clinic
         status = min(g["status"], key=lambda s: WORST_FIRST.index(s) if s in WORST_FIRST else 0)
         rows.append({"year": int(g["year"].iloc[0]), "organisatie_agb": str(agb).zfill(8) if valid_agb(agb) else agb,
                      "concern": concern,
@@ -115,7 +147,7 @@ def main() -> int:
             lines.append(f"- {finder}: nog geen data")
             continue
         entries = pd.read_csv(path, dtype=str)
-        matched = match_entries(entries, locations)
+        matched = match_by_agb(entries, locations) if "agb" in entries else match_entries(entries, locations)
         orgs = per_organisation(matched)
         frames.append(orgs)
         lines += [f"## {finder}", "",

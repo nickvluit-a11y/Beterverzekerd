@@ -998,3 +998,30 @@ def test_placeholder_agb_keeps_contracts_per_location():
     assert orgs.loc["00000000-2725NA", "status"] == "geen_contract"
     assert contract_key("00000000", "00000000-3528AH") == "00000000-3528AH"
     assert contract_key("06020602", "06020602-3584CX") == "06020602"
+
+
+def test_vgz_finder_parse_and_link_by_agb():
+    from pipeline.insurer_contracts import match_by_agb, per_organisation
+    from scrapers.vgz_zorgzoeker import parse
+    def result(name, agb, pc, status):
+        return {"basisInfo": {"naam": name, "agbCode": agb, "postcode": pc, "straat": "X", "huisnummer": "1",
+                              "plaatsnaam": "UTRECHT", "contractStatus": status},
+                "zorgsoorten": [{"subzorgsoorten": [{"zorgsoortNaam": "Orthopedie", "contractType": status}]}]}
+    rows = [parse(r) for r in [result("UMC Utrecht, loc. AZU", "06020602", "3584CX", "InOnderhandeling"),
+                               result("UMC Utrecht, loc. WKZ", "06020602", "3584EA", "NietGecontracteerd"),
+                               result("Xpert Clinics, loc. Utrecht Jansoniuslaan", "22220815", "3528AH", "GecontracteerdZonderDLP"),
+                               result("Iets", "1", "1000AA", "Onbekend")]]
+    assert rows[3] is None and rows[2]["status"] == "gecontracteerd" and rows[2]["omzetplafond"] is True
+    assert rows[0]["status_orthopedie"] == "InOnderhandeling"
+    entries = pd.DataFrame(rows[:3]).assign(concern="VGZ", label="VGZ", year=2027, source="s", source_url="u", fetched_on="2026-11-25")
+    locations = pd.DataFrame([
+        {"location_key": "06020602-3584CX", "organisatie_agb": "06020602", "organisatie_naam": "UMC Utrecht",
+         "locatie_naam": "UMC Utrecht", "postcode": "3584CX"},
+        {"location_key": "00000000-3528AH", "organisatie_agb": "00000000", "organisatie_naam": "Equipe Zorgbedrijven",
+         "locatie_naam": "Xpert Clinics Utrecht Janssoniuslaan", "postcode": "3528AH"},
+    ])
+    matched = match_by_agb(entries, locations)
+    assert matched["match_level"].tolist() == ["locatie", "organisatie", "locatie"]
+    orgs = per_organisation(matched).set_index("organisatie_agb")
+    assert orgs.loc["06020602", "status"] == "in_onderhandeling"  # the satellite's 'no contract' does not decide
+    assert orgs.loc["00000000-3528AH", "status"] == "gecontracteerd"
