@@ -170,6 +170,13 @@ def load_contracts(year: int = 2027, include_candidates: bool = True) -> pd.Data
     return result
 
 
+def contract_key(organisatie_agb: object, location_key: object) -> str:
+    """Contracts are per organisation AGB; for a placeholder AGB (00000000, shared by unrelated
+    clinics) per location instead."""
+    from pipeline.insurer_contracts import valid_agb
+    return str(organisatie_agb) if valid_agb(organisatie_agb) else str(location_key)
+
+
 def contract_for(contracts: pd.DataFrame, organisatie_agb: str, concern: str, label: str) -> dict | None:
     """Most specific contract row: the label's own rows first, else concern-wide rows (label empty).
 
@@ -324,7 +331,8 @@ def insurer_overview(near: pd.DataFrame, contracts: pd.DataFrame, concerns: list
     rows = []
     for concern in concerns:
         counts = dict.fromkeys(INSURER_STATUSES, 0)
-        for agb in better["organisatie_agb"]:
+        keys = [contract_key(a, k) for a, k in zip(better["organisatie_agb"], better.get("location_key", better["organisatie_agb"]))]
+        for agb in keys:
             status = (contract_for(contracts, agb, concern, concern) or {}).get("status", "onbekend") \
                 if not contracts.empty else "onbekend"
             counts[status if status in counts else "onbekend"] += 1
@@ -345,7 +353,8 @@ def policy_overview(near: pd.DataFrame, contracts: pd.DataFrame, policies: pd.Da
     for pol in policies.to_dict("records"):
         pct = pd.to_numeric(pol.get("vergoeding_niet_gecontracteerd_pct"), errors="coerce")
         full = free = part = unknown = 0
-        for agb in better["organisatie_agb"]:
+        keys = [contract_key(a, k) for a, k in zip(better["organisatie_agb"], better.get("location_key", better["organisatie_agb"]))]
+        for agb in keys:
             row = (contract_for(contracts, agb, pol["concern"], pol["label"]) or {}) if not contracts.empty else {}
             status = row.get("status")
             if status == "in_onderhandeling" and row.get("origin") != "verzekeraar":

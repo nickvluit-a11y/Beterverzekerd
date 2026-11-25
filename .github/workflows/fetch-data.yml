@@ -48,6 +48,14 @@ jobs:
         continue-on-error: true
         run: python -m scrapers.cz_zorgvinder
 
+      - name: Fetch VGZ care finder (contract status per location)
+        continue-on-error: true
+        run: python -m scrapers.vgz_zorgzoeker
+
+      - name: Fetch Menzis care finder (contract status per location)
+        continue-on-error: true
+        run: python -m scrapers.menzis_zorgvinder
+
       - name: Check premiums on the insurers' own sites
         continue-on-error: true
         run: python -m scrapers.verify_premiums

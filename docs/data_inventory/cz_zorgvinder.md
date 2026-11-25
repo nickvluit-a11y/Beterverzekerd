@@ -2,11 +2,19 @@
 
 Run: 2026-11-25.
 
-- categorie `ziekenhuis`: 30 gelezen, 31 genoemd
-- categorie `zelfstandig-behandelcentrum`: 30 gelezen, 307 genoemd
-- categorie `zelfstandige-behandelcentra`: 0 gelezen, None genoemd HTTPError
-- categorie `kliniek`: 0 gelezen, None genoemd HTTPError
-- categorie `particuliere-kliniek`: 0 gelezen, None genoemd HTTPError
+## Zoekinstellingen
+
+- afstand `(geen)`: 15 genoemd, 15 gelezen
+- afstand `&afstand=0`: 15 genoemd, 15 gelezen
+- afstand `&afstand=heel-nederland`: 15 genoemd, 15 gelezen
+- afstand `&afstand=999`: 305 genoemd, 30 gelezen
+- afstand `&afstand=100`: 239 genoemd, 30 gelezen
+- pagina-parameter `pagina`: 0 nieuwe
+- pagina-parameter `page`: 0 nieuwe
+- pagina-parameter `p`: 0 nieuwe
+- pagina-parameter `paginanummer`: 0 nieuwe
+
+Geen manier gevonden om te bladeren: per plaats de eerste 30.
 
 | categorie | plaats | genoemd | gelezen | pagina's |
 |---|---|---|---|---|

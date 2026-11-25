@@ -4,7 +4,6 @@ Laatste run: 2026-11-25.
 
 | AGB | resultaat | URL |
 |---|---|---|
-| 06010618 | fout: 404 Client Error: Not Found for url: https://www.diakonessenhuis.nl/nieuws/stand-zaken-contracten-zorgverzekeraars-2027 | https://www.diakonessenhuis.nl/nieuws/stand-zaken-contracten-zorgverzekeraars-2027 |
 | 06010619 | fout: not fetching https://www.meandermc.nl/praktische-informatie/kosten-en-vergoedingen/zorgverzekeraars-en-meander: robots.t | https://www.meandermc.nl/praktische-informatie/kosten-en-vergoedingen/zorgverzekeraars-en-meander |
 | 06010420 | fout: 403 Client Error: Forbidden for url: https://www.isala.nl/praktische-informatie/prijzen-rekening-en-uw-verzekering/contr | https://www.isala.nl/praktische-informatie/prijzen-rekening-en-uw-verzekering/contracten-met-zorgverzekeraars/ |
 | 06010534 | fout: not fetching https://www.geldersevallei.nl/over-zgv/onderhandelingen-zorgverzekeraars: robots.txt unreachable: SSLError | https://www.geldersevallei.nl/over-zgv/onderhandelingen-zorgverzekeraars |
@@ -21,6 +20,7 @@ Laatste run: 2026-11-25.
 | 06010620 | ok (html, 32 tabellen) | https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars |
 | 06080701 | ok (pdf, 1 tabellen) | https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf |
 | 06020602 | ok (html, 0 tabellen) | https://www.umcutrecht.nl/nl/budgetpolissen |
+| 06010618 | ok (html, 0 tabellen) | https://www.diakonessenhuis.nl/nieuws/stand-zaken-contracten-zorgverzekeraars-2027 |
 | 06011034 | ok (html, 0 tabellen) | https://www.jeroenboschziekenhuis.nl/naar-het-ziekenhuis/kosten-en-zorgverzekering/vergoeding-door-de-zorgverzekering |
 | 06010520 | ok (html, 0 tabellen) | https://www.ziekenhuisrivierenland.nl/naar-het-ziekenhuis/kosten-en-verzekering |
 | 06010855 | ok (html, 2 tabellen) | https://www.ghz.nl/uw-bezoek/patientenzaken/kosten-en-verzekeringen/zorgverzekeraars/gecontracteerde-verzekeraars-2026/ |

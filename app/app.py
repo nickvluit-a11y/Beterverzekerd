@@ -26,7 +26,7 @@ from pipeline.geo import clean_postcode, locate  # noqa: E402
 from pipeline.explain import explain, trend_sentences  # noqa: E402
 from pipeline.quality import domain_highlights, domain_of, domain_verdicts  # noqa: E402
 from pipeline.reference import labels, procedures, scope  # noqa: E402
-from pipeline.score import attach_organisation, contract_for, hospitals_within, latest_waits, load_contracts, load_policies, policy_overview  # noqa: E402
+from pipeline.score import to_date, attach_organisation, contract_key, contract_for, hospitals_within, latest_waits, load_contracts, load_policies, policy_overview  # noqa: E402
 
 MONTHS_NL = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
 
@@ -218,8 +218,8 @@ if search:
     else:
         counts = near["quality_verdict"].value_counts()
         n_good = int(counts.get("boven_gemiddeld", 0))
-        st.markdown(f"**{len(near)} {'ziekenhuis doet' if len(near) == 1 else 'ziekenhuizen doen'}** binnen "
-                    f"{search['radius']} km een {search['proc_name'].lower()}. "
+        st.markdown(f"**{len(near)} {'ziekenhuis doet' if len(near) == 1 else 'ziekenhuizen doen'}** deze operatie "
+                    f"binnen {search['radius']} km. "
                     + (f"**{n_good}** daarvan {'scoort' if n_good == 1 else 'scoren'} beter dan gemiddeld."
                        if n_good else "Geen daarvan scoort aantoonbaar beter dan gemiddeld; kies eventueel een grotere afstand."))
 
@@ -315,10 +315,11 @@ if search:
                              '</span></div>')
             else:
                 wait_html = ""
-            found = {c: contract_for(contracts, row.organisatie_agb, c, LABEL.get(c, c)) for c in concerns} if has_contracts else {}
+            key = contract_key(row.organisatie_agb, row.location_key)
+            found = {c: contract_for(contracts, key, c, LABEL.get(c, c)) for c in concerns} if has_contracts else {}
             found = {c: r for c, r in found.items() if r}
             if chosen != ALL_INSURERS:
-                own = contract_for(contracts, row.organisatie_agb, chosen_concern, chosen) if has_contracts else None
+                own = contract_for(contracts, key, chosen_concern, chosen) if has_contracts else None
                 own = own if own and own.get("label") == chosen else None  # the brand's own row, not concern-wide
                 mine = own or found.get(chosen_concern)
                 status = (mine or {}).get("status")
@@ -339,7 +340,7 @@ if search:
                 origins = sorted({str(r.get("origin") or "ziekenhuis") for r in found.values()})
                 source = "Contracten 2027 volgens " + " en ".join(
                     {"verzekeraar": "de verzekeraar", "ziekenhuis": "het ziekenhuis"}[o]
-                    for o in origins) + " · ? = nog onbekend"
+                    for o in origins) + " · ✓ betaald · … nog in gesprek · ✗ geen contract · ? nog niet bekend"
                 chips_html = ('<div class="chips">' + "".join(chips) + f'<div class="note">{source}</div></div>')
             else:
                 chips_html = '<div class="chips">Contracten 2027 voor dit ziekenhuis: nog niet bekend</div>'
@@ -409,6 +410,15 @@ if search:
                 render_card(row)
 
 st.divider()
+if search:
+    freshness = [f"kwaliteit: Zorginstituut, cijfers over {int(near['verslagjaar'].max())}"] if not near.empty and near["verslagjaar"].notna().any() else []
+    if not near.empty and near["wait_date"].notna().any():
+        freshness.append(f"wachttijden: NZa, {nice_date(near['wait_date'].dropna().max())}")
+    dates = contracts["peildatum"].map(to_date).dropna() if not contracts.empty and "peildatum" in contracts else []
+    if len(dates):
+        freshness.append(f"contracten: verzekeraars en ziekenhuizen, laatst bijgewerkt {nice_date(dates.max())}")
+    if freshness:
+        st.caption("Bronnen · " + " · ".join(freshness))
 st.markdown(
     '<p class="note"><b>Hoe werkt het?</b> Elk ziekenhuis moet elk jaar aan de overheid laten weten hoe het gaat: '
     'hoe vaak een operatie over moet, hoe vaak er een infectie komt en hoe patiënten zich voelen na de operatie. '

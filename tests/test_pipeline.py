@@ -956,9 +956,11 @@ def test_policies_in_scope_come_from_the_insurer_itself():
     policies = load_policies(2027)
     assert set(scope()["label"]) <= set(policies["label"])
     assert set(policies["concern"]) <= set(scope()["concern"])
+    main_brand = dict(zip(scope()["concern"], scope()["label"]))
     for p in policies.itertuples():
-        own = site_of(SITES[p.label]).split(".")[-2]  # e.g. 'vgz' also allows cooperatievgz.nl
-        assert own in site_of(p.source_url), (p.label, p.polis, p.source_url)
+        # the brand's own site, or its group's main brand (ZieZo on zilverenkruis.nl); 'vgz' also allows cooperatievgz.nl
+        owners = {site_of(SITES[p.label]).split(".")[-2], site_of(SITES[main_brand[p.concern]]).split(".")[-2]}
+        assert any(o in site_of(p.source_url) for o in owners), (p.label, p.polis, p.source_url)
 
 
 def test_premium_from_elsewhere_counts_once_confirmed_on_own_site(tmp_path, monkeypatch):
@@ -979,3 +981,58 @@ def test_premium_from_elsewhere_counts_once_confirmed_on_own_site(tmp_path, monk
     monkeypatch.setattr(score, "PROCESSED", tmp_path)
     out = score.load_policies(2027)
     assert out[["label", "source_url"]].values.tolist() == [["OHRA", "https://www.ohra.nl/premie"]]
+
+
+def test_placeholder_agb_keeps_contracts_per_location():
+    from pipeline.insurer_contracts import per_organisation, valid_agb
+    from pipeline.score import contract_key
+    assert valid_agb("06020602") and not valid_agb("00000000") and not valid_agb(None)
+    matched = pd.DataFrame([
+        {"organisatie_agb": "00000000", "location_key": "00000000-3528AH", "concern": "CZ", "label": "CZ", "year": 2027,
+         "status": "gecontracteerd", "omzetplafond": "False", "fetched_on": "2026-11-25", "source": "s", "source_url": "u", "name": "Xpert"},
+        {"organisatie_agb": "00000000", "location_key": "00000000-2725NA", "concern": "CZ", "label": "CZ", "year": 2027,
+         "status": "geen_contract", "omzetplafond": "False", "fetched_on": "2026-11-25", "source": "s", "source_url": "u", "name": "Other"},
+    ])
+    orgs = per_organisation(matched).set_index("organisatie_agb")
+    assert orgs.loc["00000000-3528AH", "status"] == "gecontracteerd"  # not merged into one 'worst' status
+    assert orgs.loc["00000000-2725NA", "status"] == "geen_contract"
+    assert contract_key("00000000", "00000000-3528AH") == "00000000-3528AH"
+    assert contract_key("06020602", "06020602-3584CX") == "06020602"
+
+
+def test_vgz_finder_parse_and_link_by_agb():
+    from pipeline.insurer_contracts import match_by_agb, per_organisation
+    from scrapers.vgz_zorgzoeker import parse
+    def result(name, agb, pc, status):
+        return {"basisInfo": {"naam": name, "agbCode": agb, "postcode": pc, "straat": "X", "huisnummer": "1",
+                              "plaatsnaam": "UTRECHT", "contractStatus": status},
+                "zorgsoorten": [{"subzorgsoorten": [{"zorgsoortNaam": "Orthopedie", "contractType": status}]}]}
+    rows = [parse(r) for r in [result("UMC Utrecht, loc. AZU", "06020602", "3584CX", "InOnderhandeling"),
+                               result("UMC Utrecht, loc. WKZ", "06020602", "3584EA", "NietGecontracteerd"),
+                               result("Xpert Clinics, loc. Utrecht Jansoniuslaan", "22220815", "3528AH", "GecontracteerdZonderDLP"),
+                               result("Iets", "1", "1000AA", "Onbekend")]]
+    assert rows[3] is None and rows[2]["status"] == "gecontracteerd" and rows[2]["omzetplafond"] is True
+    assert rows[0]["status_orthopedie"] == "InOnderhandeling"
+    entries = pd.DataFrame(rows[:3]).assign(concern="VGZ", label="VGZ", year=2027, source="s", source_url="u", fetched_on="2026-11-25")
+    locations = pd.DataFrame([
+        {"location_key": "06020602-3584CX", "organisatie_agb": "06020602", "organisatie_naam": "UMC Utrecht",
+         "locatie_naam": "UMC Utrecht", "postcode": "3584CX"},
+        {"location_key": "00000000-3528AH", "organisatie_agb": "00000000", "organisatie_naam": "Equipe Zorgbedrijven",
+         "locatie_naam": "Xpert Clinics Utrecht Janssoniuslaan", "postcode": "3528AH"},
+    ])
+    matched = match_by_agb(entries, locations)
+    assert matched["match_level"].tolist() == ["locatie", "organisatie", "locatie"]
+    orgs = per_organisation(matched).set_index("organisatie_agb")
+    assert orgs.loc["06020602", "status"] == "in_onderhandeling"  # the satellite's 'no contract' does not decide
+    assert orgs.loc["00000000-3528AH", "status"] == "gecontracteerd"
+
+
+def test_menzis_finder_parse():
+    from scrapers.menzis_zorgvinder import parse
+    item = {"naamVestiging": "UMC Utrecht, loc. AZU", "agbCode": "06020602", "postcode": "3584 CX", "straat": "Heidelberglaan",
+            "huisnummer": "100", "plaats": "Utrecht",
+            "pakketten": [{"jaar": 2026, "contractStatus": "GECONTRACTEERD"},
+                          {"jaar": 2027, "contractStatus": "GEEN_CONTRACT_WEL_VERGOED", "omzetplafond": "ONBEKEND"}]}
+    row = parse(item)
+    assert row["status"] == "vergoed_als_contract" and row["postcode"] == "3584CX" and row["omzetplafond"] is False
+    assert parse(dict(item, pakketten=[{"jaar": 2027, "contractStatus": "IETS_ANDERS"}])) is None

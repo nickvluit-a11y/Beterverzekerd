@@ -94,6 +94,16 @@ class PoliteSession:
             return resp
         raise requests.TooManyRedirects(f"more than {max_redirects} redirects for {url}")
 
+    def post_json(self, url: str, body: dict) -> requests.Response:
+        """POST a JSON query (as a finder page does for its own search), robots.txt checked."""
+        if not self._allowed(url):
+            parts = urlparse(url)
+            raise RobotsDisallowed(f"not fetching {url}: {self.robots_reason.get(f'{parts.scheme}://{parts.netloc}', '')}")
+        self._wait(url)
+        resp = self.session.post(url, json=body, timeout=TIMEOUT)
+        resp.raise_for_status()
+        return resp
+
 
 def today() -> str:
     return dt.date.today().isoformat()

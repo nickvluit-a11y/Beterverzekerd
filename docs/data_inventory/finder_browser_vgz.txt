@@ -1,9 +1,6 @@
-source: https://www.vgz.nl/zorg-regelen/zorgzoeker/zoekresultaten?zoekterm=ziekenhuis&locatie=Utrecht#/zoeken
+source: https://www.vgz.nl/zorg-regelen/zorgzoeker/zoekresultaten#/resultaten?zorgsoortId=015&locatie=3584%20CX&straal=50000&jaar=2027&synoniem=Ziekenhuis&uniqueId=2027_185658_6
 
 Skiplinks navigatie
-Naar hoofdinhoud
-Naar hoofdnavigatiemenu
-Naar footer
 Werkgevers
 Zorgaanbieders
 Bewindvoerders
@@ -24,10 +21,300 @@ Mijn gegevens
 Declaratie indienen
 Inloggen
  Home   Zorg   Zorgverlener zoeken
+Terug
 Zoeken
+Verfijn uw resultaten
+Jaartal
+2026
+2027
+Straal
+< 5 km
+< 10 km
+< 15 km
+< 25 km
+< 50 km
+Toon meer
+Contractstatus
+Gecontracteerd
+(60)
+In onderhandeling
+(287)
+Niet gecontracteerd
+(304)
+Behandelingen
+Alles
+(347)
+Allergologie
+(20)
+Cardiologie
+(77)
+Chirurgie
+(114)
+Dermatologie
+(139)
+Toon meer
+Soort locatie
+Kliniek
+Ziekenhuis
+Lijst
+Kaart
+Sorteer op
+Afstand
+A - Z
+Z - A
+Er zijn 347 zorgverleners gevonden voor Ziekenhuis in 2027.
+UMC Utrecht, loc. AZU
+Heidelberglaan 100, 3584CX UTRECHT(1,0km)
+ 088 755 5555
+Ziekenhuis
 
-Laatste update: 24 november 2026 20:28 uur
+Nog geen contract: een deel niet vergoed
 
+8.0
+85 waarderingen
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+UMC Utrecht, loc. Wilhelmina Kinderziekenhuis (WKZ)
+Lundlaan 6, 3584EA UTRECHT(1,2km)
+ 088 755 5555
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+6.8
+13 waarderingen
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Prinses Maxima Centrum voor Kinderoncologie
+Heidelberglaan 25, 3584CS UTRECHT(1,4km)
+ 088 972 7272
+Ziekenhuis
+
+Contract: vergoed
+
+9.8
+3 waarderingen
+Meer informatie
+Revalidatie-Centrum De Hoogstraat
+Rembrandtkade 10, 3583TM UTRECHT(1,4km)
+ 030 256 1211
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+8.4
+15 waarderingen
+Meer informatie
+Cardiologie Centrum, loc. Utrecht
+Herculesplein 379, 3584AA UTRECHT(1,6km)
+ 085 303 8620
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+8.9
+856 waarderingen
+Meer informatie
+Diakonessenhuis, loc. Utrecht
+Bosboomstraat 1, 3582KE UTRECHT(1,9km)
+ 088 250 5000
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+6.9
+56 waarderingen
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Bergman Clinics, loc. Utrecht
+Maliebaan 10 A, 3581CN UTRECHT(2,4km)
+ 088 900 0500
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+9.2
+332 waarderingen
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Bergman Clinics- Huid & Vaten- Utrecht
+Maliebaan 10 A, 3581CN UTRECHT(2,4km)
+ 088 900 0500
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+9.2
+332 waarderingen
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Mauritskliniek, loc. Utrecht
+Arthur van Schendelstraat 600 A, 3511MJ UTRECHT(3,2km)
+ 088 628 7400
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+Er is tijdelijk geen informatie beschikbaar van ZorgkaartNederland
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Xpert Clinics, loc. Zeist
+De Dreef 21, 3706BR ZEIST(3,8km)
+ 088 778 5207
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+9.1
+105 waarderingen
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Stichting ZIZ, Utrecht
+Smakkelaarshoek 18, 3511EC UTRECHT(3,9km)
+ 06 14872798
+Ziekenhuis
+
+Contract: vergoed
+Let op: hier is een omzetplafond
+
+Er is tijdelijk geen informatie beschikbaar van ZorgkaartNederland
+Meer informatie
+Stg ZBC Eyescan loc. Utrecht
+Koningin Wilhelminalaan 5, 3527LA UTRECHT(4,1km)
+ 0649634438
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+Meer informatie
+St. Antonius Ziekenhuis, loc. polikliniek Utrecht Overvecht
+Neckardreef 6, 3562CN UTRECHT(4,5km)
+ 088 320 3000
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+–
+0 waarderingen
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+TopzorgGroep Utrecht
+Jan Cornelisz Maylaan 6, 3526GV UTRECHT(5,1km)
+ 020 312 1680
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+Er is tijdelijk geen informatie beschikbaar van ZorgkaartNederland
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Xpert Clinics, loc. Utrecht Jansoniuslaan (hoofdvestiging)
+Janssoniuslaan 71, 3528AH UTRECHT(6,0km)
+ 088 778 5210
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+Er is tijdelijk geen informatie beschikbaar van ZorgkaartNederland
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Xpert Clinics | Hand- en polszorg, loc. Utrecht Papendorpseweg
+Papendorpseweg 75 79, 3528BJ UTRECHT(6,1km)
+ 088 778 5210
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+Er is tijdelijk geen informatie beschikbaar van ZorgkaartNederland
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Gender Clinic | Sandstep Healthcare
+Biltseweg 14, 3735ME BOSCH EN DUIN(6,5km)
+ 088 891 0019
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+8.9
+424 waarderingen
+Meer informatie
+Gender Clinic, loc. Bosch en Duin
+Biltseweg 14, 3735ME BOSCH EN DUIN(6,5km)
+ 088 765 2121
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+9.1
+29 waarderingen
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Medical Park (Proctos Kliniek), loc. Bosch en Duin
+Biltseweg 14, 3735ME BOSCH EN DUIN(6,5km)
+ 030 225 0260
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+Er is tijdelijk geen informatie beschikbaar van ZorgkaartNederland
+Meer informatie
+St. Antonius Ziekenhuis, loc. polikliniek Houten
+Hofspoor 2, 3994VZ HOUTEN(6,6km)
+ 088 320 3005
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+–
+0 waarderingen
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Diak Clinic
+Jagersingel 1, 3707HL ZEIST(6,7km)
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Diakonessenhuis, loc. Zeist
+Jagersingel 1, 3707HL ZEIST(6,7km)
+ 088 250 5000
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Liesbreukcentrum Nederland
+Jagersingel 1, 3707HL ZEIST(6,7km)
+ 088 250 9000
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
+Stichting Oogkliniek Heuvelrug
+Huis Ter Heideweg 42, 3705LZ ZEIST(6,7km)
+ 088 778 5210
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+9.3
+134 waarderingen
+Meer informatie
+Xpert Clinics | Oogzorg, loc. Zeist
+Huis ter Heideweg 42, 3705LZ ZEIST(6,7km)
+ 088 778 5210
+Ziekenhuis
+
+Nog geen contract: een deel niet vergoed
+
+Er is tijdelijk geen informatie beschikbaar van ZorgkaartNederland
+Voor sommige zorg werken we met aangewezen medewerkers. Dat is bijvoorbeeld zo bij alternatieve zorg. Als het om aangewezen zorg gaat kun je bij de genoemde medewerkers terecht.
+Meer informatie
 Duurt het lang voordat je terecht kunt?
 
 

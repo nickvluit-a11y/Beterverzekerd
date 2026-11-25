@@ -1,63 +1,166 @@
-source: https://www.menzis.nl/zorgzoeker
+source: https://zorgvinder.menzis.nl/?search=zorgaanbieder&zoektermSearch=ziekenhuis%20%2F%20zbc&zoektermType=SPECIALISME&specialismId=220906197&afstand=35&postcode=3584CX
 
-Links voor snelle navigatie
-Ga naar de content
-Voor consumenten
+Ga naar de inhoud
+terug naar: Menzis
+Zorgvinder
+Eenvoudig en snel gecontracteerde zorgaanbieders vinden en vergelijken.
+Welke zorg of zorgaanbieder zoek je?
+Selectie leegmaken
+Waar zoek je deze zorg?
+Selectie leegmaken
+Maximale afstand
+5 km
+10 km
+20 km
+35 km
+50 km
+75 km
+Heel NL
+Leegmaken
 Zoeken
-Inloggen
-Terug naar de homepage
-Verzekering
-Zorg en vergoedingen
-Gezondheid
-Zelf regelen
-Service en contact
-home
-Deze pagina bestaat niet
+Hulp nodig?
 
-Dit komt bijvoorbeeld omdat er een typefout in de URL zit, omdat de link niet klopt of omdat de pagina verplaatst of helemaal weggehaald is.
+Heb je vragen over een ziekte of behandeling, het kiezen van een zorgaanbieder of wachttijdbemiddeling? Neem contact op met onze zorgadviseurs.
 
-Wat kun je nu doen?
+194 Zorgaanbieders
+Toon alleen zorgaanbieders met contract of vergoed als contract
+Toon beschikbare zorg in jaar
+2026
+2027
+Weergave
+Lijst
+Kaart
+Sorteer op
+Afstand
+Naam
+UMC Utrecht, loc. AZU
+Type aanbieder
+Ziekenhuis
+Adres
+Utrecht, Heidelberglaan 100
+Afstand
+0.1 km
+Gecontracteerd
+2027 (Nog) geen contract: wel vergoed 
+Mogelijk met omzetplafond
+8,0
+85 reviews
+Bekijk details
+UMC Utrecht, loc. Wilhelmina Kinderziekenhuis (WKZ)
+Type aanbieder
+Ziekenhuis
+Adres
+Utrecht, Lundlaan 6
+Afstand
+0.3 km
+Gecontracteerd
+2027 (Nog) geen contract: wel vergoed 
+Mogelijk met omzetplafond
+6,8
+13 reviews
+Bekijk details
+Prinses Maxima Centrum voor Kinderoncologie
+Type aanbieder
+Ziekenhuis
+Adres
+Utrecht, Heidelberglaan 25
+Afstand
+0.4 km
+Gecontracteerd
+Contract: vergoed t/m 2028 
+9,8
+3 reviews
+Bekijk details
+Medinello (TopzorgGroep), loc. Utrecht
+Type aanbieder
+Zelfstandig behandelcentrum
+Adres
+Utrecht, Weg naar Rhijnauwen 3
+Afstand
+1.6 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+Bekijk details
+De Hoogstraat Revalidatie
+Adres
+Utrecht, Rembrandtkade 10
+Afstand
+2.4 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+8,4
+15 reviews
+Bekijk details
+Cardiologie Centrum, loc. Utrecht
+Type aanbieder
+Zelfstandig behandelcentrum
+Adres
+Utrecht, Herculesplein 379
+Afstand
+2.7 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+Bekijk details
+Xpert Clinics, loc. Zeist
+Type aanbieder
+Zelfstandig behandelcentrum
+Adres
+Zeist, De Dreef 21
+Afstand
+2.7 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+Bijzondere contractafspraken
+9,1
+105 reviews
+Bekijk details
+EERSTELIJNS BEHANDELCENTRA B.V.
+Adres
+Utrecht, Herculesplein 28
+Afstand
+2.8 km
+Gecontracteerd
+2027 (Nog) geen contract: wel vergoed 
+Bekijk details
+Diakonessenhuis, loc. Utrecht
+Type aanbieder
+Ziekenhuis
+Adres
+Utrecht, Bosboomstraat 1
+Afstand
+3 km
+Gecontracteerd
+2027 (Nog) geen contract: wel vergoed 
+6,9
+56 reviews
+Bekijk details
+DIANET LOCATIE GEZONDHEIDSHUIS
+Adres
+Utrecht, Bosboomstraat 1g
+Afstand
+3 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+Bekijk details
+Bekijk meer zorgaanbieders
+Toelichting
+Contracteerstatussen
 
-Zoek je iets? Gebruik dan de zoekbalk. 
+Onderstaande statussen zie je terug in de zorgvinder. Meer informatie over wat de status voor jouw vergoeding betekent, lees je onder 'bekijk details' per zorgaanbieder. Deze toelichting gaat over de naturapolis of (bij een combinatiepolis) over het natura-deel van je zorgverzekering. In je verzekeringsvoorwaarden lees je welke polis je hebt.
 
-Typ je zoekopdracht in een paar woorden, bijvoorbeeld 'vergoeding fysiotherapie'.
-Wil je dat een bepaald woord juist niet voorkomt in het zoekresultaat? Zet daar dan een - voor.
-Moet een woord zeker terugkomen in het zoekresultaat? Gebruik dan een + voor dat woord.
-Wij helpen je graag verder
+Contract: vergoed
+(Nog) geen contract: wel vergoed
+Nog geen contract: een deel niet vergoed
+Geen contract: een deel niet vergoed
+Maximumbedrag of omzetplafond
 
-We helpen je met je zorgverzekering, het kiezen van een zorgaanbieder of wachtlijstbemiddeling. Stel je vraag aan onze chatbot Sarah of bekijk onze contactmogelijkheden
+Met een aantal zorgaanbieders maken wij afspraken over hoeveel zorg zij per jaar bij ons in rekening mogen brengen. Dat noemen we maximumbedrag of omzetplafond. Heeft je zorgaanbieder de maximale hoeveelheid zorg bereikt voor dat jaar? Dan kun je voor een nieuwe behandeling misschien niet meer naar deze zorgaanbieder. Onze Zorgadviseur helpt je dan graag bij het vinden van een zorgaanbieder bij jou in de buurt. Je leest bij 'Bekijk details' of we met jouw zorgaanbieder een maximumbedrag hebben afgesproken.
 
-Snel naar
+Sneller geholpen worden?
 
-Service en contact
-Zorgverzekeringen
-Onze vergoedingen
-Werken bij Menzis
+Kijk in onze Wachttijdchecker of je sneller terecht kunt bij een ander ziekenhuis of kliniek.
 
-Mijn Menzis
-
-Inloggen
-Declaratie indienen
-Toestemmingen beheren
-Wijziging doorgeven
-home
-
-Deze pagina bestaat niet
-
-Dan is er Menzis.
-
-Cookiepolicy & Cookies aanpassen
+Ga naar de Wachttijdchecker
 Disclaimer
-Privacy
-Toegankelijkheid
-Menzis maakt gebruikt van cookies
-
-Functionele cookies zijn nodig voor de werking van onze websites en apps en worden daarom altijd geplaatst. Analytische cookies helpen ons om inzicht te krijgen in hoe de website wordt gebruikt, zodat we de website kunnen verbeteren. Met deze beide cookies worden geen persoonsgegevens verzameld.
-Cookies voor marktonderzoek en marketing plaatsen we alleen met jouw toestemming. Hiermee weten we bijvoorbeeld welke pagina’s je bekijkt op onze website; ook vergoedingenpagina’s. Met deze informatie kunnen we onze website, advertenties op social media en e-mails afstemmen op jouw voorkeuren. Op pagina's met informatie over vergoedingen en in onze MijnOmgevingen plaatsen wij geen pixels van social media platformen.
-Klik je op ‘Accepteren’ dan plaatsen we alle cookies. Klik je op ‘Weigeren’ dan plaatsen we functionele en analytische cookies. Klik je op ‘Instellingen’, dan kun je zelf kiezen welke cookies we plaatsen, of jouw toestemming wijzigen of intrekken. Meer informatie vind je in onze cookiepolicy
-De link zal worden geopend op een nieuwe pagina.
-. 
-
-Instellingen
-Weigeren
-Accepteren
+Privacybeleid
+Cookies
