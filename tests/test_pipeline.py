@@ -922,11 +922,11 @@ def test_insurer_finder_wins_over_hospital_page_and_counts_as_reimbursed(tmp_pat
     assert cz["status"] == "vergoed_als_contract" and cz["origin"] == "verzekeraar"
     near = pd.DataFrame({"organisatie_agb": ["06020602"], "quality_verdict": ["boven_gemiddeld"]})
     policies = pd.DataFrame([
-        {"concern": "CZ", "label": "CZ", "polis": "Zorgbewust", "polis_type": "budget", "premie_per_maand": "170", "vergoeding_niet_gecontracteerd_pct": "65"},
+        {"concern": "CZ", "label": "CZ", "polis": "Zorg-op-maat", "polis_type": "natura", "premie_per_maand": "177", "vergoeding_niet_gecontracteerd_pct": "70"},
         {"concern": "VGZ", "label": "VGZ", "polis": "Basis Keuze", "polis_type": "budget", "premie_per_maand": "167", "vergoeding_niet_gecontracteerd_pct": "70"},
     ])
     out = score.policy_overview(near, contracts, policies).set_index("polis")
-    assert out.loc["Zorgbewust", "volledig"] == 1
+    assert out.loc["Zorg-op-maat", "volledig"] == 1
     # a hospital saying 'in talks' does not tell what the insurer pays meanwhile: unknown, not 'partly'
     assert out.loc["Basis Keuze", "onbekend"] == 1
 
@@ -1049,3 +1049,20 @@ def test_zk_finder_parse():
     result["Contracten"][0]["StatusOmschrijving"] = "Contract: vergoed"
     assert parse(result)["status"] == "gecontracteerd"
     assert parse(dict(result, Contracten=[])) is None
+
+
+def test_budget_policy_does_not_inherit_the_regular_policy_contract():
+    from pipeline.score import policy_overview
+    near = pd.DataFrame({"organisatie_agb": ["06020602"], "location_key": ["06020602-3584CX"],
+                         "quality_verdict": ["boven_gemiddeld"]})
+    contracts = pd.DataFrame([{"organisatie_agb": "06020602", "concern": "Achmea", "label": "Zilveren Kruis",
+                               "status": "gecontracteerd", "peildatum": "2026-11-25", "origin": "verzekeraar"}])
+    policies = pd.DataFrame([
+        {"concern": "Achmea", "label": "Zilveren Kruis", "polis": "Basis Zeker", "polis_type": "natura",
+         "premie_per_maand": "164.95", "vergoeding_niet_gecontracteerd_pct": "75"},
+        {"concern": "Achmea", "label": "Zilveren Kruis", "polis": "Basis Start", "polis_type": "budget",
+         "premie_per_maand": "159.45", "vergoeding_niet_gecontracteerd_pct": "70"},
+    ])
+    out = policy_overview(near, contracts, policies).set_index("polis")
+    assert out.loc["Basis Zeker", "volledig"] == 1
+    assert out.loc["Basis Start", "onbekend"] == 1
