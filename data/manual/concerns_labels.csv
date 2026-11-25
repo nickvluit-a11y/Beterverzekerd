@@ -8,7 +8,7 @@ Achmea,ZieZo,,true,Zilveren Kruis label (UZOVI 3311),https://www.zilverenkruis.n
 VGZ,VGZ,Coöperatie VGZ|VGZ Zorgverzekeraar,true,,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
 VGZ,IZA,,true,,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
 VGZ,IZZ,IZZ door VGZ,true,,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
-VGZ,Univé,Unive,true,ZEKUR moves to Univé on 2027-01-01,https://www.unive.nl/zorgverzekering/zekur
+VGZ,Univé,Unive|ZEKUR|Zekur,true,ZEKUR moves to Univé on 2027-01-01,https://www.unive.nl/zorgverzekering/zekur
 VGZ,UMC Zorgverzekering,UMC,true,,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
 VGZ,Bewuzt,,false,variant name in VGZ polis overview,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
 VGZ,UnitedConsumers,UC|UnitedConsumers Zorg,true,UC Bewuste Keuze run by VGZ,https://www.cooperatievgz.nl/cooperatie-vgz/over-ons/onze-merken
@@ -30,5 +30,6 @@ Zorg en Zekerheid,Zorg en Zekerheid,Z&Z,true,,
 Zorg en Zekerheid,AZVZ,,true,maritime-sector label,https://azvz.nl/?GID=1&menu=24&pagina=283
 Salland,Salland,Salland Zorgverzekeringen|ZorgDirect,true,DSW plans to take over Salland on 2028-01-01; no change for 2027,https://www.salland.nl/corporate/nieuws/zorgverzekeraars-dsw-en-salland
 Salland,HollandZorg,Hollandzorg,true,,https://www.salland.nl/corporate/nieuws/zorgverzekeraars-dsw-en-salland
-Eucare,Aevitae,,true,Aevitae is volmacht of risk carrier Eucare,https://www.aevitae.com/zorgverzekeringen/basisverzekering/2027
+Eucare,Aevitae,Aevitea|CARESQ|Caresq,true,Aevitae is volmacht of risk carrier Eucare,https://www.aevitae.com/zorgverzekeringen/basisverzekering/2027
 Eucare,Care4Life,,true,run by Aevitae,https://www.care4life.nl/zorgverzekering-2027/
+Menzis,VinkVink,Vink Vink,true,listed under Menzis in the AVL contract table 2027,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf

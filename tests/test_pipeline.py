@@ -761,3 +761,19 @@ def test_single_prom_scale_does_not_make_a_hospital_better():
     assert domain_verdicts(one)["herstel"] == "gemiddeld"
     specific = one.assign(verdict=["gemiddeld", "beter"])
     assert domain_verdicts(specific)["herstel"] == "beter"
+
+
+def test_line_parser_reads_label_tables_without_separators():
+    text = ("Overzicht contracten zorgverzekeraars 2027\nVerzekeraar Label Status\n"
+            "DSW DSW Gecontracteerd\nVGZ Univé In onderhandeling\nDitzo (Ik Kies Zelf ASR) Gecontracteerd\n"
+            "Zilveren Kruis Zilveren Kruis Gecontracteerd met omzetplafond\n"
+            "Heeft u een polis bij een verzekeraar waarmee wij geen contract hebben, dan betaalt u mogelijk zelf bij.\n"
+            "* In dit overzicht staat de situatie van 03-11-2026.")
+    rows = contracts_parse.parse_lines(text)
+    got = {(r["concern"], r["label"]): (r["status"], r["omzetplafond"]) for r in rows}
+    assert got[("VGZ", "Univé")] == ("in_onderhandeling", None)
+    assert got[("a.s.r.", "Ik kies zelf")][0] == "gecontracteerd"
+    assert got[("Achmea", "Zilveren Kruis")] == ("gecontracteerd", True)
+    assert ("DSW", None) in got  # only 'DSW' named: concern-wide
+    assert len(rows) == 4  # the prose sentence is not a contract row
+    assert contracts_parse.find_peildatum(text) == "03-11-2026"

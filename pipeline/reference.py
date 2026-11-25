@@ -119,6 +119,32 @@ def match_label(text: object) -> tuple[str, str | None] | None:
     return None
 
 
+@lru_cache
+def _label_names() -> tuple[tuple[str, str, str | None], ...]:
+    """(normalised name, concern, label) for every label, alias and concern name; longest first."""
+    names = []
+    for row in labels().itertuples():
+        for name in [row.label] + _split_aliases(getattr(row, "aliases", None)):
+            names.append((normalise(name), row.concern, row.label))
+    for concern in labels()["concern"].unique():
+        names.append((normalise(concern), concern, None))
+    return tuple(sorted({n for n in names if n[0]}, key=lambda n: -len(n[0])))
+
+
+def find_labels(text: object) -> list[tuple[str, str | None]]:
+    """All insurer labels mentioned in a short text, as (concern, label), in order of appearance.
+    Longer names win over names they contain ('Zilveren Kruis' over a shorter alias)."""
+    target = f" {normalise(text)} "
+    taken = [False] * len(target)
+    hits = []
+    for name, concern, label in _label_names():
+        for match in re.finditer(rf"(?<= ){re.escape(name)}(?= )", target):
+            if not any(taken[match.start():match.end()]):
+                taken[match.start():match.end()] = [True] * (match.end() - match.start())
+                hits.append((match.start(), concern, label))
+    return [(c, l) for _, c, l in sorted(hits)]
+
+
 def save_with_history(df: pd.DataFrame, name: str, peildatum: str) -> Path:
     """Write data/processed/<name>.csv (latest) and data/processed/history/<name>/<peildatum>.csv."""
     PROCESSED.mkdir(parents=True, exist_ok=True)
