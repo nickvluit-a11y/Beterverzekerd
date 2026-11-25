@@ -145,10 +145,10 @@ con = database()
 procs = procedures()
 
 st.markdown('<div class="hero"><h1>Beterverzekerd</h1>'
-            '<p>Welke ziekenhuizen bij jou in de buurt scoren beter voor jouw ingreep, '
-            'en kun je daar terecht met je zorgverzekering?</p></div>', unsafe_allow_html=True)
+            '<p>Welk ziekenhuis bij jou in de buurt doet jouw operatie beter dan gemiddeld? '
+            'En betaalt jouw zorgverzekering het?</p></div>', unsafe_allow_html=True)
 
-ALL_INSURERS = "Alle verzekeraars vergelijken"
+ALL_INSURERS = "Weet ik niet / alle verzekeraars"
 NEAR_KM = 30
 BRAND = dict(zip(scope()["concern"], scope()["brand"]))  # the name consumers know
 LABEL = dict(zip(scope()["concern"], scope()["label"]))  # the policy label whose contracts we show
@@ -163,23 +163,23 @@ def contract_source(row: dict | None) -> str:
     """Where a contract status comes from, with its date: the reader must be able to check it."""
     if not row:
         return ""
-    who = ("zorgzoeker van de verzekeraar" if row.get("origin") == "verzekeraar"
+    who = ("website van de verzekeraar" if row.get("origin") == "verzekeraar"
            else "website van het ziekenhuis" if row.get("origin") == "ziekenhuis" else "gecontroleerd")
     date = f", {nice_date(row['peildatum'])}" if isinstance(row.get("peildatum"), str) else ""
-    plafond = " · met omzetplafond: vraag bij een nieuwe behandeling of er nog plek is" \
+    plafond = " · let op: dit ziekenhuis kan voor deze verzekeraar vol raken; vraag of er plek is" \
         if str(row.get("omzetplafond")).lower() == "true" or row.get("status") == "gecontracteerd_met_plafond" else ""
     return f'<div class="note">Bron: {who}{date}{plafond}</div>'
 
 
 with st.form("zoek", border=False):
     c1, c2, c3 = st.columns([1.2, 1.6, 1])
-    postcode = c1.text_input("Postcode", value="3584 CX")
-    proc_name = c2.selectbox("Ingreep", procs["name_nl"].tolist())
-    radius = c3.selectbox("Afstand", [10, 25, 50, 100], index=1, format_func=lambda km: f"{km} km")
-    insurer = st.selectbox("Jouw zorgverzekeraar", [ALL_INSURERS] + BRAND_CHOICES,
+    postcode = c1.text_input("Jouw postcode", value="3584 CX")
+    proc_name = c2.selectbox("Welke operatie?", procs["name_nl"].tolist())
+    radius = c3.selectbox("Hoe ver wil je reizen?", [10, 25, 50, 100], index=1, format_func=lambda km: f"tot {km} km")
+    insurer = st.selectbox("Bij wie ben je verzekerd?", [ALL_INSURERS] + BRAND_CHOICES,
                            format_func=lambda b: b if b in (ALL_INSURERS, *MAIN_BRANDS)
                            else f"{b} (onderdeel van {BRAND.get(CONCERN_OF[b], CONCERN_OF[b])})")
-    submitted = st.form_submit_button("Zoek ziekenhuizen", type="primary", width="stretch")
+    submitted = st.form_submit_button("Laat zien", type="primary", width="stretch")
 
 if submitted:
     code = clean_postcode(postcode)
@@ -239,7 +239,7 @@ if search:
         legend = "".join(f'<span class="item"><span class="dot" style="background:rgb({",".join(map(str, BADGES[v][2]))})">'
                          f'</span>{BADGES[v][0]}</span>' for v in shown_kinds)
         st.markdown(f'<div class="legend">{legend}<span class="item"><span class="dot" style="background:#0f3d3e"></span>'
-                    'Jouw postcode</span></div>',
+                    'Waar jij woont</span></div>',
                     unsafe_allow_html=True)
 
         chosen = search.get("insurer", ALL_INSURERS)
@@ -264,25 +264,24 @@ if search:
                     return
             table = policy_overview(near, contracts, policies)
             what = "het betere ziekenhuis" if n_better == 1 else f"de {n_better} betere ziekenhuizen"
-            st.markdown(f"#### Welke polis vergoedt {what} binnen {search['radius']} km?")
+            whose = "" if chosen == ALL_INSURERS else f" van {chosen}"
+            st.markdown(f"#### Welke polis{whose} betaalt {what}?")
 
             def policy_row(r) -> str:
                 premie = f"€ {r.premie:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".") + " p/m" \
                     if pd.notna(r.premie) else "premie onbekend"
                 pct = pd.to_numeric(r.vergoeding_niet_gecontracteerd_pct, errors="coerce")
-                kind = "vrije-keuzepolis" if pd.notna(pct) and pct >= 100 else {
-                    "budget": "budgetpolis", "natura": "naturapolis", "combinatie": "combinatiepolis",
-                    "restitutie": "restitutiepolis"}.get(str(r.polis_type), "")
+                kind = " · je mag naar elk ziekenhuis*" if pd.notna(pct) and pct >= 100 else ""
                 n = r.betere_ziekenhuizen
-                parts = [f'<span class="chip ok">✓ {r.volledig} van {n} met contract vergoed</span>' if r.volledig else "",
-                         f'<span class="chip ok">✓ {r.vrij} van {n} vergoed via vrije keuze*</span>' if r.vrij else "",
-                         f'<span class="chip no">€ {r.deels} deels zelf betalen</span>' if r.deels else "",
-                         f'<span class="chip">? {r.onbekend} nog onbekend</span>' if r.onbekend else ""]
+                of = (lambda k: "" if n == 1 else f"{k} van {n} ")
+                parts = [f'<span class="chip ok">✓ {of(r.volledig + r.vrij)}betaald</span>' if r.volledig + r.vrij else "",
+                         f'<span class="chip no">€ {of(r.deels)}deels zelf betalen</span>' if r.deels else "",
+                         f'<span class="chip">? {of(r.onbekend)}nog niet bekend</span>' if r.onbekend else ""]
                 conf = getattr(r, "confirmed", None)
                 checked = (" · premie nog niet bevestigd door de verzekeraar"
                            if conf is not None and not pd.isna(conf) and not conf else "")
                 return (f'<div class="insurer"><span class="iname">{r.label} – {r.polis}'
-                        f'<br><span class="meta">{premie} · {kind}{checked}</span></span>{"".join(parts)}</div>')
+                        f'<br><span class="meta">{premie}{kind}{checked}</span></span>{"".join(parts)}</div>')
 
             st.markdown('<div class="insurers">' + "".join(policy_row(r) for r in table.head(8).itertuples()) + "</div>",
                         unsafe_allow_html=True)
@@ -292,13 +291,12 @@ if search:
                                 + "</div>", unsafe_allow_html=True)
             notes = []
             if table["vrij"].sum():
-                notes.append("* Vrije keuze: deze polis vergoedt ook ziekenhuizen zonder contract, tot het gangbare "
-                             "(marktconforme) tarief. Een ziekenhuis kan meer rekenen; check dat vooraf.")
+                notes.append("* Deze polis betaalt ook ziekenhuizen zonder contract, tot het normale tarief. "
+                             "Rekent een ziekenhuis meer, dan betaal je het verschil zelf.")
             unknown_share = table["onbekend"].sum() / max(1, table["betere_ziekenhuizen"].sum())
             if unknown_share > 0.3:
-                notes.append(f"Bij {unknown_share:.0%} weten we nog niet of je volledig vergoed wordt. Ziekenhuizen en "
-                             "verzekeraars sluiten hun contracten tussen november en januari; we werken dit bij vanuit "
-                             "hun eigen publicaties.")
+                notes.append("? = nog niet bekend. Verzekeraars en ziekenhuizen maken hun afspraken voor 2027 "
+                             "tussen november en januari. We werken dit bij zodra zij het publiceren.")
             for note in notes:
                 st.caption(note)
 
@@ -325,9 +323,10 @@ if search:
                 mine = own or found.get(chosen_concern)
                 status = (mine or {}).get("status")
                 mark, chip_css = CONTRACT_CHIP.get(status, ("?", ""))
-                label = {"gecontracteerd": "gecontracteerd", "gecontracteerd_met_plafond": "gecontracteerd (met plafond)",
-                         "vergoed_als_contract": "nog in gesprek, wel volledig vergoed",
-                         "in_onderhandeling": "in onderhandeling", "geen_contract": "geen contract"}.get(status, "contract nog onbekend")
+                label = {"gecontracteerd": "betaald, er is een contract", "gecontracteerd_met_plafond": "betaald, er is een contract",
+                         "vergoed_als_contract": "betaald, afspraken nog niet rond",
+                         "in_onderhandeling": "nog in gesprek: misschien betaal je een deel zelf",
+                         "geen_contract": "geen contract: misschien betaal je een deel zelf"}.get(status, "nog niet bekend")
                 via = ("" if own or chosen == main_brand or not mine
                        else f'<div class="note">Contract van {main_brand}; geldt meestal ook voor {chosen}, check je polis.</div>')
                 chips_html = (f'<div class="chips"><span class="chip big {chip_css}">{chosen}: {mark} {label}</span>'
@@ -339,7 +338,7 @@ if search:
                     chips.append(f'<span class="chip {chip_css}">{BRAND.get(concern, concern)} {mark}</span>')
                 origins = sorted({str(r.get("origin") or "ziekenhuis") for r in found.values()})
                 source = "Contracten 2027 volgens " + " en ".join(
-                    {"verzekeraar": "de zorgzoeker van de verzekeraar", "ziekenhuis": "de website van het ziekenhuis"}[o]
+                    {"verzekeraar": "de verzekeraar", "ziekenhuis": "het ziekenhuis"}[o]
                     for o in origins) + " · ? = nog onbekend"
                 chips_html = ('<div class="chips">' + "".join(chips) + f'<div class="note">{source}</div></div>')
             else:
@@ -349,7 +348,7 @@ if search:
                 f'<span class="meta">{row.distance_km:.0f} km{year}</span></div>'
                 f'<span class="badge {css}">{text}</span>'
                 f'<ul class="points">{points_html}</ul>{wait_html}{chips_html}</div>', unsafe_allow_html=True)
-            with st.expander("Bekijk de cijfers"):
+            with st.expander("Waarom dit oordeel?"):
                 render_details(row)
 
         def render_details(row) -> None:
@@ -411,12 +410,12 @@ if search:
 
 st.divider()
 st.markdown(
-    '<p class="note"><b>Hoe komen we hiertoe?</b> We gebruiken de officiële kwaliteitscijfers die ziekenhuizen '
-    'elk jaar aan de overheid geven: bijvoorbeeld hoe vaak een nieuwe heup opnieuw geopereerd moet worden, hoe vaak '
-    'er een infectie optreedt en hoe patiënten zelf hun herstel beoordelen.<br>'
-    '<b>Beter dan gemiddeld</b>: op minstens één belangrijk punt duidelijk beter dan de meeste ziekenhuizen, en nergens '
-    'duidelijk slechter. <b>Slechter dan gemiddeld</b> zeggen we alleen als het verschil heel duidelijk is. '
-    '<b>Geen duidelijk verschil</b>: de cijfers wijken niet duidelijk af, of er zijn te weinig patiënten om het zeker te weten. '
-    'Universitaire ziekenhuizen behandelen vaker moeilijke gevallen; houd daar rekening mee.<br>'
-    'Geen medisch of financieel advies. Een contract is geen garantie dat je terecht kunt: vraag het je verzekeraar.</p>',
+    '<p class="note"><b>Hoe werkt het?</b> Elk ziekenhuis moet elk jaar aan de overheid laten weten hoe het gaat: '
+    'hoe vaak een operatie over moet, hoe vaak er een infectie komt en hoe patiënten zich voelen na de operatie. '
+    'Wij vergelijken die cijfers met alle andere ziekenhuizen.<br>'
+    '<b>Beter dan gemiddeld</b>: op een belangrijk punt duidelijk beter, en nergens slechter. '
+    '<b>Slechter dan gemiddeld</b>: alleen als het verschil heel duidelijk is. '
+    '<b>Geen duidelijk verschil</b>: niet duidelijk anders, of te weinig patiënten om het zeker te weten. '
+    'Academische ziekenhuizen helpen vaker zieke patiënten; dat telt niet mee in de cijfers.<br>'
+    'Dit is geen medisch advies. Vraag je huisarts en je verzekeraar of je ergens terecht kunt.</p>',
     unsafe_allow_html=True)

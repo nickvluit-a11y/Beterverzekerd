@@ -29,7 +29,7 @@ def test_app_rejects_bad_postcode(monkeypatch):
 
 def test_app_brand_of_a_group_follows_main_brand(monkeypatch):
     at = _app(monkeypatch)
-    insurer = next(s for s in at.selectbox if s.label == "Jouw zorgverzekeraar")
+    insurer = next(s for s in at.selectbox if s.label == "Bij wie ben je verzekerd?")
     options = list(insurer.options)  # shown text, e.g. 'OHRA (onderdeel van CZ)'
     assert "OHRA (onderdeel van CZ)" in options and not any(o.startswith("ONVZ") for o in options)
     insurer.set_value("OHRA")
