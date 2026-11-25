@@ -127,9 +127,9 @@ def load_policies(year: int = 2027) -> pd.DataFrame:
         check = check[["label", "polis", "confirmed", "confirmed_url", "checked_on"]].drop_duplicates(["label", "polis"])
         check["confirmed"] = check["confirmed"].astype(str).str.lower() == "true"
         policies = policies.merge(check, on=["label", "polis"], how="left")
-    if "confirmed" not in policies:
-        policies["confirmed"] = False
-    policies["confirmed"] = policies["confirmed"].fillna(False).astype(bool)
+        policies["confirmed"] = policies["confirmed"].map(lambda v: bool(v) if pd.notna(v) else False).astype(object)
+    else:
+        policies["confirmed"] = None  # not checked yet: say nothing rather than 'unconfirmed'
     return policies
 
 

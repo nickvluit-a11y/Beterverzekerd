@@ -111,6 +111,8 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .insurer .iname { font-weight: 600; min-width: 260px; color: #0f172a; }
 .insurer .meta { font-weight: 400; font-size: .82rem; color: #64748b; }
 .chip.big { font-size: .9rem; padding: 3px 10px; font-weight: 600; }
+.legend { font-size: .8rem; color: #475569; margin: -6px 0 14px 0; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -211,8 +213,11 @@ if search:
         st.info(f"Geen ziekenhuizen binnen {search['radius']} km die deze ingreep uitvoeren. Kies een grotere afstand.")
     else:
         counts = near["quality_verdict"].value_counts()
-        st.markdown(f"**{len(near)} ziekenhuizen** binnen {search['radius']} km doen een {search['proc_name'].lower()}. "
-                    f"**{counts.get('boven_gemiddeld', 0)}** daarvan scoren beter dan gemiddeld.")
+        n_good = int(counts.get("boven_gemiddeld", 0))
+        st.markdown(f"**{len(near)} {'ziekenhuis doet' if len(near) == 1 else 'ziekenhuizen doen'}** binnen "
+                    f"{search['radius']} km een {search['proc_name'].lower()}. "
+                    + (f"**{n_good}** daarvan {'scoort' if n_good == 1 else 'scoren'} beter dan gemiddeld."
+                       if n_good else "Geen daarvan scoort aantoonbaar beter dan gemiddeld; kies eventueel een grotere afstand."))
 
         points = near.assign(color=near["quality_verdict"].map(lambda v: BADGES[v][2]),
                              label=near["display_name"] + " · " + near["quality_verdict"].map(lambda v: BADGES[v][0]))
@@ -226,6 +231,11 @@ if search:
                     pdk.Layer("ScatterplotLayer", you, get_position="[lon, lat]", get_fill_color=[15, 61, 62],
                               get_radius=400, radius_min_pixels=5)],
             tooltip={"text": "{label}"}), height=320)
+        shown_kinds = [v for v in ORDER if v in set(near["quality_verdict"])]
+        legend = "".join(f'<span class="dot" style="background:rgb({",".join(map(str, BADGES[v][2]))})"></span>{BADGES[v][0]}'
+                         for v in shown_kinds)
+        st.markdown(f'<div class="legend">{legend}<span class="dot" style="background:#0f3d3e"></span>Jouw postcode</div>',
+                    unsafe_allow_html=True)
 
         # --- compare policies: premium and access to the better hospitals nearby ---------------
         chosen = search.get("insurer", ALL_INSURERS)
@@ -246,7 +256,9 @@ if search:
                 parts = [f'<span class="chip ok">✓ {r.volledig} van {r.betere_ziekenhuizen} volledig vergoed</span>' if r.volledig else "",
                          f'<span class="chip no">€ {r.deels} deels zelf betalen</span>' if r.deels else "",
                          f'<span class="chip">? {r.onbekend} nog onbekend</span>' if r.onbekend else ""]
-                checked = "" if getattr(r, "confirmed", False) else " · premie nog niet bevestigd door de verzekeraar"
+                conf = getattr(r, "confirmed", None)
+                checked = (" · premie nog niet bevestigd door de verzekeraar"
+                           if conf is not None and not pd.isna(conf) and not conf else "")
                 return (f'<div class="insurer"><span class="iname">{r.label} – {r.polis}'
                         f'<br><span class="meta">{premie} · {kind}{checked}</span></span>{"".join(parts)}</div>')
 
