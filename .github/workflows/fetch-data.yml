@@ -40,6 +40,10 @@ jobs:
         continue-on-error: true
         run: python -m scrapers.contracts
 
+      - name: Fetch indicator guides
+        continue-on-error: true
+        run: python -m scrapers.indicator_guides
+
       - name: Ingest Zorginzicht
         if: steps.zorginzicht.outcome == 'success'
         continue-on-error: true
@@ -56,6 +60,16 @@ jobs:
         if: steps.contracts.outcome == 'success'
         continue-on-error: true
         run: python -m pipeline.contracts_parse
+
+      - name: Build database
+        if: always()
+        continue-on-error: true
+        run: python -m pipeline.build_db
+
+      - name: Quality monitor
+        if: always()
+        continue-on-error: true
+        run: python -m pipeline.quality_monitor
 
       - name: Linkage report
         if: always()
@@ -77,7 +91,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           mkdir -p data/processed data/reference docs/data_inventory
-          git add data/processed data/reference docs/data_inventory
+          git add data/processed data/reference docs/data_inventory docs/kwaliteitsmonitor.md
           git diff --cached --quiet || git commit -m "Update processed data ($(date -u +%F))"
           git pull --rebase && git push
 

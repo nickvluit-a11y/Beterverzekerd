@@ -87,18 +87,29 @@ def linked_documents(page: str, base_url: str) -> list[str]:
     return list(dict.fromkeys(hits))[:MAX_FOLLOW]
 
 
+def sources() -> dict[str, str]:
+    """{organisation AGB: contract page URL}. Contracts are agreed per organisation, so the AGB is the key.
+    data/manual/contract_sources.csv lists the pages found nationally; a URL in hospitals.csv
+    (checked by hand) wins for the same organisation."""
+    manual = ROOT / "data" / "manual"
+    found = pd.read_csv(manual / "contract_sources.csv", dtype=str) if (manual / "contract_sources.csv").exists() \
+        else pd.DataFrame(columns=["organisatie_agb", "url"])
+    urls = dict(zip(found["organisatie_agb"], found["url"]))
+    hospitals = pd.read_csv(manual / "hospitals.csv", dtype=str)
+    checked = hospitals[hospitals["contracts_url"].fillna("").str.startswith("http") & hospitals["agb_code"].notna()]
+    urls.update(dict(zip(checked["agb_code"], checked["contracts_url"])))
+    return {agb: url for agb, url in urls.items() if isinstance(url, str) and url.startswith("http")}
+
+
 def main() -> int:
-    table = pd.read_csv(ROOT / "data" / "manual" / "hospitals.csv")
-    table = table[table["contracts_url"].fillna("").str.startswith("http")]
-    if table.empty:
-        print("No contracts_url filled in hospitals.csv")
+    targets = sources()
+    if not targets:
+        print("No contract sources")
         return 0
-    groups = table.groupby("contracts_url", sort=False)["location_id"].apply(list)
     http = PoliteSession()
     out = raw_dir("contracts")
     results, failures = {}, 0
-    for url, location_ids in groups.items():
-        key = location_ids[0]
+    for key, url in targets.items():
         try:
             resp = http.get(url)
             is_pdf = "pdf" in resp.headers.get("Content-Type", "").lower() or resp.content[:4] == b"%PDF"
@@ -128,15 +139,15 @@ def main() -> int:
             inventory.mkdir(parents=True, exist_ok=True)
             (inventory / f"{key}.txt").write_text(f"source: {url}\n\n{text}", encoding="utf-8")
             (out / f"{key}.tables.json").write_text(json.dumps(tables, ensure_ascii=False, indent=1), encoding="utf-8")
-            results[key] = {"url": url, "final_url": resp.url, "location_ids": location_ids,
+            results[key] = {"url": url, "final_url": resp.url, "organisatie_agb": key,
                             "format": "pdf" if is_pdf else "html", "tables": len(tables), "ok": True}
-            print(f"ok   {key} ({', '.join(location_ids)}): {'pdf' if is_pdf else 'html'}, {len(tables)} tables")
+            print(f"ok   {key}: {'pdf' if is_pdf else 'html'}, {len(tables)} tables")
         except Exception as exc:  # keep going for the other hospitals
             failures += 1
-            results[key] = {"url": url, "location_ids": location_ids, "ok": False, "error": str(exc)}
+            results[key] = {"url": url, "organisatie_agb": key, "ok": False, "error": str(exc)}
             print(f"FAIL {key}: {exc}", file=sys.stderr)
     write_meta(out, source="contracts", results=results)
-    return 1 if failures == len(groups) else 0
+    return 1 if failures == len(targets) else 0
 
 
 if __name__ == "__main__":

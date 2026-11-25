@@ -50,6 +50,8 @@ De GitHub Action `check-sources` (zie `scrapers/check_sources.py`) haalt elke UR
 | Wettelijke basis | ✅ Regeling Aanleveren wachttijden msz (NR/REG-2421); ziekenhuizen leveren maandelijks aan via het Zorgbeeldportaal. |
 | Kanttekening | Niet door de NZa gecontroleerd op juistheid. Tonen als "opgegeven door het ziekenhuis". |
 
+**Status (24-11-2026):** geblokkeerd. puc.overheid.nl gaf eerst HTTP 500 op robots.txt en weigert onze bot nu met HTTP 403 (ook op robots.txt). De API-paden op zorgbeeld.nza.nl geven ook 403. We omzeilen dat niet. Het verzoek om toegang staat klaar in `docs/nza_verzoek.md`.
+
 **Conclusie:** de NZa-CSV rechtstreeks gebruiken. ZorgkaartNederland toont dezelfde NZa-data door en valt dus af. De CSV is open data en geeft alle locaties in één keer.
 
 ## 3. Contractstatus: ziekenhuizen × verzekeraars

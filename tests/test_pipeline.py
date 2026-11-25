@@ -17,6 +17,30 @@ from scrapers.common import find_links, safe_filename
 from scrapers.nza_wachttijden import candidate_order, is_waiting_time_csv
 
 
+TEST_RULES = pd.DataFrame([
+    {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "revisie", "direction": "lower_better", "label_nl": "Revisie"},
+    {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "complicat", "direction": "lower_better", "label_nl": "Diepe wondinfectie"},
+    {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "prom|verbeter", "direction": "higher_better", "label_nl": "PROM"},
+    {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "aantal", "direction": "volume", "label_nl": "Aantal"},
+    {"procedure_id": "knie", "indicator_code": None, "indicator_pattern": "aantal", "direction": "volume", "label_nl": "Aantal"},
+])
+
+
+@pytest.fixture(autouse=True)
+def pattern_rules(monkeypatch):
+    """The product judges only indicators listed by code; tests use simple name patterns instead."""
+    import pipeline.quality
+    real = pd.read_csv(pipeline.quality.MANUAL / "indicators.csv")
+    monkeypatch.setattr(pipeline.quality, "indicator_meta", lambda: pd.concat([real, TEST_RULES], ignore_index=True))
+
+
+def test_real_rules_are_by_code_only():
+    import pipeline.quality
+    rules = pd.read_csv(pipeline.quality.MANUAL / "indicators.csv")
+    assert rules["indicator_code"].notna().all() and rules["indicator_pattern"].isna().all()
+    assert set(rules["direction"]) <= {"lower_better", "higher_better", "volume", "none"}
+
+
 # --- reference matching -------------------------------------------------------------------
 
 def test_normalise_strips_accents_and_stopwords():
@@ -242,8 +266,9 @@ def test_overview_end_to_end():
         {"procedure_id": "heup", "location_key": "06020602-3584CX", "indicator": "Revisie binnen 1 jaar", "numerator": 1, "denominator": 1000, "verslagjaar": "2025"},
         {"procedure_id": "heup", "location_key": None, "indicator": "Revisie binnen 1 jaar", "numerator": 500, "denominator": 9000, "verslagjaar": "2025"},
     ])
+    from pipeline.score import manual_locations
     summary, detail = overview(52.0870, 5.1790, "heup", radius_km=6, policies=policies,
-                               contracts=contracts, waits=waits, quality=quality)
+                               contracts=contracts, waits=waits, quality=quality, hospital_table=manual_locations())
     cz = summary.set_index("polis").loc["CZ Zorgbewust"]
     # the Diakonessenhuis contract is per organisation, so it covers Utrecht and Zeist
     assert cz["gecontracteerd"] == 2 and cz["met_omzetplafond"] == 1
@@ -257,8 +282,9 @@ def test_overview_end_to_end():
 
 
 def test_overview_without_policy_file_falls_back_to_labels():
+    from pipeline.score import manual_locations
     summary, _ = overview(52.0870, 5.1790, "heup", radius_km=6, contracts=pd.DataFrame(),
-                          waits=pd.DataFrame(), quality=pd.DataFrame())
+                          waits=pd.DataFrame(), quality=pd.DataFrame(), hospital_table=manual_locations())
     assert len(summary) > 20 and summary["onbekend"].gt(0).all()
 
 
@@ -358,8 +384,10 @@ def test_duplicate_polis_names_across_labels_stay_separate():
         {"concern": "VGZ", "label": "VGZ", "polis": "Basis", "polis_type": "natura", "premie_per_maand": 150},
         {"concern": "CZ", "label": "CZ", "polis": "Basis", "polis_type": "natura", "premie_per_maand": 160},
     ])
+    from pipeline.score import manual_locations
     summary, detail = overview(52.0870, 5.1790, "heup", radius_km=6, policies=policies,
-                               contracts=pd.DataFrame(), waits=pd.DataFrame(), quality=pd.DataFrame())
+                               contracts=pd.DataFrame(), waits=pd.DataFrame(), quality=pd.DataFrame(),
+                               hospital_table=manual_locations())
     assert len(summary) == 2
     assert summary.set_index("naam")["premie_per_maand"].to_dict() == {"VGZ – Basis": 150, "CZ – Basis": 160}
 
@@ -565,3 +593,187 @@ def test_contract_page_follows_overview_links_and_decodes_utf8():
 def test_geocode_house_number():
     from pipeline.geocode import house_number
     assert house_number("114") == "114" and house_number("1 a") == "1" and house_number(None) == "" and house_number(float("nan")) == ""
+
+
+# --- DuckDB ---------------------------------------------------------------------------------
+
+def test_build_db_quality_over_years(tmp_path, monkeypatch):
+    import duckdb
+    from pipeline import build_db
+    ref, proc = tmp_path / "ref", tmp_path / "proc"
+    ref.mkdir(), proc.mkdir()
+    pd.DataFrame([
+        {"location_key": "06020602-3584CX", "organisatie_agb": "06020602", "organisatie_naam": "UMC Utrecht",
+         "locatie_naam": "UMC Utrecht", "postcode": "3584CX", "plaats": "Utrecht", "lat": 52.087, "lon": 5.179},
+        {"location_key": "11111111-1000AA", "organisatie_agb": "11111111", "organisatie_naam": "Ander",
+         "locatie_naam": "Ander", "postcode": "1000AA", "plaats": "Amsterdam", "lat": 52.37, "lon": 4.9},
+    ]).to_csv(ref / "locations.csv", index=False)
+    pd.DataFrame([{"indicator_code": "IN1", "procedure_id": "heup", "thema": "Revisie", "indicator_naam": "Revisie binnen 1 jaar",
+                   "eenheid": "Percentage", "indicator_type": "Uitkomst"}]).to_csv(ref / "indicators.csv", index=False)
+    rows = []
+    for year, (umc, other) in {2024: ((40, 1000), (40, 1000)), 2025: ((5, 1000), (60, 1000))}.items():
+        rows += [{"procedure_id": "heup", "verslagjaar": year, "location_key": "06020602-3584CX", "indicator_code": "IN1",
+                  "value": None, "numerator": umc[0], "denominator": umc[1], "source": "t"},
+                 {"procedure_id": "heup", "verslagjaar": year, "location_key": "11111111-1000AA", "indicator_code": "IN1",
+                  "value": None, "numerator": other[0], "denominator": other[1], "source": "t"},
+                 {"procedure_id": "heup", "verslagjaar": year, "location_key": "99999999-9999ZZ", "indicator_code": "IN1",
+                  "value": None, "numerator": 1, "denominator": 10, "source": "t"}]
+    pd.DataFrame(rows).to_csv(proc / "measurements.csv", index=False)
+    monkeypatch.setattr(build_db, "REFERENCE", ref)
+    monkeypatch.setattr(build_db, "PROCESSED", proc)
+    path = build_db.build(tmp_path / "t.duckdb")
+    con = duckdb.connect(str(path), read_only=True)
+    trend = con.execute("SELECT verslagjaar, quality_verdict FROM v_quality_trend "
+                        "WHERE location_key = '06020602-3584CX' ORDER BY verslagjaar").fetchall()
+    assert trend == [(2024, "gemiddeld"), (2025, "boven_gemiddeld")]  # improvement becomes visible
+    latest = dict(con.execute("SELECT location_key, quality_verdict FROM v_quality_latest").fetchall())
+    assert latest["11111111-1000AA"] == "onder_gemiddeld"
+    problems = dict(con.execute("SELECT problem, n FROM v_integrity").fetchall())
+    assert problems["measurement without location"] == 2  # unknown location is reported, not silently dropped
+    assert problems["duplicate location_key"] == 0
+    from pipeline.quality_monitor import build_report
+    report = build_report(con)
+    assert "## Heupprothese" in report and "Verbeterd van 2024 naar 2025" in report
+    assert "UMC Utrecht (Utrecht)" in report.split("Verbeterd van 2024 naar 2025")[1]
+
+
+def test_prom_means_are_shown_not_judged():
+    df = compare(pd.DataFrame([
+        {"procedure_id": "heup", "indicator": "Verschilscore PROMs heup, 12 maanden", "location_key": "a",
+         "numerator": None, "denominator": None, "value": "30", "n_waarnemingen": 100, "verslagjaar": "2025"},
+        {"procedure_id": "heup", "indicator": "Verschilscore PROMs heup, 12 maanden", "location_key": "b",
+         "numerator": None, "denominator": None, "value": "20", "n_waarnemingen": 300, "verslagjaar": "2025"},
+    ]))
+    a = df.set_index("location_key").loc["a"]
+    assert a["method"] == "mean" and pd.isna(a["verdict"])
+    assert a["national_rate"] == pytest.approx(22.5)  # weighted by patients
+    assert a["position"] == "gunstiger"  # PROM 'verbetering' rule: higher_better
+
+
+
+def test_published_intervals_are_judged_with_official_ci():
+    base = "Verschilscore tussen heup PROM preoperatief en 12 maanden na ingreep. EQ-5D index score. "
+    rev = "Gecorrigeerd percentage revisie binnen 1 jaar na primaire THP. "
+    rows = []
+    for loc, (pt, lo, hi), (r, rlo, rhi), resp in [("a", (0.45, 0.42, 0.48), (0.2, 0.0, 0.5), 90),
+                                                     ("b", (0.33, 0.30, 0.36), (1.0, 0.5, 1.5), 90),
+                                                     ("c", (0.20, 0.15, 0.25), (3.0, 2.2, 3.9), 30),
+                                                     ("d", (0.34, 0.20, 0.50), (9.0, 1.0, 2.0), 90)]:
+        for suffix, v in [("Gemiddelde", pt), ("95% Betrouwbaarheidsinterval Lower bound", lo),
+                          ("95% Betrouwbaarheidsinterval Upper bound", hi), ("Aantal (N)", 100)]:
+            rows.append({"indicator": base + suffix, "value": str(v)})
+        for suffix, v in [("Gecorrigeerd percentage", r), ("95% Betrouwbaarheidsinterval Lower bound", rlo),
+                          ("95% Betrouwbaarheidsinterval Upper bound", rhi)]:
+            rows.append({"indicator": rev + suffix, "value": str(v)})
+        rows.append({"indicator": "Responspercentage pre-operatief heup PROMs", "value": str(resp)})
+        for r_ in rows[-8:]:
+            r_.update(procedure_id="heup", location_key=loc, verslagjaar="2025", numerator=None, denominator=None)
+    out = compare(pd.DataFrame(rows))
+    judged = out[out["method"] == "interval"]
+    prom = judged[judged["indicator_nl"].str.startswith("Verbetering")].set_index("location_key")
+    revision = judged[judged["indicator_nl"].str.startswith("Revisie")].set_index("location_key")
+    assert prom.loc["a", "verdict"] == "beter"            # whole interval above the national median
+    assert pd.isna(prom.loc["c", "verdict"]) and "respons" in prom.loc["c", "position"]  # low PROM response
+    assert revision.loc["a", "verdict"] == "beter"        # lower revision is better
+    assert revision.loc["c", "verdict"] == "slechter"
+    assert pd.isna(revision.loc["d", "verdict"]) and revision.loc["d", "position"] == "inconsistent in bron"
+    assert revision.loc["a", "indicator_nl"] == "Revisie binnen 1 jaar (gecorrigeerd)"
+    # interval rows are not also treated as plain means
+    assert not ((out["method"] == "mean") & out["indicator"].str.contains("Gemiddelde", na=False)).any()
+
+
+def test_overdispersion_makes_verdicts_conservative():
+    import numpy as np
+    from pipeline.quality import funnel_verdicts
+    rng = np.random.default_rng(1)
+    n = 60
+    # true rates vary between hospitals (overdispersion) around 5%, big samples
+    true = np.clip(rng.normal(0.05, 0.015, n), 0.001, 0.2)
+    den = pd.Series(np.full(n, 2000.0))
+    y = pd.Series(rng.binomial(2000, true) / 2000)
+    se = (0.05 * 0.95 / den) ** 0.5
+    naive = ((y - 0.05).abs() > 1.96 * se).sum()
+    flagged = funnel_verdicts(y, se, 0.05, "lower_better").isin(["beter", "slechter"]).sum()
+    assert flagged < naive / 3   # most 'significant' differences are ordinary spread
+    extreme = funnel_verdicts(pd.concat([y, pd.Series([0.30])], ignore_index=True),
+                              pd.concat([se, pd.Series([se.iloc[0]])], ignore_index=True), 0.05, "lower_better")
+    assert extreme.iloc[-1] == "slechter"  # a real outlier is still flagged
+
+
+
+# --- regressions from the statistical review ---------------------------------------------------
+
+def _interval_rows(loc, point, lo, hi, n, kind="prom", year="2025"):
+    base = ("Verschilscore tussen heup PROM preoperatief en 12 maanden na ingreep. OHS som score. " if kind == "prom"
+            else "Gecorrigeerd percentage revisie binnen 1 jaar na primaire THP. ")
+    roles = [("Gemiddelde" if kind == "prom" else "Gecorrigeerd percentage", point),
+             ("95% Betrouwbaarheidsinterval Lower bound", lo), ("95% Betrouwbaarheidsinterval Upper bound", hi)]
+    if n is not None:
+        roles.append(("Aantal (N)", n))
+    return [{"procedure_id": "heup", "location_key": loc, "verslagjaar": year, "indicator": base + s,
+             "value": str(v), "numerator": None, "denominator": None} for s, v in roles]
+
+
+def test_placeholders_small_n_and_implausible_values_are_not_judged():
+    rows = []
+    for i in range(12):
+        rows += _interval_rows(f"h{i}", 18 + (i % 3), 17 + (i % 3), 19 + (i % 3), 100)
+    rows += _interval_rows("zero", 0, 0, 0, 0)            # placeholder: dropped
+    rows += _interval_rows("tiny", 40, 39, 41, 4)         # n < 20: not judged
+    rows += _interval_rows("crazy", 2364, 2357, 2371, 300)  # impossible change on a 0-48 scale
+    out = compare(pd.DataFrame(rows))
+    by = out[out["method"] == "interval"].set_index("location_key")
+    assert "zero" not in by.index
+    assert pd.isna(by.loc["tiny", "verdict"]) and "patiënten" in by.loc["tiny", "position"]
+    assert pd.isna(by.loc["crazy", "verdict"]) and "onwaarschijnlijk" in by.loc["crazy", "position"]
+    assert by.loc["h0", "national_rate"] == pytest.approx(19)  # median of real hospitals only
+
+
+def test_swapped_bounds_are_repaired():
+    rows = _interval_rows("s", 1.0, 2.0, 0.5, None, kind="rev")
+    out = compare(pd.DataFrame(rows))
+    r = out[out["method"] == "interval"].iloc[0]
+    assert r["ci_low"] == 0.5 and r["ci_high"] == 2.0 and pd.isna(r["position"])
+
+
+def test_ratio_not_judged_when_few_hospitals_publish_counts():
+    rows = [{"procedure_id": "heup", "indicator": "Diepe wondinfectie complicatie", "location_key": f"l{i}",
+             "verslagjaar": "2025", "numerator": 1 if i < 3 else None, "denominator": 100 if i < 3 else None,
+             "value": "1.0"} for i in range(10)]
+    out = compare(pd.DataFrame(rows))
+    assert out["verdict"].isna().all() and out["position"].str.contains("teller").all()
+
+
+def test_rare_events_are_not_flagged_on_tiny_numbers():
+    rows = [{"procedure_id": "heup", "indicator": "Diepe wondinfectie complicatie", "location_key": f"l{i}",
+             "verslagjaar": "2025", "numerator": 2, "denominator": 250, "value": None} for i in range(30)]
+    rows.append({"procedure_id": "heup", "indicator": "Diepe wondinfectie complicatie", "location_key": "small",
+                 "verslagjaar": "2025", "numerator": 2, "denominator": 42, "value": None})
+    out = compare(pd.DataFrame(rows)).set_index("location_key")
+    assert out.loc["small", "verdict"] == "gemiddeld"  # 2/42 is not convincing evidence of worse care
+
+
+def test_single_prom_scale_does_not_make_a_hospital_better():
+    from pipeline.quality import domain_verdicts
+    one = pd.DataFrame({"indicator_nl": ["Verbetering volgens patiënt na 12 mnd: EQ-5D index",
+                                         "Verbetering volgens patiënt na 12 mnd: OHS"],
+                        "verdict": ["beter", "gemiddeld"]})
+    assert domain_verdicts(one)["herstel"] == "gemiddeld"
+    specific = one.assign(verdict=["gemiddeld", "beter"])
+    assert domain_verdicts(specific)["herstel"] == "beter"
+
+
+def test_line_parser_reads_label_tables_without_separators():
+    text = ("Overzicht contracten zorgverzekeraars 2027\nVerzekeraar Label Status\n"
+            "DSW DSW Gecontracteerd\nVGZ Univé In onderhandeling\nDitzo (Ik Kies Zelf ASR) Gecontracteerd\n"
+            "Zilveren Kruis Zilveren Kruis Gecontracteerd met omzetplafond\n"
+            "Heeft u een polis bij een verzekeraar waarmee wij geen contract hebben, dan betaalt u mogelijk zelf bij.\n"
+            "* In dit overzicht staat de situatie van 03-11-2026.")
+    rows = contracts_parse.parse_lines(text)
+    got = {(r["concern"], r["label"]): (r["status"], r["omzetplafond"]) for r in rows}
+    assert got[("VGZ", "Univé")] == ("in_onderhandeling", None)
+    assert got[("a.s.r.", "Ik kies zelf")][0] == "gecontracteerd"
+    assert got[("Achmea", "Zilveren Kruis")] == ("gecontracteerd", True)
+    assert ("DSW", None) in got  # only 'DSW' named: concern-wide
+    assert len(rows) == 4  # the prose sentence is not a contract row
+    assert contracts_parse.find_peildatum(text) == "03-11-2026"

@@ -125,9 +125,25 @@ def load_policies(year: int = 2027) -> pd.DataFrame:
     return policies
 
 
-def load_contracts(year: int = 2027) -> pd.DataFrame:
-    contracts = _read(MANUAL / "contracts.csv")
-    return contracts if contracts.empty else contracts[contracts["year"] == year]
+def load_contracts(year: int = 2027, include_candidates: bool = True) -> pd.DataFrame:
+    """Contracts for `year`: rows checked by hand (data/manual/contracts.csv) first; for other
+    organisation × concern × label combinations, rows read automatically from the hospital's own
+    publication (data/processed/contracts_candidates.csv). Column `checked` tells them apart."""
+    checked = attach_organisation(_read(MANUAL / "contracts.csv"))
+    if not checked.empty:
+        checked = checked[pd.to_numeric(checked["year"], errors="coerce") == year].assign(checked=True)
+    if not include_candidates:
+        return checked
+    auto = _read(PROCESSED / "contracts_candidates.csv")
+    if auto.empty or "organisatie_agb" not in auto:
+        return checked
+    auto = auto[(pd.to_numeric(auto["year"], errors="coerce") == year) & auto["organisatie_agb"].notna()
+                & (auto["status"] != "onbekend")].assign(checked=False)
+    auto["organisatie_agb"] = auto["organisatie_agb"].astype(str).str.zfill(8)
+    if not checked.empty:
+        done = set(zip(checked["organisatie_agb"], checked["concern"], checked["label"].fillna("")))
+        auto = auto[[k not in done for k in zip(auto["organisatie_agb"], auto["concern"], auto["label"].fillna(""))]]
+    return pd.concat([checked, auto], ignore_index=True) if not checked.empty else auto.reset_index(drop=True)
 
 
 def contract_for(contracts: pd.DataFrame, organisatie_agb: str, concern: str, label: str) -> dict | None:
@@ -196,11 +212,17 @@ def policy_name(policy: dict) -> str:
 def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, year: int = 2027,
              policies: pd.DataFrame | None = None, contracts: pd.DataFrame | None = None,
              waits: pd.DataFrame | None = None, quality: pd.DataFrame | None = None,
-             hospital_table: pd.DataFrame | None = None) -> tuple[pd.DataFrame, pd.DataFrame]:
+             hospital_table: pd.DataFrame | None = None, con=None) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Return (per-policy summary, per-policy × hospital detail). Both carry a unique `naam` column.
 
     Linkage: locations by location_key (organisation AGB + postcode); quality and waiting times
     per location; contracts per organisation (AGB), because hospitals contract as one organisation."""
+    precomputed = None
+    if con is not None and hospital_table is None and quality is None:
+        from pipeline.db_queries import has_quality_data, locations_for_procedure, quality_latest
+        if has_quality_data(con):  # the database already holds every comparison
+            hospital_table = locations_for_procedure(con, procedure_id)
+            precomputed = quality_latest(con, procedure_id).drop(columns=["procedure_id"])
     if hospital_table is None:
         measurements = _read(PROCESSED / "measurements.csv") if quality is None else quality
         hospital_table = candidate_locations(procedure_id, measurements)
@@ -208,7 +230,8 @@ def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, y
     policies = load_policies(year) if policies is None else policies
     contracts = attach_organisation(load_contracts(year) if contracts is None else contracts)
     near = near.merge(latest_waits(procedure_id, waits), on="location_key", how="left")
-    near = near.merge(quality_by_location(procedure_id, quality), on="location_key", how="left")
+    verdicts = precomputed if precomputed is not None else quality_by_location(procedure_id, quality)
+    near = near.merge(verdicts, on="location_key", how="left")
     near["quality_verdict"] = near["quality_verdict"].fillna("geen_data")
 
     detail_rows = []
@@ -217,6 +240,7 @@ def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, y
             contract = contract_for(contracts, hosp.get("organisatie_agb"), policy["concern"], policy["label"]) or {}
             detail_rows.append({
                 "naam": policy_name(policy), "concern": policy["concern"], "label": policy["label"], "polis": policy["polis"],
+                "location_key": hosp["location_key"],
                 "location": hosp["location_name"], "distance_km": round(hosp["distance_km"], 1),
                 "access": access_status(policy, contract or None),
                 "contract_peildatum": contract.get("peildatum"),
@@ -241,6 +265,8 @@ def overview(lat: float, lon: float, procedure_id: str, radius_km: float = 25, y
             "kwaliteit_gemengd": int(quality.eq("gemengd").sum()),
             "kwaliteit_onder_gemiddeld": int(quality.eq("onder_gemiddeld").sum()),
             "kwaliteit_geen_data": int(quality.eq("geen_data").sum()),
+            # what is at stake while contract status is still unknown
+            "boven_gemiddeld_contract_onbekend": int((group["quality"].eq("boven_gemiddeld") & access.eq("onbekend")).sum()),
             "ziekenhuizen_in_bereik": len(group),
             "gecontracteerd": int((access == "gecontracteerd").sum()),
             "met_omzetplafond": int((access == "gecontracteerd_met_plafond").sum()),

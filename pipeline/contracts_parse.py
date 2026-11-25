@@ -26,12 +26,12 @@ from pathlib import Path
 import pandas as pd
 
 from pipeline.contract_status import clean, combine, combine_plafond, plafond_from_text, status_from_text
-from pipeline.reference import ROOT, match_label, normalise, save_with_history
+from pipeline.reference import ROOT, find_labels, match_label, normalise, save_with_history
 
 MONTHS = ("januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december"
           "|jan|feb|mrt|apr|jun|jul|aug|sept|sep|okt|nov|dec")
 _DATE = re.compile(
-    r"(?:peildatum|stand van zaken|bijgewerkt|versie|datum|status)[^\n]{0,40}?"
+    r"(?:peildatum|stand van zaken|situatie van|bijgewerkt|versie|datum|status)[^\n]{0,40}?"
     rf"\b(\d{{1,2}}[-/ ](?:\d{{1,2}}|(?:{MONTHS})\.?)[-/ ]\d{{4}})",
     re.IGNORECASE,
 )
@@ -155,6 +155,36 @@ def parse_tables(tables: list[list[list[object]]]) -> list[dict]:
     return rows
 
 
+_STATUS_AT_END = re.compile(
+    r"(\(?nog\)? geen contract|niet gecontracteerd|gecontracteerd|in onderhandeling|onderhandelingen lopen|"
+    r"geen contract|contract afgesloten)\b.*$", re.IGNORECASE)
+MAX_LINE_WORDS = 16
+
+
+def parse_lines(text: str) -> list[dict]:
+    """Rows from text lines like 'VGZ Univé In onderhandeling' or 'Zilveren Kruis: gecontracteerd met
+    omzetplafond': a status phrase at the end, insurer names before it. The most specific label in the
+    line wins ('VGZ Univé' -> Univé; 'DSW DSW' -> DSW)."""
+    rows = []
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or len(line.split()) > MAX_LINE_WORDS:
+            continue
+        match = _STATUS_AT_END.search(line)
+        if not match:
+            continue
+        names = find_labels(line[:match.start()])
+        if not names:
+            continue
+        specific = [n for n in names if n[1] and n[1] != n[0]]
+        hit = (specific or names)[-1]
+        status = status_from_text(match.group(0))
+        plafond = plafond_from_text(match.group(0))
+        if status != "onbekend":
+            rows.append(_row(hit, status, plafond, line))
+    return _concern_level(rows)
+
+
 def line_tables(text: str) -> list[list[list[str]]]:
     """Fallback for text without tables: every line becomes its own one-row table, split on
     ':', '|', dashes, tabs or wide gaps. No header semantics carry over between lines."""
@@ -169,8 +199,10 @@ def line_tables(text: str) -> list[list[list[str]]]:
 def parse_source(tables: list, text: str) -> list[dict]:
     """Rows from tables, plus rows from text lines for labels the tables missed."""
     parsed = parse_tables(tables)
-    seen = {(r["concern"], r["label"]) for r in parsed}
-    return parsed + [r for r in parse_tables(line_tables(text)) if (r["concern"], r["label"]) not in seen]
+    for extra in (parse_lines(text), parse_tables(line_tables(text))):
+        seen = {(r["concern"], r["label"]) for r in parsed}
+        parsed += [r for r in extra if (r["concern"], r["label"]) not in seen]
+    return parsed
 
 
 def latest_raw_dir() -> Path | None:
@@ -179,7 +211,7 @@ def latest_raw_dir() -> Path | None:
     return dirs[-1] if dirs else None
 
 
-COLUMNS = ["year", "location_id", "concern", "label", "polis", "status", "omzetplafond", "peildatum",
+COLUMNS = ["year", "organisatie_agb", "location_id", "concern", "label", "polis", "status", "omzetplafond", "peildatum",
            "source", "source_url", "fetched_on", "needs_review", "raw"]
 
 
@@ -193,7 +225,8 @@ def main(argv: list[str]) -> int:
     for tables_file in sorted(source_dir.glob("*.tables.json")):
         key = tables_file.name.removesuffix(".tables.json")
         info = meta["results"].get(key, {})
-        location_ids = info.get("location_ids") or [key]
+        organisation = info.get("organisatie_agb")
+        location_ids = info.get("location_ids") or ([None] if organisation else [key])
         try:
             text = (source_dir / f"{key}.txt").read_text(encoding="utf-8")
             parsed = parse_source(json.loads(tables_file.read_text(encoding="utf-8")), text)
@@ -203,10 +236,11 @@ def main(argv: list[str]) -> int:
         year, peildatum = find_year(text), find_peildatum(text)
         for location_id in location_ids:  # one source can cover several locations
             for row in parsed:
-                out_rows.append({**row, "location_id": location_id, "year": year, "peildatum": peildatum,
+                out_rows.append({**row, "location_id": location_id, "organisatie_agb": organisation,
+                                 "year": year, "peildatum": peildatum,
                                  "source": f"contracts_{info.get('format', 'pdf')}", "source_url": info.get("url"),
                                  "fetched_on": source_dir.name, "needs_review": True})
-        print(f"{key}: {len(parsed)} contract rows × {len(location_ids)} location(s)")
+        print(f"{key}: {len(parsed)} contract rows")
     save_with_history(pd.DataFrame(out_rows, columns=COLUMNS), "contracts_candidates", source_dir.name)
     return 0
 

@@ -1,17 +1,17 @@
-procedure_id,indicator_pattern,direction,label_nl,verified,note
-heup,revisie,lower_better,Revisie (heroperatie),false,direction from clinical meaning; confirm against indicatorengids THP
-heup,complicat,lower_better,Complicaties,false,
-heup,heropname,lower_better,Heropname,false,
-heup,infect,lower_better,Infectie,false,
-heup,prom|verbeter|tevreden|patientervaring|patiëntervaring,higher_better,Patiënt meldt verbetering,false,
-heup,aantal|volume,volume,Aantal ingrepen,false,
-knie,revisie,lower_better,Revisie (heroperatie),false,direction from clinical meaning; confirm against indicatorengids TKP
-knie,complicat,lower_better,Complicaties,false,
-knie,heropname,lower_better,Heropname,false,
-knie,infect,lower_better,Infectie,false,
-knie,prom|verbeter|tevreden|patientervaring|patiëntervaring,higher_better,Patiënt meldt verbetering,false,
-knie,aantal|volume,volume,Aantal ingrepen,false,
-staar,complicat|achterste kapsel|kapselruptuur,lower_better,Complicaties,false,confirm against indicatorengids cataract
-staar,refractie|visus|gezichtsscherpte,higher_better,Goed zichtresultaat,false,check whether the indicator measures 'within target' (higher better) or 'deviation' (lower better)
-staar,prom|verbeter|tevreden|patientervaring|patiëntervaring,higher_better,Patiënt meldt verbetering,false,
-staar,aantal|volume,volume,Aantal ingrepen,false,
+procedure_id,indicator_code,indicator_pattern,direction,label_nl,verified,note
+heup,INID003969,,lower_better,Diepe wondinfectie binnen 90 dagen,true,ratio with numerator/denominator; PREZIES definition; outcome (indicatorengids THP)
+heup,INID001646,,volume,Aantal heupprothesen,true,"volume; shown as context, not judged"
+heup,INID014123,,none,Respons PROM vooraf,true,reliability filter for PROM verdicts (< 50% -> not judged); not a quality score
+heup,INID011877,,none,Implantaten met bewezen levensduur (ODEP 5A+) cup,true,"process indicator with ceiling effect; shown, not judged"
+heup,INID011883,,none,Implantaten met bewezen levensduur (ODEP 5A+) steel,true,"process indicator with ceiling effect; shown, not judged"
+knie,INID004445,,lower_better,Diepe wondinfectie binnen 90 dagen,true,ratio with numerator/denominator; PREZIES definition; outcome (indicatorengids TKP)
+knie,INID001690,,volume,Aantal knieprothesen,true,"volume; shown as context, not judged"
+knie,INID014154,,none,Respons PROM vooraf,true,reliability filter for PROM verdicts (< 50% -> not judged); not a quality score
+knie,INID000589,,none,Volledigheid LROI-registratie,true,"registry completeness; reliability, not an outcome"
+knie,INID012488,,none,Implantaten met bewezen levensduur (ODEP 5A+),true,"process indicator with ceiling effect; shown, not judged"
+staar,INID011518,,higher_better,Minstens 1 regel beter zien,true,outcome with numerator/denominator (indicatorengids cataract 4a)
+staar,INID011519,,higher_better,Refractie binnen 1 dioptrie van doel,true,outcome; definition until verslagjaar 2024
+staar,INID023587,,higher_better,Refractie binnen 0.5 dioptrie van doel,true,outcome; stricter definition from verslagjaar 2025 (new code: no trend across the change)
+staar,INID004969,,none,Volledigheid kwaliteitsregistratie,true,"registry completeness; reliability, not an outcome"
+staar,INID004971,,none,Beide ogen binnen 12 maanden,true,practice variation; no 'right' value
+staar,INID023504,,none,Beide ogen op dezelfde dag (ISBCS),true,practice variation; no 'right' value

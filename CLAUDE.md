@@ -15,6 +15,10 @@ Context: volgens de nulmeting van Zorginstituut + Patiëntenfederatie (april 202
 ## USP (toets elke keuze hieraan)
 **Kwaliteit zichtbaar maken.** Consumenten moeten polissen kunnen vergelijken op de kwaliteit van de zorg die de verzekeraar voor hen inkoopt, niet alleen op premie. Pas dan gaan verzekeraars concurreren op prijs én kwaliteit. Kwaliteit staat daarom vooraan in de app (vóór premie en contractaantallen), en elke bron, berekening of schermwijziging moet dat doel dienen.
 
+## Werkwijze in deze fase
+**Klein en heel goed.** Liever één ding uitstekend dan veel dingen net niet. De kernvraag van de app: *"Welke ziekenhuizen bij mij in de buurt zijn aantoonbaar beter voor mijn ingreep, en kan ik daar terecht met mijn verzekering?"* Alles wat daar niet direct aan bijdraagt, wacht.
+**Overzichtelijk en mooi.** Volg het format van de zorgzoekers van grote verzekeraars en vergelijkers: één zoekbalk, kaart + lijst met kaartjes (naam, plaats, afstand, één duidelijk label, 2–3 kernpunten in gewone taal), details pas na een klik. Geen brede tabellen op het eerste scherm.
+
 ## Idee
 Per polis × gecontracteerde ziekenhuizen × kwaliteit van die ziekenhuizen → "kwaliteitsscore per polis voor jouw zorgprofiel".
 Gebruiker vult postcode + aandoening in en ziet per polis welke goede/snelle ziekenhuizen binnen bereik gecontracteerd zijn, met wachttijd, reviewcijfer en premie.

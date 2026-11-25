@@ -78,7 +78,22 @@ def build_report() -> str:
     else:
         linked = waits["location_key"].notna().sum() if "location_key" in waits else 0
         lines += [f"- {len(waits):,} rijen, gekoppeld: {pct(int(linked), len(waits))}", ""]
+    lines += integrity_lines()
     return "\n".join(lines) + "\n"
+
+
+def integrity_lines() -> list[str]:
+    """Linkage checks from the DuckDB view v_integrity (built by pipeline.build_db)."""
+    from pipeline.build_db import DB_PATH
+    if not DB_PATH.exists():
+        return []
+    import duckdb
+    con = duckdb.connect(str(DB_PATH), read_only=True)
+    rows = con.execute("SELECT problem, n FROM v_integrity").fetchall()
+    con.close()
+    lines = ["## Integriteit (DuckDB)", "", "| controle | aantal |", "|---|---|"]
+    lines += [f"| {problem} | {'✅ 0' if n == 0 else f'⚠️ {n:,}'} |" for problem, n in rows]
+    return lines + [""]
 
 
 def main() -> int:
