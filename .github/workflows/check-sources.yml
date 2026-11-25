@@ -22,10 +22,13 @@ jobs:
       - name: Probe insurer care finders
         continue-on-error: true
         run: python -m scrapers.probe_insurers
+      - name: Probe ZorgkaartNederland (aggregates only)
+        continue-on-error: true
+        run: python -m scrapers.probe_reviews
       - name: Commit report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/source_check docs/data_inventory/insurer_finders.md 2>/dev/null; git add docs/source_check
+          git add docs/source_check; git add docs/data_inventory/insurer_finders.md docs/data_inventory/reviews_probe.md 2>/dev/null || true
           git diff --cached --quiet || git commit -m "Update source check report"
           git pull --rebase && git push
