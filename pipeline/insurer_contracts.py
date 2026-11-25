@@ -19,7 +19,7 @@ import sys
 
 import pandas as pd
 
-from pipeline.reference import PROCESSED, REFERENCE, ROOT, normalise
+from pipeline.reference import MANUAL, PROCESSED, REFERENCE, ROOT, normalise
 
 FINDERS = ["cz_zorgvinder", "vgz_zorgzoeker", "menzis_zorgvinder", "zk_zorgzoeker"]
 WORST_FIRST = ["geen_contract", "in_onderhandeling", "vergoed_als_contract", "gecontracteerd"]
@@ -138,15 +138,42 @@ def per_organisation(matched: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows, columns=COLUMNS)
 
 
+def manual_zk_entries() -> pd.DataFrame:
+    """Zilveren Kruis's finder only answers its own page (anti-forgery token), so its contract list can
+    come from a list made by hand on that page: data/manual/zk/zk_contracten_<YYYY-MM-DD>.csv with
+    columns naam;adres;postcode;plaats;status;omzetplafond. The newest file is used."""
+    from scrapers.zk_zorgzoeker import STATUSES, YEAR
+    folder = MANUAL / "zk"
+    files = sorted(folder.glob("*.csv")) if folder.exists() else []
+    if not files:
+        return pd.DataFrame()
+    path = files[-1]
+    raw = pd.read_csv(path, sep=None, engine="python", dtype=str).rename(columns=str.lower)
+    date = re.search(r"(\d{4}-\d{2}-\d{2})", path.name)
+    status = raw["status"].fillna("").str.strip().str.lower().map(STATUSES)
+    plafond = raw.get("omzetplafond", pd.Series("", index=raw.index)).fillna("").str.strip().str.lower()
+    entries = pd.DataFrame({
+        "name": raw["naam"], "address": raw.get("adres", ""), "city": raw.get("plaats", "").fillna("").str.title(),
+        "postcode": raw.get("postcode", "").fillna("").str.replace(" ", "").str.upper(), "status": status,
+        "omzetplafond": plafond.isin(["ja", "true", "1", "x", "met omzetplafond"]),
+        "concern": "Achmea", "label": "Zilveren Kruis", "year": YEAR, "source": "Zilveren Kruis zorgzoeker (handmatig)",
+        "source_url": "https://www.zilverenkruis.nl/consumenten/zorgzoeker",
+        "fetched_on": date.group(1) if date else path.stem})
+    return entries.dropna(subset=["status", "name"]).drop_duplicates(["name", "address", "city"]).reset_index(drop=True)
+
+
 def main() -> int:
     locations = pd.read_csv(REFERENCE / "locations.csv", dtype=str)
     frames, lines = [], ["# Contracten uit zorgzoekers van verzekeraars", ""]
     for finder in FINDERS:
         path = PROCESSED / f"{finder}.csv"
-        if not path.exists():
+        if path.exists():
+            entries = pd.read_csv(path, dtype=str)
+        elif finder == "zk_zorgzoeker" and not manual_zk_entries().empty:
+            entries = manual_zk_entries()
+        else:
             lines.append(f"- {finder}: nog geen data")
             continue
-        entries = pd.read_csv(path, dtype=str)
         matched = match_by_agb(entries, locations) if "agb" in entries else match_entries(entries, locations)
         orgs = per_organisation(matched)
         frames.append(orgs)

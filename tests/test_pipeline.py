@@ -1066,3 +1066,19 @@ def test_budget_policy_does_not_inherit_the_regular_policy_contract():
     out = policy_overview(near, contracts, policies).set_index("polis")
     assert out.loc["Basis Zeker", "volledig"] == 1
     assert out.loc["Basis Start", "onbekend"] == 1
+
+
+def test_manual_zk_list_is_read(tmp_path, monkeypatch):
+    from pipeline import insurer_contracts
+    folder = tmp_path / "zk"
+    folder.mkdir()
+    (folder / "zk_contracten_2026-11-26.csv").write_text(
+        "naam;adres;postcode;plaats;status;omzetplafond\n"
+        "UMC Utrecht, loc. AZU;Heidelberglaan 100;3584 CX;UTRECHT;Nog geen contract: een deel niet vergoed;ja\n"
+        "Diakonessenhuis, loc. Utrecht;Bosboomstraat 1;3582 KE;Utrecht;Contract: vergoed;\n"
+        "Iets;X 1;1000AA;Ergens;onbekende tekst;\n", encoding="utf-8")
+    monkeypatch.setattr(insurer_contracts, "MANUAL", tmp_path)
+    entries = insurer_contracts.manual_zk_entries()
+    assert entries["status"].tolist() == ["in_onderhandeling", "gecontracteerd"]
+    assert entries["omzetplafond"].tolist() == [True, False]
+    assert set(entries["fetched_on"]) == {"2026-11-26"} and set(entries["label"]) == {"Zilveren Kruis"}
