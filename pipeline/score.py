@@ -118,8 +118,10 @@ def load_policies(year: int = 2027, in_scope: bool = True) -> pd.DataFrame:
     policy file, fall back to one row per label."""
     policies = _read(MANUAL / f"polissen_{year}.csv")
     if in_scope and not policies.empty:
+        # the four groups in scope; a policy only when its premium is sourced on the brand's own site
         from pipeline.reference import scope
-        policies = policies[policies["label"].isin(scope()["label"])].reset_index(drop=True)
+        policies = policies[policies["concern"].isin(scope()["concern"]) & (policies["label"] != "ONVZ")
+                            & (policies["source_type"] == "insurer")].reset_index(drop=True)
     if policies.empty:
         policies = labels()[["concern", "label"]].copy()
         policies["polis"] = "(polissen nog niet ingevoerd)"

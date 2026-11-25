@@ -103,7 +103,8 @@ def check_label(http: PoliteSession, label: str, rows: pd.DataFrame) -> list[dic
 def main(argv: list[str]) -> int:
     from pipeline.reference import scope
     policies = pd.read_csv(MANUAL / "polissen_2027.csv")
-    labels = argv or list(scope()["label"])  # only the insurers the app covers
+    in_scope = policies[policies["concern"].isin(scope()["concern"]) & (policies["label"] != "ONVZ")]
+    labels = argv or list(dict.fromkeys(in_scope["label"]))  # only the groups the app covers
     http = PoliteSession(delay=2)
     rows = []
     for label in labels:

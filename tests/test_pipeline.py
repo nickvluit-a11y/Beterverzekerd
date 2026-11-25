@@ -954,7 +954,8 @@ def test_policies_in_scope_come_from_the_insurer_itself():
     from pipeline.score import load_policies
     from scrapers.verify_premiums import SITES, site_of
     policies = load_policies(2027)
-    assert set(policies["label"]) == set(scope()["label"])
+    assert set(scope()["label"]) <= set(policies["label"])
+    assert set(policies["concern"]) <= set(scope()["concern"])
     for p in policies.itertuples():
         own = site_of(SITES[p.label]).split(".")[-2]  # e.g. 'vgz' also allows cooperatievgz.nl
         assert own in site_of(p.source_url), (p.label, p.polis, p.source_url)
