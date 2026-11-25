@@ -27,6 +27,18 @@ from pipeline.quality import domain_highlights  # noqa: E402
 from pipeline.reference import labels, procedures  # noqa: E402
 from pipeline.score import attach_organisation, contract_for, hospitals_within, latest_waits, load_contracts, load_policies, policy_overview  # noqa: E402
 
+MONTHS_NL = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+
+
+def nice_date(value) -> str:
+    """'2026-11-10' -> '10 nov 2026'."""
+    try:
+        d = pd.Timestamp(value)
+        return f"{d.day} {MONTHS_NL[d.month - 1]} {d.year}"
+    except (ValueError, TypeError):
+        return str(value)
+
+
 def display_name(row) -> str:
     """'annatommie mc - voor orthopedie - Utrecht' + 'UTRECHT' -> 'Annatommie mc - voor orthopedie - Utrecht'."""
     name = str(row.locatie_naam if isinstance(row.locatie_naam, str) else row.organisatie_naam).strip()
@@ -61,19 +73,7 @@ ORDER = list(BADGES)
 # variant that only says 'aantoonbaar beter' or 'niet aantoonbaar beter' (both true).
 SHOW_WORSE = os.environ.get("SHOW_WORSE", "true").lower() == "true"
 if not SHOW_WORSE:
-    MONTHS_NL = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
-
-
-def nice_date(value) -> str:
-    """'2026-11-10' -> '10 nov 2026'."""
-    try:
-        d = pd.Timestamp(value)
-        return f"{d.day} {MONTHS_NL[d.month - 1]} {d.year}"
-    except (ValueError, TypeError):
-        return str(value)
-
-
-BADGES = {"boven_gemiddeld": BADGES["boven_gemiddeld"],
+    BADGES = {"boven_gemiddeld": BADGES["boven_gemiddeld"],
               "niet_beter": ("Niet aantoonbaar beter", "avg", [100, 116, 139]),
               "geen_data": BADGES["geen_data"]}
     ORDER = list(BADGES)
