@@ -20,7 +20,7 @@ from scrapers.common import ROOT, USER_AGENT, today
 FINDERS = {  # landing page, field 'what', field 'where', link to click first, how to submit ('enter' or a selector)
     "zilveren_kruis": ("https://www.zilverenkruis.nl/consumenten/zorgzoeker",
                        "#autofill-Zorgtype-input", "#autofill-Locatie-input", None,
-                       "form:has(#autofill-Locatie-input) button[type=submit], form:has(#autofill-Locatie-input) button"),
+                       "last:button:has-text('Zoeken')"),
     "vgz": ("https://www.vgz.nl/zorg-regelen/zorgzoeker", "input[name=zoekterm]", "input[name=locatie]", None, "enter"),
     "menzis": ("https://www.menzis.nl/zorg-en-vergoedingen/de-zorgvinder", None, None, "Naar de Zorgvinder",
                "button:has-text('Zoeken')"),
@@ -143,9 +143,10 @@ def probe(page, name: str, url: str, what_sel: str | None = None, where_sel: str
         if submit == "enter":
             page.locator(where_sel or what_sel).first.press("Enter", timeout=5000)
         else:
-            button = page.locator(submit).locator("visible=true")
+            last = submit.startswith("last:")
+            button = page.locator(submit.removeprefix("last:")).locator("visible=true")
             lines.append(f"- zoekknoppen gevonden: {button.count()}")
-            button.first.click(timeout=5000)
+            (button.last if last else button.first).click(timeout=5000)
         page.wait_for_load_state("networkidle", timeout=30000)
     except Exception as exc:
         lines.append(f"- zoeken: {type(exc).__name__}")
