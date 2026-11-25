@@ -20,7 +20,7 @@ Vul een postcode in voor een nauwkeuriger resultaat (INPUT/text)
 
 Markup rond 'basisverzekering':
 ~~~
-<html lang="nl"><head><script nonce="" src="https://cdn.harvest.graindata.com/assets/consent-monitor/consent-monitor.js" type="text/javascript" async=""></script><script nonce="" type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-7KQXEE3482&amp;cx=c&amp;gtm=4e6bh1"></script><script nonce="" async="" src="//acdn.adnxs.com/dmp/up/pixie.js"></script>
+<html lang="nl"><head><script nonce="" type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-7KQXEE3482&amp;cx=c&amp;gtm=4e6bh1"></script><script nonce="" src="https://cdn.harvest.graindata.com/assets/consent-monitor/consent-monitor.js" type="text/javascript" async=""></script><script nonce="" async="" src="//acdn.adnxs.com/dmp/up/pixie.js"></script>
     <title>Zoekresultaten - Zilveren Kruis</title>
 
     
@@ -42,7 +42,7 @@ Markup rond 'basisverzekering':
 <link href="/assets/common/js/vue/main.css?v=h-zIojkmV-zl0jGr0-pjxg2" rel="stylesheet">
 
 
-    <script nonce="" async="" type="text/javascript" src="https://tdn.r42tag.com/tags-136/prod?s=sitecore%7Cconsumenten%7Czorgzoeker%7Czoekresultaten&amp;u=https%3A%2F%2Fwww.zilverenkruis.nl%2Fconsumenten%2Fzorgzoeker%2Fzoekresultaten&amp;r=https%3A%2F%2Fwww.zilverenkruis.nl%2Fconsumenten%2Fzorgzoeker&amp;cb=1795618410481"></script><script async="" src="//tdn.r42tag.com/lib/ca-9-achmea-v2.js"></script><script nonce="" type="text/javascript">var BTTFButtonIsActive = true;</script>
+    <script nonce="" async="" type="text/javascript" src="https://tdn.r42tag.com/tags-136/prod?s=sitecore%7Cconsumenten%7Czorgzoeker%7Czoekresultaten&amp;u=https%3A%2F%2Fwww.zilverenkruis.nl%2Fconsumenten%2Fzorgzoeker%2Fzoekresultaten&amp;r=https%3A%2F%2Fwww.zilverenkruis.nl%2Fconsumenten%2Fzorgzoeker&amp;cb=1795618876353"></script><script async="" src="//tdn.r42tag.com/lib/ca-9-achmea-v2.js"></script><script nonce="" type="text/javascript">var BTTFButtonIsActive = true;</script>
 
 <!-- Relay42 scripts start -->
     <script nonce="">
