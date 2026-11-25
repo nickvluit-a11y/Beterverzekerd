@@ -246,8 +246,9 @@ if search:
                 parts = [f'<span class="chip ok">✓ {r.volledig} van {r.betere_ziekenhuizen} volledig vergoed</span>' if r.volledig else "",
                          f'<span class="chip no">€ {r.deels} deels zelf betalen</span>' if r.deels else "",
                          f'<span class="chip">? {r.onbekend} nog onbekend</span>' if r.onbekend else ""]
+                checked = "" if getattr(r, "confirmed", False) else " · premie nog niet bevestigd door de verzekeraar"
                 return (f'<div class="insurer"><span class="iname">{r.label} – {r.polis}'
-                        f'<br><span class="meta">{premie} · {kind}</span></span>{"".join(parts)}</div>')
+                        f'<br><span class="meta">{premie} · {kind}{checked}</span></span>{"".join(parts)}</div>')
 
             st.markdown('<div class="insurers">' + "".join(policy_row(r) for r in table.head(8).itertuples()) + "</div>",
                         unsafe_allow_html=True)
@@ -259,7 +260,7 @@ if search:
             if unknown_share > 0.3:
                 st.caption(f"Let op: bij {unknown_share:.0%} weten we nog niet of je volledig vergoed wordt. Ziekenhuizen en "
                            "verzekeraars sluiten hun contracten tussen november en januari; we werken dit bij vanuit hun "
-                           "eigen publicaties. Premies 2027 deels nog niet gecontroleerd.")
+                           "eigen publicaties.")
         st.markdown("#### Ziekenhuizen")
 
         has_contracts = not contracts.empty

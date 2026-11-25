@@ -955,3 +955,10 @@ def test_postcode_fallback_without_pdok(tmp_path):
     assert approximate_from_cache("3584 AB", cache) == (52.08, 5.18)
     assert approximate_from_cache("3583", cache) is not None  # nearest PC4 number
     assert approximate_from_cache("9999", cache) is None
+
+
+def test_premium_amounts_found_in_insurer_text():
+    from scrapers.verify_premiums import amount_text, find_amounts
+    amounts = {"Basis Start": amount_text(159.45), "Basis Zeker": amount_text(164.95), "Exclusief": amount_text(186.9)}
+    text = "Premies 2027\nBasis Start € 159,45 per maand\nBasis Zeker €\n164,95\nExclusief 1186,90"
+    assert find_amounts(text, amounts) == {"Basis Start", "Basis Zeker"}  # 1186,90 is not 186,90

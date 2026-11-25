@@ -122,6 +122,14 @@ def load_policies(year: int = 2027) -> pd.DataFrame:
         policies["polis_type"] = None
         policies["premie_per_maand"] = None
         policies["year"] = year
+    check = _read(PROCESSED / "premium_check.csv")
+    if not check.empty and {"label", "polis", "confirmed"} <= set(check.columns):
+        check = check[["label", "polis", "confirmed", "confirmed_url", "checked_on"]].drop_duplicates(["label", "polis"])
+        check["confirmed"] = check["confirmed"].astype(str).str.lower() == "true"
+        policies = policies.merge(check, on=["label", "polis"], how="left")
+    if "confirmed" not in policies:
+        policies["confirmed"] = False
+    policies["confirmed"] = policies["confirmed"].fillna(False).astype(bool)
     return policies
 
 

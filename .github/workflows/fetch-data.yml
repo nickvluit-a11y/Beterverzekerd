@@ -52,6 +52,10 @@ jobs:
         continue-on-error: true
         run: python -m scrapers.cz_zorgvinder
 
+      - name: Check premiums on the insurers' own sites
+        continue-on-error: true
+        run: python -m scrapers.verify_premiums
+
       - name: Fetch indicator guides
         continue-on-error: true
         run: python -m scrapers.indicator_guides
