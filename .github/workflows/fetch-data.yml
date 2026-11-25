@@ -48,6 +48,10 @@ jobs:
         continue-on-error: true
         run: python -m scrapers.zorgkaart
 
+      - name: Fetch CZ care finder (contract status per location)
+        continue-on-error: true
+        run: python -m scrapers.cz_zorgvinder
+
       - name: Fetch indicator guides
         continue-on-error: true
         run: python -m scrapers.indicator_guides
@@ -68,6 +72,11 @@ jobs:
         if: steps.contracts.outcome == 'success'
         continue-on-error: true
         run: python -m pipeline.contracts_parse
+
+      - name: Link insurer care finders to hospitals
+        if: always()
+        continue-on-error: true
+        run: python -m pipeline.insurer_contracts
 
       - name: Link ratings to locations
         if: always()

@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from pipeline.build_db import connect  # noqa: E402
 from pipeline.db_queries import indicator_profile, indicator_trend, latest_judged, locations_for_procedure, quality_latest  # noqa: E402
-from pipeline.geo import clean_postcode, geocode_postcode  # noqa: E402
+from pipeline.geo import clean_postcode, locate  # noqa: E402
 from pipeline.explain import explain, trend_sentences  # noqa: E402
 from pipeline.quality import domain_highlights  # noqa: E402
 from pipeline.reference import labels, procedures  # noqa: E402
@@ -50,18 +50,6 @@ def display_name(row) -> str:
     return name if not place or place.lower() in name.lower() else f"{name}, {place}"
 
 
-MONTHS_NL = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
-
-
-def nice_date(value) -> str:
-    """'2026-11-10' -> '10 nov 2026'."""
-    try:
-        d = pd.Timestamp(value)
-        return f"{d.day} {MONTHS_NL[d.month - 1]} {d.year}"
-    except (ValueError, TypeError):
-        return str(value)
-
-
 BADGES = {  # verdict -> (text, css class, map colour)
     "boven_gemiddeld": ("Beter dan gemiddeld", "good", [21, 128, 61]),
     "gemiddeld": ("Rond het gemiddelde", "avg", [100, 116, 139]),
@@ -85,6 +73,7 @@ def shown_verdict(verdict: str) -> str:
         return verdict
     return "niet_beter"
 CONTRACT_CHIP = {"gecontracteerd": ("✓", "ok"), "gecontracteerd_met_plafond": ("✓*", "ok"),
+                 "vergoed_als_contract": ("✓", "ok"),
                  "in_onderhandeling": ("…", "wait"), "geen_contract": ("✗", "no")}
 
 st.set_page_config(page_title="Beterverzekerd", page_icon="🩺", layout="centered")
@@ -141,7 +130,7 @@ def database():
 
 @st.cache_data(ttl=24 * 3600)
 def cached_geocode(postcode: str):
-    return geocode_postcode(postcode)
+    return locate(postcode)
 
 
 password = os.environ.get("APP_PASSWORD")
@@ -162,6 +151,18 @@ st.markdown('<div class="hero"><h1>Beterverzekerd</h1>'
 
 ALL_INSURERS = "Alle verzekeraars vergelijken"
 BRAND = {"Achmea": "Zilveren Kruis", "Eucare": "Aevitae"}  # the name consumers know
+
+
+def contract_source(row: dict | None) -> str:
+    """Where a contract status comes from, with its date: the reader must be able to check it."""
+    if not row:
+        return ""
+    who = ("zorgzoeker van de verzekeraar" if row.get("origin") == "verzekeraar"
+           else "website van het ziekenhuis" if row.get("origin") == "ziekenhuis" else "gecontroleerd")
+    date = f", {nice_date(row['peildatum'])}" if isinstance(row.get("peildatum"), str) else ""
+    plafond = " · met omzetplafond: vraag bij een nieuwe behandeling of er nog plek is" \
+        if str(row.get("omzetplafond")).lower() == "true" or row.get("status") == "gecontracteerd_met_plafond" else ""
+    return f'<div class="note">Bron: {who}{date}{plafond}</div>'
 
 
 def insurer_name(concern: str) -> str:
@@ -286,18 +287,19 @@ if search:
                 status = (found.get(chosen) or {}).get("status")
                 mark, chip_css = CONTRACT_CHIP.get(status, ("?", ""))
                 label = {"gecontracteerd": "gecontracteerd", "gecontracteerd_met_plafond": "gecontracteerd (met plafond)",
+                         "vergoed_als_contract": "nog in gesprek, wel volledig vergoed",
                          "in_onderhandeling": "in onderhandeling", "geen_contract": "geen contract"}.get(status, "contract nog onbekend")
-                chips_html = f'<div class="chips"><span class="chip big {chip_css}">{insurer_name(chosen)}: {mark} {label}</span></div>'
+                chips_html = (f'<div class="chips"><span class="chip big {chip_css}">{insurer_name(chosen)}: {mark} {label}</span>'
+                              f'{contract_source(found.get(chosen))}</div>')
             elif found:
                 chips = []
                 for concern in concerns:
                     mark, chip_css = CONTRACT_CHIP.get((found.get(concern) or {}).get("status"), ("?", ""))
                     chips.append(f'<span class="chip {chip_css}">{BRAND.get(concern, concern)} {mark}</span>')
-                first = next(iter(found.values()))
-                auto = any(not r.get("checked", True) for r in found.values())
-                peildatum = f" · peildatum {first.get('peildatum')}" if isinstance(first.get("peildatum"), str) else ""
-                source = ("Contracten 2027 volgens de website van het ziekenhuis" + peildatum +
-                          (" · automatisch uitgelezen, controleer bij je verzekeraar" if auto else ""))
+                origins = sorted({str(r.get("origin") or "ziekenhuis") for r in found.values()})
+                source = "Contracten 2027 volgens " + " en ".join(
+                    {"verzekeraar": "de zorgzoeker van de verzekeraar", "ziekenhuis": "de website van het ziekenhuis"}[o]
+                    for o in origins) + " · ? = nog onbekend"
                 chips_html = ('<div class="chips">' + "".join(chips) + f'<div class="note">{source}</div></div>')
             else:
                 chips_html = '<div class="chips">Contracten 2027 voor dit ziekenhuis: nog niet bekend</div>'

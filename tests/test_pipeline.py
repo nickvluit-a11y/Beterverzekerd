@@ -608,6 +608,8 @@ def test_build_db_quality_over_years(tmp_path, monkeypatch):
          "locatie_naam": "UMC Utrecht", "postcode": "3584CX", "plaats": "Utrecht", "lat": 52.087, "lon": 5.179},
         {"location_key": "11111111-1000AA", "organisatie_agb": "11111111", "organisatie_naam": "Ander",
          "locatie_naam": "Ander", "postcode": "1000AA", "plaats": "Amsterdam", "lat": 52.37, "lon": 4.9},
+        {"location_key": "22220841-3735ME", "organisatie_agb": "22220841", "organisatie_naam": "Gestopt",
+         "locatie_naam": "Gestopt", "postcode": "3735ME", "plaats": "Bosch en Duin", "lat": 52.12, "lon": 5.24},
     ]).to_csv(ref / "locations.csv", index=False)
     pd.DataFrame([{"indicator_code": "IN1", "procedure_id": "heup", "thema": "Revisie", "indicator_naam": "Revisie binnen 1 jaar",
                    "eenheid": "Percentage", "indicator_type": "Uitkomst"}]).to_csv(ref / "indicators.csv", index=False)
@@ -619,6 +621,8 @@ def test_build_db_quality_over_years(tmp_path, monkeypatch):
                   "value": None, "numerator": other[0], "denominator": other[1], "source": "t"},
                  {"procedure_id": "heup", "verslagjaar": year, "location_key": "99999999-9999ZZ", "indicator_code": "IN1",
                   "value": None, "numerator": 1, "denominator": 10, "source": "t"}]
+    rows.append({"procedure_id": "heup", "verslagjaar": 2023, "location_key": "22220841-3735ME", "indicator_code": "IN1",
+                 "value": None, "numerator": 1, "denominator": 1000, "source": "t"})  # stopped reporting after 2023
     pd.DataFrame(rows).to_csv(proc / "measurements.csv", index=False)
     monkeypatch.setattr(build_db, "REFERENCE", ref)
     monkeypatch.setattr(build_db, "PROCESSED", proc)
@@ -629,6 +633,9 @@ def test_build_db_quality_over_years(tmp_path, monkeypatch):
     assert trend == [(2024, "gemiddeld"), (2025, "boven_gemiddeld")]  # improvement becomes visible
     latest = dict(con.execute("SELECT location_key, quality_verdict FROM v_quality_latest").fetchall())
     assert latest["11111111-1000AA"] == "onder_gemiddeld"
+    assert "22220841-3735ME" not in latest  # an old verdict of a location that stopped is not current
+    from pipeline.db_queries import locations_for_procedure
+    assert "22220841-3735ME" not in set(locations_for_procedure(con, "heup")["location_key"])
     problems = dict(con.execute("SELECT problem, n FROM v_integrity").fetchall())
     assert problems["measurement without location"] == 2  # unknown location is reported, not silently dropped
     assert problems["duplicate location_key"] == 0
@@ -866,3 +873,85 @@ def test_explain_in_plain_words():
     trend = pd.DataFrame({"indicator": ["Diepe wondinfectie binnen 90 dagen"] * 3, "verslagjaar": [2023, 2024, 2025],
                           "verdict": ["beter"] * 3})
     assert trend_sentences(trend) == ["Al 3 jaar beter dan gemiddeld op: diepe wondinfectie binnen 90 dagen"]
+
+
+CZ_PAGE = """Resultaten van 2027 :
+3 zorgverleners
+Umc Utrecht Heidelberglaan 100
+4,0 km - 4,0 kilometer van je locatie Utrecht, Heidelberglaan 100
+(Nog) geen contract: wel vergoed
+Met omzetplafond
+Reviews: 8,0 op basis van 85 waarderingen voor Reviews 8 , 0 85 reviews
+St. Antonius Ziekenhuis Locatie Utrecht Soestwetering 1
+4,6 km - 4,6 kilometer van je locatie Utrecht, Soestwetering 1
+Nog geen contract: een deel niet vergoed
+Stichting Alexander Monro Ziekenhuis Professor Bronkhorstlaan 10g 94
+9,0 km - 9,0 kilometer van je locatie Bilthoven, Professor Bronkhorstlaan 10g 94
+Contract: vergoed
+UMC Utrecht, loc. Alexander Monro Ziekenhuis Professor Bronkhorstlaan 10
+9,0 km - 9,0 kilometer van je locatie Bilthoven, Professor Bronkhorstlaan 10
+(Nog) geen contract: wel vergoed
+"""
+
+
+def test_cz_finder_parse_and_link():
+    from pipeline.insurer_contracts import match_entries, per_organisation
+    from scrapers.cz_zorgvinder import parse_results
+    entries, total = parse_results(CZ_PAGE)
+    assert total == 3 and len(entries) == 4
+    assert entries[0] == {"name": "Umc Utrecht", "address": "Heidelberglaan 100", "city": "Utrecht",
+                          "status": "vergoed_als_contract", "omzetplafond": True}
+    assert entries[1]["status"] == "in_onderhandeling" and entries[1]["omzetplafond"] is False
+    assert entries[2]["status"] == "gecontracteerd"
+    locations = pd.DataFrame([
+        {"location_key": "06020602-3584CX", "organisatie_agb": "06020602", "organisatie_naam": "UMC Utrecht",
+         "locatie_naam": "UMC Utrecht", "huisnummer": "100", "plaats": "UTRECHT"},
+        {"location_key": "06010618-3582KE", "organisatie_agb": "06010618", "organisatie_naam": "Diakonessenhuis",
+         "locatie_naam": "Diakonessenhuis Utrecht", "huisnummer": "1", "plaats": "Utrecht"},
+        {"location_key": "22220330-3723MB", "organisatie_agb": "22220330", "organisatie_naam": "Alexander Monro Ziekenhuis",
+         "locatie_naam": "Alexander Monro Ziekenhuis", "huisnummer": "10", "plaats": "Bilthoven"},
+    ])
+    df = pd.DataFrame(entries).assign(concern="CZ", label="CZ", year=2027, source="CZ zorgvinder",
+                                      fetched_on="2026-11-25", source_url="u")
+    matched = match_entries(df, locations)
+    assert matched["location_key"].tolist()[0] == "06020602-3584CX"
+    assert pd.isna(matched["location_key"].iloc[1])  # same house number, other hospital: no match
+    assert matched["location_key"].iloc[2] == "22220330-3723MB"
+    assert pd.isna(matched["location_key"].iloc[3])  # UMC clinic in the same building keeps off
+    orgs = per_organisation(matched).set_index("organisatie_agb")
+    assert orgs.loc["22220330", "status"] == "gecontracteerd"
+    assert orgs.loc["06020602", "status"] == "vergoed_als_contract" and bool(orgs.loc["06020602", "omzetplafond"])
+
+
+def test_insurer_finder_wins_over_hospital_page_and_counts_as_reimbursed(tmp_path, monkeypatch):
+    from pipeline import score
+    pd.DataFrame([{"year": 2027, "organisatie_agb": "06020602", "concern": "CZ", "label": "CZ",
+                   "status": "vergoed_als_contract", "peildatum": "2026-11-25"}]).to_csv(tmp_path / "contracts_insurer.csv", index=False)
+    pd.DataFrame([{"year": 2027, "organisatie_agb": "06020602", "concern": "CZ", "label": "CZ",
+                   "status": "in_onderhandeling", "peildatum": "2026-11-01"},
+                  {"year": 2027, "organisatie_agb": "06020602", "concern": "VGZ", "label": "",
+                   "status": "in_onderhandeling", "peildatum": "2026-11-01"}]).to_csv(tmp_path / "contracts_candidates.csv", index=False)
+    monkeypatch.setattr(score, "PROCESSED", tmp_path)
+    monkeypatch.setattr(score, "MANUAL", tmp_path)
+    contracts = score.load_contracts(2027)
+    cz = score.contract_for(contracts, "06020602", "CZ", "CZ")
+    assert cz["status"] == "vergoed_als_contract" and cz["origin"] == "verzekeraar"
+    near = pd.DataFrame({"organisatie_agb": ["06020602"], "quality_verdict": ["boven_gemiddeld"]})
+    policies = pd.DataFrame([
+        {"concern": "CZ", "label": "CZ", "polis": "Zorgbewust", "polis_type": "budget", "premie_per_maand": "170", "vergoeding_niet_gecontracteerd_pct": "65"},
+        {"concern": "VGZ", "label": "VGZ", "polis": "Basis Keuze", "polis_type": "budget", "premie_per_maand": "167", "vergoeding_niet_gecontracteerd_pct": "70"},
+    ])
+    out = score.policy_overview(near, contracts, policies).set_index("polis")
+    assert out.loc["Zorgbewust", "volledig"] == 1
+    # a hospital saying 'in talks' does not tell what the insurer pays meanwhile: unknown, not 'partly'
+    assert out.loc["Basis Keuze", "onbekend"] == 1
+
+
+def test_postcode_fallback_without_pdok(tmp_path):
+    from pipeline.geo import approximate_from_cache
+    cache = tmp_path / "c.csv"
+    pd.DataFrame([{"postcode": "3584CX", "huisnummer": "100", "lat": 52.08, "lon": 5.18},
+                  {"postcode": "3582KE", "huisnummer": "1", "lat": 52.09, "lon": 5.13}]).to_csv(cache, index=False)
+    assert approximate_from_cache("3584 AB", cache) == (52.08, 5.18)
+    assert approximate_from_cache("3583", cache) is not None  # nearest PC4 number
+    assert approximate_from_cache("9999", cache) is None

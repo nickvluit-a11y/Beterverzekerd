@@ -6,7 +6,7 @@ import pipeline.geo
 
 
 def _app(monkeypatch):
-    monkeypatch.setattr(pipeline.geo, "geocode_postcode", lambda code: (52.0870, 5.1790))
+    monkeypatch.setattr(pipeline.geo, "locate", lambda code: (52.0870, 5.1790))
     at = AppTest.from_file("../app/app.py", default_timeout=240)
     at.run()
     return at

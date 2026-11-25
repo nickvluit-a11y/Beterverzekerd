@@ -37,3 +37,32 @@ def geocode_postcode(postcode: str, timeout: float = 10) -> tuple[float, float] 
     resp.raise_for_status()
     docs = resp.json().get("response", {}).get("docs", [])
     return parse_point(docs[0]["centroide_ll"]) if docs else None
+
+
+def approximate_from_cache(postcode: str, cache_path=None) -> tuple[float, float] | None:
+    """Fallback when PDOK is unreachable: the mean position of known (hospital) postcodes in the same
+    PC4 area, else in the nearest PC4 number within 20 (Dutch PC4 numbers are roughly geographic)."""
+    import pandas as pd
+    from pipeline.reference import REFERENCE
+    code = clean_postcode(postcode)
+    path = cache_path or REFERENCE / "geocode_cache.csv"
+    if not code:
+        return None
+    try:
+        cache = pd.read_csv(path, dtype={"postcode": str}).dropna(subset=["lat", "lon"])
+    except (OSError, ValueError):
+        return None
+    pc4 = pd.to_numeric(cache["postcode"].str[:4], errors="coerce")
+    gap = (pc4 - int(code[:4])).abs()
+    if gap.empty or gap.min() > 20:
+        return None
+    near = cache[gap == gap.min()]
+    return float(near["lat"].mean()), float(near["lon"].mean())
+
+
+def locate(postcode: str) -> tuple[float, float] | None:
+    """PDOK first; on a network error the approximation from the cache, so search keeps working."""
+    try:
+        return geocode_postcode(postcode)
+    except requests.RequestException:
+        return approximate_from_cache(postcode)
