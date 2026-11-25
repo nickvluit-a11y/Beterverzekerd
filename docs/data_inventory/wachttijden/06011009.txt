@@ -15,8 +15,8 @@ Wachttijden behandelingen
 Dit is de wachttijd tussen het afspreken van een behandeling en de start van de behandeling. Bijvoorbeeld een operatie. De wachttijd is een schatting.
 Wachttijden diagnostiek/onderzoek
 Dit is de wachttijd tussen het afspreken van een onderzoek en het moment dat u naar het ziekenhuis kunt komen.
-Bekijk de wachttijden op Zorgkaart Nederland
-De wachttijden die u op Zorgkaart Nederland ziet gelden voor reguliere zorg. Bij een spoedverwijzing gelden andere wachttijden.
+Bekijk de wachttijden op Ziekenhuischeck
+De wachttijden die u op Ziekenhuischeck ziet gelden voor reguliere zorg. Bij een spoedverwijzing gelden andere wachttijden.
 Wachtlijstbemiddeling
 Vindt u de wachttijd te lang? Neem dan contact met ons op. U kunt ook uw zorgverzekeraar vragen om hulp. Soms kunnen zij ervoor zorgen dat u sneller geholpen wordt.
 © 2026 Catharina Ziekenhuis
