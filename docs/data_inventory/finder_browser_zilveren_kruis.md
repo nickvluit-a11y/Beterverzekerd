@@ -18,88 +18,43 @@ Vul een postcode in voor een nauwkeuriger resultaat (INPUT/text)
 - #autofill-Locatie-input: gekozen suggestie voor 3584 CX
 - zoekknoppen gevonden: 2
 
-Markup rond 'basisverzekering':
-~~~
-<html lang="nl"><head><script nonce="" type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-7KQXEE3482&amp;cx=c&amp;gtm=4e6bh1"></script><script nonce="" src="https://cdn.harvest.graindata.com/assets/consent-monitor/consent-monitor.js" type="text/javascript" async=""></script><script nonce="" async="" src="//acdn.adnxs.com/dmp/up/pixie.js"></script>
-    <title>Zoekresultaten - Zilveren Kruis</title>
+Zichtbare knoppen en keuzevelden:
 
-    
-    
+- BUTTON |  |  |  | Zoeken | 
+- BUTTON |  | global-header-desktop-top-trigger-1 |  | Verzekeringen | 
+- BUTTON |  | global-header-desktop-top-trigger-2 |  | Vergoedingen | 
+- BUTTON |  | global-header-desktop-top-trigger-3 |  | Zorg regelen | 
+- BUTTON |  | global-header-desktop-top-trigger-4 |  | Betalen | 
+- BUTTON |  | global-header-desktop-top-trigger-5 |  | Gezonder leven | 
+- BUTTON |  | global-header-desktop-top-trigger-6 |  | Over ons | 
+- BUTTON |  | global-header-desktop-top-trigger-7 |  | Contact | 
+- BUTTON |  | zorgzoeker-change-search |  | Wijzig zoekopdracht | 
+- LABEL |  | Basisverzekering-label |  | Basisverzekering 
+Informatie weergeven
 
-<link rel="preload" href="/assets/zilverenkruis/fonts/pt-sans-web-regular-latin.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="preload" href="/assets/zilverenkruis/fonts/montserrat-v26-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="preload" href="/assets/zilverenkruis/fonts/montserrat-v26-latin-ext-500.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="preload" href="/assets/zilverenkruis/fonts/montserrat-v26-latin-ext-600.woff2" as="font" type="font/woff2" crossorigin="">
-
-<link rel="shortcut icon" href="/assets/zilverenkruis/img/favicon/favicon.ico" id="favicon">
-<link rel="icon" href="/assets/zilverenkruis/img/favicon/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/zilverenkruis/img/touchicon/apple-touch-icon.png">
-<link rel="manifest" href="/assets/zilverenkruis/img/touchicon/site.webmanifest">
-
-<link href="/assets/zilverenkruis/css/zilverenkruis.css?v=F57UaKnXMRT_B5ATxat-Wg2" rel="stylesheet">
-<link href="/assets/_shared/coveo/coveofullsearch.css?v=crGOjoGAtzxI29GdH4APwA2" rel="stylesheet">
-<link href="/assets/_shared/coveo/coveoforsitecore.css?v=L83jJJFSyjgTH70aKOFfyQ2" rel="stylesheet">
-<link href="/assets/common/js/vue/main.css?v=h-zIojkmV-zl0jGr0-pjxg2" rel="stylesheet">
-
-
-    <script nonce="" async="" type="text/javascript" src="https://tdn.r42tag.com/tags-136/prod?s=sitecore%7Cconsumenten%7Czorgzoeker%7Czoekresultaten&amp;u=https%3A%2F%2Fwww.zilverenkruis.nl%2Fconsumenten%2Fzorgzoeker%2Fzoekresultaten&amp;r=https%3A%2F%2Fwww.zilverenkruis.nl%2Fconsumenten%2Fzorgzoeker&amp;cb=1795618876353"></script><script async="" src="//tdn.r42tag.com/lib/ca-9-achmea-v2.js"></script><script nonce="" type="text/javascript">var BTTFButtonIsActive = true;</script>
-
-<!-- Relay42 scripts start -->
-    <script nonce="">
-        (function (a, d, e, b, f, c, s) {
-            a[b] = a[b] || function () { a[b].q.push(arguments); };
-            a[b].q = []; c = d.createElement(e); c.async = 1; c.src = '//tdn.r42tag.com/lib/' + f + '.js';
-            s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(c, s);
-        })(window, document, 'script', '_st', 'ca-9-achmea-v2');
-
-        _st('setStructurePrefix', 'sitecore');
-        _st('setEnvironment', 'prod');
-    </script>
-        <script nonce="">
-            var path = window.location.pathname;
-            if (path.charAt(0) == '/') path = path.substring(1);
-            var pageStructure = path.split('/').join('|');
-            _st('setPageStructure', pageStructure);
-        </script>
-        <script nonce="">
-            _st('setSiteId', '136');
-        </script>
-    <script nonce="">
-        _st('loadTags');
-    </script>
-<!-- Relay42 scripts end -->
-
-
-    
-
-    <link rel="canonical" href="https://www.zilverenkruis.nl/consumenten/zorgzoeker/zoekresultaten">
-
-
-
-    <meta charset="UTF-8">
-    <meta name="msapplication-config" content="none">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="title" content="Zoekresultaten - Zilveren Kruis">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-            <meta name="robots" content="NOINDEX, NOFOLLOW">
-            <meta name="og:title" content="Zoekresultaten">
-        <meta name="og:description" content="">
-        <meta name="og:url" content="/consumenten/zorgzoeker/zoekresultaten">
-
-
-
-
-
-    
-
-    <script src="/assets/common/js/jquery/dist/jquery-3.5.1.min.js?v=thqm4taNIbNUa1tBi_Dpww2"></script>
-
-    
-    
-
-<style nonce="" id="achmea-r42-csp-b
-~~~
+Kies je basisverzeke | 
+- BUTTON |  | popover-Basisverzekering-trigger |  | Informatie weergeven | 
+- BUTTON | combobox | Basisverzekering-button |  | Kies uw basisverzekering | 
+- LABEL |  | zorgzoeker-jaar |  | Jaar | 
+- INPUT |  | zorgzoeker-jaar-2025 | zorgzoeker-jaar | 2025 | 
+- LABEL |  |  |  | 2025 | 
+- INPUT |  | zorgzoeker-jaar-2026 | zorgzoeker-jaar | 2026 | 
+- LABEL |  |  |  | 2026 | 
+- INPUT |  | zorgzoeker-jaar-2027 | zorgzoeker-jaar | 2027 | 
+- LABEL |  |  |  | 2027 | 
+- INPUT |  | status_gecontracteerd | zorgzoeker-contractstatus | Contract: vergoed | 
+- LABEL |  |  |  | Contract: vergoed | 
+- INPUT |  | status_in_onderhandeling | zorgzoeker-contractstatus | Nog geen contract: wel vergoed | 
+- LABEL |  |  |  | Nog geen contract: wel vergoed | 
+- INPUT |  | status_in_onderhandeling | zorgzoeker-contractstatus | Nog geen contract: een deel niet vergoed | 
+- LABEL |  |  |  | Nog geen contract: een deel niet vergoed | 
+- INPUT |  | status_vervallen | zorgzoeker-contractstatus | Geen contract: een deel niet vergoed | 
+- LABEL |  |  |  | Geen contract: een deel niet vergoed | 
+- LABEL |  | select-Basisverzekering-label |  | Je basisverzekering | 
+- BUTTON | combobox | select-Basisverzekering-button |  | Selecteer | 
+- BUTTON |  |  |  | Klaar | 
+- BUTTON |  | buttonJa |  | Ja | 
+- BUTTON |  | buttonNee |  | Nee | 
 
 
 - na zoeken: https://www.zilverenkruis.nl/consumenten/zorgzoeker/zoekresultaten

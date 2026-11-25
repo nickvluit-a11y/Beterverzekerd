@@ -39,7 +39,7 @@ Scripts:
 ## VGZ
 
 - URL: https://www.vgz.nl/zorg-regelen/zorgzoeker
-- status: 200, eind-URL: https://www.vgz.nl/zorg-regelen/zorgzoeker, 194,839 tekens HTML
+- status: 200, eind-URL: https://www.vgz.nl/zorg-regelen/zorgzoeker, 194,837 tekens HTML
 - zichtbare tekst (begin): Zorgzoeker VGZ | Vind een zorgverlener bij jou in de buurt - VGZ Werkgevers Zorgaanbieders Bewindvoerders English Zorgverzekering Verzekerd bij VGZ Zorgverzekeringen Zorgverzekeringen Informatie over Alle zorgverzekeringen Basisverzekeringen Aanvullende verzekeringen Tandartsverzekeringen Collectieve verzekeringen Direct regelen Mijn zorgverzekering Zorgverzekering aanvragen Verzekering aanpassen 
 
 Mogelijke data-endpoints:
