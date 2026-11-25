@@ -24,7 +24,7 @@ from pipeline.db_queries import indicator_profile, indicator_trend, latest_judge
 from pipeline.geo import clean_postcode, geocode_postcode  # noqa: E402
 from pipeline.quality import domain_highlights  # noqa: E402
 from pipeline.reference import labels, procedures  # noqa: E402
-from pipeline.score import attach_organisation, contract_for, hospitals_within, load_contracts  # noqa: E402
+from pipeline.score import attach_organisation, contract_for, hospitals_within, load_contracts, load_policies, policy_overview  # noqa: E402
 
 def display_name(row) -> str:
     """'annatommie mc - voor orthopedie - Utrecht' + 'UTRECHT' -> 'Annatommie mc - voor orthopedie - Utrecht'."""
@@ -84,6 +84,13 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .chip.ok { background: #f0fdf4; color: #166534; } .chip.no { background: #fef2f2; color: #991b1b; }
 .chip.wait { background: #fffbeb; color: #92400e; }
 .note { color: #64748b; font-size: .85rem; }
+.insurers { margin: 4px 0 14px 0; }
+.insurer { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; padding: 8px 12px; border: 1px solid #e2e8f0;
+           border-radius: 10px; margin: 6px 0; background: #fff; }
+.insurer.mine { border-color: #0f766e; box-shadow: 0 0 0 2px #ccfbf1; }
+.insurer .iname { font-weight: 600; min-width: 260px; color: #0f172a; }
+.insurer .meta { font-weight: 400; font-size: .82rem; color: #64748b; }
+.chip.big { font-size: .9rem; padding: 3px 10px; font-weight: 600; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -111,14 +118,23 @@ con = database()
 procs = procedures()
 
 st.markdown('<div class="hero"><h1>Beterverzekerd</h1>'
-            '<p>Welke ziekenhuizen bij jou in de buurt zijn aantoonbaar beter voor jouw ingreep, '
+            '<p>Welke ziekenhuizen bij jou in de buurt scoren beter voor jouw ingreep, '
             'en kun je daar terecht met je zorgverzekering?</p></div>', unsafe_allow_html=True)
 
+ALL_INSURERS = "Alle verzekeraars vergelijken"
+BRAND = {"Achmea": "Zilveren Kruis", "Eucare": "Aevitae"}  # the name consumers know
+
+
+def insurer_name(concern: str) -> str:
+    brand = BRAND.get(concern)
+    return f"{brand} ({concern})" if brand else concern
 with st.form("zoek", border=False):
     c1, c2, c3 = st.columns([1.2, 1.6, 1])
     postcode = c1.text_input("Postcode", value="3584 CX")
     proc_name = c2.selectbox("Ingreep", procs["name_nl"].tolist())
     radius = c3.selectbox("Afstand", [10, 25, 50, 100], index=1, format_func=lambda km: f"{km} km")
+    insurer = st.selectbox("Jouw zorgverzekeraar", [ALL_INSURERS] + list(dict.fromkeys(labels()["concern"])),
+                           format_func=lambda c: c if c == ALL_INSURERS else insurer_name(c))
     submitted = st.form_submit_button("Zoek ziekenhuizen", type="primary", width="stretch")
 
 if submitted:
@@ -131,7 +147,7 @@ if submitted:
         st.session_state.pop("search", None)
         st.error("Deze postcode konden we niet vinden. Probeer bijvoorbeeld 3584 CX.")
     else:
-        st.session_state["search"] = {"coords": coords, "radius": radius, "proc_name": proc_name,
+        st.session_state["search"] = {"coords": coords, "radius": radius, "proc_name": proc_name, "insurer": insurer,
                                       "procedure_id": procs.loc[procs["name_nl"] == proc_name, "procedure_id"].iloc[0]}
 
 search = st.session_state.get("search")
@@ -153,7 +169,7 @@ if search:
     else:
         counts = near["quality_verdict"].value_counts()
         st.markdown(f"**{len(near)} ziekenhuizen** binnen {search['radius']} km doen een {search['proc_name'].lower()}. "
-                    f"**{counts.get('boven_gemiddeld', 0)}** daarvan scoren aantoonbaar beter dan gemiddeld.")
+                    f"**{counts.get('boven_gemiddeld', 0)}** daarvan scoren beter dan gemiddeld.")
 
         points = near.assign(color=near["quality_verdict"].map(lambda v: BADGES[v][2]),
                              label=near["display_name"] + " · " + near["quality_verdict"].map(lambda v: BADGES[v][0]))
@@ -168,6 +184,41 @@ if search:
                               get_radius=400, radius_min_pixels=5)],
             tooltip={"text": "{label}"}), height=320)
 
+        # --- compare policies: premium and access to the better hospitals nearby ---------------
+        chosen = search.get("insurer", ALL_INSURERS)
+        n_better = int(counts.get("boven_gemiddeld", 0))
+        if n_better:
+            policies = load_policies(2027)
+            if chosen != ALL_INSURERS:
+                policies = policies[policies["concern"] == chosen]
+            table = policy_overview(near, contracts, policies)
+            what = "het betere ziekenhuis" if n_better == 1 else f"de {n_better} betere ziekenhuizen"
+            st.markdown(f"#### Welke polis vergoedt {what} bij jou in de buurt?")
+
+            def policy_row(r) -> str:
+                premie = f"€ {r.premie:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".") + " p/m" \
+                    if pd.notna(r.premie) else "premie onbekend"
+                kind = {"budget": "budgetpolis", "natura": "naturapolis", "combinatie": "combinatiepolis",
+                        "restitutie": "restitutiepolis"}.get(str(r.polis_type), "")
+                parts = [f'<span class="chip ok">✓ {r.volledig} van {r.betere_ziekenhuizen} volledig vergoed</span>' if r.volledig else "",
+                         f'<span class="chip no">€ {r.deels} deels zelf betalen</span>' if r.deels else "",
+                         f'<span class="chip">? {r.onbekend} nog onbekend</span>' if r.onbekend else ""]
+                return (f'<div class="insurer"><span class="iname">{r.label} – {r.polis}'
+                        f'<br><span class="meta">{premie} · {kind}</span></span>{"".join(parts)}</div>')
+
+            st.markdown('<div class="insurers">' + "".join(policy_row(r) for r in table.head(8).itertuples()) + "</div>",
+                        unsafe_allow_html=True)
+            if len(table) > 8:
+                with st.expander(f"Toon alle {len(table)} polissen"):
+                    st.markdown('<div class="insurers">' + "".join(policy_row(r) for r in table.iloc[8:].itertuples())
+                                + "</div>", unsafe_allow_html=True)
+            unknown_share = table["onbekend"].sum() / max(1, table["betere_ziekenhuizen"].sum())
+            if unknown_share > 0.3:
+                st.caption(f"Let op: bij {unknown_share:.0%} weten we nog niet of je volledig vergoed wordt. Ziekenhuizen en "
+                           "verzekeraars sluiten hun contracten tussen november en januari; we werken dit bij vanuit hun "
+                           "eigen publicaties. Premies 2027 deels nog niet gecontroleerd.")
+        st.markdown("#### Ziekenhuizen")
+
         has_contracts = not contracts.empty
         for row in near.itertuples():
             text, css, _ = BADGES[row.quality_verdict]
@@ -177,11 +228,17 @@ if search:
             year = f" · cijfers {int(row.verslagjaar)}" if pd.notna(row.verslagjaar) else ""
             found = {c: contract_for(contracts, row.organisatie_agb, c, c) for c in concerns} if has_contracts else {}
             found = {c: r for c, r in found.items() if r}
-            if found:
+            if chosen != ALL_INSURERS:
+                status = (found.get(chosen) or {}).get("status")
+                mark, chip_css = CONTRACT_CHIP.get(status, ("?", ""))
+                label = {"gecontracteerd": "gecontracteerd", "gecontracteerd_met_plafond": "gecontracteerd (met plafond)",
+                         "in_onderhandeling": "in onderhandeling", "geen_contract": "geen contract"}.get(status, "contract nog onbekend")
+                chips_html = f'<div class="chips"><span class="chip big {chip_css}">{insurer_name(chosen)}: {mark} {label}</span></div>'
+            elif found:
                 chips = []
                 for concern in concerns:
                     mark, chip_css = CONTRACT_CHIP.get((found.get(concern) or {}).get("status"), ("?", ""))
-                    chips.append(f'<span class="chip {chip_css}">{concern} {mark}</span>')
+                    chips.append(f'<span class="chip {chip_css}">{BRAND.get(concern, concern)} {mark}</span>')
                 first = next(iter(found.values()))
                 auto = any(not r.get("checked", True) for r in found.values())
                 peildatum = f" · peildatum {first.get('peildatum')}" if isinstance(first.get("peildatum"), str) else ""
@@ -223,9 +280,11 @@ if search:
 
 st.divider()
 st.markdown(
-    '<p class="note"><b>Hoe we kwaliteit beoordelen.</b> We gebruiken de openbare kwaliteitscijfers van Zorginstituut '
-    'Nederland (Zorginzicht). Een ziekenhuis is alleen "beter" of "slechter" als het verschil met het landelijk niveau '
-    'groter is dan de gebruikelijke spreiding tussen ziekenhuizen. Kleine verschillen tellen niet. Alleen heroperaties '
-    'zijn gecorrigeerd voor patiëntkenmerken; academische centra behandelen vaker complexe patiënten. '
-    'Geen ranglijst, geen medisch of financieel advies. Contractstatus is geen garantie op toegang.</p>',
+    '<p class="note"><b>Hoe komen we hiertoe?</b> We gebruiken de officiële kwaliteitscijfers die ziekenhuizen '
+    'elk jaar aan de overheid geven: bijvoorbeeld hoe vaak een nieuwe heup opnieuw geopereerd moet worden, hoe vaak '
+    'er een infectie optreedt en hoe patiënten zelf hun herstel beoordelen.<br>'
+    '<b>Beter dan gemiddeld</b>: op minstens één belangrijk punt duidelijk beter dan de meeste ziekenhuizen, en nergens '
+    'duidelijk slechter. <b>Slechter dan gemiddeld</b> zeggen we alleen als het verschil heel duidelijk is. '
+    'Universitaire ziekenhuizen behandelen vaker moeilijke gevallen; houd daar rekening mee.<br>'
+    'Geen medisch of financieel advies. Een contract is geen garantie dat je terecht kunt: vraag het je verzekeraar.</p>',
     unsafe_allow_html=True)

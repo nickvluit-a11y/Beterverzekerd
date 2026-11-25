@@ -35,7 +35,11 @@ import pandas as pd
 
 from pipeline.reference import MANUAL
 
-Z = 1.96  # 95%
+Z = 1.96  # 95%: confidence intervals shown to users
+# Asymmetric evidence thresholds (owner's choice): a positive signal needs less certainty than
+# calling a named hospital worse, because a wrong 'slechter' does more harm.
+Z_BETTER = 1.2816  # 80% two-sided
+Z_WORSE = 1.96     # 95% two-sided
 VERDICTS = ["boven_gemiddeld", "gemiddeld", "gemengd", "onder_gemiddeld", "geen_data"]
 MIN_UNITS_FOR_TAU = 10      # hospitals needed to estimate the between-hospital variance
 MIN_PROM_RESPONSE = 50.0    # % pre-operative PROM response needed to judge PROM results
@@ -45,7 +49,7 @@ PLAUSIBLE_CHANGE = {        # largest possible change per PROM scale
     "eq-5d index": 1.6, "eq-5d thermometer": 100, "nrs-pijn": 10, "ohs": 48, "oks": 48,
 }
 _SCALES = ["EQ-5D index", "EQ-5D thermometer", "OHS", "OKS", "NRS-pijn rust", "NRS-pijn activiteit", "CatQuest"]
-_DISEASE_SPECIFIC = ("OHS", "OKS")
+_DISEASE_SPECIFIC = ("functie van de heup", "functie van de knie")
 
 
 # --- rules ------------------------------------------------------------------------------------
@@ -120,11 +124,13 @@ def funnel_verdicts(y: pd.Series, se: pd.Series, reference: float, direction: st
         tau2 = max(0.0, (n * phi - (n - 1)) / (w.sum() - (w ** 2).sum() / w.sum()))
     else:
         tau2 = 0.0  # the spread between hospitals cannot be estimated from a handful
-    limit = Z * (se ** 2 + tau2) ** 0.5
+    spread = (se ** 2 + tau2) ** 0.5
     higher_is_better = direction == "higher_better"
+    z_up = Z_BETTER if higher_is_better else Z_WORSE      # threshold for a value above the reference
+    z_down = Z_WORSE if higher_is_better else Z_BETTER    # threshold for a value below it
     out[ok] = "gemiddeld"
-    out[(y > reference + limit)[lambda s: s].index] = "beter" if higher_is_better else "slechter"
-    out[(y < reference - limit)[lambda s: s].index] = "slechter" if higher_is_better else "beter"
+    out[(y > reference + z_up * spread)[lambda s: s].index] = "beter" if higher_is_better else "slechter"
+    out[(y < reference - z_down * spread)[lambda s: s].index] = "slechter" if higher_is_better else "beter"
     return out
 
 
@@ -185,15 +191,24 @@ def scale_of(name: str) -> str | None:
     return next((s for s in _SCALES if s.lower() in name.lower()), None)
 
 
+_PLAIN_SCALE = {  # what each patient questionnaire measures, in plain words
+    "EQ-5D index": "algemene gezondheid", "EQ-5D thermometer": "eigen gezondheidscijfer",
+    "OHS": "functie van de heup", "OKS": "functie van de knie",
+    "NRS-pijn rust": "pijn in rust", "NRS-pijn activiteit": "pijn bij bewegen", "CatQuest": "zien in het dagelijks leven",
+}
+
+
 def interval_label(name: str) -> str:
+    """Plain-language label. Domain matching (DOMAINS) relies on 'revisie' / 'verbetering volgens patiënt'."""
     low, scale = name.lower(), scale_of(name)
+    plain = _PLAIN_SCALE.get(scale, "door patiënt gemeld")
     if "revisie" in low:
         horizon = re.search(r"binnen (\w+) jaar", name, re.IGNORECASE)
-        return f"Revisie binnen {horizon.group(1) if horizon else '?'} jaar (gecorrigeerd)"
+        return f"Heroperatie (revisie) binnen {horizon.group(1) if horizon else '?'} jaar"
     if "preoperatieve" in low or "preoperatievescore" in low:
-        return f"Score vóór de operatie: {scale or 'PROM'}"
+        return f"Vóór de operatie: {plain}"
     months = re.search(r"(\d+) maanden", name)
-    return f"Verbetering volgens patiënt na {months.group(1) if months else '?'} mnd: {scale or 'PROM'}"
+    return f"Verbetering volgens patiënt na {months.group(1) if months else '?'} maanden: {plain}"
 
 
 def interval_kind(name: str) -> str | None:
