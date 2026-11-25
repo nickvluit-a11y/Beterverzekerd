@@ -56,14 +56,26 @@ Kies je basisverzeke |
 - BUTTON |  | buttonJa |  | Ja | 
 - BUTTON |  | buttonNee |  | Nee | 
 
+- opties onder #select-Basisverzekering-button: Basis Exclusief; Basis Start; Basis Start (voorheen Basis Budget); Basis Zeker; ZieZo Basis
+- gekozen: Basis Zeker
 
 - na zoeken: https://www.zilverenkruis.nl/consumenten/zorgzoeker/zoekresultaten
-- zichtbare tekst: 1,523 tekens
-- JSON-antwoorden voor/na zoeken: 0/5
+- zichtbare tekst: 2,539 tekens
+- JSON-antwoorden voor/na zoeken: 0/6
 
 ## JSON-antwoorden na het zoeken (grootste eerst)
 
 Volledige data van de grootste aanroep: finder_browser_zilveren_kruis.json
+
+### POST 200 https://www.zilverenkruis.nl/clientcontroller/zorgzoekerclient/getzorgaanbieders (69,290 tekens)
+
+Verzonden:
+```
+{"Zorgtype":"1861","LocatieId":"194117","Basisverzekering":"100","Peildatum":"2027-01-01T00:00:00.000Z"}
+```
+```
+{"AantalResultaten":75,"Tussenvragen":["vraag polistype"],"Zoektermen":{"Locatie":null,"LocatieId":194117,"Instelling":"","Zorgtype":"1861","Peildatum":"2027-01-01T00:00:00Z","Basisverzekering":"100"},"VertrekLocatieLatitude":52.08602049,"VertrekLocatieLongitude":5.17960178,"Resultaten":[{"Contracten":[{"StatusOmschrijving":"Nog geen contract: een deel niet vergoed","Zorgtype":"","Toelichting":"Nog geen contract: een deel niet vergoed","TypeLocatie":2,"Begindatum":"2027-01-01T00:00:00Z","Einddatum":"2027-12-31T00:00:00Z","TypeContractVergoeding":"GedeeltelijkVergoed","Uitsluitingen":null,"Insluitingen":null,"Kenmerken":null,"Patientenstop":"","IsPlafondafspraakAanwezig":true,"IsPlafondafspraakBereikt":false,"RelativeURL":""}],"Meldingen":null,"IsChristelijk":false,"IsPluspraktijk":false,"RelativeURL":"/umc-utrecht-loc-azu-3584cx/ae5b583a-31c9-4f27-9abf-c2391cb72d17","Naam":"UMC Utrecht, loc. AZU","AGBNummer":6020602,"LocatieId":"ae5b583a-31c9-4f27-9abf-c2391cb72d17","Website":"http://www.umcutrecht.nl","Adres":{"Straat":"HEIDELBERGLN","Postcode":"3584CX","Huisnummer":"100","Plaats":"UTRECHT","Land":"","Afstand":"","Latitude":52.08602049,"Longitude":5.17960178}},{"Contracten":[{"StatusOmschrijving":"Nog geen contract: een deel niet vergoed","Zorgtype":"","Toelichting":"Nog geen contract: een deel niet vergoed","TypeLocatie":2,"Begindatum":"2027-01-01T00:00:00Z","Einddatum":"2027-12-31T00:00:00Z","TypeContractVergoeding":"GedeeltelijkVergoed","Uitsluitingen":null,"Insluitingen":null,"Kenmerken":null,"Patientenstop":"","IsPlafondafspraakAanwezig":true,"IsPlafondafspraakBereikt":false,"RelativeURL":""}],"Meldingen":null,"IsChristelijk":false,"IsPluspraktijk":false,"RelativeURL":"/umc-utrecht-loc-wilhelmina-kinderziekenhuis-wkz-3584ea/e688b8d3-3458-49e8-bf79-184dcb14d6d3","Naam":"UMC Utrecht, loc. Wilhelmina Kinderziekenhuis (WKZ)","AGBNummer":6020602,"LocatieId":"e688b8d3-3458-49e8-bf79-184dcb14d6d3","Website":"http://www.umcutrecht.nl","Adres":{"Straat":"LUNDLN","Postcode":"3584EA","Huisnummer":"6","Plaats":"UTRECHT","Land":"","Afstand":"0,4 km","Latitude":52.08942212,"Longitude":5.18097449}},{"Contracten":[{"StatusOmschrijving":"Contract: vergoed","Zorgtype":"","Toelichting":"Contract: vergoed","TypeLocatie":2,"Begindatum":"2026-01-01T00:00:00Z","Einddatum":"2028-12-31T00:00:00Z","TypeContractVergoeding":"Vergoed","Uitsluitingen":null,"Insluitingen":null,"Kenmerken":null,"Patientenstop":"","IsPlafondafspraakAanwezig":false,"IsPlafondafspraakBereikt":false,"RelativeURL":""}],"Meldingen":null,"IsChristelijk":false,"IsPluspraktijk":false,"RelativeURL":"/prinses-maxima-centrum-voor-kinderoncologie-3584cs/d76e6580-2945-4a09-b6e8-fe0ea93f497b","Naam":"Prinses Maxima Centrum voor Kinderoncologie","AGBNummer":6080801,"LocatieId":"d76e6580-2945-4a09-b6e8-fe0ea93f497b","Website":"http://www.prinsesmaximacentrum.nl/","Adres":{"Straat":"HEIDELBERGLN","Postcode":"3584CS","Huisnummer":"25","Plaats":"UTRECHT","Land":"","Afstand":"0,5 km","Latitude":52.08988376,"L
+```
 
 ### GET 200 https://www.zilverenkruis.nl/clientcontroller/zorgzoekerclient/getcontractstatusexplanations (3,923 tekens)
 

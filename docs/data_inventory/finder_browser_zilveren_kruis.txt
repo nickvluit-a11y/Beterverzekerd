@@ -28,7 +28,7 @@ Informatie weergeven
 
 Kies je basisverzekering om te zien of we afspraken hebben met deze zorgverlener.
 
-Kies uw basisverzekering
+Basis Zeker 
 Jaar
 Jaar
 
@@ -43,19 +43,58 @@ Contract: vergoed
 Nog geen contract: wel vergoed
 Nog geen contract: een deel niet vergoed
 Geen contract: een deel niet vergoed
-0 resultaten
-
-Er zijn geen zoekresultaten gevonden. Pas je filters aan.
-
+75 resultaten
+UMC Utrecht, loc. AZU
+HEIDELBERGLN100, 3584CXUTRECHT
+Ziekenhuis
+Nog geen contract: een deel niet vergoed
+UMC Utrecht, loc. Wilhelmina Kinderziekenhuis (WKZ)
+LUNDLN6, 3584EAUTRECHT
+Ziekenhuis
+Nog geen contract: een deel niet vergoed
+0,4 km
+Prinses Maxima Centrum voor Kinderoncologie
+HEIDELBERGLN25, 3584CSUTRECHT
+Ziekenhuis
+Contract: vergoed t/m 2028
+0,5 km
+Diakonessenhuis, loc. Utrecht
+BOSBOOMSTR1, 3582KEUTRECHT
+Ziekenhuis
+Contract: vergoed t/m 2028 met omzetplafond
+2,9 km
+St. Antonius Ziekenhuis, loc. polikliniek Utrecht Overvecht
+NECKARDREEF6, 3562CNUTRECHT
+Ziekenhuis
+Nog geen contract: een deel niet vergoed
+5 km
+Diak Clinic
+JAGERSNGL1, 3707HLZEIST
+Ziekenhuis
+Contract: vergoed t/m 2028 met omzetplafond
+5,7 km
+Diakonessenhuis, loc. Zeist
+JAGERSNGL1, 3707HLZEIST
+Ziekenhuis
+Contract: vergoed t/m 2028 met omzetplafond
+5,7 km
+Liesbreukcentrum Nederland
+JAGERSNGL1, 3707HLZEIST
+Ziekenhuis
+Contract: vergoed t/m 2028 met omzetplafond
+5,7 km
+St. Antonius Ziekenhuis, loc. polikliniek Houten
+HOFSPOOR2, 3994VZHOUTEN
+Ziekenhuis
+Nog geen contract: een deel niet vergoed
+6,8 km
+UMC Utrecht, loc. Alexander Monro Ziekenhuis
+PROF BRONKHORSTLN10, 3723MBBILTHOVEN
+Ziekenhuis
+Nog geen contract: een deel niet vergoed
+7,7 km
+Bekijk meer zoekresultaten
 De informatie in de Zorgzoeker is op 25 november 2026 bijgewerkt.
-Kies je basisverzekering
-
-Dan zie je of we afspraken hebben met de zorgverlener.
-
-Je basisverzekering
-Selecteer
-Er is geen basisverzekering geselecteerd.
-Klaar
 Was dit nuttig?
 Ja Nee
 Onze verzekeringen
