@@ -193,7 +193,7 @@ Zorg en Zekerheid | 7085
 2026,06010304,,Salland,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,Salland (gecontracteerd):
 2026,06010304,,Menzis,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,Menzis (gecontracteerd):
 2026,06010304,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,ONVZ (gecontracteerd):
-2026,06010304,,VGZ,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,VGZ (gecontracteerd):
+2026,06010304,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,VGZ (gecontracteerd):
 2026,06010304,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,Zorg en Zekerheid (gecontracteerd):
 2026,06010304,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,ASR (gecontracteerd):
 2026,06010304,,DSW,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,DSW (gecontracteerd):
@@ -203,7 +203,7 @@ Zorg en Zekerheid | 7085
 2026,06010304,,Salland,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,Salland (gecontracteerd):
 2026,06010304,,Menzis,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,Menzis (gecontracteerd):
 2026,06010304,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,ONVZ (gecontracteerd):
-2026,06010304,,VGZ,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,VGZ (gecontracteerd):
+2026,06010304,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,VGZ (gecontracteerd):
 2026,06010304,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,Zorg en Zekerheid (gecontracteerd):
 2026,06010304,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,ASR (gecontracteerd):
 2026,06010304,,DSW,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-25,True,DSW (gecontracteerd):
@@ -218,57 +218,57 @@ Zorg en Zekerheid | 7085
 2027,06010419,,Eucare,Aevitae,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Eucare', 'Aevitae') | ('Eucare', None) | 2"
 2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', 'Menzis') | ('Menzis', None) | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Zilveren Kruis') | 2"
-2027,06010419,,a.s.r.,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('a.s.r.', None) | ('a.s.r.', None) | 2"
-2027,06010419,,a.s.r.,Ik kies zelf,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('a.s.r.', None) | ('a.s.r.', 'Ik kies zelf') | ('a.s.r.', None) | 2"
-2027,06010419,,Zorg en Zekerheid,AZVZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Zorg en Zekerheid', 'AZVZ') | ('Zorg en Zekerheid', 'Zorg en Zekerheid') | 2"
+2027,06010419,,a.s.r.,a.s.r.,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('a.s.r.', 'a.s.r.') | ('a.s.r.', 'a.s.r.') | 2"
+2027,06010419,,a.s.r.,Ik kies zelf,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('a.s.r.', 'a.s.r.') | ('a.s.r.', 'Ik kies zelf') | ('a.s.r.', 'a.s.r.') | 2"
+2027,06010419,,Zorg en Zekerheid,AZVZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Zorg en Zekerheid', 'AZVZ') | ('Zorg en Zekerheid', None) | 2"
 2027,06010419,,Eucare,Aevitae,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Eucare', 'Aevitae') | ('Eucare', None) | 2"
-2027,06010419,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', None) | 2"
-2027,06010419,,VGZ,Bewuzt,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'Bewuzt') | ('VGZ', None) | 2"
+2027,06010419,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'VGZ') | 2"
+2027,06010419,,VGZ,Bewuzt,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'Bewuzt') | ('VGZ', 'VGZ') | 2"
 2027,06010419,,Eucare,Care4Life,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Eucare', 'Care4Life') | ('Eucare', None) | 2"
 2027,06010419,,CZ,CZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'CZ') | ('CZ', 'CZ') | 2"
 2027,06010419,,CZ,CZdirect,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'CZdirect') | ('CZ', 'CZ') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'De christelijke zorgverzekeraar') | ('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'De christelijke zorgverzekeraar') | ('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'De Friesland') | ('Achmea', 'Zilveren Kruis') | 2"
-2027,06010419,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', None) | 2"
+2027,06010419,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'VGZ') | 2"
 2027,06010419,,DSW,DSW,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('DSW', 'DSW') | ('DSW', 'DSW') | 2"
 2027,06010419,,Eucare,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Eucare', None) | ('Eucare', None) | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'FBTO') | ('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', None) | 3"
-2027,06010419,,Salland,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Salland', None) | 2"
+2027,06010419,,Salland,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Salland', 'Salland') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Interpolis') | ('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,DSW,DSW,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('DSW', 'DSW') | ('DSW', 'DSW') | 2"
-2027,06010419,,VGZ,IZA,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'IZA') | ('VGZ', None) | 2"
-2027,06010419,,VGZ,IZZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'IZZ') | ('VGZ', None) | 2"
+2027,06010419,,VGZ,IZA,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'IZA') | ('VGZ', 'VGZ') | 2"
+2027,06010419,,VGZ,IZZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'IZZ') | ('VGZ', 'VGZ') | 2"
 2027,06010419,,CZ,Just,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'Just') | ('CZ', 'CZ') | 2"
 2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', None) | ('Menzis', None) | 3"
-2027,06010419,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', None) | 2"
+2027,06010419,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'VGZ') | 2"
 2027,06010419,,CZ,Nationale-Nederlanden,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'Nationale-Nederlanden') | ('CZ', 'CZ') | 2"
 2027,06010419,,CZ,OHRA,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'OHRA') | ('CZ', 'CZ') | 2"
 2027,06010419,,VGZ,ONVZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'ONVZ') | ('VGZ', 'ONVZ') | 2"
 2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', None) | 3"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Zilveren Kruis') | 2"
-2027,06010419,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', None) | 2"
+2027,06010419,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'VGZ') | 2"
 2027,06010419,,CZ,CZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'CZ') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,DSW,DSW,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('DSW', 'DSW') | 2"
-2027,06010419,,Salland,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Salland', None) | ('Salland', None) | 2"
+2027,06010419,,Salland,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Salland', 'Salland') | ('Salland', 'Salland') | 2"
 2027,06010419,,DSW,Stad Holland,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('DSW', 'Stad Holland') | ('DSW', 'DSW') | 2"
 2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', None) | 3"
 2027,06010419,,DSW,DSW,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('DSW', 'DSW') | 2"
-2027,06010419,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', None) | 2"
-2027,06010419,,VGZ,Univé,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'Univé') | ('VGZ', None) | 2"
-2027,06010419,,VGZ,UMC Zorgverzekering,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'UMC Zorgverzekering') | ('VGZ', None) | 2"
+2027,06010419,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'VGZ') | 2"
+2027,06010419,,VGZ,Univé,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'Univé') | ('VGZ', 'VGZ') | 2"
+2027,06010419,,VGZ,UMC Zorgverzekering,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'UMC Zorgverzekering') | ('VGZ', 'VGZ') | 2"
 2027,06010419,,Menzis,VinkVink,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', 'VinkVink') | ('Menzis', None) | 3"
-2027,06010419,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', None) | ('VGZ', None) | 2"
+2027,06010419,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'VGZ') | ('VGZ', 'VGZ') | 2"
 2027,06010419,,VGZ,ONVZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'ONVZ') | 2"
-2027,06010419,,VGZ,Univé,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'Univé') | ('VGZ', None) | 2"
+2027,06010419,,VGZ,Univé,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'Univé') | ('VGZ', 'VGZ') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'ZieZo') | ('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Zilveren Kruis') | ('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Zilveren Kruis') | ('Achmea', 'Zilveren Kruis') | 2"
 2027,06010620,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Zilveren Kruis In onderhandeling In onderhandeling
-2027,06010620,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,VGZ In onderhandeling In onderhandeling
+2027,06010620,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,VGZ In onderhandeling In onderhandeling
 2027,06010620,,CZ,,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,CZ In onderhandeling In onderhandeling
 2027,06010620,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Menzis In onderhandeling In onderhandeling
 2027,06010620,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Zorg en Zekerheid Gecontracteerd Gecontracteerd
@@ -277,7 +277,7 @@ Zorg en Zekerheid | 7085
 2027,06010620,,Eucare,Aevitae,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Caresq Gecontracteerd In onderhandeling
 2027,06010620,,Salland,,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Salland In onderhandeling Gecontracteerd
 2027,06010620,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Zilveren Kruis Gecontracteerd Gecontracteerd
-2027,06010620,,VGZ,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,VGZ Gecontracteerd Gecontracteerd
+2027,06010620,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,VGZ Gecontracteerd Gecontracteerd
 2027,06010620,,CZ,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,CZ Gecontracteerd Gecontracteerd
 2027,06010620,,Menzis,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Menzis Gecontracteerd Gecontracteerd
 2027,06010620,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Zorg en Zekerheid Gecontracteerd Gecontracteerd
@@ -287,7 +287,7 @@ Zorg en Zekerheid | 7085
 2027,06010620,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Caresq Gecontracteerd Gecontracteerd
 2027,06010620,,Salland,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Salland Gecontracteerd Gecontracteerd
 2027,06010620,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Zilveren Kruis Gecontracteerd Gecontracteerd
-2027,06010620,,VGZ,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,VGZ Gecontracteerd Gecontracteerd
+2027,06010620,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,VGZ Gecontracteerd Gecontracteerd
 2027,06010620,,CZ,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,CZ Gecontracteerd Gecontracteerd
 2027,06010620,,Menzis,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Menzis Gecontracteerd Gecontracteerd
 2027,06010620,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-25,True,Zorg en Zekerheid Gecontracteerd Gecontracteerd
@@ -348,10 +348,10 @@ Zorg en Zekerheid | 7085
 2025,06010702,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-25,True,Zorg en Zekerheid | Zorg en Zekerheid | Ja
 2025,06010702,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-25,True,Eucare | Aevitae | Ja
 2025,06010702,,Salland,,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-25,True,Eno | Salland | Ja
-2026,06010755,,Achmea,Zilveren Kruis,,onbekend,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-25,True,Zilveren Kruis | In onderhandeling | Gecontracteerd
-2026,06010755,,CZ,,,onbekend,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-25,True,CZ | In onderhandeling | Gecontracteerd
+2026,06010755,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-25,True,Zilveren Kruis | In onderhandeling | Gecontracteerd
+2026,06010755,,CZ,,,in_onderhandeling,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-25,True,CZ | In onderhandeling | Gecontracteerd
 2026,06010755,,Menzis,,,gecontracteerd,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-25,True,Menzis | Gecontracteerd | Gecontracteerd
-2026,06010755,,a.s.r.,,,onbekend,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-25,True,ASR | Gecontracteerd | In onderhandeling
+2026,06010755,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-25,True,ASR | Gecontracteerd | In onderhandeling
 2026,06010755,,Salland,,,in_onderhandeling,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-25,True,Salland | In onderhandeling | In onderhandeling
 2026,06010859,,VGZ,ONVZ,ONVZ (3343),gecontracteerd,,,contracts_pdf,https://www.asz.nl/patienten/Zorgkosten/zorgverzekering/contracten-2026-svz.pdf,2026-11-25,True,ONVZ |  | ONVZ (3343) |  | gecontracteerd
 2026,06010859,,a.s.r.,,,gecontracteerd,,,contracts_pdf,https://www.asz.nl/patienten/Zorgkosten/zorgverzekering/contracten-2026-svz.pdf,2026-11-25,True,a.s.r. a.s.r. (9018) gecontracteerd
@@ -388,7 +388,7 @@ Delta Lloyd en OHRA | 9664 | Geen Contract | Contract | Contract"
 2026,06010865,,VGZ,ONVZ,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,ONVZ Ziektekostenverzekeraar 3343 Geen Contract Geen Contract Contract
 2026,06010865,,Salland,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,Salland verzekeringen 7032 Geen Contract Geen Contract Geen Contract
 2026,06010865,,Salland,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,Salland Zorgdirect 7032 Geen Contract Geen Contract Geen Contract
-2026,06010865,,VGZ,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,Caresco BV (VGZ) Promovendum 8965 Contract Contract Geen Contract
+2026,06010865,,VGZ,VGZ,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,Caresco BV (VGZ) Promovendum 8965 Contract Contract Geen Contract
 2026,06010865,,Achmea,Zilveren Kruis,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,Basis Budget polis van Zilveren Kruis Geen contract Geen contract Geen contract
 2026,06010865,,Achmea,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,Avéro Achmea Zorg Plan Selectief polis Geen contract Geen contract Geen contract
 2026,06010865,,Achmea,Zilveren Kruis,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,Zilveren Kruis Geen contract Geen contract Geen contract
@@ -403,42 +403,31 @@ Delta Lloyd en OHRA | 9664 | Geen Contract | Contract | Contract"
 2027,06010867,,Zorg en Zekerheid,,AZVZZorg en Zekerheid,in_onderhandeling,,4-11-2026,contracts_html,https://www.franciscus.nl/nieuws/uw-zorgverzekering-in-2027-status-contracten-met-zorgverzekeraars,2026-11-25,True,Zorg en Zekerheid | AZVZZorg en Zekerheid | Nog in onderhandeling
 2027,06011026,,a.s.r.,Ik kies zelf,,onbekend,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-25,True,Ik kies zelf van A.S.R. | Ja | In onderhandeling
 2027,06011026,,CZ,CZdirect,,gecontracteerd,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-25,True,"CZ Direct | Ja, behalve fysio | Ja"
-2027,06011026,,CZ,Just,,gecontracteerd,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-25,True,Just | Ja | Ja
-2027,06011026,,DSW,Stad Holland,,gecontracteerd,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-25,True,Stad Holland | Ja | Ja
-2027,06011026,,Menzis,VinkVink,,gecontracteerd,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-25,True,VinkVink | Ja | Ja
-2027,06011026,,Salland,Salland,,gecontracteerd,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-25,True,Salland Zorgverzekeringen | Ja | Ja
-2027,06011026,,Salland,HollandZorg,,gecontracteerd,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-25,True,HollandZorg | Ja | Ja
 2027,06011026,,VGZ,VGZ,,onbekend,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-25,True,VGZ | Ja | In onderhandeling
 2027,06011026,,VGZ,Bewuzt,,onbekend,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-25,True,Bewuzt | Ja | In onderhandeling
 2027,06011026,,VGZ,UMC Zorgverzekering,,onbekend,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-25,True,UMC Zorgverzekering | Ja | In onderhandeling
 2026,06011033,,DSW,,,geen_contract,,5 december 2025,contracts_html,https://www.amphia.nl/patienten-en-bezoekers/uw-afspraak/kosten-en-verzekering,2026-11-25,True,DSW DSW Geen contract Contract
-2027,06011035,,Achmea,Interpolis,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Interpolis | Ja | Ja | In gesprek | In gesprek
-2027,06011035,,Achmea,FBTO,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,FBTO | Ja | Ja | In gesprek | In gesprek
-2027,06011035,,Achmea,De Friesland,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,De Friesland | Ja | Ja | In gesprek | In gesprek
-2027,06011035,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,a.s.r. | Ja | Ja | Ja | Ja
-2027,06011035,,Eucare,Care4Life,,gecontracteerd,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Care4Life | Ja | Ja | Ja | Ja
-2027,06011035,,CZ,CZ,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,CZ | Ja | Ja | In gesprek | In gesprek
-2027,06011035,,CZ,CZdirect,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,CZ Direct | Ja | Ja | In gesprek | In gesprek
-2027,06011035,,CZ,Just,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Just | Ja | Ja | In gesprek | In gesprek
-2027,06011035,,CZ,Nationale-Nederlanden,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Nationale Nederlanden | Ja | Ja | In gesprek | In gesprek
-2027,06011035,,CZ,OHRA,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,OHRA | Ja | Ja | In gesprek | In gesprek
-2027,06011035,,DSW,Stad Holland,,gecontracteerd,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Stad Holland | Ja | Ja | Ja | Ja
-2027,06011035,,DSW,DSW,,gecontracteerd,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,inTwente | Ja | Ja | Ja | Ja
-2027,06011035,,Menzis,Menzis,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Menzis | Ja | Ja | In gesprek | Ja
-2027,06011035,,Menzis,VinkVink,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,VinkVink | Ja | Ja | In gesprek | Ja
-2027,06011035,,Menzis,Menzis,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Anderzorg | Ja | Ja | In gesprek | Ja
-2027,06011035,,VGZ,ONVZ,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,ONVZ | Ja | Ja | In gesprek | Ja
-2027,06011035,,Salland,Salland,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Salland Zorgverzekeringen | Ja | Ja | In gesprek | Ja
-2027,06011035,,Salland,HollandZorg,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,HollandZorg | Ja | Ja | In gesprek | Ja
-2027,06011035,,VGZ,VGZ,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,VGZ | Ja | Ja | In gesprek | Ja
-2027,06011035,,VGZ,UMC Zorgverzekering,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,UMC | Ja | Ja | In gesprek | Ja
-2027,06011035,,VGZ,IZA,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,IZA | Ja | Ja | In gesprek | Ja
-2027,06011035,,VGZ,Univé,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Univé | Ja | Ja | In gesprek | Ja
-2027,06011035,,VGZ,IZZ,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,IZZ | Ja | Ja | In gesprek | Ja
-2027,06011035,,VGZ,Zorgzaam,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Zorgzaam | Ja | Ja | In gesprek | Ja
-2027,06011035,,VGZ,Univé,,onbekend,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,ZEKUR | Ja | Ja | In gesprek | Ja
-2027,06011035,,Zorg en Zekerheid,Zorg en Zekerheid,,gecontracteerd,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Zorg en Zekerheid | Ja | Ja | Ja | Ja
-2027,06011035,,Zorg en Zekerheid,AZVZ,,gecontracteerd,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,AZVZ | Ja | Ja | Ja | Ja
+2027,06011035,,Achmea,Interpolis,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Interpolis |  |  | In gesprek | In gesprek
+2027,06011035,,Achmea,FBTO,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,FBTO |  |  | In gesprek | In gesprek
+2027,06011035,,Achmea,De Friesland,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,De Friesland |  |  | In gesprek | In gesprek
+2027,06011035,,CZ,CZ,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,CZ |  |  | In gesprek | In gesprek
+2027,06011035,,CZ,CZdirect,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,CZ Direct |  |  | In gesprek | In gesprek
+2027,06011035,,CZ,Just,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Just |  |  | In gesprek | In gesprek
+2027,06011035,,CZ,Nationale-Nederlanden,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Nationale Nederlanden |  |  | In gesprek | In gesprek
+2027,06011035,,CZ,OHRA,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,OHRA |  |  | In gesprek | In gesprek
+2027,06011035,,Menzis,Menzis,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Menzis |  |  | In gesprek | 
+2027,06011035,,Menzis,VinkVink,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,VinkVink |  |  | In gesprek | 
+2027,06011035,,Menzis,Menzis,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Anderzorg |  |  | In gesprek | 
+2027,06011035,,VGZ,ONVZ,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,ONVZ |  |  | In gesprek | 
+2027,06011035,,Salland,Salland,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Salland Zorgverzekeringen |  |  | In gesprek | 
+2027,06011035,,Salland,HollandZorg,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,HollandZorg |  |  | In gesprek | 
+2027,06011035,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,VGZ |  |  | In gesprek | 
+2027,06011035,,VGZ,UMC Zorgverzekering,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,UMC |  |  | In gesprek | 
+2027,06011035,,VGZ,IZA,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,IZA |  |  | In gesprek | 
+2027,06011035,,VGZ,Univé,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Univé |  |  | In gesprek | 
+2027,06011035,,VGZ,IZZ,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,IZZ |  |  | In gesprek | 
+2027,06011035,,VGZ,Zorgzaam,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,Zorgzaam |  |  | In gesprek | 
+2027,06011035,,VGZ,Univé,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-25,True,ZEKUR |  |  | In gesprek | 
 2027,06011036,,a.s.r.,a.s.r.,a.s.r. Zorgzoeker,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-25,True,a.s.r. zorg | ASR | a.s.r. Zorgzoeker | V | V
 2027,06011036,,a.s.r.,Ik kies zelf,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-25,True,Ik kies zelf van a.s.r. | ASR | a.s.r. Zorgzoeker | V | V
 2027,06011036,,Achmea,,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-25,True,Zilveren Kruis  orgverzekeringen N.V. | Achmea | Zilveren Kruis Zorgzoeker | V | X
@@ -473,12 +462,8 @@ Delta Lloyd en OHRA | 9664 | Geen Contract | Contract | Contract"
 2027,06011036,,Zorg en Zekerheid,AZVZ,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-25,True,AZVZ | Zorg en Zekerheid | Zorg en Zekerheid Zorgzoeker | V | V
 2027,06011037,,a.s.r.,,,in_onderhandeling,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-25,True,a.s.r. | Nog in onderhandeling | Contract
 2027,06011037,,Eucare,Aevitae,,in_onderhandeling,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-25,True,Caresq | Nog in onderhandeling | Nog in onderhandeling
-2027,06011037,,CZ,,,in_onderhandeling,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-25,True,CZ | Contract | Nog in onderhandeling
-2027,06011037,,DSW,,,in_onderhandeling,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-25,True,DSW | Contract | Nog in onderhandeling
 2027,06011037,,Menzis,,,in_onderhandeling,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-25,True,Menzis | Nog in onderhandeling | Nog in onderhandeling
-2027,06011037,,VGZ,,,in_onderhandeling,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-25,True,VGZ | Contract | Nog in onderhandeling
 2027,06011037,,Achmea,Zilveren Kruis,,in_onderhandeling,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-25,True,Zilveren Kruis | Nog in onderhandeling | Nog in onderhandeling
-2027,06011037,,Zorg en Zekerheid,,,in_onderhandeling,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-25,True,Zorg en Zekerheid | Contract | Nog in onderhandeling
 2027,06011037,,a.s.r.,,,geen_contract,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-25,True,ASR | – a.s.r. – Ik kies zelf
 2027,06011037,,Eucare,Aevitae,,geen_contract,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-25,True,Caresq | – Aevitae (Eucare) – Care4Life
 2027,06011037,,DSW,,,geen_contract,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-25,True,DSW | – DSW – InTwente – StadHolland
@@ -517,36 +502,6 @@ Delta Lloyd en OHRA | 9664 | Geen Contract | Contract | Contract"
 2027,06011115,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.viecuri.nl/samen-voor-gezondheid/algemeen/contracten-met-zorgverzekeraars-jaarlijks-updaten/,2026-11-25,True,Menzis | In gesprek
 2027,06011115,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.viecuri.nl/samen-voor-gezondheid/algemeen/contracten-met-zorgverzekeraars-jaarlijks-updaten/,2026-11-25,True,VGZ | In gesprek
 2027,06011115,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.viecuri.nl/samen-voor-gezondheid/algemeen/contracten-met-zorgverzekeraars-jaarlijks-updaten/,2026-11-25,True,Zilveren Kruis | In gesprek
-2027,06011118,,CZ,CZ,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,CZ | CZ | ✓ | ✓ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,CZ,CZdirect,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,CZ | Czdirect | ✓ | ✓ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,CZ,Just,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,CZ | Just | ✓ | ✓ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,CZ,Nationale-Nederlanden,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,CZ | Nationale Nederlanden | ✓ | ✓ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,CZ,OHRA,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,CZ | OHRA | ✓ | ✓ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,VGZ,VGZ,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,VGZ | VGZ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,VGZ,VGZ,VGZbewuzt,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,VGZ | VGZbewuzt | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,VGZ,VGZ,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,VGZ | MVJP | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,VGZ,Univé,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,VGZ | Univé | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,VGZ,Univé,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,VGZ | ZEKUR | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,VGZ,UMC Zorgverzekering,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,VGZ | UMC | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,VGZ,IZA,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,VGZ | IZA | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,VGZ,IZZ,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,VGZ | IZZ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,VGZ,Zorgzaam,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,VGZ | Zorgzaam | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,Achmea,Zilveren Kruis,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,Zilveren kruis | Zilveren Kruis | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,Achmea,De christelijke zorgverzekeraar,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,Zilveren kruis | De christelijke zorgverzekeraar | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,Achmea,Interpolis,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,Zilveren kruis | Interpolis | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,Achmea,FBTO,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,Zilveren kruis | FBTO | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,Achmea,De Friesland,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,Zilveren kruis | De Friesland | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,Menzis,Menzis,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,Menzis | Anderzorg | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,Menzis,Menzis,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,Menzis | Menzis | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,Menzis,VinkVink,,geen_contract,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,Menzis | VinkVink | ✗ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,DSW,,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,DSW | DSW | ✓ | ✗ | ✓ | ✗ | ✗ | ✗
-2027,06011118,,DSW,,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,DSW | StadHolland | ✓ | ✗ | ✓ | ✗ | ✗ | ✗
-2027,06011118,,a.s.r.,a.s.r.,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,ASR | a.s.r. | ✓ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,a.s.r.,Ik kies zelf,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,ASR | Ik kies zelf van a.s.r. | ✓ | ✗ | ✗ | ✗ | ✗ | ✗
-2027,06011118,,Zorg en Zekerheid,Zorg en Zekerheid,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,Zorg en Zekerheid | Zorg en Zekerheid | ✓ | ✓ | ✗ | ✓ | ✗ | ✓
-2027,06011118,,Zorg en Zekerheid,AZVZ,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,Zorg en Zekerheid | AZVZ | ✓ | ✓ | ✗ | ✓ | ✗ | ✓
-2027,06011118,,Salland,Salland,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,Salland | Salland | ✗ | ✗ | ✓ | ✗ | ✗ | ✗
-2027,06011118,,Salland,HollandZorg,,onbekend,,12 november 2026,contracts_html,https://zuyderland.nl/contracten-zorgverzekeraars-2027/,2026-11-25,True,Salland | Hollandzorg | ✗ | ✗ | ✓ | ✗ | ✗ | ✗
 2025,06020502,,VGZ,Univé,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-25,True,VGZ | Univé | Gecontracteerd | Partijen hebben overeenstemming voor 2026
 2025,06020502,,VGZ,UMC Zorgverzekering,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-25,True,VGZ | UMC | Gecontracteerd | Partijen hebben overeenstemming voor 2026
 2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-25,True,VGZ | VGZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
@@ -807,7 +762,6 @@ Delta Lloyd en OHRA | 9664 | Geen Contract | Contract | Contract"
 2027,06080701,,Menzis,Menzis,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,Anderzorg In onderhandeling
 2027,06080701,,Salland,,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,Salland Salland In onderhandeling
 2027,06080701,,VGZ,UMC Zorgverzekering,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,UMC In onderhandeling
-2027,06080701,,VGZ,,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,VGZ In onderhandeling
 2027,06080701,,VGZ,Bewuzt,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,VGZ Bewuzt In onderhandeling
 2027,06080701,,VGZ,Zorgzaam,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,"MVJP, Zorgzaam In onderhandeling"
 2027,06080701,,Achmea,De christelijke zorgverzekeraar,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,De Christelijke Zorgverzekeraar Gecontracteerd
