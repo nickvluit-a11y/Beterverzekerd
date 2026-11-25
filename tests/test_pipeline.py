@@ -777,3 +777,22 @@ def test_line_parser_reads_label_tables_without_separators():
     assert ("DSW", None) in got  # only 'DSW' named: concern-wide
     assert len(rows) == 4  # the prose sentence is not a contract row
     assert contracts_parse.find_peildatum(text) == "03-11-2026"
+
+
+def test_legend_coded_overview():
+    text = ("Overzicht zorgverzekeraars en contracten 2027\n0: wij hebben geen contract\n"
+            "1: we hebben aan elkaar een voorstel voor 2027 uitgebracht\n4: we hebben een contract\n"
+            "Merklabel\nZorgverzekeraar\nContract 2027\nContract 2026\n"
+            "Anderzorg\nMenzis\n4\n4\nBewuzt\nVGZ\n1\n4\nOHRA\nCZ\n0\n4\n")
+    got = {(r["concern"], r["label"]): r["status"] for r in contracts_parse.parse_legend(text)}
+    assert got[("VGZ", "Bewuzt")] == "in_onderhandeling"
+    assert got[("CZ", "OHRA")] == "geen_contract"
+    assert any(k[0] == "Menzis" and v == "gecontracteerd" for k, v in got.items())
+
+
+def test_icon_alt_text_is_kept():
+    from scrapers.contracts import html_to_text
+    text = html_to_text('<div>Zilveren Kruis <img src="x.svg" alt="Gecontracteerd"></div><div>CZ <span aria-label="In onderhandeling"></span></div>')
+    assert "Zilveren Kruis  Gecontracteerd" in text.replace("\n", " ") or "Gecontracteerd" in text
+    rows = {r["concern"]: r["status"] for r in contracts_parse.parse_lines(text.replace("\n", " \n"))}
+    assert rows.get("Achmea") == "gecontracteerd" and rows.get("CZ") == "in_onderhandeling"

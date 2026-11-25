@@ -11,11 +11,12 @@ import re
 STATUSES = ["gecontracteerd", "in_onderhandeling", "geen_contract", "onbekend"]
 
 _NEGOTIATING = re.compile(
-    r"onderhandel|in gesprek|\(?nog\)? geen contract|nog niet gecontracteerd|contract volgt|nog niet bekend|nog niet rond")
+    r"onderhandel|in gesprek|\(?nog\)? geen contract|nog niet gecontracteerd|contract volgt|nog niet bekend|nog niet rond"
+    r"|voorstel|vooruitgang|lopen nog|gesprekken")
 _NEGATIVE = re.compile(r"niet gecontracteerd|ongecontracteerd|geen contract|opgezegd|beeindigd|beëindigd")
 _POSITIVE = re.compile(
     r"(?<!niet )(?<!on)gecontracteerd|(?<!geen )contract afgesloten|heeft contract|met contract|wel contract"
-    r"|contract getekend|contract rond|contract \d{4} rond|akkoord")
+    r"|contract getekend|contract rond|contract \d{4} rond|akkoord|hebben (?:een )?contract|contract hebben")
 _EXCEPTION = re.compile(r"m\.? ?u\.? ?v\.?|behalve|uitgezonderd|uitzondering|\bwel voor\b")
 _YES = {"ja", "j", "v", "x", "✓", "✔", "yes"}
 _NO = {"nee", "n", "-", "–", "✗", "✘", "no"}

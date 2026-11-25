@@ -185,6 +185,38 @@ def parse_lines(text: str) -> list[dict]:
     return _concern_level(rows)
 
 
+_LEGEND = re.compile(r"^\s*(\d)\s*[:=–-]\s*(.{3,120})$")
+
+
+def parse_legend(text: str) -> list[dict]:
+    """Overviews that code the status as a digit with a legend, e.g. '4: we hebben een contract',
+    '0: wij hebben geen contract', followed by rows 'label / concern / 2 / 4' on separate lines.
+    The first digit after a label belongs to the first (newest) status column."""
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    legend = {}
+    for line in lines:
+        match = _LEGEND.match(line)
+        if match:
+            status = status_from_text(match.group(2))
+            if status != "onbekend":
+                legend[match.group(1)] = status
+    if len(legend) < 2:
+        return []
+    rows, pending = [], []
+    for line in lines:
+        if line in legend:
+            if pending:
+                specific = [n for n in pending if n[1] and n[1] != n[0]]
+                hit = (specific or pending)[-1]
+                rows.append(_row(hit, legend[line], None, " | ".join(map(str, pending)) + f" | {line}"))
+                pending = []
+            continue
+        if _LEGEND.match(line) or len(line.split()) > MAX_LINE_WORDS:
+            continue
+        pending += find_labels(line)
+    return _concern_level(rows)
+
+
 def line_tables(text: str) -> list[list[list[str]]]:
     """Fallback for text without tables: every line becomes its own one-row table, split on
     ':', '|', dashes, tabs or wide gaps. No header semantics carry over between lines."""
@@ -199,7 +231,7 @@ def line_tables(text: str) -> list[list[list[str]]]:
 def parse_source(tables: list, text: str) -> list[dict]:
     """Rows from tables, plus rows from text lines for labels the tables missed."""
     parsed = parse_tables(tables)
-    for extra in (parse_lines(text), parse_tables(line_tables(text))):
+    for extra in (parse_legend(text), parse_lines(text), parse_tables(line_tables(text))):
         seen = {(r["concern"], r["label"]) for r in parsed}
         parsed += [r for r in extra if (r["concern"], r["label"]) not in seen]
     return parsed
