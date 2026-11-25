@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import re
 import sys
-import urllib.robotparser
 from urllib.parse import urlparse
 
 from scrapers.common import ROOT, USER_AGENT, today
@@ -34,13 +33,10 @@ OUT = ROOT / "docs" / "data_inventory"
 
 
 def allowed(url: str) -> bool:
-    parts = urlparse(url)
-    robots = urllib.robotparser.RobotFileParser(f"{parts.scheme}://{parts.netloc}/robots.txt")
-    try:
-        robots.read()
-    except Exception:
-        return True
-    return robots.can_fetch(USER_AGENT, url)
+    """robots.txt read with our own User-Agent, the same way the scrapers do (PoliteSession):
+    Python's default reader is refused by some sites (403) and then treats everything as disallowed."""
+    from scrapers.common import PoliteSession
+    return PoliteSession()._allowed(url)
 
 
 def refuse_cookies(page) -> None:
