@@ -1025,3 +1025,14 @@ def test_vgz_finder_parse_and_link_by_agb():
     orgs = per_organisation(matched).set_index("organisatie_agb")
     assert orgs.loc["06020602", "status"] == "in_onderhandeling"  # the satellite's 'no contract' does not decide
     assert orgs.loc["00000000-3528AH", "status"] == "gecontracteerd"
+
+
+def test_menzis_finder_parse():
+    from scrapers.menzis_zorgvinder import parse
+    item = {"naamVestiging": "UMC Utrecht, loc. AZU", "agbCode": "06020602", "postcode": "3584 CX", "straat": "Heidelberglaan",
+            "huisnummer": "100", "plaats": "Utrecht",
+            "pakketten": [{"jaar": 2026, "contractStatus": "GECONTRACTEERD"},
+                          {"jaar": 2027, "contractStatus": "GEEN_CONTRACT_WEL_VERGOED", "omzetplafond": "ONBEKEND"}]}
+    row = parse(item)
+    assert row["status"] == "vergoed_als_contract" and row["postcode"] == "3584CX" and row["omzetplafond"] is False
+    assert parse(dict(item, pakketten=[{"jaar": 2027, "contractStatus": "IETS_ANDERS"}])) is None
