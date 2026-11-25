@@ -22,6 +22,7 @@ Vind een zorgverlener
 Bekijk met welke zorgverleners we afspraken hebben. Kies de zorg die je nodig hebt en vul je postcode in. Of zoek op naam van de organisatie of zorgverlener.
 
 Welke zorg *
+Invoerveld leegmaken
 Plaats of postcode 
 Informatie weergeven
 Plaats of postcode

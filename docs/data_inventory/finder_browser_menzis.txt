@@ -1,96 +1,166 @@
-source: https://www.menzis.nl/zorg-en-vergoedingen/de-zorgvinder
+source: https://zorgvinder.menzis.nl/?search=zorgaanbieder&zoektermSearch=ziekenhuis%20%2F%20zbc&zoektermType=SPECIALISME&specialismId=220906197&afstand=35&postcode=3584CX
 
-Links voor snelle navigatie
-Ga naar de content
-Voor consumenten
+Ga naar de inhoud
+terug naar: Menzis
+Zorgvinder
+Eenvoudig en snel gecontracteerde zorgaanbieders vinden en vergelijken.
+Welke zorg of zorgaanbieder zoek je?
+Selectie leegmaken
+Waar zoek je deze zorg?
+Selectie leegmaken
+Maximale afstand
+5 km
+10 km
+20 km
+35 km
+50 km
+75 km
+Heel NL
+Leegmaken
 Zoeken
+Hulp nodig?
 
-Zoek binnen menzis.nl
+Heb je vragen over een ziekte of behandeling, het kiezen van een zorgaanbieder of wachttijdbemiddeling? Neem contact op met onze zorgadviseurs.
 
-Ik zoek
-Zoeken
-Zoeken
+194 Zorgaanbieders
+Toon alleen zorgaanbieders met contract of vergoed als contract
+Toon beschikbare zorg in jaar
+2026
+2027
+Weergave
+Lijst
+Kaart
+Sorteer op
+Afstand
+Naam
+UMC Utrecht, loc. AZU
+Type aanbieder
+Ziekenhuis
+Adres
+Utrecht, Heidelberglaan 100
+Afstand
+0.1 km
+Gecontracteerd
+2027 (Nog) geen contract: wel vergoed 
+Mogelijk met omzetplafond
+8,0
+85 reviews
+Bekijk details
+UMC Utrecht, loc. Wilhelmina Kinderziekenhuis (WKZ)
+Type aanbieder
+Ziekenhuis
+Adres
+Utrecht, Lundlaan 6
+Afstand
+0.3 km
+Gecontracteerd
+2027 (Nog) geen contract: wel vergoed 
+Mogelijk met omzetplafond
+6,8
+13 reviews
+Bekijk details
+Prinses Maxima Centrum voor Kinderoncologie
+Type aanbieder
+Ziekenhuis
+Adres
+Utrecht, Heidelberglaan 25
+Afstand
+0.4 km
+Gecontracteerd
+Contract: vergoed t/m 2028 
+9,8
+3 reviews
+Bekijk details
+Medinello (TopzorgGroep), loc. Utrecht
+Type aanbieder
+Zelfstandig behandelcentrum
+Adres
+Utrecht, Weg naar Rhijnauwen 3
+Afstand
+1.6 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+Bekijk details
+De Hoogstraat Revalidatie
+Adres
+Utrecht, Rembrandtkade 10
+Afstand
+2.4 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+8,4
+15 reviews
+Bekijk details
+Cardiologie Centrum, loc. Utrecht
+Type aanbieder
+Zelfstandig behandelcentrum
+Adres
+Utrecht, Herculesplein 379
+Afstand
+2.7 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+Bekijk details
+Xpert Clinics, loc. Zeist
+Type aanbieder
+Zelfstandig behandelcentrum
+Adres
+Zeist, De Dreef 21
+Afstand
+2.7 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+Bijzondere contractafspraken
+9,1
+105 reviews
+Bekijk details
+EERSTELIJNS BEHANDELCENTRA B.V.
+Adres
+Utrecht, Herculesplein 28
+Afstand
+2.8 km
+Gecontracteerd
+2027 (Nog) geen contract: wel vergoed 
+Bekijk details
+Diakonessenhuis, loc. Utrecht
+Type aanbieder
+Ziekenhuis
+Adres
+Utrecht, Bosboomstraat 1
+Afstand
+3 km
+Gecontracteerd
+2027 (Nog) geen contract: wel vergoed 
+6,9
+56 reviews
+Bekijk details
+DIANET LOCATIE GEZONDHEIDSHUIS
+Adres
+Utrecht, Bosboomstraat 1g
+Afstand
+3 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+Bekijk details
+Bekijk meer zorgaanbieders
+Toelichting
+Contracteerstatussen
 
-Je kunt ook een vraag stellen aan onze chatbot of andere contactmogelijkheden op onze service & contactpagina bekijken.
+Onderstaande statussen zie je terug in de zorgvinder. Meer informatie over wat de status voor jouw vergoeding betekent, lees je onder 'bekijk details' per zorgaanbieder. Deze toelichting gaat over de naturapolis of (bij een combinatiepolis) over het natura-deel van je zorgverzekering. In je verzekeringsvoorwaarden lees je welke polis je hebt.
 
-Inloggen
-Terug naar de homepage
-Verzekering
-Zorg en vergoedingen
-Gezondheid
-Zelf regelen
-Service en contact
-Vergoedingen
-Vind een zorgaanbieder in de buurt
+Contract: vergoed
+(Nog) geen contract: wel vergoed
+Nog geen contract: een deel niet vergoed
+Geen contract: een deel niet vergoed
+Maximumbedrag of omzetplafond
 
-Heb je zorg nodig? Met de Zorgvinder vind je eenvoudig een zorgaanbieder waarmee we een contract hebben. Bijvoorbeeld een huisarts, ziekenhuis, tandarts, apotheek, psycholoog, fysiotherapeut of een andere zorgverlener bij jou in de buurt.
+Met een aantal zorgaanbieders maken wij afspraken over hoeveel zorg zij per jaar bij ons in rekening mogen brengen. Dat noemen we maximumbedrag of omzetplafond. Heeft je zorgaanbieder de maximale hoeveelheid zorg bereikt voor dat jaar? Dan kun je voor een nieuwe behandeling misschien niet meer naar deze zorgaanbieder. Onze Zorgadviseur helpt je dan graag bij het vinden van een zorgaanbieder bij jou in de buurt. Je leest bij 'Bekijk details' of we met jouw zorgaanbieder een maximumbedrag hebben afgesproken.
 
-Gecontracteerde zorg in de buurt
+Sneller geholpen worden?
 
-In de Zorgvinder van Menzis vind je de gecontracteerde zorgaanbieders. Dit zijn zorgaanbieders waarmee we afspraken hebben gemaakt. Van deze zorgaanbieders vind je onder andere:
+Kijk in onze Wachttijdchecker of je sneller terecht kunt bij een ander ziekenhuis of kliniek.
 
-contactgegevens en openingstijden
-gecontracteerde behandelingen
-patiëntbeoordelingen
-informatie over kwaliteit van behandelingen
-
-Naar de Zorgvinder
-
-Bij welke zorgaanbieders kan ik in 2027 terecht?
-
-Met veel zorgaanbieders zijn al afspraken gemaakt voor 2027, maar nog niet met allemaal. We zorgen voor voldoende gecontracteerde zorg dichtbij. Zo hebben we altijd met alle ziekenhuizen en de meeste wijkverpleging en ggz-aanbieders afspraken gemaakt en ook voor 2027 is dat weer ons doel. In onze Zorgvinder lees je wat er is afgesproken voor jouw zorgaanbieder. Dit overzicht werken we drie keer per week bij. Mocht het voorkomen dat jouw zorgaanbieder niet wordt gecontracteerd, dan kan het betekenen dat je een deel van de kosten zelf moet betalen.
-
-Zorgcontractering, hoe zit dat nou? 
-
-Elk jaar maken we voor onze klanten afspraken met zorgaanbieders. Deze afspraken gaan onder andere over de kosten en de kwaliteit van de zorg.
-
-Lees meer over zorgcontractering
-
-Deze externe inhoud kan niet worden getoond omdat u third-party cookies niet hebt geaccepteerd. U kunt deze inhoud bekijken door op de video te klikken en in de cookie-popup Overige (marketing) cookies accepteren.
-
-Verschil tussen gecontracteerde en ongecontracteerde zorg
-
-Ga je naar een zorgaanbieder die een contract met ons heeft? Dat heeft voordelen:
-
-Er zijn afspraken gemaakt over de kwaliteit van de zorg en over de wachttijden in de zorg.
-De zorgaanbieder houdt zich aan de prijsafspraken die met Menzis zijn gemaakt.
-De rekening gaat direct naar Menzis. Je hoeft dus niets voor te schieten.
-
-Heb je Menzis Basis of Menzis Basis Voordelig en ga je voor een zorgaanbieder die geen contract met Menzis heeft? Dan betaal je de rekening zelf aan de zorgaanbieder. Daarna declareer je de rekening bij ons.
-
-Het kan zijn dat je niet alles vergoed krijgt. Dat is zo als de zorgaanbieder meer in rekening brengt dan wat in Nederland normaal is. Hoeveel je bij een niet-gecontracteerde aanbieder vergoed krijgt, hangt af van je Basisverzekering. 
-
-Je leest er meer over op de pagina over gecontracteerde en niet-gecontracteerde zorg.
-
-Hoe zit het met de hardheidsclausule?
-
-Kies je liever voor een zorgaanbieder zonder zorgovereenkomst, maar vormt de lagere vergoeding een belemmering? Dan kun je ons vragen om een hogere vergoeding. Bij onze beoordeling gaan we uit van de gemiddelde zorggebruiker. We reageren binnen drie weken. Op het te vergoeden bedrag worden eventuele eigen bijdragen en daarna het verplicht en vrijwillig eigen risico in mindering gebracht.
-
-Wij helpen je graag verder
-
-We helpen je met je zorgverzekering, het kiezen van een zorgaanbieder of wachtlijstbemiddeling. Stel je vraag aan onze chatbot Sarah of bekijk onze contactmogelijkheden
-
-Snel naar
-
-Service en contact
-Zorgverzekeringen
-Onze vergoedingen
-Werken bij Menzis
-
-Mijn Menzis
-
-Inloggen
-Declaratie indienen
-Toestemmingen beheren
-Wijziging doorgeven
-home
-Vergoedingen
-
-Vind een zorgaanbieder in de buurt
-
-Dan is er Menzis.
-
-Cookiepolicy & Cookies aanpassen
+Ga naar de Wachttijdchecker
 Disclaimer
-Privacy
-Toegankelijkheid
+Privacybeleid
+Cookies

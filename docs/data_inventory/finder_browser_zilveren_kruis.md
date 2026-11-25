@@ -14,13 +14,24 @@ Plaats of postcode
 
 Vul een postcode in voor een nauwkeuriger resultaat (INPUT/text)
 - autofill-Instelling-input Bijvoorbeeld: UMC  Naam van organisatie of zorgverlener (INPUT/text)
-- invullen Ziekenhuis: TimeoutError
+- #autofill-Zorgtype-input: gekozen suggestie voor Ziekenhuis
+- #autofill-Locatie-input: gekozen suggestie voor 3584 CX
 
 - na zoeken: https://www.zilverenkruis.nl/consumenten/zorgzoeker
-- zichtbare tekst: 2,353 tekens
-- JSON-antwoorden voor/na zoeken: 0/1
+- zichtbare tekst: 2,374 tekens
+- JSON-antwoorden voor/na zoeken: 0/2
 
 ## JSON-antwoorden na het zoeken (grootste eerst)
+
+### POST 200 https://www.zilverenkruis.nl/clientcontroller/zorgzoekerclient/getautofillzorgtype (401 tekens)
+
+Verzonden:
+```
+{"ZoekstringZorgtype":"Ziekenhuis"}
+```
+```
+{"isSucces":true,"options":[{"id":"2012","label":"Ziekenhuispsychiatrie","value":"Ziekenhuispsychiatrie","category":"Geestelijke gezondheidszorg","subtext":null},{"id":"1861","label":"Ziekenhuis","value":"Ziekenhuis","category":"Ziekenhuis","subtext":null},{"id":"2067","label":"Ziekenhuis in het buitenland","value":"Ziekenhuis in het buitenland","category":"Zorg in het buitenland","subtext":null}]}
+```
 
 ### POST 200 https://www.zilverenkruis.nl/clientcontroller/zorgzoekerclient/getautofilllocatie (126 tekens)
 
