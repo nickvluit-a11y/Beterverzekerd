@@ -1,12 +1,17 @@
 source: https://www.adrz.nl/kosten-en-verzekering/veelgestelde-vragen/?catID=214
 
 Adrz - Veelgestelde vragen
+oEmbed (JSON)
+oEmbed (XML)
+JSON RSD
 Check of uw zorgverzekeraar in 2027 een contract heeft met Adrz.
+Adrz
 Zoeken
 Home Kosten en verzekering Veelgestelde vragen
 Vertalen
 Please select the text and click on translate to choose the language of your liking.
 Voorlezen
+Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
 Veelgestelde vragen
 Hieronder vindt u de vragen die het meest gesteld worden over de prijzen en verzekeringen. Staat het antwoord op uw vraag er niet bij? Dan kunt u contact met ons opnemen. U vindt onze contactgegevens op de pagina Kosten en verzekeringen .

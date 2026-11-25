@@ -3,7 +3,7 @@ source: https://www.mmc.nl/statusoverzicht-contractering/
 Statusoverzicht Contractering 2026 en 2027
 URL :
 Geprint op :
-Zoeken
+Ik ben op zoek naar... Zoeken
 Veelgezochte onderwerpen
 MijnMMC
 Bloedafname
@@ -22,7 +22,7 @@ Disclaimer
 These texts are translated on demand using Google Translate Services and may contain errors. Automated translations are not perfect and should not be considered a substitute for human translators. Máxima MC is not responsible for any translation errors. If you have any health-related questions, please always consult your doctor.
 Statusoverzicht Contractering 2026 en 2027
 In onderstaande tabel ziet u met welke zorgverzekeraars Máxima MC momenteel een overeenkomst heeft gesloten of in gesprek is voor zowel de medisch specialistische zorg (MSZ) als geestelijke gezondheidszorg (GGZ).
-Verzekeraars
+Scrollbare tabel Verzekeraars
 Achmea
 2026 MSZ
 2026 GGZ

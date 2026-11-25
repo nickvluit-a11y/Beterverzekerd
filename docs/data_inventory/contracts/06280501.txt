@@ -10,11 +10,11 @@ Veelgestelde vragen over vergoedingen en tarieven
 Print deze pagina
 Daarom is het belangrijk dat u uw polisvoorwaarden goed doorleest voordat u zorg ontvangt. Bij twijfel of de zorg gedekt is door uw verzekering kunt u contact opnemen met uw verzekeraar. De Sint Maartenskliniek heeft voor 2026 met alle verzekeraars een contract afgesloten. Dat betekent dat de kosten voor uw behandeling bij onze kliniek worden vergoed door deze verzekeraars (behoudens uw eigen risico). Dit geldt echter alleen als u een geldige verwijzing van bijvoorbeeld uw huisarts of medisch specialist heeft. Als u geen verwijzing heeft, komen de kosten voor uw eigen rekening. Dit geldt nadrukkelijk niet voor een acute hulpvraag op onze Acute Zorgpoli.
 Contracten met zorgverzekeraars
-Afspraken met zorgverzekeraars 2027
+Openklappen Afspraken met zorgverzekeraars 2027 Afspraken met zorgverzekeraars 2027
 In onderstaand overzicht staan de zorgverzekeraars waarmee de Sint Maartenskliniek afspraken heeft voor het jaar 2027.
 Wilt u weten welke labels er onder de verschillende zorgverzekeraars vallen? Bekijk dan de lijst met zorgverzekeraars en bijbehorende labels/volmachten.
 Bekijk verschillende zorgverzekeraars https://www.zorgwijzer.nl/faq/welke-zorgverzekeraars-zijn-er
-Zorgverzekeraar
+Scrollable table Zorgverzekeraar
 Achmea/Zilveren Kruis
 In onderhandeling
 VGZ
@@ -37,11 +37,11 @@ Caresq/EUcare*
 Gecontracteerd
 *De Natura Select Polis wordt niet gecontracteerd, mocht u hierover vragen hebben dan kunt u zich wenden tot Caresq/EUcare
 Als uw zorgverzekeraar niet wordt genoemd, neem dan contact op met uw zorgverzekeraar om met ons via het contactformulier.
-Afspraken met zorgverzekeraars 2026
+Openklappen Afspraken met zorgverzekeraars 2026 Afspraken met zorgverzekeraars 2026
 In onderstaand overzicht staan de zorgverzekeraars waarmee de Sint Maartenskliniek afspraken heeft voor het jaar 2026.
 Wilt u weten welke labels er onder de verschillende zorgverzekeraars vallen? Bekijk dan de lijst met zorgverzekeraars en bijbehorende labels/volmachten.
 Bekijk verschillende zorgverzekeraars https://www.zorgwijzer.nl/faq/welke-zorgverzekeraars-zijn-er
-Zorgverzekeraar
+Scrollable table Zorgverzekeraar
 Achmea/Zilveren Kruis
 Gecontracteerd
 VGZ
@@ -64,7 +64,7 @@ Caresq/EUcare*
 Gecontracteerd
 *De Natura Select Polis wordt niet gecontracteerd, mocht u hierover vrage hebben dan kunt u zich wenden tot Caresq/EUcare
 Als uw zorgverzekeraar niet wordt genoemd, neem dan contact op met uw zorgverzekeraar om met ons via het contactformulier.
-Eigen risico
+Openklappen Eigen risico Eigen risico
 Iedereen van 18 jaar en ouder heeft een verplicht eigen risico voor de zorgverzekering. Dat betekent dat uw zorgverzekeraar u maximaal 385 euro in rekening brengt naar aanleiding van een rekening van medisch specialistische zorg uit het basispakket, tenzij u gekozen heeft om uw eigen risico te verhogen. Een consult bij de huisarts valt niet onder het eigen risico. Maar als de huisarts medicijnen voorschrijft, of een aanvraag doet voor bijvoorbeeld laboratoriumonderzoek of een röntgenfoto, dan worden deze kosten wel verrekend met het eigen risico. Uw zorgverzekeraar zal dit met u verrekenen.
 Aanvullend eigen risico
 Naast het verplichte eigen risico bieden zorgverzekeraars de mogelijkheid om te kiezen voor een aanvullend vrijwillig eigen risico. U betaalt in dat geval dan een lagere maandpremie. Voor 2025 kan uw eigen risico verhoogd worden met € 500,- tot maximaal € 885,-, afhankelijk van het zorgverzekeringspakket dat u heeft gekozen. Ook dit aanvullend ‘eigen risico’ zal uw zorgverzekeraar met u verrekenen indien nodig.
@@ -73,7 +73,7 @@ De Sint Maartenskliniek stuurt de rekening voor uw zorgkosten rechtstreeks naar 
 Let op! Soms krijg u meerdere rekeningen voor uw behandeling. Dit komt door de landelijke 'sluitregels'. Die regels bepalen wanneer een (zorg)periode (subtraject) wordt afgesloten en aansluitend een vervolgperiode wordt geopend. Het jaar van de begindatum van elke (zorg)periode (subtraject) is bepalend voor het jaar waarin deze rekening met uw eigen risico wordt verrekend. De datum van de rekening is de startdatum van de periode.
 Meer informatie
 Voor meer informatie over uw ziekenhuisbezoek en het eigen risico raadpleegt u de website van de Nederlandse Zorgautoriteit (NZa) .
-DBC zorgproducten
+Openklappen DBC zorgproducten DBC zorgproducten
 De Sint Maartenskliniek brengt de kosten voor een ziekenhuisbehandeling in rekening aan de hand van de zogenaamde DBC-zorgproducten. Een DBC-zorgproduct wordt opgebouwd uit onder andere de diagnose en de zorgactiviteiten voor consulten, behandelingen en/of onderzoeken die zijn uitgevoerd. In Nederland zijn er ongeveer 4.400 verschillende DBC-zorgproducten. Binnen de Sint Maartenskliniek worden hiervan ruim 700 gebruikt.
 Registratie van DBC-zorgproducten en zorgactiviteiten
 Zorg die de Sint Maartenskliniek levert wordt door middel van DBC-zorgproducten gedeclareerd bij de zorgverzekeraars. Hierbij moet de Sint Maartenskliniek voldoen aan de regelgeving die door de Nederlandse Zorgautoriteit (NZa) is opgesteld.
@@ -93,30 +93,30 @@ Verschillende locaties
 De kosten voor een zorgvraag zijn binnen de Sint Maartenskliniek niet locatie-gebonden. Dat betekent dat binnen de Sint Maartenskliniek voor elke locatie dezelfde prijzen gelden.
 Van röntgenfoto tot rekening
 De Nederlandse Zorgautoriteit heeft de route van ziekenhuisbezoek tot rekening in beeld gebracht. In deze video legt de Nederlandse Zorgautoriteit uit hoe declaraties in ziekenhuizen werken: wat registreren artsen? En hoe wordt dat uiteindelijk een rekening?
-Prijslijst
+Openklappen Prijslijst Prijslijst
 Onderstaand vindt u de prijslijst die de Sint Maartenskliniek hanteert voor de DBC en overige zorgproducten. Als uw zorgverzekeraar een contract heeft afgesloten met de Sint Maartenskliniek dan kunnen lagere prijzen gelden dan de lijst weergeeft. Uw zorgverzekeraar kan u hierover meer vertellen.
 Standaard prijslijst Sint Maartenskliniek 2026
 Standaard prijslijst Sint Maartenskliniek 2025
 Veelgestelde vragen over tarieven en vergoedingen
 Bekijk de veelgestelde vragen
 Vergoeding van uw behandeling als u in het buitenland woont of werkt
-Voorwaarden voor vergoeding vanuit het buitenland
+Openklappen Voorwaarden voor vergoeding vanuit het buitenland Voorwaarden voor vergoeding vanuit het buitenland
 Ook wanneer u woonachtig en/of verzekerd bent in het buitenland kunt u in aanmerking komen voor een vergoeding van uw behandeling in de Sint Maartenskliniek.
 Hieraan zijn voorwaarden verbonden. Wij adviseren u hierover ruim voor uw bezoek aan onze kliniek contact op te nemen met uw zorgverzekeraar. Het is van belang dat we de noodzakelijke formulieren in ons bezit hebben voordat u de kliniek voor de eerste keer bezoekt. Laat daarom voorafgaand aan uw eerste afspraak aan de Sint Maartenskliniek weten op welke manier u verzekerd bent.
-Wat neemt u mee naar uw afspraak?
+Openklappen Wat neemt u mee naar uw afspraak? Wat neemt u mee naar uw afspraak?
 Neem op de dag van uw afspraak mee:
 uw identiteitsbewijs;
 een kopie van de garantieverklaring, als dit voor u geldt;
 uw verzekeringsbewijs, zoals een EHIC-NL pas, CZ-AOK pas of toestemmingsformulier.
-Europese zorgpas: alleen voor spoed
+Openklappen Europese zorgpas: alleen voor spoed Europese zorgpas: alleen voor spoed
 De Europese zorgpas laat zien dat u in een EU-land verzekerd bent. Deze pas is alleen bedoeld voor medisch noodzakelijke spoedzorg en niet voor een geplande behandeling in het buitenland.
-Nederlandse EHIC-kaart
+Openklappen Nederlandse EHIC-kaart Nederlandse EHIC-kaart
 Woont u in het buitenland, maar heeft u een geldige Nederlandse EHIC-kaart van het CAK? Dan heeft u recht op medische zorg in Nederland. De behandeling moet wel onder de basisverzekering vallen.
-CZ-AOK pas
+Openklappen CZ-AOK pas CZ-AOK pas
 Woont u in Duitsland en heeft u een CZ-AOK pas? Dan kunnen wij de factuur rechtstreeks aanbieden bij CZ Buitenland.
-S2-formulier
+Openklappen S2-formulier S2-formulier
 Woont u in een ander EU-land, IJsland, Liechtenstein, Noorwegen of Zwitserland? Dan heeft u voor geplande zorg in Nederland mogelijk een S2-formulier nodig. Met dit formulier geeft uw zorgverzekeraar toestemming voor de behandeling.
-Garantieverklaring
+Openklappen Garantieverklaring Garantieverklaring
 Kunt u geen van bovenstaande formulieren of passen gebruiken? Dan kunt u mogelijk een garantieverklaring krijgen van uw zorgverzekeraar of werkgever. Hierin staat dat zij de kosten van uw behandeling betalen.
 Stuur deze verklaring vóór uw eerste bezoek naar:
 Sint Maartenskliniek
@@ -126,10 +126,10 @@ Postbus 9011
 Nederland
 Of per e-mail naar [email protected] .
 Vermeld vanwege uw privacy liever geen medische of andere gevoelige persoonsgegevens in uw e-mail.
-Geen juiste pas of toestemming?
+Openklappen Geen juiste pas of toestemming? Geen juiste pas of toestemming?
 Heeft u geen geldig toestemmingsformulier of verzekeringsbewijs? Dan kunt u nog steeds bij ons terecht. We vragen u dan om de verwachte kosten vooraf te betalen. Dit bedrag moet uiterlijk 3 dagen vóór uw eerste afspraak zijn overgemaakt.
 Heeft u vragen over de kosten of uw situatie? Neem dan contact op met de Debiteurenadministratie via [email protected] .
-Extra informatie voor patiënten uit Duitsland
+Openklappen Extra informatie voor patiënten uit Duitsland Extra informatie voor patiënten uit Duitsland
 Particuliere verzekering
 Heeft u een particuliere verzekering? Dan betaalt u de kosten eerst zelf aan de Sint Maartenskliniek. Daarna declareert u deze bij uw verzekeraar. Voor sommige complexe orthopedische behandelingen is een kosteninschatting beschikbaar. Vraag hiernaar bij uw arts.
 Zusatzversicherung

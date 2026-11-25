@@ -32,6 +32,7 @@ Tags
 Algemeen
 Nieuws
 Translate instructions
+Close
 1. Select the text you want to translate.
 2. Choose ‘Vertalen’.
 3. Select the language you prefer.

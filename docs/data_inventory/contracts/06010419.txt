@@ -8,11 +8,11 @@ Wil je meer weten over overstappen? Lees hier meer over het kiezen van een zorgv
 Zorgverzekeraars waarmee MST een contract heeft
 MST spreekt elk jaar met zorgverzekeraars af hoeveel zorg zij voor het volgende jaar inkopen. Ook maken we afspraken over de kosten en hoe we samen de kwaliteit van zorg verbeteren. Deze afspraken zetten we in een overeenkomst.
 Klik op een onderwerp voor meer informatie
-Bekijk of jouw zorgverzekeraar een contract heeft met MST
+Open: Bekijk of jouw zorgverzekeraar een contract heeft met MST Bekijk of jouw zorgverzekeraar een contract heeft met MST
 Zorgverzekeraars werken met gecontracteerde en niet-gecontracteerde zorgaanbieders (instellingen die zorg verlenen). We vinden het belangrijk dat je weet met welke zorgverzekeraars MST een contract heeft. In het overzicht onderaan deze pagina zie je of jouw zorgverzekeraar een afspraak heeft gemaakt met MST voor dit jaar.
 MST heeft met de meeste zorgverzekeraars contracten afgesloten. Dit betekent dat je (het grootste deel) van de kosten voor de zorg niet zelf hoeft te betalen als je een verzekering hebt bij één van deze verzekeraars.
 Sommige zorgverzekeringen vergoeden alleen alle kosten als je naar een gecontracteerde zorgaanbieder gaat. Kijk daarom goed naar de voorwaarden van je zorgverzekering om verrassingen te voorkomen.
-Controleer ook afspraken van andere ziekenhuizen
+Open: Controleer ook afspraken van andere ziekenhuizen Controleer ook afspraken van andere ziekenhuizen
 Kijk ook bij andere ziekenhuizen in jouw regio of jouw zorgverzekeraar daar een overeenkomst mee heeft. Is dat niet zo, en stap je niet over? Dan kan het zijn dat je voor ziekenhuiszorg buiten je regio moet reizen.
 Overzicht zorgverzekeraars en contracten 2027
 In het overzicht hieronder zie je met welke zorgverzekeraars MST een contract heeft.
@@ -24,6 +24,7 @@ Uitleg tabel:
 3: we boeken vooruitgang in de onderhandeling
 4: we hebben een contract
 Update: 26-10-2026
+Scrollende tabel
 Merklabel
 Zorgverzekeraar
 Contract 2027

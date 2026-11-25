@@ -11,29 +11,31 @@ Contracten met vrijwel alle zorgverzekeraars
 Identiteitsbewijs altijd meenemen
 Altijd een verwijzing nodig
 Prijslijst
+Prijslijst
 Wij brengen de kosten van uw behandeling in rekening aan de hand van een DBC- zorgproduct. Dit is een code die wordt gebruikt om de diagnose en behandeling die bij uw gezondheidsklacht horen vast te leggen. Onderstaand vindt u de prijslijst die wij hanteren voor de DBC-zorgproducten.
 De prijzen in de standaard prijslijst worden ook wel de ‘passantenprijzen’ genoemd. Dit zijn de prijzen die we berekenen aan u als u niet verzekerd bent voor de behandeling, of indien uw zorgverzekeraar geen contract hiervoor heeft afgesloten met Alrijne. Als uw zorgverzekeraar een contract heeft afgesloten met ons, dan kunnen lagere prijzen gelden dan de lijst weergeeft. Uw zorgverzekeraar kan u hierover meer vertellen.
-Prijslijst 1 januari t/m 31 december 2026
-Prijslijst 1 januari t/m 31 december 2025
-Prijslijst 1 januari t/m 31 december 2024
+Passantentarieven 2026 Websiteformat 14 07 2026 Prijslijst 1 januari t/m 31 december 2026
+Passantentarieven 2025 Websiteformat 05 02 2025 Prijslijst 1 januari t/m 31 december 2025
+Passantentarieven 2024 Websiteformat 03 04 2024 Prijslijst 1 januari t/m 31 december 2024
 Tarieven onverzekerde zorg 2026
-Tarieven onverzekerde zorg Oogheelkunde
-Tarieven onverzekerde zorg Pijn
-Tarieven onverzekerde zorg Radiologie
-Tarieven onverzekerde zorg Sportgeneeskunde
-Tarieven onverzekerde zorg Orthopedie
-Tarieven onverzekerde zorg KNO
-Tarieven onverzekerde zorg MDL
-Tarieven onverzekerde zorg MKA
+Oog Onverzekerde Zorg 2026 Tarieven onverzekerde zorg Oogheelkunde
+Pijn Onverzekerde Zorg 2026 Tarieven onverzekerde zorg Pijn
+Radiologie Onverzekerde Zorg 2026 Tarieven onverzekerde zorg Radiologie
+Sportgeneeskunde Onverzekerde Zorg 2026 Tarieven onverzekerde zorg Sportgeneeskunde
+Orthopedie Onverzekerde Zorg 2026 Tarieven onverzekerde zorg Orthopedie
+KNO Onverzekerde Zorg 2026 Tarieven onverzekerde zorg KNO
+MDL Onverzekerde Zorg 2026 (1) Tarieven onverzekerde zorg MDL
+MKA Onverzekerde Zorg 2026 Tarieven onverzekerde zorg MKA
 Tarieven onverzekerde zorg 2025
-Tarieven onverzekerde zorg Oogheelkunde
-Tarieven onverzekerde zorg Pijn
-Tarieven onverzekerde zorg Radiologie
-Tarieven onverzekerde zorg Sportgeneeskunde
-Tarieven onverzekerde zorg Orthopedie
-Tarieven onverzekerde zorg KNO
-Tarieven onverzekerde zorg MDL
-Tarieven onverzekerde zorg MKA
+Oog Onverzekerde Zorg 2025 Tarieven onverzekerde zorg Oogheelkunde
+Pijn Onverzekerde Zorg 2025 Tarieven onverzekerde zorg Pijn
+Radiologie Onverzekerde Zorg 2025 Tarieven onverzekerde zorg Radiologie
+Sportgeneeskunde Onverzekerde Zorg 2025 Tarieven onverzekerde zorg Sportgeneeskunde
+Orthopedie Onverzekerde Zorg 2025 Tarieven onverzekerde zorg Orthopedie
+KNO Onverzekerde Zorg 2025 Tarieven onverzekerde zorg KNO
+MDL Onverzekerde Zorg 2025 Tarieven onverzekerde zorg MDL
+MKA Onverzekerde Zorg 2025 Tarieven onverzekerde zorg MKA
+Wat is een DBC
 Wat is een DBC
 De kosten die te maken hebben met uw ziekenhuisbezoek worden verzameld in een diagnose-behandelcombinatie (DBC). De DBC-zorgproductcode die op de rekening staat, laat zien wat u heeft. Dit kunnen bijvoorbeeld nierstenen of een gebroken arm zijn. Ook laat het zien wat er in het ziekenhuis precies voor u is gedaan. Bijvoorbeeld een foto, een operatie of een controlebezoek. Elk DBC-zorgproduct heeft zijn eigen prijskaartje.
 Een DBC-zorgproduct
@@ -45,9 +47,11 @@ Meerdere rekeningen voor dezelfde klacht
 Elke DBC heeft een maximale looptijd. Als de behandeling langer duurt, dan wordt een nieuwe vervolg DBC geopend. Het kan daardoor gebeuren dat u meerdere rekeningen ontvangt, ook als u maar 1 klacht heeft.
 Video over kostenberekening
 De Nederlandse Zorgautoriteit (NZa) heeft de route van ziekenhuisbezoek tot rekening in beeld gebracht. In een video over kostenberekening legt de NZa uit hoe declaraties in ziekenhuizen werken: wat registreren artsen? En hoe wordt dat uiteindelijk een ziekenhuisrekening?
+Van röntgenfoto tot rekening | NZa
 Bron: NZa
 Overige ZorgProducten (OZP)
 Naast DBC’s bestaan er ook Overige ZorgProducten (OZP). Die worden als losse activiteit genoemd op de ziekenhuisrekening.
+Eigen risico
 Eigen risico
 U betaalt een verplicht eigen risico als u ziekenhuiszorg krijgt die vergoed wordt vanuit de basisverzekering. Dit eigen risico is verplicht voor iedereen van 18 jaar en ouder. Het verplichte eigen risico gaat in op de dag dat u 18 jaar wordt. Dit betekent dat u in een kalenderjaar altijd zelf eerst het vastgestelde eigen risico aan zorgkosten betaalt die onder de basisverzekering vallen. Het verplichte eigen risico 2026 is vastgesteld op €385,-
 Naast dit verplichte eigen risico kan het zijn dat u een vrijwillig eigen risico betaalt. Dit heeft u dan zelf afgesproken met uw zorgverzekeraar.
@@ -56,9 +60,10 @@ Soms krijgt u te maken met een rekening voor het eigen risico van het vorige jaa
 Een ziekenhuis brengt niet alle handelingen apart in rekening. De kosten die te maken hebben met uw ziekenhuisbezoek worden verzameld in een diagnose-behandelcombinatie (DBC). Wanneer u met een zorgvraag bij de medisch specialist komt, wordt een zorgtraject voor u geopend. Een eerste DBC en vervolg DBC’s maken onderdeel uit van dit zorgtraject. We noemen dit ook wel DBC-subtrajecten. De startdatum van een DBC-subtraject is bepalend voor in welk jaar het eigen risico in rekening gebracht gaat worden door de zorgverzekeraar.
 Het ziekenhuis declareert ieder DBC-volgens vastgestelde landelijke regelgeving en kan hiervan niet afwijken. Voor een conservatieve behandeling is dat 90 dagen voor een reguliere DBC en 120 dagen voor een vervolg DBC. Zodra er een ingreep/behandeling of opname in de DBC zit zal de looptijd anders zijn.
 Ziekenhuizen hebben geen inzicht in het eigen risico en kunnen bij het plannen van zorg hier ook geen rekening mee houden en zijn ook niet verplicht vooraf de patiënt hierover te informeren.
-Bekijk de ook de factsheet van de Nederlandse Zorgautoriteit waarin dit in een voorbeeld in uitgelegd.
+Bekijk de ook de Factsheet Nza Eigen Risico 2025 Betalen In 2026 factsheet van de Nederlandse Zorgautoriteit waarin dit in een voorbeeld in uitgelegd.
 Vragen over het eigen risico
 Het eigen risico zal door uw zorgverzekeraar bij u in rekening worden gebracht. Voor vragen over vergoedingen of de hoogte van het eigen risico/eigen bijdrage kunt u contact opnemen met uw zorgverzekeraar. Uw zorgverzekeraar kan bij vragen over het eigen risico contact opnemen met het ziekenhuis.
+De rekening
 De rekening
 De DBC-zorgproductcode die op de rekening staat, laat zien wat u heeft. Dit kunnen bijvoorbeeld nierstenen of een gebroken arm zijn. Ook laat het zien wat er in het ziekenhuis precies voor u is gedaan. Bijvoorbeeld een foto, een operatie of een controlebezoek. Elk DBC-zorgproduct heeft zijn eigen prijskaartje.
 Wat betekenen bepaalde begrippen op de rekening?
@@ -102,6 +107,7 @@ Heeft u een nieuwe zorgverzekeraar?
 De rekening voor de ziekenhuiszorg gaat naar de verzekeraar waar u op de startdatum van de DBC verzekerd was. Deze startdatum is dus bepalend welke zorgverzekeraar de rekening ontvangt.
 Als u al een behandeling gestart bent, en u gaat van zorgverzekeraar wisselen omdat deze meer gaat vergoeden, controleer dan vanaf wanneer de rekening naar uw nieuwe zorgverzekeraar gezonden gaat worden.
 Wat vergoedt de zorgverzekeraar?
+Wat vergoedt de zorgverzekeraar?
 Wat u uiteindelijk moet betalen hangt niet alleen af van de DBC-zorgproduct prijs. Ook de vergoeding door uw zorgverzekeraar speelt een rol. Soms heeft u bijvoorbeeld een eigen risico. De verrekening van bedragen regelt de zorgverzekeraar met u. Het ziekenhuis staat hier volledig buiten. Voor meer informatie over de vergoeding van ziekenhuisfacturen verwijzen wij naar de polisvoorwaarden van uw zorgverzekering en naar de website of naar het informatienummer van uw zorgverzekeraar.
 Diëtetiek/Fysiotherapie
 Indien u in het ziekenhuis gebruik maakt van de poliklinische fysiotherapie of een bezoek brengt aan de diëtist, maar hier niet voor verzekerd bent, dan wordt de behandeling bij u in rekening gebracht en krijgt u de rekening thuisgestuurd. Dit is ook het geval als u door de arts uit ons ziekenhuis voor behandeling bent doorverwezen.
@@ -112,6 +118,7 @@ Alrijne voert op aanvraag van andere ziekenhuizen bepaalde onderzoeken uit. Deze
 Neem eerst contact op met uw zorgverzekeraar
 Meer dan voorheen is het belangrijk dat u uw zorgverzekeraar raadpleegt voordat u naar een ziekenhuis gaat. Wilt u weten of uw zorgverzekeraar een contract heeft met Alrijne, kijk dan onder Contracten zorgverzekeraars .
 Als u naar een ziekenhuis of instelling wilt waarmee uw zorgverzekeraar geen contract heeft, dan kan dat altijd. In dat geval wordt de behandeling echter niet altijd (volledig) vergoed. Uw zorgverzekeraar kan u meer informatie geven over wat u in zulke gevallen precies moet doen.
+Contracten zorgverzekeraars
 Contracten zorgverzekeraars
 Om goede zorg te leveren aan onze patiënten, sluiten we elk jaar contracten af met zorgverzekeraars. Alrijne heeft voor 2026 met alle zorgverzekeraars een contract afgesloten.
 Vergoeding
@@ -129,7 +136,7 @@ contract
 De Friesland
 contract
 contract
-FBTO
+www.fbto.nl FBTO
 contract
 contract
 Interpolis
@@ -235,7 +242,7 @@ CIGNA
 contract
 contract
 Bijzondere Tandheelkunde
-Gecontracteerde zorgverzekeraars Bijzondere Tandheelkunde >
+Lijst Gecontracteerde zorgverzekeraars CBT 2016-2018 20180312.pdf Gecontracteerde zorgverzekeraars Bijzondere Tandheelkunde >
 Gecontracteerde zorgverzekeraars
 Wilt u zeker weten of uw zorgverzekeraar uw behandeling in Alrijne vergoedt, neem dan contact op met uw zorgverzekeraar.
 Het is mogelijk dat u als patiënt zelf een deel van de rekening moet betalen. Lees vooraf goed de polisvoorwaarden van uw zorgverzekeraar.
@@ -245,6 +252,7 @@ Uitgebreide factuur
 U ontvangt van ons uitgebreide facturen (zorgnota's) van behandelingen. Op deze zorgnota's komen het specialisme van de behandelaar, de diagnose, de naam van de zorgaanbieder, de kosten en de handelingen die zijn uitgevoerd te staan.
 Voor vragen over uw factuur kunt u contact opnemen met uw eigen zorgverzekeraar.
 Veelgestelde vragen
+Veelgestelde vragen
 Wanneer ontvang ik de factuur?
 De zorgverzekeraar krijgt een factuur toegestuurd wanneer een zorgtraject is afgesloten en er een contract met uw zorgverzekeraar over het contractjaar is afgesloten. Een zorgtraject wordt afgesloten wanneer u voor een bepaalde klacht of diagnose uitbehandeld bent of het traject langer duurt dan een vastgestelde periode (voor de meeste trajecten maximaal 120 dagen).
 Andere veelgestelde vragen
@@ -252,12 +260,14 @@ Op de website van dezorgnota.nl leest u meer veelgestelde vragen en antwoorden o
 Kunt u geen geldig identiteitsbewijs tonen?
 Zonder geldig identiteitsbewijs met uw unieke BSN kan de hulpverlener de kosten van uw behandeling niet declareren bij uw zorgverzekeraar. Kunt u geen geldig identiteitsbewijs tonen, dan wordt er direct een financiële regeling met u getroffen, voordat men met de zorg start. Medewerkers van de afdeling kunnen u hierover meer vertellen.
 Contact
+Contact
 Afdeling facturatie
 Heeft u vragen over uw zorgkosten? Kijk dan bij het betreffende onderwerp. Staat uw vraag er niet bij, neem dan contact op met de afdeling facturatie op werkdagen tussen 9.00 en 12.00 uur. Of stel uw vraag per mail.
 071 517 8181 facturatie@alrijne.nl .
 Afdeling debiteuren
 Voor vragen over de betaling van uw factuur kunt u contact opnemen met de afdeling debiteuren op werkdagen tussen 9.00 uur en 12.00 uur. Of stel uw vraag per mail.
 071 517 8629 debiteuren@alrijne.nl
+Buitenlandse patiënten
 Buitenlandse patiënten
 U woont of werkt niet in Nederland of u bent een illegaal in Nederland verblijvende persoon? Dan heeft dit gevolgen voor de vergoeding van de zorgkosten.
 Buitenlandse patiënten van binnen de Europese Unie kunnen bij Alrijne worden geholpen wanneer zij over een European Health Insurance Card (EHIC) beschikken. Deze kunt u aanvragen bij uw zorgverzekeraar, zie de zorgwijzer voor meer informatie. Van patiënten die afkomstig zijn van buiten de Europese Unie hebben wij een garantieverklaring van de verzekeraar nodig.
@@ -270,7 +280,8 @@ Asielzoekers worden tijdens de asielprocedure opgevangen door het Centraal Orgaa
 Onverzekerbare vreemdeling
 Illegalen kunnen zich in Nederland niet verzekeren. Zij moeten de kosten zelf betalen. Voor geplande zorg vergoedt het Zorginstituut Nederland (ZIN) alleen aan ziekenhuizen waarmee een contract is afgesloten. Per 1 januari 2017 neemt Alrijne deze zorg op zich binnen de regio Zuid-Holland-Noord. Voor acute zorg (SEH en Huisartsenpost) kunnen patiënten terecht bij zowel Alrijne in Leiderdorp als het LUMC .
 Algemene betalingsvoorwaarden
-De prijs die geldt op de datum van uw eerste bezoek aan het ziekenhuis voor uw aandoening, blijft van toepassing tijdens uw behandeling. Prijswijzigingen die optreden gedurende uw behandeling, worden dus niet aan u in rekening gebracht. Op de betaling van de facturen (rekeningen) door patiënten zijn de betalingsvoorwaarden van Alrijne van kracht. Deze zijn gedeponeerd bij de Kamer van Koophandel te Leiden onder nummer 61802379.
+Algemene betalingsvoorwaarden
+De prijs die geldt op de datum van uw eerste bezoek aan het ziekenhuis voor uw aandoening, blijft van toepassing tijdens uw behandeling. Prijswijzigingen die optreden gedurende uw behandeling, worden dus niet aan u in rekening gebracht. Op de betaling van de facturen (rekeningen) door patiënten zijn de Algemene En Betalingsvoorwaarden Alrijne betalingsvoorwaarden van Alrijne van kracht. Deze zijn gedeponeerd bij de Kamer van Koophandel te Leiden onder nummer 61802379.
 back to top
 Terug naar boven
 
