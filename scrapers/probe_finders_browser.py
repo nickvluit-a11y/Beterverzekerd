@@ -127,6 +127,21 @@ def choose_policy(page, policy: str) -> list[str]:
                 out.append(f"- gekozen: {policy} ({match})")
             except Exception as exc:
                 out.append(f"- kiezen {policy}: {type(exc).__name__}")
+    for opener in ("#select-Basisverzekering-button", "#Basisverzekering-button"):  # Zilveren Kruis's own list
+        if any("gekozen" in o for o in out):
+            break
+        try:
+            page.locator(opener).locator("visible=true").first.click(timeout=5000)
+            page.wait_for_timeout(1000)
+            options = page.get_by_role("option").locator("visible=true")
+            texts = [options.nth(j).inner_text().strip() for j in range(options.count())]
+            out.append(f"- opties onder {opener}: " + "; ".join(texts)[:600])
+            target = next((j for j, t in enumerate(texts) if policy.lower() in t.lower()), None)
+            if target is not None:
+                options.nth(target).click(timeout=5000)
+                out.append(f"- gekozen: {texts[target]}")
+        except Exception as exc:
+            out.append(f"- {opener}: {type(exc).__name__}")
     if not any("gekozen" in o for o in out):  # a custom list instead of <select>
         for opener in ("Selecteer", "Kies uw basisverzekering", "Kies je basisverzekering"):
             try:
