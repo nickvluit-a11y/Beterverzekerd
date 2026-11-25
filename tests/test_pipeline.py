@@ -19,7 +19,7 @@ from scrapers.nza_wachttijden import candidate_order, is_waiting_time_csv
 
 TEST_RULES = pd.DataFrame([
     {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "revisie", "direction": "lower_better", "label_nl": "Revisie"},
-    {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "complicat", "direction": "lower_better", "label_nl": "Complicaties"},
+    {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "complicat", "direction": "lower_better", "label_nl": "Diepe wondinfectie"},
     {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "prom|verbeter", "direction": "higher_better", "label_nl": "PROM"},
     {"procedure_id": "heup", "indicator_code": None, "indicator_pattern": "aantal", "direction": "volume", "label_nl": "Aantal"},
     {"procedure_id": "knie", "indicator_code": None, "indicator_pattern": "aantal", "direction": "volume", "label_nl": "Aantal"},
@@ -698,3 +698,66 @@ def test_overdispersion_makes_verdicts_conservative():
     extreme = funnel_verdicts(pd.concat([y, pd.Series([0.30])], ignore_index=True),
                               pd.concat([se, pd.Series([se.iloc[0]])], ignore_index=True), 0.05, "lower_better")
     assert extreme.iloc[-1] == "slechter"  # a real outlier is still flagged
+
+
+
+# --- regressions from the statistical review ---------------------------------------------------
+
+def _interval_rows(loc, point, lo, hi, n, kind="prom", year="2025"):
+    base = ("Verschilscore tussen heup PROM preoperatief en 12 maanden na ingreep. OHS som score. " if kind == "prom"
+            else "Gecorrigeerd percentage revisie binnen 1 jaar na primaire THP. ")
+    roles = [("Gemiddelde" if kind == "prom" else "Gecorrigeerd percentage", point),
+             ("95% Betrouwbaarheidsinterval Lower bound", lo), ("95% Betrouwbaarheidsinterval Upper bound", hi)]
+    if n is not None:
+        roles.append(("Aantal (N)", n))
+    return [{"procedure_id": "heup", "location_key": loc, "verslagjaar": year, "indicator": base + s,
+             "value": str(v), "numerator": None, "denominator": None} for s, v in roles]
+
+
+def test_placeholders_small_n_and_implausible_values_are_not_judged():
+    rows = []
+    for i in range(12):
+        rows += _interval_rows(f"h{i}", 18 + (i % 3), 17 + (i % 3), 19 + (i % 3), 100)
+    rows += _interval_rows("zero", 0, 0, 0, 0)            # placeholder: dropped
+    rows += _interval_rows("tiny", 40, 39, 41, 4)         # n < 20: not judged
+    rows += _interval_rows("crazy", 2364, 2357, 2371, 300)  # impossible change on a 0-48 scale
+    out = compare(pd.DataFrame(rows))
+    by = out[out["method"] == "interval"].set_index("location_key")
+    assert "zero" not in by.index
+    assert pd.isna(by.loc["tiny", "verdict"]) and "patiënten" in by.loc["tiny", "position"]
+    assert pd.isna(by.loc["crazy", "verdict"]) and "onwaarschijnlijk" in by.loc["crazy", "position"]
+    assert by.loc["h0", "national_rate"] == pytest.approx(19)  # median of real hospitals only
+
+
+def test_swapped_bounds_are_repaired():
+    rows = _interval_rows("s", 1.0, 2.0, 0.5, None, kind="rev")
+    out = compare(pd.DataFrame(rows))
+    r = out[out["method"] == "interval"].iloc[0]
+    assert r["ci_low"] == 0.5 and r["ci_high"] == 2.0 and pd.isna(r["position"])
+
+
+def test_ratio_not_judged_when_few_hospitals_publish_counts():
+    rows = [{"procedure_id": "heup", "indicator": "Diepe wondinfectie complicatie", "location_key": f"l{i}",
+             "verslagjaar": "2025", "numerator": 1 if i < 3 else None, "denominator": 100 if i < 3 else None,
+             "value": "1.0"} for i in range(10)]
+    out = compare(pd.DataFrame(rows))
+    assert out["verdict"].isna().all() and out["position"].str.contains("teller").all()
+
+
+def test_rare_events_are_not_flagged_on_tiny_numbers():
+    rows = [{"procedure_id": "heup", "indicator": "Diepe wondinfectie complicatie", "location_key": f"l{i}",
+             "verslagjaar": "2025", "numerator": 2, "denominator": 250, "value": None} for i in range(30)]
+    rows.append({"procedure_id": "heup", "indicator": "Diepe wondinfectie complicatie", "location_key": "small",
+                 "verslagjaar": "2025", "numerator": 2, "denominator": 42, "value": None})
+    out = compare(pd.DataFrame(rows)).set_index("location_key")
+    assert out.loc["small", "verdict"] == "gemiddeld"  # 2/42 is not convincing evidence of worse care
+
+
+def test_single_prom_scale_does_not_make_a_hospital_better():
+    from pipeline.quality import domain_verdicts
+    one = pd.DataFrame({"indicator_nl": ["Verbetering volgens patiënt na 12 mnd: EQ-5D index",
+                                         "Verbetering volgens patiënt na 12 mnd: OHS"],
+                        "verdict": ["beter", "gemiddeld"]})
+    assert domain_verdicts(one)["herstel"] == "gemiddeld"
+    specific = one.assign(verdict=["gemiddeld", "beter"])
+    assert domain_verdicts(specific)["herstel"] == "beter"
