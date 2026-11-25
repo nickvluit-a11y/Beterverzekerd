@@ -1,0 +1,134 @@
+# Zorgvinder CZ (contracten 2027)
+
+Run: 2026-11-25.
+
+- categorie `ziekenhuis`: 30 gelezen, 31 genoemd
+- categorie `zelfstandig-behandelcentrum`: 30 gelezen, 307 genoemd
+- categorie `zelfstandige-behandelcentra`: 0 gelezen, None genoemd HTTPError
+- categorie `kliniek`: 0 gelezen, None genoemd HTTPError
+- categorie `particuliere-kliniek`: 0 gelezen, None genoemd HTTPError
+
+| categorie | plaats | genoemd | gelezen | pagina's |
+|---|---|---|---|---|
+| ziekenhuis | utrecht | 31 | 30 | 1  |
+| ziekenhuis | amsterdam | 35 | 30 | 1  |
+| ziekenhuis | rotterdam | 47 | 30 | 1  |
+| ziekenhuis | den-haag | 43 | 30 | 1  |
+| ziekenhuis | leiden | 33 | 30 | 1  |
+| ziekenhuis | haarlem | 32 | 30 | 1  |
+| ziekenhuis | alkmaar | 15 | 15 | 1  |
+| ziekenhuis | hoorn | 10 | 10 | 1  |
+| ziekenhuis | den-helder | 4 | 4 | 1  |
+| ziekenhuis | almere | 22 | 22 | 1  |
+| ziekenhuis | lelystad | 8 | 8 | 1  |
+| ziekenhuis | amersfoort | 33 | 30 | 1  |
+| ziekenhuis | hilversum | 43 | 30 | 1  |
+| ziekenhuis | gouda | 43 | 30 | 1  |
+| ziekenhuis | dordrecht | 33 | 30 | 1  |
+| ziekenhuis | gorinchem | 16 | 16 | 1  |
+| ziekenhuis | breda | 11 | 11 | 1  |
+| ziekenhuis | tilburg | 11 | 11 | 1  |
+| ziekenhuis | eindhoven | 12 | 12 | 1  |
+| ziekenhuis | helmond | 14 | 14 | 1  |
+| ziekenhuis | oss | 21 | 21 | 1  |
+| ziekenhuis | nijmegen | 26 | 26 | 1  |
+| ziekenhuis | arnhem | 29 | 29 | 1  |
+| ziekenhuis | ede | 26 | 26 | 1  |
+| ziekenhuis | apeldoorn | 11 | 11 | 1  |
+| ziekenhuis | zutphen | 14 | 14 | 1  |
+| ziekenhuis | doetinchem | 11 | 11 | 1  |
+| ziekenhuis | winterswijk | 6 | 6 | 1  |
+| ziekenhuis | deventer | 12 | 12 | 1  |
+| ziekenhuis | zwolle | 10 | 10 | 1  |
+| ziekenhuis | harderwijk | 11 | 11 | 1  |
+| ziekenhuis | meppel | 9 | 9 | 1  |
+| ziekenhuis | hardenberg | 5 | 5 | 1  |
+| ziekenhuis | almelo | 14 | 14 | 1  |
+| ziekenhuis | enschede | 10 | 10 | 1  |
+| ziekenhuis | assen | 6 | 6 | 1  |
+| ziekenhuis | emmen | 4 | 4 | 1  |
+| ziekenhuis | groningen | 6 | 6 | 1  |
+| ziekenhuis | stadskanaal | 5 | 5 | 1  |
+| ziekenhuis | delfzijl | 2 | 2 | 1  |
+| ziekenhuis | leeuwarden | 5 | 5 | 1  |
+| ziekenhuis | sneek | 8 | 8 | 1  |
+| ziekenhuis | heerenveen | 9 | 9 | 1  |
+| ziekenhuis | drachten | 6 | 6 | 1  |
+| ziekenhuis | goes | 8 | 8 | 1  |
+| ziekenhuis | middelburg | 4 | 4 | 1  |
+| ziekenhuis | terneuzen | 6 | 6 | 1  |
+| ziekenhuis | bergen-op-zoom | 7 | 7 | 1  |
+| ziekenhuis | roosendaal | 10 | 10 | 1  |
+| ziekenhuis | venlo | 7 | 7 | 1  |
+| ziekenhuis | weert | 9 | 9 | 1  |
+| ziekenhuis | roermond | 9 | 9 | 1  |
+| ziekenhuis | sittard | 10 | 10 | 1  |
+| ziekenhuis | heerlen | 7 | 7 | 1  |
+| ziekenhuis | maastricht | 6 | 6 | 1  |
+| ziekenhuis | tiel | 24 | 24 | 1  |
+| ziekenhuis | boxmeer | 17 | 17 | 1  |
+| ziekenhuis | uden | 23 | 23 | 1  |
+| ziekenhuis | dokkum | 2 | 2 | 1  |
+| ziekenhuis | emmeloord | 4 | 4 | 1  |
+| zelfstandig-behandelcentrum | utrecht | 307 | 30 | 1  |
+| zelfstandig-behandelcentrum | amsterdam | 498 | 30 | 1  |
+| zelfstandig-behandelcentrum | rotterdam | 408 | 30 | 1  |
+| zelfstandig-behandelcentrum | den-haag | 387 | 30 | 1  |
+| zelfstandig-behandelcentrum | leiden | 337 | 30 | 1  |
+| zelfstandig-behandelcentrum | haarlem | 439 | 30 | 1  |
+| zelfstandig-behandelcentrum | alkmaar | 110 | 30 | 1  |
+| zelfstandig-behandelcentrum | hoorn | 73 | 30 | 1  |
+| zelfstandig-behandelcentrum | den-helder | 6 | 6 | 1  |
+| zelfstandig-behandelcentrum | almere | 254 | 30 | 1  |
+| zelfstandig-behandelcentrum | lelystad | 37 | 30 | 1  |
+| zelfstandig-behandelcentrum | amersfoort | 300 | 30 | 1  |
+| zelfstandig-behandelcentrum | hilversum | 521 | 30 | 1  |
+| zelfstandig-behandelcentrum | gouda | 323 | 30 | 1  |
+| zelfstandig-behandelcentrum | dordrecht | 229 | 30 | 1  |
+| zelfstandig-behandelcentrum | gorinchem | 85 | 30 | 1  |
+| zelfstandig-behandelcentrum | breda | 97 | 30 | 1  |
+| zelfstandig-behandelcentrum | tilburg | 135 | 30 | 1  |
+| zelfstandig-behandelcentrum | eindhoven | 103 | 30 | 1  |
+| zelfstandig-behandelcentrum | helmond | 108 | 30 | 1  |
+| zelfstandig-behandelcentrum | oss | 164 | 30 | 1  |
+| zelfstandig-behandelcentrum | nijmegen | 183 | 30 | 1  |
+| zelfstandig-behandelcentrum | arnhem | 183 | 30 | 1  |
+| zelfstandig-behandelcentrum | ede | 164 | 30 | 1  |
+| zelfstandig-behandelcentrum | apeldoorn | 61 | 30 | 1  |
+| zelfstandig-behandelcentrum | zutphen | 73 | 30 | 1  |
+| zelfstandig-behandelcentrum | doetinchem | 54 | 30 | 1  |
+| zelfstandig-behandelcentrum | winterswijk | 18 | 18 | 1  |
+| zelfstandig-behandelcentrum | deventer | 53 | 30 | 1  |
+| zelfstandig-behandelcentrum | zwolle | 56 | 30 | 1  |
+| zelfstandig-behandelcentrum | harderwijk | 62 | 30 | 1  |
+| zelfstandig-behandelcentrum | meppel | 53 | 30 | 1  |
+| zelfstandig-behandelcentrum | hardenberg | 25 | 25 | 1  |
+| zelfstandig-behandelcentrum | almelo | 59 | 30 | 1  |
+| zelfstandig-behandelcentrum | enschede | 57 | 30 | 1  |
+| zelfstandig-behandelcentrum | assen | 69 | 30 | 1  |
+| zelfstandig-behandelcentrum | emmen | 11 | 11 | 1  |
+| zelfstandig-behandelcentrum | groningen | 77 | 30 | 1  |
+| zelfstandig-behandelcentrum | stadskanaal | 19 | 19 | 1  |
+| zelfstandig-behandelcentrum | delfzijl | 17 | 17 | 1  |
+| zelfstandig-behandelcentrum | leeuwarden | 41 | 30 | 1  |
+| zelfstandig-behandelcentrum | sneek | 40 | 30 | 1  |
+| zelfstandig-behandelcentrum | heerenveen | 36 | 30 | 1  |
+| zelfstandig-behandelcentrum | drachten | 47 | 30 | 1  |
+| zelfstandig-behandelcentrum | goes | 46 | 30 | 1  |
+| zelfstandig-behandelcentrum | middelburg | 41 | 30 | 1  |
+| zelfstandig-behandelcentrum | terneuzen | 46 | 30 | 1  |
+| zelfstandig-behandelcentrum | bergen-op-zoom | 21 | 21 | 1  |
+| zelfstandig-behandelcentrum | roosendaal | 65 | 30 | 1  |
+| zelfstandig-behandelcentrum | venlo | 18 | 18 | 1  |
+| zelfstandig-behandelcentrum | weert | 35 | 30 | 1  |
+| zelfstandig-behandelcentrum | roermond | 33 | 30 | 1  |
+| zelfstandig-behandelcentrum | sittard | 88 | 30 | 1  |
+| zelfstandig-behandelcentrum | heerlen | 83 | 30 | 1  |
+| zelfstandig-behandelcentrum | maastricht | 81 | 30 | 1  |
+| zelfstandig-behandelcentrum | tiel | 112 | 30 | 1  |
+| zelfstandig-behandelcentrum | boxmeer | 89 | 30 | 1  |
+| zelfstandig-behandelcentrum | uden | 147 | 30 | 1  |
+| zelfstandig-behandelcentrum | dokkum | 22 | 22 | 1  |
+| zelfstandig-behandelcentrum | emmeloord | 11 | 11 | 1  |
+
+Totaal: 1550 unieke locaties; status: in_onderhandeling 1166, vergoed_als_contract 200, gecontracteerd 184.

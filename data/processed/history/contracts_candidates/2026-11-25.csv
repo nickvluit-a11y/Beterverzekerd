@@ -216,17 +216,17 @@ Zorg en Zekerheid | 7085
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,Eucare,Aevitae,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Eucare', 'Aevitae') | ('Eucare', None) | 2"
-2027,06010419,,Menzis,Menzis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', 'Menzis') | ('Menzis', 'Menzis') | 2"
+2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', 'Menzis') | ('Menzis', None) | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,a.s.r.,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('a.s.r.', None) | ('a.s.r.', None) | 2"
 2027,06010419,,a.s.r.,Ik kies zelf,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('a.s.r.', None) | ('a.s.r.', 'Ik kies zelf') | ('a.s.r.', None) | 2"
-2027,06010419,,Zorg en Zekerheid,AZVZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Zorg en Zekerheid', 'AZVZ') | ('Zorg en Zekerheid', None) | 2"
+2027,06010419,,Zorg en Zekerheid,AZVZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Zorg en Zekerheid', 'AZVZ') | ('Zorg en Zekerheid', 'Zorg en Zekerheid') | 2"
 2027,06010419,,Eucare,Aevitae,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Eucare', 'Aevitae') | ('Eucare', None) | 2"
 2027,06010419,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', None) | 2"
 2027,06010419,,VGZ,Bewuzt,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'Bewuzt') | ('VGZ', None) | 2"
 2027,06010419,,Eucare,Care4Life,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Eucare', 'Care4Life') | ('Eucare', None) | 2"
-2027,06010419,,CZ,CZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'CZ') | ('CZ', 'CZ') | 2"
-2027,06010419,,CZ,CZdirect,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'CZdirect') | ('CZ', 'CZ') | 2"
+2027,06010419,,CZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', None) | ('CZ', None) | 2"
+2027,06010419,,CZ,CZdirect,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'CZdirect') | ('CZ', None) | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'De christelijke zorgverzekeraar') | ('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'De christelijke zorgverzekeraar') | ('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'De Friesland') | ('Achmea', 'Zilveren Kruis') | 2"
@@ -234,33 +234,33 @@ Zorg en Zekerheid | 7085
 2027,06010419,,DSW,DSW,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('DSW', 'DSW') | ('DSW', 'DSW') | 2"
 2027,06010419,,Eucare,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Eucare', None) | ('Eucare', None) | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'FBTO') | ('Achmea', 'Zilveren Kruis') | 2"
-2027,06010419,,Menzis,Menzis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', 'Menzis') | 3"
+2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', None) | 3"
 2027,06010419,,Salland,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Salland', 'Salland') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Interpolis') | ('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,DSW,DSW,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('DSW', 'DSW') | ('DSW', 'DSW') | 2"
 2027,06010419,,VGZ,IZA,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'IZA') | ('VGZ', None) | 2"
 2027,06010419,,VGZ,IZZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'IZZ') | ('VGZ', None) | 2"
-2027,06010419,,CZ,Just,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'Just') | ('CZ', 'CZ') | 2"
-2027,06010419,,Menzis,Menzis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', 'Menzis') | ('Menzis', 'Menzis') | 3"
+2027,06010419,,CZ,Just,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'Just') | ('CZ', None) | 2"
+2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', None) | ('Menzis', None) | 3"
 2027,06010419,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', None) | 2"
-2027,06010419,,CZ,Nationale-Nederlanden,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'Nationale-Nederlanden') | ('CZ', 'CZ') | 2"
-2027,06010419,,CZ,OHRA,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'OHRA') | ('CZ', 'CZ') | 2"
+2027,06010419,,CZ,Nationale-Nederlanden,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'Nationale-Nederlanden') | ('CZ', None) | 2"
+2027,06010419,,CZ,OHRA,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'OHRA') | ('CZ', None) | 2"
 2027,06010419,,VGZ,ONVZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'ONVZ') | ('VGZ', 'ONVZ') | 2"
-2027,06010419,,Menzis,Menzis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', 'Menzis') | 3"
+2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', None) | 3"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', None) | 2"
-2027,06010419,,CZ,CZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', 'CZ') | 2"
+2027,06010419,,CZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('CZ', None) | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Achmea', 'Zilveren Kruis') | 2"
 2027,06010419,,DSW,DSW,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('DSW', 'DSW') | 2"
 2027,06010419,,Salland,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Salland', 'Salland') | ('Salland', 'Salland') | 2"
 2027,06010419,,DSW,Stad Holland,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('DSW', 'Stad Holland') | ('DSW', 'DSW') | 2"
-2027,06010419,,Menzis,Menzis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', 'Menzis') | 3"
+2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', None) | 3"
 2027,06010419,,DSW,DSW,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('DSW', 'DSW') | 2"
 2027,06010419,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', None) | 2"
 2027,06010419,,VGZ,Univé,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'Univé') | ('VGZ', None) | 2"
 2027,06010419,,VGZ,UMC Zorgverzekering,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'UMC Zorgverzekering') | ('VGZ', None) | 2"
-2027,06010419,,Menzis,VinkVink,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', 'VinkVink') | ('Menzis', 'Menzis') | 3"
+2027,06010419,,Menzis,VinkVink,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('Menzis', 'VinkVink') | ('Menzis', None) | 3"
 2027,06010419,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', None) | ('VGZ', None) | 2"
 2027,06010419,,VGZ,ONVZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'ONVZ') | 2"
 2027,06010419,,VGZ,Univé,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-25,True,"('VGZ', 'Univé') | ('VGZ', None) | 2"
@@ -381,10 +381,8 @@ Delta Lloyd en OHRA | 9664 | Geen Contract | Contract | Contract"
 2026,06010865,,a.s.r.,Ik kies zelf,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,Ditzo Zorgverzekering 3336 Geen Contract Geen Contract Contract*
 2026,06010865,,a.s.r.,a.s.r.,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,IAK Volmacht B.V. (ASR Ziektekosten) 8973 Geen Contract Geen Contract Contract*
 2026,06010865,,CZ,OHRA,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,CZ Delta Lloyd en OHRA 9664 Geen Contract Contract Contract
-2026,06010865,,CZ,CZ,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,CZ 7119 Geen Contract Contract Contract
 2026,06010865,,CZ,OHRA,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,OHRA Ziektekostenverzekering N.V. 0201 Geen Contract Contract Contract
 2026,06010865,,CZ,OHRA,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,OHRA Zorgverzekeringen N.V. 7053 Geen Contract Contract Contract
-2026,06010865,,CZ,CZ,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,OWM CZ Groep Zorgverzekeraar ua 7119 Geen Contract Contract Contract
 2026,06010865,,VGZ,ONVZ,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,ONVZ Ziektekostenverzekeraar 3343 Geen Contract Geen Contract Contract
 2026,06010865,,Salland,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,Salland verzekeringen 7032 Geen Contract Geen Contract Geen Contract
 2026,06010865,,Salland,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-25,True,Salland Zorgdirect 7032 Geen Contract Geen Contract Geen Contract
@@ -755,10 +753,10 @@ Delta Lloyd en OHRA | 9664 | Geen Contract | Contract | Contract"
 2027,06080701,,a.s.r.,a.s.r.,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,ASR ASR Gecontracteerd
 2027,06080701,,a.s.r.,Ik kies zelf,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,Ditzo (Ik Kies Zelf ASR) Gecontracteerd
 2027,06080701,,Eucare,Care4Life,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,Care4life In onderhandeling
+2027,06080701,,CZ,,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,CZ CZ Gecontracteerd
 2027,06080701,,CZ,CZdirect,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,CZ Direct Gecontracteerd
 2027,06080701,,CZ,Just,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,Just Gecontracteerd
 2027,06080701,,DSW,,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,DSW DSW Gecontracteerd
-2027,06080701,,Menzis,Menzis,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,Menzis Menzis In onderhandeling
 2027,06080701,,Menzis,VinkVink,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,VinkVink In onderhandeling
 2027,06080701,,Menzis,Menzis,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,Anderzorg In onderhandeling
 2027,06080701,,Salland,,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-25,True,Salland Salland In onderhandeling
