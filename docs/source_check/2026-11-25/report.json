@@ -8,7 +8,7 @@
     "status": 200,
     "final_url": "https://www.zorginzicht.nl/algemeen/open-data-medisch-specialistische-zorg-msz-ziekenhuizen-en-zelfstandige-behandelcentra",
     "content_type": "text/html;charset=UTF-8",
-    "bytes_read": 19564
+    "bytes_read": 19565
   },
   {
     "id": "zorginzicht_openbare_data",
@@ -19,7 +19,7 @@
     "status": 200,
     "final_url": "https://www.zorginzicht.nl/algemeen/map/openbare-data",
     "content_type": "text/html;charset=UTF-8",
-    "bytes_read": 15814
+    "bytes_read": 15815
   },
   {
     "id": "zorginzicht_transparantiekalender_msz",
@@ -30,15 +30,26 @@
     "status": 200,
     "final_url": "https://www.zorginzicht.nl/transparantiekalender/medisch-specialistische-zorg",
     "content_type": "text/html;charset=UTF-8",
-    "bytes_read": 31966
+    "bytes_read": 31967
   },
   {
     "id": "nza_wachttijden_dataset",
     "layer": "waiting_times",
     "url": "https://puc.overheid.nl/nza/doc/PUC_651798_22/",
-    "links": [],
-    "robots": "yes",
-    "status": 403
+    "links": [
+      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_659356_22&versienummer=1",
+      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_730444_22&versienummer=1",
+      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_730445_22&versienummer=1",
+      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_757085_22&versienummer=1",
+      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_772052_22&versienummer=1",
+      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_784122_22&versienummer=1",
+      "https://puc.overheid.nl/PUC/Handlers/DownloadDocument.ashx?identifier=PUC_809508_22&versienummer=1"
+    ],
+    "robots": "unknown (HTTP 500)",
+    "status": 200,
+    "final_url": "https://puc.overheid.nl/nza/doc/PUC_651798_22/",
+    "content_type": "text/html; charset=utf-8",
+    "bytes_read": 33689
   },
   {
     "id": "nza_zorgbeeld_openapi",
@@ -79,7 +90,7 @@
     "status": 200,
     "final_url": "https://www.vgz.nl/zorg-regelen/zorgzoeker",
     "content_type": "text/html; charset=utf-8",
-    "bytes_read": 194859
+    "bytes_read": 194842
   },
   {
     "id": "zorgverzekeringskaart",
@@ -135,8 +146,8 @@
     "layer": "waiting_times",
     "url": "https://puc.overheid.nl/robots.txt",
     "links": [],
-    "robots": "yes",
-    "status": 403
+    "robots": "unknown (HTTP 500)",
+    "status": 500
   },
   {
     "id": "pdok_locatieserver",

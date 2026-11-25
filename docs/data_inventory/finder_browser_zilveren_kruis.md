@@ -18,7 +18,7 @@ Vul een postcode in voor een nauwkeuriger resultaat (INPUT/text)
 - #autofill-Locatie-input: gekozen suggestie voor 3584 CX
 
 - na zoeken: https://www.zilverenkruis.nl/consumenten/zorgzoeker
-- zichtbare tekst: 2,374 tekens
+- zichtbare tekst: 2,355 tekens
 - JSON-antwoorden voor/na zoeken: 0/2
 
 ## JSON-antwoorden na het zoeken (grootste eerst)

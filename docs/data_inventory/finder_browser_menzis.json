@@ -1,0 +1,169 @@
+{
+  "TYPE_ZORGAANBIEDER" : [ ],
+  "SPECIALISME" : [ {
+    "id" : "1140736692",
+    "weergaveWaarde" : "Ziekenhuis / ZBC",
+    "zoekWaarde" : "ziekenhuis / zbc",
+    "zoektermType" : "SPECIALISME",
+    "referentieId" : "220906197"
+  } ],
+  "AANDOENING" : [ ],
+  "BEHANDELING" : [ ],
+  "VESTIGING" : [ {
+    "id" : "1140736673",
+    "weergaveWaarde" : "Ziekenhuisgroep Twente (Psychiatrie) (Vestiging)",
+    "zoekWaarde" : "ziekenhuisgroep twente (psychiatrie)",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "51159679"
+  }, {
+    "id" : "1140736682",
+    "weergaveWaarde" : "Ziekenhuis Nij Smellinghe, loc. Dokkum (Vestiging)",
+    "zoekWaarde" : "ziekenhuis nij smellinghe, loc. dokkum",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "214346381"
+  }, {
+    "id" : "1140736669",
+    "weergaveWaarde" : "Ziekenhuis Gelderse Vallei (ZGV) (Vestiging)",
+    "zoekWaarde" : "ziekenhuis gelderse vallei (zgv)",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "51226417"
+  }, {
+    "id" : "1140736672",
+    "weergaveWaarde" : "Ziekenhuis Gelderse Vallei (ZGV), polikliniek Wageningen (Vestiging)",
+    "zoekWaarde" : "ziekenhuis gelderse vallei (zgv), polikliniek wageningen",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "215437063"
+  }, {
+    "id" : "1140736678",
+    "weergaveWaarde" : "Ziekenhuis Groep Twente (ZGT), loc. buitenpolikliniek Rijssen (Vestiging)",
+    "zoekWaarde" : "ziekenhuis groep twente (zgt), loc. buitenpolikliniek rijssen",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "51225952"
+  }, {
+    "id" : "1140736680",
+    "weergaveWaarde" : "Ziekenhuis Nij Smellinghe (Vestiging)",
+    "zoekWaarde" : "ziekenhuis nij smellinghe",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "51225903"
+  }, {
+    "id" : "1140736664",
+    "weergaveWaarde" : "Ziekenhuis Amstelland (Vestiging)",
+    "zoekWaarde" : "ziekenhuis amstelland",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "51123060"
+  }, {
+    "id" : "1140736665",
+    "weergaveWaarde" : "Ziekenhuis Amstelland, loc. Gezondheidscentrum de Waterlinie (Vestiging)",
+    "zoekWaarde" : "ziekenhuis amstelland, loc. gezondheidscentrum de waterlinie",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "51227051"
+  }, {
+    "id" : "1140736670",
+    "weergaveWaarde" : "Ziekenhuis Gelderse Vallei (ZGV), loc. Barneveld (Vestiging)",
+    "zoekWaarde" : "ziekenhuis gelderse vallei (zgv), loc. barneveld",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "215437364"
+  }, {
+    "id" : "1140736671",
+    "weergaveWaarde" : "Ziekenhuis Gelderse Vallei (ZGV), loc. polikliniek Veenendaal (Vestiging)",
+    "zoekWaarde" : "ziekenhuis gelderse vallei (zgv), loc. polikliniek veenendaal",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "215436846"
+  }, {
+    "id" : "1140736676",
+    "weergaveWaarde" : "Ziekenhuis Groep Twente (ZGT), loc. Almelo (Vestiging)",
+    "zoekWaarde" : "ziekenhuis groep twente (zgt), loc. almelo",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "63694056"
+  }, {
+    "id" : "1140736677",
+    "weergaveWaarde" : "Ziekenhuis Groep Twente (ZGT), loc. buitenpolikliniek Nocepta (Vestiging)",
+    "zoekWaarde" : "ziekenhuis groep twente (zgt), loc. buitenpolikliniek nocepta",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "214664780"
+  }, {
+    "id" : "1140736679",
+    "weergaveWaarde" : "Ziekenhuis Groep Twente (ZGT), loc. Hengelo (Vestiging)",
+    "zoekWaarde" : "ziekenhuis groep twente (zgt), loc. hengelo",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "63694054"
+  }, {
+    "id" : "1140736688",
+    "weergaveWaarde" : "Ziekenhuis Rivierenland, loc. Barbara polikliniek (Vestiging)",
+    "zoekWaarde" : "ziekenhuis rivierenland, loc. barbara polikliniek",
+    "zoektermType" : "VESTIGING",
+    "referentieId" : "215118379"
+  } ],
+  "ZORGAANBIEDER" : [ {
+    "id" : "1140736687",
+    "weergaveWaarde" : "Ziekenhuis Rivierenland (Ziekenhuis)",
+    "zoekWaarde" : "ziekenhuis rivierenland",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140736675",
+    "weergaveWaarde" : "Ziekenhuisgroep Twente (ZGT) (Ziekenhuis)",
+    "zoekWaarde" : "ziekenhuisgroep twente (zgt)",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140736674",
+    "weergaveWaarde" : "Ziekenhuisgroep Twente (Psychiatrie) (GGZ Geestelijke Gezondheidszorg)",
+    "zoekWaarde" : "ziekenhuisgroep twente (psychiatrie)",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140736685",
+    "weergaveWaarde" : "Ziekenhuis Rijnstate (CBT) (Tandheelkundig centrum)",
+    "zoekWaarde" : "ziekenhuis rijnstate (cbt)",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140736690",
+    "weergaveWaarde" : "Ziekenhuis Sint Jansdal (Ziekenhuis)",
+    "zoekWaarde" : "ziekenhuis sint jansdal",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140736681",
+    "weergaveWaarde" : "Ziekenhuis Nij Smellinghe (Ziekenhuis)",
+    "zoekWaarde" : "ziekenhuis nij smellinghe",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140736666",
+    "weergaveWaarde" : "Ziekenhuis Amstelland (Organisatie) (Ziekenhuis)",
+    "zoekWaarde" : "ziekenhuis amstelland (organisatie)",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140736668",
+    "weergaveWaarde" : "Ziekenhuis Gelderse Vallei (Ziekenhuis)",
+    "zoekWaarde" : "ziekenhuis gelderse vallei",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140428043",
+    "weergaveWaarde" : "Alexander Monro Ziekenhuis (Zelfstandig behandelcentrum)",
+    "zoekWaarde" : "alexander monro ziekenhuis",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140433679",
+    "weergaveWaarde" : "Antoni van Leeuwenhoek Ziekenhuis (Tandheelkundig centrum)",
+    "zoekWaarde" : "antoni van leeuwenhoek ziekenhuis",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140427818",
+    "weergaveWaarde" : "ALBERT SCHWEITZER ZIEKENHUIS (PAAZ) (GGZ Geestelijke Gezondheidszorg)",
+    "zoekWaarde" : "albert schweitzer ziekenhuis (paaz)",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140435630",
+    "weergaveWaarde" : "Apotheek Maasstad Ziekenhuis (Apotheker)",
+    "zoekWaarde" : "apotheek maasstad ziekenhuis",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140452379",
+    "weergaveWaarde" : "BovenIJ Ziekenhuis (Ziekenhuis)",
+    "zoekWaarde" : "bovenij ziekenhuis",
+    "zoektermType" : "ZORGAANBIEDER"
+  }, {
+    "id" : "1140420546",
+    "weergaveWaarde" : "Academisch Ziekenhuis Rotterdam (Leverancier hulpmiddelen)",
+    "zoekWaarde" : "academisch ziekenhuis rotterdam",
+    "zoektermType" : "ZORGAANBIEDER"
+  } ],
+  "VRIJE_ZOEKTERM" : [ ]
+}
