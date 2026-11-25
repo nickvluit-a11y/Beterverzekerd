@@ -849,3 +849,20 @@ def test_zorgkaart_parse_and_link():
     ])
     linked = link(pd.DataFrame([{**row, "fetched_on": "2026-11-25"}]), locations)
     assert linked.iloc[0]["location_key"] == "06020602-3584CX"
+
+
+def test_explain_in_plain_words():
+    from pipeline.explain import explain, trend_sentences
+    title, measured, (css, verdict) = explain({"indicator": "Heroperatie (revisie) binnen 1 jaar", "rate": 1.81,
+                                               "national_rate": 0.64, "method": "interval", "verdict": "gemiddeld"})
+    assert title == "Heroperatie binnen 1 jaar" and "1,8 op de 100" in measured and "landelijk 0,6" in measured
+    assert "te weinig patiënten" in verdict
+    title, measured, (css, verdict) = explain({"indicator": "Verbetering volgens patiënt na 12 maanden: pijn bij bewegen",
+                                               "rate": 5.75, "national_rate": 5.85, "method": "interval", "verdict": "gemiddeld"})
+    assert "daalde met 5,8 punten (schaal 0 tot 10)" in measured and verdict == "rond het gemiddelde"
+    _, measured, (css, verdict) = explain({"indicator": "Diepe wondinfectie binnen 90 dagen", "rate": 0.0,
+                                           "national_rate": 0.0078, "method": "ratio", "verdict": "beter"})
+    assert "0,0 op de 100" in measured and css == "beter"
+    trend = pd.DataFrame({"indicator": ["Diepe wondinfectie binnen 90 dagen"] * 3, "verslagjaar": [2023, 2024, 2025],
+                          "verdict": ["beter"] * 3})
+    assert trend_sentences(trend) == ["Al 3 jaar beter dan gemiddeld op: diepe wondinfectie binnen 90 dagen"]
