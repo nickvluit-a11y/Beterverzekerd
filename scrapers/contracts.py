@@ -24,7 +24,7 @@ from urllib.parse import urlparse
 import pandas as pd
 import pdfplumber
 
-from scrapers.common import ROOT, PoliteSession, raw_dir, write_meta
+from scrapers.common import ROOT, PoliteSession, raw_dir, today, write_meta
 
 Table = list[list[str | None]]
 
@@ -42,8 +42,14 @@ _DROP = re.compile(r"<(script|style|noscript|svg|nav|footer|header)\b.*?</\1>", 
 _BLOCK = re.compile(r"<(br|/p|/li|/tr|/h\d|/div|/td|/th)\b[^>]*>", re.IGNORECASE)
 
 
+_LABELLED = re.compile(r"<[^>]*?\b(?:alt|aria-label|title)\s*=\s*[\"']([^\"']{2,80})[\"'][^>]*>", re.IGNORECASE)
+
+
 def html_to_text(page: str) -> str:
-    page = _BLOCK.sub("\n", _DROP.sub(" ", page))
+    """Visible text plus the alt/aria-label/title of icons: many contract overviews show the status
+    as an icon whose meaning ('Gecontracteerd', 'In onderhandeling') is only in that attribute."""
+    page = _LABELLED.sub(lambda m: f" {m.group(1)} ", _DROP.sub(" ", page))
+    page = _BLOCK.sub("\n", page)
     text = html_lib.unescape(re.sub(r"<[^>]+>", " ", page))
     lines = (re.sub(r"[ \t ]+", " ", line).strip() for line in text.splitlines())
     return "\n".join(line for line in lines if line)
@@ -147,7 +153,21 @@ def main() -> int:
             results[key] = {"url": url, "organisatie_agb": key, "ok": False, "error": str(exc)}
             print(f"FAIL {key}: {exc}", file=sys.stderr)
     write_meta(out, source="contracts", results=results)
+    write_fetch_report(results)
     return 1 if failures == len(targets) else 0
+
+
+def write_fetch_report(results: dict) -> None:
+    """docs/data_inventory/contract_fetch.md: per organisation whether its page could be fetched."""
+    lines = ["# Contractpagina's ophalen", "", f"Laatste run: {today()}.", "",
+             "| AGB | resultaat | URL |", "|---|---|---|"]
+    for key, r in sorted(results.items(), key=lambda kv: kv[1].get("ok", False)):
+        outcome = f"ok ({r.get('format')}, {r.get('tables', 0)} tabellen)" if r.get("ok") else \
+            "fout: " + str(r.get("error", ""))[:120].replace("|", "/")
+        lines.append(f"| {key} | {outcome} | {r.get('url')} |")
+    path = ROOT / "docs" / "data_inventory" / "contract_fetch.md"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
