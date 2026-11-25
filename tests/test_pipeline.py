@@ -1036,3 +1036,16 @@ def test_menzis_finder_parse():
     row = parse(item)
     assert row["status"] == "vergoed_als_contract" and row["postcode"] == "3584CX" and row["omzetplafond"] is False
     assert parse(dict(item, pakketten=[{"jaar": 2027, "contractStatus": "IETS_ANDERS"}])) is None
+
+
+def test_zk_finder_parse():
+    from scrapers.zk_zorgzoeker import parse
+    result = {"Naam": "UMC Utrecht, loc. AZU", "AGBNummer": 6020602,
+              "Adres": {"Straat": "HEIDELBERGLN", "Huisnummer": "100", "Postcode": "3584CX", "Plaats": "UTRECHT"},
+              "Contracten": [{"StatusOmschrijving": "Nog geen contract: een deel niet vergoed",
+                              "Begindatum": "2027-01-01T00:00:00Z", "IsPlafondafspraakAanwezig": True}]}
+    row = parse(result)
+    assert row["agb"] == "06020602" and row["status"] == "in_onderhandeling" and row["omzetplafond"] is True
+    result["Contracten"][0]["StatusOmschrijving"] = "Contract: vergoed"
+    assert parse(result)["status"] == "gecontracteerd"
+    assert parse(dict(result, Contracten=[])) is None

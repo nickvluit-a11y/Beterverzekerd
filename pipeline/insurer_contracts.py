@@ -21,7 +21,7 @@ import pandas as pd
 
 from pipeline.reference import PROCESSED, REFERENCE, ROOT, normalise
 
-FINDERS = ["cz_zorgvinder", "vgz_zorgzoeker", "menzis_zorgvinder"]
+FINDERS = ["cz_zorgvinder", "vgz_zorgzoeker", "menzis_zorgvinder", "zk_zorgzoeker"]
 WORST_FIRST = ["geen_contract", "in_onderhandeling", "vergoed_als_contract", "gecontracteerd"]
 MIN_NAME_SIMILARITY = 0.75
 MIN_SIMILARITY_SAME_ADDRESS = 0.5
