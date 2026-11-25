@@ -522,33 +522,33 @@ HMC Antoniushove
 HMC Bronovo
 HMC Westeinde
 Borstkanker *
-1 dagen Laatste update: 16 november 2026
+1 dagen Laatste update: 25 november 2026
 Longkanker *
-2 dagen Laatste update: 16 november 2026
+1 dagen Laatste update: 25 november 2026
 Prostaatkanker *
-2 dagen Laatste update: 16 november 2026
+1 dagen Laatste update: 25 november 2026
 Blaaskanker *
-2 dagen Laatste update: 16 november 2026
+1 dagen Laatste update: 25 november 2026
 Nierkanker *
-2 dagen Laatste update: 16 november 2026
+1 dagen Laatste update: 25 november 2026
 Hersentumoren *
-2 dagen Laatste update: 16 november 2026
+1 dagen Laatste update: 25 november 2026
 Kanker in het hoofd-halsgebied *
-1 dagen Laatste update: 16 november 2026
+2 dagen Laatste update: 25 november 2026
 Slokdarmkanker *
-1 dagen Laatste update: 16 november 2026
+1 dagen Laatste update: 25 november 2026
 Endeldarm- anuskanker *
-1 dagen Laatste update: 16 november 2026
+1 dagen Laatste update: 25 november 2026
 Huidkanker *
-1 dagen Laatste update: 16 november 2026
+2 dagen Laatste update: 25 november 2026
 Baarmoederhalskanker *
-1 dagen Laatste update: 16 november 2026
+1 dagen Laatste update: 25 november 2026
 Baarmoederkanker *
-1 dagen Laatste update: 16 november 2026
+1 dagen Laatste update: 25 november 2026
 Lever metastasen *
-1 dagen Laatste update: 16 november 2026
+1 dagen Laatste update: 25 november 2026
 Bot metastasen *
-1 dagen Laatste update: 16 november 2026
+1 dagen Laatste update: 25 november 2026
 Reumatologie
 Polikliniek
 HMC Antoniushove
@@ -564,9 +564,9 @@ HMC Antoniushove
 HMC Bronovo
 HMC Westeinde
 Algemeen
-110 dagen Laatste update: 1 juli 2026
-110 dagen Laatste update: 1 juli 2026
-110 dagen Laatste update: 1 juli 2026
+60 dagen Laatste update: 25 november 2026
+90 dagen Laatste update: 25 november 2026
+60 dagen Laatste update: 25 november 2026
 Slaapcentrum
 Polikliniek
 HMC Antoniushove
