@@ -17,7 +17,7 @@ Call log:
 - input[name=locatie]: ingevuld 3584 CX
 
 - na zoeken: https://www.vgz.nl/zorg-regelen/zorgzoeker/zoekresultaten#/resultaten?zorgsoortId=015&locatie=3584%20CX&straal=50000&jaar=2027&synoniem=Ziekenhuis&uniqueId=2027_185658_6
-- zichtbare tekst: 10,267 tekens
+- zichtbare tekst: 10,269 tekens
 - JSON-antwoorden voor/na zoeken: 17/29
 
 ## JSON-antwoorden na het zoeken (grootste eerst)
@@ -70,10 +70,10 @@ Verzonden:
 {"data":{"gebruikersMenuItems":[{"titel":"Mijn zorgverzekering","link":"https://app.vgz.nl/link/polis?utm_campaign=fn_website-menu-inloggen&amp;utm_medium=web&amp;utm_source=oo","showAsButton":false},{"titel":"Mijn declaratieoverzicht","link":"https://app.vgz.nl/link/verbruikte-zorg?utm_campaign=fn_website-menu-inloggen&amp;utm_medium=web&amp;utm_source=oo","showAsButton":false},{"titel":"Mijn vergoedingen","link":"https://mijn.vgz.nl/vergoedingen","showAsButton":false},{"titel":"Mijn eigen risico","link":"https://app.vgz.nl/link/eigen-risico?utm_campaign=fn_website-menu-inloggen&amp;utm_medium=web&amp;utm_source=oo","showAsButton":false},{"titel":"Mijn facturen","link":"https://app.vgz.nl/link/facturen?utm_campaign=fn_website-menu-inloggen&amp;utm_medium=web&amp;utm_source=oo","showAsButton":false},{"titel":"Mijn postvak","link":"https://app.vgz.nl/link/postvak?utm_campaign=fn_website-menu-inloggen&amp;utm_medium=web&amp;utm_source=oo","showAsButton":false},{"titel":"Mijn gegevens","link":"https://mijn.vgz.nl/gegevens/wijzigen","showAsButton":false},{"titel":"Declaratie indienen","link":"https://app.vgz.nl/link/voor-wie-wilt-u-declareren?utm_campaign=fn_website-menu-inloggen&amp;utm_medium=web&amp;utm_source=oo","showAsButton":false},{"titel":"Inloggen","link":"https://mijn.vgz.nl","showAsButton":true}]}}
 ```
 
-### GET 200 https://api.vgz.nl/zorgzoeker/api/v2/zorgsoort/autocomplete/vgz/2027/'Ziekenhuis'?maxaantal=5 (1,267 tekens)
+### GET 200 https://api.vgz.nl/zorgzoeker/api/v2/zorgsoort/autocomplete/vgz/2027/'Ziekenhuis'?maxaantal=5 (1,263 tekens)
 
 ```
-[{"uniqueId":"2027_185658_6","uri":"http://uvit.nl/CS/Zorgsoort/V1/015","code":"015","zorgsoortType":null,"naam":"Ziekenhuizen en klinieken","synoniem":"Ziekenhuis","niveau":1,"standaardZoekRadius":50,"heeftVerzorgingsgebied":false,"heeftZorgaanbieders":true,"parentNaam":null,"parentUri":null,"displayNaam":"<b>Ziekenhuis</b> (Ziekenhuizen en klinieken)","searchScore":0.57735026},{"uniqueId":"2027_185938_0","uri":"http://uvit.nl/CS/Zorgsoort/V1/015.2000","code":"015.2000","zorgsoortType":null,"naam":"Ziekenhuis onderzoek","synoniem":null,"niveau":2,"standaardZoekRadius":50,"heeftVerzorgingsgebied":false,"heeftZorgaanbieders":true,"parentNaam":"Ziekenhuizen en klinieken","parentUri":"http://uvit.nl/CS/Zorgsoort/V1/015","displayNaam":"<b>Ziekenhuis</b> onderzoek","searchScore":0.57735026},{"uniqueId":"2027_185938_3","uri":"http://uvit.nl/CS/Zorgsoort/V1/015.2000","code":"015.2000","zorgsoortType":null,"naam":"Ziekenhuis onderzoek","synoniem":"onderzoek in het ziekenhuis","niveau":2,"standaardZoekRadius":50,"heeftVerzorgingsgebied":false,"heeftZorgaanbieders":true,"parentNaam":"Ziekenhuizen en klinieken","parentUri":"http://uvit.nl/CS/Zorgsoort/V1/015","displayNaam":"onderzoek in het <b>ziekenhuis</b> (Ziekenhuis onderzoek)","searchScore":0.57735026}]
+[{"uniqueId":"2027_185658_6","uri":"http://uvit.nl/CS/Zorgsoort/V1/015","code":"015","zorgsoortType":null,"naam":"Ziekenhuizen en klinieken","synoniem":"Ziekenhuis","niveau":1,"standaardZoekRadius":50,"heeftVerzorgingsgebied":false,"heeftZorgaanbieders":true,"parentNaam":null,"parentUri":null,"displayNaam":"<b>Ziekenhuis</b> (Ziekenhuizen en klinieken)","searchScore":3.4353158},{"uniqueId":"2027_185938_0","uri":"http://uvit.nl/CS/Zorgsoort/V1/015.2000","code":"015.2000","zorgsoortType":null,"naam":"Ziekenhuis onderzoek","synoniem":null,"niveau":2,"standaardZoekRadius":50,"heeftVerzorgingsgebied":false,"heeftZorgaanbieders":true,"parentNaam":"Ziekenhuizen en klinieken","parentUri":"http://uvit.nl/CS/Zorgsoort/V1/015","displayNaam":"<b>Ziekenhuis</b> onderzoek","searchScore":2.093168},{"uniqueId":"2027_185938_3","uri":"http://uvit.nl/CS/Zorgsoort/V1/015.2000","code":"015.2000","zorgsoortType":null,"naam":"Ziekenhuis onderzoek","synoniem":"onderzoek in het ziekenhuis","niveau":2,"standaardZoekRadius":50,"heeftVerzorgingsgebied":false,"heeftZorgaanbieders":true,"parentNaam":"Ziekenhuizen en klinieken","parentUri":"http://uvit.nl/CS/Zorgsoort/V1/015","displayNaam":"onderzoek in het <b>ziekenhuis</b> (Ziekenhuis onderzoek)","searchScore":1.6012607}]
 ```
 
 ### GET 200 https://api.vgz.nl/zorgzoeker/api/v2/zorgsoort/vgz/2027/015?uniqueId=2027_185658_6 (465 tekens)
@@ -117,17 +117,17 @@ Verzonden:
 
 Verzonden:
 ```
-[{"time":"2026-11-25T20:23:57.054Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"4Uyt2wkxCcfpx1nql5Plk2","ai.session.id":"PgwhnIYi5wFqgYjLY56R2F","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"1eff38d28be74adfa2d751df0053e69f","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.role":"zorgzoeker"},"data":{"baseType":"RemoteDependencyData","baseData":{"id":"|1eff38d28be74adfa2d751df0053e69f.ace5c26c45ff42cc.","ver":2,"name":"GET https://cdn.vgz.nl/ui-assets/ds/assets/v/latest/build/assets/iconen/vgz/close.svg","resultCode":"200","duration":"00:00:00.010","success":true,"data":"GET https://cdn.vgz.nl/ui-assets/ds/assets/v/latest/build/assets/iconen/vgz/close.svg","target":"cdn.vgz.nl","type":"Fetch","properties":{"HttpMethod":"GET","ApplicationId":"zorgzoeker","ProgramId":"OO","MerkCode":"VGZ","Environment":"P","BuildNumber":"20261104-2"},"measurements":{}}}},{"time":"2026-11-25T20:23:57.057Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"4Uyt2wkxCcfpx1nql5Plk2","ai.session.id":"PgwhnIYi5wFqgYjLY56R2F","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"1eff38d28be74adfa2d751df0053e69f","ai.internal.sdkVersion":"javascrip
+[{"time":"2026-11-25T20:48:24.169Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"jK59mT9Ni3Q/MhTl5DVDQg","ai.session.id":"dBngCteU2SnUiu6WjAQnoU","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"ccd780cbd83645d3912b19670b97e27f","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.role":"zorgzoeker"},"data":{"baseType":"RemoteDependencyData","baseData":{"id":"|ccd780cbd83645d3912b19670b97e27f.071945fef92f4b29.","ver":2,"name":"GET https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true","resultCode":"200","duration":"00:00:00.034","success":true,"data":"GET https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true","target":"maps.googleapis.com","type":"Ajax","properties":{"HttpMethod":"GET","ApplicationId":"zorgzoeker","ProgramId":"OO","MerkCode":"VGZ","Environment":"P","BuildNumber":"20261104-2"},"measurements":{}}}},{"time":"2026-11-25T20:48:24.068Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"jK59mT9Ni3Q/MhTl5DVDQg","ai.session.id":"dBngCteU2SnUiu6WjAQnoU","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"ccd780cbd83645d3912b19670b97e27f","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.role
 ```
 ```
-{"itemsReceived":40,"itemsAccepted":40,"appId":"4c09065e-fbc0-411d-942e-798bce811f99","errors":[]}
+{"itemsReceived":13,"itemsAccepted":13,"appId":"4c09065e-fbc0-411d-942e-798bce811f99","errors":[]}
 ```
 
 ### POST 200 https://dc.services.visualstudio.com/v2/track (98 tekens)
 
 Verzonden:
 ```
-[{"time":"2026-11-25T20:24:18.031Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"4Uyt2wkxCcfpx1nql5Plk2","ai.session.id":"PgwhnIYi5wFqgYjLY56R2F","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker/zoekresultaten","ai.operation.id":"0d4ff36b0ef64b66b15ae5d14b39247a","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.role":"zorgzoeker"},"data":{"baseType":"RemoteDependencyData","baseData":{"id":"|0d4ff36b0ef64b66b15ae5d14b39247a.e3b177884bd24f20.","ver":2,"name":"GET https://cdn.cookielaw.org/logos/static/ot_guard_logo.svg","resultCode":"200","duration":"00:00:00.052","success":true,"data":"GET https://cdn.cookielaw.org/logos/static/ot_guard_logo.svg","target":"cdn.cookielaw.org","type":"Fetch","properties":{"HttpMethod":"GET","ApplicationId":"zorgzoeker","ProgramId":"OO","MerkCode":"VGZ","Environment":"P","BuildNumber":"20261104-2"},"measurements":{}}}},{"time":"2026-11-25T20:24:18.117Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"4Uyt2wkxCcfpx1nql5Plk2","ai.session.id":"PgwhnIYi5wFqgYjLY56R2F","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker/zoekresultaten","ai.operation.id":"0d4ff36b0ef64b66b15ae5d14b39247a","ai.internal.sdkVersion":"javascript:2.8.18","ai
+[{"time":"2026-11-25T20:48:43.488Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.RemoteDependency","tags":{"ai.user.id":"jK59mT9Ni3Q/MhTl5DVDQg","ai.session.id":"dBngCteU2SnUiu6WjAQnoU","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker/zoekresultaten","ai.operation.id":"68823b91b5f14375a24bd301ed34eb6b","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.role":"zorgzoeker"},"data":{"baseType":"RemoteDependencyData","baseData":{"id":"|68823b91b5f14375a24bd301ed34eb6b.910df80b565c4ff1.","ver":2,"name":"GET https://api.vgz.nl/zorgzoeker/api/v2/resource/vgz","resultCode":"200","duration":"00:00:00.443","success":true,"data":"GET https://api.vgz.nl/zorgzoeker/api/v2/resource/vgz","target":"api.vgz.nl","type":"Ajax","properties":{"HttpMethod":"GET","ApplicationId":"zorgzoeker","ProgramId":"OO","MerkCode":"VGZ","Environment":"P","BuildNumber":"20261104-2"},"measurements":{}}}},{"time":"2026-11-25T20:48:43.964Z","iKey":"3e19b529-e9ba-4d81-b93f-beb91c0082f4","name":"Microsoft.ApplicationInsights.3e19b529e9ba4d81b93fbeb91c0082f4.Event","tags":{"ai.user.id":"jK59mT9Ni3Q/MhTl5DVDQg","ai.session.id":"dBngCteU2SnUiu6WjAQnoU","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker/zoekresultaten","ai.operation.id":"68823b91b5f14375a24bd301ed34eb6b","ai.internal.sdkVersion":"javascript:2.8.18","ai.cloud.role":"zorgzoeker"},"data"
 ```
 ```
 {"itemsReceived":95,"itemsAccepted":95,"appId":"4c09065e-fbc0-411d-942e-798bce811f99","errors":[]}
@@ -137,7 +137,7 @@ Verzonden:
 
 Verzonden:
 ```
-[{"time":"2026-11-25T20:23:56.876Z","iKey":"1a60808c-e79e-4613-8e2d-a1dc5da2812e","name":"Microsoft.ApplicationInsights.1a60808ce79e46138e2da1dc5da2812e.Message","tags":{"ai.user.id":"4Uyt2wkxCcfpx1nql5Plk2","ai.session.id":"PgwhnIYi5wFqgYjLY56R2F","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"d5b76877816b4890832d32532605e729","ai.internal.sdkVersion":"javascript:3.4.1","ai.internal.snippet":"-"},"data":{"baseType":"MessageData","baseData":{"ver":2,"message":"Utils.Log - undefined *** ChatbotComponent: init","severityLevel":1,"properties":{"params":"[{\"appInsights\":{\"enabled\":true,\"instrumentationKey\":\"1a60808c-e79e-4613-8e2d-a1dc5da2812e\"},\"autoStart\":false,\"brandLabel\":\"VGZ\",\"chatApiStatusUrl\":\"https://vb-pr-am.vgz.nl/chat-api/status\",\"chatApiUrl\":\"https://vb-pr-am.vgz.nl/chat-api/\",\"chatButtonHidden\":false,\"embedded\":false,\"environmentString\":\"OO\",\"showOffline\":false,\"signalRApiPostfix\":\"signalr\"}]","MerkCode":"VGZ"}}}}]
+[{"time":"2026-11-25T20:48:21.917Z","iKey":"1a60808c-e79e-4613-8e2d-a1dc5da2812e","name":"Microsoft.ApplicationInsights.1a60808ce79e46138e2da1dc5da2812e.Message","tags":{"ai.user.id":"jK59mT9Ni3Q/MhTl5DVDQg","ai.session.id":"dBngCteU2SnUiu6WjAQnoU","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"5595026659604088be55892d14074776","ai.internal.sdkVersion":"javascript:3.4.1","ai.internal.snippet":"-"},"data":{"baseType":"MessageData","baseData":{"ver":2,"message":"Utils.Log - undefined *** ChatbotComponent: init","severityLevel":1,"properties":{"params":"[{\"appInsights\":{\"enabled\":true,\"instrumentationKey\":\"1a60808c-e79e-4613-8e2d-a1dc5da2812e\"},\"autoStart\":false,\"brandLabel\":\"VGZ\",\"chatApiStatusUrl\":\"https://vb-pr-am.vgz.nl/chat-api/status\",\"chatApiUrl\":\"https://vb-pr-am.vgz.nl/chat-api/\",\"chatButtonHidden\":false,\"embedded\":false,\"environmentString\":\"OO\",\"showOffline\":false,\"signalRApiPostfix\":\"signalr\"}]","MerkCode":"VGZ"}}}}]
 ```
 ```
 {"itemsReceived":1,"itemsAccepted":1,"appId":"4f0376cb-a1ad-461a-a675-ff518fd67457","errors":[]}
@@ -147,16 +147,16 @@ Verzonden:
 
 Verzonden:
 ```
-[{"time":"2026-11-25T20:23:56.876Z","iKey":"1a60808c-e79e-4613-8e2d-a1dc5da2812e","name":"Microsoft.ApplicationInsights.1a60808ce79e46138e2da1dc5da2812e.Message","tags":{"ai.user.id":"4Uyt2wkxCcfpx1nql5Plk2","ai.session.id":"PgwhnIYi5wFqgYjLY56R2F","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"d5b76877816b4890832d32532605e729","ai.internal.sdkVersion":"javascript:3.4.1","ai.internal.snippet":"-"},"data":{"baseType":"MessageData","baseData":{"ver":2,"message":"Utils.Log - undefined *** ChatbotComponent: init","severityLevel":1,"properties":{"params":"[{\"appInsights\":{\"enabled\":true,\"instrumentationKey\":\"1a60808c-e79e-4613-8e2d-a1dc5da2812e\"},\"autoStart\":false,\"brandLabel\":\"VGZ\",\"chatApiStatusUrl\":\"https://vb-pr-am.vgz.nl/chat-api/status\",\"chatApiUrl\":\"https://vb-pr-am.vgz.nl/chat-api/\",\"chatButtonHidden\":false,\"embedded\":false,\"environmentString\":\"OO\",\"showOffline\":false,\"signalRApiPostfix\":\"signalr\"}]","MerkCode":"VGZ"}}}},{"time":"2026-11-25T20:23:57.395Z","iKey":"1a60808c-e79e-4613-8e2d-a1dc5da2812e","name":"Microsoft.ApplicationInsights.1a60808ce79e46138e2da1dc5da2812e.Message","tags":{"ai.user.id":"4Uyt2wkxCcfpx1nql5Plk2","ai.session.id":"PgwhnIYi5wFqgYjLY56R2F","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"4c3e46a395b34946b5233e1cc2732a2f","ai.internal.sdkVersion":"javascript:3.4.1","ai.interna
+[{"time":"2026-11-25T20:48:21.917Z","iKey":"1a60808c-e79e-4613-8e2d-a1dc5da2812e","name":"Microsoft.ApplicationInsights.1a60808ce79e46138e2da1dc5da2812e.Message","tags":{"ai.user.id":"jK59mT9Ni3Q/MhTl5DVDQg","ai.session.id":"dBngCteU2SnUiu6WjAQnoU","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"5595026659604088be55892d14074776","ai.internal.sdkVersion":"javascript:3.4.1","ai.internal.snippet":"-"},"data":{"baseType":"MessageData","baseData":{"ver":2,"message":"Utils.Log - undefined *** ChatbotComponent: init","severityLevel":1,"properties":{"params":"[{\"appInsights\":{\"enabled\":true,\"instrumentationKey\":\"1a60808c-e79e-4613-8e2d-a1dc5da2812e\"},\"autoStart\":false,\"brandLabel\":\"VGZ\",\"chatApiStatusUrl\":\"https://vb-pr-am.vgz.nl/chat-api/status\",\"chatApiUrl\":\"https://vb-pr-am.vgz.nl/chat-api/\",\"chatButtonHidden\":false,\"embedded\":false,\"environmentString\":\"OO\",\"showOffline\":false,\"signalRApiPostfix\":\"signalr\"}]","MerkCode":"VGZ"}}}},{"time":"2026-11-25T20:48:22.395Z","iKey":"1a60808c-e79e-4613-8e2d-a1dc5da2812e","name":"Microsoft.ApplicationInsights.1a60808ce79e46138e2da1dc5da2812e.Message","tags":{"ai.user.id":"jK59mT9Ni3Q/MhTl5DVDQg","ai.session.id":"dBngCteU2SnUiu6WjAQnoU","ai.device.id":"browser","ai.device.type":"Browser","ai.operation.name":"/zorg-regelen/zorgzoeker","ai.operation.id":"b1270574b25448788f56188defcf22e6","ai.internal.sdkVersion":"javascript:3.4.1","ai.interna
 ```
 ```
 {"itemsReceived":3,"itemsAccepted":3,"appId":"4f0376cb-a1ad-461a-a675-ff518fd67457","errors":[]}
 ```
 
-### GET 200 https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location (65 tekens)
+### GET 200 https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location (69 tekens)
 
 ```
-{"country":"US","state":"IA","stateName":"Iowa","continent":"NA"}
+{"country":"US","state":"VA","stateName":"Virginia","continent":"NA"}
 ```
 
 ### GET 200 https://api.vgz.nl/zorgzoeker/api/v2/verwerkingsdatum/vgz (51 tekens)
@@ -177,16 +177,16 @@ Verzonden:
 ["NL"]
 ```
 
-### GET 200 https://vb-pr-am.vgz.nl/chat-api/status/chat-enabled?brandCode=VGZ&environment=OO (4 tekens)
-
-```
-true
-```
-
 ### GET 200 https://api.vgz.nl/sgw/auth/user?slide=false&x_client=vgz-iml (4 tekens)
 
 ```
 null
+```
+
+### GET 200 https://vb-pr-am.vgz.nl/chat-api/status/chat-enabled?brandCode=VGZ&environment=OO (4 tekens)
+
+```
+true
 ```
 
 ### GET 200 https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true (3 tekens)

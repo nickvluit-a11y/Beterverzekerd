@@ -15,7 +15,7 @@
 
 - na zoeken: https://zorgvinder.menzis.nl/?search=zorgaanbieder&zoektermSearch=ziekenhuis%20%2F%20zbc&zoektermType=SPECIALISME&specialismId=220906197&afstand=35&postcode=3584CX
 - zichtbare tekst: 3,803 tekens
-- JSON-antwoorden voor/na zoeken: 7/6
+- JSON-antwoorden voor/na zoeken: 8/6
 
 ## JSON-antwoorden na het zoeken (grootste eerst)
 
