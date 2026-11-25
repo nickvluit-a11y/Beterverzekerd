@@ -35,10 +35,30 @@ COLUMN_PATTERNS = {
 }
 
 
+MANUAL_NZA = ROOT / "data" / "manual" / "nza"
+
+
 def latest_raw_dir() -> Path | None:
     base = ROOT / "data" / "raw" / "nza_wachttijden"
     dirs = sorted(p for p in base.glob("*") if p.is_dir()) if base.exists() else []
     return dirs[-1] if dirs else None
+
+
+def latest_source() -> tuple[Path, str] | None:
+    """Newest waiting-time CSV: a scraped one (data/raw) or one uploaded by hand to
+    data/manual/nza/wachttijden_<YYYY-MM-DD>.csv. Returns (csv path, peildatum label)."""
+    candidates = []
+    raw = latest_raw_dir()
+    if raw and (raw / "wachttijden.csv").exists():
+        candidates.append((raw.name, raw / "wachttijden.csv"))
+    if MANUAL_NZA.exists():
+        for path in MANUAL_NZA.glob("*.csv"):
+            match = re.search(r"(\d{4}-\d{2}-\d{2})", path.name)
+            candidates.append((match.group(1) if match else path.stem, path))
+    if not candidates:
+        return None
+    label, path = max(candidates)
+    return path, label
 
 
 def extract(df: pd.DataFrame, fetched_on: str, source_url: str | None) -> pd.DataFrame:
@@ -79,26 +99,31 @@ def extract(df: pd.DataFrame, fetched_on: str, source_url: str | None) -> pd.Dat
 
 
 def main(argv: list[str]) -> int:
-    source_dir = Path(argv[0]) if argv else latest_raw_dir()
-    if not source_dir:
-        print("No raw NZa data; run scrapers.nza_wachttijden first.", file=sys.stderr)
+    if argv:
+        source = (Path(argv[0]) / "wachttijden.csv", Path(argv[0]).name)
+    else:
+        source = latest_source()
+    if not source:
+        print("No NZa data: scraper blocked and nothing in data/manual/nza/.", file=sys.stderr)
         return 1
+    csv_path, label = source
+    source_dir = csv_path.parent
     meta_path = source_dir / "meta.json"
-    meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
-    tables = read_any(source_dir / "wachttijden.csv")
+    meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {"url": str(csv_path.name)}
+    tables = read_any(csv_path)
     pattern = "|".join(procedures()["nza_pattern"])
     INVENTORY.parent.mkdir(parents=True, exist_ok=True)
-    INVENTORY.write_text(describe(tables, f"NZa wachttijden msz ({source_dir.name})", pattern), encoding="utf-8")
+    INVENTORY.write_text(describe(tables, f"NZa wachttijden msz ({label})", pattern), encoding="utf-8")
     print(f"inventory: {INVENTORY}")
     if not tables:
         print("Could not read wachttijden.csv", file=sys.stderr)
         return 1
     df = next(iter(tables.values()))
-    waits = extract(df, source_dir.name, meta.get("url"))
+    waits = extract(df, label, meta.get("url"))
     if waits.empty:
         print("No rows for our specialisms; see the inventory and adjust COLUMN_PATTERNS.", file=sys.stderr)
         return 1
-    save_with_history(waits, "waiting_times", source_dir.name)
+    save_with_history(waits, "waiting_times", label)
     print(f"waiting_times.csv: {len(waits)} rows, {waits['location_id'].notna().mean():.0%} matched to hospitals.csv")
     return 0
 
