@@ -359,6 +359,8 @@ def policy_overview(near: pd.DataFrame, contracts: pd.DataFrame, policies: pd.Da
             status = row.get("status")
             if status == "in_onderhandeling" and row.get("origin") != "verzekeraar":
                 status = None  # a hospital's 'in talks' does not say what the insurer pays meanwhile
+            if status and str(pol.get("polis_type")) == "budget" and row.get("origin") == "verzekeraar":
+                status = None  # finders show the regular policy; budget policies often contract fewer hospitals
             if status in ("gecontracteerd", "gecontracteerd_met_plafond", "vergoed_als_contract"):
                 full += 1
             elif pd.notna(pct) and pct >= 100:

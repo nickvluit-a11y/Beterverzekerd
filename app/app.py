@@ -168,7 +168,8 @@ def contract_source(row: dict | None) -> str:
     date = f", {nice_date(row['peildatum'])}" if isinstance(row.get("peildatum"), str) else ""
     plafond = " · let op: dit ziekenhuis kan voor deze verzekeraar vol raken; vraag of er plek is" \
         if str(row.get("omzetplafond")).lower() == "true" or row.get("status") == "gecontracteerd_met_plafond" else ""
-    return f'<div class="note">Bron: {who}{date}{plafond}</div>'
+    budget = " · geldt voor de gewone polis; bij een budgetpolis kan het anders zijn" if row.get("origin") == "verzekeraar" else ""
+    return f'<div class="note">Bron: {who}{date}{plafond}{budget}</div>'
 
 
 with st.form("zoek", border=False):
@@ -293,6 +294,10 @@ if search:
             if table["vrij"].sum():
                 notes.append("* Deze polis betaalt ook ziekenhuizen zonder contract, tot het normale tarief. "
                              "Rekent een ziekenhuis meer, dan betaal je het verschil zelf.")
+            if (table["polis_type"].astype(str) == "budget").any():
+                notes.append("Bij budgetpolissen (de goedkoopste) hebben verzekeraars vaak met minder ziekenhuizen "
+                             "een contract. De zorgzoekers tonen dat nog niet per polis, dus daar staat '?'. "
+                             "Check het bij je verzekeraar voordat je zo'n polis kiest.")
             unknown_share = table["onbekend"].sum() / max(1, table["betere_ziekenhuizen"].sum())
             if unknown_share > 0.3:
                 notes.append("? = nog niet bekend. Verzekeraars en ziekenhuizen maken hun afspraken voor 2027 "
