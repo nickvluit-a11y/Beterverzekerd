@@ -2,9 +2,9 @@
 
 ## cz_zorgvinder
 
-1550 locaties in de zorgzoeker, 170 gekoppeld aan onze locaties, 117 organisaties met een status.
+1550 locaties in de zorgzoeker, 170 gekoppeld aan onze locaties, 134 organisaties met een status.
 
-Status per organisatie: vergoed_als_contract 46, in_onderhandeling 38, gecontracteerd 33
+Status per organisatie: gecontracteerd 50, vergoed_als_contract 46, in_onderhandeling 38
 
 Niet gekoppeld (eerste 40):
 

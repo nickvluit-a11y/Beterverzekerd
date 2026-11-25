@@ -82,11 +82,22 @@ def match_entries(entries: pd.DataFrame, locations: pd.DataFrame) -> pd.DataFram
     return entries.assign(location_key=pd.Series(keys, dtype=object), organisatie_agb=pd.Series(agbs, dtype=object))
 
 
+def valid_agb(agb: object) -> bool:
+    """A real organisation AGB code: 8 digits, not a placeholder like 00000000 (which in the
+    Zorginzicht data is shared by unrelated clinics)."""
+    text = str(agb).zfill(8) if isinstance(agb, str) and agb.strip() else ""
+    return text.isdigit() and len(text) == 8 and int(text) != 0
+
+
 def per_organisation(matched: pd.DataFrame) -> pd.DataFrame:
+    """One row per organisation; for a placeholder AGB one row per location (key = location_key)."""
     rows = []
-    for (agb, concern, label), g in matched.dropna(subset=["organisatie_agb"]).groupby(["organisatie_agb", "concern", "label"]):
+    matched = matched.dropna(subset=["organisatie_agb"]).copy()
+    matched["organisatie_agb"] = [a if valid_agb(a) else k for a, k in zip(matched["organisatie_agb"], matched["location_key"])]
+    for (agb, concern, label), g in matched.groupby(["organisatie_agb", "concern", "label"]):
         status = min(g["status"], key=lambda s: WORST_FIRST.index(s) if s in WORST_FIRST else 0)
-        rows.append({"year": int(g["year"].iloc[0]), "organisatie_agb": str(agb).zfill(8), "concern": concern,
+        rows.append({"year": int(g["year"].iloc[0]), "organisatie_agb": str(agb).zfill(8) if valid_agb(agb) else agb,
+                     "concern": concern,
                      "label": label, "status": status,
                      "omzetplafond": bool(g["omzetplafond"].astype(str).str.lower().eq("true").any()),
                      "peildatum": g["fetched_on"].max(), "source": g["source"].iloc[0],

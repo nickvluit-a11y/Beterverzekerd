@@ -981,3 +981,20 @@ def test_premium_from_elsewhere_counts_once_confirmed_on_own_site(tmp_path, monk
     monkeypatch.setattr(score, "PROCESSED", tmp_path)
     out = score.load_policies(2027)
     assert out[["label", "source_url"]].values.tolist() == [["OHRA", "https://www.ohra.nl/premie"]]
+
+
+def test_placeholder_agb_keeps_contracts_per_location():
+    from pipeline.insurer_contracts import per_organisation, valid_agb
+    from pipeline.score import contract_key
+    assert valid_agb("06020602") and not valid_agb("00000000") and not valid_agb(None)
+    matched = pd.DataFrame([
+        {"organisatie_agb": "00000000", "location_key": "00000000-3528AH", "concern": "CZ", "label": "CZ", "year": 2027,
+         "status": "gecontracteerd", "omzetplafond": "False", "fetched_on": "2026-11-25", "source": "s", "source_url": "u", "name": "Xpert"},
+        {"organisatie_agb": "00000000", "location_key": "00000000-2725NA", "concern": "CZ", "label": "CZ", "year": 2027,
+         "status": "geen_contract", "omzetplafond": "False", "fetched_on": "2026-11-25", "source": "s", "source_url": "u", "name": "Other"},
+    ])
+    orgs = per_organisation(matched).set_index("organisatie_agb")
+    assert orgs.loc["00000000-3528AH", "status"] == "gecontracteerd"  # not merged into one 'worst' status
+    assert orgs.loc["00000000-2725NA", "status"] == "geen_contract"
+    assert contract_key("00000000", "00000000-3528AH") == "00000000-3528AH"
+    assert contract_key("06020602", "06020602-3584CX") == "06020602"

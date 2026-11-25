@@ -26,7 +26,7 @@ from pipeline.geo import clean_postcode, locate  # noqa: E402
 from pipeline.explain import explain, trend_sentences  # noqa: E402
 from pipeline.quality import domain_highlights, domain_of, domain_verdicts  # noqa: E402
 from pipeline.reference import labels, procedures, scope  # noqa: E402
-from pipeline.score import to_date, attach_organisation, contract_for, hospitals_within, latest_waits, load_contracts, load_policies, policy_overview  # noqa: E402
+from pipeline.score import to_date, attach_organisation, contract_key, contract_for, hospitals_within, latest_waits, load_contracts, load_policies, policy_overview  # noqa: E402
 
 MONTHS_NL = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
 
@@ -315,10 +315,11 @@ if search:
                              '</span></div>')
             else:
                 wait_html = ""
-            found = {c: contract_for(contracts, row.organisatie_agb, c, LABEL.get(c, c)) for c in concerns} if has_contracts else {}
+            key = contract_key(row.organisatie_agb, row.location_key)
+            found = {c: contract_for(contracts, key, c, LABEL.get(c, c)) for c in concerns} if has_contracts else {}
             found = {c: r for c, r in found.items() if r}
             if chosen != ALL_INSURERS:
-                own = contract_for(contracts, row.organisatie_agb, chosen_concern, chosen) if has_contracts else None
+                own = contract_for(contracts, key, chosen_concern, chosen) if has_contracts else None
                 own = own if own and own.get("label") == chosen else None  # the brand's own row, not concern-wide
                 mine = own or found.get(chosen_concern)
                 status = (mine or {}).get("status")
