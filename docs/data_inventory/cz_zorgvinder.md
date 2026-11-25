@@ -2,19 +2,7 @@
 
 Run: 2026-11-25.
 
-## Zoekinstellingen
-
-- afstand `(geen)`: 15 genoemd, 15 gelezen
-- afstand `&afstand=0`: 15 genoemd, 15 gelezen
-- afstand `&afstand=heel-nederland`: 15 genoemd, 15 gelezen
-- afstand `&afstand=999`: 305 genoemd, 30 gelezen
-- afstand `&afstand=100`: 239 genoemd, 30 gelezen
-- pagina-parameter `pagina`: 0 nieuwe
-- pagina-parameter `page`: 0 nieuwe
-- pagina-parameter `p`: 0 nieuwe
-- pagina-parameter `paginanummer`: 0 nieuwe
-
-Geen manier gevonden om te bladeren: per plaats de eerste 30.
+Per plaats (25 km) de ziekenhuizen; de zoeker toont er 30 per lijst. Daarna elke kwaliteitslocatie die nog ontbreekt gericht op naam in haar eigen plaats.
 
 | categorie | plaats | genoemd | gelezen | pagina's |
 |---|---|---|---|---|
@@ -78,65 +66,7 @@ Geen manier gevonden om te bladeren: per plaats de eerste 30.
 | ziekenhuis | uden | 23 | 23 | 1  |
 | ziekenhuis | dokkum | 2 | 2 | 1  |
 | ziekenhuis | emmeloord | 4 | 4 | 1  |
-| zelfstandig-behandelcentrum | utrecht | 307 | 30 | 1  |
-| zelfstandig-behandelcentrum | amsterdam | 498 | 30 | 1  |
-| zelfstandig-behandelcentrum | rotterdam | 408 | 30 | 1  |
-| zelfstandig-behandelcentrum | den-haag | 387 | 30 | 1  |
-| zelfstandig-behandelcentrum | leiden | 337 | 30 | 1  |
-| zelfstandig-behandelcentrum | haarlem | 439 | 30 | 1  |
-| zelfstandig-behandelcentrum | alkmaar | 110 | 30 | 1  |
-| zelfstandig-behandelcentrum | hoorn | 73 | 30 | 1  |
-| zelfstandig-behandelcentrum | den-helder | 6 | 6 | 1  |
-| zelfstandig-behandelcentrum | almere | 254 | 30 | 1  |
-| zelfstandig-behandelcentrum | lelystad | 37 | 30 | 1  |
-| zelfstandig-behandelcentrum | amersfoort | 300 | 30 | 1  |
-| zelfstandig-behandelcentrum | hilversum | 521 | 30 | 1  |
-| zelfstandig-behandelcentrum | gouda | 323 | 30 | 1  |
-| zelfstandig-behandelcentrum | dordrecht | 229 | 30 | 1  |
-| zelfstandig-behandelcentrum | gorinchem | 85 | 30 | 1  |
-| zelfstandig-behandelcentrum | breda | 97 | 30 | 1  |
-| zelfstandig-behandelcentrum | tilburg | 135 | 30 | 1  |
-| zelfstandig-behandelcentrum | eindhoven | 103 | 30 | 1  |
-| zelfstandig-behandelcentrum | helmond | 108 | 30 | 1  |
-| zelfstandig-behandelcentrum | oss | 164 | 30 | 1  |
-| zelfstandig-behandelcentrum | nijmegen | 183 | 30 | 1  |
-| zelfstandig-behandelcentrum | arnhem | 183 | 30 | 1  |
-| zelfstandig-behandelcentrum | ede | 164 | 30 | 1  |
-| zelfstandig-behandelcentrum | apeldoorn | 61 | 30 | 1  |
-| zelfstandig-behandelcentrum | zutphen | 73 | 30 | 1  |
-| zelfstandig-behandelcentrum | doetinchem | 54 | 30 | 1  |
-| zelfstandig-behandelcentrum | winterswijk | 18 | 18 | 1  |
-| zelfstandig-behandelcentrum | deventer | 53 | 30 | 1  |
-| zelfstandig-behandelcentrum | zwolle | 56 | 30 | 1  |
-| zelfstandig-behandelcentrum | harderwijk | 62 | 30 | 1  |
-| zelfstandig-behandelcentrum | meppel | 53 | 30 | 1  |
-| zelfstandig-behandelcentrum | hardenberg | 25 | 25 | 1  |
-| zelfstandig-behandelcentrum | almelo | 59 | 30 | 1  |
-| zelfstandig-behandelcentrum | enschede | 57 | 30 | 1  |
-| zelfstandig-behandelcentrum | assen | 69 | 30 | 1  |
-| zelfstandig-behandelcentrum | emmen | 11 | 11 | 1  |
-| zelfstandig-behandelcentrum | groningen | 77 | 30 | 1  |
-| zelfstandig-behandelcentrum | stadskanaal | 19 | 19 | 1  |
-| zelfstandig-behandelcentrum | delfzijl | 17 | 17 | 1  |
-| zelfstandig-behandelcentrum | leeuwarden | 41 | 30 | 1  |
-| zelfstandig-behandelcentrum | sneek | 40 | 30 | 1  |
-| zelfstandig-behandelcentrum | heerenveen | 36 | 30 | 1  |
-| zelfstandig-behandelcentrum | drachten | 47 | 30 | 1  |
-| zelfstandig-behandelcentrum | goes | 46 | 30 | 1  |
-| zelfstandig-behandelcentrum | middelburg | 41 | 30 | 1  |
-| zelfstandig-behandelcentrum | terneuzen | 46 | 30 | 1  |
-| zelfstandig-behandelcentrum | bergen-op-zoom | 21 | 21 | 1  |
-| zelfstandig-behandelcentrum | roosendaal | 65 | 30 | 1  |
-| zelfstandig-behandelcentrum | venlo | 18 | 18 | 1  |
-| zelfstandig-behandelcentrum | weert | 35 | 30 | 1  |
-| zelfstandig-behandelcentrum | roermond | 33 | 30 | 1  |
-| zelfstandig-behandelcentrum | sittard | 88 | 30 | 1  |
-| zelfstandig-behandelcentrum | heerlen | 83 | 30 | 1  |
-| zelfstandig-behandelcentrum | maastricht | 81 | 30 | 1  |
-| zelfstandig-behandelcentrum | tiel | 112 | 30 | 1  |
-| zelfstandig-behandelcentrum | boxmeer | 89 | 30 | 1  |
-| zelfstandig-behandelcentrum | uden | 147 | 30 | 1  |
-| zelfstandig-behandelcentrum | dokkum | 22 | 22 | 1  |
-| zelfstandig-behandelcentrum | emmeloord | 11 | 11 | 1  |
 
-Totaal: 1550 unieke locaties; status: in_onderhandeling 1166, vergoed_als_contract 200, gecontracteerd 184.
+- gericht op naam gezocht: 233 locaties, 145 met resultaat
+
+Totaal: 496 unieke locaties; status: vergoed_als_contract 202, gecontracteerd 164, in_onderhandeling 130.
