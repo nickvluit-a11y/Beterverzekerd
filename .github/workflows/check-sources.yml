@@ -42,4 +42,4 @@ jobs:
           git add docs/source_check
           for f in docs/data_inventory/insurer_finders.md docs/data_inventory/finder_* docs/data_inventory/zk_zorgzoeker.md docs/data_inventory/vergoeding_controle.md; do if [ -e "$f" ]; then git add "$f"; fi; done
           git diff --cached --quiet || git commit -m "Update source check report"
-          git pull --rebase && git push
+          git pull --rebase --autostash && git push

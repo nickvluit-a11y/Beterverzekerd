@@ -132,7 +132,7 @@ jobs:
           mkdir -p data/processed data/reference docs/data_inventory
           git add data/processed data/reference docs/data_inventory docs/kwaliteitsmonitor.md
           git diff --cached --quiet || git commit -m "Update processed data ($(date -u +%F))"
-          git pull --rebase && git push
+          git pull --rebase --autostash && git push
 
       - name: Summary
         if: always()
