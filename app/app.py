@@ -9,6 +9,7 @@ Run: streamlit run app/app.py
 from __future__ import annotations
 
 import hmac
+import re
 import os
 import sys
 from pathlib import Path
@@ -24,15 +25,28 @@ from pipeline.db_queries import indicator_profile, indicator_trend, latest_judge
 from pipeline.geo import clean_postcode, geocode_postcode  # noqa: E402
 from pipeline.quality import domain_highlights  # noqa: E402
 from pipeline.reference import labels, procedures  # noqa: E402
-from pipeline.score import attach_organisation, contract_for, hospitals_within, load_contracts, load_policies, policy_overview  # noqa: E402
+from pipeline.score import attach_organisation, contract_for, hospitals_within, latest_waits, load_contracts, load_policies, policy_overview  # noqa: E402
 
 def display_name(row) -> str:
     """'annatommie mc - voor orthopedie - Utrecht' + 'UTRECHT' -> 'Annatommie mc - voor orthopedie - Utrecht'."""
     name = str(row.locatie_naam if isinstance(row.locatie_naam, str) else row.organisatie_naam).strip()
+    name = re.sub(r"\s*[-,]?\s*\bconcern\b\s*", " ", name, flags=re.IGNORECASE).strip(" ,-")
     if name[:1].islower():
         name = name[0].upper() + name[1:]
     place = str(row.plaats).strip().title() if isinstance(row.plaats, str) else ""
     return name if not place or place.lower() in name.lower() else f"{name}, {place}"
+
+
+MONTHS_NL = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+
+
+def nice_date(value) -> str:
+    """'2026-11-10' -> '10 nov 2026'."""
+    try:
+        d = pd.Timestamp(value)
+        return f"{d.day} {MONTHS_NL[d.month - 1]} {d.year}"
+    except (ValueError, TypeError):
+        return str(value)
 
 
 BADGES = {  # verdict -> (text, css class, map colour)
@@ -47,7 +61,19 @@ ORDER = list(BADGES)
 # variant that only says 'aantoonbaar beter' or 'niet aantoonbaar beter' (both true).
 SHOW_WORSE = os.environ.get("SHOW_WORSE", "true").lower() == "true"
 if not SHOW_WORSE:
-    BADGES = {"boven_gemiddeld": BADGES["boven_gemiddeld"],
+    MONTHS_NL = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+
+
+def nice_date(value) -> str:
+    """'2026-11-10' -> '10 nov 2026'."""
+    try:
+        d = pd.Timestamp(value)
+        return f"{d.day} {MONTHS_NL[d.month - 1]} {d.year}"
+    except (ValueError, TypeError):
+        return str(value)
+
+
+BADGES = {"boven_gemiddeld": BADGES["boven_gemiddeld"],
               "niet_beter": ("Niet aantoonbaar beter", "avg", [100, 116, 139]),
               "geen_data": BADGES["geen_data"]}
     ORDER = list(BADGES)
@@ -84,6 +110,7 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .chip.ok { background: #f0fdf4; color: #166534; } .chip.no { background: #fef2f2; color: #991b1b; }
 .chip.wait { background: #fffbeb; color: #92400e; }
 .note { color: #64748b; font-size: .85rem; }
+.wait { font-size: .9rem; color: #334155; margin-top: 4px; }
 .insurers { margin: 4px 0 14px 0; }
 .insurer { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; padding: 8px 12px; border: 1px solid #e2e8f0;
            border-radius: 10px; margin: 6px 0; background: #fff; }
@@ -156,6 +183,8 @@ if search:
     near = hospitals_within(*search["coords"], search["radius"], locations_for_procedure(con, proc))
     verdicts = quality_latest(con, proc)[["location_key", "quality_verdict", "verslagjaar", "volume"]]
     near = near.merge(verdicts, on="location_key", how="left")
+    waits = latest_waits(proc).rename(columns={"weeks": "wait_weeks", "peildatum": "wait_date"})
+    near = near.merge(waits[["location_key", "wait_weeks", "wait_type", "wait_date"]], on="location_key", how="left")
     near["quality_verdict"] = near["quality_verdict"].fillna("geen_data").map(shown_verdict)
     near["_order"] = near["quality_verdict"].map(ORDER.index)
     near["display_name"] = [display_name(r) for r in near.itertuples()]
@@ -226,6 +255,13 @@ if search:
                                   domain_highlights(judged[judged["location_key"] == row.location_key])
                                   if SHOW_WORSE or v == "beter")
             year = f" · cijfers {int(row.verslagjaar)}" if pd.notna(row.verslagjaar) else ""
+            if pd.notna(row.wait_weeks):
+                what = "operatie" if row.wait_type == "behandeling" else "eerste afspraak"
+                weeks = max(1, round(float(row.wait_weeks)))
+                wait_html = (f'<div class="wait">⏱ Wachttijd {what}: ± {weeks} {"week" if weeks == 1 else "weken"}'
+                             f'<span class="note"> · NZa, {nice_date(row.wait_date)}</span></div>')
+            else:
+                wait_html = ""
             found = {c: contract_for(contracts, row.organisatie_agb, c, c) for c in concerns} if has_contracts else {}
             found = {c: r for c, r in found.items() if r}
             if chosen != ALL_INSURERS:
@@ -251,7 +287,7 @@ if search:
                 f'<div class="card"><div class="top"><span class="name">{row.display_name}</span>'
                 f'<span class="meta">{row.distance_km:.0f} km{year}</span></div>'
                 f'<span class="badge {css}">{text}</span>'
-                f'<ul class="points">{points_html}</ul>{chips_html}</div>', unsafe_allow_html=True)
+                f'<ul class="points">{points_html}</ul>{wait_html}{chips_html}</div>', unsafe_allow_html=True)
             with st.expander("Bekijk de cijfers"):
                 profile = indicator_profile(con, row.location_key, proc)
                 shown = profile[profile["verdict"].isin(["beter", "slechter", "gemiddeld"])].copy()

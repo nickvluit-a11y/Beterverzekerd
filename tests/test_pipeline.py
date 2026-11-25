@@ -201,23 +201,23 @@ def test_zorginzicht_ingest(tmp_path, monkeypatch):
 
 
 def test_nza_ingest(tmp_path, monkeypatch):
-    raw = tmp_path / "2026-11-24"
-    raw.mkdir()
-    (raw / "wachttijden.csv").write_text(
-        "PEILDATUM;NAAM_LOCATIE;PLAATS;AGB_LOCATIE;KVK_INSTELLING;SPECIALISME;TYPE_WACHTTIJD;WACHTTIJD\n"
-        "2026-09-15;Meander Medisch Centrum;Amersfoort;;123;Orthopedie;Behandeling;7\n"
-        "2026-09-15;UMC Utrecht;Utrecht;;456;Oogheelkunde;Polikliniek;4,5\n"
-        "2026-09-15;UMC Utrecht;Utrecht;;456;Cardiologie;Polikliniek;3\n",
-        encoding="utf-8")
+    header = "PEILDATUM;AGBCODE;POSTCODE;NAAM_VESTIGING;PLAATS;TYPE_WACHTTIJD;OMS_WACHTTIJD;WACHTTIJD;INSUFFICIENT_OBSERVATIONS"
+    rows = ["2026-11-10;06020602;3584CX;UMC Utrecht;Utrecht;Behandeling;Initiële totale heupvervanging (orthopedie);49;FALSE",
+            "2026-11-10;06020602;3584CX;UMC Utrecht;Utrecht;Polikliniekbezoek;Orthopedie - Heupklachten;14;FALSE",
+            "2026-11-10;06020602;3584CX;UMC Utrecht;Utrecht;Behandeling;Initiële staaroperatie (oogheelkunde);30;TRUE",
+            "2026-11-10;06020602;3584CX;UMC Utrecht;Utrecht;Polikliniekbezoek;Cardiologie - Algemeen;3;FALSE"]
+    path = tmp_path / "wachttijden_2026-11-10.csv"
+    path.write_bytes(("\n".join([header] + rows) + "\n").encode("cp1252"))
     monkeypatch.setattr(pipeline.reference, "PROCESSED", tmp_path / "out")
     monkeypatch.setattr(nza_ingest, "INVENTORY", tmp_path / "inventory.md")
-    assert nza_ingest.main([str(raw)]) == 0
-    out = pd.read_csv(tmp_path / "out" / "waiting_times.csv")
-    # orthopedics feeds both hip and knee, ophthalmology feeds cataract; cardiology dropped
-    assert sorted(out["procedure_id"]) == ["heup", "knie", "staar"]
-    assert out.loc[out["procedure_id"] == "staar", "weeks"].iloc[0] == 4.5
-    assert set(out["location_id"]) == {"meander", "umcu"}
-
+    assert nza_ingest.main([str(path)]) == 0
+    out = pd.read_csv(tmp_path / "out" / "waiting_times.csv", dtype=str)
+    assert sorted(out["procedure_id"]) == ["heup", "heup", "staar"]   # cardiology dropped
+    heup = out[(out["procedure_id"] == "heup") & (out["wait_type"] == "behandeling")].iloc[0]
+    assert float(heup["days"]) == 49 and float(heup["weeks"]) == 7 and heup["location_key"].startswith("06020602-")
+    from pipeline.score import latest_waits
+    waits = latest_waits("staar", pd.read_csv(tmp_path / "out" / "waiting_times.csv"))
+    assert waits.empty  # too few observations: not shown
 
 # --- scoring -------------------------------------------------------------------------------
 
