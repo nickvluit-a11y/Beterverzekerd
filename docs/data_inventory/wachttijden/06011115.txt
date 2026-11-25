@@ -1,0 +1,406 @@
+source: https://www.viecuri.nl/naar-het-ziekenhuis/wachttijden/
+fetched: 2026-11-25
+
+Wachttijden
+direct naar inhoud
+Soms bent u eerder aan de beurt, bijvoorbeeld bij spoed, en soms iets later. Waarom iets langer duurt of juist sneller gaat, kan te maken hebben met uw medische situatie. Of omdat u door een bepaalde specialist geholpen moet of wilt worden. De planning van behandelingen gebeurt in goed overleg met medisch specialisten. Zij geven aan welke patiënten met de meeste urgentie ingepland moeten worden.
+Bekijkt u deze pagina op uw mobiel? Scroll naar rechts om de hele tabel te zien ->
+Specialisme
+Type toegangstijd of behandelwachttijd
+Venlo
+(wachttijd in
+kalenderdagen)
+Venray
+(wachttijd in
+kalenderdagen)
+Regiopoli
+Peel en Maas
+(wachttijd in
+kalenderdagen)
+Cardiologie
+Polikliniek, algemeen
+10
+22
+41
+Cardiologie
+Diagnostiek, cardiale echo
+56
+42
+*
+Cardiologie
+Diagnostiek, 24-uurs ECG (Holter)
+34
+15
+*
+Cardiologie
+Behandeling, dotteren
+27
+*
+*
+Cardiologie
+Behandeling, hartkatheterisatie
+27
+*
+*
+Chirurgie
+Polikliniek, algemeen
+10
+10
+41
+Chirurgie
+Behandeling, liesbreuk
+103
+*
+*
+Chirurgie
+Behandeling, galblaasverwijdering
+108
+*
+*
+Chirurgie
+Behandeling, goedaardige
+aandoeningen van/rondom de anus
+40
+*
+*
+Chirurgie
+Behandeling, navelbreuk bij volwassenen
+0
+*
+*
+Dermatologie
+Polikliniek, algemeen
+90
+90
+90
+Dermatologie
+Behandeling, spataderen
+195
+69
+*
+Dermatologie
+Behandeling, Mohs-chirurgie
+81
+*
+*
+Geriatrie
+Polikliniek, algemeen
+90
+90
+**
+Gynaecologie
+Polikliniek, algemeen
+62
+58
+*
+Gynaecologie
+Behandeling, baarmoederverwijdering
+71
+*
+*
+Gynaecologie
+Behandeling, sterilisatie vrouw
+**
+*
+*
+Gynaecologie
+Behandeling, Intra-Uteriene Inseminatie (IUI)
+**
+*
+*
+Gynaecologie
+Behandeling, operatie urine-incontinentie en/of verzakking bij vrouw
+56
+*
+*
+Interne Geneeskunde
+Polikliniek, algemeen
+24
+42
+*
+Kindergeneeskunde
+Polikliniek, algemeen
+45
+48
+*
+Keel-, neus- en oorheelkunde (KNO)
+Polikliniek, algemeen
+28
+28
+*
+Keel-, neus- en oorheelkunde (KNO)
+Behandeling, plaatsen buisjes
+27
+*
+*
+Keel-, neus-, en oorheelkunde (KNO)
+Behandeling, operatie van afwijkingen van neustussenschot
+155
+*
+*
+Keel-, neus- en oorheelkunde (KNO)
+Behandeling, tonsillectomie/adenotomie
+47
+*
+*
+Keel-, neus- en oorheelkunde (KNO)
+Behandeling, CPAP (anti-snurken)
+**
+*
+*
+Longgeneeskunde
+Polikliniek, algemeen
+90
+90
+*
+Maag-, darm-, leverziekten (MDL)
+Polikliniek, algemeen
+51
+57
+*
+Maag-, darm-, leverziekten (MDL)
+Diagnostiek, gastroscopie
+13
+16
+*
+Maag-, darm-, leverziekten (MDL)
+Diagnostiek, coloscopie
+27 (na de intake)
+22 (na de intake)
+*
+Medische beeldvorming (radiologie)
+Diagnostiek, CT
+10
+**
+*
+Medische beeldvorming (radiologie)
+Diagnostiek, MRI rug
+49
+52
+*
+Medische beeldvorming (radiologie)
+Diagnostiek, röntgen (algemeen)
+0
+0
+0
+Medische beeldvorming (radiologie)
+Diagnostiek, mammografie (röntgen)
+23
+*
+*
+Medische beeldvorming (radiologie)
+Diagnostiek, botdichtheidsmeting - DEXA
+14
+*
+*
+Medische beeldvorming (radiologie)
+Diagnostiek, echo + injectie
+51
+50
+*
+Medische beeldvorming (radiologie)
+Diagnostiek, echo + barbotage
+90
+90
+*
+Medische beeldvorming (radiologie)
+Diagnostiek, echo mamma (borst)
+10
+*
+*
+Medische beeldvorming (radiologie)
+Diagnostiek, echo + interventie (punctie)
+10
+*
+*
+Mondziekten, kaak- en
+aangezichtschirurgie (MKA)
+Polikliniek, algemeen
+10
+*
+*
+Mondziekten, kaak- en
+aangezichtschirurgie (MKA)
+Behandeling, extractie gebitselement(en)
+21
+*
+*
+Mondziekten, kaak- en
+aangezichtschirurgie (MKA)
+Behandeling, apexresectie(s)
+**
+*
+*
+Neurologie
+Polikliniek, algemeen
+83
+87
+**
+Neurochirurgie
+Behandeling, Hernia Nuclei Pulposi (HNP)/kanaalstenose
+21
+*
+*
+Neurochirurgie
+Behandeling, spondylodese operatie aan de wervelkolom
+208
+*
+*
+Neurochirurgie
+Polikliniek, algemeen
+16
+*
+*
+Oogheelkunde
+Polikliniek, algemeen
+72
+85
+*
+Oogheelkunde
+Polikliniek, cataract (staar)
+85
+57
+*
+Oogheelkunde
+Behandeling, staaroperatie
+6 mnd (onder narcose)
+21 (lokale verdoving)
+*
+Oogheelkunde
+Behandeling, ooglidcorrectie
+**
+*
+*
+Orthopedie
+Polikliniek, algemeen
+24
+23
+28
+Orthopedie
+Behandeling, totale heupvervanging (ziekenhuisopname)
+102
+*
+*
+Orthopedie
+Behandeling, totale heupvervanging (dagopname)
+73
+*
+*
+Orthopedie
+Behandeling, totale knievervanging (ziekenhuisopname)
+158
+*
+*
+Orthopedie
+Behandeling, halve knievervanging (dagopname)
+75
+*
+*
+Orthopedie
+Behandeling, kijkoperatie knie (diagnostisch en/of therapeutisch)
+**
+*
+*
+Orthopedie
+Behandeling, operatie meniscus en/of kniebanden
+56
+*
+*
+Plastische chirurgie
+Polikliniek, algemeen
+23
+*
+*
+Plastische chirurgie
+Behandeling, triggerfingerrelease
+**
+*
+*
+Plastische chirurgie
+Behandeling, borstreconstructie
+147
+*
+*
+Plastische chirurgie
+Behandeling, operatie contractuur van Dupuytren
+69
+*
+*
+Pijnbestrijding (anesthesiologie)
+Polikliniek, algemeen
+45
+45
+*
+Reumatologie
+Polikliniek, algemeen
+42
+57
+90
+Sportgeneeskunde
+Polikliniek, algemeen
+10
+16
+36 (locatie Roermond)
+Urologie
+Polikliniek, algemeen
+17
+15
+27
+Urologie
+Behandeling, vergrote prostaat
+35
+*
+*
+Urologie
+Behandeling, vergruizing niersteen
+17
+*
+*
+Urologie
+Behandeling, besnijdenis
+**
+*
+*
+Urologie
+Behandeling, sterilisatie man
+33
+*
+*
+Urologie
+Behandeling, operatie prostaatcarcinoom
+**
+*
+*
+Urologie
+Behandeling, urine-incontinentie en/of blaasverzakking bij man
+**
+*
+*
+Urologie
+Behandeling, percutane niersteenverwijdering
+**
+*
+*
+Gemiddelde toegangstijden polikliniek en diagnostiek per: 24-11-2026 (wekelijks).
+Gemiddelde behandelwachttijden per: 24-11-2026 (twee wekelijks).
+*Geen polikliniek, diagnostiek of behandeling op deze locatie.
+**Onvoldoende waarnemingen (volgens wetgeving) om betrouwbare behandelwachttijd te kunnen tonen.
+Er kunnen geen rechten ontleend worden aan de informatie in deze tabel.
+Wachttijd polikliniek
+U krijgt een verwijzing van uw (huis)arts naar een medisch specialist. Het duurt dan even voordat u bij de medisch specialist op de polikliniek terecht kan. Het aantal kalenderdagen tussen het moment dat u een afspraak maakt op de polikliniek tot het moment dat de afspraak bij de medisch specialist plaatsvindt, noemen we de wachttijd* tot de polikliniek.
+Wachttijd diagnostiek
+Uw (huis)arts vraagt een onderzoek voor u aan, bijvoorbeeld voor het maken van een echo of MRI. Het aantal kalenderdagen tussen het moment dat u een afspraak maakt of ontvangt en het moment dat de afspraak plaatsvindt, noemen we de wachttijd voor diagnostiek. Als het onderzoek met spoed plaats moet vinden, dan krijgt u uiteraard voorrang.
+Wachttijd behandeling
+Wanneer uw medisch specialist aangeeft dat u in aanmerking komt voor een behandeling, kan het even duren voordat u geholpen wordt. De wachttijd is de gemiddelde tijd in kalenderdagen vanaf het moment dat de behandeling met u is afgesproken tot aan het moment dat de behandeling plaatsvindt.
+Wachtlijstbemiddeling
+Wist u dat u via de wachtlijstbemiddeling samen met uw zorgverzekeraar kunt kijken, waar u eerder de zorg kunt ontvangen, die u nodig heeft? Deze service bieden zorgverzekeraars gratis aan. Hier vindt u een overzicht van zorgbemiddeling van alle zorgverzekeraars.
+Wanneer u de wachttijd te lang vindt, kunt u altijd contact met ons opnemen, of uw zorgverzekeraar vragen om wachtlijstbemiddeling. Uw zorgverzekeraar kan u hierin ondersteunen, zodat u mogelijk sneller geholpen kunt worden. De maximaal aanvaardbare wachttijd die door zorgaanbieders en zorgverzekeraars gezamenlijk is overeengekomen (de Treeknorm) bedraagt voor de toegang tot de polikliniek en diagnostiek 4 weken. Voor behandeling is de maximaal aanvaardbare wachttijd 7 weken.
+Meer informatie
+Voor meer algemene informatie over wachttijden kunt u terecht bij het BelCentrum via (077) 320 55 55.
+De berekening van wachttijden vindt plaats volgens de bepalingen van de Nederlandse Zorgautoriteit.
+Translate instructions
+Close
+1. Select the text you want to translate.
+2. Choose ‘Vertalen’.
+3. Select the language you prefer.
+4. You can read and/or listen to the translated text (by Google).

@@ -1,0 +1,897 @@
+source: https://www.ghz.nl/wachttijden/
+fetched: 2026-11-25
+
+Wachttijden - Het Groene Hart Ziekenhuis
+Lees hier alle actuele informatie over de overstap naar ons nieuwe elektronisch patiëntendossier HiX.
+Sluit de melding
+sluiten
+Wachttijden
+Op deze pagina staan gemiddelde wachttijden (ook wel toegangstijden) in dagen. Bij de polikliniek gaat het om de wachttijd tot het eerste polikliniekbezoek. De wachttijden worden tweewekelijks bijgewerkt.
+Wachttijden kunnen in werkelijkheid afwijken, o.a. door - beschikbaarheid van een specifieke specialist - second opinion - onvoorziene omstandigheden. Er kunnen geen rechten worden ontleend aan deze gegevens.
+Wanneer u de wachttijd te lang vindt, kunt u altijd contact met ons opnemen, of uw zorgverzekeraar vragen om wachtlijstbemiddeling. Uw zorgverzekeraar kan u hierin ondersteunen, zodat u mogelijk sneller geholpen kunt worden. De maximaal aanvaardbare wachttijd die door zorgaanbieders en zorgverzekeraars gezamenlijk is overeengekomen (de Treeknorm) bedraagt voor de toegang tot de polikliniek en diagnostiek 4 weken. Voor behandeling is de maximaal aanvaardbare wachttijd 7 weken.
+Conform wettelijke verplichting communiceren wij al onze wachttijden ook via de Nederlandse Zorgautoriteit.
+Gou
+Gouda
+Nwk
+Nieuwerkerk
+Scho
+Schoonhoven
+Bode
+Bodegraven
+Opn
+Opname
+Legenda (Wat betekent...)
+Allergologie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 66
+Nieuwerkerk 16
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Cardiologie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 56
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven 55
+Opname -
+Datum 24-11-26
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Pijn op de borst poli
+Gouda 35
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Souffle poli
+Gouda 56
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Chirurgie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 10
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 05-11-25
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Kleine verrichtingen Chirurgie
+Gouda 28
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 05-11-25
+Behandelingen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Liesbreuk TEP ASA I en ASA II
+Gouda 28
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 05-11-25
+Spataderen verwijderen: Laserbehandeling
+Gouda 70
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 05-11-25
+Sterilisatie man (vasectomie)
+Gouda 0
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 21-04-26
+Dermatologie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 28
+Nieuwerkerk 42
+Schoonhoven 56
+Bodegraven 30
+Opname -
+Datum 24-11-26
+Dieetadvies
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 22
+Nieuwerkerk 65
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 10-11-26
+Geheugenpolikliniek
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 49
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Geheugenpolikliniek anderstaligen
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 60
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Geriatrie
+Gouda 49
+Nieuwerkerk 50
+Schoonhoven 44
+Bodegraven 52
+Opname -
+Datum 24-11-26
+Geriatrie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 49
+Nieuwerkerk 50
+Schoonhoven 44
+Bodegraven 52
+Opname -
+Datum 24-11-26
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Geheugenpolikliniek
+Gouda 49
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Geheugenpolikliniek anderstaligen
+Gouda 60
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Valpolikliniek
+Gouda 49
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Geriatrisch-oncologisch spreekuur
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 1
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Geriatrie
+Gouda 49
+Nieuwerkerk 50
+Schoonhoven 44
+Bodegraven 52
+Opname -
+Datum 24-11-26
+Gynaecologie en Verloskunde
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 70
+Nieuwerkerk 70
+Schoonhoven 70
+Bodegraven 59
+Opname -
+Datum 24-11-26
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Colpospreekuur
+Gouda 7
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Overgangspoli
+Gouda 360
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+VIP poli
+Gouda 23
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Immunologie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 88
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Interne Geneeskunde
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Behandelcentrum Oncologie en Hematologie
+Gouda 21
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Endocrinologie
+Gouda 134
+Nieuwerkerk 182
+Schoonhoven -
+Bodegraven 185
+Opname -
+Datum 24-11-26
+Nefrologie
+Gouda 129
+Nieuwerkerk 164
+Schoonhoven 232
+Bodegraven -
+Opname -
+Datum 24-11-26
+Behandelingen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Overige zorgvragen Interne Geneeskunde
+Gouda 129
+Nieuwerkerk 164
+Schoonhoven 232
+Bodegraven 161
+Opname -
+Datum 24-11-26
+Kaakchirurgie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 78
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Keel-, Neus en Oorheelkunde (KNO)
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 26
+Nieuwerkerk 11
+Schoonhoven 13
+Bodegraven -
+Opname -
+Datum 24-11-26
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Slaapcentrum
+Gouda 52
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Behandelingen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Amandelen kinderen
+Gouda -
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname 25
+Datum 15-12-20
+Onderzoeken
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Gehooronderzoek
+Gouda 40
+Nieuwerkerk 45
+Schoonhoven 42
+Bodegraven -
+Opname -
+Datum 24-11-26
+Kindergeneeskunde
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 14
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven 46
+Opname -
+Datum 24-11-26
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Pipo poli voor plas- en poepproblemen bij kinderen
+Gouda 112
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Longgeneeskunde
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 20
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Longgeneeskunde Spoedpoli
+Gouda 3
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Slaapcentrum
+Gouda 52
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Behandelingen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Longkanker
+Gouda 3
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Maag, Darm- en Leverziekten
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 120
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+MDL spoedpoli
+Gouda 7
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Scopie afdeling
+Gouda 109
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Neurochirurgie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 66
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Neurologie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 49
+Nieuwerkerk 51
+Schoonhoven 78
+Bodegraven 80
+Opname -
+Datum 24-11-26
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Geheugenpolikliniek
+Gouda 49
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+TIA-poli
+Gouda 2
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Nucleaire Geneeskunde
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Onderzoeken
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Myocardscintigrafie
+Gouda 16
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 17-11-26
+PET-CT FDG
+Gouda 3
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 17-11-26
+Botdichtheidsmeting
+Gouda 16
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 17-11-26
+Botscintigrafie
+Gouda 30
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 26-10-26
+Oogheelkunde
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 102
+Nieuwerkerk 102
+Schoonhoven 102
+Bodegraven 102
+Opname -
+Datum 24-11-26
+Orthopedie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 21
+Nieuwerkerk 20
+Schoonhoven -
+Bodegraven 21
+Opname -
+Datum 24-11-26
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Orthopedisch kinderpoli
+Gouda 22
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Behandelingen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Heupprothese
+Gouda 51
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 13-05-26
+Knieprothese, een nieuwe knie
+Gouda 55
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 19-05-26
+Pijnpoli
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 84
+Nieuwerkerk 84
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Pipo poli voor plas- en poepproblemen bij kinderen
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 112
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Specialismen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Kindergeneeskunde
+Gouda 14
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven 46
+Opname -
+Datum 24-11-26
+Plastische Chirurgie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 10
+Nieuwerkerk 42
+Schoonhoven -
+Bodegraven 42
+Opname -
+Datum 13-01-26
+Radiologie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Onderzoeken
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Echografie
+Gouda 14
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 29-10-26
+Mammografie
+Gouda 15
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+MRI-onderzoek
+Gouda 14
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Röntgenonderzoek
+Gouda 0
+Nieuwerkerk 0
+Schoonhoven -
+Bodegraven 0
+Opname -
+Datum 29-10-26
+CT-onderzoek
+Gouda 14
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Echografie schoudergewricht
+Gouda 14
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 29-10-26
+Birads 0
+Gouda 3
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 16-06-26
+Reumatologie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 23
+Nieuwerkerk 44
+Schoonhoven 51
+Bodegraven 29
+Opname -
+Datum 24-11-26
+Revalidatiegeneeskunde
+Voor poliklinische behandeling verwijzen we u naar de wachttijden op de website van Basalt: www.basaltrevalidatie.nl/wachttijden/
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Souffle poli
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 56
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Urologie
+Gouda Gou
+Nieuwerkerk Nwk
+Schoonhoven Scho
+Bodegraven Bode
+Opname Opn
+Datum Datum
+Algemene wachttijden
+Gouda 42
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 24-11-26
+Behandelingen
+Gouda
+Nieuwerkerk
+Schoonhoven
+Bodegraven
+Opname
+Datum
+Sterilisatie man (vasectomie)
+Gouda 0
+Nieuwerkerk -
+Schoonhoven -
+Bodegraven -
+Opname -
+Datum 21-04-26
+Deze website maakt gebruik van cookies
+Deze website maakt gebruik van geanonimiseerde cookies om jouw gebruikservaring te optimaliseren en voor de analyse van onze website. Deze cookies kun je niet uitzetten. Bij het tonen en afspelen van YouTube video's worden cookies van derden geplaatst. Deze cookies van derden kun je wel uitzetten. Klik op "Akkoord" als je akkoord gaat met dit gebruik van cookies, klik op "Aanpassen" voor meer informatie en om zelf te bepalen welke cookies deze website plaatst.
+Deze website maakt gebruik van geanonimiseerde cookies om jouw gebruikservaring te optimaliseren en voor de analyse van onze website. Deze cookies kun je niet uitzetten. Bij het tonen en afspelen van YouTube video's worden cookies van derden geplaatst. Deze cookies van derden kun je wel uitzetten. Klik op "Akkoord" als je akkoord gaat met dit gebruik van cookies, klik op "Aanpassen" voor meer informatie en om zelf te bepalen welke cookies deze website plaatst.
+GHZ
+Scroll terug naar boven

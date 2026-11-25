@@ -1,0 +1,271 @@
+source: https://www.elkerliek.nl/wachttijden
+fetched: 2026-11-25
+
+Wachttijden
+Hier vindt u meer informatie over onze wachttijden.
+Het Elkerliek ziekenhuis streeft naar korte wachttijden. Op deze pagina leest u meer over onze wachttijden. Er zijn drie soorten wachttijden:
+Polikliniek : de wachttijd tot een geplande afspraak op de polikliniek
+Diagnostiek : de wachttijd tot het geplande onderzoek (zoals een MRI, CT en echografie)
+Behandeling : de wachttijd tot een geplande behandeling (zoals een operatie)
+Bijgewerkt op: 24 november 2026
+Tabs Polikliniekbezoek Diagnostiek Behandeling
+Anesthesiologie
+Anesthesiologie / Pijnbestrijding
+161
+dagen
+Cardiologie
+Cardiologie - Algemeen
+30
+dagen
+Chirurgie (heelkunde)
+Chirurgie (heelkunde) - Algemeen
+5
+dagen
+Dermatologie
+Dermatologie - Algemeen
+24
+dagen
+Geriatrie
+Klinische geriatrie
+15
+dagen
+Gynaecologie
+Gynaecologie - Algemeen
+17
+dagen
+Interne geneeskunde
+Interne geneeskunde - Algemeen
+52
+dagen
+Kaakchirurgie
+Kaakchirurgie
+21
+dagen
+Kindergeneeskunde
+Kindergeneeskunde - Algemeen
+21
+dagen
+KNO
+KNO - Algemeen
+20
+dagen
+Longgeneeskunde
+Longgeneeskunde - Algemeen
+14
+dagen
+Maag, darm en leverziekten
+Maag, darm en leverziekten - Algemeen
+92
+dagen
+Neurochirurgie
+Neurochirurgie - Algemeen
+123
+dagen
+Neurologie
+Neurologie - Algemeen
+42
+dagen
+Oogheelkunde
+Oogheelkunde - Algemeen
+25
+dagen
+Orthopedie
+Orthopedie - Algemeen
+10
+dagen
+Plastische Chirurgie
+Plastische Chirurgie - Algemeen
+1
+dagen
+Reumatologie
+Reumatologie - Algemeen
+85
+dagen
+Revalidatie
+Revalidatie
+35
+dagen
+Sportgeneeskunde
+Sportgeneeskunde
+20
+dagen
+Urologie
+Urologie - algemeen
+25
+dagen
+Maag, darm en leverziekten
+Colonscopie
+35
+dagen
+Gastroscopie
+56
+dagen
+Radiologie
+Botdichtheidsmeting DEXA meting (radiologie)
+3
+dagen
+CT
+17
+dagen
+Echografie (radiologie)
+9
+dagen
+Mammografie (radiologie)
+2
+dagen
+MRI hersenen
+24
+dagen
+MRI heup(en)/ onderste extremiteit(en).
+24
+dagen
+MRI nek
+24
+dagen
+MRI rug
+24
+dagen
+MRI schouder(s)/bovenste extremiteit(en
+18
+dagen
+Röntgen (radiologie)
+1
+dagen
+Cardiologie
+Hartkatheterisatie (cardiologie)
+16
+dagen
+Chirurgie (heelkunde)
+(Vaat)chirurgische behandeling spataderen (heelkunde)
+25
+dagen
+Galblaasverwijdering (heelkunde)
+15
+dagen
+Operatieve behandeling liesbreuk (hernia inguinalis/ hernia femoralis) (heelkunde)
+15
+dagen
+Operatieve behandeling navelbreuk (hernia umbilicalis) bij volwassenen (heelkunde)
+40
+dagen
+Operatieve behandeling navelbreuk (hernia umbilicalis) bij volwassenen (heelkunde)
+20
+dagen
+Chirurgie (heelkunde) (303) / Dermatologie
+Operatieve behandeling goedaardige aandoeningen van/rondom de anus (heelkunde, dermatologie)
+20
+dagen
+Operatieve behandeling goedaardige aandoeningen van/rondom de anus (heelkunde, dermatologie)
+30
+dagen
+Chirurgie (heelkunde) (303) / Orthopedie
+Operatieve behandeling meniscus en/of kniebanden (geen vers letsel, exclusief artroscopische behandeling) (heelkunde, orthopedie)
+15
+dagen
+Chirurgie (heelkunde) (303) / Plastische Chirurgie (304) / Orthopedie
+Initiële operatieve behandeling carpaal tunnel syndroom (heelkunde, orthopedie, plastische chirurgie)
+38
+dagen
+Chirurgie (heelkunde) (303) / Urologie
+Sterilisatie man als zelfstandige verrichting (urologie, heelkunde)
+40
+dagen
+Dermatologie
+Behandeling spataderen (endovasculaire procedure) (dermatologie, heelkunde)
+25
+dagen
+Gynaecologie
+Geïsoleerde/ op zichzelf staande baarmoederverwijdering (gynaecologie)
+35
+dagen
+IUI (gynaecologie)
+3
+dagen
+Operatieve behandeling urine-incontinentie en/of verzakking bij vrouw (gynaecologie)
+35
+dagen
+Sterilisatie vrouw als zelfstandige verrichting (gynaecologie)
+35
+dagen
+Kaakchirurgie
+Apexresectie(s) (kaakchirurgie)
+15
+dagen
+Extractie gebitselement(en), niet in algehele anesthesie (kaakchirurgie)
+15
+dagen
+KNO
+Plaatsen middenoorbeluchtingsbuisjes (kno)
+30
+dagen
+Primaire operatieve behandeling van afwijkingen van neustussenschot (kno)
+33
+dagen
+Tonsillectomie en/of adenotomie (kno)
+30
+dagen
+KNO (302) / Longgeneeskunde
+Behandeling vanwege apneu (CPAP, operatieve behandeling) (kno, longgeneeskunde)
+35
+dagen
+Neurochirurgie (308) / Orthopedie
+Operatieve behandeling hernia nuclei pulposi/kanaalstenose (orthopedie, neurochirurgie)
+55
+dagen
+Spondylodese operatie aan de wervelkolom anders dan ihkv behandeling van hernia nuclei pulposi/kanaalstenose (orthopedie, neurochirurgie)
+55
+dagen
+Oogheelkunde
+Initiële staaroperatie (oogheelkunde)
+18
+dagen
+Ooglidcorrectie (oogheelkunde)
+17
+dagen
+Orthopedie
+Diagnostische en/of therapeutische kijkoperatie knie (orthopedie)
+15
+dagen
+Initiële totale heupvervanging (orthopedie)
+25
+dagen
+Initiële totale knie vervanging (orthopedie)
+30
+dagen
+Plastische Chirurgie
+Operatieve behandeling contractuur van Dupuytren (plastische chirurgie)
+40
+dagen
+Operatieve borstreconstructie (plastische chirurgie)
+50
+dagen
+Triggerfingerrelease (plastische chirurgie)
+25
+dagen
+Urologie
+Operatieve behandeling bij vergrote prostaat (urologie)
+35
+dagen
+Operatieve behandeling prostaatcarcinoom (urologie)
+25
+dagen
+Operatieve behandeling urine-incontinentie en/of blaasverzakking bij man (urologie)
+35
+dagen
+Percutane niersteenverwijdering (urologie)
+20
+dagen
+Vergruizing niersteen (urologie)
+15
+dagen
+Urologie (306) / Chirurgie (heelkunde)
+Besnijdenis als zelfstandige verrichting (urologie, heelkunde)
+50
+dagen
+Er zijn enkele belangrijke aandachtspunten met betrekking tot de wachttijden:
+De wachttijd hangt af van de aard van het gezondheidsprobleem en/of van persoonlijke omstandigheden.
+Voor spoedgevallen gelden afwijkende regels; deze krijgen altijd voorrang.
+Aan de genoemde wachttijden kunnen geen rechten worden ontleend.
+De wachttijd kan per specialist verschillen.
+Wachtlijstbemiddeling
+Heeft u vragen over de wachttijd of vindt u dat de wachttijd te lang is? Neem dan gerust contact met ons op. U kunt ook uw zorgverzekeraar inschakelen voor ondersteuning. In sommige gevallen kunnen zij bemiddelen, zodat u sneller geholpen wordt. Zorgaanbieders en zorgverzekeraars hebben gezamenlijk richtlijnen opgesteld voor aanvaardbare wachttijden, de zogeheten Treeknormen.

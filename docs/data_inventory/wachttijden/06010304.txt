@@ -1,0 +1,601 @@
+source: https://www.treant.nl/zorg/ziekenhuiszorg/wachttijden-ziekenhuiszorg
+fetched: 2026-11-25
+
+Wachttijden ziekenhuiszorg
+Spring naar inhoud
+Open
+Sluit
+Menu
+Cardiologie
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+21 dagen
+Refaja
+21 dagen
+Scheper
+24 dagen
+Chirurgie
+Toon
+Verberg
+Onderzoek/ Behandeling
+Bethesda
+Refaja
+Scheper
+Breuken, schroeven/platen verwijderen
+Bethesda
+Refaja
+14 dagen
+Scheper
+3 dagen
+Liesbreuk, anale ingrepen, lipoom, dupuytren, melanoom, (bij)schildklier, speekselklier, halscystes
+Bethesda
+21 dagen
+Refaja
+49 dagen
+Scheper
+80 dagen
+Mamma operaties (oncologie)
+Bethesda
+14 dagen
+Refaja
+Scheper
+Mbv robot, op aangeven operateur
+Bethesda
+Refaja
+Scheper
+56 dagen
+darmoperaties, galblaas, operaties in de buik
+Bethesda
+21 dagen
+Refaja
+49 dagen
+Scheper
+112 dagen
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak Chirurgie
+Bethesda
+15 dagen
+Refaja
+10 dagen
+Scheper
+10 dagen
+Eerste afspraak Trauma
+Bethesda
+8 dagen
+Refaja
+4 dagen
+Scheper
+7 dagen
+Defecatie Expertise Centrum (DEC
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+Refaja
+31 dagen
+Scheper
+48 dagen
+Dermatologie
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+65 dagen
+Refaja
+98 dagen
+Scheper
+70 dagen
+Gynaecologie
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+180 dagen
+Refaja
+180 dagen
+Scheper
+180 dagen
+Afwijkende baarmoederhalsuitstrijkjes
+Bethesda
+14 dagen
+Refaja
+14 dagen
+Scheper
+14 dagen
+Vaginaal bloedverlies na de overgang
+Bethesda
+14 dagen
+Refaja
+14 dagen
+Scheper
+14 dagen
+Onderzoek/ Behandeling
+Bethesda
+Refaja
+Scheper
+Gynaecologische operaties
+Bethesda
+80 dagen
+Refaja
+70 dagen
+Scheper
+31 dagen
+Mbv robot, op aangeven operateur
+Bethesda
+Refaja
+Scheper
+84 dagen
+Interne geneeskunde
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+120 dagen
+Refaja
+120 dagen
+Scheper
+120 dagen
+Kaakchirurgie (MKA)
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+30 dagen
+Refaja
+80 dagen
+Scheper
+200 dagen
+Keel-, Neus-, Oorheelkunde
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+56 dagen
+Refaja
+42 dagen
+Scheper
+42 dagen
+Gehoortest
+Bethesda
+53 dagen
+Refaja
+54 dagen
+Scheper
+25 dagen
+tonsillectomie en/of adenotomie
+Bethesda
+56 dagen
+Refaja
+42 dagen
+Scheper
+42 dagen
+Onderzoek/ Behandeling
+Bethesda
+Refaja
+Scheper
+KNO operaties >12 jaar
+Bethesda
+60 dagen
+Refaja
+60 dagen
+Scheper
+56 dagen
+Verwijderen keel- en/of neusamandelen; plaatsen buisjes bij kinderen <12 jaar
+Bethesda
+132 dagen
+Refaja
+132 dagen
+Scheper
+56 dagen
+Kindergeneeskunde
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+48 dagen
+Refaja
+48 dagen
+Scheper
+29 dagen
+Klinische geriatrie
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+55 dagen
+Refaja
+16 dagen
+Scheper
+22 dagen
+Geheugenpoli
+Bethesda
+55 dagen
+Refaja
+16 dagen
+Scheper
+22 dagen
+Osteoporose > 70 jaar
+Bethesda
+Refaja
+Scheper
+43 dagen
+Valpoli
+Bethesda
+Refaja
+Scheper
+52 dagen
+Longgeneeskunde
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+160 dagen
+Refaja
+160 dagen
+Scheper
+160 dagen
+Maag, darm en leverziekten (MDL)
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+182 dagen
+Refaja
+182 dagen
+Scheper
+182 dagen
+Endoscopie
+Bethesda
+24 dagen
+Refaja
+42 dagen
+Scheper
+24 dagen
+Neurochirurgie
+Toon
+Verberg
+Onderzoek/ Behandeling
+Bethesda
+Refaja
+Scheper
+Neurochirurgische operaties
+Bethesda
+14 dagen
+Refaja
+30 dagen
+Scheper
+Neurologie
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+380 dagen
+Refaja
+380 dagen
+Scheper
+380 dagen
+Oogheelkunde
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+Refaja
+90 dagen
+Scheper
+250 dagen
+Cataract
+Bethesda
+Refaja
+90 dagen
+Scheper
+250 dagen
+Optometrie spreekuur
+Bethesda
+Refaja
+90 dagen
+Scheper
+Orthopie (oogtest)
+Bethesda
+Refaja
+Scheper
+390 dagen
+Orthopedie
+Toon
+Verberg
+Onderzoek/ Behandeling
+Bethesda
+Refaja
+Scheper
+Breuken, schroeven/platen verwijderen
+Bethesda
+43 dagen
+Refaja
+54 dagen
+Scheper
+Heup en knie protheses
+Bethesda
+65 dagen
+Refaja
+33 dagen
+Scheper
+100 dagen
+Schouder operaties
+Bethesda
+54 dagen
+Refaja
+87 dagen
+Scheper
+100 dagen
+Voet, hand, knie en elleboog operaties
+Bethesda
+50 dagen
+Refaja
+24 dagen
+Scheper
+80 dagen
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Enkel/voet
+Bethesda
+28 dagen
+Refaja
+46 dagen
+Scheper
+44 dagen
+Hand/pols/elleboog
+Bethesda
+49 dagen
+Refaja
+59 dagen
+Scheper
+22 dagen
+Heupklachten
+Bethesda
+28 dagen
+Refaja
+30 dagen
+Scheper
+44 dagen
+Knieklachten
+Bethesda
+11 dagen
+Refaja
+46 dagen
+Scheper
+16 dagen
+Rugklachten
+Bethesda
+64 dagen
+Refaja
+60 dagen
+Scheper
+65 dagen
+Schouderklachten
+Bethesda
+42 dagen
+Refaja
+30 dagen
+Scheper
+22 dagen
+Sportgeneeskunde
+Bethesda
+11 dagen
+Refaja
+30 dagen
+Scheper
+16 dagen
+Pijnbestrijding
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+28 dagen
+Refaja
+Scheper
+Plastische Chirurgie
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+60 dagen
+Refaja
+Scheper
+42 dagen
+Onderzoek/ Behandeling
+Bethesda
+Refaja
+Scheper
+Plastische chirurgie operaties
+Bethesda
+71 dagen
+Refaja
+Scheper
+Radiologie
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+CT
+Bethesda
+2 dagen
+Refaja
+2 dagen
+Scheper
+2 dagen
+MRI
+Bethesda
+11 dagen
+Refaja
+11 dagen
+Scheper
+11 dagen
+Reumatologie
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+60 dagen
+Refaja
+60 dagen
+Scheper
+60 dagen
+Revalidatie (kinderen)
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+Refaja
+Scheper
+25 dagen
+Revalidatie (volwassenen)
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+60 dagen
+Refaja
+60 dagen
+Scheper
+70 dagen
+Urologie
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+15 dagen
+Refaja
+15 dagen
+Scheper
+15 dagen
+Onderzoek/ Behandeling
+Bethesda
+Refaja
+Scheper
+Mbv robot, op aangeven operateur
+Bethesda
+Refaja
+Scheper
+42 dagen
+Urologische operaties
+Bethesda
+28 dagen
+Refaja
+Scheper
+30 dagen
+Vaatchirurgie
+Toon
+Verberg
+Polikliniek
+Bethesda
+Refaja
+Scheper
+Eerste afspraak
+Bethesda
+10 dagen
+Refaja
+15 dagen
+Scheper
+10 dagen
+Onderzoek/ Behandeling
+Bethesda
+Refaja
+Scheper
+Vaatoperaties
+Bethesda
+Refaja
+Scheper
+21 dagen
+Wachttijd te lang?
+Wanneer u de wachttijd te lang vindt, kunt u uw zorgverzekeraar vragen om wachtlijstbemiddeling. Uw zorgverzekeraar kan u hierbij helpen. Mogelijk kunt u dan sneller geholpen worden. De maximaal aanvaardbare wachttijd voor de toegang tot de polikliniek en bij de diagnostiek is 4 weken. Voor behandeling is de maximaal aanvaardbare wachttijd 7 weken. De zorgaanbieders en zorgverzekeraars hebben deze tijden (de Treeknormen) samen afgesproken.
+Terug naar boven
+Treant logo
+Zorg dichterbij. Vanuit ons hart.
+Doorzoek de website
+Sluit venster
+Doorzoek de website
+Zoek

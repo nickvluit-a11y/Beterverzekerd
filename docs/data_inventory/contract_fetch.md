@@ -6,7 +6,7 @@ Laatste run: 2026-11-25.
 |---|---|---|
 | 06010619 | fout: not fetching https://www.meandermc.nl/praktische-informatie/kosten-en-vergoedingen/zorgverzekeraars-en-meander: robots.t | https://www.meandermc.nl/praktische-informatie/kosten-en-vergoedingen/zorgverzekeraars-en-meander |
 | 06010420 | fout: 403 Client Error: Forbidden for url: https://www.isala.nl/praktische-informatie/prijzen-rekening-en-uw-verzekering/contr | https://www.isala.nl/praktische-informatie/prijzen-rekening-en-uw-verzekering/contracten-met-zorgverzekeraars/ |
-| 06010534 | fout: not fetching https://www.geldersevallei.nl/over-zgv/onderhandelingen-zorgverzekeraars: robots.txt unreachable: SSLError | https://www.geldersevallei.nl/over-zgv/onderhandelingen-zorgverzekeraars |
+| 06010534 | fout: not fetching https://www.geldersevallei.nl/over-zgv/onderhandelingen-zorgverzekeraars: robots.txt unreachable: Connectio | https://www.geldersevallei.nl/over-zgv/onderhandelingen-zorgverzekeraars |
 | 06011002 | fout: 403 Client Error: Forbidden for url: https://www.maasziekenhuispantein.nl/praktische-informatie/kosten-ziekenhuiszorg/co | https://www.maasziekenhuispantein.nl/praktische-informatie/kosten-ziekenhuiszorg/contracten-met-zorgverzekeraars/ |
 | 06010530 | fout: 404 Client Error: Not Found for url: https://www.skbwinterswijk.nl/afspraken-zorgverzekeraars-2026 | https://www.skbwinterswijk.nl/afspraken-zorgverzekeraars-2026 |
 | 06010533 | fout: not fetching https://stjansdal.nl/patienten-en-bezoekers/kosten-en-zorgverzekering/zorgverzekeringen: robots.txt unreach | https://stjansdal.nl/patienten-en-bezoekers/kosten-en-zorgverzekering/zorgverzekeringen |
