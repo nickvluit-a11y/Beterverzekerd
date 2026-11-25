@@ -44,6 +44,10 @@ jobs:
         continue-on-error: true
         run: python -m scrapers.waits
 
+      - name: Fetch ZorgkaartNederland ratings (aggregates only)
+        continue-on-error: true
+        run: python -m scrapers.zorgkaart
+
       - name: Fetch indicator guides
         continue-on-error: true
         run: python -m scrapers.indicator_guides
@@ -64,6 +68,11 @@ jobs:
         if: steps.contracts.outcome == 'success'
         continue-on-error: true
         run: python -m pipeline.contracts_parse
+
+      - name: Link ratings to locations
+        if: always()
+        continue-on-error: true
+        run: python -m pipeline.reviews_ingest
 
       - name: Build database
         if: always()

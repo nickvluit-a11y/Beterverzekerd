@@ -15,6 +15,7 @@ import re
 import sys
 
 from scrapers.common import ROOT, PoliteSession, RobotsDisallowed, today
+from scrapers.contracts import html_to_text
 
 FINDERS = {
     "CZ": "https://zorgvinder.cz.nl/resultaten/ziekenhuis/utrecht?afstand=10&jaar=2027",
@@ -47,6 +48,10 @@ def probe(http: PoliteSession, name: str, url: str) -> list[str]:
               f"- zichtbare tekst (begin): {text.strip()[:400]}", "", "Mogelijke data-endpoints:", ""]
     lines += [f"- {u}" for u in endpoints] or ["- (geen)"]
     lines += ["", "Scripts:", ""] + ([f"- {s}" for s in scripts] or ["- (geen)"]) + [""]
+    # keep the visible text of server-rendered finders, to design a parser from the real page
+    slug = re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
+    (ROOT / "docs" / "data_inventory" / f"finder_{slug}.txt").write_text(
+        f"source: {url}\n\n" + html_to_text(page)[:60000], encoding="utf-8")
     return lines
 
 

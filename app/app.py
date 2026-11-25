@@ -122,6 +122,14 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 """, unsafe_allow_html=True)
 
 
+@st.cache_data(ttl=3600)
+def load_reviews() -> pd.DataFrame:
+    path = Path(__file__).resolve().parent.parent / "data" / "processed" / "reviews_linked.csv"
+    if not path.exists():
+        return pd.DataFrame(columns=["location_key", "rating", "count"])
+    return pd.read_csv(path, dtype={"location_key": str})[["location_key", "rating", "count"]]
+
+
 @st.cache_resource
 def database():
     return connect()
@@ -185,6 +193,7 @@ if search:
     near = near.merge(verdicts, on="location_key", how="left")
     waits = latest_waits(proc).rename(columns={"weeks": "wait_weeks", "peildatum": "wait_date"})
     near = near.merge(waits[["location_key", "wait_weeks", "wait_type", "wait_date"]], on="location_key", how="left")
+    near = near.merge(load_reviews(), on="location_key", how="left")
     near["quality_verdict"] = near["quality_verdict"].fillna("geen_data").map(shown_verdict)
     near["_order"] = near["quality_verdict"].map(ORDER.index)
     near["display_name"] = [display_name(r) for r in near.itertuples()]
@@ -262,6 +271,11 @@ if search:
                              f'<span class="note"> · NZa, {nice_date(row.wait_date)}</span></div>')
             else:
                 wait_html = ""
+            if pd.notna(getattr(row, "rating", None)):
+                stars = f"{float(row.rating):.1f}".replace(".", ",")
+                count = f"{int(row.count):,}".replace(",", ".")
+                wait_html += (f'<div class="wait">★ {stars} van patiënten ({count} waarderingen)'
+                              '<span class="note"> · ZorgkaartNederland</span></div>')
             found = {c: contract_for(contracts, row.organisatie_agb, c, c) for c in concerns} if has_contracts else {}
             found = {c: r for c, r in found.items() if r}
             if chosen != ALL_INSURERS:
