@@ -186,6 +186,7 @@ def test_zorginzicht_ingest(tmp_path, monkeypatch):
     late.to_excel(raw / "naleveringen-msz-verslagjaar-2025.xlsx", index=False)
     monkeypatch.setattr(zorginzicht_ingest, "REFERENCE", tmp_path / "ref")
     monkeypatch.setattr(zorginzicht_ingest, "CATALOGUE_DOC", tmp_path / "ind.md")
+    monkeypatch.setattr(zorginzicht_ingest, "SET_INVENTORY", tmp_path / "sets.md")
     monkeypatch.setattr(pipeline.reference, "PROCESSED", tmp_path / "out")
     assert zorginzicht_ingest.main([str(raw)]) == 0
 
@@ -200,23 +201,23 @@ def test_zorginzicht_ingest(tmp_path, monkeypatch):
 
 
 def test_nza_ingest(tmp_path, monkeypatch):
-    raw = tmp_path / "2026-11-24"
-    raw.mkdir()
-    (raw / "wachttijden.csv").write_text(
-        "PEILDATUM;NAAM_LOCATIE;PLAATS;AGB_LOCATIE;KVK_INSTELLING;SPECIALISME;TYPE_WACHTTIJD;WACHTTIJD\n"
-        "2026-09-15;Meander Medisch Centrum;Amersfoort;;123;Orthopedie;Behandeling;7\n"
-        "2026-09-15;UMC Utrecht;Utrecht;;456;Oogheelkunde;Polikliniek;4,5\n"
-        "2026-09-15;UMC Utrecht;Utrecht;;456;Cardiologie;Polikliniek;3\n",
-        encoding="utf-8")
+    header = "PEILDATUM;AGBCODE;POSTCODE;NAAM_VESTIGING;PLAATS;TYPE_WACHTTIJD;OMS_WACHTTIJD;WACHTTIJD;INSUFFICIENT_OBSERVATIONS"
+    rows = ["2026-11-10;06020602;3584CX;UMC Utrecht;Utrecht;Behandeling;Initiële totale heupvervanging (orthopedie);49;FALSE",
+            "2026-11-10;06020602;3584CX;UMC Utrecht;Utrecht;Polikliniekbezoek;Orthopedie - Heupklachten;14;FALSE",
+            "2026-11-10;06020602;3584CX;UMC Utrecht;Utrecht;Behandeling;Initiële staaroperatie (oogheelkunde);30;TRUE",
+            "2026-11-10;06020602;3584CX;UMC Utrecht;Utrecht;Polikliniekbezoek;Cardiologie - Algemeen;3;FALSE"]
+    path = tmp_path / "wachttijden_2026-11-10.csv"
+    path.write_bytes(("\n".join([header] + rows) + "\n").encode("cp1252"))
     monkeypatch.setattr(pipeline.reference, "PROCESSED", tmp_path / "out")
     monkeypatch.setattr(nza_ingest, "INVENTORY", tmp_path / "inventory.md")
-    assert nza_ingest.main([str(raw)]) == 0
-    out = pd.read_csv(tmp_path / "out" / "waiting_times.csv")
-    # orthopedics feeds both hip and knee, ophthalmology feeds cataract; cardiology dropped
-    assert sorted(out["procedure_id"]) == ["heup", "knie", "staar"]
-    assert out.loc[out["procedure_id"] == "staar", "weeks"].iloc[0] == 4.5
-    assert set(out["location_id"]) == {"meander", "umcu"}
-
+    assert nza_ingest.main([str(path)]) == 0
+    out = pd.read_csv(tmp_path / "out" / "waiting_times.csv", dtype=str)
+    assert sorted(out["procedure_id"]) == ["heup", "heup", "staar"]   # cardiology dropped
+    heup = out[(out["procedure_id"] == "heup") & (out["wait_type"] == "behandeling")].iloc[0]
+    assert float(heup["days"]) == 49 and float(heup["weeks"]) == 7 and heup["location_key"].startswith("06020602-")
+    from pipeline.score import latest_waits
+    waits = latest_waits("staar", pd.read_csv(tmp_path / "out" / "waiting_times.csv"))
+    assert waits.empty  # too few observations: not shown
 
 # --- scoring -------------------------------------------------------------------------------
 
@@ -832,3 +833,36 @@ def test_policy_overview_counts_reimbursed_better_hospitals():
     assert (out.loc["Basis Keuze", ["volledig", "deels", "onbekend"]] == [1, 1, 0]).all()
     assert (out.loc["Zorgbewust", ["volledig", "deels", "onbekend"]] == [0, 0, 2]).all()
     assert out.index[0] == "Eigen Keuze"
+
+
+def test_zorgkaart_parse_and_link():
+    from pipeline.reviews_ingest import link
+    from scrapers.zorgkaart import parse_institution
+    html = ('<script type="application/ld+json">{"@type":"Hospital","name":"UMC Utrecht",'
+            '"address":{"postalCode":"3584 CX","addressLocality":"Utrecht"},'
+            '"aggregateRating":{"@type":"AggregateRating","ratingValue":8.4,"ratingCount":1234}}</script>')
+    row = parse_institution(html, "https://example/zorginstelling/ziekenhuis-umc-utrecht-utrecht-1")
+    assert row["rating"] == 8.4 and row["count"] == 1234 and row["postcode"] == "3584CX"
+    locations = pd.DataFrame([
+        {"location_key": "06020602-3584CX", "locatie_naam": "UMC Utrecht", "organisatie_naam": "UMC Utrecht", "postcode": "3584CX", "plaats": "Utrecht"},
+        {"location_key": "06010618-3582KE", "locatie_naam": "Diakonessenhuis", "organisatie_naam": "Diak", "postcode": "3582KE", "plaats": "Utrecht"},
+    ])
+    linked = link(pd.DataFrame([{**row, "fetched_on": "2026-11-25"}]), locations)
+    assert linked.iloc[0]["location_key"] == "06020602-3584CX"
+
+
+def test_explain_in_plain_words():
+    from pipeline.explain import explain, trend_sentences
+    title, measured, (css, verdict) = explain({"indicator": "Heroperatie (revisie) binnen 1 jaar", "rate": 1.81,
+                                               "national_rate": 0.64, "method": "interval", "verdict": "gemiddeld"})
+    assert title == "Heroperatie binnen 1 jaar" and "1,8 op de 100" in measured and "landelijk 0,6" in measured
+    assert "te weinig patiënten" in verdict
+    title, measured, (css, verdict) = explain({"indicator": "Verbetering volgens patiënt na 12 maanden: pijn bij bewegen",
+                                               "rate": 5.75, "national_rate": 5.85, "method": "interval", "verdict": "gemiddeld"})
+    assert "daalde met 5,8 punten (schaal 0 tot 10)" in measured and verdict == "rond het gemiddelde"
+    _, measured, (css, verdict) = explain({"indicator": "Diepe wondinfectie binnen 90 dagen", "rate": 0.0,
+                                           "national_rate": 0.0078, "method": "ratio", "verdict": "beter"})
+    assert "0,0 op de 100" in measured and css == "beter"
+    trend = pd.DataFrame({"indicator": ["Diepe wondinfectie binnen 90 dagen"] * 3, "verslagjaar": [2023, 2024, 2025],
+                          "verdict": ["beter"] * 3})
+    assert trend_sentences(trend) == ["Al 3 jaar beter dan gemiddeld op: diepe wondinfectie binnen 90 dagen"]

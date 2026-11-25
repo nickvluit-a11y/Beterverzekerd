@@ -183,6 +183,8 @@ def latest_waits(procedure_id: str, waits: pd.DataFrame | None = None) -> pd.Dat
     if waits.empty or "location_key" not in waits:
         return pd.DataFrame(columns=columns)
     sub = waits[(waits["procedure_id"] == procedure_id) & waits["location_key"].notna()].copy()
+    if "insufficient" in sub:  # the NZa flags waits based on too few observations
+        sub = sub[~sub["insufficient"].astype(str).str.lower().isin(["true", "1"])]
     if sub.empty:
         return pd.DataFrame(columns=columns)
     sub = sub[pd.to_numeric(sub["weeks"], errors="coerce").notna()]
