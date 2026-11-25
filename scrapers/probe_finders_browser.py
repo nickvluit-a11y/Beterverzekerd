@@ -109,6 +109,14 @@ def next_page(page) -> list[str]:
 def choose_policy(page, policy: str) -> list[str]:
     """Answer 'Kies je basisverzekering': list the choices, pick `policy`, confirm with 'Klaar'."""
     out = []
+    script = ("() => { const el = [...document.querySelectorAll('*')].find(e => "
+              "/basisverzekering/i.test(e.innerText || '') && e.children.length < 40 "
+              "&& (e.innerText || '').length < 1500); return el ? el.outerHTML : ''; }")
+    try:  # keep the markup of the policy question, so the right choice can be made without guessing
+        html = page.evaluate(script) or "(niet gevonden)"
+        out += ["", "Markup rond 'basisverzekering':", "~~~", html[:4000], "~~~", ""]
+    except Exception as exc:
+        out.append(f"- markup: {type(exc).__name__}")
     selects = page.locator("select")
     for i in range(selects.count()):
         options = selects.nth(i).locator("option")
