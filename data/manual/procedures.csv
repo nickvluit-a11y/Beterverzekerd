@@ -1,4 +1,4 @@
 procedure_id,name_nl,zorginzicht_pattern,nza_pattern,nza_treatment,nza_outpatient
-heup,Heupprothese,^heupprothese$,orthop,Initiële totale heupvervanging (orthopedie),Orthopedie - Heupklachten
-knie,Knieprothese,^knieprothese$,orthop,Initiële totale knie vervanging (orthopedie),Orthopedie - Knieklachten
-staar,Staaroperatie (cataract),^cataract$,oogheelk|oogarts,Initiële staaroperatie (oogheelkunde),Oogheelkunde - Staar
+heup,Nieuwe heup (heupprothese),^heupprothese$,orthop,Initiële totale heupvervanging (orthopedie),Orthopedie - Heupklachten
+knie,Nieuwe knie (knieprothese),^knieprothese$,orthop,Initiële totale knie vervanging (orthopedie),Orthopedie - Knieklachten
+staar,Staaroperatie,^cataract$,oogheelk|oogarts,Initiële staaroperatie (oogheelkunde),Oogheelkunde - Staar

@@ -218,8 +218,8 @@ if search:
     else:
         counts = near["quality_verdict"].value_counts()
         n_good = int(counts.get("boven_gemiddeld", 0))
-        st.markdown(f"**{len(near)} {'ziekenhuis doet' if len(near) == 1 else 'ziekenhuizen doen'}** binnen "
-                    f"{search['radius']} km een {search['proc_name'].lower()}. "
+        st.markdown(f"**{len(near)} {'ziekenhuis doet' if len(near) == 1 else 'ziekenhuizen doen'}** deze operatie "
+                    f"binnen {search['radius']} km. "
                     + (f"**{n_good}** daarvan {'scoort' if n_good == 1 else 'scoren'} beter dan gemiddeld."
                        if n_good else "Geen daarvan scoort aantoonbaar beter dan gemiddeld; kies eventueel een grotere afstand."))
 
