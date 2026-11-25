@@ -108,10 +108,19 @@ def _column_oriented(rows: list[list[str]]) -> list[dict]:
     return out
 
 
+MARKS = {"✓", "✔", "✗", "✘", "x", "v", "-", "–", "ja", "nee"}
+_HOSPITAL_COL = re.compile(r"ziekenhuis|medisch.?specialistische|\bmsz\b")
+_OTHER_CARE_COL = re.compile(r"ggz|wijkverpleging|\bgrz\b|\belv\b|gzsp|revalidatie|eerstelijn|thuiszorg|wlz")
+
+
 def _row_oriented(rows: list[list[str]]) -> list[dict]:
     first = rows[0]
     is_header = not any(match_label(c) for c in first) and any(_HEADER_WORDS.search(clean(c)) for c in first)
     plafond_cols = {i for i, c in enumerate(first) if "plafond" in clean(c)} if is_header else set()
+    # tables with a column per type of care: only the hospital column is about us
+    other_care = {i for i, c in enumerate(first) if _OTHER_CARE_COL.search(clean(c))} if is_header else set()
+    has_hospital_col = is_header and any(_HOSPITAL_COL.search(clean(c)) for c in first)
+    skip_cols = other_care if has_hospital_col else set()
     out = []
     for row in rows[1:] if is_header else rows:
         hits = [(i, h) for i, c in enumerate(row) if not _is_prose(c) and (h := match_label(c))]
@@ -119,8 +128,13 @@ def _row_oriented(rows: list[list[str]]) -> list[dict]:
             continue
         label_cols = {i for i, _ in hits}
         _, hit = _pick_label(hits)
+        marks = [j for j, c in enumerate(row) if clean(c) in MARKS and j not in skip_cols and j not in plafond_cols]
+        if len(marks) > 1:
+            continue  # a matrix of marks without a known meaning per column: no claim
         statuses, plafonds, polis = [], [], None
         for j, cell in enumerate(row):
+            if j in skip_cols:
+                continue
             if j in label_cols or not cell or _is_prose(cell):
                 continue
             plafond = plafond_from_text(cell, plafond_column=j in plafond_cols)
@@ -141,10 +155,25 @@ def _row_oriented(rows: list[list[str]]) -> list[dict]:
     return out
 
 
-def parse_tables(tables: list[list[list[object]]]) -> list[dict]:
+def ambiguous_marks(text: str) -> set[str]:
+    """Marks that a legend in the text gives more than one meaning, e.g. '✓' for both
+    'Gecontracteerd' and 'nog geen volledige overeenstemming' (told apart only by colour)."""
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    meanings: dict[str, set[str]] = {}
+    for line, nxt in zip(lines, lines[1:]):
+        mark = clean(nxt)
+        if mark in MARKS and len(line.split()) <= 25:
+            status = status_from_text(line)
+            if status != "onbekend":
+                meanings.setdefault(mark, set()).add(status)
+    return {m for m, s in meanings.items() if len(s) > 1}
+
+
+def parse_tables(tables: list[list[list[object]]], ambiguous: set[str] | frozenset = frozenset()) -> list[dict]:
     rows: list[dict] = []
     for table in tables:
-        clean_rows = [[_cell(c) for c in row] for row in table if row]
+        # a mark with two meanings carries no information: treat it as an empty cell
+        clean_rows = [[("" if clean(_cell(c)) in ambiguous else _cell(c)) for c in row] for row in table if row]
         clean_rows = [r for r in clean_rows if any(r)]
         if not clean_rows:
             continue
@@ -230,7 +259,7 @@ def line_tables(text: str) -> list[list[list[str]]]:
 
 def parse_source(tables: list, text: str) -> list[dict]:
     """Rows from tables, plus rows from text lines for labels the tables missed."""
-    parsed = parse_tables(tables)
+    parsed = parse_tables(tables, ambiguous_marks(text))
     for extra in (parse_legend(text), parse_lines(text), parse_tables(line_tables(text))):
         seen = {(r["concern"], r["label"]) for r in parsed}
         parsed += [r for r in extra if (r["concern"], r["label"]) not in seen]

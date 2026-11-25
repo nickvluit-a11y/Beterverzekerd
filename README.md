@@ -31,3 +31,9 @@ pip install -r requirements.txt
 python -m pytest
 streamlit run app/app.py
 ```
+
+## Online (Railway)
+Railway deploys `main` automatically (`railway.json`: Nixpacks build, Streamlit start command, healthcheck).
+Variables in Railway:
+- `APP_PASSWORD` — required while the app is in development (shows a password screen)
+- `SHOW_WORSE` — `true` (default) shows 'slechter dan gemiddeld'; `false` only 'aantoonbaar beter' / 'niet aantoonbaar beter'

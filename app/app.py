@@ -8,6 +8,8 @@ Run: streamlit run app/app.py
 
 from __future__ import annotations
 
+import hmac
+import os
 import sys
 from pathlib import Path
 
@@ -41,6 +43,20 @@ BADGES = {  # verdict -> (text, css class, map colour)
     "geen_data": ("Geen vergelijkbare cijfers", "none", [203, 213, 225]),
 }
 ORDER = list(BADGES)
+# Owner's decision: show 'slechter dan gemiddeld' as well. SHOW_WORSE=false switches to the cautious
+# variant that only says 'aantoonbaar beter' or 'niet aantoonbaar beter' (both true).
+SHOW_WORSE = os.environ.get("SHOW_WORSE", "true").lower() == "true"
+if not SHOW_WORSE:
+    BADGES = {"boven_gemiddeld": BADGES["boven_gemiddeld"],
+              "niet_beter": ("Niet aantoonbaar beter", "avg", [100, 116, 139]),
+              "geen_data": BADGES["geen_data"]}
+    ORDER = list(BADGES)
+
+
+def shown_verdict(verdict: str) -> str:
+    if SHOW_WORSE or verdict in ("boven_gemiddeld", "geen_data"):
+        return verdict
+    return "niet_beter"
 CONTRACT_CHIP = {"gecontracteerd": ("✓", "ok"), "gecontracteerd_met_plafond": ("✓*", "ok"),
                  "in_onderhandeling": ("…", "wait"), "geen_contract": ("✗", "no")}
 
@@ -82,6 +98,15 @@ def cached_geocode(postcode: str):
     return geocode_postcode(postcode)
 
 
+password = os.environ.get("APP_PASSWORD")
+if password and not st.session_state.get("authenticated"):
+    entered = st.text_input("Wachtwoord", type="password")
+    if entered and hmac.compare_digest(entered, password):
+        st.session_state["authenticated"] = True
+        st.rerun()
+    st.caption("Beterverzekerd is nog in ontwikkeling en alleen met wachtwoord te bekijken.")
+    st.stop()
+
 con = database()
 procs = procedures()
 
@@ -115,7 +140,7 @@ if search:
     near = hospitals_within(*search["coords"], search["radius"], locations_for_procedure(con, proc))
     verdicts = quality_latest(con, proc)[["location_key", "quality_verdict", "verslagjaar", "volume"]]
     near = near.merge(verdicts, on="location_key", how="left")
-    near["quality_verdict"] = near["quality_verdict"].fillna("geen_data")
+    near["quality_verdict"] = near["quality_verdict"].fillna("geen_data").map(shown_verdict)
     near["_order"] = near["quality_verdict"].map(ORDER.index)
     near["display_name"] = [display_name(r) for r in near.itertuples()]
     near = near.sort_values(["_order", "distance_km"]).reset_index(drop=True)
@@ -147,7 +172,8 @@ if search:
         for row in near.itertuples():
             text, css, _ = BADGES[row.quality_verdict]
             points_html = "".join(f'<li class="{v}">{s}</li>' for v, s in
-                                  domain_highlights(judged[judged["location_key"] == row.location_key]))
+                                  domain_highlights(judged[judged["location_key"] == row.location_key])
+                                  if SHOW_WORSE or v == "beter")
             year = f" · cijfers {int(row.verslagjaar)}" if pd.notna(row.verslagjaar) else ""
             found = {c: contract_for(contracts, row.organisatie_agb, c, c) for c in concerns} if has_contracts else {}
             found = {c: r for c, r in found.items() if r}
@@ -178,12 +204,17 @@ if search:
                     ratio = shown["method"] == "ratio"
                     for col in ["rate", "national_rate"]:
                         shown.loc[ratio, col] = shown.loc[ratio, col] * 100
+                    if not SHOW_WORSE:
+                        shown["verdict"] = shown["verdict"].map({"beter": "beter"}).fillna("niet aantoonbaar beter")
                     st.dataframe(shown[["indicator", "rate", "national_rate", "verdict"]].rename(columns={
                         "indicator": "Indicator", "rate": "Dit ziekenhuis", "national_rate": "Landelijk",
                         "verdict": "Oordeel"}).round(2), hide_index=True, width="stretch")
                 trend = indicator_trend(con, row.location_key, proc)
                 if trend["verslagjaar"].nunique() > 1:
-                    pivot = trend[trend["verdict"].notna()].pivot_table(
+                    trend = trend[trend["verdict"].notna()].copy()
+                    if not SHOW_WORSE:
+                        trend["verdict"] = trend["verdict"].map({"beter": "beter"}).fillna("niet aantoonbaar beter")
+                    pivot = trend.pivot_table(
                         index="verslagjaar", columns="indicator", values="verdict", aggfunc="first")
                     st.caption("Oordeel per jaar")
                     st.dataframe(pivot, width="stretch")
