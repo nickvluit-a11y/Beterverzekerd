@@ -340,7 +340,7 @@ if search:
                 origins = sorted({str(r.get("origin") or "ziekenhuis") for r in found.values()})
                 source = "Contracten 2027 volgens " + " en ".join(
                     {"verzekeraar": "de verzekeraar", "ziekenhuis": "het ziekenhuis"}[o]
-                    for o in origins) + " · ? = nog onbekend"
+                    for o in origins) + " · ✓ betaald · … nog in gesprek · ✗ geen contract · ? nog niet bekend"
                 chips_html = ('<div class="chips">' + "".join(chips) + f'<div class="note">{source}</div></div>')
             else:
                 chips_html = '<div class="chips">Contracten 2027 voor dit ziekenhuis: nog niet bekend</div>'
