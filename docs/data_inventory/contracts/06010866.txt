@@ -5,7 +5,7 @@ HMC » feed
 HMC » reacties feed
 oEmbed (JSON)
 oEmbed (XML)
-JSON
+JSON RSD
 Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
 Status onderhandelingen HMC en zorgverzekeraars: geen overstapadvies

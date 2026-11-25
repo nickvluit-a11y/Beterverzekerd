@@ -1,0 +1,41 @@
+label,polis,premie,confirmed,confirmed_url,pages_checked,errors,checked_on
+Zilveren Kruis,Basis Start,159.45,True,https://www.zilverenkruis.nl/consumenten/zorgverzekering/basisverzekering/basisverzekeringen-zilverenkruis,1,,2026-11-25
+Zilveren Kruis,Basis Zeker,164.95,True,https://www.zilverenkruis.nl/consumenten/zorgverzekering/basisverzekering/basisverzekeringen-zilverenkruis,1,,2026-11-25
+Zilveren Kruis,Basis Exclusief,186.95,True,https://www.zilverenkruis.nl/consumenten/zorgverzekering/basisverzekering/basisverzekeringen-zilverenkruis,1,,2026-11-25
+FBTO,Basis,154.75,True,https://www.fbto.nl/-/media/documenten/zorg/zorgverzekering-premieoverzicht.pdf,1,,2026-11-25
+FBTO,Basis Plus,164.95,True,https://www.fbto.nl/-/media/documenten/zorg/zorgverzekering-premieoverzicht.pdf,1,,2026-11-25
+FBTO,Basis Vrij,179.75,True,https://www.fbto.nl/-/media/documenten/zorg/zorgverzekering-premieoverzicht.pdf,1,,2026-11-25
+Interpolis,ZorgActief,164.95,True,https://www.interpolis.nl/verzekeren/zorgverzekering/overzicht-premies,1,,2026-11-25
+De Friesland,Zelf Bewust Polis,156.75,True,https://www.defriesland.nl/,2,,2026-11-25
+De Friesland,Alles Verzorgd Polis,164.95,True,https://www.defriesland.nl/zorgverzekering,2,,2026-11-25
+ZieZo,ZieZo Basis,164.95,True,https://www.zilverenkruis.nl/ziezo/zorgverzekering/premie,1,,2026-11-25
+De christelijke zorgverzekeraar,Principe Polis,160.95,False,,0,https://www.dezorgverzekeraar.nl: RobotsDisallowed,2026-11-25
+VGZ,VGZ Basis Keuze,167.4,True,https://www.vgz.nl/zorgverzekering/premie-overzicht,1,,2026-11-25
+VGZ,VGZ Ruime Keuze,170.75,True,https://www.vgz.nl/zorgverzekering/premie-overzicht,1,,2026-11-25
+VGZ,VGZ Eigen Keuze,188.15,True,https://www.vgz.nl/zorgverzekering/premie-overzicht,1,,2026-11-25
+Bewuzt,VGZbewuzt Basis (Bewuste Keuze),165.4,False,,1,,2026-11-25
+IZA,IZA Basis Keuze,166.4,True,https://www.iza.nl/collectieve-zorgverzekering,23,https://www.iza.nl/404?item=web%3a%7b8B1B22BC-D208-4C43-83A0-568AFA6FEAF3%7d%40nl-NL: HTTPError,2026-11-25
+IZA,IZA Ruime Keuze,177.45,True,https://www.iza.nl/collectieve-zorgverzekering/premie-overzicht,23,https://www.iza.nl/404?item=web%3a%7b8B1B22BC-D208-4C43-83A0-568AFA6FEAF3%7d%40nl-NL: HTTPError,2026-11-25
+IZA,IZA Eigen Keuze,170.15,True,https://www.iza.nl/collectieve-zorgverzekering/premie-overzicht,23,https://www.iza.nl/404?item=web%3a%7b8B1B22BC-D208-4C43-83A0-568AFA6FEAF3%7d%40nl-NL: HTTPError,2026-11-25
+IZZ,IZZ door VGZ Variant Bewuzt,165.4,True,https://izz.nl/zorgverzekering/zorgpremie-2027,8,,2026-11-25
+IZZ,IZZ door VGZ Variant Basis,167.4,False,,8,,2026-11-25
+IZZ,IZZ door CZ Zorgbewustpolis,,False,,8,,2026-11-25
+UMC Zorgverzekering,UMC Ruime Keuze,167.4,True,https://www.umczorgverzekering.nl/zorgverzekering,25,,2026-11-25
+UMC Zorgverzekering,UMC Eigen Keuze,176.45,False,,25,,2026-11-25
+UnitedConsumers,UnitedConsumers Bewuste Keuze,165.4,True,https://www.unitedconsumers.com/zorgverzekering,2,,2026-11-25
+Univé,Univé Zorg Select,165.4,True,https://www.unive.nl/actueel/cooperatie-unive-maakt-zorgpremies-2027-bekend,1,,2026-11-25
+Univé,Univé Zorg Basis,167.9,True,https://www.unive.nl/actueel/cooperatie-unive-maakt-zorgpremies-2027-bekend,1,,2026-11-25
+Univé,Univé Zorg Geregeld,171.25,True,https://www.unive.nl/actueel/cooperatie-unive-maakt-zorgpremies-2027-bekend,1,,2026-11-25
+Univé,Univé Zorg Uitgebreid,189.7,True,https://www.unive.nl/actueel/cooperatie-unive-maakt-zorgpremies-2027-bekend,1,,2026-11-25
+CZ,Zorgbewustpolis,176.25,True,https://www.cz.nl/en/zorgverzekering,5,,2026-11-25
+CZ,Zorg-op-maatpolis,177.25,True,https://www.cz.nl/en/zorgverzekering,5,,2026-11-25
+CZ,Zorgvariatiepolis,202.5,True,https://www.cz.nl/en/zorgverzekering,5,,2026-11-25
+OHRA,OHRA Zorgverzekering (basis),177.35,True,https://www.ohra.nl/zorgverzekering/premie,1,,2026-11-25
+Nationale-Nederlanden,Zorg Voordelig,164.45,True,https://www.nn.nl/Particulier/Zorgverzekering.htm,1,,2026-11-25
+Nationale-Nederlanden,Zorg Vrij,178.85,True,https://www.nn.nl/Particulier/Zorgverzekering.htm,1,,2026-11-25
+CZdirect,CZdirect Basis,165.15,False,,1,,2026-11-25
+Just,Just Basic,168.5,True,https://www.just.nl/zorgverzekering/zorgverzekering-2027,1,,2026-11-25
+Menzis,Menzis Basis Voordelig,160.75,True,https://www.menzis.nl/zorgverzekering,4,,2026-11-25
+Menzis,Menzis Basis,165.75,True,https://www.menzis.nl/over-menzis/nieuws-en-blogs/over-de-cooperatie/premie-2027,4,,2026-11-25
+Menzis,Menzis Basis Vrij,188.25,True,https://www.menzis.nl/zorgverzekering,4,,2026-11-25
+VinkVink,VinkVink Basisverzekering,148.4,True,https://www.vinkvink.nl/,1,,2026-11-25
