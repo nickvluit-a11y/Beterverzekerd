@@ -85,6 +85,38 @@ def fill(page, selector: str, value: str) -> str:
     return f"ingevuld {value}"
 
 
+def choose_policy(page, policy: str) -> list[str]:
+    """Answer 'Kies je basisverzekering': list the choices, pick `policy`, confirm with 'Klaar'."""
+    out = []
+    selects = page.locator("select")
+    for i in range(selects.count()):
+        options = selects.nth(i).locator("option")
+        texts = [options.nth(j).inner_text().strip() for j in range(options.count())]
+        values = [options.nth(j).get_attribute("value") for j in range(options.count())]
+        out.append(f"- keuzelijst {i}: " + "; ".join(f"{t}={v}" for t, v in zip(texts, values))[:600])
+        match = next((v for t, v in zip(texts, values) if policy.lower() in t.lower()), None)
+        if match:
+            try:
+                selects.nth(i).select_option(match, timeout=5000)
+                out.append(f"- gekozen: {policy} ({match})")
+            except Exception as exc:
+                out.append(f"- kiezen {policy}: {type(exc).__name__}")
+    if not any("gekozen" in o for o in out):  # a custom list instead of <select>
+        for opener in ("Selecteer", "Kies uw basisverzekering", "Kies je basisverzekering"):
+            try:
+                page.get_by_text(opener, exact=True).first.click(timeout=3000)
+                page.get_by_text(policy, exact=False).first.click(timeout=3000)
+                out.append(f"- gekozen via lijst: {policy}")
+                break
+            except Exception:
+                continue
+    try:
+        page.get_by_role("button", name=re.compile(r"^\s*klaar", re.I)).locator("visible=true").first.click(timeout=3000)
+    except Exception:
+        pass
+    return out
+
+
 def probe(page, name: str, url: str, what_sel: str | None = None, where_sel: str | None = None,
           link_text: str | None = None, submit: str = "enter") -> list[str]:
     lines = [f"# Zorgzoeker {name} (browser-verkenning {today()})", "", f"- start: {url}"]
@@ -151,6 +183,9 @@ def probe(page, name: str, url: str, what_sel: str | None = None, where_sel: str
     except Exception as exc:
         lines.append(f"- zoeken: {type(exc).__name__}")
     page.wait_for_timeout(5000)
+    if name == "zilveren_kruis":  # the finder asks which basic policy you have before it shows statuses
+        lines += choose_policy(page, "Basis Zeker")
+        page.wait_for_timeout(5000)
     text = page.inner_text("body")
     (OUT / f"finder_browser_{name}.txt").write_text(f"source: {page.url}\n\n{text[:60000]}", encoding="utf-8")
     lines += ["", f"- na zoeken: {page.url}", f"- zichtbare tekst: {len(text):,} tekens",
