@@ -120,8 +120,7 @@ def load_policies(year: int = 2027, in_scope: bool = True) -> pd.DataFrame:
     if in_scope and not policies.empty:
         # the four groups in scope; a policy only when its premium is sourced on the brand's own site
         from pipeline.reference import scope
-        policies = policies[policies["concern"].isin(scope()["concern"]) & (policies["label"] != "ONVZ")
-                            & (policies["source_type"] == "insurer")].reset_index(drop=True)
+        policies = policies[policies["concern"].isin(scope()["concern"]) & (policies["label"] != "ONVZ")].reset_index(drop=True)
     if policies.empty:
         policies = labels()[["concern", "label"]].copy()
         policies["polis"] = "(polissen nog niet ingevoerd)"
@@ -136,6 +135,13 @@ def load_policies(year: int = 2027, in_scope: bool = True) -> pd.DataFrame:
         policies["confirmed"] = policies["confirmed"].map(lambda v: bool(v) if pd.notna(v) else False).astype(object)
     else:
         policies["confirmed"] = None  # not checked yet: say nothing rather than 'unconfirmed'
+    if in_scope and not policies.empty:
+        # direct sources only: a premium from elsewhere counts once the check found it on the brand's own site
+        own = policies["source_type"] == "insurer"
+        confirmed = policies["confirmed"].map(lambda v: v is True)
+        if "confirmed_url" in policies:
+            policies.loc[~own & confirmed, "source_url"] = policies.loc[~own & confirmed, "confirmed_url"]
+        policies = policies[own | confirmed].reset_index(drop=True)
     return policies
 
 

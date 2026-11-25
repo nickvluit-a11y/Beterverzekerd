@@ -37,6 +37,14 @@ SITES = {  # label -> the insurer's own site (not comparison sites)
     "Zorg en Zekerheid": "https://www.zorgenzekerheid.nl", "Salland": "https://www.salland.nl",
     "HollandZorg": "https://www.hollandzorg.com", "Aevitae": "https://www.aevitae.com", "Care4Life": "https://www.care4life.nl",
 }
+# own-site pages known to list 2027 premiums (found by search; checked by this script, not trusted)
+EXTRA_STARTS = {
+    "OHRA": ["https://www.ohra.nl/zorgverzekering/premie"],
+    "IZZ": ["https://www.izz.nl/zorgverzekering/zorgpremie-2027"],
+    "Just": ["https://www.just.nl/zorgverzekering/zorgverzekering-2027"],
+    "Zilveren Kruis": ["https://www.zilverenkruis.nl/consumenten/zorgverzekering/veranderingen/overzicht-van-de-premies"],
+    "ZieZo": ["https://www.zilverenkruis.nl/ziezo/zorgverzekering/premie"],
+}
 _FOLLOW = re.compile(r"premie|basisverzekering|zorgverzekering|polis|tarie", re.IGNORECASE)
 MAX_PAGES = 25
 
@@ -67,6 +75,7 @@ def find_amounts(text: str, amounts: dict[str, str]) -> set[str]:
 def check_label(http: PoliteSession, label: str, rows: pd.DataFrame) -> list[dict]:
     home = SITES.get(label)
     starts = [u for u in rows["source_url"].dropna().unique() if home and site_of(u) == site_of(home)]
+    starts += EXTRA_STARTS.get(label, [])
     queue = list(dict.fromkeys(starts + ([home] if home else [])))
     amounts = {r.polis: amount_text(float(r.premie_per_maand)) for r in rows.itertuples() if pd.notna(r.premie_per_maand)}
     confirmed: dict[str, str] = {}

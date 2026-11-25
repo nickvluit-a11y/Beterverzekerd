@@ -959,3 +959,23 @@ def test_policies_in_scope_come_from_the_insurer_itself():
     for p in policies.itertuples():
         own = site_of(SITES[p.label]).split(".")[-2]  # e.g. 'vgz' also allows cooperatievgz.nl
         assert own in site_of(p.source_url), (p.label, p.polis, p.source_url)
+
+
+def test_premium_from_elsewhere_counts_once_confirmed_on_own_site(tmp_path, monkeypatch):
+    from pipeline import score
+    pd.DataFrame([
+        {"concern": "CZ", "label": "OHRA", "polis": "Basis", "premie_per_maand": 177.35, "source_type": "aggregator",
+         "source_url": "https://www.keuze.nl/x"},
+        {"concern": "CZ", "label": "Just", "polis": "Just Basic", "premie_per_maand": 168.5, "source_type": "aggregator",
+         "source_url": "https://www.keuze.nl/y"},
+        {"concern": "DSW", "label": "DSW", "polis": "Basis", "premie_per_maand": 173.25, "source_type": "insurer",
+         "source_url": "https://www.dsw.nl/z"},
+    ]).to_csv(tmp_path / "polissen_2027.csv", index=False)
+    pd.DataFrame([{"label": "OHRA", "polis": "Basis", "confirmed": True, "confirmed_url": "https://www.ohra.nl/premie",
+                   "checked_on": "2026-11-26"},
+                  {"label": "Just", "polis": "Just Basic", "confirmed": False, "confirmed_url": None,
+                   "checked_on": "2026-11-26"}]).to_csv(tmp_path / "premium_check.csv", index=False)
+    monkeypatch.setattr(score, "MANUAL", tmp_path)
+    monkeypatch.setattr(score, "PROCESSED", tmp_path)
+    out = score.load_policies(2027)
+    assert out[["label", "source_url"]].values.tolist() == [["OHRA", "https://www.ohra.nl/premie"]]
