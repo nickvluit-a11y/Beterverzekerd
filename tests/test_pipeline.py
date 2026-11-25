@@ -186,6 +186,7 @@ def test_zorginzicht_ingest(tmp_path, monkeypatch):
     late.to_excel(raw / "naleveringen-msz-verslagjaar-2025.xlsx", index=False)
     monkeypatch.setattr(zorginzicht_ingest, "REFERENCE", tmp_path / "ref")
     monkeypatch.setattr(zorginzicht_ingest, "CATALOGUE_DOC", tmp_path / "ind.md")
+    monkeypatch.setattr(zorginzicht_ingest, "SET_INVENTORY", tmp_path / "sets.md")
     monkeypatch.setattr(pipeline.reference, "PROCESSED", tmp_path / "out")
     assert zorginzicht_ingest.main([str(raw)]) == 0
 

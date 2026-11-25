@@ -28,6 +28,7 @@ from pipeline.tabular import read_any
 
 REFERENCE = ROOT / "data" / "reference"
 CATALOGUE_DOC = ROOT / "docs" / "data_inventory" / "indicatoren.md"
+SET_INVENTORY = ROOT / "docs" / "data_inventory" / "indicatorsets.md"
 
 # canonical name -> normalised source spellings (lowercase, letters/digits only)
 COLUMNS = {
@@ -187,6 +188,19 @@ def catalogue_markdown(catalogue: pd.DataFrame) -> str:
     return "\n".join(lines)
 
 
+def write_set_inventory(rows: pd.DataFrame) -> None:
+    """docs/data_inventory/indicatorsets.md: every indicator set in the open data with its number of
+    locations per year, to spot useful sets (e.g. patient experience / PREM) beyond our procedures."""
+    counts = (rows.groupby(["indicatorset_naam", "verslagjaar"])["location_key"].nunique()
+              .unstack(fill_value=0).sort_index())
+    years = [str(c) for c in counts.columns]
+    lines = ["# Alle indicatorsets in Zorginzicht MSZ open data", "",
+             "| indicatorset | " + " | ".join(years) + " |", "|---|" + "---|" * len(years)]
+    lines += [f"| {name} | " + " | ".join(str(v) for v in row) + " |" for name, row in counts.iterrows()]
+    SET_INVENTORY.parent.mkdir(parents=True, exist_ok=True)
+    SET_INVENTORY.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 def main(argv: list[str]) -> int:
     source_dir = Path(argv[0]) if argv else latest_raw_dir()
     if not source_dir:
@@ -203,6 +217,7 @@ def main(argv: list[str]) -> int:
     CATALOGUE_DOC.parent.mkdir(parents=True, exist_ok=True)
     CATALOGUE_DOC.write_text(catalogue_markdown(catalogue), encoding="utf-8")
     save_with_history(measurements, "measurements", source_dir.name)
+    write_set_inventory(rows)
     print(f"locations: {len(locations):,}; indicators for our procedures: {len(catalogue)}; "
           f"measurements: {len(measurements):,} ({measurements['verslagjaar'].min()}-{measurements['verslagjaar'].max()})")
     return 0
