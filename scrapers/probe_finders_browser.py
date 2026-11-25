@@ -17,11 +17,13 @@ from urllib.parse import urlparse
 
 from scrapers.common import ROOT, USER_AGENT, today
 
-FINDERS = {  # landing page, field for 'what', field for 'where', link text to click first (if any)
+FINDERS = {  # landing page, field 'what', field 'where', link to click first, how to submit ('enter' or a selector)
     "zilveren_kruis": ("https://www.zilverenkruis.nl/consumenten/zorgzoeker",
-                       "#autofill-Zorgtype-input", "#autofill-Locatie-input", None),
-    "vgz": ("https://www.vgz.nl/zorg-regelen/zorgzoeker", "input[name=zoekterm]", "input[name=locatie]", None),
-    "menzis": ("https://www.menzis.nl/zorg-en-vergoedingen/de-zorgvinder", None, None, "Naar de Zorgvinder"),
+                       "#autofill-Zorgtype-input", "#autofill-Locatie-input", None,
+                       "form:has(#autofill-Locatie-input) button[type=submit], form:has(#autofill-Locatie-input) button"),
+    "vgz": ("https://www.vgz.nl/zorg-regelen/zorgzoeker", "input[name=zoekterm]", "input[name=locatie]", None, "enter"),
+    "menzis": ("https://www.menzis.nl/zorg-en-vergoedingen/de-zorgvinder", None, None, "Naar de Zorgvinder",
+               "button:has-text('Zoeken')"),
 }
 WHAT, WHERE = "Ziekenhuis", "3584 CX"
 _FINDER_LINK = re.compile(r"zorgzoeker|zorgverlener (zoeken|vinden)|zoek een zorgverlener|vind een zorgverlener", re.I)
@@ -84,7 +86,7 @@ def fill(page, selector: str, value: str) -> str:
 
 
 def probe(page, name: str, url: str, what_sel: str | None = None, where_sel: str | None = None,
-          link_text: str | None = None) -> list[str]:
+          link_text: str | None = None, submit: str = "enter") -> list[str]:
     lines = [f"# Zorgzoeker {name} (browser-verkenning {today()})", "", f"- start: {url}"]
     if not allowed(url):
         return lines + ["- robots.txt staat dit niet toe: niet geopend"]
@@ -137,14 +139,13 @@ def probe(page, name: str, url: str, what_sel: str | None = None, where_sel: str
             lines.append(f"- {selector}: {fill(page, selector, value)}")
         except Exception as exc:
             lines.append(f"- {selector} ({value}): {type(exc).__name__}: {str(exc)[:150]}")
-    try:  # submit from inside the finder's form (the site's own header search also says 'Zoeken')
-        if where_sel or what_sel:
+    try:  # submit inside the finder's own form (the site's header search also says 'Zoeken')
+        if submit == "enter":
             page.locator(where_sel or what_sel).first.press("Enter", timeout=5000)
-            page.wait_for_timeout(3000)
-        if len(seen) == before:
-            buttons = page.get_by_role("button", name=re.compile(r"^\s*(zoek|zoeken|vind|toon)", re.I)).locator("visible=true")
-            if buttons.count():
-                buttons.last.click(timeout=5000)
+        else:
+            button = page.locator(submit).locator("visible=true")
+            lines.append(f"- zoekknoppen gevonden: {button.count()}")
+            button.first.click(timeout=5000)
         page.wait_for_load_state("networkidle", timeout=30000)
     except Exception as exc:
         lines.append(f"- zoeken: {type(exc).__name__}")
@@ -174,10 +175,10 @@ def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     with sync_playwright() as p:
         browser = p.chromium.launch()
-        for name, (url, what_sel, where_sel, link_text) in FINDERS.items():
+        for name, (url, what_sel, where_sel, link_text, submit) in FINDERS.items():
             page = browser.new_page(user_agent=USER_AGENT, locale="nl-NL")
             try:
-                lines = probe(page, name, url, what_sel, where_sel, link_text)
+                lines = probe(page, name, url, what_sel, where_sel, link_text, submit)
             except Exception as exc:
                 lines = [f"# Zorgzoeker {name}", "", f"- fout: {type(exc).__name__}: {str(exc)[:300]}"]
             page.close()
