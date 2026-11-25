@@ -26,7 +26,7 @@ from pipeline.geo import clean_postcode, locate  # noqa: E402
 from pipeline.explain import explain, trend_sentences  # noqa: E402
 from pipeline.quality import domain_highlights, domain_of, domain_verdicts  # noqa: E402
 from pipeline.reference import labels, procedures, scope  # noqa: E402
-from pipeline.score import attach_organisation, contract_for, hospitals_within, latest_waits, load_contracts, load_policies, policy_overview  # noqa: E402
+from pipeline.score import to_date, attach_organisation, contract_for, hospitals_within, latest_waits, load_contracts, load_policies, policy_overview  # noqa: E402
 
 MONTHS_NL = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
 
@@ -409,6 +409,15 @@ if search:
                 render_card(row)
 
 st.divider()
+if search:
+    freshness = [f"kwaliteit: Zorginstituut, cijfers over {int(near['verslagjaar'].max())}"] if not near.empty and near["verslagjaar"].notna().any() else []
+    if not near.empty and near["wait_date"].notna().any():
+        freshness.append(f"wachttijden: NZa, {nice_date(near['wait_date'].dropna().max())}")
+    dates = contracts["peildatum"].map(to_date).dropna() if not contracts.empty and "peildatum" in contracts else []
+    if len(dates):
+        freshness.append(f"contracten: verzekeraars en ziekenhuizen, laatst bijgewerkt {nice_date(dates.max())}")
+    if freshness:
+        st.caption("Bronnen · " + " · ".join(freshness))
 st.markdown(
     '<p class="note"><b>Hoe werkt het?</b> Elk ziekenhuis moet elk jaar aan de overheid laten weten hoe het gaat: '
     'hoe vaak een operatie over moet, hoe vaak er een infectie komt en hoe patiënten zich voelen na de operatie. '
