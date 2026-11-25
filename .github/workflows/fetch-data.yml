@@ -56,6 +56,10 @@ jobs:
         continue-on-error: true
         run: python -m scrapers.menzis_zorgvinder
 
+      - name: Fetch Zilveren Kruis care finder (contract status per location)
+        continue-on-error: true
+        run: python -m scrapers.zk_zorgzoeker
+
       - name: Check premiums on the insurers' own sites
         continue-on-error: true
         run: python -m scrapers.verify_premiums
