@@ -28,11 +28,14 @@ jobs:
           pip install playwright
           python -m playwright install --with-deps chromium
           python -m scrapers.probe_finders_browser
+      - name: Check the Zilveren Kruis finder service (two towns, records the HTTP status)
+        continue-on-error: true
+        run: python -m scrapers.zk_zorgzoeker 2
       - name: Commit report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/source_check
-          for f in docs/data_inventory/insurer_finders.md docs/data_inventory/finder_*; do if [ -e "$f" ]; then git add "$f"; fi; done
+          for f in docs/data_inventory/insurer_finders.md docs/data_inventory/finder_* docs/data_inventory/zk_zorgzoeker.md; do if [ -e "$f" ]; then git add "$f"; fi; done
           git diff --cached --quiet || git commit -m "Update source check report"
           git pull --rebase && git push
