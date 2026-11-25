@@ -1,4 +1,4 @@
-source: https://www.vgz.nl/zorg-regelen/zorgzoeker/zoekresultaten?zoekterm=ziekenhuis&locatie=Utrecht#/zoeken
+source: https://www.vgz.nl/zorg-regelen/zorgzoeker#/filter
 
 Skiplinks navigatie
 Naar hoofdinhoud
@@ -23,17 +23,29 @@ Mijn postvak
 Mijn gegevens
 Declaratie indienen
 Inloggen
- Home   Zorg   Zorgverlener zoeken
 Zoeken
 
 Laatste update: 24 november 2026 20:28 uur
 
-Duurt het lang voordat je terecht kunt?
+Vind een zorgverlener bij jou in de buurt
 
+In de Zorgzoeker zie je met welke zorgverleners wij afspraken hebben. Dat zijn onze gecontracteerde zorgverleners. 
 
-Onze zorgadviseurs kijken graag met je mee of je ergens anders eerder terecht kunt. Dit kan bij ziekenhuiszorg vanaf een wachttijd van 4 weken of bij GGZ vanaf 13 weken.
+Zoek op de zorg die je nodig hebt. Bijvoorbeeld 'Fysiotherapie', 'Ziekenhuis' of 'Huisarts'. Weet je al naar welke zorgverlener je toe wilt? Zoek dan opnieuw op de naam van jouw zorgverlener. Zo zie je of deze een contract met ons heeft.
 
-Neem contact op
+Zorg nodig? Vergelijk wachttijden
+
+Met de Wachttijdvergelijker:
+
+Vergelijk je wachttijden voor ziekenhuiszorg en psychische zorg
+Zie je waar je sneller terecht kunt
+Kies je een zorgverlener die bij je past
+Naar de Wachttijdvergelijker
+Veelgestelde vragen
+Hoe werkt de Zorgzoeker precies?
+Welke informatie kan ik vinden in de Zorgzoeker naast de contactgegevens van zorgverleners?
+Ik ben al in behandeling. Wat als mijn zorgverlener volgend jaar geen contract meer heeft?
+Heeft de zorgaanbieder het omzetplafond bereikt?
 Footer
 Direct regelen
 Inloggen Mijn VGZ
@@ -66,6 +78,11 @@ KvK-nummer: 09156723 | btw-nummer: NL815184232B01
 Disclaimer  |  Privacybeleid  |  Cookieverklaring  |  Toegankelijkheidsverklaring
 Responsible Disclosure Statement  |  Sitemap
   
+Hallo ik ben Sam,
+kan ik je ergens mee helpen?
+Stel een vraag aan onze chatbot.
+Ja, graag
+Nee, dank je
 Wij maken gebruik van cookies
 Op vgz.nl gebruiken wij cookies en technieken die hierop lijken. Basis cookies zijn verplicht om vgz.nl goed te laten werken. Voor persoonlijke en tracking cookies vragen we jouw toestemming. We verwerken dan (bijzondere) persoonsgegevens van jou op basis van jouw surfgedrag. Bijvoorbeeld welke pagina’s je bezoekt, zoals vergoedingen- en zorg gerelateerde pagina’s. Deze bevatten mogelijk medische informatie. Ook verwerken wij daarbij je IP-adres. Ben je ingelogd in Mijn VGZ? Wees gerust, wij gebruiken via cookies nooit informatie over jouw declaraties. Door toestemming te geven krijg je nuttige informatie op het juiste moment. We doen dit via alle interne en externe kanalen waarop we met je in contact kunnen komen. Zoals op deze website, in onze app, e-mail, social media en advertentie kanalen. Je kunt ook jouw cookie-instellingen zelf aanpassen. Meer over cookies en welke partijen deze plaatsen lees je in onze cookieverklaring.
 Instellingen

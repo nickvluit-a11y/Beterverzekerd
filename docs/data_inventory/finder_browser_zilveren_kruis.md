@@ -1,14 +1,34 @@
 # Zorgzoeker zilveren_kruis (browser-verkenning 2026-11-25)
 
-- start: https://www.zilverenkruis.nl/consumenten/zorgzoeker/resultaten?zorgsoort=ziekenhuis&locatie=Utrecht
-- eind-URL: https://www.zilverenkruis.nl/consumenten/zorgzoeker/resultaten?zorgsoort=ziekenhuis&locatie=Utrecht
-- zichtbare tekst: 2,239 tekens
+- start: https://www.zilverenkruis.nl/consumenten/zorgzoeker
+- zoekpagina: https://www.zilverenkruis.nl/consumenten/zorgzoeker
 
-## JSON-antwoorden die de pagina zelf laadt
+## Invoervelden
 
-## Links naar zorgzoeker-pagina's
+- ch-main-nav-search-input Zoeken  Zoekterm (INPUT/search)
+- ch-mobile-main-nav-search-input Zoeken  Zoekterm (INPUT/search)
+- autofill-Zorgtype-input Bijvoorbeeld: fysiotherapie  Welke zorg * (INPUT/text)
+- autofill-Locatie-input Bijvoorbeeld: Leiden  Plaats of postcode 
+Informatie weergeven
+Plaats of postcode
 
-- https://www.zilverenkruis.nl/-/media/files/zilveren-kruis/zorgaanbieders/over-zilveren-kruis/cookie-overzicht-zilveren-kruis.pdf?rev=3d5a5f453e0b4e9f82bc09fac26adb7e&hash=4F296B7660A38D83DBB42D3D12204465
-- https://www.zilverenkruis.nl/consumenten/zorgzoeker
-- https://www.zilverenkruis.nl/consumenten/zorgzoeker/resultaten?zorgsoort=ziekenhuis&locatie=Utrecht#navigatie-overslaan
-- https://www.zilverenkruis.nl/zorgaanbieders
+Vul een postcode in voor een nauwkeuriger resultaat (INPUT/text)
+- autofill-Instelling-input Bijvoorbeeld: UMC  Naam van organisatie of zorgverlener (INPUT/text)
+- invullen Ziekenhuis: TimeoutError
+
+- na zoeken: https://www.zilverenkruis.nl/consumenten/zorgzoeker
+- zichtbare tekst: 2,353 tekens
+- JSON-antwoorden voor/na zoeken: 0/1
+
+## JSON-antwoorden na het zoeken (grootste eerst)
+
+### POST 200 https://www.zilverenkruis.nl/clientcontroller/zorgzoekerclient/getautofilllocatie (126 tekens)
+
+Verzonden:
+```
+{"ZoekstringLocatie":"3584CX"}
+```
+```
+{"isSucces":true,"options":[{"id":"194117","label":"3584CX UTRECHT","value":"3584CX UTRECHT","category":null,"subtext":null}]}
+```
+

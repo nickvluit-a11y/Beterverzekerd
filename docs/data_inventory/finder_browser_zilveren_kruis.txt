@@ -1,10 +1,11 @@
-source: https://www.zilverenkruis.nl/consumenten/zorgzoeker/resultaten?zorgsoort=ziekenhuis&locatie=Utrecht
+source: https://www.zilverenkruis.nl/consumenten/zorgzoeker
 
 Navigatie overslaan
 Zorgaanbieders
 Zakelijk
 English
-Zoeken
+Zoeken uitvoeren
+Zoekterm
 Mijn Zilveren Kruis
 Home
 Verzekeringen
@@ -14,13 +15,45 @@ Betalen
 Gezonder leven
 Over ons
 Contact
+Consumenten
+Zorgzoeker
+Vind een zorgverlener
+
+Bekijk met welke zorgverleners we afspraken hebben. Kies de zorg die je nodig hebt en vul je postcode in. Of zoek op naam van de organisatie of zorgverlener.
+
+Welke zorg *
+Plaats of postcode 
+Informatie weergeven
+Plaats of postcode
+
+Vul een postcode in voor een nauwkeuriger resultaat
+
+Invoerveld leegmaken
+Naam van organisatie of zorgverlener
+Zoeken
+Het kan zijn dat we nog in gesprek zijn met de zorgverlener van jouw keuze
+
+We werken de Zorgzoeker dagelijks bij. Ga je naar een zorgverlener waar we geen afspraken mee maken voor 2027? Dan krijg je meestal minder vergoed.
 
 
-Pagina niet gevonden
-Dit was zeker niet wat je zocht! De pagina die je zocht kan niet worden gevonden of bestaat helaas niet meer. Je kunt het volgende proberen:
-Controleer of het adres juist is geschreven...
-Gebruik de 'Vorige'-knop van je browser om terug te gaan naar de pagina waar je vandaan komt.
-Je kunt ook de zoekfunctie gebruiken om de gewenste informatie te vinden.
+
+Goed om te weten
+Elk jaar maken we afspraken over de zorg
+Dit doen we samen met zorgverleners. Bijvoorbeeld over het aantal behandelingen. En voor welk bedrag. Zo zorgen we ervoor dat iedereen, ook in de toekomst, kan rekenen op goede zorg. 
+Lees wat dit voor jou betekent
+Ga je naar een zorgverlener zonder contract?
+Dan kan het zijn dat je een lagere vergoeding krijgt. Of soms zelfs geen vergoeding.
+Meer over niet-gecontracteerde zorg
+Bekijk wat je vergoed krijgt
+Je hebt een zorgverlener gevonden. Maar wat krijg je nu eigenlijk vergoed? Dit lees je op onze vergoedingenpagina's.
+Zoek jouw vergoeding
+Veelgestelde vragen
+Mijn zorgverlener heeft een wachtlijst. Kan ik hulp krijgen bij het regelen van zorg?
+Kan ik voor niet-spoedeisende zorg naar het buitenland?
+Ik ga naar het ziekenhuis voor een behandeling. Welke hulp of zorg kan ik na mijn behandeling krijgen?
+Ik zoek een nieuwe huisarts. Kunnen jullie mij helpen?
+Was dit nuttig?
+Ja Nee
 Onze verzekeringen
 Basisverzekering
 Aanvullende verzekering
@@ -54,23 +87,3 @@ Volg Zilveren Kruis op X
 Denk met Zilveren Kruis mee
 Bekijk Zilveren Kruis op YouTube
 Zilveren Kruis is onderdeel van 
-Cookie-instellingen
-Zilveren Kruis gebruikt cookies.
-
-We gebruiken cookies om je online gedrag te analyseren en te combineren met gegevens die we van je hebben. Zo weten we welke advertenties werken en kunnen we je persoonlijker helpen via onze website, app of sociale media. Hiermee verwerken wij jouw persoonsgegevens. In ons cookie statement vind je meer informatie over hoe wij of onze 13 partners deze cookies gebruiken.
-
-Weiger je cookies?
-
-Dan plaatsen wij alleen cookies voor functionele, affiliate en beperkt analytische doelen. Deze cookies plaatsen wij altijd en hebben weinig tot geen invloed op je privacy. We mogen deze cookies plaatsen zonder je toestemming.
-
-Akkoord met cookies?
-
-Dan geef je ons toestemming om ook cookies te plaatsen voor uitgebreid analytische en personalisatiedoelen. Deze cookies hebben invloed op je privacy.
-
-Zelf je voorkeuren aanpassen?
-
-Je bepaalt zelf voor welke doelen wij cookies mogen plaatsen. Je keuze kun je op elk moment wijzigen. Of trek je toestemming in via de link “Cookie-instellingen” onderaan de pagina.
-
-Pas voorkeuren aan
-Akkoord
-Weigeren

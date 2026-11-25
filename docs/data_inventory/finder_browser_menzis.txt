@@ -1,9 +1,18 @@
-source: https://www.menzis.nl/zorgzoeker
+source: https://www.menzis.nl/zorg-en-vergoedingen/de-zorgvinder
 
 Links voor snelle navigatie
 Ga naar de content
 Voor consumenten
 Zoeken
+
+Zoek binnen menzis.nl
+
+Ik zoek
+Zoeken
+Zoeken
+
+Je kunt ook een vraag stellen aan onze chatbot of andere contactmogelijkheden op onze service & contactpagina bekijken.
+
 Inloggen
 Terug naar de homepage
 Verzekering
@@ -11,18 +20,52 @@ Zorg en vergoedingen
 Gezondheid
 Zelf regelen
 Service en contact
-home
-Deze pagina bestaat niet
+Vergoedingen
+Vind een zorgaanbieder in de buurt
 
-Dit komt bijvoorbeeld omdat er een typefout in de URL zit, omdat de link niet klopt of omdat de pagina verplaatst of helemaal weggehaald is.
+Heb je zorg nodig? Met de Zorgvinder vind je eenvoudig een zorgaanbieder waarmee we een contract hebben. Bijvoorbeeld een huisarts, ziekenhuis, tandarts, apotheek, psycholoog, fysiotherapeut of een andere zorgverlener bij jou in de buurt.
 
-Wat kun je nu doen?
+Gecontracteerde zorg in de buurt
 
-Zoek je iets? Gebruik dan de zoekbalk. 
+In de Zorgvinder van Menzis vind je de gecontracteerde zorgaanbieders. Dit zijn zorgaanbieders waarmee we afspraken hebben gemaakt. Van deze zorgaanbieders vind je onder andere:
 
-Typ je zoekopdracht in een paar woorden, bijvoorbeeld 'vergoeding fysiotherapie'.
-Wil je dat een bepaald woord juist niet voorkomt in het zoekresultaat? Zet daar dan een - voor.
-Moet een woord zeker terugkomen in het zoekresultaat? Gebruik dan een + voor dat woord.
+contactgegevens en openingstijden
+gecontracteerde behandelingen
+patiëntbeoordelingen
+informatie over kwaliteit van behandelingen
+
+Naar de Zorgvinder
+
+Bij welke zorgaanbieders kan ik in 2027 terecht?
+
+Met veel zorgaanbieders zijn al afspraken gemaakt voor 2027, maar nog niet met allemaal. We zorgen voor voldoende gecontracteerde zorg dichtbij. Zo hebben we altijd met alle ziekenhuizen en de meeste wijkverpleging en ggz-aanbieders afspraken gemaakt en ook voor 2027 is dat weer ons doel. In onze Zorgvinder lees je wat er is afgesproken voor jouw zorgaanbieder. Dit overzicht werken we drie keer per week bij. Mocht het voorkomen dat jouw zorgaanbieder niet wordt gecontracteerd, dan kan het betekenen dat je een deel van de kosten zelf moet betalen.
+
+Zorgcontractering, hoe zit dat nou? 
+
+Elk jaar maken we voor onze klanten afspraken met zorgaanbieders. Deze afspraken gaan onder andere over de kosten en de kwaliteit van de zorg.
+
+Lees meer over zorgcontractering
+
+Deze externe inhoud kan niet worden getoond omdat u third-party cookies niet hebt geaccepteerd. U kunt deze inhoud bekijken door op de video te klikken en in de cookie-popup Overige (marketing) cookies accepteren.
+
+Verschil tussen gecontracteerde en ongecontracteerde zorg
+
+Ga je naar een zorgaanbieder die een contract met ons heeft? Dat heeft voordelen:
+
+Er zijn afspraken gemaakt over de kwaliteit van de zorg en over de wachttijden in de zorg.
+De zorgaanbieder houdt zich aan de prijsafspraken die met Menzis zijn gemaakt.
+De rekening gaat direct naar Menzis. Je hoeft dus niets voor te schieten.
+
+Heb je Menzis Basis of Menzis Basis Voordelig en ga je voor een zorgaanbieder die geen contract met Menzis heeft? Dan betaal je de rekening zelf aan de zorgaanbieder. Daarna declareer je de rekening bij ons.
+
+Het kan zijn dat je niet alles vergoed krijgt. Dat is zo als de zorgaanbieder meer in rekening brengt dan wat in Nederland normaal is. Hoeveel je bij een niet-gecontracteerde aanbieder vergoed krijgt, hangt af van je Basisverzekering. 
+
+Je leest er meer over op de pagina over gecontracteerde en niet-gecontracteerde zorg.
+
+Hoe zit het met de hardheidsclausule?
+
+Kies je liever voor een zorgaanbieder zonder zorgovereenkomst, maar vormt de lagere vergoeding een belemmering? Dan kun je ons vragen om een hogere vergoeding. Bij onze beoordeling gaan we uit van de gemiddelde zorggebruiker. We reageren binnen drie weken. Op het te vergoeden bedrag worden eventuele eigen bijdragen en daarna het verplicht en vrijwillig eigen risico in mindering gebracht.
+
 Wij helpen je graag verder
 
 We helpen je met je zorgverzekering, het kiezen van een zorgaanbieder of wachtlijstbemiddeling. Stel je vraag aan onze chatbot Sarah of bekijk onze contactmogelijkheden
@@ -41,8 +84,9 @@ Declaratie indienen
 Toestemmingen beheren
 Wijziging doorgeven
 home
+Vergoedingen
 
-Deze pagina bestaat niet
+Vind een zorgaanbieder in de buurt
 
 Dan is er Menzis.
 
@@ -50,14 +94,3 @@ Cookiepolicy & Cookies aanpassen
 Disclaimer
 Privacy
 Toegankelijkheid
-Menzis maakt gebruikt van cookies
-
-Functionele cookies zijn nodig voor de werking van onze websites en apps en worden daarom altijd geplaatst. Analytische cookies helpen ons om inzicht te krijgen in hoe de website wordt gebruikt, zodat we de website kunnen verbeteren. Met deze beide cookies worden geen persoonsgegevens verzameld.
-Cookies voor marktonderzoek en marketing plaatsen we alleen met jouw toestemming. Hiermee weten we bijvoorbeeld welke pagina’s je bekijkt op onze website; ook vergoedingenpagina’s. Met deze informatie kunnen we onze website, advertenties op social media en e-mails afstemmen op jouw voorkeuren. Op pagina's met informatie over vergoedingen en in onze MijnOmgevingen plaatsen wij geen pixels van social media platformen.
-Klik je op ‘Accepteren’ dan plaatsen we alle cookies. Klik je op ‘Weigeren’ dan plaatsen we functionele en analytische cookies. Klik je op ‘Instellingen’, dan kun je zelf kiezen welke cookies we plaatsen, of jouw toestemming wijzigen of intrekken. Meer informatie vind je in onze cookiepolicy
-De link zal worden geopend op een nieuwe pagina.
-. 
-
-Instellingen
-Weigeren
-Accepteren
