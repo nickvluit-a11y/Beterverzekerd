@@ -67,9 +67,14 @@ def describe(f: dict) -> str:
 def fill(page, selector: str, value: str) -> str:
     """Type into the visible field and pick the first suggestion, as a visitor does."""
     field = page.locator(selector).locator("visible=true").first
-    field.click(timeout=8000)
-    field.fill("")
-    field.type(value, delay=60)
+    if not field.count():
+        field = page.locator(selector).first
+    try:
+        field.click(timeout=5000)
+        field.fill("")
+        field.type(value, delay=60)
+    except Exception:  # covered by an overlay or hidden: set it directly
+        field.fill(value, force=True)
     page.wait_for_timeout(2000)
     options = page.get_by_role("option").locator("visible=true")
     if options.count():
@@ -92,7 +97,8 @@ def probe(page, name: str, url: str, what_sel: str | None = None, where_sel: str
             except Exception:
                 body = ""
             seen.append({"url": resp.url, "status": resp.status, "method": resp.request.method,
-                         "post": (resp.request.post_data or "")[:500], "size": len(body), "sample": body[:3000]})
+                         "post": (resp.request.post_data or "")[:1500], "size": len(body), "sample": body[:3000],
+                         "full": body if len(body) > 2000 and "cookielaw" not in resp.url else ""})
 
     page.on("response", on_response)
     page.goto(url, wait_until="networkidle", timeout=60000)
@@ -131,12 +137,14 @@ def probe(page, name: str, url: str, what_sel: str | None = None, where_sel: str
             lines.append(f"- {selector}: {fill(page, selector, value)}")
         except Exception as exc:
             lines.append(f"- {selector} ({value}): {type(exc).__name__}: {str(exc)[:150]}")
-    try:
-        button = page.get_by_role("button", name=re.compile(r"^\s*(zoek|zoeken|vind|toon)", re.I))
-        if button.count():
-            button.first.click(timeout=5000)
-        else:
-            page.keyboard.press("Enter")
+    try:  # submit from inside the finder's form (the site's own header search also says 'Zoeken')
+        if where_sel or what_sel:
+            page.locator(where_sel or what_sel).first.press("Enter", timeout=5000)
+            page.wait_for_timeout(3000)
+        if len(seen) == before:
+            buttons = page.get_by_role("button", name=re.compile(r"^\s*(zoek|zoeken|vind|toon)", re.I)).locator("visible=true")
+            if buttons.count():
+                buttons.last.click(timeout=5000)
         page.wait_for_load_state("networkidle", timeout=30000)
     except Exception as exc:
         lines.append(f"- zoeken: {type(exc).__name__}")
@@ -146,6 +154,10 @@ def probe(page, name: str, url: str, what_sel: str | None = None, where_sel: str
     lines += ["", f"- na zoeken: {page.url}", f"- zichtbare tekst: {len(text):,} tekens",
               f"- JSON-antwoorden voor/na zoeken: {before}/{len(seen) - before}", "",
               "## JSON-antwoorden na het zoeken (grootste eerst)", ""]
+    biggest = max(seen[before:], key=lambda r: r["size"], default=None)
+    if biggest and biggest["size"] > 2000:
+        (OUT / f"finder_browser_{name}.json").write_text(biggest.get("full", "")[:1_500_000], encoding="utf-8")
+        lines += [f"Volledige data van de grootste aanroep: finder_browser_{name}.json", ""]
     for r in sorted(seen[before:], key=lambda r: -r["size"]):
         if "cookielaw" in r["url"] or "applicationinsights" in r["url"] or "monitor.azure" in r["url"]:
             continue
