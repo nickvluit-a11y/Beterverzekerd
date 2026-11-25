@@ -1,4 +1,4 @@
-source: https://zorgvinder.menzis.nl/
+source: https://zorgvinder.menzis.nl/?search=zorgaanbieder&zoektermSearch=ziekenhuis%20%2F%20zbc&zoektermType=SPECIALISME&specialismId=220906197&afstand=35&postcode=3584CX
 
 Ga naar de inhoud
 terug naar: Menzis
@@ -16,25 +16,146 @@ Maximale afstand
 50 km
 75 km
 Heel NL
-Laatste update: 24 november 2026
+Leegmaken
 Zoeken
 Hulp nodig?
 
 Heb je vragen over een ziekte of behandeling, het kiezen van een zorgaanbieder of wachttijdbemiddeling? Neem contact op met onze zorgadviseurs.
 
-Bij welke zorgaanbieders kan ik in 2027 terecht?
+194 Zorgaanbieders
+Toon alleen zorgaanbieders met contract of vergoed als contract
+Toon beschikbare zorg in jaar
+2026
+2027
+Weergave
+Lijst
+Kaart
+Sorteer op
+Afstand
+Naam
+UMC Utrecht, loc. AZU
+Type aanbieder
+Ziekenhuis
+Adres
+Utrecht, Heidelberglaan 100
+Afstand
+0.1 km
+Gecontracteerd
+2027 (Nog) geen contract: wel vergoed 
+Mogelijk met omzetplafond
+8,0
+85 reviews
+Bekijk details
+UMC Utrecht, loc. Wilhelmina Kinderziekenhuis (WKZ)
+Type aanbieder
+Ziekenhuis
+Adres
+Utrecht, Lundlaan 6
+Afstand
+0.3 km
+Gecontracteerd
+2027 (Nog) geen contract: wel vergoed 
+Mogelijk met omzetplafond
+6,8
+13 reviews
+Bekijk details
+Prinses Maxima Centrum voor Kinderoncologie
+Type aanbieder
+Ziekenhuis
+Adres
+Utrecht, Heidelberglaan 25
+Afstand
+0.4 km
+Gecontracteerd
+Contract: vergoed t/m 2028 
+9,8
+3 reviews
+Bekijk details
+Medinello (TopzorgGroep), loc. Utrecht
+Type aanbieder
+Zelfstandig behandelcentrum
+Adres
+Utrecht, Weg naar Rhijnauwen 3
+Afstand
+1.6 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+Bekijk details
+De Hoogstraat Revalidatie
+Adres
+Utrecht, Rembrandtkade 10
+Afstand
+2.4 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+8,4
+15 reviews
+Bekijk details
+Cardiologie Centrum, loc. Utrecht
+Type aanbieder
+Zelfstandig behandelcentrum
+Adres
+Utrecht, Herculesplein 379
+Afstand
+2.7 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+Bekijk details
+Xpert Clinics, loc. Zeist
+Type aanbieder
+Zelfstandig behandelcentrum
+Adres
+Zeist, De Dreef 21
+Afstand
+2.7 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+Bijzondere contractafspraken
+9,1
+105 reviews
+Bekijk details
+EERSTELIJNS BEHANDELCENTRA B.V.
+Adres
+Utrecht, Herculesplein 28
+Afstand
+2.8 km
+Gecontracteerd
+2027 (Nog) geen contract: wel vergoed 
+Bekijk details
+Diakonessenhuis, loc. Utrecht
+Type aanbieder
+Ziekenhuis
+Adres
+Utrecht, Bosboomstraat 1
+Afstand
+3 km
+Gecontracteerd
+2027 (Nog) geen contract: wel vergoed 
+6,9
+56 reviews
+Bekijk details
+DIANET LOCATIE GEZONDHEIDSHUIS
+Adres
+Utrecht, Bosboomstraat 1g
+Afstand
+3 km
+Gecontracteerd
+2027 Nog geen contract: een deel niet vergoed 
+Bekijk details
+Bekijk meer zorgaanbieders
+Toelichting
+Contracteerstatussen
 
-Met veel zorgaanbieders zijn al afspraken gemaakt voor 2027, maar nog niet met allemaal. We zorgen voor voldoende gecontracteerde zorg dichtbij. Zo hebben we altijd met alle ziekenhuizen en de meeste wijkverpleging en ggz-aanbieders afspraken gemaakt en ook voor 2027 is dat weer ons doel. In onze Zorgvinder lees je wat er is afgesproken voor jouw zorgaanbieder. Dit overzicht werken we drie keer per week bij. Mocht het voorkomen dat jouw zorgaanbieder niet wordt gecontracteerd, dan kan het betekenen dat je een deel van de kosten zelf moet betalen.
+Onderstaande statussen zie je terug in de zorgvinder. Meer informatie over wat de status voor jouw vergoeding betekent, lees je onder 'bekijk details' per zorgaanbieder. Deze toelichting gaat over de naturapolis of (bij een combinatiepolis) over het natura-deel van je zorgverzekering. In je verzekeringsvoorwaarden lees je welke polis je hebt.
 
-Extra afspraken
+Contract: vergoed
+(Nog) geen contract: wel vergoed
+Nog geen contract: een deel niet vergoed
+Geen contract: een deel niet vergoed
+Maximumbedrag of omzetplafond
 
-Met verschillende zorgaanbieders spreken we een maximumbedrag af dat zij in een bepaald kalenderjaar mogen declareren. Dit wordt ook wel 'omzetplafond' genoemd. Heb je Menzis Basis of Menzis Basis Voordelig? Dan kan deze afspraak gevolgen voor je hebben. Klik op deze link voor meer informatie
+Met een aantal zorgaanbieders maken wij afspraken over hoeveel zorg zij per jaar bij ons in rekening mogen brengen. Dat noemen we maximumbedrag of omzetplafond. Heeft je zorgaanbieder de maximale hoeveelheid zorg bereikt voor dat jaar? Dan kun je voor een nieuwe behandeling misschien niet meer naar deze zorgaanbieder. Onze Zorgadviseur helpt je dan graag bij het vinden van een zorgaanbieder bij jou in de buurt. Je leest bij 'Bekijk details' of we met jouw zorgaanbieder een maximumbedrag hebben afgesproken.
 
-Nog geen klant bij Menzis?
-
-Ontdek welke zorgverzekering bij je past. Gebruik de Keuzehulp voor persoonlijk advies of bereken direct je premie.
-
-Bereken je premie
 Sneller geholpen worden?
 
 Kijk in onze Wachttijdchecker of je sneller terecht kunt bij een ander ziekenhuis of kliniek.

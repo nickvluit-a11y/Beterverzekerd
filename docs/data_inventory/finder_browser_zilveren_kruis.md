@@ -16,6 +16,8 @@ Vul een postcode in voor een nauwkeuriger resultaat (INPUT/text)
 - autofill-Instelling-input Bijvoorbeeld: UMC  Naam van organisatie of zorgverlener (INPUT/text)
 - #autofill-Zorgtype-input: gekozen suggestie voor Ziekenhuis
 - #autofill-Locatie-input: gekozen suggestie voor 3584 CX
+- zoekknoppen gevonden: 0
+- zoeken: TimeoutError
 
 - na zoeken: https://www.zilverenkruis.nl/consumenten/zorgzoeker
 - zichtbare tekst: 2,355 tekens
