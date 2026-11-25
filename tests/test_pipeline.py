@@ -692,9 +692,10 @@ def test_overdispersion_makes_verdicts_conservative():
     den = pd.Series(np.full(n, 2000.0))
     y = pd.Series(rng.binomial(2000, true) / 2000)
     se = (0.05 * 0.95 / den) ** 0.5
-    naive = ((y - 0.05).abs() > 1.96 * se).sum()
-    flagged = funnel_verdicts(y, se, 0.05, "lower_better").isin(["beter", "slechter"]).sum()
-    assert flagged < naive / 3   # most 'significant' differences are ordinary spread
+    naive_worse = ((y - 0.05) > 1.96 * se).sum()
+    verdicts = funnel_verdicts(y, se, 0.05, "lower_better")
+    assert (verdicts == "slechter").sum() < naive_worse / 3   # most 'significant' differences are ordinary spread
+    assert (verdicts == "beter").sum() >= (verdicts == "slechter").sum()  # positive signal needs less evidence
     extreme = funnel_verdicts(pd.concat([y, pd.Series([0.30])], ignore_index=True),
                               pd.concat([se, pd.Series([se.iloc[0]])], ignore_index=True), 0.05, "lower_better")
     assert extreme.iloc[-1] == "slechter"  # a real outlier is still flagged

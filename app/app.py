@@ -111,7 +111,7 @@ con = database()
 procs = procedures()
 
 st.markdown('<div class="hero"><h1>Beterverzekerd</h1>'
-            '<p>Welke ziekenhuizen bij jou in de buurt zijn aantoonbaar beter voor jouw ingreep, '
+            '<p>Welke ziekenhuizen bij jou in de buurt scoren beter voor jouw ingreep, '
             'en kun je daar terecht met je zorgverzekering?</p></div>', unsafe_allow_html=True)
 
 with st.form("zoek", border=False):
@@ -153,7 +153,7 @@ if search:
     else:
         counts = near["quality_verdict"].value_counts()
         st.markdown(f"**{len(near)} ziekenhuizen** binnen {search['radius']} km doen een {search['proc_name'].lower()}. "
-                    f"**{counts.get('boven_gemiddeld', 0)}** daarvan scoren aantoonbaar beter dan gemiddeld.")
+                    f"**{counts.get('boven_gemiddeld', 0)}** daarvan scoren beter dan gemiddeld.")
 
         points = near.assign(color=near["quality_verdict"].map(lambda v: BADGES[v][2]),
                              label=near["display_name"] + " · " + near["quality_verdict"].map(lambda v: BADGES[v][0]))
@@ -224,8 +224,9 @@ if search:
 st.divider()
 st.markdown(
     '<p class="note"><b>Hoe we kwaliteit beoordelen.</b> We gebruiken de openbare kwaliteitscijfers van Zorginstituut '
-    'Nederland (Zorginzicht). Een ziekenhuis is alleen "beter" of "slechter" als het verschil met het landelijk niveau '
-    'groter is dan de gebruikelijke spreiding tussen ziekenhuizen. Kleine verschillen tellen niet. Alleen heroperaties '
+    'Nederland (Zorginzicht) en vergelijken elk ziekenhuis met het landelijk niveau, rekening houdend met de gebruikelijke '
+    'spreiding tussen ziekenhuizen. "Beter" betekent: met minstens 80% zekerheid beter. "Slechter" zeggen we pas bij '
+    '95% zekerheid, omdat een onterecht negatief oordeel meer schade doet. Alleen heroperaties '
     'zijn gecorrigeerd voor patiëntkenmerken; academische centra behandelen vaker complexe patiënten. '
     'Geen ranglijst, geen medisch of financieel advies. Contractstatus is geen garantie op toegang.</p>',
     unsafe_allow_html=True)

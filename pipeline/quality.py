@@ -35,7 +35,11 @@ import pandas as pd
 
 from pipeline.reference import MANUAL
 
-Z = 1.96  # 95%
+Z = 1.96  # 95%: confidence intervals shown to users
+# Asymmetric evidence thresholds (owner's choice): a positive signal needs less certainty than
+# calling a named hospital worse, because a wrong 'slechter' does more harm.
+Z_BETTER = 1.2816  # 80% two-sided
+Z_WORSE = 1.96     # 95% two-sided
 VERDICTS = ["boven_gemiddeld", "gemiddeld", "gemengd", "onder_gemiddeld", "geen_data"]
 MIN_UNITS_FOR_TAU = 10      # hospitals needed to estimate the between-hospital variance
 MIN_PROM_RESPONSE = 50.0    # % pre-operative PROM response needed to judge PROM results
@@ -120,11 +124,13 @@ def funnel_verdicts(y: pd.Series, se: pd.Series, reference: float, direction: st
         tau2 = max(0.0, (n * phi - (n - 1)) / (w.sum() - (w ** 2).sum() / w.sum()))
     else:
         tau2 = 0.0  # the spread between hospitals cannot be estimated from a handful
-    limit = Z * (se ** 2 + tau2) ** 0.5
+    spread = (se ** 2 + tau2) ** 0.5
     higher_is_better = direction == "higher_better"
+    z_up = Z_BETTER if higher_is_better else Z_WORSE      # threshold for a value above the reference
+    z_down = Z_WORSE if higher_is_better else Z_BETTER    # threshold for a value below it
     out[ok] = "gemiddeld"
-    out[(y > reference + limit)[lambda s: s].index] = "beter" if higher_is_better else "slechter"
-    out[(y < reference - limit)[lambda s: s].index] = "slechter" if higher_is_better else "beter"
+    out[(y > reference + z_up * spread)[lambda s: s].index] = "beter" if higher_is_better else "slechter"
+    out[(y < reference - z_down * spread)[lambda s: s].index] = "slechter" if higher_is_better else "beter"
     return out
 
 
