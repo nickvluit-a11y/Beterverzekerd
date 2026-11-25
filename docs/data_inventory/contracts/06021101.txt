@@ -2,8 +2,12 @@ source: https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/co
 
 Contracten met zorgverzekeraars | Maastricht UMC+
 Overslaan en naar de inhoud gaan
+Terug naar boven
+Menuvenster openen/sluiten
 Sluiten
+Zoekvenster openen/sluiten
 Sluiten
+Cookiebalk
 Zorgkosten en betaling
 Voorlezen
 Delen
@@ -154,6 +158,7 @@ Gecontracteerd
 Partijen hebben overeenstemming voor 2027
 Sluit de enquête
 Wat vindt u van deze pagina?
+Wat vindt u van deze pagina?
 Goed
 Voldoende
 Onvoldoende
@@ -175,6 +180,7 @@ Deel deze pagina op LinkedIn
 Deel deze pagina op Pinterest
 Deel deze pagina op WhatsApp
 Vertalen
+Sluiten
 Vertalen
 Nederlands
 Engels

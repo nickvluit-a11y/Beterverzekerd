@@ -1,13 +1,13 @@
 source: https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars
 
+Gecontracteerde zorgverzekeraars Noordwest Ziekenhuisgroep
 Gecontracteerde zorgverzekeraars
-Gecontracteerde zorgverzekeraars
-Voor 2026 heeft Noordwest met alle zorgverzekeraars een contract afgesloten.
+Intro tekst Tekst Voor 2026 heeft Noordwest met alle zorgverzekeraars een contract afgesloten.
 2025
 Voor 2025 heeft Noordwest met alle zorgverzekeraars een contract afgesloten.
 Let op: dit geldt niet voor de budgetpolissen van Zilveren Kruis. Hiervoor heeft Noordwest géén contract afgesloten.
-Bekijk het actuele overzicht van 2026
-Zorgverzekeraar
+Veelgestelde vragen Bekijk het actuele overzicht van 2026 Bekijk het actuele overzicht van 2026
+Tekst Zorgverzekeraar
 Label
 Contract
 VGZ
@@ -79,8 +79,8 @@ Eno
 Salland
 Ja
 *1 Volmachten zijn zelfstandig, maar wel verbonden aan een zorgverzekeraar
-Bekijk het actuele overzicht van 2025
-Zorgverzekeraar
+Bekijk het actuele overzicht van 2025 Bekijk het actuele overzicht van 2025
+Tekst Zorgverzekeraar
 Label
 Contract
 VGZ
@@ -158,8 +158,8 @@ Eno
 Salland
 Ja
 *1 Volmachten zijn zelfstandig, maar wel verbonden aan een zorgverzekeraar
-Budgetpolissen Zilveren Kruis
-Noordwest Ziekenhuisgroep heeft voor 2025 met iedere zorgverzekeraar een contract afgesloten. Dit geldt voor alle zorgpolissen, met als enige uitzondering de budgetpolissen van Zilveren Kruis. Hiervoor heeft Noordwest géén contract met Zilveren Kruis. Het gevolg is dat u met een van deze polissen in Noordwest voor vrijwel alle geplande basiszorg (basiszorg op afspraak) ongeveer een kwart van de kosten zelf moet betalen. Met alle andere zorgpolissen krijgt u geplande basiszorg wel vergoed.
+Budgetpolissen Zilveren Kruis Budgetpolissen Zilveren Kruis
+Tekst Noordwest Ziekenhuisgroep heeft voor 2025 met iedere zorgverzekeraar een contract afgesloten. Dit geldt voor alle zorgpolissen, met als enige uitzondering de budgetpolissen van Zilveren Kruis. Hiervoor heeft Noordwest géén contract met Zilveren Kruis. Het gevolg is dat u met een van deze polissen in Noordwest voor vrijwel alle geplande basiszorg (basiszorg op afspraak) ongeveer een kwart van de kosten zelf moet betalen. Met alle andere zorgpolissen krijgt u geplande basiszorg wel vergoed.
 Welke polissen?
 Het gaat om de volgende polissen:
 Zilveren Kruis Basis Budget

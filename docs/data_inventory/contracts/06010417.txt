@@ -40,6 +40,7 @@ Passantentarieven
 tabs#activate">
 Contact debiteurenadministratie
 Translate
+Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
 Verzekering en vergoeding
 Meestal worden de kosten die u in het ziekenhuis maakt vergoed. De mate waarin hangt af van:
@@ -55,6 +56,7 @@ Bekijk de uitzonderingen
 Soms loopt een behandeling door in het nieuwe kalenderjaar. Wijzigt u op 1 januari uw eigen risico, polis, of verandert u van zorgverzekeraar, dan gelden toch de regels en bedragen zoals die bij de start van uw zorgvraag waren. Twijfelt u of er nog DBC's doorlopen? Contact dan onze debiteurenadministratie.
 Contact debiteurenadministratie
 Translate
+Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
 Zorgvergoeding 2026
 Het
@@ -73,10 +75,12 @@ CZ
 Budgetpolissen
 In 2026 zijn de budgetpolissen gecontracteerd.
 Translate
+Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
 Uitleg zorgverzekering
 Meer uitleg over zorgverzekeringen? Klik hier .
 Translate
+Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
 Overstappen?
 In november ontvangt u van uw zorgverzekeraar de zorgverzekering voor het nieuwe jaar. Het is belangrijk dat u deze nieuwe verzekering goed bekijkt. Ook al verandert er niks aan uw eigen zorgbehoeften, dan kan het toch zo zijn dat uw huidige zorgverzekeraar de polisvoorwaarden voor volgend jaar heeft gewijzigd. Nu is dus het moment om naar uw zorgverzekering te kijken.
@@ -84,6 +88,7 @@ Nieuwe zorgverzekering
 Bevalt de nieuwe zorgverzekering u niet? Dan kunt u overstappen naar een andere zorgverzekeraar. U kunt online of met een telefoontje een nieuwe zorgverzekering afsluiten. Doet u dit voor de laatste dag van het jaar (31 december)? Dan zegt de nieuwe zorgverzekeraar daarna uw oude zorgverzekering op. De site www.ikregelmijnzorggoed.nl geeft informatie over wat je moet doen als je wilt overstappen.
 Wanneer u besluit om over te stappen naar een andere zorgverzekering, denkt u er dan aan de gewijzigde gegevens door te geven bij het eerst volgende bezoek aan het ziekenhuis? Dan kan het ziekenhuis de factuur naar de juiste verzekeraar sturen.
 Translate
+Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
 De nota
 Na uw ziekenhuisbezoek wordt uw nota verstuurd. Daarop staan alle consulten, opnames, onderzoeken en behandelingen met de prijzen. Vaak ziet u de nota niet, omdat die rechtstreeks naar de zorgverzekeraar gaat.
@@ -100,6 +105,7 @@ Adres waar de kopie naar toe moet
 Betalingsvoorwaarden
 Klik hier voor de algemene betalingsvoorwaarden van het Deventer Ziekenhuis
 Translate
+Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
 Prijzen
 Alles wat een ziekenhuis doet - van het spreekuur, een onderzoek, behandeling t/m de nazorg - ligt vast in een Diagnose Behandelcombinatie (DBC). Bekijk de video 'Betalen van ziekenhuiszorg' voor meer uitleg.
@@ -120,6 +126,7 @@ Ooglidcorrectie, plastische chirurgie , Code: 17E358 - Prijs 2026: € 1.464,23 
 Poliklinisch bevalling, niet door een gynaecoloog en zonder partusassistentie - Prijs 2026: € 752,99 / Prijs 2027: € 784,46
 Poliklinisch bevalling, niet door een gynaecoloog en met partusassistentie - Prijs 2026: € 883,64 / Prijs 2027: € 920,58
 Translate
+Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
 Vergoeding belconsult
 Het telefonisch consult voorkomt dat u op de polikliniek moet komen als dat niet nodig is. Een principe waar het Deventer Ziekenhuis volledig achter staat. De medisch specialist beoordeelt of het in uw situatie mogelijk is om een consult telefonisch in te plannen. Een telefonisch consult wordt nu beschouwd als een fysiek polibezoek en is bij de verzekeraar te declareren.
@@ -137,6 +144,7 @@ accordion#toggle" class="accordion__toggle flex w-full text-left items-center ju
 Wat betekent dit voor uw eigen risico?
 Het kan zijn dat een belconsult gevolgen heeft voor het aanspreken van uw eigen risico. Wanneer een belconsult met een specialist of zorgverlener een (herhaal) bezoek aan de polikliniek vervangt, dan worden deze kosten bij uw zorgverzekeraar in rekening gebracht. Als u het maximum van het verplicht eigen risico nog niet hebt bereikt, kan het daardoor voorkomen dat u deze kosten zelf dient te betalen.
 Translate
+Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
 Passantentarieven
 Ziekenhuizen hanteren deze tarieven als:
@@ -151,6 +159,7 @@ Klik hier voor de tarieven 2026
 Klik hier voor de tarieven 2025
 Klik hier voor de tarieven 2024
 Translate
+Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
 Contact debiteurenadministratie
 Debiteurenadministratie

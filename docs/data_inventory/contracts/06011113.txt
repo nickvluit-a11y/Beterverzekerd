@@ -2,8 +2,10 @@ source: https://sjgweert.nl/contracten-zorgverzekeraars-2026
 
 Contracten zorgverzekeraars 2026 | SJG Weert
 Overslaan en naar de inhoud gaan
+Terug naar boven
 Sluiten
 Sluiten
+Cookiebalk
 Voorlezen
 Delen
 Contracten zorgverzekeraars 2026
@@ -13,85 +15,86 @@ Zorgverzekeraar
 Polis of label
 Contract 2026?
 a.s.r.
-a.s.r.
+https://www.asr.nl/ a.s.r.
 Ja, gecontracteerd voor 2026
-Ik kies zelf
+https://www.asr.nl/ Ik kies zelf
 Ja, gecontracteerd voor 2026
-Caresq (Eucare)
-Aevita (Eucare)
+https://caresq.nl/ Caresq (Eucare)
+https://www.aevitae.com/ Aevita (Eucare)
 Ja, gecontracteerd voor 2026
 CZ
-CZ
+https://www.cz.nl/ CZ
 Ja, gecontracteerd voor 2026
-CZ direct
+https://czdirect.cz.nl/ CZ direct
 Ja, gecontracteerd voor 2026
-Just
+https://www.just.nl/ Just
 Ja, gecontracteerd voor 2026
-Nationale Nederlanden
+https://www.nn.nl/ Nationale Nederlanden
 Ja, gecontracteerd voor 2026
-OHRA
+https://www.ohra.nl/ OHRA
 Ja, gecontracteerd voor 2026
 DSW
-DSW
+https://www.dsw.nl/Consumenten DSW
 Ja, gecontracteerd voor 2026
-InTwente
+https://www.intwente.nl/Consumenten InTwente
 Ja, gecontracteerd voor 2026
-StadHolland
+https://www.stadholland.nl/Consumenten StadHolland
 Ja, gecontracteerd voor 2026
 ENO
-Salland
+https://www.salland.nl/ Salland
 Ja, gecontracteerd voor 2026
 Menzis
-Menzis
+https://www.menzis.nl/ Menzis
 Ja, gecontracteerd voor 2026
-Anderzorg
+https://www.anderzorg.nl/ Anderzorg
 Ja, gecontracteerd voor 2026
 Hema
 Ja, gecontracteerd voor 2026
-Vinkvink
+https://www.vinkvink.nl/ Vinkvink
 Ja, gecontracteerd voor 2026
 ONVZ
-ONVZ
+https://www.onvz.nl/ ONVZ
 Ja, gecontracteerd voor 2026
-VvAA
+https://www.vvaa.nl/ VvAA
 Ja, gecontracteerd voor 2026
 VGZ
-VGZ
+https://www.vgz.nl/ VGZ
 Ja, gecontracteerd voor 2026
-Bewuzt
+https://www.vgzbewuzt.nl/ Bewuzt
 Ja, gecontracteerd voor 2026
-IZA
+https://www.iza.nl/ IZA
 Ja, gecontracteerd voor 2026
-IZZ
+https://www.izz.nl/ IZZ
 Ja, gecontracteerd voor 2026
-UMC
+https://www.umczorgverzekering.nl/ UMC
 Ja, gecontracteerd voor 2026
-Univé
+https://www.unive.nl/ Univé
 Ja, gecontracteerd voor 2026
-United Consumers VGZ
+https://www.unitedconsumers.com/ United Consumers VGZ
 Ja, gecontracteerd voor 2026
-ZEKUR
+https://www.zekur.nl/ ZEKUR
 Ja, gecontracteerd voor 2026
 Zilveren Kruis
-Zilveren Kruis
+https://www.zilverenkruis.nl/consumenten Zilveren Kruis
 Ja, gecontracteerd voor 2026
-FBTO
+https://www.fbto.nl/zorgverzekering FBTO
 Ja, gecontracteerd voor 2026
-De Friesland
+https://www.defriesland.nl/ De Friesland
 Ja, gecontracteerd voor 2026
-De christelijke
+https://www.dechristelijkezorgverzekeraar.nl/ De christelijke
 Ja, gecontracteerd voor 2026
 Ziezo
 Ja, gecontracteerd voor 2026
-Interpolis
+https://www.interpolis.nl/ Interpolis
 Ja, gecontracteerd voor 2026
 Zorg en zekerheid
-Zorg en zekerheid
+https://www.zorgenzekerheid.nl/ Zorg en zekerheid
 Ja, gecontracteerd voor 2026
-AZVZ
+https://scheepvaartnet.nl/azvz-zorgverzekering/ AZVZ
 Ja, gecontracteerd voor 2026
 Is er geen afspraak met uw gewenste zorgverzekeraar, informeer dan bij de verzekeraar hoe deze omgaat met vergoeding van zorg bij SJG Weert. Dit kan per verzekeraar en per polis verschillen en mogelijk leiden tot (hogere) eigen betalingen.
 Sluit de enquête
+Wat vindt u van deze pagina?
 Wat vindt u van deze pagina?
 Goed
 Voldoende

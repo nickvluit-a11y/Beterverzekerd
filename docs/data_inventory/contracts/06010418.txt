@@ -14,12 +14,15 @@ cookies#deny"
 >
 Weigeren
 scroll#toggleArrow" class="fixed bottom-0 right-0 z-40 pointer-events-none bg-primary-500 text-white rounded-tl-lg p-15 transition print:hidden">
+Naar Homepage
 Praktische informatie
 Kosten en vergoedingen
 Kosten en vergoedingen
+Kosten en vergoedingen
 Printen
+Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
-chapters#visit" class="appearance-none w-full bg-white shadow border border-brown-300 rounded p-10 text-xs font-bold text-brown-500 focus:outline-none hover:text-black focus:text-black cursor-pointer transition">
+Selecteer hoofdstuk chapters#visit" class="appearance-none w-full bg-white shadow border border-brown-300 rounded p-10 text-xs font-bold text-brown-500 focus:outline-none hover:text-black focus:text-black cursor-pointer transition">
 Kosten en vergoedingen
 Contracten Saxenburgh
 Vergoeding telefonische en online afspraken
@@ -41,12 +44,15 @@ DBC Tarieven
 Kosten en vergoedingen
 Heeft u binnenkort een afspraak in het ziekenhuis? Of wilt u meer weten over de zorg of behandeling vanuit onze woonzorglocaties of thuiszorg?
 Op deze pagina leest u meer over de kosten en vergoedingen.
+Ziekenhuis website kosten
 Ziekenhuiszorg
 Het is belangrijk om te weten welke kosten en vergoedingen er zijn wanneer u het ziekenhuis bezoekt.
 Lees meer over de kosten en vergoedingen
+Reva website kosten
 Revalidatiezorg
 Het is belangrijk om te weten welke kosten en vergoedingen er zijn wanneer u gebruikt maakt van revalidatiezorg.
 Lees meer over de kosten en vergoedingen
+OZ website kosten
 Ouderenzorg en thuiszorg
 Het is belangrijk om te weten welke kosten en vergoedingen er zijn voor onze woonzorglocaties en thuiszorg.
 Lees meer over de kosten en vergoedingen

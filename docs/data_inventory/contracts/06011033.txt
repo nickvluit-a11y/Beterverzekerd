@@ -10,6 +10,7 @@ Het invullen van de korte vragenlijst duurt slechts 1 minuut .
 Nee bedankt
 Start
 Kosten en verzekering
+Kosten en verzekering
 Onderzoeken en behandelingen in het ziekenhuis kosten geld. Uw zorgverzekeraar betaalt vaak een deel of soms zelfs alle kosten van uw behandeling. Maar niet altijd. Heeft u binnenkort een afspraak in het ziekenhuis? Of bent u al patiënt? Informeer dan bij uw zorgverzekeraar welke kosten voor uw behandeling worden vergoed. Zo weet u waar u aan toe bent.
 Wordt mijn behandeling vergoed?
 Dat hangt af van verschillende zaken. Daarover leest u hieronder meer.
@@ -35,6 +36,7 @@ Heeft u vragen over uw verzekering en vergoedingen voor behandelingen? Neem voor
 Bent u verzekerd voor zorg in 2026?
 Veel mensen wisselen van zorgverzekering aan het einde van het jaar. Bijna altijd bent u dan ook in 2026 voor zorg in Amphia verzekerd. Amphia heeft met alle Nederlandse zorgverzekeraars een contract voor 2026.
 Zorgverzekeraars 2026
+Zorgverzekeraars 2026
 Bent u verzekerd voor zorg in de toekomst?
 U moet altijd kunnen rekenen op goede ziekenhuiszorg. Zorgverzekeraars en ziekenhuizen willen dan ook graag een goede en langdurige samenwerking. Want dat zorgt ervoor dat u vaak terecht kunt in een voor u bekend ziekenhuis.
 Maar soms verandert een contract tussen ziekenhuizen en een zorgverzekeraar. Ook als u zelf niets aanpast aan uw verzekering. Dat hangt af van de keuze die uw zorgverzekeraar maakt. Informeer daarom goed bij uw zorgverzekeraar of de verzekering nog bij u past. U heeft elk jaar de mogelijkheid om uw verzekering op te zeggen, tussen 12 november en 31 december opzeggen. Daarna kunt u een nieuwe verzekering en zorgverzekeraar kiezen.
@@ -46,6 +48,7 @@ Bekijk de video
 Als u naar het ziekenhuis gaat voor zorg, krijgt u vaak verschillende afspraken. Bijvoorbeeld een onderzoek door een arts, een röntgenfoto en een behandeling. Het ziekenhuis maakt niet voor al deze zaken een aparte rekening. Dit komt in 1 pakket op de rekening en wordt een DBC-zorgproduct genoemd. In deze video ziet u hoe declaraties in het ziekenhuis werken.
 Het kan zijn dat een serie behandelingen van een DBC over 2 kalenderjaren verspreid is.
 Het jaar waarin de DBC start bepaalt in welk jaar het eigen riscio valt. Als bijvoorbeeld de eerste afspraak in december 2024 was en uw behandeling is in januari 2025, dan valt de DBC onder het eigen risico van 2024. Meer informatie over de financiële gevolgen van de DBC-systematiek kunt u lezen op www.dezorgnota.nl .
+Video
 Hoe werken declaraties?
 Video url
 DBC-zorgproducten
@@ -65,16 +68,23 @@ www.sportzorg.nl .
 U vind een prijslijst op de pagina van afdeling Sportgeneeskunde .
 Wilt u meer weten over een afspraak bij Amphia?
 Terug naar Uw afspraak
+Terug naar Uw afspraak
 Toegankelijkheidsopties
 Kies hieronder één van de functies om het gebruik van onze website gemakkelijker te maken.
 Tekstgrootte:
 Tekstgrootte verkleinen
+Tekstgrootte verkleinen
 100%
 Tekstgrootte vergroten
+Tekstgrootte vergroten
+Hoog contrast:
 Hoog contrast:
 Aan
+Aan
+Uit ✓
 Uit ✓
 Vertaal website:
+Selecteer een taal
 Selecteer een taal
 Nederlands
 English
@@ -84,6 +94,8 @@ Polski
 Overige
 Deze teksten worden op uw verzoek door Google Translate Services automatisch vertaald en kunnen fouten bevatten. Amphia is niet verantwoordelijk voor mogelijke vertaalfouten. Als u vragen heeft over uw gezondheid, neem dan altijd contact op met uw arts.
 Label
+Label
+Venster sluiten
 Venster sluiten
 
 [linked document: https://www.amphia.nl/uploads/media/69367a43e0167/2025-12-5-gecontracteerde-zorgverzekeringen-2026-amphia.pdf?token=/uploads/media/69367a43e0167/2025-12-5-gecontracteerde-zorgverzekeringen-2026-amphia.pdf]

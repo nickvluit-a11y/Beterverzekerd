@@ -2,8 +2,8 @@ source: https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgv
 
 Welke zorgverzekeraar vergoedt mijn zorg in Amsterdam UMC? | Amsterdam UMC
 Ga naar inhoud
-Amsterdam UMC maakt gebruik van cookies
-Sommige van deze cookies zijn functioneel of technisch noodzakelijk. Andere gebruiken we om de website te verbeteren. Ook gebruiken we cookies voor het tonen van filmpjes en animaties. Door op "cookies accepteren" te klikken gaat u akkoord met het gebruik van alle cookies zoals omschreven in ons cookiebeleid . Kiest u voor "cookies weigeren", dan worden alleen nog functionele en analytische cookies geplaatst. Via het cookiebeleid (link in de footer) kunt u uw voorkeur ieder moment wijzigen.
+Amsterdam UMC maakt gebruik van cookies Amsterdam UMC maakt gebruik van cookies
+Sommige van deze cookies zijn functioneel of technisch noodzakelijk. Andere gebruiken we om de website te verbeteren. Ook gebruiken we cookies voor het tonen van filmpjes en animaties. Door op "cookies accepteren" te klikken gaat u akkoord met het gebruik van alle cookies zoals omschreven in ons Cookieverklaring cookiebeleid . Kiest u voor "cookies weigeren", dan worden alleen nog functionele en analytische cookies geplaatst. Via het cookiebeleid (link in de footer) kunt u uw voorkeur ieder moment wijzigen.
 Noodzakelijke cookies
 Analytische cookies
 Video cookies
@@ -19,11 +19,11 @@ Menu
 Gecontracteerde zorgverzekeraars
 Sluiten
 Rechten en plichten
-Gecontracteerde zorgverzekeraars
+Gecontracteerde zorgverzekeraars Gecontracteerde zorgverzekeraars
 Wilt u weten of Amsterdam UMC een contract heeft met uw zorgverzekeraar? Amsterdam UMC maakt elk jaar afspraken met zorgverzekeraars over de vergoeding van medisch-specialistische zorg (MSZ) en geestelijke gezondheidszorg (GGZ).
 Of uw behandeling volledig wordt vergoed, hangt onder andere af van uw zorgverzekering, uw polisvoorwaarden en de zorg die u ontvangt.
 Met welke zorgverzekeraars heeft Amsterdam UMC een contract?
-Bekijk hieronder de contractstatus van uw zorgverzekeraar. De afspraken kunnen per jaar en per soort zorg verschillen. Voor meer informatie vanuit uw verzekeraar over het contract tussen hen en Amsterdam UMC, kijk op Zorgverzekeraars Nederland .
+Bekijk hieronder de contractstatus van uw zorgverzekeraar. De afspraken kunnen per jaar en per soort zorg verschillen. Voor meer informatie vanuit uw verzekeraar over het contract tussen hen en Amsterdam UMC, kijk op https://www.zn.nl/de-nederlandse-zorgverzekeraars/de-vergoeding-van-uw-zorg/ Zorgverzekeraars Nederland .
 Contractafspraken voor 2027
 De gesprekken met de verzekeraars voor het jaar 2027 zijn gestart. Medio november tonen wij een actueel overzicht van de status van de afspraken met verzekeraars voor het jaar 2027. Deze lijst werken wij iedere maandag bij.
 Medisch-specialistische zorg (MSZ)
@@ -129,7 +129,7 @@ U kunt bij uw zorgverzekeraar nagaan of uw behandeling bij Amsterdam UMC wordt v
 Ga naar de website van uw zorgverzekeraar.
 Zoek de online zorgzoeker en vul 'Amsterdam UMC' in.
 Controleer of uw behandeling wordt vergoed en welke voorwaarden gelden.
-Via Zorgverzekeraars Nederland vindt u meer informatie over zorgverzekeraars. U kunt ook rechtstreeks contact opnemen met uw zorgverzekeraar.
+Via https://www.zn.nl/ Zorgverzekeraars Nederland vindt u meer informatie over zorgverzekeraars. U kunt ook rechtstreeks contact opnemen met uw zorgverzekeraar.
 Eigen risico en eigen bijdrage
 Ook als Amsterdam UMC een contract heeft met uw zorgverzekeraar, kan het zijn dat u een deel van de zorgkosten zelf moet betalen.
 Eigen risico
@@ -146,4 +146,7 @@ Vragen over zorgkosten – informatie over de ziekenhuisrekening en zorgkosten.
 Zorgverzekeraars Nederland – informatie over zorgverzekeraars en zorgverzekeringen.
 Voor vragen over uw persoonlijke vergoeding, polisvoorwaarden of eigen risico kunt u contact opnemen met uw zorgverzekeraar.
 Op deze pagina:
+Sluiten
 Terug naar boven
+Sluiten
+Laden

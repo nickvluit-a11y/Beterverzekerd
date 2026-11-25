@@ -2,9 +2,14 @@ source: https://olvg.nl/en/your-visit-to-olvg/reimbursement-of-the-cost-of-treat
 
 Vergoeding kosten behandeling | OLVG
 Your visit to OLVG
+Your visit to OLVG
 Reimbursement of the cost of treatment
+Open translate dialog
 Translate
+Laat de tekst voorlezen met ReadSpeaker webReader
 Read aloud
+Print page
+print icon
 Print
 EN
 NL
@@ -31,6 +36,8 @@ Then contact the Debtors department on +31 (0)20 599 37 46. Available Monday to 
 Do you have questions about the reimbursement of your treatment?
 Then contact your health insurer.
 Frequently asked questions
+Scroll to top
+Sluiten
 Translate text explanation
 For translating the text, please follow the instructions below:
 1. Select the text you want to translate.
@@ -38,3 +45,6 @@ For translating the text, please follow the instructions below:
 3. Select the preferred language.
 4. You can now read and/or listen to the translated text.
 Please note that the text has been translated using third-party software. The most accurate translation possible was generated; however, no automated translation is perfect, and automated translations are not a replacement for human translators. Translations are offered as a service to the users of this website. There is no guarantee that the translation will be accurate, reliable or correct. OLVG is in no way responsible for the actual translation. If you have any questions, you should always consult your doctor.
+Stap 1 vertalen tekst
+Tekst vertalen stap 2
+tekst vertalen stap 3

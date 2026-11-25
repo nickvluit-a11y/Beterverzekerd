@@ -21,9 +21,9 @@ Aantal locaties met metingen per ingreep en verslagjaar:
 
 ## Contracten
 
-- ziekenhuizen in `hospitals.csv` met AGB die ook in Zorginzicht staat: 8/8 (100%)
-- organisaties in Zorginzicht zonder contractbron in `hospitals.csv`: 187
-- contractkandidaten (nog te controleren): 611
+- ziekenhuizen in `hospitals.csv` met AGB die ook in Zorginzicht staat: 9/9 (100%)
+- organisaties in Zorginzicht zonder contractbron in `hospitals.csv`: 186
+- contractkandidaten (nog te controleren): 664
 - gecontroleerde contracten: 0
 
 ## Wachttijden (NZa)

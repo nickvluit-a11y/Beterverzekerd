@@ -1,6 +1,8 @@
 source: https://www.spijkenissemc.nl/zorgverzekering-en-kosten-voor-zorg/
 
 Zorgverzekering en kosten voor zorg - Spijkenisse Medisch Centrum
+oEmbed (JSON) oEmbed (XML)
+JSON RSD
 X
 Zorgverzekering en kosten voor zorg
 Iedereen die in Nederland woont of werkt, moet een basis zorgverzekering hebben. Met deze verzekering betaalt u voor de belangrijkste zorg. Bijvoorbeeld voor een bezoek aan het ziekenhuis.
@@ -186,24 +188,32 @@ Bekijk de passantenprijslijst 2025
 Bekijk de passantenprijslijst 2026
 GDPR cookie banner
 Spijkenisse Medisch Centrum gebruikt noodzakelijke cookies om de website goed te laten werken. Met jouw toestemming gebruiken we ook cookies voor statistieken en de vertaalfunctie. Je kunt alles accepteren, optionele cookies weigeren of je voorkeuren instellen. Lees meer in onze privacyverklaring .
-Alles accepteren
-Alles weigeren
-Voorkeuren instellen
+Alles accepteren Alles accepteren
+Alles weigeren Alles weigeren
+Voorkeuren instellen Voorkeuren instellen
+GDPR Instellingen scherm
 Sluit AVG/GDPR cookie instellingen
+Sluit AVG/GDPR cookie instellingen
+Cookie categorieën
+Cookie-instellingen
 Cookie-instellingen
 Noodzakelijk
+Noodzakelijk
+Statistieken
 Statistieken
 Powered by GDPR Cookie Compliance (opent in een nieuwe tab)
 Cookie-instellingen
 Hier kun je jouw cookievoorkeuren instellen. Noodzakelijke cookies zijn altijd actief. Cookies voor statistieken en de vertaalfunctie gebruiken we alleen met jouw toestemming. Je kunt je toestemming op ieder moment wijzigen of intrekken via de cookie-instellingen.
 Noodzakelijk
 Deze cookies zijn nodig om de website goed te laten werken en jouw cookievoorkeuren te onthouden. Ze zijn altijd ingeschakeld.
+Noodzakelijk
 Ingeschakeld
 Uitgeschakeld
 Statistieken
 Met jouw toestemming gebruiken we Google Analytics om het gebruik van onze website te meten en de website te verbeteren. Hierbij worden gegevens over je bezoek en apparaat met Google gedeeld. Deze categorie staat standaard uit.
+Statistieken
 Ingeschakeld
 Uitgeschakeld
-Alles inschakelen
-Alles afwijzen
-Wijzigingen opslaan
+Alles inschakelen Alles inschakelen
+Alles afwijzen Alles afwijzen
+Wijzigingen opslaan Wijzigingen opslaan
