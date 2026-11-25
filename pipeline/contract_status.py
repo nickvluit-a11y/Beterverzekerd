@@ -12,7 +12,7 @@ STATUSES = ["gecontracteerd", "in_onderhandeling", "geen_contract", "onbekend"]
 
 _NEGOTIATING = re.compile(
     r"onderhandel|in gesprek|\(?nog\)? geen contract|nog niet gecontracteerd|contract volgt|nog niet bekend|nog niet rond"
-    r"|voorstel|vooruitgang|lopen nog|gesprekken")
+    r"|voorstel|vooruitgang|lopen nog|gesprekken|geen (?:volledige )?overeenstemming")
 _NEGATIVE = re.compile(r"niet gecontracteerd|ongecontracteerd|geen contract|opgezegd|beeindigd|beëindigd")
 _POSITIVE = re.compile(
     r"(?<!niet )(?<!on)gecontracteerd|(?<!geen )contract afgesloten|heeft contract|met contract|wel contract"

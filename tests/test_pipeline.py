@@ -796,3 +796,19 @@ def test_icon_alt_text_is_kept():
     assert "Zilveren Kruis  Gecontracteerd" in text.replace("\n", " ") or "Gecontracteerd" in text
     rows = {r["concern"]: r["status"] for r in contracts_parse.parse_lines(text.replace("\n", " \n"))}
     assert rows.get("Achmea") == "gecontracteerd" and rows.get("CZ") == "in_onderhandeling"
+
+
+def test_care_type_matrix_uses_hospital_column_and_ambiguous_marks():
+    text = ("Gecontracteerd voor 2027\n✓\nOp peildatum voor 2027 nog geen volledige overeenstemming\n✓\n"
+            "Op peildatum niet gecontracteerd voor 2027\n✗\n")
+    table = [["Verzekeraar", "Labels", "Ziekenhuis", "GGz", "Wijkverpleging"],
+             ["CZ", "CZ", "✓", "✗", "✗"],
+             ["VGZ", "VGZ", "✗", "✓", "✓"]]
+    rows = {r["concern"]: r["status"] for r in contracts_parse.parse_source([table], text)}
+    assert rows.get("VGZ") == "geen_contract"   # hospital column says 'niet gecontracteerd'
+    assert "CZ" not in rows                      # '✓' means contracted OR not yet agreed: no claim
+
+
+def test_mark_matrix_without_known_columns_makes_no_claim():
+    rows = contracts_parse.parse_tables([[["CZ", "CZ", "✓", "✓", "✗", "✗"]]])
+    assert rows == []
