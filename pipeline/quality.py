@@ -372,9 +372,9 @@ def compare(quality: pd.DataFrame) -> pd.DataFrame:
 # --- summary per domain ------------------------------------------------------------------------
 
 DOMAINS = [  # (domain, indicator pattern, sentence when better, sentence when worse)
-    ("heroperatie", r"revisie", "Minder heroperaties", "Meer heroperaties"),
-    ("infectie", r"wondinfectie", "Minder infecties", "Meer infecties"),
-    ("herstel", r"verbetering volgens patiënt", "Patiënten melden meer herstel", "Patiënten melden minder herstel"),
+    ("heroperatie", r"revisie", "Minder vaak opnieuw geopereerd", "Vaker opnieuw geopereerd"),
+    ("infectie", r"wondinfectie", "Minder vaak een infectie", "Vaker een infectie"),
+    ("herstel", r"verbetering volgens patiënt", "Patiënten voelen zich na afloop beter", "Patiënten voelen zich na afloop minder goed"),
     ("zien", r"beter zien", "Vaker beter zicht na de operatie", "Minder vaak beter zicht na de operatie"),
     ("sterkte", r"refractie", "Vaker precies de bedoelde brilsterkte", "Minder vaak precies de bedoelde brilsterkte"),
 ]
