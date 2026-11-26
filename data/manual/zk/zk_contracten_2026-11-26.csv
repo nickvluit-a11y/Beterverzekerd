@@ -1,0 +1,298 @@
+naam;adres;postcode;plaats;status;omzetplafond
+Universitair Medisch Centrum Groningen (UMCG);HANZEPLN 1;9713GZ;GRONINGEN;Contract: vergoed;ja
+Universitair Medisch Centrum Groningen (UMCG), loc. Beatrix Kinderziekenhuis;HANZEPLN 1;9713GZ;GRONINGEN;Contract: vergoed;ja
+UMCG Protonentherapiecentrum (GPTC);VRYDEMALN 15;9713WS;GRONINGEN;Contract: vergoed;ja
+Martini Ziekenhuis;V SWIETENPLN 1;9728NT;GRONINGEN;Nog geen contract: een deel niet vergoed;
+Universitair Medisch Centrum Groningen (UMCG), loc. Beatrixoord;DILGTWG 5;9751ND;HAREN GN;Contract: vergoed;ja
+Wilhelmina Ziekenhuis Assen, loc. Noorderpark;MOLENSTR 262-b;9402JW;ASSEN;Nog geen contract: een deel niet vergoed;
+Wilhelmina Ziekenhuis Assen;EUROPAWG ZUID 1;9401RK;ASSEN;Nog geen contract: een deel niet vergoed;
+Ommelander Ziekenhuis Groningen, loc. Scheemda;PASTORIEWG 1;9679BJ;SCHEEMDA;Contract: vergoed;ja
+Ommelander Ziekenhuis Groningen, loc. servicepunt Delfzijl;SCHOOLSTR 7;9934CD;DELFZIJL;Contract: vergoed;ja
+Ziekenhuis Nij Smellinghe;COMPAGNONSPLN 1;9202NN;DRACHTEN;Contract: vergoed;ja
+Ommelander Ziekenhuis Groningen, loc. servicepunt Revalidatie Winschoten;BURG VENEMASTR 9A;9671AA;WINSCHOTEN;Contract: vergoed;ja
+Treant ziekenhuis, loc. Refaja;BOERHAAVESTR 1;9501HE;STADSKANAAL;Nog geen contract: een deel niet vergoed;
+Treant Dialysekliniek (voorheen Dialysekliniek Noord);BATHOORN 2;9411SE;BEILEN;Nog geen contract: een deel niet vergoed;
+Ziekenhuis Nij Smellinghe, loc. Dokkum;BIRDAARDERSTRWG 72B;9101DC;DOKKUM;Contract: vergoed;ja
+Frisius MC, loc. Leeuwarden;H DUNANTWG 2;8934AD;LEEUWARDEN;Nog geen contract: een deel niet vergoed;
+Frisius MC, loc. Sportstad;ABE LENSTRA BOULE 21;8448JA;HEERENVEEN;Nog geen contract: een deel niet vergoed;
+Frisius MC, loc. Heerenveen;THIALFWG 44;8441PW;HEERENVEEN;Nog geen contract: een deel niet vergoed;
+Treant ziekenhuis, loc. Scheper;BOERMARKEWG 60;7824AA;EMMEN;Nog geen contract: een deel niet vergoed;
+Universitair Medisch Centrum Groningen (UMCG), loc. Emmen (Radiotherapie Scheper);BOERMARKEWG 68C;7824AA;EMMEN;Contract: vergoed;ja
+Treant ziekenhuis, loc. Bethesda;DR G H AMSHOFFWG 1;7909AA;HOOGEVEEN;Nog geen contract: een deel niet vergoed;
+Isala, loc. polikliniek Steenwijk;SLUISWG 2;8332JC;STEENWIJK;Nog geen contract: een deel niet vergoed;
+Frisius MC, loc. Steenwijk;ZIGHER TER STEGHE 9;8331KG;STEENWIJK;Nog geen contract: een deel niet vergoed;
+Frisius MC, loc. Joure;SLUISDK 30;8501BZ;JOURE;Nog geen contract: een deel niet vergoed;
+Saxenburgh, loc. Gezondheidscentrum de Veltstroom;BURG FEITHSNGL 2;7742BP;COEVORDEN;Nog geen contract: een deel niet vergoed;
+Isala, loc. Meppel;REGGERSWG 2;7943KC;MEPPEL;Nog geen contract: een deel niet vergoed;
+Antonius Ziekenhuis, loc. Sneek;BOLSWARDERBAAN 1;8601ZK;SNEEK;Nog geen contract: een deel niet vergoed;
+Frisius MC, loc. Lemmer;V RYGERSMAPK 1;8531JA;LEMMER;Nog geen contract: een deel niet vergoed;
+Saxenburgh, loc. Hardenberg;J WEITKAMPLN 4A;7772SE;HARDENBERG;Nog geen contract: een deel niet vergoed;
+Frisius MC, loc. Harlingen;ACHLUMERDK 2;8862AJ;HARLINGEN;Nog geen contract: een deel niet vergoed;
+Saxenburgh, loc. polikliniek Ommen;CHEVALLERAUSTR 4;7731EE;OMMEN;Nog geen contract: een deel niet vergoed;
+Antonius Ziekenhuis, loc. Emmeloord;URKERWG 4;8303BX;EMMELOORD;Nog geen contract: een deel niet vergoed;
+Isala, loc. Zwolle;DR V HEESWG 2;8025AB;ZWOLLE;Nog geen contract: een deel niet vergoed;
+Saxenburgh, loc. polikliniek Westerhaar;HOOFDWG 132C;7676AJ;WESTERHAAR-VRIEZENVEENSE;Nog geen contract: een deel niet vergoed;
+Isala, loc. polikliniek Kampen;ENGELENBERGPLNTS 7;8266AB;KAMPEN;Nog geen contract: een deel niet vergoed;
+Deventer Ziekenhuis, loc. polikliniek Raalte;VRIESWYK 6;8103PB;RAALTE;Nog geen contract: een deel niet vergoed;
+St Jansdal, loc. polikliniek Dronten;W ALEXANDERPLN 9;8254BC;DRONTEN;Nog geen contract: een deel niet vergoed;
+Isala, loc. polikliniek Heerde;GROTEWG 5;8191JS;WAPENVELD;Nog geen contract: een deel niet vergoed;
+SPECTRUM OOGZIEKENHUIS ZGT;TWENTHE PLN 5;7607GZ;ALMELO;Nog geen contract: een deel niet vergoed;
+Medisch Spectrum Twente (MST), loc. buitenpolikliniek Almelo;ZILVERMEEUW 1;7609PP;ALMELO;Nog geen contract: een deel niet vergoed;
+Ziekenhuis Groep Twente (ZGT), loc. Almelo;ZILVERMEEUW 1;7609PP;ALMELO;Nog geen contract: een deel niet vergoed;
+Deventer Ziekenhuis, loc. polikliniek Rijssen;WYNAND ZEEUWSTR 26;7462DE;RIJSSEN;Nog geen contract: een deel niet vergoed;
+Ziekenhuis Groep Twente (ZGT), loc. buitenpolikliniek Rijssen;WYNAND ZEEUWSTR 26;7462DE;RIJSSEN;Nog geen contract: een deel niet vergoed;
+Dijklander Ziekenhuis, loc. polikliniek Enkhuizen;MOLENWG 9B;1601SR;ENKHUIZEN;Nog geen contract: een deel niet vergoed;
+Gelre ziekenhuizen, loc. polikliniek Epe;W TELLSTR 17;8162ET;EPE;Nog geen contract: een deel niet vergoed;
+Medisch Spectrum Twente (MST), loc. Oldenzaal;PR BERNHARDSTR 17;7573AM;OLDENZAAL;Nog geen contract: een deel niet vergoed;
+STICHTING ZIEKENHUISGROEP TWENTE;GEERDINKSWG 141;7555DL;HENGELO OV;Nog geen contract: een deel niet vergoed;
+Ziekenhuis Groep Twente (ZGT), loc. buitenpolikliniek Nocepta;GEERDINKSWG 141;7555DL;HENGELO OV;Nog geen contract: een deel niet vergoed;
+Ziekenhuis Groep Twente (ZGT), loc. Hengelo;GEERDINKSWG 141;7555DL;HENGELO OV;Nog geen contract: een deel niet vergoed;
+St Jansdal, loc. Lelystad (voorheen MC Zuiderzee);ZIEKENHUISWG 100;8233AA;LELYSTAD;Nog geen contract: een deel niet vergoed;
+Deventer Ziekenhuis;N BOLKESTEINLN 75;7416SE;DEVENTER;Nog geen contract: een deel niet vergoed;
+Salland kliniek;N BOLKESTEINLN 75;7416SE;DEVENTER;Nog geen contract: een deel niet vergoed;
+Medisch Spectrum Twente (MST), loc. Diagnostisch Centrum Twente;HAAKSBERGERSTR 55;7513ER;ENSCHEDE;Nog geen contract: een deel niet vergoed;
+Medisch Spectrum Twente (MST), loc. Enschede;KONINGSPLN 1;7512KZ;ENSCHEDE;Nog geen contract: een deel niet vergoed;
+Noordwest Ziekenhuisgroep, loc. Dialysecentrum Texel;T HOF 20;1794AZ;OOSTEREND NH;Nog geen contract: een deel niet vergoed;
+St Jansdal, loc. Harderwijk;WETH JANSENLN 90;3844DG;HARDERWIJK;Nog geen contract: een deel niet vergoed;
+Medisch Spectrum Twente (MST), loc. Haaksbergen;WIEDENBROEKSNGL 4;7481BT;HAAKSBERGEN;Nog geen contract: een deel niet vergoed;
+Gelre ziekenhuizen, loc. polikliniek Lochem;ZWIEPSEWG 105;7241GR;LOCHEM;Nog geen contract: een deel niet vergoed;
+Amsterdam UMC, loc. Hoorn (Radiotherapie Dijklander Ziekenhuis) (voorheen VUmc);MAELSONSTR 3;1624NP;HOORN NH;Nog geen contract: een deel niet vergoed;
+Dijklander Ziekenhuis, loc. Hoorn;MAELSONSTR 3;1624NP;HOORN NH;Nog geen contract: een deel niet vergoed;
+Gelre Diagnostisch Centrum;J F KENNEDYLN 32;7314PS;APELDOORN;Nog geen contract: een deel niet vergoed;
+Noordwest Ziekenhuisgroep, loc. polikliniek Texel;PONTWG 106;1791LB;DEN BURG;Nog geen contract: een deel niet vergoed;
+Gelre Ziekenhuizen, loc. Apeldoorn;A SCHWEITZERLN 31;7334DZ;APELDOORN;Nog geen contract: een deel niet vergoed;
+Gelre Focuskliniek;DEN ELTERWG 77;7207AE;ZUTPHEN;Nog geen contract: een deel niet vergoed;
+Gelre Ziekenhuizen, loc. Zutphen;DEN ELTERWG 77;7207AE;ZUTPHEN;Nog geen contract: een deel niet vergoed;
+Streekziekenhuis Koningin Beatrix (SKB), loc. polikliniek Eibergen;J W HAGEMANSTR 46-2;7151AH;EIBERGEN;Contract: vergoed;ja
+Noordwest Ziekenhuisgroep, loc. Den Helder;HUISDUINERWG 3;1782GZ;DEN HELDER;Nog geen contract: een deel niet vergoed;
+Streekziekenhuis Koningin Beatrix (SKB), loc. polikliniek Ruurlo;NW WG 5;7261NL;RUURLO;Contract: vergoed;ja
+Noordwest Ziekenhuisgroep, loc. Schagen;KAAGWG 25;1741LC;SCHAGEN;Nog geen contract: een deel niet vergoed;
+Dijklander Ziekenhuis, loc. polikliniek Volendam;HEIDEWG 1B;1132DA;VOLENDAM;Nog geen contract: een deel niet vergoed;
+Amsterdam UMC, loc. Almere (Radiotherapie Flevoziekenhuis) (voorheen AMC);HOSPITAALWG 1;1315RA;ALMERE;Nog geen contract: een deel niet vergoed;
+Flevoziekenhuis;HOSPITAALWG 1;1315RA;ALMERE;Nog geen contract: een deel niet vergoed;
+Slingeland Ziekenhuis, loc. polikliniek vaatchirurgie Groenlo;BUITENSCHANS 28;7141EL;GROENLO;Nog geen contract: een deel niet vergoed;
+Noordwest Ziekenhuisgroep, loc. Heerhugowaard;STATIONSPLN 49;1703WD;HEERHUGOWAARD;Nog geen contract: een deel niet vergoed;
+Meander Medisch Centrum, loc. Nijkerk;ORANJELN 104;3862CX;NIJKERK;Nog geen contract: een deel niet vergoed;
+Dijkland Clinics;WATERLANDLN 250;1441RN;PURMEREND;Nog geen contract: een deel niet vergoed;
+Noordwest Foreest Kliniek;COMENIUSSTR 3;1817MS;ALKMAAR;Nog geen contract: een deel niet vergoed;
+Noordwest Ziekenhuisgroep, loc. Alkmaar;WILHELMINALN 12;1815JD;ALKMAAR;Nog geen contract: een deel niet vergoed;
+Dijklander Ziekenhuis, loc. Purmerend;WATERLANDLN 250;1441RN;PURMEREND;Nog geen contract: een deel niet vergoed;
+Noordwest Pijncentrum;WENDELAARSTR 58;1814GS;ALKMAAR;Nog geen contract: een deel niet vergoed;
+Zaans Medisch Centrum;KON JULIANAPLN 58;1502DV;ZAANDAM;Nog geen contract: een deel niet vergoed;
+Zaans Medisch Centrum, loc. Gezondheidscentrum Saendelft;KAAIKHOF 69;1567JP;ASSENDELFT;Nog geen contract: een deel niet vergoed;
+BovenIJ Ziekenhuis;STATENJACHTSTR 1;1034CS;AMSTERDAM;Nog geen contract: een deel niet vergoed;
+Rode Kruis Ziekenhuis (RKZ), loc. Slaapcentrum Heemskerk;MOZARTSTR 201;1962AL;HEEMSKERK;Nog geen contract: een deel niet vergoed;
+OLVG, loc. IJburg;YBURGLN 727;1087CH;AMSTERDAM;Contract: vergoed;ja
+OLVG, loc. Spuistraat;SPUISTR 239;1012VP;AMSTERDAM;Contract: vergoed;ja
+OLVG, loc. Oost;OOSTERPK 9;1091AC;AMSTERDAM;Contract: vergoed;ja
+Tergooi, loc. buitenpolikliniek Weesp;K MUIDERWG 2A;1382LR;WEESP;Contract: vergoed;ja
+Tergooi, loc. buitenpolikliniek Blaricum;RYKSSTRWG 3;1261AN;BLARICUM;Contract: vergoed;ja
+Rode Kruis Ziekenhuis (RKZ);VONDELLN 13;1942LE;BEVERWIJK;Nog geen contract: een deel niet vergoed;
+Streekziekenhuis Koningin Beatrix (SKB), loc. Winterswijk;BEATRIXPK 1;7101BN;WINTERSWIJK;Contract: vergoed;ja
+Slingeland Ziekenhuis;KRUISBERGSEWG 25;7009BL;DOETINCHEM;Nog geen contract: een deel niet vergoed;
+Sint Maartenskliniek, loc. Barneveld;KLAVERWEIDE 1a;3773AW;BARNEVELD;Nog geen contract: een deel niet vergoed;
+Ziekenhuis Gelderse Vallei (ZGV), loc. Barneveld;KLAVERWEIDE 1A;3773AW;BARNEVELD;Nog geen contract: een deel niet vergoed;
+Slingeland Ziekenhuis, loc. Gezellenlaan Doetinchem;GEZELLENLN 10;7005AZ;DOETINCHEM;Nog geen contract: een deel niet vergoed;
+Meander Medisch Centrum, loc. Barneveld;NEDERWOUDSEWG 17;3772TD;BARNEVELD;Nog geen contract: een deel niet vergoed;
+Rijnstate Clinics;WAGNERLN 55;6815AD;ARNHEM;Nog geen contract: een deel niet vergoed;
+Rijnstate, loc. Arnhem;WAGNERLN 55;6815AD;ARNHEM;Nog geen contract: een deel niet vergoed;
+Meander Medisch Centrum, loc. Amersfoort;MAATWG 3;3813TZ;AMERSFOORT;Nog geen contract: een deel niet vergoed;
+Handencentrum Midden Nederland, loc. Ede;WILLY BRANDTLN 10;6716RP;EDE;Nog geen contract: een deel niet vergoed;
+Sint Maartenskliniek, loc. Ede;WILLY BRANDTLN 10;6716RP;EDE;Nog geen contract: een deel niet vergoed;
+Ziekenhuis Gelderse Vallei (ZGV);WILLY BRANDTLN 10;6716RP;EDE;Nog geen contract: een deel niet vergoed;
+Meander Medisch Centrum, loc. Baarn;BAARNSCHE DK 8;3741LR;BAARN;Nog geen contract: een deel niet vergoed;
+Rijnstate, loc. Zevenaar;HUNNEVELDWG 14;6903ZN;ZEVENAAR;Nog geen contract: een deel niet vergoed;
+Handencentrum Midden Nederland, loc. Veenendaal;NYVERHEIDSLN 3G;3903AL;VEENENDAAL;Nog geen contract: een deel niet vergoed;
+Sint Maartenskliniek, loc. Veenendaal;SPOORLN 5;3903XS;VEENENDAAL;Nog geen contract: een deel niet vergoed;
+Ziekenhuis Gelderse Vallei (ZGV), loc. polikliniek Veenendaal;SPOORLN 5;3903XS;VEENENDAAL;Nog geen contract: een deel niet vergoed;
+Handencentrum Midden Nederland, loc. Wageningen;BINNENH 69;6709PD;WAGENINGEN;Nog geen contract: een deel niet vergoed;
+Rijnstate, loc. Elst;STATIONSPLN 2;6662NC;ELST GLD;Nog geen contract: een deel niet vergoed;
+Tergooi, loc. Hilversum;LN V TERGOOI 2;1212VG;HILVERSUM;Contract: vergoed;ja
+Tergooi MC Clinics;LN V TERGOOI 8;1212VG;HILVERSUM;Contract: vergoed;ja
+Sint Maartenskliniek, loc. Nijmegen;HENGSTDAL 3;6574NA;UBBERGEN;Nog geen contract: een deel niet vergoed;
+Sint Maartenskliniek, loc. Nijmegen RealHealth;ZEVENHEUVELENWG 48a;6571CK;BERG EN DAL;Nog geen contract: een deel niet vergoed;
+Canisius-Wilhelmina Ziekenhuis (CWZ), loc. polikliniek de Waalsprong;CARBATINASTR 3;6515GM;NIJMEGEN;Nog geen contract: een deel niet vergoed;
+Radboudumc;GEERT GROOTEPLN Z 10;6525GA;NIJMEGEN;Nog geen contract: een deel niet vergoed;
+Radboudumc, loc. Amalia kinderziekenhuis;GEERT GROOTEPLN Z 10;6525GA;NIJMEGEN;Nog geen contract: een deel niet vergoed;
+Canisius-Wilhelmina Ziekenhuis (CWZ), loc. polikliniek Jonkerbosch;BURG DALESLN 27;6532CL;NIJMEGEN;Nog geen contract: een deel niet vergoed;
+Canisius-Wilhelmina Ziekenhuis (CWZ);WG DOOR JONKERBOS 100;6532SZ;NIJMEGEN;Nog geen contract: een deel niet vergoed;
+Radboudumc, loc. Nijmegen (Radiotherapie CWZ);WG DOOR JONKERBOS 100, route A53;6532SZ;NIJMEGEN;Nog geen contract: een deel niet vergoed;
+Sint Maartenskliniek, loc. Canisius-Wilhelmina Ziekenhuis (CWZ) Nijmegen;WG DOOR JONKERBOS 100;6532SZ;NIJMEGEN;Nog geen contract: een deel niet vergoed;
+Maasziekenhuis Pantein;DR KOPSTR 1;5835DV;BEUGEN;Nog geen contract: een deel niet vergoed;
+Sint Maartenskliniek, loc. Boxmeer;DR KOPSTR 1;5835DV;BEUGEN;Nog geen contract: een deel niet vergoed;
+Canisius-Wilhelmina Ziekenhuis (CWZ), loc. polikliniek Druten;KERKELAND 3;6651KN;DRUTEN;Nog geen contract: een deel niet vergoed;
+VieCuri Medisch Centrum, loc. Venray;MERSELOSEWG 130;5801CE;VENRAY;Nog geen contract: een deel niet vergoed;
+Diakonessenhuis, loc. Doorn;BERGWG 2;3941RB;DOORN;Contract: vergoed;ja
+Diak Clinic;JAGERSNGL 1;3707HL;ZEIST;Contract: vergoed;ja
+Diakonessenhuis, loc. Zeist;JAGERSNGL 1;3707HL;ZEIST;Contract: vergoed;ja
+Liesbreukcentrum Nederland;JAGERSNGL 1;3707HL;ZEIST;Contract: vergoed;ja
+UMC Utrecht, loc. Alexander Monro Ziekenhuis;PROF BRONKHORSTLN 10;3723MB;BILTHOVEN;Nog geen contract: een deel niet vergoed;
+St. Antonius Ziekenhuis, loc. Dialysecentrum Tiel;PRES KENNEDYLN 1;4002WP;TIEL;Nog geen contract: een deel niet vergoed;
+Ziekenhuis Rivierenland, loc. Tiel;PRES KENNEDYLN 1;4002WP;TIEL;Nog geen contract: een deel niet vergoed;
+Prinses Maxima Centrum voor Kinderoncologie;HEIDELBERGLN 25;3584CS;UTRECHT;Contract: vergoed;
+UMC Utrecht, loc. Wilhelmina Kinderziekenhuis (WKZ);LUNDLN 6;3584EA;UTRECHT;Nog geen contract: een deel niet vergoed;
+UMC Utrecht, loc. AZU;HEIDELBERGLN 100;3584CX;UTRECHT;Nog geen contract: een deel niet vergoed;
+Bernhoven, loc. polikliniek Oss;GEZONDHEIDSLN 1A;5342JW;OSS;Nog geen contract: een deel niet vergoed;
+Tolbrug (JBZ), loc. Hotel Udens Duyn;ANNABOULEV 6;5406PZ;UDEN;Nog geen contract: een deel niet vergoed;
+Bernhoven, loc. Uden;NISTELRODESEWG 10;5406PT;UDEN;Nog geen contract: een deel niet vergoed;
+Ziekenhuis Rivierenland, loc. Barbara polikliniek;ELISABETHDREEF 4;4101KL;CULEMBORG;Nog geen contract: een deel niet vergoed;
+Jeroen Bosch Ziekenhuis, loc. Rosmalen;DE HOEF 90;5242CN;ROSMALEN;Nog geen contract: een deel niet vergoed;
+Jeroen Bosch Ziekenhuis, loc. Zaltbommel;DR JJ WILLEMSEHOF 1;5302TD;ZALTBOMMEL;Nog geen contract: een deel niet vergoed;
+Jeroen Bosch Ziekenhuis, loc. Sport Medisch Centrum;MARATHONLOOP 9;5235AA;'S-HERTOGENBOSCH;Nog geen contract: een deel niet vergoed;
+St. Antonius Ziekenhuis, loc. polikliniek Houten;HOFSPOOR 2;3994VZ;HOUTEN;Nog geen contract: een deel niet vergoed;
+Elkerliek Ziekenhuis, loc. buitenpolikliniek Gemert;JULIANASTR 2;5421DB;GEMERT;Nog geen contract: een deel niet vergoed;
+Diakonessenhuis, loc. Utrecht;BOSBOOMSTR 1;3582KE;UTRECHT;Contract: vergoed;ja
+Tolbrug (JBZ), loc. Atlent;KOOIKERSWG 303;5223KE;'S-HERTOGENBOSCH;Nog geen contract: een deel niet vergoed;
+Jeroen Bosch Ziekenhuis, loc. 's-Hertogenbosch;H DUNANTSTR 1;5223GZ;'S-HERTOGENBOSCH;Nog geen contract: een deel niet vergoed;
+Tolbrug (JBZ), loc. Den Bosch;H DUNANTSTR 1;5223GZ;'S-HERTOGENBOSCH;Nog geen contract: een deel niet vergoed;
+St. Antonius Ziekenhuis, loc. polikliniek Utrecht Overvecht;NECKARDREEF 6;3562CN;UTRECHT;Nog geen contract: een deel niet vergoed;
+Elkerliek Ziekenhuis, loc. Deurne;DUNANTWG 16;5751CB;DEURNE;Nog geen contract: een deel niet vergoed;
+Elkerliek Ziekenhuis, loc. Helmond;WESSELMANLN 25;5707HA;HELMOND;Nog geen contract: een deel niet vergoed;
+Jeroen Bosch Ziekenhuis, loc. Boxtel;LIDUINAHOF 35;5281AD;BOXTEL;Nog geen contract: een deel niet vergoed;
+Catharina Ziekenhuis;MICHELANGELOLN 2;5623EJ;EINDHOVEN;Nog geen contract: een deel niet vergoed;
+Maxima Medisch Centrum, loc. Eindhoven;THEODOR FLIEDNERS 1;5631BM;EINDHOVEN;Nog geen contract: een deel niet vergoed;
+Sint Maartenskliniek, loc. polikliniek Geldrop;BOGARDEIND 2;5664EH;GELDROP;Nog geen contract: een deel niet vergoed;
+St. Anna Ziekenhuis, loc. Geldrop;BOGARDEIND 2;5664EH;GELDROP;Nog geen contract: een deel niet vergoed;
+Beatrixziekenhuis, loc. Lingepolikliniek;LINGESTEYNPLNTS 3;4141GH;LEERDAM;Nog geen contract: een deel niet vergoed;
+Jeroen Bosch Ziekenhuis, loc. Drunen;TINIE D MUNNIKSTR 17;5151VW;DRUNEN;Nog geen contract: een deel niet vergoed;
+St. Anna Ziekenhuis, loc. Eindhoven;ANTOON COOLENLN 1-03;5644RX;EINDHOVEN;Nog geen contract: een deel niet vergoed;
+St. Antonius Ziekenhuis, loc. Utrecht;SOESTWETERING 1;3543AZ;UTRECHT;Nog geen contract: een deel niet vergoed;
+St. Antonius Ziekenhuis, loc. Nieuwegein;KOEKOEKSLN 1;3435CM;NIEUWEGEIN;Nog geen contract: een deel niet vergoed;
+Amsterdam UMC, loc. Emma Kinderziekenhuis (voorheen AMC);MEIBERGDREEF 9;1105AZ;AMSTERDAM;Nog geen contract: een deel niet vergoed;
+Amsterdam UMC, loc. Meibergdreef (voorheen AMC);MEIBERGDREEF 9;1105AZ;AMSTERDAM;Nog geen contract: een deel niet vergoed;
+Sint Maartenskliniek, loc. Woerden;POLANERBAAN 2;3447GN;WOERDEN;Nog geen contract: een deel niet vergoed;
+St. Antonius Ziekenhuis, loc. spatadercentrum Woerden;POLANERBAAN 2;3447GN;WOERDEN;Nog geen contract: een deel niet vergoed;
+St. Antonius Ziekenhuis, loc. Woerden;POLANERBAAN 2;3447GN;WOERDEN;Nog geen contract: een deel niet vergoed;
+Ziekenhuis Amstelland;LN VD HELENDE MEE 8;1186AM;AMSTELVEEN;Contract: vergoed;ja
+Ziekenhuis Amstelland, loc. Gezondheidscentrum de Waterlinie;KON MAXIMALN 30;1421LC;UITHOORN;Contract: vergoed;ja
+Amsterdam UMC, loc. De Boelelaan (voorheen VUmc);DE BOELELN 1117;1081HV;AMSTERDAM;Nog geen contract: een deel niet vergoed;
+Esthetisch Centrum Jan van Goyen (OLVG), loc. Concertgebouwplein;CONCERTGEBOUWPLN 11;1071LL;AMSTERDAM;Contract: vergoed;ja
+Medisch Centrum Jan van Goyen (OLVG), loc. Jan van Goyenkade;J V GOYENKD 1;1075HN;AMSTERDAM;Contract: vergoed;ja
+Medisch Centrum Jan van Goyen (OLVG), loc. de Lairessestraat;DE LAIRESSESTR 180;1075HM;AMSTERDAM;Contract: vergoed;ja
+Groene Hart Ziekenhuis, loc. Schoonhoven;ORANJEPLAATS 21g;2871TL;SCHOONHOVEN;Nog geen contract: een deel niet vergoed;
+Medisch Centrum Jan van Goyen (OLVG), loc. Het Slotervaart;LOUWESWG 6;1066EC;AMSTERDAM;Contract: vergoed;ja
+Antoni van Leeuwenhoek (AVL);PLESMANLN 121;1066CX;AMSTERDAM;Contract: vergoed;ja
+Kaak Medisch Centrum;J V GALENSTR 176-178;1056CJ;AMSTERDAM;Nog geen contract: een deel niet vergoed;
+Obesitas Centrum Amsterdam, loc. OLVG West;J TOOROPSTR 164;1061AE;AMSTERDAM;Contract: vergoed;ja
+OLVG, loc. West;J TOOROPSTR 164;1061AE;AMSTERDAM;Contract: vergoed;ja
+Groene Hart Ziekenhuis, loc. Bodegraven;W DE ZWYGERSTR 9c;2411VT;BODEGRAVEN;Nog geen contract: een deel niet vergoed;
+Beatrixziekenhuis;BANNEWG 57;4204AA;GORINCHEM;Nog geen contract: een deel niet vergoed;
+Groene Hart Ziekenhuis, loc. Gouda;BLEULANDWG 10;2803HH;GOUDA;Nog geen contract: een deel niet vergoed;
+Sint Maartenskliniek, loc. Alphen aan den Rijn;LUPINESNGL 83C;2403CM;ALPHEN AAN DEN RIJN;Nog geen contract: een deel niet vergoed;
+Alrijne Ziekenhuis, loc. Alphen aan den Rijn;METEOORLN 4;2402WC;ALPHEN AAN DEN RIJN;Nog geen contract: een deel niet vergoed;
+HagaZiekenhuis, loc. Huidkliniek Waddinxveen;SOUBURGHLN 10C;2741EL;WADDINXVEEN;Nog geen contract: een deel niet vergoed;
+Groene Hart Ziekenhuis, loc. Zuidplas;DOORTOCHT 40;2914KA;NIEUWERKERK AD IJSSEL;Nog geen contract: een deel niet vergoed;
+Albert Schweitzer Ziekenhuis (ASZ), loc. Sliedrecht;STATIONSPK 401;3364DA;SLIEDRECHT;Nog geen contract: een deel niet vergoed;
+IJsselland Ziekenhuis, loc. polikliniek Nesselande;CYPRUSLN 410;3059XA;ROTTERDAM;Nog geen contract: een deel niet vergoed;
+Alrijne Ziekenhuis, loc. Leiderdorp;S SMITWG 1;2353GA;LEIDERDORP;Nog geen contract: een deel niet vergoed;
+IJsselland Ziekenhuis, loc. polikliniek Krimpen;GROENENDAAL 1;2922CJ;KRIMPEN AAN DEN IJSSEL;Nog geen contract: een deel niet vergoed;
+Antoni van Leeuwenhoek (AVL), loc. Hoofddorp (Radiotherapie Spaarne);SPAARNEPOORT 1;2134TM;HOOFDDORP;Contract: vergoed;ja
+Spaarne Gasthuis, loc. Hoofddorp;SPAARNEPOORT 1;2134TM;HOOFDDORP;Contract: vergoed;ja
+IJsselland Ziekenhuis;PR CONSTANTYNWG 2;2906ZC;CAPELLE AAN DEN IJSSEL;Nog geen contract: een deel niet vergoed;
+Reinier Haga Orthopedisch Centrum;TONEELLN 2;2725NA;ZOETERMEER;Nog geen contract: een deel niet vergoed;
+HagaDirect, loc. Zoetermeer;TONEELLN 1;2725NA;ZOETERMEER;Nog geen contract: een deel niet vergoed;
+Spaarne Gasthuis, loc. Haarlem-Zuid;BOERHAAVELN 22;2035RC;HAARLEM;Contract: vergoed;ja
+Spaarne Gasthuis, loc. Haarlem-Noord;VONDELWG 999;2026BW;HAARLEM;Contract: vergoed;ja
+Spaarne Gasthuis, loc. Dialysecentrum Velsen-Noord;WYKERSTRWG 160;1951EK;VELSEN-NOORD;Contract: vergoed;ja
+Spaarne Gasthuis, loc. polikliniek Hillegom;ABELLALN 1;2182TX;HILLEGOM;Contract: vergoed;ja
+LUMC, loc. Poliklinisch Centrum Lisse;WILHELMINASTR 53;2161PH;LISSE;Contract: vergoed;ja
+Alrijne Ziekenhuis, loc. Sassenheim;J V BRABANTWG 33;2171HC;SASSENHEIM;Nog geen contract: een deel niet vergoed;
+Alrijne Ziekenhuis, loc. Leiden;HOUTLN 55;2334CK;LEIDEN;Nog geen contract: een deel niet vergoed;
+Clinics van Alrijne;HOUTLN 55;2334CK;LEIDEN;Nog geen contract: een deel niet vergoed;
+LUMC, loc. Leiden;ALBINUSDREEF 2;2333ZA;LEIDEN;Contract: vergoed;ja
+LUMC, loc. Dialysecentrum Katwijk;OVERRYN 7;2223ER;KATWIJK ZH;Contract: vergoed;ja
+Alrijne Ziekenhuis, loc. Katwijk;RANDWG 47;2225PJ;KATWIJK ZH;Nog geen contract: een deel niet vergoed;
+HagaZiekenhuis, loc. Huidkliniek Wassenaar (voorheen LangeLand Huidkliniek, loc. Wassenaar);HOFCAMPWG 65;2241KE;WASSENAAR;Nog geen contract: een deel niet vergoed;
+HMC, loc. Gezondheidscentrum Wassenaar;HOFCAMPWG 65;2241KE;WASSENAAR;Nog geen contract: een deel niet vergoed;
+HagaZiekenhuis, loc. Zoetermeer;TONEELLN 1;2725NA;ZOETERMEER;Nog geen contract: een deel niet vergoed;
+HMC, loc. Antoniushove;BURG BANNINGLN 1;2262BA;LEIDSCHENDAM;Nog geen contract: een deel niet vergoed;
+HagaZiekenhuis, loc. Huidkliniek Zoetermeer (voorheen LangeLand Huidkliniek);EUROPAWG 151;2711ER;ZOETERMEER;Nog geen contract: een deel niet vergoed;
+Focuskliniek Orthopedie HMC;BRONOVOLN 5;2597AX;'S-GRAVENHAGE;Nog geen contract: een deel niet vergoed;
+HMC, loc. Bronovo;BRONOVOLN 5;2597AX;'S-GRAVENHAGE;Nog geen contract: een deel niet vergoed;
+Reinier de Graaf, loc. Voorburg (DHV);FONTEYNENBURGHLN 7;2275CX;VOORBURG;Contract: vergoed;ja
+HMC, loc. Westeinde;LYNBAAN 32;2512VA;'S-GRAVENHAGE;Nog geen contract: een deel niet vergoed;
+Franciscus, loc. Berkel;BOERHAAVESTR 19;2652EP;BERKEL EN RODENRIJS;Nog geen contract: een deel niet vergoed;
+HagaDirect, loc. Den Haag;ELS BORST EILERSP 275;2545AA;'S-GRAVENHAGE;Nog geen contract: een deel niet vergoed;
+HagaZiekenhuis, loc. Den Haag;ELS BORST EILERSP 275;2545AA;'S-GRAVENHAGE;Nog geen contract: een deel niet vergoed;
+HagaZiekenhuis, loc. Juliana Kinderziekenhuis;ELS BORST EILERSP 275;2545AA;'S-GRAVENHAGE;Nog geen contract: een deel niet vergoed;
+De Nederlandse Endometriose Kliniek, loc. Reinier de Graaf;REINIER D GRAAFWG 5;2625AD;DELFT;Contract: vergoed;ja
+Reinier de Graaf, loc. Delft;REINIER D GRAAFWG 5;2625AD;DELFT;Contract: vergoed;ja
+Franciscus, loc. Gasthuis;KLEIWG 500;3045PM;ROTTERDAM;Nog geen contract: een deel niet vergoed;
+IJsselland Ziekenhuis, loc. polikliniek Kralingen;OUDEDK 15;3062AB;ROTTERDAM;Nog geen contract: een deel niet vergoed;
+Reinier de Graaf, loc. Naaldwijk;MIDDEL BROEKWG 2A;2671ME;NAALDWIJK;Contract: vergoed;ja
+Erasmus MC, loc. buitenpolikliniek Buitenhaven;HARINGVLIET 72;3011TG;ROTTERDAM;Contract: vergoed;ja
+Ikazia Ziekenhuis, loc. Haringvliet;HARINGVLIET 72;3011TG;ROTTERDAM;Nog geen contract: een deel niet vergoed;
+Oogziekenhuis Rotterdam, loc. Havenpolikliniek Haringvliet Buitenhaven;HARINGVLIET 72;3011TG;ROTTERDAM;Nog geen contract: een deel niet vergoed;
+Ikazia Ziekenhuis, loc. dagbehandeling Brainpark;K P VD MANDELELN 10;3062MB;ROTTERDAM;Nog geen contract: een deel niet vergoed;
+Oogziekenhuis Rotterdam;SCHIEDAMSE VEST 180;3011BH;ROTTERDAM;Nog geen contract: een deel niet vergoed;
+Franciscus Focus;VLIETLANDPLN 2;3118JH;SCHIEDAM;Nog geen contract: een deel niet vergoed;
+Franciscus, loc. Vlietland;VLIETLANDPLN 2;3118JH;SCHIEDAM;Nog geen contract: een deel niet vergoed;
+Erasmus MC, loc. Sophia;WYTEMAWG 80;3015CN;ROTTERDAM;Contract: vergoed;ja
+Erasmus MC;DR MOLEWATERPLN 40;3015GD;ROTTERDAM;Contract: vergoed;ja
+Franciscus, loc. Willemsplein;WILLEMSPLN 495;3016DR;ROTTERDAM;Nog geen contract: een deel niet vergoed;
+Maasstad Ziekenhuis, loc. polikliniek Willemsplein;WILLEMSPLN 489-492;3016DR;ROTTERDAM;Contract: vergoed;
+HagaZiekenhuis, loc. Zorgplein Westland;ZANDEVELTPLN 3;2692AH;'S-GRAVENZANDE;Nog geen contract: een deel niet vergoed;
+Franciscus, loc. Maassluis;DE VLOOT 210;3144PK;MAASSLUIS;Nog geen contract: een deel niet vergoed;
+Ikazia Ziekenhuis;MONTESSORIWG 1;3083AN;ROTTERDAM;Nog geen contract: een deel niet vergoed;
+Maasstad Ziekenhuis;MAASSTADWG 21;3079DZ;ROTTERDAM;Contract: vergoed;
+Ikazia Ziekenhuis, loc. buitenpolikliniek Slikkerveer;PR MARGRIETSTR 42;2983EH;RIDDERKERK;Nog geen contract: een deel niet vergoed;
+Spijkenisse Medisch Centrum, loc. Rozenburg;BLANKENBURG 6;3181BC;ROZENBURG ZH;Nog geen contract: een deel niet vergoed;
+Albert Schweitzer Ziekenhuis (ASZ), loc. Ridderkerk;J LUYKENSTR 8;2985BV;RIDDERKERK;Nog geen contract: een deel niet vergoed;
+Ikazia Ziekenhuis, loc. buitenpolikliniek Barendrecht-Carnisselande;MIDDELDYKERPLN 36;2993DL;BARENDRECHT;Nog geen contract: een deel niet vergoed;
+Spijkenisse Medisch Centrum, loc. Oud-Beijerland;ZOOMWYCKPLN 15;3262DA;OUD-BEIJERLAND;Nog geen contract: een deel niet vergoed;
+Maasstad Ziekenhuis, loc. polikliniek Spijkenisse Medisch Centrum;RUWAARD V PUTTENW 500;3201GZ;SPIJKENISSE;Contract: vergoed;
+Spijkenisse Medisch Centrum;RUWAARD V PUTTENW 500;3201GZ;SPIJKENISSE;Nog geen contract: een deel niet vergoed;
+Albert Schweitzer Ziekenhuis (ASZ), loc. Zwijndrecht;LANGEWG 336;3331LZ;ZWIJNDRECHT;Nog geen contract: een deel niet vergoed;
+Helene Schweitzer kliniek;LANGEWG 336;3331LZ;ZWIJNDRECHT;Nog geen contract: een deel niet vergoed;
+Erasmus MC, loc. Dordrecht (Radiotherapie ASZ);K LOTSYWG 30;3318AL;DORDRECHT;Contract: vergoed;ja
+Albert Schweitzer Ziekenhuis (ASZ), loc. Dordwijk;A SCHWEITZERPLAAT 25;3318AT;DORDRECHT;Nog geen contract: een deel niet vergoed;
+Het Van Weel-Bethesda Ziekenhuis, loc. polikliniek Brielle;AMER 21;3232HA;BRIELLE;Nog geen contract: een deel niet vergoed;
+Het Van Weel-Bethesda Ziekenhuis, loc. polikliniek Hellevoetsluis - Het Nieuwe Weergors;VLIET 4;3224HE;HELLEVOETSLUIS;Nog geen contract: een deel niet vergoed;
+Het Van Weel-Bethesda Ziekenhuis, loc. polikliniek Hellevoetsluis - 't Dok Medisch Centrum;H HEYERMANSSTR 1a;3221VK;HELLEVOETSLUIS;Nog geen contract: een deel niet vergoed;
+Het Van Weel-Bethesda Ziekenhuis;STATIONSWG 22;3247BW;DIRKSLAND;Nog geen contract: een deel niet vergoed;
+Bravispunt, loc. Oudenbosch;WEST VAARDEKE 11A;4731MA;OUDENBOSCH;Contract: vergoed;ja
+Bravispunt, loc. Steenbergen;MOLENWG 52;4651CM;STEENBERGEN NB;Contract: vergoed;ja
+Amphia, loc. Oosterhout;PASTEURLN 9;4901DH;OOSTERHOUT NB;Contract: vergoed;ja
+Bravis ziekenhuis, loc. polikliniek Etten-Leur;SCHOONHOUT 215;4872MC;ETTEN-LEUR;Contract: vergoed;ja
+Amphia, loc. Etten-Leur;TRIVIUM 76;4873LP;ETTEN-LEUR;Contract: vergoed;ja
+Amphia, loc. Breda;MOLENGR 21;4818CK;BREDA;Contract: vergoed;ja
+Orthopedische kliniek Amphia;MOLENGR 21;4818CK;BREDA;Contract: vergoed;ja
+Bravispunt, loc. St. Willebrord;BASTIAANSENSNGL 17E;4711EC;ST. WILLEBRORD;Contract: vergoed;ja
+ETZ, loc. Waalwijk;KASTEELLN 2;5141BM;WAALWIJK;Nog geen contract: een deel niet vergoed;
+ETZ, loc. Dialysecentrum Waalwijk;KOETSHUISLN 619;5146BR;WAALWIJK;Nog geen contract: een deel niet vergoed;
+Bravis ziekenhuis, loc. Roosendaal;BOERHAAVELN 25;4708AE;ROOSENDAAL;Contract: vergoed;ja
+ETZ, loc. TweeSteden;DR DEELENLN 5;5042AD;TILBURG;Nog geen contract: een deel niet vergoed;
+ETZ, loc. Elisabeth;HILVARENBEEKSEWG 60;5022GC;TILBURG;Nog geen contract: een deel niet vergoed;
+Maxima Medisch Centrum, loc. Veldhoven;DE RUN 4600;5504DB;VELDHOVEN;Nog geen contract: een deel niet vergoed;
+Maxima Nova;DE RUN 4600;5504DB;VELDHOVEN;Nog geen contract: een deel niet vergoed;
+St. Jans Gasthuis, loc. buitenpoli Budels Medisch Centrum;GRENSWG 1;6021JW;BUDEL;Nog geen contract: een deel niet vergoed;
+Bravispunt, loc. Huijbergen;SIARDUS BOGAERTSL 8A;4635CM;HUIJBERGEN;Contract: vergoed;ja
+Bravis ziekenhuis, loc. Bergen op Zoom;BOERHAAVEPLN 1;4624VT;BERGEN OP ZOOM;Contract: vergoed;ja
+Bravispunt, loc. Tholen;VLIETHOF 10;4691HA;THOLEN;Contract: vergoed;ja
+Laurentius Ziekenhuis, loc. vakantiedialyse Weerterbergen;TRANCHEEWG 7;6002ST;WEERT;Nog geen contract: een deel niet vergoed;
+St. Jans Gasthuis, loc. Alexander Monro Zuidoost;VOGELSBLEEK 5;6001BE;WEERT;Nog geen contract: een deel niet vergoed;
+St. Jans Gasthuis, loc. Weert;VOGELSBLEEK 5;6001BE;WEERT;Nog geen contract: een deel niet vergoed;
+St. Jans Gasthuis, loc. buitenpoli Verloskundigepraktijk van Hal Panningen;STEENSTR 103;5981AD;PANNINGEN;Nog geen contract: een deel niet vergoed;
+VieCuri Medisch Centrum, loc. regiopoli Panningen;STEENBAKKERSSTR 6;5981WT;PANNINGEN;Nog geen contract: een deel niet vergoed;
+St. Jans Gasthuis, loc. buitenpoli Medisch Centrum Ittervoort;LELIESTR 4;6014AN;ITTERVOORT;Nog geen contract: een deel niet vergoed;
+Laurentius Ziekenhuis, loc. polikliniek Echt;NOBELWG 10;6101XB;ECHT;Nog geen contract: een deel niet vergoed;
+Laurentius Ziekenhuis;MGR DRIESSENSTR 6;6043CV;ROERMOND;Nog geen contract: een deel niet vergoed;
+Laurentius Clinics;ORANJELN 4;6043GL;ROERMOND;Nog geen contract: een deel niet vergoed;
+VieCuri Medisch Centrum, loc. Venlo;TEGELSEWG 210;5912BL;VENLO;Nog geen contract: een deel niet vergoed;
+Zuyderland Medisch Centrum, loc. Sittard-Geleen;DR H VD HOFFPLN 1;6162BG;GELEEN;Nog geen contract: een deel niet vergoed;
+Zuyderland Medisch Centrum, loc. Parkstad Brunssum;PR HENDRIKLN 376;6443AE;BRUNSSUM;Nog geen contract: een deel niet vergoed;
+Maastricht UMC+, loc. Annadal;BROUWERSWG 100;6216EG;MAASTRICHT;Nog geen contract: een deel niet vergoed;
+Zuyderland Medisch Centrum, loc. Kerkrade;WYNGR 45;6461AL;KERKRADE;Nog geen contract: een deel niet vergoed;
+Zuyderland Medisch Centrum, loc. Heerlen;H DUNANTSTR 5;6419PC;HEERLEN;Nog geen contract: een deel niet vergoed;
+Maastricht UMC+, loc. Dialyse Valkenburg;BROEKHEM 11;6301HD;VALKENBURG LB;Nog geen contract: een deel niet vergoed;
+Maastricht UMC+;P DEBYELN 25;6229HX;MAASTRICHT;Nog geen contract: een deel niet vergoed;
+Maastricht UMC+, loc. Diahub;GRONSVELDERWG 140;6229VN;MAASTRICHT;Nog geen contract: een deel niet vergoed;
+ZorgSaam Ziekenhuis, loc. polikliniek Liduina;LYCEUMSTR 20;4561HV;HULST;Nog geen contract: een deel niet vergoed;
+Adrz, loc. Vlissingen (voorheen Admiraal De Ruyter Ziekenhuis);KOUDEKERKSEWG 88;4382EE;VLISSINGEN;Nog geen contract: een deel niet vergoed;
+Oogkliniek Zeeland, loc. Vlissingen;KOUDEKERKSEWG 88;4382EE;VLISSINGEN;Nog geen contract: een deel niet vergoed;
+Oogkliniek Zeeland, loc. Goes;WULFAERTSTR 25;4461HS;GOES;Nog geen contract: een deel niet vergoed;
+Adrz, loc. Goes (voorheen Admiraal De Ruyter Ziekenhuis);S GRAVENPOLDERSEW 114;4462RA;GOES;Nog geen contract: een deel niet vergoed;
+ZorgSaam Ziekenhuis, loc. Oostburg;PAST V GENKLN 6;4501AJ;OOSTBURG;Nog geen contract: een deel niet vergoed;
+Borrendamme Zierikzee (voorheen Het Medisch Specialistisch Zorgpunt ADRZ);BORRENDAMME 10;4301VD;ZIERIKZEE;Nog geen contract: een deel niet vergoed;
+Oogkliniek Zeeland, loc. Zierikzee;BORRENDAMME 6;4301VD;ZIERIKZEE;Nog geen contract: een deel niet vergoed;
+ZorgSaam Ziekenhuis, loc. Terneuzen;WIELINGENLN 2;4535PA;TERNEUZEN;Nog geen contract: een deel niet vergoed;

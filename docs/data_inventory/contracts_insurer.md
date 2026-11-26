@@ -2,9 +2,9 @@
 
 ## cz_zorgvinder
 
-496 locaties in de zorgzoeker, 201 gekoppeld aan onze locaties, 147 organisaties met een status.
+496 locaties in de zorgzoeker, 208 gekoppeld aan onze locaties, 153 organisaties met een status.
 
-Status per organisatie: gecontracteerd 61, vergoed_als_contract 47, in_onderhandeling 39
+Status per organisatie: gecontracteerd 65, vergoed_als_contract 48, in_onderhandeling 40
 
 Niet gekoppeld (eerste 40):
 
@@ -31,14 +31,12 @@ Niet gekoppeld (eerste 40):
 - Rivas Locatie Lingepolikliniek, Lingesteynplantsoen 3, Leerdam (gecontracteerd)
 - Meander Medisch Centrum Locatie Bunschoten, Chopinstraat 2d, Bunschoten-Spakenburg (vergoed_als_contract)
 - Polikliniek Schoonhoven, Oranjeplaats 21g, Schoonhoven (vergoed_als_contract)
-- het Jeroen Pit Huis Zorg Bv, Meibergdreef 91, Amsterdam (gecontracteerd)
 - OLVG, locatie Spuistraat, Spuistraat 239, Amsterdam (gecontracteerd)
 - Medisch Centrum Jan van Goyen (OLVG), loc. de Lairessestraat, De Lairessestraat 99, Amsterdam (gecontracteerd)
 - Medisch Centrum Jan van Goyen (OLVG), loc. Emmastraat, Emmastraat 42, Amsterdam (gecontracteerd)
 - Obesitas Centrum Amsterdam, loc. OLVG West, Jan Tooropstraat 164, Amsterdam (gecontracteerd)
 - OLVG, locatie West, Jan Tooropstraat 164, Amsterdam (gecontracteerd)
 - Medisch Centrum Jan van Goyen (OLVG), loc. Het Slotervaart, Louwesweg 6, Amsterdam (gecontracteerd)
-- OLVG, locatie IJburg, IJburglaan 727, Amsterdam (gecontracteerd)
 - Tergooi, buitenpolikliniek Weesp, Korte Muiderweg 2A, Weesp (vergoed_als_contract)
 - Ziekenhuis Amstelland, loc. Gezondheidscentrum de Waterlinie, Koningin Máximalaan 30, Uithoorn (vergoed_als_contract)
 - Waterland Ziekenhuis, Waterlandlaan 250, Purmerend (vergoed_als_contract)
@@ -48,12 +46,14 @@ Niet gekoppeld (eerste 40):
 - Spaarne Gasthuis (Hoofddorp), Spaarnepoort 1, Hoofddorp (gecontracteerd)
 - Spaarne Gasthuis Locatie Noord, Vondelweg 999, Haarlem (gecontracteerd)
 - Spaarne Gasthuis, dialysecentrum Velsen-Noord, Wijkerstraatweg 160, Velsen-Noord (gecontracteerd)
+- Spaarne Gasthuis (Nieuw-Vennep), Lucas Bolsstraat 10, Nieuw-Vennep (gecontracteerd)
+- Ikazia Ziekenhuis, loc. Haringvliet, Haringvliet 72, Rotterdam (vergoed_als_contract)
 
 ## vgz_zorgzoeker
 
-876 locaties in de zorgzoeker, 324 gekoppeld aan onze locaties, 168 organisaties met een status.
+876 locaties in de zorgzoeker, 329 gekoppeld aan onze locaties, 171 organisaties met een status.
 
-Status per organisatie: in_onderhandeling 143, gecontracteerd 25
+Status per organisatie: in_onderhandeling 145, gecontracteerd 26
 
 Niet gekoppeld (eerste 40):
 
@@ -100,9 +100,9 @@ Niet gekoppeld (eerste 40):
 
 ## menzis_zorgvinder
 
-1025 locaties in de zorgzoeker, 335 gekoppeld aan onze locaties, 168 organisaties met een status.
+1025 locaties in de zorgzoeker, 345 gekoppeld aan onze locaties, 168 organisaties met een status.
 
-Status per organisatie: in_onderhandeling 110, vergoed_als_contract 34, gecontracteerd 24
+Status per organisatie: in_onderhandeling 115, vergoed_als_contract 34, gecontracteerd 19
 
 Niet gekoppeld (eerste 40):
 
@@ -147,4 +147,52 @@ Niet gekoppeld (eerste 40):
 - Andros Clinics (onderdeel van Xpert Clinics), loc. Baarn, Hermesweg 15, Baarn (in_onderhandeling)
 - Meander Medisch Centrum, loc. Baarn, Baarnsche dijk 8, Baarn (vergoed_als_contract)
 
-- zk_zorgzoeker: nog geen data
+## zk_zorgzoeker
+
+297 locaties in de zorgzoeker, 120 gekoppeld aan onze locaties, 84 organisaties met een status.
+
+Status per organisatie: in_onderhandeling 67, gecontracteerd 17
+
+Niet gekoppeld (eerste 40):
+
+- UMCG Protonentherapiecentrum (GPTC), VRYDEMALN 15, Groningen (gecontracteerd)
+- Universitair Medisch Centrum Groningen (UMCG), loc. Beatrixoord, DILGTWG 5, Haren Gn (gecontracteerd)
+- Ommelander Ziekenhuis Groningen, loc. servicepunt Delfzijl, SCHOOLSTR 7, Delfzijl (gecontracteerd)
+- Ommelander Ziekenhuis Groningen, loc. servicepunt Revalidatie Winschoten, BURG VENEMASTR 9A, Winschoten (gecontracteerd)
+- Treant ziekenhuis, loc. Refaja, BOERHAAVESTR 1, Stadskanaal (in_onderhandeling)
+- Treant Dialysekliniek (voorheen Dialysekliniek Noord), BATHOORN 2, Beilen (in_onderhandeling)
+- Ziekenhuis Nij Smellinghe, loc. Dokkum, BIRDAARDERSTRWG 72B, Dokkum (gecontracteerd)
+- Treant ziekenhuis, loc. Scheper, BOERMARKEWG 60, Emmen (in_onderhandeling)
+- Universitair Medisch Centrum Groningen (UMCG), loc. Emmen (Radiotherapie Scheper), BOERMARKEWG 68C, Emmen (gecontracteerd)
+- Isala, loc. polikliniek Steenwijk, SLUISWG 2, Steenwijk (in_onderhandeling)
+- Frisius MC, loc. Steenwijk, ZIGHER TER STEGHE 9, Steenwijk (in_onderhandeling)
+- Frisius MC, loc. Joure, SLUISDK 30, Joure (in_onderhandeling)
+- Saxenburgh, loc. Gezondheidscentrum de Veltstroom, BURG FEITHSNGL 2, Coevorden (in_onderhandeling)
+- Isala, loc. Meppel, REGGERSWG 2, Meppel (in_onderhandeling)
+- Frisius MC, loc. Lemmer, V RYGERSMAPK 1, Lemmer (in_onderhandeling)
+- Frisius MC, loc. Harlingen, ACHLUMERDK 2, Harlingen (in_onderhandeling)
+- Saxenburgh, loc. polikliniek Ommen, CHEVALLERAUSTR 4, Ommen (in_onderhandeling)
+- Saxenburgh, loc. polikliniek Westerhaar, HOOFDWG 132C, Westerhaar-Vriezenveense (in_onderhandeling)
+- Isala, loc. polikliniek Kampen, ENGELENBERGPLNTS 7, Kampen (in_onderhandeling)
+- Deventer Ziekenhuis, loc. polikliniek Raalte, VRIESWYK 6, Raalte (in_onderhandeling)
+- St Jansdal, loc. polikliniek Dronten, W ALEXANDERPLN 9, Dronten (in_onderhandeling)
+- Isala, loc. polikliniek Heerde, GROTEWG 5, Wapenveld (in_onderhandeling)
+- Deventer Ziekenhuis, loc. polikliniek Rijssen, WYNAND ZEEUWSTR 26, Rijssen (in_onderhandeling)
+- Ziekenhuis Groep Twente (ZGT), loc. buitenpolikliniek Rijssen, WYNAND ZEEUWSTR 26, Rijssen (in_onderhandeling)
+- Dijklander Ziekenhuis, loc. polikliniek Enkhuizen, MOLENWG 9B, Enkhuizen (in_onderhandeling)
+- Gelre ziekenhuizen, loc. polikliniek Epe, W TELLSTR 17, Epe (in_onderhandeling)
+- Medisch Spectrum Twente (MST), loc. Oldenzaal, PR BERNHARDSTR 17, Oldenzaal (in_onderhandeling)
+- STICHTING ZIEKENHUISGROEP TWENTE, GEERDINKSWG 141, Hengelo Ov (in_onderhandeling)
+- Ziekenhuis Groep Twente (ZGT), loc. buitenpolikliniek Nocepta, GEERDINKSWG 141, Hengelo Ov (in_onderhandeling)
+- Ziekenhuis Groep Twente (ZGT), loc. Hengelo, GEERDINKSWG 141, Hengelo Ov (in_onderhandeling)
+- Salland kliniek, N BOLKESTEINLN 75, Deventer (in_onderhandeling)
+- Noordwest Ziekenhuisgroep, loc. Dialysecentrum Texel, T HOF 20, Oosterend Nh (in_onderhandeling)
+- Medisch Spectrum Twente (MST), loc. Haaksbergen, WIEDENBROEKSNGL 4, Haaksbergen (in_onderhandeling)
+- Gelre ziekenhuizen, loc. polikliniek Lochem, ZWIEPSEWG 105, Lochem (in_onderhandeling)
+- Amsterdam UMC, loc. Hoorn (Radiotherapie Dijklander Ziekenhuis) (voorheen VUmc), MAELSONSTR 3, Hoorn Nh (in_onderhandeling)
+- Noordwest Ziekenhuisgroep, loc. polikliniek Texel, PONTWG 106, Den Burg (in_onderhandeling)
+- Gelre Focuskliniek, DEN ELTERWG 77, Zutphen (in_onderhandeling)
+- Gelre Ziekenhuizen, loc. Zutphen, DEN ELTERWG 77, Zutphen (in_onderhandeling)
+- Streekziekenhuis Koningin Beatrix (SKB), loc. polikliniek Eibergen, J W HAGEMANSTR 46-2, Eibergen (gecontracteerd)
+- Noordwest Ziekenhuisgroep, loc. Den Helder, HUISDUINERWG 3, Den Helder (in_onderhandeling)
+
