@@ -1106,3 +1106,12 @@ def test_reimbursement_percentages_found_next_to_policy_names():
     got = find_percentages(text, ["Menzis Basis Vrij", "Menzis Basis"])
     assert ("Menzis Basis Vrij", 100) in [(p, v) for p, v, _ in got]
     assert ("Menzis Basis", 75) in [(p, v) for p, v, _ in got]
+
+
+def test_name_similarity_handles_compounds_abbreviations_and_notes():
+    from pipeline.insurer_contracts import _similarity
+    assert _similarity("Maasstadziekenhuis", "Maasstad Ziekenhuis") >= 0.8
+    assert _similarity("Radboud UMC", "Radboudumc") >= 0.8
+    assert _similarity("Haaglanden Medisch Centrum", "HMC, loc. Westeinde") >= 0.8
+    # a note in brackets names another hospital: it must not make the names alike
+    assert _similarity("Dijklander Ziekenhuis", "Amsterdam UMC, loc. Hoorn (Radiotherapie Dijklander Ziekenhuis)") < 0.5

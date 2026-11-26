@@ -42,6 +42,8 @@ _GENERIC = {"ziekenhuis", "ziekenhuizen", "locatie", "loc", "stichting", "bv", "
 
 
 def _tokens(text: object, city: str = "") -> set[str]:
+    # '(Radiotherapie Dijklander Ziekenhuis)', '(voorheen VUmc)': a note, not the location's own name
+    text = re.sub(r"\([^)]*\)", " ", text) if isinstance(text, str) else text
     words = set(re.findall(r"[a-z0-9]+", normalise(text)))
     return {w for w in words if len(w) > 1 and w not in _GENERIC and w not in set(city.split())}
 
@@ -49,10 +51,24 @@ def _tokens(text: object, city: str = "") -> set[str]:
 def _similarity(a: object, b: object, city: str = "") -> float:
     """Share of the distinctive words of the shorter name found in the other ('St. Antonius
     Ziekenhuis Locatie Utrecht' vs 'Sint Antonius Ziekenhuis' -> 1.0; vs 'Diakonessenhuis' -> 0)."""
+    a, b = (re.sub(r"\([^)]*\)", " ", x) if isinstance(x, str) else x for x in (a, b))  # drop notes in brackets
     ta, tb = _tokens(a, city), _tokens(b, city)
     if not ta or not tb:
         return 0.5 * difflib.SequenceMatcher(None, normalise(a), normalise(b)).ratio()
-    return len(ta & tb) / min(len(ta), len(tb))
+    score = len(ta & tb) / min(len(ta), len(tb))
+    if score < 1:
+        # written together or apart ('Maasstadziekenhuis' / 'Maasstad Ziekenhuis', 'Radboud UMC' / 'Radboudumc')
+        ca, cb = (re.sub(r"[^a-z0-9]", "", normalise(x)) for x in (a, b))
+        main_a, main_b = max(ta, key=len), max(tb, key=len)
+        if len(main_a) >= 5 and main_a in cb or len(main_b) >= 5 and main_b in ca:
+            score = max(score, 0.8)
+        # an abbreviation of the full name ('HMC' for 'Haaglanden Medisch Centrum')
+        for full, short in ((a, tb), (b, ta)):
+            words = re.findall(r"[a-z]+", str(full).lower())
+            initials = "".join(w[0] for w in words if len(w) > 1)
+            if len(initials) >= 3 and initials in short:
+                score = max(score, 0.8)
+    return score
 
 
 def match_entries(entries: pd.DataFrame, locations: pd.DataFrame) -> pd.DataFrame:
@@ -174,7 +190,15 @@ def main() -> int:
         else:
             lines.append(f"- {finder}: nog geen data")
             continue
-        matched = match_by_agb(entries, locations) if "agb" in entries else match_entries(entries, locations)
+        if "agb" in entries:
+            matched = match_by_agb(entries, locations)
+        elif "postcode" in entries:  # hand-made list: postcode + similar name first, then town + number + name
+            by_pc = match_by_agb(entries.assign(agb=""), locations)
+            rest = match_entries(entries[by_pc["location_key"].isna()], locations)
+            matched = by_pc.copy()
+            matched.loc[rest.index, ["location_key", "organisatie_agb"]] = rest[["location_key", "organisatie_agb"]]
+        else:
+            matched = match_entries(entries, locations)
         orgs = per_organisation(matched)
         frames.append(orgs)
         lines += [f"## {finder}", "",
