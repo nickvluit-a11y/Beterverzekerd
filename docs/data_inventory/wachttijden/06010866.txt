@@ -1,12 +1,12 @@
 source: https://www.haaglandenmc.nl/voorbereiden-op/afspraak-op-de-polikliniek/wachttijden/
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Overzicht wachttijden per specialisme | HMC
 HMC » feed
 HMC » reacties feed
 oEmbed (JSON)
 oEmbed (XML)
-JSON RSD
+JSON
 Broodkruimels
 Ga naar HMC. Home / Ga naar Voorbereiden op. Voorbereiden op / Ga naar Afspraak op de polikliniek. Afspraak op de polikliniek /
 Laat de tekst voorlezen met ReadSpeaker webReader
@@ -154,49 +154,49 @@ HMC Bronovo
 HMC Westeinde
 Algemeen
 50 dagen Laatste update: 23 november 2026
-90 dagen Laatste update: 11 november 2026
-63 dagen Laatste update: 11 november 2026
+90 dagen Laatste update: 26 november 2026
+90 dagen Laatste update: 26 november 2026
 Fertiliteit
-25 dagen Laatste update: 19 november 2026
-25 dagen Laatste update: 19 november 2026
+26 dagen Laatste update: 26 november 2026
+26 dagen Laatste update: 26 november 2026
 Incontinentie voor de vrouw
 Bekkenbodemcentrum *
 90 dagen Laatste update: 23 november 2026
-53 dagen Laatste update: 19 november 2026
-39 dagen Laatste update: 19 november 2026
+48 dagen Laatste update: 26 november 2026
+74 dagen Laatste update: 26 november 2026
 Endometriosecentrum *
-70 dagen Laatste update: 19 november 2026
+70 dagen Laatste update: 26 november 2026
 Onderzoek
 HMC Antoniushove
 HMC Bronovo
 HMC Westeinde
 Baarmoederhalsafwijkingen uitstrijkje
 40 dagen Laatste update: 23 november 2026
-90 dagen Laatste update: 19 november 2026
-41 dagen Laatste update: 19 november 2026
+90 dagen Laatste update: 26 november 2026
+40 dagen Laatste update: 26 november 2026
 Behandeling
 HMC Antoniushove
 HMC Bronovo
 HMC Westeinde
 IVF/ICSI
-41 dagen Laatste update: 19 november 2026
+26 dagen Laatste update: 26 november 2026
 Geïsoleerde/ op zichzelf staande baarmoederverwijdering
 80 dagen Laatste update: 23 november 2026
-90 dagen Laatste update: 19 november 2026
+90 dagen Laatste update: 26 november 2026
 Operatieve behandeling urine-incontinentie en/of verzakking bij vrouw
 80 dagen Laatste update: 23 november 2026
-90 dagen Laatste update: 19 november 2026
+90 dagen Laatste update: 26 november 2026
 Sterilisatie vrouw als zelfstandige verrichting
-90 dagen Laatste update: 23 november 2026
-90 dagen Laatste update: 12 november 2026
+90 dagen Laatste update: 26 november 2026
+90 dagen Laatste update: 26 november 2026
 Curettage *
-14 dagen Laatste update: 19 november 2026
+14 dagen Laatste update: 26 november 2026
 Laparoscopie *
 90 dagen Laatste update: 23 november 2026
-90 dagen Laatste update: 19 november 2026
+90 dagen Laatste update: 26 november 2026
 Laparoscopische baarmoederverwijdering *
-90 dagen Laatste update: 23 november 2026
-90 dagen Laatste update: 19 november 2026
+90 dagen Laatste update: 26 november 2026
+90 dagen Laatste update: 26 november 2026
 Interne Geneeskunde
 Polikliniek
 HMC Antoniushove
@@ -299,19 +299,19 @@ HMC Antoniushove
 HMC Bronovo
 HMC Westeinde
 Algemeen
-32 dagen Laatste update: 19 november 2026
-40 dagen Laatste update: 19 november 2026
+42 dagen Laatste update: 26 november 2026
+40 dagen Laatste update: 26 november 2026
 Longgeneeskunde
 Polikliniek
 HMC Antoniushove
 HMC Bronovo
 HMC Westeinde
 Algemeen
-75 dagen Laatste update: 18 november 2026
-75 dagen Laatste update: 18 november 2026
-75 dagen Laatste update: 18 november 2026
+75 dagen Laatste update: 26 november 2026
+75 dagen Laatste update: 26 november 2026
+75 dagen Laatste update: 26 november 2026
 Longoncologie *
-2 dagen Laatste update: 18 november 2026
+2 dagen Laatste update: 26 november 2026
 Maag-, Darm,- en Leverziekten (MDL)
 Polikliniek
 HMC Antoniushove

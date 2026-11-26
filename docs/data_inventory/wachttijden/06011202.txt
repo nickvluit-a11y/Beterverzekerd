@@ -1,25 +1,25 @@
 source: https://flevoziekenhuis.nl/opname-bezoek/wachttijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden - Flevoziekenhuis Almere
 Wachttijden
 Laat de tekst voorlezen met ReadSpeaker webReader
 Lees voor
 Het Flevoziekenhuis streeft ernaar u zo snel mogelijk van dienst te zijn. Bij de meeste specialisten kunt u al op korte termijn terecht. Wanneer dat niet mogelijk is, is er sprake van een wachttijd. In de tabel hieronder vindt u een inschatting van de wachttijd per specialisme. Als u een specifieke specialist wilt spreken kan de wachttijd anders zijn dan in de tabel vermeld staat. Wilt u zo snel mogelijk geholpen worden? Vraag dan naar de specialist met de kortste wachttijd. Als de huisarts aangeeft dat er sprake is van spoed kunt u meestal direct terecht.
-Peildatum 12 november 2026
+Peildatum 26 november 2026
 Specialisme
 Anesthesie
 Verwachte wachttijd
 (kalenderdagen)
 Polikliniek:
 - poli Pijnbestrijding*
-64
+50
 Cardiologie
 Verwachte wachttijd
 (kalenderdagen)
 Polikliniek:
 - poli Cardiologie*
-31
+41
 Chirurgie
 Verwachte wachttijd
 (kalenderdagen)
@@ -29,10 +29,10 @@ Polikliniek:
 - mammapoli/borstonderzoek
 - proctologie
 - vaatchirurgie
+3
+3
 2
-22
-13
-24
+36
 11
 Behandeling:
 - galblaasverwijdering bij galstenen
@@ -66,7 +66,7 @@ Behandeling:
 84
 64
 92
-14
+16
 35
 30
 Interne geneeskunde
@@ -76,13 +76,13 @@ Polikliniek:
 - endocrinologie*
 - oncologie*
 - poli Interne geneeskunde*
+46
+9
 35
-8
-25
 Kaakchirurgie
 Polikliniek:
 - poli Kaakchirurgie*
-42
+49
 Keel-, Neus- en Oorheelkunde
 Verwachte wachttijd
 (kalenderdagen)
@@ -96,8 +96,8 @@ Behandeling:
 -tonsillectomie en/of adenotomie
 -Plaatsen middenoorbeluchtingsbuisjes
 - neustussenschot-correctie
-9
-9
+8
+8
 60
 20
 40
@@ -111,7 +111,7 @@ Polikliniek:
 Diagnostiek:
 - slaapapneu
 - slaaponderzoek/polysomnografie
-29
+15
 60
 20
 Maag-, Darm- en Leverziekten
@@ -168,8 +168,8 @@ Behandeling:
 - kijkoperatie knie
 - nieuwe heup
 - nieuwe knie
-22
-28
+20
+16
 29
 26
 29
@@ -182,7 +182,7 @@ Polikliniek:
 Behandeling:
 - borstreconstructie
 5
-14
+7
 40
 Radiologie
 Verwachte wachttijd
@@ -213,7 +213,7 @@ Verwachte wachttijd
 (kalenderdagen)
 Polikliniek:
 - poli Reumatologie*
-29
+30
 Urologie
 Verwachte wachttijd
 (kalenderdagen)

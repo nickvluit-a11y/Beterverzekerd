@@ -1,5 +1,5 @@
 source: https://www.lumc.nl/patientenzorg/uw-bezoek/uw-afspraak/wachttijden-en-wachtlijsten/
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden en wachtlijsten | LUMC
 LUMC Pers- en nieuwsberichten

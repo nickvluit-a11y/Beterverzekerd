@@ -1,5 +1,5 @@
 source: https://www.olvg.nl/uw-bezoek-aan-olvg/wachttijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden per specialisatie en locatie | OLVG | OLVG
 Uw bezoek aan OLVG

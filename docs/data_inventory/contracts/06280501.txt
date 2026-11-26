@@ -18,7 +18,7 @@ Scrollable table Zorgverzekeraar
 Achmea/Zilveren Kruis
 In onderhandeling
 VGZ
-In onderhandeling
+Gecontracteerd
 CZ
 Gecontracteerd
 Menzis
@@ -26,8 +26,6 @@ Gecontracteerd
 Zorg en Zekerheid
 Gecontracteerd
 DSW
-Gecontracteerd
-ONVZ
 Gecontracteerd
 a.s.r.
 Gecontracteerd
@@ -67,7 +65,7 @@ Als uw zorgverzekeraar niet wordt genoemd, neem dan contact op met uw zorgverzek
 Openklappen Eigen risico Eigen risico
 Iedereen van 18 jaar en ouder heeft een verplicht eigen risico voor de zorgverzekering. Dat betekent dat uw zorgverzekeraar u maximaal € 385 (in 2026, voor 2027 wordt dit € 400) in rekening brengt naar aanleiding van een rekening van medisch specialistische zorg uit het basispakket, tenzij u gekozen heeft om uw eigen risico te verhogen. Een consult bij de huisarts valt niet onder het eigen risico. Maar als de huisarts medicijnen voorschrijft, of een aanvraag doet voor bijvoorbeeld laboratoriumonderzoek of een röntgenfoto, dan worden deze kosten wel verrekend met het eigen risico. Uw zorgverzekeraar zal dit met u verrekenen.
 Aanvullend eigen risico
-Naast het verplichte eigen risico bieden zorgverzekeraars de mogelijkheid om te kiezen voor een aanvullend vrijwillig eigen risico. U betaalt in dat geval dan een lagere maandpremie. Voor 2025 kan uw eigen risico verhoogd worden met € 500,- tot maximaal € 885,-, afhankelijk van het zorgverzekeringspakket dat u heeft gekozen. Ook dit aanvullend ‘eigen risico’ zal uw zorgverzekeraar met u verrekenen indien nodig.
+Naast het verplichte eigen risico bieden zorgverzekeraars de mogelijkheid om te kiezen voor een aanvullend vrijwillig eigen risico. U betaalt in dat geval dan een lagere maandpremie. Uw eigen risico verhoogd worden met € 500,- afhankelijk van het zorgverzekeringspakket dat u heeft gekozen. Ook dit aanvullend ‘eigen risico’ zal uw zorgverzekeraar met u verrekenen indien nodig.
 Nota
 De Sint Maartenskliniek stuurt de rekening voor uw zorgkosten rechtstreeks naar uw verzekeraar. Het ‘eigen risico’ wordt op basis van deze en/of andere rekeningen door uw zorgverzekeraar met u verrekend. Doordat de medisch specialistische zorg afgerekend wordt over een (zorg)periode van maximaal 120 dagen (of korter) is het waarschijnlijk dat de verrekening van het ‘eigen risico’ door de zorgverzekeraar pas na enkele maanden plaatsvindt.
 Let op! Soms krijg u meerdere rekeningen voor uw behandeling. Dit komt door de landelijke 'sluitregels'. Die regels bepalen wanneer een (zorg)periode (subtraject) wordt afgesloten en aansluitend een vervolgperiode wordt geopend. Het jaar van de begindatum van elke (zorg)periode (subtraject) is bepalend voor het jaar waarin deze rekening met uw eigen risico wordt verrekend. De datum van de rekening is de startdatum van de periode.

@@ -1,5 +1,5 @@
 source: https://www.jeroenboschziekenhuis.nl/afdelingen/orthopedie/wachttijden-orthopedie
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden Orthopedie | Jeroen Bosch Ziekenhuis
 Overslaan en naar de inhoud gaan
@@ -30,31 +30,31 @@ De wachttijden worden in dagen bekend gemaakt. Uitleg over hoe de wachttijden to
 Eerste afspraak (polikliniek)
 Wachttijd in dagen
 Kind
-98
+91
 Klachten aan de elleboog
-57
-Klachten aan de heup
-49
-Klachten aan de knie
-37
-Klachten aan de pols en/of hand
 50
+Klachten aan de heup
+44
+Klachten aan de knie
+42
+Klachten aan de pols en/of hand
+49
 Klachten aan de rug
-56
+49
 Klachten aan de schouder
-30
+23
 Klachten aan de voet en/of enkel
-36
+45
 Behandeling
 Wachttijd in dagen
 Heupvervanging
-171
+175
 Kijkoperatie van de knie
-74
+77
 Knievervanging
-190
-Bijgewerkt op: 19 november 2026
+194
+Bijgewerkt op: 26 november 2026
 Snel naar:
 Het overzicht van alle wachttijden
 Afdeling Orthopedie
-Laatste revisie: 19 november 2026 - 11:34
+Laatste revisie: 26 november 2026 - 11:05

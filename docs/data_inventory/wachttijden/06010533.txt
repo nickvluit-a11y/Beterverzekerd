@@ -1,5 +1,5 @@
 source: https://www.stjansdal.nl/toegangstijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden | Ziekenhuis St Jansdal Belangrijke melding Sommige mensen kunnen niet inloggen met de DigiD app op hun Android-telefoon. U kunt daardoor ook problemen hebben met inloggen op MijnStJansdal. Bekijk wat u kunt doen op de website van DigiD .
 Sluiten

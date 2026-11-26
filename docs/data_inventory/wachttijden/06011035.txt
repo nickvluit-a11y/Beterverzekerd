@@ -1,5 +1,5 @@
 source: https://www.mmc.nl/patienten-en-bezoekers/afspraak-opname-en-bezoek/wachttijden/
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden
 URL :

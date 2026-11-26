@@ -1,5 +1,5 @@
 source: https://www.ghz.nl/wachttijden/
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden - Het Groene Hart Ziekenhuis
 Lees hier alle actuele informatie over de overstap naar ons nieuwe elektronisch patiëntendossier HiX.

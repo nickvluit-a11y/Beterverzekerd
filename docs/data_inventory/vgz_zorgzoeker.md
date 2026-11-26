@@ -1,6 +1,6 @@
 # Zorgzoeker VGZ (contracten 2027)
 
-Run: 2026-11-25. Genoemd: 877, gelezen: 877.
+Run: 2026-11-26. Genoemd: 876, gelezen: 876.
 
 
-Status: InOnderhandeling 732, Gecontracteerd 80, GecontracteerdZonderDLP 65.
+Status: InOnderhandeling 727, Gecontracteerd 83, GecontracteerdZonderDLP 66.

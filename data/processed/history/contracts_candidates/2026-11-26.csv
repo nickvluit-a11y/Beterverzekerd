@@ -1,0 +1,779 @@
+year,organisatie_agb,location_id,concern,label,polis,status,omzetplafond,peildatum,source,source_url,fetched_on,needs_review,raw
+2026,06010205,,a.s.r.,,,gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | a.s.r. |  |  |  | ASR
+Ik kies zelf | 9018
+3336 |  | Ja | "
+2026,06010205,,CZ,,"CZ
+CZ Direct
+Nationale-Nederlanden
+Just
+Ohra",geen_contract,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | CZ |  |  |  | CZ
+CZ Direct
+Nationale-Nederlanden
+Just
+Ohra | 9664
+9664
+9664
+9664
+9664 |  | Nee | "
+2026,06010205,,DSW,,,gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | DSW |  |  |  | DSW
+InTwente
+StadHolland
+SZVK
+RMA (Regeling Medische zorg Asielzoekers) | 7029
+3344
+7037
+3363
+3355 |  | Ja | "
+2026,06010205,,Salland,,"Salland
+HollandZorg",gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | Salland |  |  |  | Salland
+HollandZorg | 3347
+3347 |  | Ja | "
+2026,06010205,,Eucare,,,gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | EUCARE |  |  |  | Aevitae
+Care4Life
+FLKS
+Natura Select Polis | 3360
+3360
+3360
+3360 |  | Ja | "
+2026,06010205,,Menzis,,"Anderzorg
+Vink Vink
+Menzis",gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | Menzis |  |  |  | Anderzorg
+Vink Vink
+Menzis | 3333
+3332
+3332 |  | Ja | "
+2026,06010205,,VGZ,ONVZ,"Jaaah
+ONVZ
+VvAA",gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | ONVZ |  |  |  | Jaaah
+ONVZ
+VvAA | 3343
+3343
+3343 |  | Ja | "
+2026,06010205,,VGZ,VGZ,,geen_contract,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | VGZ |  |  |  | Bewuzt
+IZA
+IZZ
+UMC
+Univé
+ZEKUR NATURA
+ZEKUR VRIJ
+VGZ
+United Consumers VGZ
+Besured
+National Academic
+Promovendum | 7095
+3334
+7095
+0736
+0101
+3361
+0101
+7095
+7095
+8965
+8965
+8965 |  | Nee | "
+2026,06010205,,Achmea,Zilveren Kruis,,geen_contract,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | Zilveren Kruis |  |  |  | Basis Budget
+Christelijke Zorgverzekeraar
+Christelijke Zorgverzekeraar Budget polis
+Basis Zeker, Basis ZieZo en Basis Exclusief
+De Friesland
+FBTO
+Interpolis
+Zilveren Kruis | 3311
+3311
+3311
+3311
+3358
+3351
+3313
+3311 |  | Nee | "
+2026,06010205,,Zorg en Zekerheid,,"AZVZ
+Zorg en Zekerheid",gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | Zorg en Zekerheid |  |  |  | AZVZ
+Zorg en Zekerheid | 7085
+7085 |  | Ja | "
+2026,06010210,,a.s.r.,,,gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | a.s.r. |  |  |  | ASR
+Ik kies zelf | 9018
+3336 |  | Ja | "
+2026,06010210,,CZ,,"CZ
+CZ Direct
+Nationale-Nederlanden
+Just
+Ohra",geen_contract,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | CZ |  |  |  | CZ
+CZ Direct
+Nationale-Nederlanden
+Just
+Ohra | 9664
+9664
+9664
+9664
+9664 |  | Nee | "
+2026,06010210,,DSW,,,gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | DSW |  |  |  | DSW
+InTwente
+StadHolland
+SZVK
+RMA (Regeling Medische zorg Asielzoekers) | 7029
+3344
+7037
+3363
+3355 |  | Ja | "
+2026,06010210,,Salland,,"Salland
+HollandZorg",gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | Salland |  |  |  | Salland
+HollandZorg | 3347
+3347 |  | Ja | "
+2026,06010210,,Eucare,,,gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | EUCARE |  |  |  | Aevitae
+Care4Life
+FLKS
+Natura Select Polis | 3360
+3360
+3360
+3360 |  | Ja | "
+2026,06010210,,Menzis,,"Anderzorg
+Vink Vink
+Menzis",gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | Menzis |  |  |  | Anderzorg
+Vink Vink
+Menzis | 3333
+3332
+3332 |  | Ja | "
+2026,06010210,,VGZ,ONVZ,"Jaaah
+ONVZ
+VvAA",gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | ONVZ |  |  |  | Jaaah
+ONVZ
+VvAA | 3343
+3343
+3343 |  | Ja | "
+2026,06010210,,VGZ,VGZ,,geen_contract,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | VGZ |  |  |  | Bewuzt
+IZA
+IZZ
+UMC
+Univé
+ZEKUR NATURA
+ZEKUR VRIJ
+VGZ
+United Consumers VGZ
+Besured
+National Academic
+Promovendum | 7095
+3334
+7095
+0736
+0101
+3361
+0101
+7095
+7095
+8965
+8965
+8965 |  | Nee | "
+2026,06010210,,Achmea,Zilveren Kruis,,geen_contract,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | Zilveren Kruis |  |  |  | Basis Budget
+Christelijke Zorgverzekeraar
+Christelijke Zorgverzekeraar Budget polis
+Basis Zeker, Basis ZieZo en Basis Exclusief
+De Friesland
+FBTO
+Interpolis
+Zilveren Kruis | 3311
+3311
+3311
+3311
+3358
+3351
+3313
+3311 |  | Nee | "
+2026,06010210,,Zorg en Zekerheid,,"AZVZ
+Zorg en Zekerheid",gecontracteerd,,,contracts_pdf,https://www.frisiusmc.nl/patienten-en-bezoekers/afspraak-en-opname/kosten-en-verzekeringen/$11538/$11759/Gecontracteerde%20zorgverzekeraars%202026.pdf,2026-11-26,True," | Zorg en Zekerheid |  |  |  | AZVZ
+Zorg en Zekerheid | 7085
+7085 |  | Ja | "
+2027,06010301,,CZ,,,in_onderhandeling,,,contracts_html,https://www.wza.nl/patient/tarieven-en-vergoedingen/,2026-11-26,True,CZ | In onderhandeling
+2027,06010301,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.wza.nl/patient/tarieven-en-vergoedingen/,2026-11-26,True,Menzis | In onderhandeling
+2027,06010301,,Eucare,Aevitae,,in_onderhandeling,,,contracts_html,https://www.wza.nl/patient/tarieven-en-vergoedingen/,2026-11-26,True,Caresq | In onderhandeling
+2026,06010304,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,Zilveren Kruis (Achmea) (gecontracteerd):
+2026,06010304,,CZ,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,CZ (gecontracteerd):
+2026,06010304,,Eucare,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,Eucare (gecontracteerd):
+2026,06010304,,Eucare,Aevitae,,geen_contract,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,Aevitae Basis Natura Select (voor deze budgetpolis is Treant NIET gecontracteerd)
+2026,06010304,,Salland,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,Salland (gecontracteerd):
+2026,06010304,,Menzis,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,Menzis (gecontracteerd):
+2026,06010304,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,ONVZ (gecontracteerd):
+2026,06010304,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,VGZ (gecontracteerd):
+2026,06010304,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,Zorg en Zekerheid (gecontracteerd):
+2026,06010304,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,ASR (gecontracteerd):
+2026,06010304,,DSW,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,DSW (gecontracteerd):
+2026,06010304,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,Zilveren Kruis (Achmea) (gecontracteerd):
+2026,06010304,,CZ,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,CZ (gecontracteerd):
+2026,06010304,,Eucare,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,Eucare (gecontracteerd):
+2026,06010304,,Salland,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,Salland (gecontracteerd):
+2026,06010304,,Menzis,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,Menzis (gecontracteerd):
+2026,06010304,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,ONVZ (gecontracteerd):
+2026,06010304,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,VGZ (gecontracteerd):
+2026,06010304,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,Zorg en Zekerheid (gecontracteerd):
+2026,06010304,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,ASR (gecontracteerd):
+2026,06010304,,DSW,,,gecontracteerd,,,contracts_html,https://www.treant.nl/afspraak-bezoek/praktische-informatie/contracten-met-zorgverzekeraars/contracten-met-zorgverzekeraars-ziekenhuiszorg,2026-11-26,True,DSW (gecontracteerd):
+2026,06010418,,Menzis,,,gecontracteerd,,,contracts_html,https://www.saxenburgh.nl/praktische-informatie/kosten-en-vergoedingen,2026-11-26,True,Menzis | Gecontracteerd voor 2027 | Gecontracteerd voor 2026
+2026,06010418,,CZ,,,onbekend,,,contracts_html,https://www.saxenburgh.nl/praktische-informatie/kosten-en-vergoedingen,2026-11-26,True,CZ | In onderhandeling | Gecontracteerd voor 2026
+2026,06010418,,a.s.r.,,,onbekend,,,contracts_html,https://www.saxenburgh.nl/praktische-informatie/kosten-en-vergoedingen,2026-11-26,True,ASR | In onderhandeling | Gecontracteerd voor 2026
+2026,06010418,,Salland,,,gecontracteerd,,,contracts_html,https://www.saxenburgh.nl/praktische-informatie/kosten-en-vergoedingen,2026-11-26,True,Salland Zorgverzekeringen | Gecontracteerd voor 2027 | Gecontracteerd voor 2026
+2026,06010418,,Zorg en Zekerheid,,,onbekend,,,contracts_html,https://www.saxenburgh.nl/praktische-informatie/kosten-en-vergoedingen,2026-11-26,True,Zorg en Zekerheid | In onderhandeling | Gecontracteerd voor 2026
+2026,06010418,,DSW,,,gecontracteerd,,,contracts_html,https://www.saxenburgh.nl/praktische-informatie/kosten-en-vergoedingen,2026-11-26,True,DSW | Gecontracteerd voor 2027 | Gecontracteerd voor 2026
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,Eucare,Aevitae,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Eucare', 'Aevitae') | ('Eucare', None) | 2"
+2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Menzis', 'Menzis') | ('Menzis', None) | 2"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,a.s.r.,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('a.s.r.', None) | ('a.s.r.', None) | 2"
+2027,06010419,,a.s.r.,Ik kies zelf,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('a.s.r.', None) | ('a.s.r.', 'Ik kies zelf') | ('a.s.r.', None) | 2"
+2027,06010419,,Zorg en Zekerheid,AZVZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Zorg en Zekerheid', 'AZVZ') | ('Zorg en Zekerheid', None) | 2"
+2027,06010419,,Eucare,Aevitae,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Eucare', 'Aevitae') | ('Eucare', None) | 2"
+2027,06010419,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'VGZ') | 2"
+2027,06010419,,VGZ,Bewuzt,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'Bewuzt') | ('VGZ', 'VGZ') | 2"
+2027,06010419,,Eucare,Care4Life,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Eucare', 'Care4Life') | ('Eucare', None) | 2"
+2027,06010419,,CZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('CZ', None) | ('CZ', None) | 2"
+2027,06010419,,CZ,CZdirect,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('CZ', 'CZdirect') | ('CZ', None) | 2"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'De christelijke zorgverzekeraar') | ('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'De christelijke zorgverzekeraar') | ('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'De Friesland') | ('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'VGZ') | 2"
+2027,06010419,,DSW,DSW,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('DSW', 'DSW') | ('DSW', 'DSW') | 2"
+2027,06010419,,Eucare,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Eucare', None) | ('Eucare', None) | 2"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'FBTO') | ('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Menzis', None) | 3"
+2027,06010419,,Salland,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Salland', None) | 2"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'Interpolis') | ('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,DSW,DSW,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('DSW', 'DSW') | ('DSW', 'DSW') | 2"
+2027,06010419,,VGZ,IZA,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'IZA') | ('VGZ', 'VGZ') | 2"
+2027,06010419,,VGZ,IZZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'IZZ') | ('VGZ', 'VGZ') | 2"
+2027,06010419,,CZ,Just,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('CZ', 'Just') | ('CZ', None) | 2"
+2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Menzis', None) | ('Menzis', None) | 3"
+2027,06010419,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'VGZ') | 2"
+2027,06010419,,CZ,Nationale-Nederlanden,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('CZ', 'Nationale-Nederlanden') | ('CZ', None) | 2"
+2027,06010419,,CZ,OHRA,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('CZ', 'OHRA') | ('CZ', None) | 2"
+2027,06010419,,VGZ,ONVZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'ONVZ') | ('VGZ', 'ONVZ') | 2"
+2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Menzis', None) | 3"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'VGZ') | 2"
+2027,06010419,,CZ,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('CZ', None) | 2"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,DSW,DSW,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('DSW', 'DSW') | 2"
+2027,06010419,,Salland,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Salland', None) | ('Salland', None) | 2"
+2027,06010419,,DSW,Stad Holland,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('DSW', 'Stad Holland') | ('DSW', 'DSW') | 2"
+2027,06010419,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Menzis', None) | 3"
+2027,06010419,,DSW,DSW,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('DSW', 'DSW') | 2"
+2027,06010419,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'VGZ') | 2"
+2027,06010419,,VGZ,Univé,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'Univé') | ('VGZ', 'VGZ') | 2"
+2027,06010419,,VGZ,UMC Zorgverzekering,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'UMC Zorgverzekering') | ('VGZ', 'VGZ') | 2"
+2027,06010419,,Menzis,VinkVink,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Menzis', 'VinkVink') | ('Menzis', None) | 3"
+2027,06010419,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'VGZ') | ('VGZ', 'VGZ') | 2"
+2027,06010419,,VGZ,ONVZ,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'ONVZ') | 2"
+2027,06010419,,VGZ,Univé,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('VGZ', 'Univé') | ('VGZ', 'VGZ') | 2"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'ZieZo') | ('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'Zilveren Kruis') | ('Achmea', 'Zilveren Kruis') | 2"
+2027,06010419,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.mst.nl/zorgkosten/zorgverzekering-2027,2026-11-26,True,"('Achmea', 'Zilveren Kruis') | ('Achmea', 'Zilveren Kruis') | 2"
+2027,06010620,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Zilveren Kruis In onderhandeling In onderhandeling
+2027,06010620,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,VGZ In onderhandeling In onderhandeling
+2027,06010620,,CZ,,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,CZ In onderhandeling In onderhandeling
+2027,06010620,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Menzis In onderhandeling In onderhandeling
+2027,06010620,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Zorg en Zekerheid Gecontracteerd Gecontracteerd
+2027,06010620,,DSW,,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,DSW In onderhandeling In onderhandeling
+2027,06010620,,a.s.r.,,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,a.s.r. In onderhandeling Gecontracteerd
+2027,06010620,,Eucare,Aevitae,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Caresq Gecontracteerd In onderhandeling
+2027,06010620,,Salland,,,in_onderhandeling,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Salland In onderhandeling Gecontracteerd
+2027,06010620,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Zilveren Kruis Gecontracteerd Gecontracteerd
+2027,06010620,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,VGZ Gecontracteerd Gecontracteerd
+2027,06010620,,CZ,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,CZ Gecontracteerd Gecontracteerd
+2027,06010620,,Menzis,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Menzis Gecontracteerd Gecontracteerd
+2027,06010620,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Zorg en Zekerheid Gecontracteerd Gecontracteerd
+2027,06010620,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,ONVZ Gecontracteerd Gecontracteerd
+2027,06010620,,DSW,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,DSW Gecontracteerd Gecontracteerd
+2027,06010620,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,a.s.r. Gecontracteerd Gecontracteerd
+2027,06010620,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Caresq Gecontracteerd Gecontracteerd
+2027,06010620,,Salland,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Salland Gecontracteerd Gecontracteerd
+2027,06010620,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Zilveren Kruis Gecontracteerd Gecontracteerd
+2027,06010620,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,VGZ Gecontracteerd Gecontracteerd
+2027,06010620,,CZ,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,CZ Gecontracteerd Gecontracteerd
+2027,06010620,,Menzis,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Menzis Gecontracteerd Gecontracteerd
+2027,06010620,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Zorg en Zekerheid Gecontracteerd Gecontracteerd
+2027,06010620,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,ONVZ Gecontracteerd Gecontracteerd
+2027,06010620,,Salland,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Salland Gecontracteerd Gecontracteerd
+2027,06010620,,DSW,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,DSW Gecontracteerd Gecontracteerd
+2027,06010620,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,a.s.r. Gecontracteerd Gecontracteerd
+2027,06010620,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.antoniusziekenhuis.nl/kosten-en-zorgverzekering/contracten-met-zorgverzekeraars,2026-11-26,True,Caresq Gecontracteerd Gecontracteerd
+2025,06010702,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,VGZ | VGZ | Ja
+2025,06010702,,VGZ,Univé,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | Univé | Ja
+2025,06010702,,VGZ,Univé,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | Zekur | Ja
+2025,06010702,,VGZ,UMC Zorgverzekering,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | UMC | Ja
+2025,06010702,,VGZ,IZA,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | IZA | Ja
+2025,06010702,,VGZ,IZZ,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | IZZ | Ja
+2025,06010702,,Achmea,De Friesland,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,Zilveren Kruis | De Friesland | Ja
+2025,06010702,,Achmea,FBTO,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | FBTO | Ja
+2025,06010702,,Achmea,Interpolis,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | Interpolis | Ja
+2025,06010702,,Achmea,De christelijke zorgverzekeraar,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | De christelijke zorgverzekeraar | Ja
+2025,06010702,,Achmea,ZieZo,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | ZieZo | Ja
+2025,06010702,,CZ,CZdirect,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,CZ | CZdirect | Ja
+2025,06010702,,VGZ,IZZ,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | IZZ | Ja
+2025,06010702,,CZ,Just,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | Just | Ja
+2025,06010702,,CZ,Nationale-Nederlanden,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | Nationale Nederlanden | Ja
+2025,06010702,,CZ,OHRA,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | OHRA | Ja
+2025,06010702,,Menzis,Menzis,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,Menzis | Anderzorg | Ja
+2025,06010702,,Menzis,Menzis,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | Menzis | Ja
+2025,06010702,,Menzis,VinkVink,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | VinkVink | Ja
+2025,06010702,,DSW,Stad Holland,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,DSW | Stad Holland | Ja
+2025,06010702,,DSW,DSW,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | DSW | Ja
+2025,06010702,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,ONVZ | ONVZ | Ja
+2025,06010702,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,ASR | A.S.R. | Ja
+2025,06010702,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,Zorg en Zekerheid | Zorg en Zekerheid | Ja
+2025,06010702,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,Eucare | Aevitae | Ja
+2025,06010702,,Salland,,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,Eno | Salland | Ja
+2025,06010702,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,VGZ | VGZ | Ja
+2025,06010702,,VGZ,Univé,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | Unive | Ja
+2025,06010702,,VGZ,Univé,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | Zekur | Ja
+2025,06010702,,VGZ,IZZ,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | IZZ | Ja
+2025,06010702,,VGZ,IZA,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | IZA | Ja
+2025,06010702,,Achmea,De Friesland,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,Zilveren Kruis | De Friesland | Ja
+2025,06010702,,Achmea,FBTO,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | FBTO | Ja
+2025,06010702,,Achmea,Interpolis,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | Interpolis | Ja
+2025,06010702,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | Zilveren Kruis | Ja
+2025,06010702,,Achmea,De christelijke zorgverzekeraar,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | De christelijke zorgverzekeraar | Ja
+2025,06010702,,Achmea,ZieZo,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | ZieZo | Ja
+2025,06010702,,CZ,Nationale-Nederlanden,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,CZ | Nationale Nederlanden | Ja
+2025,06010702,,CZ,OHRA,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | OHRA | Ja
+2025,06010702,,CZ,CZ,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | CZ | Ja
+2025,06010702,,CZ,Just,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | Just | Ja
+2025,06010702,,CZ,CZdirect,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | CZ direct | Ja
+2025,06010702,,Menzis,Menzis,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,Menzis | Anderzorg | Ja
+2025,06010702,,Menzis,Menzis,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | Menzis | Ja
+2025,06010702,,Menzis,VinkVink,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | VinkVink | Ja
+2025,06010702,,DSW,Stad Holland,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,DSW | Stad Holland | Ja
+2025,06010702,,DSW,DSW,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True, | DSW | Ja
+2025,06010702,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,ONVZ | ONVZ | Ja
+2025,06010702,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,ASR | A.S.R. | Ja
+2025,06010702,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,Zorg en Zekerheid | Zorg en Zekerheid | Ja
+2025,06010702,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,Eucare | Aevitae | Ja
+2025,06010702,,Salland,,,gecontracteerd,,,contracts_html,https://www.nwz.nl/algemene-informatie/kosten-en-vergoedingen/gecontracteerde-zorgverzekeraars,2026-11-26,True,Eno | Salland | Ja
+2026,06010755,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-26,True,Zilveren Kruis | In onderhandeling | Gecontracteerd
+2026,06010755,,CZ,,,in_onderhandeling,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-26,True,CZ | In onderhandeling | Gecontracteerd
+2026,06010755,,Menzis,,,gecontracteerd,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-26,True,Menzis | Gecontracteerd | Gecontracteerd
+2026,06010755,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-26,True,ASR | Gecontracteerd | In onderhandeling
+2026,06010755,,Salland,,,in_onderhandeling,,,contracts_html,https://www.rkz.nl/informatie/kosten-en-vergoeding/,2026-11-26,True,Salland | In onderhandeling | In onderhandeling
+2026,06010859,,VGZ,ONVZ,ONVZ (3343),gecontracteerd,,,contracts_pdf,https://www.asz.nl/patienten/Zorgkosten/zorgverzekering/contracten-2026-svz.pdf,2026-11-26,True,ONVZ |  | ONVZ (3343) |  | gecontracteerd
+2026,06010859,,a.s.r.,,,gecontracteerd,,,contracts_pdf,https://www.asz.nl/patienten/Zorgkosten/zorgverzekering/contracten-2026-svz.pdf,2026-11-26,True,a.s.r. a.s.r. (9018) gecontracteerd
+2026,06010859,,Eucare,Aevitae,,gecontracteerd,,,contracts_pdf,https://www.asz.nl/patienten/Zorgkosten/zorgverzekering/contracten-2026-svz.pdf,2026-11-26,True,Caresq (Eucare) Aevitae (Eucare) (3360) gecontracteerd
+2026,06010859,,CZ,,,gecontracteerd,,,contracts_pdf,https://www.asz.nl/patienten/Zorgkosten/zorgverzekering/contracten-2026-svz.pdf,2026-11-26,True,CZ CZ (9664) gecontracteerd
+2026,06010859,,DSW,,,gecontracteerd,,,contracts_pdf,https://www.asz.nl/patienten/Zorgkosten/zorgverzekering/contracten-2026-svz.pdf,2026-11-26,True,DSW DSW (7029) gecontracteerd
+2026,06010859,,Menzis,,,gecontracteerd,,,contracts_pdf,https://www.asz.nl/patienten/Zorgkosten/zorgverzekering/contracten-2026-svz.pdf,2026-11-26,True,Menzis Anderzorg (3333) gecontracteerd
+2026,06010859,,VGZ,Bewuzt,,gecontracteerd,,,contracts_pdf,https://www.asz.nl/patienten/Zorgkosten/zorgverzekering/contracten-2026-svz.pdf,2026-11-26,True,VGZ VGZ Bewuzt (7095) gecontracteerd
+2026,06010859,,Zorg en Zekerheid,AZVZ,,gecontracteerd,,,contracts_pdf,https://www.asz.nl/patienten/Zorgkosten/zorgverzekering/contracten-2026-svz.pdf,2026-11-26,True,Zorg en Zekerheid AZVZ (7085) gecontracteerd
+2027,06010861,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.maasstadziekenhuis.nl/over-maasstad-ziekenhuis/kosten-en-vergoedingen/contract-zorgverzekeraars,2026-11-26,True,"VGZ | Collectiviteit (United Consumers), IZA, IZZ (door VGZ), ONVZ, UMC, Univé, VGZ, VGZBewuzt, VvAA, Zekur | In onderhandeling"
+2027,06010861,,a.s.r.,,,in_onderhandeling,,,contracts_html,https://www.maasstadziekenhuis.nl/over-maasstad-ziekenhuis/kosten-en-vergoedingen/contract-zorgverzekeraars,2026-11-26,True,"ASR | ASR, Ik kies zelf van ASR | In onderhandeling"
+2027,06010861,,Eucare,,,in_onderhandeling,,,contracts_html,https://www.maasstadziekenhuis.nl/over-maasstad-ziekenhuis/kosten-en-vergoedingen/contract-zorgverzekeraars,2026-11-26,True,"EUCare | Aevitae, Care4Life | In onderhandeling"
+2027,06010861,,Zorg en Zekerheid,,"AZVZ, Zorg en Zekerheid",in_onderhandeling,,,contracts_html,https://www.maasstadziekenhuis.nl/over-maasstad-ziekenhuis/kosten-en-vergoedingen/contract-zorgverzekeraars,2026-11-26,True,"Zorg en Zekerheid | AZVZ, Zorg en Zekerheid | In onderhandeling"
+2026,06010865,,a.s.r.,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,ASR | Aevitae (ASR Ziektekosten) | 3328 | Geen Contract | Geen Contract | Contract*
+2026,06010865,,a.s.r.,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True, | De Amersfoortse | 9018 | Geen Contract | Geen Contract | Contract*
+2026,06010865,,CZ,,"Centrale Verwerkingseenheid CZ: CZ,
+Delta Lloyd en OHRA",geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,"CZ | Centrale Verwerkingseenheid CZ: CZ,
+Delta Lloyd en OHRA | 9664 | Geen Contract | Contract | Contract"
+2026,06010865,,CZ,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True, | CZ | 7119 | Geen Contract | Contract | Contract
+2026,06010865,,Menzis,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,Menzis | Anderzorg N.V. | 3333 | Geen Contract | Geen Contract | Geen Contract
+2026,06010865,,VGZ,PNOzorg,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True, | PNOzorg | 3343 | Geen Contract | Geen Contract | Contract
+2026,06010865,,Eucare,Aevitae,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,Caresq | Caresco (NV VGZ Cares) | 8995 | Contract | Contract | Geen Contract
+2026,06010865,,a.s.r.,a.s.r.,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,ASR VERZEKERINGEN 9019 Geen Contract Geen Contract Contract*
+2026,06010865,,a.s.r.,a.s.r.,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,ASR Ziektekostenverzekeringen 0403 Geen Contract Geen Contract Contract*
+2026,06010865,,a.s.r.,a.s.r.,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,Caresco BV (ASR Ziektekosten) 8959 Geen Contract Geen Contract Contract*
+2026,06010865,,a.s.r.,a.s.r.,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,De Amersfoortse 9018 Geen Contract Geen Contract Contract*
+2026,06010865,,a.s.r.,Ik kies zelf,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,Ditzo Zorgverzekering 3336 Geen Contract Geen Contract Contract*
+2026,06010865,,a.s.r.,a.s.r.,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,IAK Volmacht B.V. (ASR Ziektekosten) 8973 Geen Contract Geen Contract Contract*
+2026,06010865,,CZ,OHRA,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,CZ Delta Lloyd en OHRA 9664 Geen Contract Contract Contract
+2026,06010865,,CZ,OHRA,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,OHRA Ziektekostenverzekering N.V. 0201 Geen Contract Contract Contract
+2026,06010865,,CZ,OHRA,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,OHRA Zorgverzekeringen N.V. 7053 Geen Contract Contract Contract
+2026,06010865,,VGZ,ONVZ,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,ONVZ Ziektekostenverzekeraar 3343 Geen Contract Geen Contract Contract
+2026,06010865,,Salland,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,Salland verzekeringen 7032 Geen Contract Geen Contract Geen Contract
+2026,06010865,,Salland,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,Salland Zorgdirect 7032 Geen Contract Geen Contract Geen Contract
+2026,06010865,,VGZ,VGZ,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,Caresco BV (VGZ) Promovendum 8965 Contract Contract Geen Contract
+2026,06010865,,Achmea,Zilveren Kruis,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,Basis Budget polis van Zilveren Kruis Geen contract Geen contract Geen contract
+2026,06010865,,Achmea,,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,Avéro Achmea Zorg Plan Selectief polis Geen contract Geen contract Geen contract
+2026,06010865,,Achmea,Zilveren Kruis,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,Zilveren Kruis Geen contract Geen contract Geen contract
+2026,06010865,,VGZ,VGZ,,geen_contract,,,contracts_html,https://www.alrijne.nl/naar-het-ziekenhuis/prijzen-en-zorgverzekering/,2026-11-26,True,coöperatie VGZ Geen contract Geen contract Geen contract
+2027,06010867,,Achmea,,,in_onderhandeling,,4-11-2026,contracts_html,https://www.franciscus.nl/nieuws/uw-zorgverzekering-in-2027-status-contracten-met-zorgverzekeraars,2026-11-26,True,Achmea | De FrieslandFBTOInterpolisDe christelijke zorgverzekeraarZieZoZilveren Kruis | Nog in onderhandeling
+2027,06010867,,CZ,,CZCZdirectJustNationale NederlandenOHRA,in_onderhandeling,,4-11-2026,contracts_html,https://www.franciscus.nl/nieuws/uw-zorgverzekering-in-2027-status-contracten-met-zorgverzekeraars,2026-11-26,True,CZ | CZCZdirectJustNationale NederlandenOHRA | Nog in onderhandeling
+2027,06010867,,DSW,,DSWStad Holland,in_onderhandeling,,4-11-2026,contracts_html,https://www.franciscus.nl/nieuws/uw-zorgverzekering-in-2027-status-contracten-met-zorgverzekeraars,2026-11-26,True,DSW | DSWStad Holland | Nog in onderhandeling
+2027,06010867,,Eucare,,,in_onderhandeling,,4-11-2026,contracts_html,https://www.franciscus.nl/nieuws/uw-zorgverzekering-in-2027-status-contracten-met-zorgverzekeraars,2026-11-26,True,EUCARE | AevitaeCare4Life | Nog in onderhandeling
+2027,06010867,,Menzis,,MenzisVinkVink,in_onderhandeling,,4-11-2026,contracts_html,https://www.franciscus.nl/nieuws/uw-zorgverzekering-in-2027-status-contracten-met-zorgverzekeraars,2026-11-26,True,Menzis | MenzisVinkVink | Nog in onderhandeling
+2027,06010867,,Salland,,Salland Zorgverzekeraar,in_onderhandeling,,4-11-2026,contracts_html,https://www.franciscus.nl/nieuws/uw-zorgverzekering-in-2027-status-contracten-met-zorgverzekeraars,2026-11-26,True,Salland Zorgverzekeraar | Salland | Nog in onderhandeling
+2027,06010867,,VGZ,,IZAIZZ (door VGZ)ONVZUMCUnited Consumers VGZUnivéVGZVGZBewuztVvAA,in_onderhandeling,,4-11-2026,contracts_html,https://www.franciscus.nl/nieuws/uw-zorgverzekering-in-2027-status-contracten-met-zorgverzekeraars,2026-11-26,True,VGZ | IZAIZZ (door VGZ)ONVZUMCUnited Consumers VGZUnivéVGZVGZBewuztVvAA | Nog in onderhandeling
+2027,06010867,,Zorg en Zekerheid,,AZVZZorg en Zekerheid,in_onderhandeling,,4-11-2026,contracts_html,https://www.franciscus.nl/nieuws/uw-zorgverzekering-in-2027-status-contracten-met-zorgverzekeraars,2026-11-26,True,Zorg en Zekerheid | AZVZZorg en Zekerheid | Nog in onderhandeling
+2027,06011026,,a.s.r.,Ik kies zelf,,onbekend,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-26,True,Ik kies zelf van A.S.R. | Ja | In onderhandeling
+2027,06011026,,CZ,CZdirect,,gecontracteerd,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-26,True,"CZ Direct | Ja, behalve fysio | Ja"
+2027,06011026,,VGZ,VGZ,,onbekend,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-26,True,VGZ | Ja | In onderhandeling
+2027,06011026,,VGZ,Bewuzt,,onbekend,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-26,True,Bewuzt | Ja | In onderhandeling
+2027,06011026,,VGZ,UMC Zorgverzekering,,onbekend,,,contracts_html,https://www.elkerliek.nl/kosten-en-vergoedingen/overzicht-gecontracteerde-zorgverzekeraars,2026-11-26,True,UMC Zorgverzekering | Ja | In onderhandeling
+2026,06011033,,DSW,,,geen_contract,,5 december 2025,contracts_html,https://www.amphia.nl/patienten-en-bezoekers/uw-afspraak/kosten-en-verzekering,2026-11-26,True,DSW DSW Geen contract Contract
+2027,06011035,,Achmea,Interpolis,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,Interpolis |  |  | In gesprek | In gesprek
+2027,06011035,,Achmea,FBTO,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,FBTO |  |  | In gesprek | In gesprek
+2027,06011035,,Achmea,De Friesland,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,De Friesland |  |  | In gesprek | In gesprek
+2027,06011035,,CZ,CZ,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,CZ |  |  | In gesprek | 
+2027,06011035,,CZ,CZdirect,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,CZ Direct |  |  | In gesprek | 
+2027,06011035,,CZ,Just,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,Just |  |  | In gesprek | 
+2027,06011035,,CZ,Nationale-Nederlanden,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,Nationale Nederlanden |  |  | In gesprek | 
+2027,06011035,,CZ,OHRA,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,OHRA |  |  | In gesprek | 
+2027,06011035,,VGZ,ONVZ,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,ONVZ |  |  | In gesprek | 
+2027,06011035,,Salland,Salland,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,Salland Zorgverzekeringen |  |  | In gesprek | 
+2027,06011035,,Salland,HollandZorg,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,HollandZorg |  |  | In gesprek | 
+2027,06011035,,VGZ,VGZ,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,VGZ |  |  | In gesprek | 
+2027,06011035,,VGZ,UMC Zorgverzekering,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,UMC |  |  | In gesprek | 
+2027,06011035,,VGZ,IZA,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,IZA |  |  | In gesprek | 
+2027,06011035,,VGZ,Univé,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,Univé |  |  | In gesprek | 
+2027,06011035,,VGZ,IZZ,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,IZZ |  |  | In gesprek | 
+2027,06011035,,VGZ,Zorgzaam,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,Zorgzaam |  |  | In gesprek | 
+2027,06011035,,VGZ,Univé,,in_onderhandeling,,,contracts_html,https://www.mmc.nl/statusoverzicht-contractering/,2026-11-26,True,ZEKUR |  |  | In gesprek | 
+2027,06011036,,a.s.r.,a.s.r.,a.s.r. Zorgzoeker,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,a.s.r. zorg | ASR | a.s.r. Zorgzoeker | V | V
+2027,06011036,,a.s.r.,Ik kies zelf,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Ik kies zelf van a.s.r. | ASR | a.s.r. Zorgzoeker | V | V
+2027,06011036,,Achmea,,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Zilveren Kruis  orgverzekeringen N.V. | Achmea | Zilveren Kruis Zorgzoeker | V | X
+2027,06011036,,Achmea,,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Interpolis Zorgverzekeringen NV | Achmea | Interpolis Zorgzoeker | V | X
+2027,06011036,,Achmea,,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,FBTO Zorgverzekeringen N.V | Achmea | FBTO zorgzoeker | V | X
+2027,06011036,,Achmea,,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,De Friesland Zorgverzekeraar N.V. | Achmea | De Friesland Zorgzoeker | V | X
+2027,06011036,,Achmea,ZieZo,Ziezo Zorgzoeker,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Ziezo | Achmea | Ziezo Zorgzoeker | V | X
+2027,06011036,,Achmea,De christelijke zorgverzekeraar,De Christelijke Zorgverzekeraar N.V,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,De Christelijke Zorgverzekeraar N.V | Achmea | De Christelijke Zorgverzekeraar | V | X
+2027,06011036,,Eucare,Aevitae,Aevitae Zorgzoeker,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Aevitae (EUCARE) | Caresq | Aevitae Zorgzoeker | V | V
+2027,06011036,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Care4Life | Caresq | Care4life Zorgzoeker | V | V
+2027,06011036,,VGZ,VGZ,VGZ zorgzoeker,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,VGZ Zorgverzekeraar N.V. | VGZ | VGZ zorgzoeker | X | V
+2027,06011036,,VGZ,VGZ,VGZbewuzt,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,VGZbewuzt | VGZ | Bewuzt Zorgzoeker | X | V
+2027,06011036,,VGZ,VGZ,IZZ (VGZ voor de zorg),gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,IZZ (VGZ voor de zorg) | VGZ | IZZ Zorgzoeker | X | V
+2027,06011036,,VGZ,UMC Zorgverzekering,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,UMC Zorgverzekering | VGZ | UMC Zorgzoeker | X | V
+2027,06011036,,VGZ,Univé,Univé Zorgzoeker,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Univé | VGZ | Univé Zorgzoeker | X | V
+2027,06011036,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,ONVZ Ziektekostenverzekeraar | VGZ |  | X | V
+2027,06011036,,VGZ,VGZ,United Consumers VGZ,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,United Consumers VGZ | VGZ | United Consumers Zorgzoeker | X | V
+2027,06011036,,VGZ,Zorgzaam,Zorgzaam Zorgzoeker,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Zorgzaam | VGZ | Zorgzaam Zorgzoeker | X | V
+2027,06011036,,VGZ,IZA,IZA Zorgzoeker,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,IZA | VGZ | IZA Zorgzoeker | X | V
+2027,06011036,,CZ,CZ,CZ Zorgvinder,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,CZ Zorgverzekeringen N.V. | CZ | CZ Zorgvinder | V | X
+2027,06011036,,CZ,Nationale-Nederlanden,Nationale-Nederlanden Zorg,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Nationale-Nederlanden Zorg | CZ | Nationale Nederlanden | V | X
+2027,06011036,,CZ,CZ,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,OHRA Zorgverzekeringen N.V. | CZ | OHRA Zorgzoeker | V | X
+2027,06011036,,CZ,Just,Just Zorgvinder,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Just | CZ | Just Zorgvinder | V | X
+2027,06011036,,CZ,CZdirect,CZDirect Zorgvinder,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,CZdirect | CZ | CZDirect Zorgvinder | V | X
+2027,06011036,,DSW,DSW,DSW Zorgzoeker,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,DSW | DSW | DSW Zorgzoeker | V | V
+2027,06011036,,DSW,Stad Holland,Stad Holland Zorgzoeker,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Stad Holland Zorgverzekeraar | DSW | Stad Holland Zorgzoeker | V | V
+2027,06011036,,DSW,DSW,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Stichting Ziektekostenverzekering Krijgsmacht (SVZK) | DSW | SVZK Zorgzoeker | V | V
+2027,06011036,,Salland,,Salland Zorgzoeker,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Salland zorgverzekeringen | Salland | Salland Zorgzoeker | V | V
+2027,06011036,,Menzis,,Menzis Zorgvinder,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Menzis Zorgverzekeraar N.V. | Menzis | Menzis Zorgvinder | V | V
+2027,06011036,,Menzis,,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,VinkVink verzekeraar | Menzis | Vinkvink Zorgvinder | V | V
+2027,06011036,,Zorg en Zekerheid,Zorg en Zekerheid,Zorg en Zekerheid Zorgzoeker,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,Zorg en Zekerheid | Zorg en Zekerheid | Zorg en Zekerheid Zorgzoeker | V | V
+2027,06011036,,Zorg en Zekerheid,AZVZ,,gecontracteerd,,,contracts_html,https://www.bravis.nl/met-welke-zorgverzekeraars-werkt-het-bravis-samen,2026-11-26,True,AZVZ | Zorg en Zekerheid | Zorg en Zekerheid Zorgzoeker | V | V
+2027,06011037,,Eucare,Aevitae,,in_onderhandeling,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-26,True,Caresq | Nog in onderhandeling | Nog in onderhandeling
+2027,06011037,,Menzis,,,in_onderhandeling,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-26,True,Menzis | Nog in onderhandeling | Contract
+2027,06011037,,Achmea,Zilveren Kruis,,in_onderhandeling,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-26,True,Zilveren Kruis | Nog in onderhandeling | Nog in onderhandeling
+2027,06011037,,a.s.r.,,,geen_contract,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-26,True,ASR | – a.s.r. – Ik kies zelf
+2027,06011037,,Eucare,Aevitae,,geen_contract,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-26,True,Caresq | – Aevitae (Eucare) – Care4Life
+2027,06011037,,DSW,,,geen_contract,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-26,True,DSW | – DSW – InTwente – StadHolland
+2027,06011037,,Menzis,,,geen_contract,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-26,True,Menzis | – Anderzorg – Menzis – VinkVink
+2027,06011037,,Salland,,,geen_contract,,27 oktober 2026,contracts_html,https://www.etz.nl/actueel/contractering-zorg-2027/,2026-11-26,True,Salland | – Salland – HollandZorg
+2026,06011113,,a.s.r.,a.s.r.,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True,"a.s.r. | a.s.r. | Ja, gecontracteerd voor 2026"
+2026,06011113,,a.s.r.,Ik kies zelf,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | Ik kies zelf | Ja, gecontracteerd voor 2026"
+2026,06011113,,CZ,CZ,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True,"CZ | CZ | Ja, gecontracteerd voor 2026"
+2026,06011113,,CZ,CZdirect,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | CZ direct | Ja, gecontracteerd voor 2026"
+2026,06011113,,CZ,Just,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | Just | Ja, gecontracteerd voor 2026"
+2026,06011113,,CZ,Nationale-Nederlanden,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | Nationale Nederlanden | Ja, gecontracteerd voor 2026"
+2026,06011113,,CZ,OHRA,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | OHRA | Ja, gecontracteerd voor 2026"
+2026,06011113,,DSW,,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True,"DSW | DSW | Ja, gecontracteerd voor 2026"
+2026,06011113,,DSW,,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | InTwente | Ja, gecontracteerd voor 2026"
+2026,06011113,,Salland,,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True,"ENO | Salland | Ja, gecontracteerd voor 2026"
+2026,06011113,,Menzis,Menzis,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True,"Menzis | Menzis | Ja, gecontracteerd voor 2026"
+2026,06011113,,Menzis,Menzis,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | Anderzorg | Ja, gecontracteerd voor 2026"
+2026,06011113,,Menzis,VinkVink,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | Vinkvink | Ja, gecontracteerd voor 2026"
+2026,06011113,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True,"ONVZ | ONVZ | Ja, gecontracteerd voor 2026"
+2026,06011113,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True,"VGZ | VGZ | Ja, gecontracteerd voor 2026"
+2026,06011113,,VGZ,Bewuzt,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | Bewuzt | Ja, gecontracteerd voor 2026"
+2026,06011113,,VGZ,IZA,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | IZA | Ja, gecontracteerd voor 2026"
+2026,06011113,,VGZ,IZZ,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | IZZ | Ja, gecontracteerd voor 2026"
+2026,06011113,,VGZ,UMC Zorgverzekering,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | UMC | Ja, gecontracteerd voor 2026"
+2026,06011113,,VGZ,Univé,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | Univé | Ja, gecontracteerd voor 2026"
+2026,06011113,,VGZ,Univé,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | ZEKUR | Ja, gecontracteerd voor 2026"
+2026,06011113,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True,"Zilveren Kruis | Zilveren Kruis | Ja, gecontracteerd voor 2026"
+2026,06011113,,Achmea,FBTO,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | FBTO | Ja, gecontracteerd voor 2026"
+2026,06011113,,Achmea,De Friesland,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | De Friesland | Ja, gecontracteerd voor 2026"
+2026,06011113,,Achmea,ZieZo,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | Ziezo | Ja, gecontracteerd voor 2026"
+2026,06011113,,Achmea,Interpolis,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | Interpolis | Ja, gecontracteerd voor 2026"
+2026,06011113,,Zorg en Zekerheid,Zorg en Zekerheid,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True,"Zorg en zekerheid | Zorg en zekerheid | Ja, gecontracteerd voor 2026"
+2026,06011113,,Zorg en Zekerheid,AZVZ,,gecontracteerd,,,contracts_html,https://sjgweert.nl/contracten-zorgverzekeraars-2026,2026-11-26,True," | AZVZ | Ja, gecontracteerd voor 2026"
+2027,06011115,,a.s.r.,,,in_onderhandeling,,,contracts_html,https://www.viecuri.nl/samen-voor-gezondheid/algemeen/contracten-met-zorgverzekeraars-jaarlijks-updaten/,2026-11-26,True,a.s.r. | In gesprek
+2027,06011115,,CZ,,,in_onderhandeling,,,contracts_html,https://www.viecuri.nl/samen-voor-gezondheid/algemeen/contracten-met-zorgverzekeraars-jaarlijks-updaten/,2026-11-26,True,CZ | In gesprek
+2027,06011115,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.viecuri.nl/samen-voor-gezondheid/algemeen/contracten-met-zorgverzekeraars-jaarlijks-updaten/,2026-11-26,True,Menzis | In gesprek
+2027,06011115,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.viecuri.nl/samen-voor-gezondheid/algemeen/contracten-met-zorgverzekeraars-jaarlijks-updaten/,2026-11-26,True,VGZ | In gesprek
+2027,06011115,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.viecuri.nl/samen-voor-gezondheid/algemeen/contracten-met-zorgverzekeraars-jaarlijks-updaten/,2026-11-26,True,Zilveren Kruis | In gesprek
+2025,06020502,,VGZ,Univé,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | Univé | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,UMC Zorgverzekering,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | UMC | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | VGZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,VGZ,VGZ Bewuzt,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | VGZ Bewuzt | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,IZZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | IZZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,"VGZ | MVJP, zorgzaam | Gecontracteerd | Partijen hebben overeenstemming voor 2026"
+2025,06020502,,VGZ,IZA,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | IZA | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | ZEKUR (gewoon Zekur natura) | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,CZ,,OWM CZ Groep U.A.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | OWM CZ Groep U.A. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,CZ,,CZ Zorgverzekeringen N.V.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | CZ Zorgverzekeringen N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,CZ,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | Centrale zorgverzekering NZV N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,CZ,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | OHRA Zorgverzekering N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Achmea,Zilveren Kruis,Zilveren Kruis Zorgverzekering N.V. (Inclusief De christelijke zorgverzekeraar),gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | Zilveren Kruis Zorgverzekering N.V. (Inclusief De christelijke zorgverzekeraar) | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | Interpolis Zorgverzekering N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | FBTO Zorgverzekering N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | De Friesland Zorgverzekeraar N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Menzis,Menzis,Menzis Zorgverzekeringen N.V.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | Menzis Zorgverzekeringen N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Menzis,VinkVink,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | VinkVink | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Menzis,Menzis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | Anderzorg N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,DSW,,DSW Zorgverzekeraar,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,DSW | DSW Zorgverzekeraar | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CARESQ | Aevitea (Eucare) | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Eucare,Care4Life,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CARESQ | Care4life | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Zorg en Zekerheid,,OWM Zorgverzekeraar Zorg en Zekerheid U.A.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zorg en Zekerheid | OWM Zorgverzekeraar Zorg en Zekerheid U.A. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ASR | ASR | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ASR | Ditzo (ik kies zelf ASR) | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | ONVZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | VvAA zorgverzekering | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,ONVZ,ONVZ Expats,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | ONVZ Expats | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Salland,,Salland Zorgverzekeraar N.V.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Salland Zorgverzekeringen | Salland Zorgverzekeraar N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,Univé,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | Univé | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,UMC Zorgverzekering,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | UMC | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | VGZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,VGZ,VGZ Bewust,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | VGZ Bewust | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,IZZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | IZZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,"VGZ | MVJP, zorgzaam | Gecontracteerd | Partijen hebben overeenstemming voor 2026"
+2025,06020502,,VGZ,IZA,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | IZA | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | ZEKUR (gewoon Zekur natura) | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,CZ,,OWM CZ Groep U.A.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | OWM CZ Groep U.A. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,CZ,,CZ Zorgverzekeringen N.V.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | CZ Zorgverzekeringen N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,CZ,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | Centrale zorgverzekering NZV N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,CZ,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | OHRA Zorgverzekering N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Achmea,Zilveren Kruis,Zilveren Kruis Zorgverzekering N.V. (Inclusief De christelijke zorgverzekeraar),gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | Zilveren Kruis Zorgverzekering N.V. (Inclusief De christelijke zorgverzekeraar) | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | Interpolis Zorgverzekering N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | FBTO Zorgverzekering N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | De Friesland Zorgverzekeraar N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Menzis,Menzis,Menzis Zorgverzekeringen N.V.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | Menzis Zorgverzekeringen N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Menzis,VinkVink,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | VinkVink | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Menzis,Menzis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | Anderzorg N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,DSW,,DSW Zorgverzekeraar,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,DSW | DSW Zorgverzekeraar | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CARESQ | Aevitea (Eucare) | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Eucare,Care4Life,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CARESQ | Care4life | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Zorg en Zekerheid,,OWM Zorgverzekeraar Zorg en Zekerheid U.A.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zorg en Zekerheid | OWM Zorgverzekeraar Zorg en Zekerheid U.A. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ASR | ASR | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ASR | Ditzo (ik kies zelf ASR) | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | ONVZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | VvAA zorgverzekering | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,ONVZ,ONVZ Expats,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | ONVZ Expats | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Salland,,Salland Zorgverzekeraar N.V.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Salland Zorgverzekeringen | Salland Zorgverzekeraar N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,CZ,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Menzis,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,DSW,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,DSW | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zorg en Zekerheid | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ASR | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CARESQ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,Salland,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Salland Zorgverzekeringen | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2025,06020502,,VGZ,Univé,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | Univé | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,UMC Zorgverzekering,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | UMC | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | VGZ | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,VGZ,VGZ Bewuzt,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | VGZ Bewuzt | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,IZZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | IZZ | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,"VGZ | MVJP, zorgzaam | Gecontracteerd | Partijen hebben overeenstemming voor 2025"
+2025,06020502,,VGZ,IZA,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | IZA | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | ZEKUR (gewoon Zekur natura) | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,CZ,,OWM CZ Groep U.A.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | OWM CZ Groep U.A. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,CZ,,CZ Zorgverzekeringen N.V.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | CZ Zorgverzekeringen N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,CZ,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | Centrale zorgverzekering NZV N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,CZ,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | OHRA Zorgverzekering N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Achmea,Zilveren Kruis,Zilveren Kruis Zorgverzekering N.V. (Inclusief De christelijke zorgverzekeraar),gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | Zilveren Kruis Zorgverzekering N.V. (Inclusief De christelijke zorgverzekeraar) | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | Interpolis Zorgverzekering N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | FBTO Zorgverzekering N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | De Friesland Zorgverzekeraar N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Menzis,Menzis,Menzis Zorgverzekeringen N.V.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | Menzis Zorgverzekeringen N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Menzis,VinkVink,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | VinkVink | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Menzis,Menzis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | Anderzorg N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,DSW,,DSW Zorgverzekeraar,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,DSW | DSW Zorgverzekeraar | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CARESQ | Aevitea (Eucare) | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Eucare,Care4Life,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CARESQ | Care4life | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Zorg en Zekerheid,,OWM Zorgverzekeraar Zorg en Zekerheid U.A.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zorg en Zekerheid | OWM Zorgverzekeraar Zorg en Zekerheid U.A. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ASR | ASR | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ASR | Ditzo (ik kies zelf ASR) | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | ONVZ | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | VvAA zorgverzekering | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,ONVZ,ONVZ Expats,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | ONVZ Expats | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Salland,,Salland Zorgverzekeraar N.V.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Salland Zorgverzekeringen | Salland Zorgverzekeraar N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,Univé,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | Univé | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,UMC Zorgverzekering,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | UMC | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | VGZ | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,VGZ,VGZ Bewust,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | VGZ Bewust | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,IZZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | IZZ | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,"VGZ | MVJP, zorgzaam | Gecontracteerd | Partijen hebben overeenstemming voor 2025"
+2025,06020502,,VGZ,IZA,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | IZA | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | ZEKUR (gewoon Zekur natura) | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,CZ,,OWM CZ Groep U.A.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | OWM CZ Groep U.A. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,CZ,,CZ Zorgverzekeringen N.V.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | CZ Zorgverzekeringen N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,CZ,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | Centrale zorgverzekering NZV N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,CZ,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | OHRA Zorgverzekering N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Achmea,Zilveren Kruis,Zilveren Kruis Zorgverzekering N.V. (Inclusief De christelijke zorgverzekeraar),gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | Zilveren Kruis Zorgverzekering N.V. (Inclusief De christelijke zorgverzekeraar) | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | Interpolis Zorgverzekering N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | FBTO Zorgverzekering N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | De Friesland Zorgverzekeraar N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Menzis,Menzis,Menzis Zorgverzekeringen N.V.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | Menzis Zorgverzekeringen N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Menzis,VinkVink,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | VinkVink | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Menzis,Menzis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | Anderzorg N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,DSW,,DSW Zorgverzekeraar,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,DSW | DSW Zorgverzekeraar | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CARESQ | Aevitea (Eucare) | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Eucare,Care4Life,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CARESQ | Care4life | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Zorg en Zekerheid,,OWM Zorgverzekeraar Zorg en Zekerheid U.A.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zorg en Zekerheid | OWM Zorgverzekeraar Zorg en Zekerheid U.A. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ASR | ASR | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ASR | Ditzo (ik kies zelf ASR) | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | ONVZ | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | VvAA zorgverzekering | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,ONVZ,ONVZ Expats,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | ONVZ Expats | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Salland,,Salland Zorgverzekeraar N.V.,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Salland Zorgverzekeringen | Salland Zorgverzekeraar N.V. | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,VGZ | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,CZ,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CZ | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zilveren kruis | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Menzis,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Menzis | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,DSW,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,DSW | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Zorg en Zekerheid | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ASR | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,ONVZ | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,CARESQ | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2025,06020502,,Salland,,,gecontracteerd,,,contracts_html,https://www.radboudumc.nl/patientenzorg/uw-afspraak/zorgverzekering/kosten-van-zorg/wordt-mijn-behandeling-vergoed/heeft-uw-zorgverzekeraar-een-contract-met-het-radboudumc-voor-2026,2026-11-26,True,Salland Zorgverzekeringen | Gecontracteerd | Partijen hebben overeenstemming voor 2025
+2027,06020701,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,a.s.r. | Gecontracteerd
+2027,06020701,,CZ,,,in_onderhandeling,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,CZ | In onderhandeling
+2027,06020701,,Eucare,,,in_onderhandeling,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,EUCARE | In onderhandeling
+2027,06020701,,Menzis,,,in_onderhandeling,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,Menzis | In onderhandeling
+2027,06020701,,Salland,,,in_onderhandeling,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,Salland | In onderhandeling
+2027,06020701,,VGZ,,,in_onderhandeling,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,VGZ | In onderhandeling
+2027,06020701,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,Zilveren Kruis | In onderhandeling
+2027,06020701,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,a.s.r. | Gecontracteerd
+2027,06020701,,CZ,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,CZ | Gecontracteerd
+2027,06020701,,Eucare,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,EUCARE | Gecontracteerd
+2027,06020701,,Menzis,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,Menzis | Gecontracteerd
+2027,06020701,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,ONVZ | Gecontracteerd
+2027,06020701,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,VGZ | Gecontracteerd
+2027,06020701,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,Z&Z | Gecontracteerd
+2027,06020701,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,Zilveren Kruis | Gecontracteerd
+2027,06020701,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,a.s.r. | Gecontracteerd
+2027,06020701,,CZ,,,in_onderhandeling,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,CZ | In onderhandeling
+2027,06020701,,Eucare,,,in_onderhandeling,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,EUCARE | In onderhandeling
+2027,06020701,,Menzis,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,Menzis | Gecontracteerd
+2027,06020701,,Salland,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,Salland | Gecontracteerd
+2027,06020701,,VGZ,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,VGZ | Gecontracteerd
+2027,06020701,,Achmea,Zilveren Kruis,,in_onderhandeling,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,Zilveren Kruis | In onderhandeling
+2027,06020701,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,a.s.r. | Gecontracteerd
+2027,06020701,,CZ,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,CZ | Gecontracteerd
+2027,06020701,,Eucare,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,EUCARE | Gecontracteerd
+2027,06020701,,Menzis,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,Menzis | Gecontracteerd
+2027,06020701,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,ONVZ | Gecontracteerd
+2027,06020701,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,VGZ | Gecontracteerd
+2027,06020701,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,Z&Z | Gecontracteerd
+2027,06020701,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.amsterdamumc.nl/nl/rechten-en-plichten/gecontracteerde-zorgverzekeraars,2026-11-26,True,Zilveren Kruis | Gecontracteerd
+2027,06020801,,a.s.r.,,,gecontracteerd,,12-11-2026,contracts_html,https://www.lumc.nl/patientenzorg/uw-bezoek/rondom-uw-bezoek/zorgverzekeringen,2026-11-26,True,ASR | Gecontracteerd | Gecontracteerd
+2027,06020801,,CZ,,,in_onderhandeling,,12-11-2026,contracts_html,https://www.lumc.nl/patientenzorg/uw-bezoek/rondom-uw-bezoek/zorgverzekeringen,2026-11-26,True,CZ | In onderhandeling | In onderhandeling
+2027,06020801,,DSW,,,gecontracteerd,,12-11-2026,contracts_html,https://www.lumc.nl/patientenzorg/uw-bezoek/rondom-uw-bezoek/zorgverzekeringen,2026-11-26,True,DSW | Gecontracteerd | Gecontracteerd
+2027,06020801,,Menzis,,,gecontracteerd,,12-11-2026,contracts_html,https://www.lumc.nl/patientenzorg/uw-bezoek/rondom-uw-bezoek/zorgverzekeringen,2026-11-26,True,Menzis | Gecontracteerd | Gecontracteerd
+2027,06020801,,Salland,,,onbekend,,12-11-2026,contracts_html,https://www.lumc.nl/patientenzorg/uw-bezoek/rondom-uw-bezoek/zorgverzekeringen,2026-11-26,True,Salland | In onderhandeling | Gecontracteerd
+2027,06020801,,VGZ,,,in_onderhandeling,,12-11-2026,contracts_html,https://www.lumc.nl/patientenzorg/uw-bezoek/rondom-uw-bezoek/zorgverzekeringen,2026-11-26,True,VGZ | In onderhandeling | In onderhandeling
+2027,06020801,,Achmea,Zilveren Kruis,,onbekend,,12-11-2026,contracts_html,https://www.lumc.nl/patientenzorg/uw-bezoek/rondom-uw-bezoek/zorgverzekeringen,2026-11-26,True,Zilveren Kruis | Gecontracteerd | In onderhandeling
+2027,06020801,,Zorg en Zekerheid,,,onbekend,,12-11-2026,contracts_html,https://www.lumc.nl/patientenzorg/uw-bezoek/rondom-uw-bezoek/zorgverzekeringen,2026-11-26,True,Zorg en Zekerheid | In onderhandeling | Gecontracteerd
+2026,06020806,,a.s.r.,,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,a.s.r. | Gecontracteerd
+2026,06020806,,Eucare,Aevitae,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,Caresq | Gecontracteerd
+2026,06020806,,CZ,,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,CZ | Gecontracteerd
+2026,06020806,,DSW,,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,DSW | Gecontracteerd
+2026,06020806,,Salland,,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,Salland | Gecontracteerd
+2026,06020806,,Menzis,,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,Menzis | Gecontracteerd
+2026,06020806,,VGZ,ONVZ,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,ONVZ | Gecontracteerd
+2026,06020806,,VGZ,VGZ,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,VGZ | Gecontracteerd
+2026,06020806,,Achmea,Zilveren Kruis,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,Zilveren Kruis | Gecontracteerd
+2026,06020806,,a.s.r.,,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,a.s.r. | Gecontracteerd
+2026,06020806,,Eucare,Aevitae,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,Caresq | Gecontracteerd
+2026,06020806,,CZ,,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,CZ | Gecontracteerd
+2026,06020806,,DSW,,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,DSW | Gecontracteerd
+2026,06020806,,Salland,,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,Salland | Gecontracteerd
+2026,06020806,,Menzis,,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,Menzis | Gecontracteerd
+2026,06020806,,VGZ,ONVZ,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,ONVZ | Gecontracteerd
+2026,06020806,,VGZ,VGZ,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,VGZ | Gecontracteerd
+2026,06020806,,Achmea,Zilveren Kruis,,gecontracteerd,,24-12-2025,contracts_html,https://www.erasmusmc.nl/nl-nl/patientenzorg/overzicht-afspraken-erasmus-mc-en-zorgverzekeraars-2026,2026-11-26,True,Zilveren Kruis | Gecontracteerd
+2027,06021101,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,ASR | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,CZ,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,CZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Caresq | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,DSW,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,DSW | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,Menzis,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Menzis | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,ONVZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,Salland,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Salland | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,VGZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Zilveren Kruis | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,ASR | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,CZ,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,CZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Caresq | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,DSW,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,DSW | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,Menzis,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Menzis | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,ONVZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,Salland,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Salland | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,VGZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Zilveren Kruis | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,ASR | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,CZ,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,CZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Caresq | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,DSW,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,DSW | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,Menzis,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Menzis | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,ONVZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,Salland,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Salland | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,VGZ | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,Achmea,Zilveren Kruis,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Zilveren Kruis | Gecontracteerd | Partijen hebben overeenstemming voor 2026
+2027,06021101,,a.s.r.,,,geen_contract,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,ASR | Niet gecontracteerd | Partijen zijn in overleg
+2027,06021101,,CZ,,,geen_contract,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,CZ | Niet gecontracteerd | Partijen zijn in overleg
+2027,06021101,,Eucare,Aevitae,,geen_contract,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Caresq | Niet gecontracteerd | Partijen zijn in overleg
+2027,06021101,,DSW,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,DSW | Gecontracteerd | Partijen hebben overeenstemming voor 2027
+2027,06021101,,Menzis,,,geen_contract,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Menzis | Niet gecontracteerd | Partijen zijn in overleg
+2027,06021101,,Salland,,,geen_contract,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Salland | Niet gecontracteerd | Partijen zijn in overleg
+2027,06021101,,VGZ,,,geen_contract,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,VGZ | Niet gecontracteerd | Partijen zijn in overleg
+2027,06021101,,Achmea,Zilveren Kruis,,geen_contract,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Zilveren Kruis | Niet gecontracteerd | Partijen zijn in overleg
+2027,06021101,,a.s.r.,,,geen_contract,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,ASR | Niet gecontracteerd | Partijen zijn in overleg
+2027,06021101,,CZ,,,geen_contract,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,CZ | Niet gecontracteerd | Partijen zijn in overleg
+2027,06021101,,Eucare,Aevitae,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Caresq | Gecontracteerd | Partijen hebben overeenstemming voor 2027
+2027,06021101,,DSW,,,geen_contract,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,DSW | Niet gecontracteerd | Partijen zijn in overleg
+2027,06021101,,Menzis,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Menzis | Gecontracteerd | Partijen hebben overeenstemming voor 2027
+2027,06021101,,Salland,,,gecontracteerd,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Salland | Gecontracteerd | Partijen hebben overeenstemming voor 2027
+2027,06021101,,VGZ,,,geen_contract,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,VGZ | Niet gecontracteerd | Partijen zijn in overleg
+2027,06021101,,Achmea,Zilveren Kruis,,geen_contract,,,contracts_html,https://www.mumc.nl/patient-bezoeker/praktisch/zorgkosten-en-betaling/contracten-met-zorgverzekeraars,2026-11-26,True,Zilveren Kruis | Niet gecontracteerd | Partijen zijn in overleg
+2027,06080701,,a.s.r.,,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, | ASR |  |  | ASR |  |  | Gecontracteerd | 
+2027,06080701,,Eucare,Aevitae,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, | CARESQ |  |  | Aevitea (Eucare) |  |  | In onderhandeling | 
+2027,06080701,,CZ,CZ,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, | CZ |  |  | CZ |  |  | Gecontracteerd | 
+2027,06080701,,CZ,OHRA,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, |  |  |  | OHRA |  |  | Gecontracteerd | 
+2027,06080701,,CZ,Nationale-Nederlanden,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, |  |  |  | Nationale-Nederlanden |  |  | Gecontracteerd | 
+2027,06080701,,Menzis,,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, | Menzis |  |  | Menzis |  |  | In onderhandeling | 
+2027,06080701,,Menzis,,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, |  |  |  | Anderzorg |  |  | In onderhandeling | 
+2027,06080701,,VGZ,Univé,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, | VGZ |  |  | Univé |  |  | In onderhandeling | 
+2027,06080701,,VGZ,VGZ,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, |  |  |  | VGZ |  |  | In onderhandeling | 
+2027,06080701,,VGZ,IZZ,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, |  |  |  | IZZ |  |  | In onderhandeling | 
+2027,06080701,,VGZ,IZA,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, |  |  |  | IZA |  |  | In onderhandeling | 
+2027,06080701,,Achmea,Zilveren Kruis,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, | Zilveren Kruis |  |  | Zilveren Kruis |  |  | Gecontracteerd | 
+2027,06080701,,Achmea,Interpolis,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, |  |  |  | Interpolis |  |  | Gecontracteerd | 
+2027,06080701,,Achmea,ZieZo,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, |  |  |  | ZieZo |  |  | Gecontracteerd | 
+2027,06080701,,Zorg en Zekerheid,,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True, | Zorg en Zekerheid |  |  | Zorg en Zekerheid |  |  | In onderhandeling | 
+2027,06080701,,a.s.r.,a.s.r.,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,ASR ASR Gecontracteerd
+2027,06080701,,a.s.r.,Ik kies zelf,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,Ditzo (Ik Kies Zelf ASR) Gecontracteerd
+2027,06080701,,Eucare,Care4Life,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,Care4life In onderhandeling
+2027,06080701,,CZ,,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,CZ CZ Gecontracteerd
+2027,06080701,,CZ,CZdirect,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,CZ Direct Gecontracteerd
+2027,06080701,,CZ,Just,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,Just Gecontracteerd
+2027,06080701,,DSW,,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,DSW DSW Gecontracteerd
+2027,06080701,,Menzis,VinkVink,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,VinkVink In onderhandeling
+2027,06080701,,Menzis,Menzis,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,Anderzorg In onderhandeling
+2027,06080701,,Salland,,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,Salland Salland In onderhandeling
+2027,06080701,,VGZ,UMC Zorgverzekering,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,UMC In onderhandeling
+2027,06080701,,VGZ,Bewuzt,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,VGZ Bewuzt In onderhandeling
+2027,06080701,,VGZ,Zorgzaam,,in_onderhandeling,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,"MVJP, Zorgzaam In onderhandeling"
+2027,06080701,,Achmea,De christelijke zorgverzekeraar,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,De Christelijke Zorgverzekeraar Gecontracteerd
+2027,06080701,,Achmea,FBTO,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,FBTO Gecontracteerd
+2027,06080701,,Achmea,De Friesland,,gecontracteerd,,03-11-2026,contracts_pdf,https://www.avl.nl/media/m0lbs1su/avl_contracten-zorgverzekeraars-2027-versie-3-november-2026.pdf,2026-11-26,True,De Friesland Gecontracteerd
+2026,06280501,,VGZ,,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,VGZ | Gecontracteerd
+2026,06280501,,CZ,,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,CZ | Gecontracteerd
+2026,06280501,,Menzis,,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,Menzis | Gecontracteerd
+2026,06280501,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,Zorg en Zekerheid | Gecontracteerd
+2026,06280501,,DSW,,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,DSW | Gecontracteerd
+2026,06280501,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,a.s.r. | Gecontracteerd
+2026,06280501,,Salland,,,in_onderhandeling,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,Salland | In onderhandeling
+2026,06280501,,VGZ,VGZ,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,VGZ | Gecontracteerd
+2026,06280501,,CZ,,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,CZ | Gecontracteerd
+2026,06280501,,Menzis,,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,Menzis | Gecontracteerd
+2026,06280501,,Zorg en Zekerheid,,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,Zorg en Zekerheid | Gecontracteerd
+2026,06280501,,DSW,,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,DSW | Gecontracteerd
+2026,06280501,,VGZ,ONVZ,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,ONVZ | Gecontracteerd
+2026,06280501,,a.s.r.,,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,a.s.r. | Gecontracteerd
+2026,06280501,,Salland,,,gecontracteerd,,,contracts_html,https://www.maartenskliniek.nl/rondom-uw-zorg/tarieven-en-vergoedingen-in-nederland,2026-11-26,True,Salland | Gecontracteerd

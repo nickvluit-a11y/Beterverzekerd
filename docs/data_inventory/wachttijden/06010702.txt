@@ -1,5 +1,5 @@
 source: https://www.nwz.nl/naar-het-ziekenhuis/wachttijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden Noordwest Ziekenhuisgroep
 Wachttijden
@@ -12,4 +12,4 @@ hier bekijkt u de wachttijden voor Noordwestlocatie Alkmaar
 hier bekijkt u de wachttijden voor Noordwestlocatie Den Helder
 hier bekijkt u de wachttijden voor Noordwest Foreest Kliniek
 Nederlandse Zorgautoriteit: 'Wanneer u de wachttijd te lang vindt, kunt u altijd contact met ons opnemen, of uw zorgverzekeraar vragen om wachtlijstbemiddeling. Uw zorgverzekeraar kan u hierin ondersteunen, zodat u mogelijk sneller geholpen kunt worden. De maximaal aanvaardbare wachttijd die door zorgaanbieders en zorgverzekeraars gezamenlijk is overeengekomen (de Treeknorm) bedraagt voor de toegang tot de polikliniek en diagnostiek 4 weken. Voor behandeling is de maximaal aanvaardbare wachttijd 7 weken.'
-20261118.2
+20261126.2

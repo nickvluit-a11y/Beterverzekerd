@@ -1,5 +1,5 @@
 source: https://www.alrijne.nl/naar-het-ziekenhuis/wanneer-kan-ik-terecht/
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wanneer kan ik terecht? Toegangs- en wachttijden bij Alrijne - Alrijne Ziekenhuis
 Flinke wachtlijsten

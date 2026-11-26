@@ -1,5 +1,5 @@
 source: https://www.asz.nl/wachttijden/
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden | Ziekenhuis met hoofd, hart en ziel
 Praktische informatie

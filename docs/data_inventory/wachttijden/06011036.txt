@@ -1,5 +1,5 @@
 source: https://www.bravis.nl/wachttijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden | Bravis
 Ga naar hoofdinhoud

@@ -51,9 +51,9 @@ Niet gekoppeld (eerste 40):
 
 ## vgz_zorgzoeker
 
-877 locaties in de zorgzoeker, 324 gekoppeld aan onze locaties, 168 organisaties met een status.
+876 locaties in de zorgzoeker, 324 gekoppeld aan onze locaties, 168 organisaties met een status.
 
-Status per organisatie: in_onderhandeling 144, gecontracteerd 24
+Status per organisatie: in_onderhandeling 143, gecontracteerd 25
 
 Niet gekoppeld (eerste 40):
 

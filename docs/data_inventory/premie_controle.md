@@ -1,6 +1,6 @@
 # Controle premies 2027 op de eigen site van de verzekeraar
 
-Run: 2026-11-25. 34 van 40 polissen bevestigd.
+Run: 2026-11-26. 34 van 40 polissen bevestigd.
 
 | label | polis | premie | bevestigd op |
 |---|---|---|---|

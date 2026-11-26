@@ -1,6 +1,6 @@
 # Contractpagina's ophalen
 
-Laatste run: 2026-11-25.
+Laatste run: 2026-11-26.
 
 | AGB | resultaat | URL |
 |---|---|---|

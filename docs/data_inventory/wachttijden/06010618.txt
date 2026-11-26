@@ -1,5 +1,5 @@
 source: https://www.diakonessenhuis.nl/wachttijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Actuele wachttijden | Diakonessenhuis
 Hier leest u de actuele wachttijden voor onze polikliniek afspraken, behandelingen en onderzoeken. De wachttijden staan in weekdagen. We vernieuwen het overzicht iedere week.

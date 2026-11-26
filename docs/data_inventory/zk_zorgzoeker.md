@@ -1,6 +1,6 @@
 # Zorgzoeker Zilveren Kruis (contracten 2027)
 
-Run: 2026-11-25. Polis: Basis Zeker.
+Run: 2026-11-26. Polis: Basis Zeker.
 
 | plaats | genoemd | gelezen |
 |---|---|---|

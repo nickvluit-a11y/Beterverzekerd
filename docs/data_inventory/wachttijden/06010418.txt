@@ -1,5 +1,5 @@
 source: https://www.saxenburgh.nl/onze-zorg/wachttijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden - Saxenburgh
 Wij, en derde partijen, maken op onze website gebruik van cookies.

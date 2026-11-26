@@ -1,5 +1,5 @@
 source: https://www.treant.nl/zorg/ziekenhuiszorg/wachttijden-ziekenhuiszorg
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden ziekenhuiszorg
 Spring naar inhoud

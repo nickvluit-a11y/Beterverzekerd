@@ -1,5 +1,5 @@
 source: https://www.mumc.nl/wachtlijsten
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachtlijsten | Maastricht UMC+
 Overslaan en naar de inhoud gaan
@@ -94,38 +94,7 @@ Toepassen
 Anesthesie
 Laatst aangepast: 24 november 2026 16:24
 Cardiologie
-Polikliniek
-Dagen
-Weken
-Algemene cardiologie - Annadal Kliniek
-4
-Algemene cardiologie - MUMC+
-10
-Atrium Fibrilleren
-85
-EFO/ablatie
-71
-Hartfalen
-13
-Ritme
-30
-Vasculaire Geneeskunde Interne Geneeskunde
-10
-Vasculaire Neurologie
-40
-Diagnostiek
-Dagen
-Weken
-Ablatie -PVI
-0
-Behandeling
-Dagen
-Weken
-Dotterbehandeling (PCI)
-19
-EFO/ablatie
-60
-Laatst aangepast: 24 november 2026 16:24
+Laatst aangepast: 10 juni 2026 14:06
 Cardiothoracale chirurgie
 Behandeling
 Dagen
@@ -182,6 +151,75 @@ Polikliniek Gynaecologie algemeen
 Polikliniek zwangere
 9
 Laatst aangepast: 24 november 2026 16:24
+Hart+Vaat Centrum
+Polikliniek
+Dagen
+Weken
+Cardiologie - Annadal Kliniek
+4
+Cardiologie - MUMC+
+10
+Cardiologie Atrium Fibrilleren (ritme)
+85
+Cardiologie Hartfalen
+13
+Cardiologie Hartrevalidatie
+-
+Dotterbehandeling (PCI)
+-
+EFO/ablatie
+71
+Ritme
+30
+Vaatchirurgie Arterieel
+10
+Vaatchirurgie NP Shunt
+10
+Vaatchirurgie toegangschirurgie (shunt)
+-
+Vaatchirurgie Veneus
+35
+Vasculair interne geneeskunde DVT
+-
+Vasculair interne geneeskunde DVT
+-
+Vasculaire Interne Geneeskunde algemeen
+10
+Vasculaire interne geneeskunde hypertensie
+-
+Vasculaire Neurologie algemeen
+40
+Diagnostiek
+Dagen
+Weken
+Ablatie -PVI
+0
+Hartbiopsie
+-
+Slokdarm echo
+-
+Behandeling
+Dagen
+Weken
+Ablatie en EFO (met anesthesie)
+-
+Ablatie en EFO (zonder anesthesie)
+-
+Ablatie en EFO (zonder anesthesie)
+-
+Cardioversie
+-
+Dotterbehandeling (PCI)
+19
+EFO/ablatie
+60
+Hartkatheterisatie (CAG)
+-
+Mitraalklep
+-
+TAVI
+-
+Laatst aangepast: 26 november 2026 15:40
 Interne Geneeskunde
 Polikliniek
 Dagen
@@ -525,15 +563,6 @@ Sterilisatie man
 87
 Laatst aangepast: 24 november 2026 16:24
 Vaatchirurgie
-Polikliniek
-Dagen
-Weken
-Vaatchirurgie Arterieel
-10
-Vaatchirurgie NP Shunt
-10
-Vaatchirurgie Veneus
-35
 Laatst aangepast: 24 november 2026 16:24
 Afdrukken
 Deel deze pagina

@@ -1,5 +1,5 @@
 source: https://zuyderland.nl/wacht-toegangstijden/
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Zuyderland | Archief Wacht- en toegangstijden - Zuyderland
 Zuyderland » Wacht- en toegangstijden feed

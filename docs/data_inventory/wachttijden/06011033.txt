@@ -1,5 +1,5 @@
 source: https://www.amphia.nl/kwaliteit/wachttijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden | Amphia ziekenhuis
 Oh nee, IE...

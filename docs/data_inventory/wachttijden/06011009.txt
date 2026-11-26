@@ -1,5 +1,5 @@
 source: https://www.catharinaziekenhuis.nl/wachttijden/
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden en wachtlijstbemiddeling - Catharina Ziekenhuis
 Wegwerkzaamheden van maandag 23 tot en met vrijdag 27 november: Houd rekening met extra reistijd

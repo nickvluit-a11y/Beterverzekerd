@@ -1,5 +1,5 @@
 source: https://www.maasstadziekenhuis.nl/wachttijden/wachttijd-behandelingen
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijd behandelingen Maasstad Ziekenhuis
 Wachttijd behandelingen
@@ -18,5 +18,5 @@ Wachttijd tot onze poliklinieken .
 Wachttijd voor behandelingen .
 Wachttijd voor onderzoeken .
 Volgens de richtlijnen van het Ministerie van Volksgezondheid, Welzijn en Sport wordt de wachttijd gepubliceerd in weken. De actuele wachttijd vindt u onder de kolom 'dagen'.
-Laatst gewijzigd: per 10 november 2026
+Laatst gewijzigd: per 26 november 2026
 20261123.1

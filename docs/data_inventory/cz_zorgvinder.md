@@ -1,6 +1,6 @@
 # Zorgvinder CZ (contracten 2027)
 
-Run: 2026-11-25.
+Run: 2026-11-26.
 
 Per plaats (25 km) de ziekenhuizen; de zoeker toont er 30 per lijst. Daarna elke kwaliteitslocatie die nog ontbreekt gericht op naam in haar eigen plaats.
 

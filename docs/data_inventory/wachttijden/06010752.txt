@@ -1,5 +1,5 @@
 source: https://www.dijklander.nl/praktische-informatie/wachttijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden | Dijklander Ziekenhuis
 Overslaan en naar de inhoud gaan

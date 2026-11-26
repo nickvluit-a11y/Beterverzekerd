@@ -1,5 +1,5 @@
 source: https://www.vanweelbethesda.nl/wachttijden/wachttijdpolikliniek
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijd Polikliniek - Het Van Weel-Bethesda Ziekenhuis
 U bent nu hier:

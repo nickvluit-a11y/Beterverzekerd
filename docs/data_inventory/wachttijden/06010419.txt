@@ -1,5 +1,5 @@
 source: https://mst.nl/wachttijden/orthopedie
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden Orthopedie
 Wachttijden Orthopedie

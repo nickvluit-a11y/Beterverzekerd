@@ -1,5 +1,5 @@
 source: https://www.cwz.nl/naar-het-ziekenhuis/wachttijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden
 CWZ logo
@@ -27,4 +27,4 @@ Bij een behandeling of bij diagnostiek moet u de wachttijd polikliniek optellen 
 Vragen over wachttijden?
 Wanneer u de wachttijd te lang vindt, kunt u altijd contact met ons opnemen, of uw zorgverzekeraar vragen om wachtlijstbemiddeling. Uw zorgverzekeraar kan u hierin ondersteunen, zodat u mogelijk sneller geholpen kunt worden.
 De maximaal aanvaardbare wachttijd die door zorgaanbieders en zorgverzekeraars gezamenlijk is overeengekomen (de Treeknorm) bedraagt voor de toegang tot de polikliniek en diagnostiek 4 weken. Voor behandeling is de maximaal aanvaardbare wachttijd 7 weken.
-Afgedrukt op : 25 november 2026 21:08
+Afgedrukt op : 26 november 2026 15:47

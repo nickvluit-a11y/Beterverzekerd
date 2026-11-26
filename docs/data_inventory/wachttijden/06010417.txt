@@ -1,5 +1,5 @@
 source: https://www.dz.nl/patient/wachttijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden | Deventer Ziekenhuis
 Translate text

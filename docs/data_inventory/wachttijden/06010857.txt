@@ -1,5 +1,5 @@
 source: https://reinierdegraaf.nl/wachttijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden - Reinier de Graaf - Je ziekenhuis voor het leven
 Nieuws feed

@@ -1,5 +1,5 @@
 source: https://www.radboudumc.nl/patientenzorg/uw-afspraak/meer-informatie/praktische-informatie/wachttijden
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Wachttijden en toegangstijden - Radboudumc
 Wachttijden - Radboudumc

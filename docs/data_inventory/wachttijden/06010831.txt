@@ -1,5 +1,5 @@
 source: https://www.ikazia.nl/wachttijden/poliklinieken
-fetched: 2026-11-25
+fetched: 2026-11-26
 
 Poliklinieken | Ikazia Ziekenhuis
 Je browser is verouderd en geeft deze website mogelijk niet correct weer. Download een moderne browser en ervaar het internet beter, sneller en veiliger!
